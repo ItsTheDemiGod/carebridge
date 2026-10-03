@@ -12,7 +12,7 @@ Backend (http://localhost:8000):
     py -3.12 -m venv .venv
     .venv\Scripts\activate
     pip install -r requirements.txt
-    copy .env.example .env
+    copy .env.example .env   (then set GEMINI_API_KEY in .env; never commit it)
     uvicorn app.main:app --reload
 
 Frontend (http://localhost:5173):
@@ -25,6 +25,11 @@ Dataset (from repo root):
 
     backend\.venv\Scripts\python data\generate_synthetic.py
     backend\.venv\Scripts\python data\validate_dataset.py
+
+Phase 2 (extraction with Google Gemini; only synthetic documents are ever sent):
+
+    backend\.venv\Scripts\python dataender_documents.py
+    backend\.venv\Scripts\python -m eval.evaluate --split dev
 
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
