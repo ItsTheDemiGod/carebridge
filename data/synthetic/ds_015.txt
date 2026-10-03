@@ -1,0 +1,33 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Ravi Example   Age/Sex: 75/M   ID: SYN-IP-01963
+Admitted: 17 Apr 2025   Discharged: 21/04/25
+Consultant: Dr. Priya Example
+
+Phone: 000-000-0000
+DIAGNOSIS AGE
+
+COURSE IN HOSPITAL -
+Ravi Example, a 75-year-old man, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
+
+Ref: SYN/DS/2025
+Rx -
+- CAP REDOTIL (RACECADOTRIL) 100MG 1 cap TDS AC
+(2) Tab Ondem 4 mg 1 tab SOS
+3. T. Cifran 500mg 1 tab BD x3d
+
+F/U -
+f/u medicine opd 5/7 with stool r/m if loose stools continue
+
+adv:
+Drink ORS after each loose stool.
+* Eat light food such as rice, banana and curd.
+- Wash hands before eating and after using the toilet.
+- Drink only boiled or filtered water.
+
+RETURN IF -
+- Vomiting that does not stop.
+- Blood in stool.
+* Very little urine, dry mouth or extreme drowsiness.
+
+Sample document for software testing only. All details are fictional.

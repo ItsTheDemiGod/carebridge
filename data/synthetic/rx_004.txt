@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. Priya Example (Reg. No. SYN-12737)
+Date: 26 Jun 2025
+Patient: Imran Mockerjee   Age/Sex: 75/M   ID: SYN-OP-00190
+
+Diagnosis: Acute gastroenteritis
+
+Rx
+1. Cap Redotil 100 mg - 1 capsule three times daily before meals for 3 days
+2. Tab Emeset (Ondansetron) 4 mg - 1 tablet only if needed for 30 days
+3. Tab Ciprofloxacin 500 mg - 1 tablet twice daily after meals for 3 days
+
+Follow-up:
+- Please review at the medicine OPD after 5 days with a stool test if loose stools continue.
+
+Diet and activity advice:
+- Drink ORS after each loose stool.
+- Eat light food such as rice, banana and curd.
+
+Sample document for software testing only. All details are fictional.

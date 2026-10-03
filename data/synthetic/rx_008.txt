@@ -1,0 +1,21 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. S. Testwala (Reg. No. SYN-23181)
+Date: 30 Aug 2025
+Patient: Lakshmi Mockerjee   Age/Sex: 80/M   ID: SYN-OP-09223
+
+Dx: T2DM with HTN
+
+Rx
+1) Tab Glycomet 500mg 1 tab BD PC x 30 days
+2) Tab. Glimepiride (Glimy) 1 mg 1 tab OD AC x 30d
+3) Tab. Telma 40mg 1-0-0 x 30 days
+4) Tab Atorvastatin 10 mg 1 tab HS x 30 days
+
+F/U:
+- F/U medicine OPD in 2 wk with FBS/PPBS reports
+
+Advice:
+- Follow a diabetic diet with controlled portions of rice and sweets.
+- Walk for 30 minutes daily as tolerated.
+
+Sample document for software testing only. All details are fictional.

@@ -1,0 +1,31 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Anitha Fictional   Age/Sex: 47/F   ID: SYN-IP-06867
+Admitted: 03 Apr 2025   Discharged: 11 Apr 2025
+Consultant: Dr. R. Demo
+
+Diagnosis: Acute appendicitis, post appendectomy
+
+Hospital course:
+Anitha Fictional, a 47-year-old woman, was admitted with pain in the right lower abdomen. Appendicitis was confirmed and an appendectomy was done. Recovery after surgery was uneventful and the patient is taking a normal diet.
+
+Discharge medications:
+1. Tab Cefuroxime (Zinnat) 500 mg - 1 tablet twice daily after meals for 5 days
+2. Tab Metronidazole 400 mg - 1 tablet three times daily after meals for 5 days
+3. Tab Crocin 650 mg - 1 tablet three times daily after meals for 3 days
+4. Tab Pantoprazole 40 mg - 1 tablet once daily before meals for 5 days
+
+Follow-up:
+- Please review at the surgery OPD after 10 days for wound check.
+
+Diet and activity advice:
+- Eat light, home-cooked food and increase fibre.
+- Avoid lifting heavy weights for 4 weeks.
+- Keep the wound clean and dry.
+
+Warning signs - return to the hospital if you have:
+- Fever or chills.
+- Redness, swelling or discharge from the wound.
+- Severe abdominal pain or repeated vomiting.
+
+Sample document for software testing only. All details are fictional.

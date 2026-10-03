@@ -1,0 +1,30 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Anitha Example   Age/Sex: 38/F   ID: SYN-IP-08189
+Admitted: 19 Feb 2025   Discharged: 23 Feb 2025
+Consultant: Dr. Priya Example
+
+Dx: UTI
+
+Course:
+Anitha Example, a 38-year-old woman, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
+
+Rx on discharge:
+1) CAP. NITROFURANTOIN 100MG 1 cap BD PC X 5/7
+2) T. Paracetamol 500mg 1 tab SOS
+3) T. DOMSTAL (DOMPERIDONE) 10 MG 1-1-1 AC X 3 DAYS
+
+F/U:
+- F/U medicine OPD in 1 wk with urine R/M
+
+Advice:
+- Drink plenty of water.
+- Do not hold urine for long periods.
+- Maintain genital hygiene.
+
+Return if:
+- Fever with chills or back pain.
+- Blood in urine.
+- Unable to pass urine.
+
+Sample document for software testing only. All details are fictional.

@@ -1,0 +1,33 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Fatima Sample   Age/Sex: 62/F   ID: SYN-IP-07730
+Admitted: 24 Aug 2025   Discharged: 28 Aug 2025
+Consultant: Dr. S. Testwala
+
+Dx: AECOPD
+
+Course:
+Fatima Sample, a 62-year-old woman, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
+
+Rx on discharge:
+1) T. Prednisolone 20 mg 1-0-0 PC
+2) Tab Zithromax 500mg 1-0-0 x 3 days
+3) Inh Symbicort (Budesonide + Formoterol) 200/6 mcg 2 puffs BD - rinse mouth after use
+4) INHALER TIOVA 18 MCG 1 cap OD - INHALE VIA DEVICE
+5) Inhaler Ventolin 100mcg 2 puffs SOS
+6) TAB PANTOP (PANTOPRAZOLE) 40 MG 1-0-0 AC X 5/7
+
+F/U:
+- F/U chest clinic in 14 days with PFT
+
+Advice:
+- Avoid smoke, dust and strong smells.
+- Practise breathing exercises as taught.
+- Eat small, frequent meals.
+
+Return if:
+- Worsening breathlessness.
+- Lips or fingers turning bluish.
+- Fever with yellow-green sputum.
+
+Sample document for software testing only. All details are fictional.

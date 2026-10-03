@@ -1,0 +1,138 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": "Augmentin",
+      "generic_name": null,
+      "strength": "625 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": "BD",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "x 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 475,
+        "end": 514,
+        "text": "T. Augmentin 625mg 1 tab BD PC x 5 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Azithromycin",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "morning",
+        "original_abbreviation": "1-0-0",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 518,
+        "end": 546,
+        "text": "T. Azithromycin 500 mg 1-0-0"
+      }
+    },
+    {
+      "brand_name": "Crocin",
+      "generic_name": null,
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 550,
+        "end": 576,
+        "text": "T. Crocin 650 mg 1 tab SOS"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Ambroxol",
+      "strength": "30 mg/5 mL",
+      "form": "syrup",
+      "route": "oral",
+      "dose": "5 mL",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "other",
+        "original_abbreviation": "TDS",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 580,
+        "end": 612,
+        "text": "Syp Ambroxol 30 mg/5 mL 5 mL TDS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "F/U chest clinic in 7 days with repeat CXR",
+      "date_text": "in 7 days",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 621,
+        "end": 663,
+        "text": "F/U chest clinic in 7 days with repeat CXR"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Fever that does not settle.",
+      "source_span": {
+        "start": 827,
+        "end": 854,
+        "text": "Fever that does not settle."
+      }
+    },
+    {
+      "text": "Worsening breathlessness or chest pain.",
+      "source_span": {
+        "start": 857,
+        "end": 896,
+        "text": "Worsening breathlessness or chest pain."
+      }
+    },
+    {
+      "text": "Coughing up blood.",
+      "source_span": {
+        "start": 899,
+        "end": 917,
+        "text": "Coughing up blood."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink plenty of warm fluids.",
+    "Take rest and avoid smoke and dust.",
+    "Do deep breathing exercises as taught.",
+    "Eat light, nutritious food."
+  ],
+  "document_language": "en"
+}

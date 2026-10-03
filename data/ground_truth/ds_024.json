@@ -1,0 +1,138 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "racecadotril",
+      "strength": "100 mg",
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "before_meals",
+        "original_abbreviation": "tds",
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "3 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 464,
+        "end": 512,
+        "text": "cap. racecadotril 100 mg\n    1 cap tds ac 3 days"
+      }
+    },
+    {
+      "brand_name": "emeset",
+      "generic_name": null,
+      "strength": "4 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "sos",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 516,
+        "end": 543,
+        "text": "t.  emeset  4mg  1 tab  sos"
+      }
+    },
+    {
+      "brand_name": "ciplox",
+      "generic_name": "ciprofloxacin",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": "bd",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 544,
+        "end": 596,
+        "text": "t.  ciprofloxacin (ciplox)  500 mg\n    1 tab  bd  pc"
+      }
+    },
+    {
+      "brand_name": "PANTOCID",
+      "generic_name": null,
+      "strength": null,
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "X 5/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 599,
+        "end": 634,
+        "text": "TAB. PANTOCID\n    1 tab OD AC X 5/7"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u medicine opd 3/7 with stool r/m if loose stools continue",
+      "date_text": "3/7",
+      "days_from_discharge": 3,
+      "source_span": {
+        "start": 659,
+        "end": 719,
+        "text": "f/u medicine opd 3/7 with stool r/m if loose stools continue"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Vomiting that does not stop.",
+      "source_span": {
+        "start": 913,
+        "end": 941,
+        "text": "Vomiting that does not stop."
+      }
+    },
+    {
+      "text": "Blood in stool.",
+      "source_span": {
+        "start": 944,
+        "end": 959,
+        "text": "Blood in stool."
+      }
+    },
+    {
+      "text": "Very little urine, dry mouth or extreme drowsiness.",
+      "source_span": {
+        "start": 962,
+        "end": 1013,
+        "text": "Very little urine, dry mouth or extreme drowsiness."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink ORS after each loose stool.",
+    "Eat light food such as rice, banana and curd.",
+    "Wash hands before eating and after using the toilet.",
+    "Drink only boiled or filtered water."
+  ],
+  "document_language": "en"
+}

@@ -1,0 +1,89 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "Nitrofurantoin",
+      "strength": "100 mg",
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "for 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 194,
+        "end": 266,
+        "text": "Cap Nitrofurantoin 100 mg - 1 capsule twice daily after meals for 5 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Paracetamol",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": null,
+        "is_prn": true
+      },
+      "duration_days": 30,
+      "duration_text": "for 30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 270,
+        "end": 330,
+        "text": "Tab Paracetamol 500 mg - 1 tablet only if needed for 30 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Domperidone",
+      "strength": "10 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "before_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "for 3 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 334,
+        "end": 408,
+        "text": "Tab Domperidone 10 mg - 1 tablet three times daily before meals for 3 days"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "Please review at the medicine OPD after 7 days with a repeat urine test.",
+      "date_text": "after 7 days",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 423,
+        "end": 495,
+        "text": "Please review at the medicine OPD after 7 days with a repeat urine test."
+      }
+    }
+  ],
+  "red_flags": [],
+  "diet_activity_advice": [
+    "Drink plenty of water.",
+    "Do not hold urine for long periods."
+  ],
+  "document_language": "en"
+}

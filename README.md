@@ -21,6 +21,11 @@ Frontend (http://localhost:5173):
     npm install
     npm run dev
 
+Dataset (from repo root):
+
+    backend\.venv\Scripts\python data\generate_synthetic.py
+    backend\.venv\Scripts\python data\validate_dataset.py
+
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
 See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.

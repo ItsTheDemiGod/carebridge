@@ -1,0 +1,111 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": "Glycomet",
+      "generic_name": null,
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": "BD",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "x 30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 184,
+        "end": 224,
+        "text": "Tab Glycomet 500mg 1 tab BD PC x 30 days"
+      }
+    },
+    {
+      "brand_name": "Glimy",
+      "generic_name": "Glimepiride",
+      "strength": "1 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "x 30d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 228,
+        "end": 275,
+        "text": "Tab. Glimepiride (Glimy) 1 mg 1 tab OD AC x 30d"
+      }
+    },
+    {
+      "brand_name": "Telma",
+      "generic_name": null,
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "morning",
+        "original_abbreviation": "1-0-0",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "x 30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 279,
+        "end": 310,
+        "text": "Tab. Telma 40mg 1-0-0 x 30 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Atorvastatin",
+      "strength": "10 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "bedtime",
+        "original_abbreviation": "HS",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "x 30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 314,
+        "end": 355,
+        "text": "Tab Atorvastatin 10 mg 1 tab HS x 30 days"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "F/U medicine OPD in 2 wk with FBS/PPBS reports",
+      "date_text": "in 2 wk",
+      "days_from_discharge": 14,
+      "source_span": {
+        "start": 364,
+        "end": 410,
+        "text": "F/U medicine OPD in 2 wk with FBS/PPBS reports"
+      }
+    }
+  ],
+  "red_flags": [],
+  "diet_activity_advice": [
+    "Follow a diabetic diet with controlled portions of rice and sweets.",
+    "Walk for 30 minutes daily as tolerated."
+  ],
+  "document_language": "en"
+}

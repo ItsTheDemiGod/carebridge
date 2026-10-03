@@ -1,0 +1,155 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": "Disprin",
+      "generic_name": "Aspirin",
+      "strength": "75 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "after_meals",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "x 30d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 183,
+        "end": 227,
+        "text": "T. Disprin (Aspirin) 75 mg 1 tab OD PC x 30d"
+      }
+    },
+    {
+      "brand_name": "Clopilet",
+      "generic_name": null,
+      "strength": "75 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "x 30d",
+      "special_instructions": "do not stop w/o asking cardiologist",
+      "source_span": {
+        "start": 231,
+        "end": 303,
+        "text": "Tab. Clopilet 75 mg 1 tab OD x 30d - do not stop w/o asking cardiologist"
+      }
+    },
+    {
+      "brand_name": "Lipitor",
+      "generic_name": "Atorvastatin",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "bedtime",
+        "original_abbreviation": "HS",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "x 30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 307,
+        "end": 358,
+        "text": "Tab Atorvastatin (Lipitor) 40 mg 1 tab HS x 30 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Metoprolol succinate",
+      "strength": "25 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "x 30d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 362,
+        "end": 407,
+        "text": "Tab Metoprolol succinate 25 mg 1 tab OD x 30d"
+      }
+    },
+    {
+      "brand_name": "Cardace",
+      "generic_name": null,
+      "strength": "2.5 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "x 30d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 411,
+        "end": 443,
+        "text": "Tab Cardace 2.5mg 1 tab OD x 30d"
+      }
+    },
+    {
+      "brand_name": "Pan",
+      "generic_name": "Pantoprazole",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": "1-0-0",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "x 30d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 447,
+        "end": 489,
+        "text": "T. Pan (Pantoprazole) 40 mg 1-0-0 AC x 30d"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "F/U cardiology OPD in 14 days with ECG",
+      "date_text": "in 14 days",
+      "days_from_discharge": 14,
+      "source_span": {
+        "start": 498,
+        "end": 536,
+        "text": "F/U cardiology OPD in 14 days with ECG"
+      }
+    }
+  ],
+  "red_flags": [],
+  "diet_activity_advice": [
+    "Eat a low-salt, low-fat diet.",
+    "Walk short distances on level ground and increase slowly."
+  ],
+  "document_language": "en"
+}

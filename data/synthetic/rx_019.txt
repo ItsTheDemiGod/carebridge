@@ -1,0 +1,27 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. Anil Sample (Reg. No. SYN-45645)
+Date: 13 Jun 2025
+Patient: Meena Example   Age/Sex: 39/F   ID: SYN-OP-06083
+
+Diagnosis: Acute exacerbation of COPD
+
+Rx
+1. Tab Prednisolone 20 mg - 1 tablet once daily after meals for 5 days
+2. Tab Zithromax 500 mg - 1 tablet once daily for 3 days
+3. Inhaler Budesonide + Formoterol (Foracort) 200/6 mcg - 2 puffs twice daily for 30 days. Rinse mouth after use.
+4. Inhaler Tiotropium 18 mcg - 1 capsule once daily for 30 days. Inhale using the device provided.
+5. Inhaler Asthalin (Salbutamol) 100 mcg - 2 puffs only if needed for 30 days
+6. Tab Pantoprazole 40 mg - 1 tablet once daily before meals for 5 days
+
+Follow-up:
+- Please review at the chest clinic after 7 days with a repeat breathing test.
+
+Diet and activity advice:
+- Avoid smoke, dust and strong smells.
+- Practise breathing exercises as taught.
+
+Warning signs - return to the hospital if you have:
+- Worsening breathlessness.
+- Lips or fingers turning bluish.
+
+Sample document for software testing only. All details are fictional.

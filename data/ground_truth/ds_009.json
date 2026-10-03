@@ -1,0 +1,145 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "Paracetamol",
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 4,
+        "timing_label": "after_meals",
+        "original_abbreviation": "QID",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 535,
+        "end": 569,
+        "text": "T. Paracetamol 650 mg 1 tab QID PC"
+      }
+    },
+    {
+      "brand_name": "CLEXANE",
+      "generic_name": null,
+      "strength": "40 mg",
+      "form": "injection",
+      "route": "injection",
+      "dose": "1 injection",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": "SC",
+      "source_span": {
+        "start": 574,
+        "end": 611,
+        "text": "INJ. CLEXANE 40MG 1 injection OD - SC"
+      }
+    },
+    {
+      "brand_name": "shelcal",
+      "generic_name": "calcium carbonate + vitamin d3",
+      "strength": null,
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "after_meals",
+        "original_abbreviation": "od",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 612,
+        "end": 673,
+        "text": "tab. calcium carbonate + vitamin d3 (shelcal)\n    1 tab od pc"
+      }
+    },
+    {
+      "brand_name": "UPRISE-D3",
+      "generic_name": null,
+      "strength": "60000 IU",
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 56,
+      "duration_text": "X 8 WEEKS",
+      "special_instructions": null,
+      "source_span": {
+        "start": 674,
+        "end": 724,
+        "text": "CAP UPRISE-D3 60000 IU 1 cap once weekly X 8 WEEKS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u ortho opd 2/52 with x-ray and wound check",
+      "date_text": "2/52",
+      "days_from_discharge": 14,
+      "source_span": {
+        "start": 760,
+        "end": 805,
+        "text": "f/u ortho opd 2/52 with x-ray and wound check"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Severe pain not relieved by medicines.",
+      "source_span": {
+        "start": 968,
+        "end": 1006,
+        "text": "Severe pain not relieved by medicines."
+      }
+    },
+    {
+      "text": "Numbness, coldness or bluish colour of the toes.",
+      "source_span": {
+        "start": 1009,
+        "end": 1057,
+        "text": "Numbness, coldness or bluish colour of the toes."
+      }
+    },
+    {
+      "text": "Pus or foul smell from the wound.",
+      "source_span": {
+        "start": 1060,
+        "end": 1093,
+        "text": "Pus or foul smell from the wound."
+      }
+    },
+    {
+      "text": "Swelling or pain in the calf.",
+      "source_span": {
+        "start": 1094,
+        "end": 1123,
+        "text": "Swelling or pain in the calf."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Eat protein-rich and calcium-rich food.",
+    "Keep the leg raised when resting.",
+    "Walk only with the walker or crutches as taught."
+  ],
+  "document_language": "en"
+}

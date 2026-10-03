@@ -1,0 +1,37 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Kumar Testwala   Age/Sex: 64/F   ID: SYN-IP-04353
+Admitted: 19-08-2025   Discharged: 22 Aug 2025
+Consultant: Dr. Anil Sample
+
+Phone: 000-000-0000
+dx: # R tibia s/p IM nailing
+
+COURSE IN HOSPITAL -
+Kumar Testwala, a 64-year-old woman, was admitted after a fall with a fracture of the right leg bone. Surgery was done to fix the bone with a nail. The wound is clean and the patient is being discharged for follow-up and walking practice.
+
+Page 1 of 2
+TREATMENT ON DISCHARGE
+1. T. Paracetamol 650 mg 1 tab QID PC
+(2) INJ. CLEXANE 40MG 1 injection OD - SC
+tab. calcium carbonate + vitamin d3 (shelcal)
+    1 tab od pc
+CAP UPRISE-D3 60000 IU 1 cap once weekly X 8 WEEKS
+
+Dispensed by: ________
+
+review:
+* f/u ortho opd 2/52 with x-ray and wound check
+
+ADVICE -
+Eat protein-rich and calcium-rich food.
+* Keep the leg raised when resting.
+* Walk only with the walker or crutches as taught.
+
+come back to hosp if:
+- Severe pain not relieved by medicines.
+o Numbness, coldness or bluish colour of the toes.
+- Pus or foul smell from the wound.
+Swelling or pain in the calf.
+
+Sample document for software testing only. All details are fictional.

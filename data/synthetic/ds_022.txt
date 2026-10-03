@@ -1,0 +1,31 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Vikram Fictional   Age/Sex: 29/M   ID: SYN-IP-07417
+Admitted: 11 May 2025   Discharged: 18 May 2025
+Consultant: Dr. R. Demo
+
+Diagnosis: Acute appendicitis, post appendectomy
+
+Hospital course:
+Vikram Fictional, a 29-year-old man, was admitted with pain in the right lower abdomen. Appendicitis was confirmed and an appendectomy was done. Recovery after surgery was uneventful and the patient is taking a normal diet.
+
+Discharge medications:
+1. Tab Ceftum (Cefuroxime) 500 mg - 1 tablet twice daily after meals for 5 days
+2. Tab Metronidazole 400 mg - 1 tablet three times daily after meals for 5 days
+3. Tab Paracetamol 650 mg - 1 tablet three times daily after meals for 3 days
+4. Tab Pantoprazole 40 mg - 1 tablet once daily before meals for 5 days
+
+Follow-up:
+- Please review at the surgery OPD after 7 days for wound check.
+
+Diet and activity advice:
+- Eat light, home-cooked food and increase fibre.
+- Avoid lifting heavy weights for 4 weeks.
+- Keep the wound clean and dry.
+
+Warning signs - return to the hospital if you have:
+- Fever or chills.
+- Redness, swelling or discharge from the wound.
+- Severe abdominal pain or repeated vomiting.
+
+Sample document for software testing only. All details are fictional.

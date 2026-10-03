@@ -1,0 +1,23 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. Priya Example (Reg. No. SYN-32326)
+Date: 05 Feb 2025
+Patient: Deepa Sample   Age/Sex: 34/M   ID: SYN-OP-08541
+
+Dx: AECOPD
+
+Rx
+1) T. Wysolone 20mg 1-0-0 PC x 5d
+2) Tab Azithromycin (Azithral) 500mg 1 tab OD x 3/7
+3) Inh. Budesonide + Formoterol (Foracort) 200/6 mcg 2 puffs BD x 30 days - rinse mouth after use
+4) Inhaler Tiova (Tiotropium) 18mcg 1 cap OD - inhale via device
+5) Inh. Salbutamol (Ventolin) 100mcg 2 puffs SOS x 30 days
+6) TAB. PAN 40MG 1 tab OD AC
+
+F/U:
+- F/U chest clinic in 1 wk with PFT
+
+Advice:
+- Avoid smoke, dust and strong smells.
+- Practise breathing exercises as taught.
+
+Sample document for software testing only. All details are fictional.

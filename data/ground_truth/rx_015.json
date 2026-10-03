@@ -1,0 +1,111 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "metformin",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": "bd",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "for 30d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 180,
+        "end": 225,
+        "text": "t.  metformin  500 mg  1 tab  bd  pc  for 30d"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "GLIMEPIRIDE",
+      "strength": "1 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 230,
+        "end": 267,
+        "text": "TAB.  GLIMEPIRIDE  1 MG\n    1 tab  OD"
+      }
+    },
+    {
+      "brand_name": "micardis",
+      "generic_name": "telmisartan",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "od",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 270,
+        "end": 319,
+        "text": "tab. telmisartan (micardis) 40mg 1 tab od 30 days"
+      }
+    },
+    {
+      "brand_name": "LIPITOR",
+      "generic_name": "ATORVASTATIN",
+      "strength": "10 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "bedtime",
+        "original_abbreviation": "HS",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 320,
+        "end": 364,
+        "text": "TAB ATORVASTATIN (LIPITOR) 10MG\n    1 tab HS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u medicine opd 14/7 with fbs/ppbs reports",
+      "date_text": "14/7",
+      "days_from_discharge": 14,
+      "source_span": {
+        "start": 405,
+        "end": 448,
+        "text": "f/u medicine opd 14/7 with fbs/ppbs reports"
+      }
+    }
+  ],
+  "red_flags": [],
+  "diet_activity_advice": [
+    "Follow a diabetic diet with controlled portions of rice and sweets.",
+    "Walk for 30 minutes daily as tolerated."
+  ],
+  "document_language": "en"
+}

@@ -1,0 +1,89 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": "Redotil",
+      "generic_name": null,
+      "strength": "100 mg",
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "before_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "for 3 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 199,
+        "end": 271,
+        "text": "Cap Redotil 100 mg - 1 capsule three times daily before meals for 3 days"
+      }
+    },
+    {
+      "brand_name": "Emeset",
+      "generic_name": "Ondansetron",
+      "strength": "4 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": null,
+        "is_prn": true
+      },
+      "duration_days": 30,
+      "duration_text": "for 30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 275,
+        "end": 342,
+        "text": "Tab Emeset (Ondansetron) 4 mg - 1 tablet only if needed for 30 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Ciprofloxacin",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "for 3 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 346,
+        "end": 416,
+        "text": "Tab Ciprofloxacin 500 mg - 1 tablet twice daily after meals for 3 days"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "Please review at the medicine OPD after 5 days with a stool test if loose stools continue.",
+      "date_text": "after 5 days",
+      "days_from_discharge": 5,
+      "source_span": {
+        "start": 431,
+        "end": 521,
+        "text": "Please review at the medicine OPD after 5 days with a stool test if loose stools continue."
+      }
+    }
+  ],
+  "red_flags": [],
+  "diet_activity_advice": [
+    "Drink ORS after each loose stool.",
+    "Eat light food such as rice, banana and curd."
+  ],
+  "document_language": "en"
+}

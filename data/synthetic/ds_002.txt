@@ -1,0 +1,32 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Lakshmi Fictional   Age/Sex: 70/M   ID: SYN-IP-05426
+Admitted: 28 Jan 2025   Discharged: 04 Feb 2025
+Consultant: Dr. Priya Example
+
+Dx: CAP
+
+Course:
+Lakshmi Fictional, a 70-year-old man, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
+
+Rx on discharge:
+1) Tab. Clavam (Amoxicillin + Clavulanic acid) 625mg 1 tab BD PC x 5d
+2) Tab. Azee 500mg 1-0-0 x 3/7
+3) T. CROCIN 650 MG 1 tab SOS
+4) Syrup Ambrodil 30 mg/5 mL 5 mL TDS
+
+F/U:
+- F/U chest clinic in 14 days with repeat CXR
+
+Advice:
+- Drink plenty of warm fluids.
+- Take rest and avoid smoke and dust.
+- Do deep breathing exercises as taught.
+- Eat light, nutritious food.
+
+Return if:
+- Fever that does not settle.
+- Worsening breathlessness or chest pain.
+- Coughing up blood.
+
+Sample document for software testing only. All details are fictional.

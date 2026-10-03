@@ -9,3 +9,10 @@
 - **Claude API for LLM calls**: required for explanation and faithfulness verification.
 - **Storage (Postgres vs SQLite) deferred to Phase 5**: not needed until persistence exists.
 - **GSAP and tsParticles deferred**: installed in Phase 6 when design work begins, per instruction.
+- **Spans recorded at build time**: the generator's text buffer records offsets as it appends strings, then asserts text[start:end] equals the span. Never typed by hand; the validator re-checks.
+- **Ground truth conventions**: names, duration_text, abbreviations kept as written (so extraction is not rewarded for normalising); strength, dose and numeric frequency fields normalised.
+- **`.gitattributes` LF for data files**: Windows autocrlf would shift offsets.
+- **Dev/test split fixed in manifest.json**: 20 dev / 40 test; test is never used for tuning (rule in CLAUDE.md).
+- **Prescriptions give chronic medicines a 30-day duration; discharge summaries leave them open-ended**: matches common practice and adds variety.
+- **Interaction data: DDInter + own formulary mapping** (see docs/DRUG_DATABASE_RECOMMENDATION.md). RxNav interaction API was discontinued 2 Jan 2024; DrugBank academic downloads are paused.
+- **Interaction checks are table lookups, never LLM memory**; an unlisted pair means "not checked", not "safe".

@@ -1,0 +1,137 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": "Zinnat",
+      "generic_name": "Cefuroxime",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "for 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 493,
+        "end": 569,
+        "text": "Tab Cefuroxime (Zinnat) 500 mg - 1 tablet twice daily after meals for 5 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Metronidazole",
+      "strength": "400 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "after_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "for 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 573,
+        "end": 649,
+        "text": "Tab Metronidazole 400 mg - 1 tablet three times daily after meals for 5 days"
+      }
+    },
+    {
+      "brand_name": "Crocin",
+      "generic_name": null,
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "after_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "for 3 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 653,
+        "end": 722,
+        "text": "Tab Crocin 650 mg - 1 tablet three times daily after meals for 3 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Pantoprazole",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "for 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 726,
+        "end": 794,
+        "text": "Tab Pantoprazole 40 mg - 1 tablet once daily before meals for 5 days"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "Please review at the surgery OPD after 10 days for wound check.",
+      "date_text": "after 10 days",
+      "days_from_discharge": 10,
+      "source_span": {
+        "start": 809,
+        "end": 872,
+        "text": "Please review at the surgery OPD after 10 days for wound check."
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Fever or chills.",
+      "source_span": {
+        "start": 1080,
+        "end": 1096,
+        "text": "Fever or chills."
+      }
+    },
+    {
+      "text": "Redness, swelling or discharge from the wound.",
+      "source_span": {
+        "start": 1099,
+        "end": 1145,
+        "text": "Redness, swelling or discharge from the wound."
+      }
+    },
+    {
+      "text": "Severe abdominal pain or repeated vomiting.",
+      "source_span": {
+        "start": 1148,
+        "end": 1191,
+        "text": "Severe abdominal pain or repeated vomiting."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Eat light, home-cooked food and increase fibre.",
+    "Avoid lifting heavy weights for 4 weeks.",
+    "Keep the wound clean and dry."
+  ],
+  "document_language": "en"
+}

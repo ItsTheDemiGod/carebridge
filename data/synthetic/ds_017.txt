@@ -1,0 +1,33 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Kumar Fictional   Age/Sex: 25/M   ID: SYN-IP-04251
+Admitted: 01 Feb 2025   Discharged: 06 Feb 2025
+Consultant: Dr. Priya Example
+
+Dx: AECOPD
+
+Course:
+Kumar Fictional, a 25-year-old man, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
+
+Rx on discharge:
+1) Tab Prednisolone 20 mg 1 tab OD PC x 5 days
+2) T. Zithromax (Azithromycin) 500 mg 1-0-0 x 3/7
+3) Inhaler Symbicort 200/6 mcg 2 puffs BD - rinse mouth after use
+4) Inh Tiotropium 18mcg 1 cap OD - inhale via device
+5) Inh Ventolin 100 mcg 2 puffs SOS
+6) Tab Pantoprazole (Pan) 40mg 1 tab OD AC x 5 days
+
+F/U:
+- F/U chest clinic in 1 wk with PFT
+
+Advice:
+- Avoid smoke, dust and strong smells.
+- Practise breathing exercises as taught.
+- Eat small, frequent meals.
+
+Return if:
+- Worsening breathlessness.
+- Lips or fingers turning bluish.
+- Fever with yellow-green sputum.
+
+Sample document for software testing only. All details are fictional.

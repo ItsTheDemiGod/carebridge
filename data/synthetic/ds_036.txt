@@ -1,0 +1,34 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Deepa Sample   Age/Sex: 25/M   ID: SYN-IP-09963
+Admitted: 24 Jul 2025   Discharged: 28-07-2025
+Consultant: Dr. S. Testwala
+
+Phone: 000-000-0000
+DX - # R tibia s/p IM nailing
+
+h/o & course:
+Deepa Sample, a 25-year-old man, was admitted after a fall with a fracture of the right leg bone. Surgery was done to fix the bone with a nail. The wound is clean and the patient is being discharged for follow-up and walking practice.
+
+Page 1 of 2
+Meds on d/c:
+tab.  calpol  650mg  1 tab  qid  pc  5 days
+(2) INJ  LOVENOX  40MG  1 injection  OD - SC
+3. T. CALCIUM CARBONATE + VITAMIN D3 500MG 1-0-0 PC FOR 30D
+(4) Cap Uprise-D3 60000IU 1 cap once weekly x 8 weeks
+
+F/U -
+o f/u ortho opd 10/7 with x-ray and wound check
+
+ADVICE -
+Eat protein-rich and calcium-rich food.
+Keep the leg raised when resting.
+- Walk only with the walker or crutches as taught.
+
+come back to hosp if:
+o Severe pain not relieved by medicines.
+o Numbness, coldness or bluish colour of the toes.
+* Pus or foul smell from the wound.
+* Swelling or pain in the calf.
+
+Sample document for software testing only. All details are fictional.

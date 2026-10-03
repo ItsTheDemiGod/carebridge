@@ -1,0 +1,32 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Anitha Sample   Age/Sex: 80/F   ID: SYN-IP-01586
+Admitted: 24 Jan 2025   Discharged: 31 Jan 2025
+Consultant: Dr. Priya Example
+
+Dx: CAP
+
+Course:
+Anitha Sample, a 80-year-old woman, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
+
+Rx on discharge:
+1) TAB. AUGMENTIN 625MG 1 tab BD PC
+2) T. Zithromax 500 mg 1-0-0
+3) TAB. CALPOL 650 MG 1 tab SOS
+4) Syrup Ambrodil (Ambroxol) 30 mg/5 mL 5 mL TDS x 5d
+
+F/U:
+- F/U chest clinic in 2 wk with repeat CXR
+
+Advice:
+- Drink plenty of warm fluids.
+- Take rest and avoid smoke and dust.
+- Do deep breathing exercises as taught.
+- Eat light, nutritious food.
+
+Return if:
+- Fever that does not settle.
+- Worsening breathlessness or chest pain.
+- Coughing up blood.
+
+Sample document for software testing only. All details are fictional.

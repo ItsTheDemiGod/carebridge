@@ -1,0 +1,29 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Deepa Mockerjee   Age/Sex: 25/F   ID: SYN-IP-04519
+Admitted: 15 Jul 2025   Discharged: 17 Jul 2025
+Consultant: Dr. Priya Example
+
+Dx: UTI
+
+Course:
+Deepa Mockerjee, a 25-year-old woman, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
+
+Rx on discharge:
+1) C. Niftran 100 mg 1 cap BD PC x 5 days
+2) T. Calpol 500 mg 1 tab SOS
+
+F/U:
+- F/U medicine OPD in 5 days with urine R/M
+
+Advice:
+- Drink plenty of water.
+- Do not hold urine for long periods.
+- Maintain genital hygiene.
+
+Return if:
+- Fever with chills or back pain.
+- Blood in urine.
+- Unable to pass urine.
+
+Sample document for software testing only. All details are fictional.

@@ -1,0 +1,89 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": "NIFTRAN",
+      "generic_name": "NITROFURANTOIN",
+      "strength": null,
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "other",
+        "original_abbreviation": "BD",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "X5/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 169,
+        "end": 215,
+        "text": "CAP NIFTRAN (NITROFURANTOIN)\n    1 cap BD X5/7"
+      }
+    },
+    {
+      "brand_name": "Dolo",
+      "generic_name": null,
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": 30,
+      "duration_text": "x30d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 219,
+        "end": 248,
+        "text": "Tab Dolo 500mg 1 tab SOS x30d"
+      }
+    },
+    {
+      "brand_name": "DOMSTAL",
+      "generic_name": null,
+      "strength": "10 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "before_meals",
+        "original_abbreviation": "TDS",
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "X3/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 252,
+        "end": 291,
+        "text": "TAB DOMSTAL 10 MG\n    1 tab TDS AC X3/7"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u medicine opd 7/7 with urine r/m",
+      "date_text": "7/7",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 301,
+        "end": 336,
+        "text": "f/u medicine opd 7/7 with urine r/m"
+      }
+    }
+  ],
+  "red_flags": [],
+  "diet_activity_advice": [
+    "Drink plenty of water.",
+    "Do not hold urine for long periods."
+  ],
+  "document_language": "en"
+}

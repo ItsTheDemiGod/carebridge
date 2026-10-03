@@ -1,0 +1,35 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Vikram Mockerjee   Age/Sex: 62/M   ID: SYN-IP-01237
+Admitted: 07-03-2025   Discharged: 15-03-2025
+Consultant: Dr. S. Testwala
+
+Printed on: 08/03/2025 14:22
+DIAGNOSIS Dengue fever (recovering)
+
+COURSE IN HOSPITAL -
+Vikram Mockerjee, a 62-year-old man, was admitted with fever and body ache. The blood platelet count fell during the illness and later recovered with fluids and rest. The patient is eating well and is being discharged in stable condition.
+
+Meds on d/c:
+1) t. dolo 650mg 1 tab sos
+- T.  Pantocid  40 mg
+    1 tab  OD  AC
+3. T. ONDANSETRON 4MG 1 tab SOS
+
+F/U -
+f/u medicine opd 5/7 with repeat cbc
+
+adv:
+- Drink plenty of fluids such as ORS, coconut water and soups.
+Take adequate rest for one week.
+* Avoid ibuprofen and diclofenac unless your doctor advises.
+
+Ref: SYN/DS/2025
+
+come back to hosp if:
+Bleeding from gums or nose.
+- Black stools or vomiting blood.
+Severe abdominal pain or repeated vomiting.
+o Extreme drowsiness or restlessness.
+
+Sample document for software testing only. All details are fictional.

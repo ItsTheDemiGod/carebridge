@@ -1,0 +1,32 @@
+Sample City Hospital  OPD
+Dr. Priya Example (Reg. No. SYN-58768)
+Date: 05 Mar 2025
+Patient: Arjun Mockerjee   Age/Sex: 69/F   ID: SYN-OP-01343
+
+Bill No. SYN-00231
+
+DX - AECOPD
+
+Rx
+t.  omnacortil  20 mg  1 tab  od  pc
+2. Tab  Azee  500 mg
+    1 tab  OD  x 3/7
+- INHALER FORACORT 2 puffs BD X30D - RINSE MOUTH AFTER USE
+- Inh.  Spiriva  18 mcg  1 cap  OD  30 days - inhale via device
+5) Inhaler Asthalin 100 mcg 2 puffs SOS for 30d
+(6) tab  pantoprazole  40mg  1 tab  od  ac
+
+F/U -
+- f/u chest clinic 7/7 with pft
+
+adv:
+* Avoid smoke, dust and strong smells.
+Practise breathing exercises as taught.
+
+Ref: SYN/DS/2025
+
+come back to hosp if:
+Worsening breathlessness.
+- Lips or fingers turning bluish.
+
+Sample document for software testing only. All details are fictional.

@@ -1,0 +1,89 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "Paracetamol",
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": null,
+        "is_prn": true
+      },
+      "duration_days": 30,
+      "duration_text": "for 30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 197,
+        "end": 257,
+        "text": "Tab Paracetamol 650 mg - 1 tablet only if needed for 30 days"
+      }
+    },
+    {
+      "brand_name": "Pantocid",
+      "generic_name": "Pantoprazole",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "for 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 261,
+        "end": 340,
+        "text": "Tab Pantoprazole (Pantocid) 40 mg - 1 tablet once daily before meals for 5 days"
+      }
+    },
+    {
+      "brand_name": "Zofran",
+      "generic_name": null,
+      "strength": "4 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": null,
+        "is_prn": true
+      },
+      "duration_days": 30,
+      "duration_text": "for 30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 344,
+        "end": 397,
+        "text": "Tab Zofran 4 mg - 1 tablet only if needed for 30 days"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "Please review at the medicine OPD after 7 days with a repeat blood count.",
+      "date_text": "after 7 days",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 412,
+        "end": 485,
+        "text": "Please review at the medicine OPD after 7 days with a repeat blood count."
+      }
+    }
+  ],
+  "red_flags": [],
+  "diet_activity_advice": [
+    "Drink plenty of fluids such as ORS, coconut water and soups.",
+    "Take adequate rest for one week."
+  ],
+  "document_language": "en"
+}

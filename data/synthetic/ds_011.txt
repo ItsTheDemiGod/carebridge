@@ -1,0 +1,32 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Vikram Demo   Age/Sex: 27/F   ID: SYN-IP-02608
+Admitted: 27 Jul 2025   Discharged: 30 Jul 2025
+Consultant: Dr. Anil Sample
+
+Dx: CAP
+
+Course:
+Vikram Demo, a 27-year-old woman, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
+
+Rx on discharge:
+1) Tab. Augmentin 625mg 1 tab BD PC x 5/7
+2) T. Azithromycin 500mg 1 tab OD
+3) Tab Crocin 650mg 1 tab SOS
+4) SYP AMBROXOL 30 MG/5 ML 5 mL TDS X 5D
+
+F/U:
+- F/U chest clinic in 7 days with repeat CXR
+
+Advice:
+- Drink plenty of warm fluids.
+- Take rest and avoid smoke and dust.
+- Do deep breathing exercises as taught.
+- Eat light, nutritious food.
+
+Return if:
+- Fever that does not settle.
+- Worsening breathlessness or chest pain.
+- Coughing up blood.
+
+Sample document for software testing only. All details are fictional.

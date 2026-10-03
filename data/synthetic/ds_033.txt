@@ -1,0 +1,32 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Asha Example   Age/Sex: 78/F   ID: SYN-IP-00932
+Admitted: 29/09/25   Discharged: 07/10/25
+Consultant: Dr. Anil Sample
+
+DIAGNOSIS AGE
+
+Course
+Asha Example, a 78-year-old woman, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
+
+TREATMENT ON DISCHARGE
+1. cap.  redotil (racecadotril)  100 mg  1 cap  tds  ac  3 days
+2. T. Ondansetron (Ondem) 4 mg 1 tab SOS
+(3) tab.  cifran  500mg  1 tab  bd  for 3d
+
+F/U -
+o f/u medicine opd 5/7 with stool r/m if loose stools continue
+
+adv:
+o Drink ORS after each loose stool.
+o Eat light food such as rice, banana and curd.
+- Wash hands before eating and after using the toilet.
+Drink only boiled or filtered water.
+
+Printed on: 08/03/2025 14:22
+RETURN IF -
+* Vomiting that does not stop.
+* Blood in stool.
+o Very little urine, dry mouth or extreme drowsiness.
+
+Sample document for software testing only. All details are fictional.

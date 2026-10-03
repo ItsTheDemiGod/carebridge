@@ -1,0 +1,24 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. Anil Sample (Reg. No. SYN-02616)
+Date: 09 May 2025
+Patient: Imran Mockerjee   Age/Sex: 42/F   ID: SYN-OP-07955
+
+Dx: AGE
+
+Rx
+1) C. Racecadotril 100 mg 1-1-1 AC x 3/7
+2) Tab. Emeset 4mg 1 tab SOS x 30d
+3) Tab Ciprofloxacin 500mg 1 tab BD PC x 3/7
+
+F/U:
+- F/U medicine OPD in 5 days with stool R/M if loose stools continue
+
+Advice:
+- Drink ORS after each loose stool.
+- Eat light food such as rice, banana and curd.
+
+Return if:
+- Vomiting that does not stop.
+- Blood in stool.
+
+Sample document for software testing only. All details are fictional.

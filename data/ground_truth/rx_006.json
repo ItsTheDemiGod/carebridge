@@ -1,0 +1,89 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "paracetamol",
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "sos",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 180,
+        "end": 216,
+        "text": "tab.  paracetamol  650mg  1 tab  sos"
+      }
+    },
+    {
+      "brand_name": "PANTOCID",
+      "generic_name": "PANTOPRAZOLE",
+      "strength": null,
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "morning",
+        "original_abbreviation": "1-0-0",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "X 5/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 217,
+        "end": 259,
+        "text": "TAB  PANTOPRAZOLE (PANTOCID)  1-0-0  X 5/7"
+      }
+    },
+    {
+      "brand_name": "Emeset",
+      "generic_name": "Ondansetron",
+      "strength": "4 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 262,
+        "end": 307,
+        "text": "T.  Ondansetron (Emeset)  4 mg\n    1 tab  SOS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u medicine opd 7/7 with repeat cbc",
+      "date_text": "7/7",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 344,
+        "end": 380,
+        "text": "f/u medicine opd 7/7 with repeat cbc"
+      }
+    }
+  ],
+  "red_flags": [],
+  "diet_activity_advice": [
+    "Drink plenty of fluids such as ORS, coconut water and soups.",
+    "Take adequate rest for one week."
+  ],
+  "document_language": "en"
+}

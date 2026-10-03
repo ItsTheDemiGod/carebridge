@@ -1,0 +1,123 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": "dolo",
+      "generic_name": null,
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "sos",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 530,
+        "end": 553,
+        "text": "t. dolo 650mg 1 tab sos"
+      }
+    },
+    {
+      "brand_name": "Pantocid",
+      "generic_name": null,
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 556,
+        "end": 593,
+        "text": "T.  Pantocid  40 mg\n    1 tab  OD  AC"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "ONDANSETRON",
+      "strength": "4 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 597,
+        "end": 625,
+        "text": "T. ONDANSETRON 4MG 1 tab SOS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u medicine opd 5/7 with repeat cbc",
+      "date_text": "5/7",
+      "days_from_discharge": 5,
+      "source_span": {
+        "start": 633,
+        "end": 669,
+        "text": "f/u medicine opd 5/7 with repeat cbc"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Bleeding from gums or nose.",
+      "source_span": {
+        "start": 874,
+        "end": 901,
+        "text": "Bleeding from gums or nose."
+      }
+    },
+    {
+      "text": "Black stools or vomiting blood.",
+      "source_span": {
+        "start": 904,
+        "end": 935,
+        "text": "Black stools or vomiting blood."
+      }
+    },
+    {
+      "text": "Severe abdominal pain or repeated vomiting.",
+      "source_span": {
+        "start": 936,
+        "end": 979,
+        "text": "Severe abdominal pain or repeated vomiting."
+      }
+    },
+    {
+      "text": "Extreme drowsiness or restlessness.",
+      "source_span": {
+        "start": 982,
+        "end": 1017,
+        "text": "Extreme drowsiness or restlessness."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink plenty of fluids such as ORS, coconut water and soups.",
+    "Take adequate rest for one week.",
+    "Avoid ibuprofen and diclofenac unless your doctor advises."
+  ],
+  "document_language": "en"
+}

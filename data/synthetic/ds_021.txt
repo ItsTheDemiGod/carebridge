@@ -1,0 +1,32 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Vikram Testwala   Age/Sex: 52/F   ID: SYN-IP-02433
+Admitted: 15-10-2025   Discharged: 23/10/25
+Consultant: Dr. S. Testwala
+
+dx: Dengue fever (recovering)
+
+COURSE IN HOSPITAL -
+Vikram Testwala, a 52-year-old woman, was admitted with fever and body ache. The blood platelet count fell during the illness and later recovered with fluids and rest. The patient is eating well and is being discharged in stable condition.
+
+Rx -
+- T.  DOLO  650 MG
+    1 tab  SOS
+T. Pan 40mg 1-0-0 AC x 5/7
+- Tab. Zofran (Ondansetron) 4mg 1 tab SOS
+
+F/U -
+o f/u medicine opd 3/7 with repeat cbc
+
+Diet / activity
+Drink plenty of fluids such as ORS, coconut water and soups.
+o Take adequate rest for one week.
+o Avoid ibuprofen and diclofenac unless your doctor advises.
+
+come back to hosp if:
+Bleeding from gums or nose.
+* Black stools or vomiting blood.
+o Severe abdominal pain or repeated vomiting.
+o Extreme drowsiness or restlessness.
+
+Sample document for software testing only. All details are fictional.

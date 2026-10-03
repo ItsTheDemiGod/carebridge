@@ -1,0 +1,123 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": "Calpol",
+      "generic_name": null,
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 516,
+        "end": 544,
+        "text": "Tab. Calpol 650 mg 1 tab SOS"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "pantoprazole",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "od",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "x 5/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 548,
+        "end": 592,
+        "text": "t.  pantoprazole  40 mg\n    1 tab  od  x 5/7"
+      }
+    },
+    {
+      "brand_name": "Ondem",
+      "generic_name": null,
+      "strength": "4 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 596,
+        "end": 618,
+        "text": "T. Ondem 4mg 1 tab SOS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u medicine opd 3/7 with repeat cbc",
+      "date_text": "3/7",
+      "days_from_discharge": 3,
+      "source_span": {
+        "start": 640,
+        "end": 676,
+        "text": "f/u medicine opd 3/7 with repeat cbc"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Bleeding from gums or nose.",
+      "source_span": {
+        "start": 869,
+        "end": 896,
+        "text": "Bleeding from gums or nose."
+      }
+    },
+    {
+      "text": "Black stools or vomiting blood.",
+      "source_span": {
+        "start": 899,
+        "end": 930,
+        "text": "Black stools or vomiting blood."
+      }
+    },
+    {
+      "text": "Severe abdominal pain or repeated vomiting.",
+      "source_span": {
+        "start": 933,
+        "end": 976,
+        "text": "Severe abdominal pain or repeated vomiting."
+      }
+    },
+    {
+      "text": "Extreme drowsiness or restlessness.",
+      "source_span": {
+        "start": 979,
+        "end": 1014,
+        "text": "Extreme drowsiness or restlessness."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink plenty of fluids such as ORS, coconut water and soups.",
+    "Take adequate rest for one week.",
+    "Avoid ibuprofen and diclofenac unless your doctor advises."
+  ],
+  "document_language": "en"
+}

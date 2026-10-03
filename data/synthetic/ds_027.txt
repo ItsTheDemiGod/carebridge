@@ -1,0 +1,36 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Meena Sample   Age/Sex: 31/F   ID: SYN-IP-03882
+Admitted: 30 Jul 2025   Discharged: 02 Aug 2025
+Consultant: Dr. Priya Example
+
+dx: # R tibia s/p IM nailing
+
+h/o & course:
+Meena Sample, a 31-year-old woman, was admitted after a fall with a fracture of the right leg bone. Surgery was done to fix the bone with a nail. The wound is clean and the patient is being discharged for follow-up and walking practice.
+
+Printed on: 08/03/2025 14:22
+
+Meds on d/c:
+- T. PARACETAMOL 650MG 1 tab QID X5/7
+- inj enoxaparin (lovenox) 40mg
+    1 injection od - sc
+3) T.  SHELCAL  500 MG  1 tab  OD  PC  FOR 30D
+- CAP  D-RISE  60000IU  1 cap  once weekly  X 8 WEEKS
+
+Ref: SYN/DS/2025
+F/U -
+* f/u ortho opd 10/7 with x-ray and wound check
+
+ADVICE -
+* Eat protein-rich and calcium-rich food.
+- Keep the leg raised when resting.
+- Walk only with the walker or crutches as taught.
+
+Warning signs:
+* Severe pain not relieved by medicines.
+- Numbness, coldness or bluish colour of the toes.
+* Pus or foul smell from the wound.
+* Swelling or pain in the calf.
+
+Sample document for software testing only. All details are fictional.

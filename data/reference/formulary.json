@@ -1,0 +1,911 @@
+{
+  "verification_status": "unverified_requires_pharmacist_review",
+  "notes": "Curated list for software testing only. Not clinical guidance. Brand-generic pairings and strengths have not been verified by a pharmacist. Contains no dosing advice and no interaction claims.",
+  "medicines": [
+    {
+      "brand_names": [
+        "Glycomet",
+        "Glucophage"
+      ],
+      "generic_name": "Metformin",
+      "available_strengths": [
+        "500 mg",
+        "850 mg",
+        "1000 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antidiabetic"
+    },
+    {
+      "brand_names": [
+        "Amaryl",
+        "Glimy"
+      ],
+      "generic_name": "Glimepiride",
+      "available_strengths": [
+        "1 mg",
+        "2 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antidiabetic"
+    },
+    {
+      "brand_names": [
+        "Diamicron",
+        "Reclide"
+      ],
+      "generic_name": "Gliclazide",
+      "available_strengths": [
+        "40 mg",
+        "80 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antidiabetic"
+    },
+    {
+      "brand_names": [
+        "Januvia"
+      ],
+      "generic_name": "Sitagliptin",
+      "available_strengths": [
+        "50 mg",
+        "100 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antidiabetic"
+    },
+    {
+      "brand_names": [
+        "Galvus"
+      ],
+      "generic_name": "Vildagliptin",
+      "available_strengths": [
+        "50 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antidiabetic"
+    },
+    {
+      "brand_names": [
+        "Pioz",
+        "Actos"
+      ],
+      "generic_name": "Pioglitazone",
+      "available_strengths": [
+        "15 mg",
+        "30 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antidiabetic"
+    },
+    {
+      "brand_names": [
+        "Forxiga"
+      ],
+      "generic_name": "Dapagliflozin",
+      "available_strengths": [
+        "5 mg",
+        "10 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antidiabetic"
+    },
+    {
+      "brand_names": [
+        "Jardiance"
+      ],
+      "generic_name": "Empagliflozin",
+      "available_strengths": [
+        "10 mg",
+        "25 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antidiabetic"
+    },
+    {
+      "brand_names": [
+        "Amlong",
+        "Norvasc",
+        "Stamlo"
+      ],
+      "generic_name": "Amlodipine",
+      "available_strengths": [
+        "2.5 mg",
+        "5 mg",
+        "10 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antihypertensive"
+    },
+    {
+      "brand_names": [
+        "Telma",
+        "Micardis"
+      ],
+      "generic_name": "Telmisartan",
+      "available_strengths": [
+        "20 mg",
+        "40 mg",
+        "80 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antihypertensive"
+    },
+    {
+      "brand_names": [
+        "Losar",
+        "Repace",
+        "Cozaar"
+      ],
+      "generic_name": "Losartan",
+      "available_strengths": [
+        "25 mg",
+        "50 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antihypertensive"
+    },
+    {
+      "brand_names": [
+        "Olmezest",
+        "Olsar"
+      ],
+      "generic_name": "Olmesartan",
+      "available_strengths": [
+        "20 mg",
+        "40 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antihypertensive"
+    },
+    {
+      "brand_names": [
+        "Cardace",
+        "Ramace"
+      ],
+      "generic_name": "Ramipril",
+      "available_strengths": [
+        "2.5 mg",
+        "5 mg",
+        "10 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antihypertensive"
+    },
+    {
+      "brand_names": [
+        "Envas"
+      ],
+      "generic_name": "Enalapril",
+      "available_strengths": [
+        "2.5 mg",
+        "5 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antihypertensive"
+    },
+    {
+      "brand_names": [
+        "Metolar XR",
+        "Seloken XL"
+      ],
+      "generic_name": "Metoprolol succinate",
+      "available_strengths": [
+        "25 mg",
+        "50 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "beta blocker"
+    },
+    {
+      "brand_names": [
+        "Aten",
+        "Tenormin"
+      ],
+      "generic_name": "Atenolol",
+      "available_strengths": [
+        "25 mg",
+        "50 mg",
+        "100 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "beta blocker"
+    },
+    {
+      "brand_names": [
+        "Concor"
+      ],
+      "generic_name": "Bisoprolol",
+      "available_strengths": [
+        "2.5 mg",
+        "5 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "beta blocker"
+    },
+    {
+      "brand_names": [
+        "Cardivas",
+        "Carloc"
+      ],
+      "generic_name": "Carvedilol",
+      "available_strengths": [
+        "3.125 mg",
+        "6.25 mg",
+        "12.5 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "beta blocker"
+    },
+    {
+      "brand_names": [
+        "Lasix"
+      ],
+      "generic_name": "Furosemide",
+      "available_strengths": [
+        "20 mg",
+        "40 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "diuretic"
+    },
+    {
+      "brand_names": [
+        "Dytor"
+      ],
+      "generic_name": "Torsemide",
+      "available_strengths": [
+        "10 mg",
+        "20 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "diuretic"
+    },
+    {
+      "brand_names": [
+        "Aldactone"
+      ],
+      "generic_name": "Spironolactone",
+      "available_strengths": [
+        "25 mg",
+        "50 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "diuretic"
+    },
+    {
+      "brand_names": [
+        "Imdur",
+        "Ismo"
+      ],
+      "generic_name": "Isosorbide mononitrate",
+      "available_strengths": [
+        "30 mg",
+        "60 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antianginal"
+    },
+    {
+      "brand_names": [
+        "Lipitor",
+        "Atorva",
+        "Storvas"
+      ],
+      "generic_name": "Atorvastatin",
+      "available_strengths": [
+        "10 mg",
+        "20 mg",
+        "40 mg",
+        "80 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "statin"
+    },
+    {
+      "brand_names": [
+        "Crestor",
+        "Rosuvas",
+        "Rozavel"
+      ],
+      "generic_name": "Rosuvastatin",
+      "available_strengths": [
+        "5 mg",
+        "10 mg",
+        "20 mg",
+        "40 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "statin"
+    },
+    {
+      "brand_names": [
+        "Ecosprin",
+        "Disprin"
+      ],
+      "generic_name": "Aspirin",
+      "available_strengths": [
+        "75 mg",
+        "150 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antiplatelet"
+    },
+    {
+      "brand_names": [
+        "Plavix",
+        "Clopilet",
+        "Deplatt"
+      ],
+      "generic_name": "Clopidogrel",
+      "available_strengths": [
+        "75 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antiplatelet"
+    },
+    {
+      "brand_names": [
+        "Brilinta"
+      ],
+      "generic_name": "Ticagrelor",
+      "available_strengths": [
+        "60 mg",
+        "90 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antiplatelet"
+    },
+    {
+      "brand_names": [
+        "Clexane",
+        "Lovenox"
+      ],
+      "generic_name": "Enoxaparin",
+      "available_strengths": [
+        "40 mg"
+      ],
+      "form": "injection",
+      "route": "injection",
+      "typical_use_category": "anticoagulant"
+    },
+    {
+      "brand_names": [
+        "Pantop",
+        "Pan",
+        "Pantocid"
+      ],
+      "generic_name": "Pantoprazole",
+      "available_strengths": [
+        "20 mg",
+        "40 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "PPI"
+    },
+    {
+      "brand_names": [
+        "Razo",
+        "Rabekind"
+      ],
+      "generic_name": "Rabeprazole",
+      "available_strengths": [
+        "20 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "PPI"
+    },
+    {
+      "brand_names": [
+        "Omez",
+        "Prilosec"
+      ],
+      "generic_name": "Omeprazole",
+      "available_strengths": [
+        "20 mg"
+      ],
+      "form": "capsule",
+      "route": "oral",
+      "typical_use_category": "PPI"
+    },
+    {
+      "brand_names": [
+        "Nexium",
+        "Sompraz"
+      ],
+      "generic_name": "Esomeprazole",
+      "available_strengths": [
+        "20 mg",
+        "40 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "PPI"
+    },
+    {
+      "brand_names": [
+        "Famocid"
+      ],
+      "generic_name": "Famotidine",
+      "available_strengths": [
+        "20 mg",
+        "40 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antacid / H2 blocker"
+    },
+    {
+      "brand_names": [
+        "Domstal",
+        "Motilium"
+      ],
+      "generic_name": "Domperidone",
+      "available_strengths": [
+        "10 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antiemetic"
+    },
+    {
+      "brand_names": [
+        "Emeset",
+        "Zofran",
+        "Ondem"
+      ],
+      "generic_name": "Ondansetron",
+      "available_strengths": [
+        "4 mg",
+        "8 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antiemetic"
+    },
+    {
+      "brand_names": [
+        "Redotil"
+      ],
+      "generic_name": "Racecadotril",
+      "available_strengths": [
+        "100 mg"
+      ],
+      "form": "capsule",
+      "route": "oral",
+      "typical_use_category": "antidiarrheal"
+    },
+    {
+      "brand_names": [
+        "Duphalac"
+      ],
+      "generic_name": "Lactulose",
+      "available_strengths": [
+        "10 g/15 mL"
+      ],
+      "form": "syrup",
+      "route": "oral",
+      "typical_use_category": "laxative"
+    },
+    {
+      "brand_names": [
+        "Crocin",
+        "Dolo",
+        "Calpol"
+      ],
+      "generic_name": "Paracetamol",
+      "available_strengths": [
+        "500 mg",
+        "650 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "analgesic"
+    },
+    {
+      "brand_names": [
+        "Brufen"
+      ],
+      "generic_name": "Ibuprofen",
+      "available_strengths": [
+        "200 mg",
+        "400 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "analgesic"
+    },
+    {
+      "brand_names": [
+        "Voveran",
+        "Voltaren"
+      ],
+      "generic_name": "Diclofenac",
+      "available_strengths": [
+        "50 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "analgesic"
+    },
+    {
+      "brand_names": [
+        "Zerodol",
+        "Hifenac"
+      ],
+      "generic_name": "Aceclofenac",
+      "available_strengths": [
+        "100 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "analgesic"
+    },
+    {
+      "brand_names": [
+        "Mox",
+        "Novamox"
+      ],
+      "generic_name": "Amoxicillin",
+      "available_strengths": [
+        "250 mg",
+        "500 mg"
+      ],
+      "form": "capsule",
+      "route": "oral",
+      "typical_use_category": "antibiotic"
+    },
+    {
+      "brand_names": [
+        "Augmentin",
+        "Clavam"
+      ],
+      "generic_name": "Amoxicillin + Clavulanic acid",
+      "available_strengths": [
+        "625 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antibiotic"
+    },
+    {
+      "brand_names": [
+        "Azithral",
+        "Zithromax",
+        "Azee"
+      ],
+      "generic_name": "Azithromycin",
+      "available_strengths": [
+        "250 mg",
+        "500 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antibiotic"
+    },
+    {
+      "brand_names": [
+        "Taxim-O",
+        "Zifi"
+      ],
+      "generic_name": "Cefixime",
+      "available_strengths": [
+        "100 mg",
+        "200 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antibiotic"
+    },
+    {
+      "brand_names": [
+        "Ceftum",
+        "Zinnat"
+      ],
+      "generic_name": "Cefuroxime",
+      "available_strengths": [
+        "250 mg",
+        "500 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antibiotic"
+    },
+    {
+      "brand_names": [
+        "Cepodem"
+      ],
+      "generic_name": "Cefpodoxime",
+      "available_strengths": [
+        "100 mg",
+        "200 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antibiotic"
+    },
+    {
+      "brand_names": [
+        "Ciplox",
+        "Cifran"
+      ],
+      "generic_name": "Ciprofloxacin",
+      "available_strengths": [
+        "250 mg",
+        "500 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antibiotic"
+    },
+    {
+      "brand_names": [
+        "Levoflox",
+        "Tavanic"
+      ],
+      "generic_name": "Levofloxacin",
+      "available_strengths": [
+        "250 mg",
+        "500 mg",
+        "750 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antibiotic"
+    },
+    {
+      "brand_names": [
+        "Niftran"
+      ],
+      "generic_name": "Nitrofurantoin",
+      "available_strengths": [
+        "100 mg"
+      ],
+      "form": "capsule",
+      "route": "oral",
+      "typical_use_category": "antibiotic"
+    },
+    {
+      "brand_names": [
+        "Flagyl",
+        "Metrogyl"
+      ],
+      "generic_name": "Metronidazole",
+      "available_strengths": [
+        "200 mg",
+        "400 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antibiotic"
+    },
+    {
+      "brand_names": [
+        "T-Bact",
+        "Bactroban"
+      ],
+      "generic_name": "Mupirocin",
+      "available_strengths": [
+        "2%"
+      ],
+      "form": "ointment",
+      "route": "topical",
+      "typical_use_category": "topical antibiotic"
+    },
+    {
+      "brand_names": [
+        "Cetzine",
+        "Zyrtec",
+        "Okacet"
+      ],
+      "generic_name": "Cetirizine",
+      "available_strengths": [
+        "10 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antihistamine"
+    },
+    {
+      "brand_names": [
+        "Levocet",
+        "Xyzal"
+      ],
+      "generic_name": "Levocetirizine",
+      "available_strengths": [
+        "5 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "antihistamine"
+    },
+    {
+      "brand_names": [
+        "Montair",
+        "Singulair"
+      ],
+      "generic_name": "Montelukast",
+      "available_strengths": [
+        "10 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "respiratory"
+    },
+    {
+      "brand_names": [
+        "Asthalin",
+        "Ventolin"
+      ],
+      "generic_name": "Salbutamol",
+      "available_strengths": [
+        "100 mcg"
+      ],
+      "form": "inhaler",
+      "route": "inhalation",
+      "typical_use_category": "bronchodilator"
+    },
+    {
+      "brand_names": [
+        "Foracort",
+        "Symbicort"
+      ],
+      "generic_name": "Budesonide + Formoterol",
+      "available_strengths": [
+        "200/6 mcg"
+      ],
+      "form": "inhaler",
+      "route": "inhalation",
+      "typical_use_category": "respiratory"
+    },
+    {
+      "brand_names": [
+        "Tiova",
+        "Spiriva"
+      ],
+      "generic_name": "Tiotropium",
+      "available_strengths": [
+        "18 mcg"
+      ],
+      "form": "inhaler",
+      "route": "inhalation",
+      "typical_use_category": "bronchodilator"
+    },
+    {
+      "brand_names": [
+        "Ambrodil"
+      ],
+      "generic_name": "Ambroxol",
+      "available_strengths": [
+        "30 mg/5 mL"
+      ],
+      "form": "syrup",
+      "route": "oral",
+      "typical_use_category": "mucolytic"
+    },
+    {
+      "brand_names": [
+        "Wysolone",
+        "Omnacortil"
+      ],
+      "generic_name": "Prednisolone",
+      "available_strengths": [
+        "5 mg",
+        "10 mg",
+        "20 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "corticosteroid"
+    },
+    {
+      "brand_names": [
+        "Thyronorm",
+        "Eltroxin"
+      ],
+      "generic_name": "Levothyroxine",
+      "available_strengths": [
+        "25 mcg",
+        "50 mcg",
+        "75 mcg",
+        "100 mcg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "thyroid"
+    },
+    {
+      "brand_names": [
+        "Shelcal",
+        "Calcimax"
+      ],
+      "generic_name": "Calcium carbonate + Vitamin D3",
+      "available_strengths": [
+        "500 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "supplement"
+    },
+    {
+      "brand_names": [
+        "Uprise-D3",
+        "D-Rise"
+      ],
+      "generic_name": "Cholecalciferol",
+      "available_strengths": [
+        "60000 IU"
+      ],
+      "form": "capsule",
+      "route": "oral",
+      "typical_use_category": "supplement"
+    },
+    {
+      "brand_names": [
+        "Folvite"
+      ],
+      "generic_name": "Folic acid",
+      "available_strengths": [
+        "5 mg"
+      ],
+      "form": "tablet",
+      "route": "oral",
+      "typical_use_category": "supplement"
+    },
+    {
+      "brand_names": [
+        "Urimax",
+        "Veltam"
+      ],
+      "generic_name": "Tamsulosin",
+      "available_strengths": [
+        "0.4 mg"
+      ],
+      "form": "capsule",
+      "route": "oral",
+      "typical_use_category": "urological"
+    },
+    {
+      "brand_names": [
+        "Gabapin"
+      ],
+      "generic_name": "Gabapentin",
+      "available_strengths": [
+        "100 mg",
+        "300 mg"
+      ],
+      "form": "capsule",
+      "route": "oral",
+      "typical_use_category": "neuropathic pain"
+    }
+  ]
+}

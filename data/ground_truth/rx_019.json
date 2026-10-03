@@ -1,0 +1,172 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "Prednisolone",
+      "strength": "20 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "after_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "for 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 200,
+        "end": 267,
+        "text": "Tab Prednisolone 20 mg - 1 tablet once daily after meals for 5 days"
+      }
+    },
+    {
+      "brand_name": "Zithromax",
+      "generic_name": null,
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "for 3 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 271,
+        "end": 324,
+        "text": "Tab Zithromax 500 mg - 1 tablet once daily for 3 days"
+      }
+    },
+    {
+      "brand_name": "Foracort",
+      "generic_name": "Budesonide + Formoterol",
+      "strength": "200/6 mcg",
+      "form": "inhaler",
+      "route": "inhalation",
+      "dose": "2 puffs",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "for 30 days",
+      "special_instructions": "Rinse mouth after use.",
+      "source_span": {
+        "start": 328,
+        "end": 438,
+        "text": "Inhaler Budesonide + Formoterol (Foracort) 200/6 mcg - 2 puffs twice daily for 30 days. Rinse mouth after use."
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Tiotropium",
+      "strength": "18 mcg",
+      "form": "inhaler",
+      "route": "inhalation",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "for 30 days",
+      "special_instructions": "Inhale using the device provided.",
+      "source_span": {
+        "start": 442,
+        "end": 537,
+        "text": "Inhaler Tiotropium 18 mcg - 1 capsule once daily for 30 days. Inhale using the device provided."
+      }
+    },
+    {
+      "brand_name": "Asthalin",
+      "generic_name": "Salbutamol",
+      "strength": "100 mcg",
+      "form": "inhaler",
+      "route": "inhalation",
+      "dose": "2 puffs",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": null,
+        "is_prn": true
+      },
+      "duration_days": 30,
+      "duration_text": "for 30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 541,
+        "end": 615,
+        "text": "Inhaler Asthalin (Salbutamol) 100 mcg - 2 puffs only if needed for 30 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Pantoprazole",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "for 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 619,
+        "end": 687,
+        "text": "Tab Pantoprazole 40 mg - 1 tablet once daily before meals for 5 days"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "Please review at the chest clinic after 7 days with a repeat breathing test.",
+      "date_text": "after 7 days",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 702,
+        "end": 778,
+        "text": "Please review at the chest clinic after 7 days with a repeat breathing test."
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Worsening breathlessness.",
+      "source_span": {
+        "start": 942,
+        "end": 967,
+        "text": "Worsening breathlessness."
+      }
+    },
+    {
+      "text": "Lips or fingers turning bluish.",
+      "source_span": {
+        "start": 970,
+        "end": 1001,
+        "text": "Lips or fingers turning bluish."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Avoid smoke, dust and strong smells.",
+    "Practise breathing exercises as taught."
+  ],
+  "document_language": "en"
+}

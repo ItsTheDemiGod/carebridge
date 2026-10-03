@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. S. Testwala (Reg. No. SYN-40650)
+Date: 22 Jun 2025
+Patient: Meena Sample   Age/Sex: 32/M   ID: SYN-OP-05938
+
+Diagnosis: Dengue fever, recovering
+
+Rx
+1. Tab Paracetamol 650 mg - 1 tablet only if needed for 30 days
+2. Tab Pantoprazole (Pantocid) 40 mg - 1 tablet once daily before meals for 5 days
+3. Tab Zofran 4 mg - 1 tablet only if needed for 30 days
+
+Follow-up:
+- Please review at the medicine OPD after 7 days with a repeat blood count.
+
+Diet and activity advice:
+- Drink plenty of fluids such as ORS, coconut water and soups.
+- Take adequate rest for one week.
+
+Sample document for software testing only. All details are fictional.

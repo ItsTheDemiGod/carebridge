@@ -1,0 +1,35 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Meena Fictional   Age/Sex: 34/M   ID: SYN-IP-01701
+Admitted: 06 Oct 2025   Discharged: 14-10-2025
+Consultant: Dr. Anil Sample
+
+Ward: 3B / Bed 12
+dx: Dengue fever (recovering)
+
+h/o & course:
+Meena Fictional, a 34-year-old man, was admitted with fever and body ache. The blood platelet count fell during the illness and later recovered with fluids and rest. The patient is eating well and is being discharged in stable condition.
+
+Pharmacy copy
+Meds on d/c:
+Tab. Calpol 650 mg 1 tab SOS
+2) t.  pantoprazole  40 mg
+    1 tab  od  x 5/7
+3. T. Ondem 4mg 1 tab SOS
+
+Page 1 of 2
+review:
+f/u medicine opd 3/7 with repeat cbc
+
+Diet / activity
+o Drink plenty of fluids such as ORS, coconut water and soups.
+- Take adequate rest for one week.
+Avoid ibuprofen and diclofenac unless your doctor advises.
+
+Warning signs:
+o Bleeding from gums or nose.
+- Black stools or vomiting blood.
+* Severe abdominal pain or repeated vomiting.
+o Extreme drowsiness or restlessness.
+
+Sample document for software testing only. All details are fictional.

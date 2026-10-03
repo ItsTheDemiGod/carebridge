@@ -1,0 +1,33 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Suresh Example   Age/Sex: 58/M   ID: SYN-IP-00980
+Admitted: 23 Jun 2025   Discharged: 29 Jun 2025
+Consultant: Dr. R. Demo
+
+Dx: AECOPD
+
+Course:
+Suresh Example, a 58-year-old man, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
+
+Rx on discharge:
+1) Tab Wysolone 20mg 1 tab OD PC x 5/7
+2) Tab. Azithromycin (Azee) 500mg 1 tab OD x 3 days
+3) Inh. Budesonide + Formoterol 200/6 mcg 2 puffs BD - rinse mouth after use
+4) Inhaler Tiotropium 18mcg 1 cap OD - inhale via device
+5) INHALER VENTOLIN 100 MCG 2 puffs SOS
+6) TAB. PANTOP 40MG 1-0-0 AC
+
+F/U:
+- F/U chest clinic in 14 days with PFT
+
+Advice:
+- Avoid smoke, dust and strong smells.
+- Practise breathing exercises as taught.
+- Eat small, frequent meals.
+
+Return if:
+- Worsening breathlessness.
+- Lips or fingers turning bluish.
+- Fever with yellow-green sputum.
+
+Sample document for software testing only. All details are fictional.

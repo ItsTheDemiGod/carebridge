@@ -1,0 +1,138 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": "Glucophage",
+      "generic_name": "Metformin",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 520,
+        "end": 588,
+        "text": "Tab Glucophage (Metformin) 500 mg - 1 tablet twice daily after meals"
+      }
+    },
+    {
+      "brand_name": "Glimy",
+      "generic_name": "Glimepiride",
+      "strength": "1 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 592,
+        "end": 655,
+        "text": "Tab Glimepiride (Glimy) 1 mg - 1 tablet once daily before meals"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Telmisartan",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 659,
+        "end": 702,
+        "text": "Tab Telmisartan 40 mg - 1 tablet once daily"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Atorvastatin",
+      "strength": "10 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "bedtime",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 706,
+        "end": 750,
+        "text": "Tab Atorvastatin 10 mg - 1 tablet at bedtime"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "Please review at the medicine OPD after 2 weeks with fasting and post-meal blood sugar reports.",
+      "date_text": "after 2 weeks",
+      "days_from_discharge": 14,
+      "source_span": {
+        "start": 765,
+        "end": 860,
+        "text": "Please review at the medicine OPD after 2 weeks with fasting and post-meal blood sugar reports."
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Severe giddiness, sweating or fainting.",
+      "source_span": {
+        "start": 1118,
+        "end": 1157,
+        "text": "Severe giddiness, sweating or fainting."
+      }
+    },
+    {
+      "text": "Very high thirst or passing large amounts of urine with vomiting.",
+      "source_span": {
+        "start": 1160,
+        "end": 1225,
+        "text": "Very high thirst or passing large amounts of urine with vomiting."
+      }
+    },
+    {
+      "text": "Chest pain or breathlessness.",
+      "source_span": {
+        "start": 1228,
+        "end": 1257,
+        "text": "Chest pain or breathlessness."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Follow a diabetic diet with controlled portions of rice and sweets.",
+    "Walk for 30 minutes daily as tolerated.",
+    "Reduce salt in food.",
+    "Check blood sugar at home as advised."
+  ],
+  "document_language": "en"
+}

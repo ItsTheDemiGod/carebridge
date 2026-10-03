@@ -1,0 +1,35 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Lakshmi Demo   Age/Sex: 70/F   ID: SYN-IP-02414
+Admitted: 22-08-2025   Discharged: 29-08-2025
+Consultant: Dr. S. Testwala
+
+Pharmacy copy
+DX - AGE
+
+Course
+Lakshmi Demo, a 70-year-old woman, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
+
+Printed on: 08/03/2025 14:22
+
+Rx -
+Cap Redotil (Racecadotril) 100 mg
+    1 cap TDS AC
+(2) tab.  ondansetron  4mg  1 tab  sos
+- tab. ciplox (ciprofloxacin) 500mg 1 tab bd pc for 3d
+
+review:
+o f/u medicine opd 3/7 with stool r/m if loose stools continue
+
+ADVICE -
+* Drink ORS after each loose stool.
+o Eat light food such as rice, banana and curd.
+Wash hands before eating and after using the toilet.
+Drink only boiled or filtered water.
+
+RETURN IF -
+* Vomiting that does not stop.
+* Blood in stool.
+o Very little urine, dry mouth or extreme drowsiness.
+
+Sample document for software testing only. All details are fictional.

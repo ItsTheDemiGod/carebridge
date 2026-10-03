@@ -1,0 +1,30 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Arjun Sample   Age/Sex: 77/M   ID: SYN-IP-08064
+Admitted: 17 Sep 2025   Discharged: 21 Sep 2025
+Consultant: Dr. S. Testwala
+
+Dx: UTI
+
+Course:
+Arjun Sample, a 77-year-old man, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
+
+Rx on discharge:
+1) Cap Niftran 100 mg 1 cap BD PC
+2) TAB CROCIN (PARACETAMOL) 500 MG 1 tab SOS
+3) T. MOTILIUM 10MG 1-1-1 AC X 3/7
+
+F/U:
+- F/U medicine OPD in 5 days with urine R/M
+
+Advice:
+- Drink plenty of water.
+- Do not hold urine for long periods.
+- Maintain genital hygiene.
+
+Return if:
+- Fever with chills or back pain.
+- Blood in urine.
+- Unable to pass urine.
+
+Sample document for software testing only. All details are fictional.

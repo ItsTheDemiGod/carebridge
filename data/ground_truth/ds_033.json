@@ -1,0 +1,116 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": "redotil",
+      "generic_name": "racecadotril",
+      "strength": "100 mg",
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "before_meals",
+        "original_abbreviation": "tds",
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "3 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 425,
+        "end": 485,
+        "text": "cap.  redotil (racecadotril)  100 mg  1 cap  tds  ac  3 days"
+      }
+    },
+    {
+      "brand_name": "Ondem",
+      "generic_name": "Ondansetron",
+      "strength": "4 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 489,
+        "end": 526,
+        "text": "T. Ondansetron (Ondem) 4 mg 1 tab SOS"
+      }
+    },
+    {
+      "brand_name": "cifran",
+      "generic_name": null,
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "other",
+        "original_abbreviation": "bd",
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "for 3d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 531,
+        "end": 569,
+        "text": "tab.  cifran  500mg  1 tab  bd  for 3d"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u medicine opd 5/7 with stool r/m if loose stools continue",
+      "date_text": "5/7",
+      "days_from_discharge": 5,
+      "source_span": {
+        "start": 579,
+        "end": 639,
+        "text": "f/u medicine opd 5/7 with stool r/m if loose stools continue"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Vomiting that does not stop.",
+      "source_span": {
+        "start": 866,
+        "end": 894,
+        "text": "Vomiting that does not stop."
+      }
+    },
+    {
+      "text": "Blood in stool.",
+      "source_span": {
+        "start": 897,
+        "end": 912,
+        "text": "Blood in stool."
+      }
+    },
+    {
+      "text": "Very little urine, dry mouth or extreme drowsiness.",
+      "source_span": {
+        "start": 915,
+        "end": 966,
+        "text": "Very little urine, dry mouth or extreme drowsiness."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink ORS after each loose stool.",
+    "Eat light food such as rice, banana and curd.",
+    "Wash hands before eating and after using the toilet.",
+    "Drink only boiled or filtered water."
+  ],
+  "document_language": "en"
+}

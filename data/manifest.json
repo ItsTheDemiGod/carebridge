@@ -1,0 +1,426 @@
+{
+  "seed": 20250101,
+  "note": "Use ONLY the dev split for prompt tuning and debugging. The test split is held out.",
+  "documents": [
+    {
+      "id": "ds_001",
+      "document_type": "discharge_summary",
+      "template": "t2dm_htn",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_002",
+      "document_type": "discharge_summary",
+      "template": "cap",
+      "difficulty": "abbreviated",
+      "split": "test"
+    },
+    {
+      "id": "ds_003",
+      "document_type": "discharge_summary",
+      "template": "dengue",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "ds_004",
+      "document_type": "discharge_summary",
+      "template": "appendix",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_005",
+      "document_type": "discharge_summary",
+      "template": "uti",
+      "difficulty": "abbreviated",
+      "split": "test"
+    },
+    {
+      "id": "ds_006",
+      "document_type": "discharge_summary",
+      "template": "gastro",
+      "difficulty": "messy",
+      "split": "dev"
+    },
+    {
+      "id": "ds_007",
+      "document_type": "discharge_summary",
+      "template": "cardiac",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_008",
+      "document_type": "discharge_summary",
+      "template": "copd",
+      "difficulty": "abbreviated",
+      "split": "dev"
+    },
+    {
+      "id": "ds_009",
+      "document_type": "discharge_summary",
+      "template": "fracture",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "ds_010",
+      "document_type": "discharge_summary",
+      "template": "t2dm_htn",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_011",
+      "document_type": "discharge_summary",
+      "template": "cap",
+      "difficulty": "abbreviated",
+      "split": "dev"
+    },
+    {
+      "id": "ds_012",
+      "document_type": "discharge_summary",
+      "template": "dengue",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "ds_013",
+      "document_type": "discharge_summary",
+      "template": "appendix",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_014",
+      "document_type": "discharge_summary",
+      "template": "uti",
+      "difficulty": "abbreviated",
+      "split": "test"
+    },
+    {
+      "id": "ds_015",
+      "document_type": "discharge_summary",
+      "template": "gastro",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "ds_016",
+      "document_type": "discharge_summary",
+      "template": "cardiac",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_017",
+      "document_type": "discharge_summary",
+      "template": "copd",
+      "difficulty": "abbreviated",
+      "split": "test"
+    },
+    {
+      "id": "ds_018",
+      "document_type": "discharge_summary",
+      "template": "fracture",
+      "difficulty": "messy",
+      "split": "dev"
+    },
+    {
+      "id": "ds_019",
+      "document_type": "discharge_summary",
+      "template": "t2dm_htn",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_020",
+      "document_type": "discharge_summary",
+      "template": "cap",
+      "difficulty": "abbreviated",
+      "split": "dev"
+    },
+    {
+      "id": "ds_021",
+      "document_type": "discharge_summary",
+      "template": "dengue",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "ds_022",
+      "document_type": "discharge_summary",
+      "template": "appendix",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_023",
+      "document_type": "discharge_summary",
+      "template": "uti",
+      "difficulty": "abbreviated",
+      "split": "dev"
+    },
+    {
+      "id": "ds_024",
+      "document_type": "discharge_summary",
+      "template": "gastro",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "ds_025",
+      "document_type": "discharge_summary",
+      "template": "cardiac",
+      "difficulty": "clean",
+      "split": "dev"
+    },
+    {
+      "id": "ds_026",
+      "document_type": "discharge_summary",
+      "template": "copd",
+      "difficulty": "abbreviated",
+      "split": "dev"
+    },
+    {
+      "id": "ds_027",
+      "document_type": "discharge_summary",
+      "template": "fracture",
+      "difficulty": "messy",
+      "split": "dev"
+    },
+    {
+      "id": "ds_028",
+      "document_type": "discharge_summary",
+      "template": "t2dm_htn",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_029",
+      "document_type": "discharge_summary",
+      "template": "cap",
+      "difficulty": "abbreviated",
+      "split": "dev"
+    },
+    {
+      "id": "ds_030",
+      "document_type": "discharge_summary",
+      "template": "dengue",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "ds_031",
+      "document_type": "discharge_summary",
+      "template": "appendix",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_032",
+      "document_type": "discharge_summary",
+      "template": "uti",
+      "difficulty": "abbreviated",
+      "split": "dev"
+    },
+    {
+      "id": "ds_033",
+      "document_type": "discharge_summary",
+      "template": "gastro",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "ds_034",
+      "document_type": "discharge_summary",
+      "template": "cardiac",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "ds_035",
+      "document_type": "discharge_summary",
+      "template": "copd",
+      "difficulty": "abbreviated",
+      "split": "test"
+    },
+    {
+      "id": "ds_036",
+      "document_type": "discharge_summary",
+      "template": "fracture",
+      "difficulty": "messy",
+      "split": "dev"
+    },
+    {
+      "id": "ds_037",
+      "document_type": "discharge_summary",
+      "template": "t2dm_htn",
+      "difficulty": "clean",
+      "split": "dev"
+    },
+    {
+      "id": "ds_038",
+      "document_type": "discharge_summary",
+      "template": "cap",
+      "difficulty": "abbreviated",
+      "split": "test"
+    },
+    {
+      "id": "ds_039",
+      "document_type": "discharge_summary",
+      "template": "dengue",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "ds_040",
+      "document_type": "discharge_summary",
+      "template": "appendix",
+      "difficulty": "clean",
+      "split": "dev"
+    },
+    {
+      "id": "rx_001",
+      "document_type": "prescription",
+      "template": "t2dm_htn",
+      "difficulty": "clean",
+      "split": "dev"
+    },
+    {
+      "id": "rx_002",
+      "document_type": "prescription",
+      "template": "cap",
+      "difficulty": "abbreviated",
+      "split": "test"
+    },
+    {
+      "id": "rx_003",
+      "document_type": "prescription",
+      "template": "uti",
+      "difficulty": "messy",
+      "split": "dev"
+    },
+    {
+      "id": "rx_004",
+      "document_type": "prescription",
+      "template": "gastro",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "rx_005",
+      "document_type": "prescription",
+      "template": "copd",
+      "difficulty": "abbreviated",
+      "split": "dev"
+    },
+    {
+      "id": "rx_006",
+      "document_type": "prescription",
+      "template": "dengue",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "rx_007",
+      "document_type": "prescription",
+      "template": "cardiac",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "rx_008",
+      "document_type": "prescription",
+      "template": "t2dm_htn",
+      "difficulty": "abbreviated",
+      "split": "test"
+    },
+    {
+      "id": "rx_009",
+      "document_type": "prescription",
+      "template": "cap",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "rx_010",
+      "document_type": "prescription",
+      "template": "uti",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "rx_011",
+      "document_type": "prescription",
+      "template": "gastro",
+      "difficulty": "abbreviated",
+      "split": "test"
+    },
+    {
+      "id": "rx_012",
+      "document_type": "prescription",
+      "template": "copd",
+      "difficulty": "messy",
+      "split": "dev"
+    },
+    {
+      "id": "rx_013",
+      "document_type": "prescription",
+      "template": "dengue",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "rx_014",
+      "document_type": "prescription",
+      "template": "cardiac",
+      "difficulty": "abbreviated",
+      "split": "test"
+    },
+    {
+      "id": "rx_015",
+      "document_type": "prescription",
+      "template": "t2dm_htn",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "rx_016",
+      "document_type": "prescription",
+      "template": "cap",
+      "difficulty": "clean",
+      "split": "dev"
+    },
+    {
+      "id": "rx_017",
+      "document_type": "prescription",
+      "template": "uti",
+      "difficulty": "abbreviated",
+      "split": "dev"
+    },
+    {
+      "id": "rx_018",
+      "document_type": "prescription",
+      "template": "gastro",
+      "difficulty": "messy",
+      "split": "test"
+    },
+    {
+      "id": "rx_019",
+      "document_type": "prescription",
+      "template": "copd",
+      "difficulty": "clean",
+      "split": "test"
+    },
+    {
+      "id": "rx_020",
+      "document_type": "prescription",
+      "template": "dengue",
+      "difficulty": "abbreviated",
+      "split": "test"
+    }
+  ]
+}

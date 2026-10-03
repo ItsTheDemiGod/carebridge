@@ -1,0 +1,145 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "PARACETAMOL",
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 4,
+        "timing_label": "other",
+        "original_abbreviation": "QID",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "X5/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 514,
+        "end": 549,
+        "text": "T. PARACETAMOL 650MG 1 tab QID X5/7"
+      }
+    },
+    {
+      "brand_name": "lovenox",
+      "generic_name": "enoxaparin",
+      "strength": "40 mg",
+      "form": "injection",
+      "route": "injection",
+      "dose": "1 injection",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "od",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": "sc",
+      "source_span": {
+        "start": 552,
+        "end": 605,
+        "text": "inj enoxaparin (lovenox) 40mg\n    1 injection od - sc"
+      }
+    },
+    {
+      "brand_name": "SHELCAL",
+      "generic_name": null,
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "after_meals",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "FOR 30D",
+      "special_instructions": null,
+      "source_span": {
+        "start": 609,
+        "end": 652,
+        "text": "T.  SHELCAL  500 MG  1 tab  OD  PC  FOR 30D"
+      }
+    },
+    {
+      "brand_name": "D-RISE",
+      "generic_name": null,
+      "strength": "60000 IU",
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 56,
+      "duration_text": "X 8 WEEKS",
+      "special_instructions": null,
+      "source_span": {
+        "start": 655,
+        "end": 706,
+        "text": "CAP  D-RISE  60000IU  1 cap  once weekly  X 8 WEEKS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u ortho opd 10/7 with x-ray and wound check",
+      "date_text": "10/7",
+      "days_from_discharge": 10,
+      "source_span": {
+        "start": 733,
+        "end": 778,
+        "text": "f/u ortho opd 10/7 with x-ray and wound check"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Severe pain not relieved by medicines.",
+      "source_span": {
+        "start": 936,
+        "end": 974,
+        "text": "Severe pain not relieved by medicines."
+      }
+    },
+    {
+      "text": "Numbness, coldness or bluish colour of the toes.",
+      "source_span": {
+        "start": 977,
+        "end": 1025,
+        "text": "Numbness, coldness or bluish colour of the toes."
+      }
+    },
+    {
+      "text": "Pus or foul smell from the wound.",
+      "source_span": {
+        "start": 1028,
+        "end": 1061,
+        "text": "Pus or foul smell from the wound."
+      }
+    },
+    {
+      "text": "Swelling or pain in the calf.",
+      "source_span": {
+        "start": 1064,
+        "end": 1093,
+        "text": "Swelling or pain in the calf."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Eat protein-rich and calcium-rich food.",
+    "Keep the leg raised when resting.",
+    "Walk only with the walker or crutches as taught."
+  ],
+  "document_language": "en"
+}

@@ -1,0 +1,172 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": "omnacortil",
+      "generic_name": null,
+      "strength": "20 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "after_meals",
+        "original_abbreviation": "od",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 180,
+        "end": 216,
+        "text": "t.  omnacortil  20 mg  1 tab  od  pc"
+      }
+    },
+    {
+      "brand_name": "Azee",
+      "generic_name": null,
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "x 3/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 220,
+        "end": 258,
+        "text": "Tab  Azee  500 mg\n    1 tab  OD  x 3/7"
+      }
+    },
+    {
+      "brand_name": "FORACORT",
+      "generic_name": null,
+      "strength": null,
+      "form": "inhaler",
+      "route": "inhalation",
+      "dose": "2 puffs",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "other",
+        "original_abbreviation": "BD",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "X30D",
+      "special_instructions": "RINSE MOUTH AFTER USE",
+      "source_span": {
+        "start": 261,
+        "end": 317,
+        "text": "INHALER FORACORT 2 puffs BD X30D - RINSE MOUTH AFTER USE"
+      }
+    },
+    {
+      "brand_name": "Spiriva",
+      "generic_name": null,
+      "strength": "18 mcg",
+      "form": "inhaler",
+      "route": "inhalation",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 30,
+      "duration_text": "30 days",
+      "special_instructions": "inhale via device",
+      "source_span": {
+        "start": 320,
+        "end": 381,
+        "text": "Inh.  Spiriva  18 mcg  1 cap  OD  30 days - inhale via device"
+      }
+    },
+    {
+      "brand_name": "Asthalin",
+      "generic_name": null,
+      "strength": "100 mcg",
+      "form": "inhaler",
+      "route": "inhalation",
+      "dose": "2 puffs",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": 30,
+      "duration_text": "for 30d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 385,
+        "end": 429,
+        "text": "Inhaler Asthalin 100 mcg 2 puffs SOS for 30d"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "pantoprazole",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": "od",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 434,
+        "end": 472,
+        "text": "tab  pantoprazole  40mg  1 tab  od  ac"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u chest clinic 7/7 with pft",
+      "date_text": "7/7",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 482,
+        "end": 511,
+        "text": "f/u chest clinic 7/7 with pft"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Worsening breathlessness.",
+      "source_span": {
+        "start": 638,
+        "end": 663,
+        "text": "Worsening breathlessness."
+      }
+    },
+    {
+      "text": "Lips or fingers turning bluish.",
+      "source_span": {
+        "start": 666,
+        "end": 697,
+        "text": "Lips or fingers turning bluish."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Avoid smoke, dust and strong smells.",
+    "Practise breathing exercises as taught."
+  ],
+  "document_language": "en"
+}

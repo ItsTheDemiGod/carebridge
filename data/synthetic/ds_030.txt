@@ -1,0 +1,39 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Vikram Testwala   Age/Sex: 49/M   ID: SYN-IP-09990
+Admitted: 11 Oct 2025   Discharged: 15-10-2025
+Consultant: Dr. R. Demo
+
+Ref: SYN/DS/2025
+
+DIAGNOSIS Dengue fever (recovering)
+
+Course
+Vikram Testwala, a 49-year-old man, was admitted with fever and body ache. The blood platelet count fell during the illness and later recovered with fluids and rest. The patient is eating well and is being discharged in stable condition.
+
+Page 1 of 2
+
+Rx -
+1. t. calpol 650mg
+    1 tab sos
+T.  PANTOPRAZOLE  40MG  1 tab  OD  AC
+3. Tab. Ondansetron 4 mg 1 tab SOS
+
+Phone: 000-000-0000
+review:
+f/u medicine opd 1/52 with repeat cbc
+
+adv:
+* Drink plenty of fluids such as ORS, coconut water and soups.
+o Take adequate rest for one week.
+* Avoid ibuprofen and diclofenac unless your doctor advises.
+
+-------------------------
+
+Warning signs:
+* Bleeding from gums or nose.
+Black stools or vomiting blood.
+* Severe abdominal pain or repeated vomiting.
+* Extreme drowsiness or restlessness.
+
+Sample document for software testing only. All details are fictional.

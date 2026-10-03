@@ -1,0 +1,37 @@
+SAMPLE CITY HOSPITAL
+Discharge summary (fictional)
+Patient: Lakshmi Mockerjee   Age/Sex: 81/F   ID: SYN-IP-04475
+Admitted: 27-03-2025   Discharged: 29/03/25
+Consultant: Dr. Anil Sample
+
+Phone: 000-000-0000
+dx: # R tibia s/p IM nailing
+
+COURSE IN HOSPITAL -
+Lakshmi Mockerjee, a 81-year-old woman, was admitted after a fall with a fracture of the right leg bone. Surgery was done to fix the bone with a nail. The wound is clean and the patient is being discharged for follow-up and walking practice.
+
+TREATMENT ON DISCHARGE
+(1) T.  Calpol  650 mg  1 tab  QID  PC  for 5d
+- INJ.  ENOXAPARIN  40 MG  1 injection  OD - SC
+- t. calcium carbonate + vitamin d3 500mg
+    1 tab od for 30d
+4. Cap. D-Rise 60000IU
+    1 cap once weekly
+
+Pharmacy copy
+
+review:
+f/u ortho opd 2/52 with x-ray and wound check
+
+Diet / activity
+o Eat protein-rich and calcium-rich food.
+o Keep the leg raised when resting.
+Walk only with the walker or crutches as taught.
+
+RETURN IF -
+o Severe pain not relieved by medicines.
+- Numbness, coldness or bluish colour of the toes.
+o Pus or foul smell from the wound.
+* Swelling or pain in the calf.
+
+Sample document for software testing only. All details are fictional.

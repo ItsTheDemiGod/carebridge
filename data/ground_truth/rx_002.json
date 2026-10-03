@@ -1,0 +1,128 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "Amoxicillin + Clavulanic acid",
+      "strength": "625 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": "BD",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "x 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 171,
+        "end": 231,
+        "text": "Tab Amoxicillin + Clavulanic acid 625mg 1 tab BD PC x 5 days"
+      }
+    },
+    {
+      "brand_name": "Azee",
+      "generic_name": "Azithromycin",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "morning",
+        "original_abbreviation": "1-0-0",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 235,
+        "end": 271,
+        "text": "Tab. Azee (Azithromycin) 500mg 1-0-0"
+      }
+    },
+    {
+      "brand_name": "CALPOL",
+      "generic_name": null,
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 275,
+        "end": 300,
+        "text": "T. CALPOL 650MG 1 tab SOS"
+      }
+    },
+    {
+      "brand_name": "AMBRODIL",
+      "generic_name": "AMBROXOL",
+      "strength": "30 mg/5 mL",
+      "form": "syrup",
+      "route": "oral",
+      "dose": "5 mL",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "other",
+        "original_abbreviation": "TDS",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "X 5D",
+      "special_instructions": null,
+      "source_span": {
+        "start": 304,
+        "end": 352,
+        "text": "SYP AMBROXOL (AMBRODIL) 30 MG/5 ML 5 mL TDS X 5D"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "F/U chest clinic in 2 wk with repeat CXR",
+      "date_text": "in 2 wk",
+      "days_from_discharge": 14,
+      "source_span": {
+        "start": 361,
+        "end": 401,
+        "text": "F/U chest clinic in 2 wk with repeat CXR"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Fever that does not settle.",
+      "source_span": {
+        "start": 494,
+        "end": 521,
+        "text": "Fever that does not settle."
+      }
+    },
+    {
+      "text": "Worsening breathlessness or chest pain.",
+      "source_span": {
+        "start": 524,
+        "end": 563,
+        "text": "Worsening breathlessness or chest pain."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink plenty of warm fluids.",
+    "Take rest and avoid smoke and dust."
+  ],
+  "document_language": "en"
+}

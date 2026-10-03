@@ -1,0 +1,22 @@
+Sample City Hospital  OPD
+Dr. Anil Sample (Reg. No. SYN-56426)
+Date: 30 Jan 2025
+Patient: Deepa Demo   Age/Sex: 27/F   ID: SYN-OP-02425
+
+DIAGNOSIS Dengue fever (recovering)
+
+Rx
+1. tab.  paracetamol  650mg  1 tab  sos
+TAB  PANTOPRAZOLE (PANTOCID)  1-0-0  X 5/7
+- T.  Ondansetron (Emeset)  4 mg
+    1 tab  SOS
+
+** continued overleaf **
+review:
+o f/u medicine opd 7/7 with repeat cbc
+
+adv:
+* Drink plenty of fluids such as ORS, coconut water and soups.
+- Take adequate rest for one week.
+
+Sample document for software testing only. All details are fictional.

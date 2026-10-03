@@ -1,0 +1,25 @@
+Sample City Hospital  OPD
+Dr. R. Demo (Reg. No. SYN-28482)
+Date: 12-05-2025
+Patient: Arjun Sample   Age/Sex: 75/F   ID: SYN-OP-01925
+
+DX - AGE
+
+Rx
+1. c. redotil (racecadotril) 100 mg 1 cap tds ac
+2. t. ondansetron 4mg 1 tab sos for 30d
+3) Tab.  Ciprofloxacin  500mg
+    1 tab  BD  PC  for 3d
+
+F/U -
+* f/u medicine opd 5/7 with stool r/m if loose stools continue
+
+Diet / activity
+o Drink ORS after each loose stool.
+- Eat light food such as rice, banana and curd.
+
+Warning signs:
+- Vomiting that does not stop.
+- Blood in stool.
+
+Sample document for software testing only. All details are fictional.

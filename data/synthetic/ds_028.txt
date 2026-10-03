@@ -1,0 +1,32 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Meena Sample   Age/Sex: 37/F   ID: SYN-IP-08472
+Admitted: 02 May 2025   Discharged: 05 May 2025
+Consultant: Dr. S. Testwala
+
+Diagnosis: Type 2 diabetes mellitus with hypertension
+
+Hospital course:
+Meena Sample, a 37-year-old woman, was admitted with high blood sugar and raised blood pressure. Blood sugar was brought under control with medicines and diet advice, and blood pressure settled. The patient is being discharged in stable condition.
+
+Discharge medications:
+1. Tab Metformin 500 mg - 1 tablet twice daily after meals
+2. Tab Glimepiride (Glimy) 1 mg - 1 tablet once daily before meals
+3. Tab Telmisartan 40 mg - 1 tablet once daily
+4. Tab Atorvastatin 10 mg - 1 tablet at bedtime
+
+Follow-up:
+- Please review at the medicine OPD after 1 week with fasting and post-meal blood sugar reports.
+
+Diet and activity advice:
+- Follow a diabetic diet with controlled portions of rice and sweets.
+- Walk for 30 minutes daily as tolerated.
+- Reduce salt in food.
+- Check blood sugar at home as advised.
+
+Warning signs - return to the hospital if you have:
+- Severe giddiness, sweating or fainting.
+- Very high thirst or passing large amounts of urine with vomiting.
+- Chest pain or breathlessness.
+
+Sample document for software testing only. All details are fictional.

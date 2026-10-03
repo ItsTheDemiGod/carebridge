@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. S. Testwala (Reg. No. SYN-20813)
+Date: 16 Jan 2025
+Patient: Arjun Example   Age/Sex: 31/M   ID: SYN-OP-05258
+
+Dx: Dengue fever (recovering)
+
+Rx
+1) Tab Paracetamol 650 mg 1 tab SOS
+2) T. PANTOP 40 MG 1 tab OD AC
+3) T. ONDANSETRON (EMESET) 4 MG 1 tab SOS X 30 DAYS
+
+F/U:
+- F/U medicine OPD in 5 days with repeat CBC
+
+Advice:
+- Drink plenty of fluids such as ORS, coconut water and soups.
+- Take adequate rest for one week.
+
+Sample document for software testing only. All details are fictional.

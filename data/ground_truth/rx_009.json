@@ -1,0 +1,100 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "AMOXICILLIN + CLAVULANIC ACID",
+      "strength": "625 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": "BD",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "X 5/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 170,
+        "end": 237,
+        "text": "TAB.  AMOXICILLIN + CLAVULANIC ACID  625MG\n    1 tab  BD  PC  X 5/7"
+      }
+    },
+    {
+      "brand_name": "azee",
+      "generic_name": null,
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "od",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 240,
+        "end": 266,
+        "text": "t. azee 500mg\n    1 tab od"
+      }
+    },
+    {
+      "brand_name": "DOLO",
+      "generic_name": "PARACETAMOL",
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 269,
+        "end": 312,
+        "text": "TAB PARACETAMOL (DOLO) 650 MG\n    1 tab SOS"
+      }
+    },
+    {
+      "brand_name": "AMBRODIL",
+      "generic_name": "AMBROXOL",
+      "strength": "30 mg/5 mL",
+      "form": "syrup",
+      "route": "oral",
+      "dose": "5 mL",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "other",
+        "original_abbreviation": "TDS",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "FOR 5D",
+      "special_instructions": null,
+      "source_span": {
+        "start": 316,
+        "end": 372,
+        "text": "SYP.  AMBRODIL (AMBROXOL)  30 MG/5 ML  5 mL  TDS  FOR 5D"
+      }
+    }
+  ],
+  "follow_ups": [],
+  "red_flags": [],
+  "diet_activity_advice": [
+    "Drink plenty of warm fluids.",
+    "Take rest and avoid smoke and dust."
+  ],
+  "document_language": "en"
+}

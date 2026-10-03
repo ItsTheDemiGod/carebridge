@@ -1,0 +1,181 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "Prednisolone",
+      "strength": "20 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "after_meals",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "x 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 442,
+        "end": 485,
+        "text": "Tab Prednisolone 20 mg 1 tab OD PC x 5 days"
+      }
+    },
+    {
+      "brand_name": "Zithromax",
+      "generic_name": "Azithromycin",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "morning",
+        "original_abbreviation": "1-0-0",
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "x 3/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 489,
+        "end": 535,
+        "text": "T. Zithromax (Azithromycin) 500 mg 1-0-0 x 3/7"
+      }
+    },
+    {
+      "brand_name": "Symbicort",
+      "generic_name": null,
+      "strength": "200/6 mcg",
+      "form": "inhaler",
+      "route": "inhalation",
+      "dose": "2 puffs",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "other",
+        "original_abbreviation": "BD",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": "rinse mouth after use",
+      "source_span": {
+        "start": 539,
+        "end": 601,
+        "text": "Inhaler Symbicort 200/6 mcg 2 puffs BD - rinse mouth after use"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Tiotropium",
+      "strength": "18 mcg",
+      "form": "inhaler",
+      "route": "inhalation",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": "inhale via device",
+      "source_span": {
+        "start": 605,
+        "end": 654,
+        "text": "Inh Tiotropium 18mcg 1 cap OD - inhale via device"
+      }
+    },
+    {
+      "brand_name": "Ventolin",
+      "generic_name": null,
+      "strength": "100 mcg",
+      "form": "inhaler",
+      "route": "inhalation",
+      "dose": "2 puffs",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 658,
+        "end": 690,
+        "text": "Inh Ventolin 100 mcg 2 puffs SOS"
+      }
+    },
+    {
+      "brand_name": "Pan",
+      "generic_name": "Pantoprazole",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "x 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 694,
+        "end": 742,
+        "text": "Tab Pantoprazole (Pan) 40mg 1 tab OD AC x 5 days"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "F/U chest clinic in 1 wk with PFT",
+      "date_text": "in 1 wk",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 751,
+        "end": 784,
+        "text": "F/U chest clinic in 1 wk with PFT"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Worsening breathlessness.",
+      "source_span": {
+        "start": 918,
+        "end": 943,
+        "text": "Worsening breathlessness."
+      }
+    },
+    {
+      "text": "Lips or fingers turning bluish.",
+      "source_span": {
+        "start": 946,
+        "end": 977,
+        "text": "Lips or fingers turning bluish."
+      }
+    },
+    {
+      "text": "Fever with yellow-green sputum.",
+      "source_span": {
+        "start": 980,
+        "end": 1011,
+        "text": "Fever with yellow-green sputum."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Avoid smoke, dust and strong smells.",
+    "Practise breathing exercises as taught.",
+    "Eat small, frequent meals."
+  ],
+  "document_language": "en"
+}

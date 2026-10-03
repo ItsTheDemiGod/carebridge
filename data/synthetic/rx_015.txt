@@ -1,0 +1,27 @@
+Sample City Hospital  OPD
+Dr. R. Demo (Reg. No. SYN-70472)
+Date: 20-09-2025
+Patient: Ravi Demo   Age/Sex: 31/M   ID: SYN-OP-06340
+
+Ward: 3B / Bed 12
+
+DIAGNOSIS T2DM with HTN
+
+Rx
+- t.  metformin  500 mg  1 tab  bd  pc  for 30d
+(2) TAB.  GLIMEPIRIDE  1 MG
+    1 tab  OD
+- tab. telmisartan (micardis) 40mg 1 tab od 30 days
+TAB ATORVASTATIN (LIPITOR) 10MG
+    1 tab HS
+
+-------------------------
+
+FOLLOW UP
+o f/u medicine opd 14/7 with fbs/ppbs reports
+
+Diet / activity
+- Follow a diabetic diet with controlled portions of rice and sweets.
+Walk for 30 minutes daily as tolerated.
+
+Sample document for software testing only. All details are fictional.

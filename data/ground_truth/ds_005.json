@@ -1,0 +1,115 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "NITROFURANTOIN",
+      "strength": "100 mg",
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": "BD",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "X 5/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 441,
+        "end": 484,
+        "text": "CAP. NITROFURANTOIN 100MG 1 cap BD PC X 5/7"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Paracetamol",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 488,
+        "end": 518,
+        "text": "T. Paracetamol 500mg 1 tab SOS"
+      }
+    },
+    {
+      "brand_name": "DOMSTAL",
+      "generic_name": "DOMPERIDONE",
+      "strength": "10 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "before_meals",
+        "original_abbreviation": "1-1-1",
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "X 3 DAYS",
+      "special_instructions": null,
+      "source_span": {
+        "start": 522,
+        "end": 570,
+        "text": "T. DOMSTAL (DOMPERIDONE) 10 MG 1-1-1 AC X 3 DAYS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "F/U medicine OPD in 1 wk with urine R/M",
+      "date_text": "in 1 wk",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 579,
+        "end": 618,
+        "text": "F/U medicine OPD in 1 wk with urine R/M"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Fever with chills or back pain.",
+      "source_span": {
+        "start": 733,
+        "end": 764,
+        "text": "Fever with chills or back pain."
+      }
+    },
+    {
+      "text": "Blood in urine.",
+      "source_span": {
+        "start": 767,
+        "end": 782,
+        "text": "Blood in urine."
+      }
+    },
+    {
+      "text": "Unable to pass urine.",
+      "source_span": {
+        "start": 785,
+        "end": 806,
+        "text": "Unable to pass urine."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink plenty of water.",
+    "Do not hold urine for long periods.",
+    "Maintain genital hygiene."
+  ],
+  "document_language": "en"
+}

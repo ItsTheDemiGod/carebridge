@@ -1,0 +1,22 @@
+Sample City Hospital  OPD
+Dr. Anil Sample (Reg. No. SYN-63700)
+Date: 14/04/25
+Patient: Vikram Demo   Age/Sex: 33/F   ID: SYN-OP-04491
+
+Bill No. SYN-00231
+dx: CAP
+
+Rx
+(1) TAB.  AMOXICILLIN + CLAVULANIC ACID  625MG
+    1 tab  BD  PC  X 5/7
+- t. azee 500mg
+    1 tab od
+- TAB PARACETAMOL (DOLO) 650 MG
+    1 tab SOS
+4) SYP.  AMBRODIL (AMBROXOL)  30 MG/5 ML  5 mL  TDS  FOR 5D
+
+Diet / activity
+- Drink plenty of warm fluids.
+Take rest and avoid smoke and dust.
+
+Sample document for software testing only. All details are fictional.

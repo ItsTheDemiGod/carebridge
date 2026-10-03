@@ -1,0 +1,24 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. R. Demo (Reg. No. SYN-07279)
+Date: 15 May 2025
+Patient: Suresh Sample   Age/Sex: 36/F   ID: SYN-OP-08910
+
+Dx: UTI
+
+Rx
+1) Cap Niftran (Nitrofurantoin) 100 mg 1-0-1 PC x 5d
+2) TAB DOLO 500MG 1 tab SOS X 30 DAYS
+3) Tab. Domperidone 10mg 1 tab TDS AC x 3d
+
+F/U:
+- F/U medicine OPD in 5 days with urine R/M
+
+Advice:
+- Drink plenty of water.
+- Do not hold urine for long periods.
+
+Return if:
+- Fever with chills or back pain.
+- Blood in urine.
+
+Sample document for software testing only. All details are fictional.

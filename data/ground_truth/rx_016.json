@@ -1,0 +1,128 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": "Augmentin",
+      "generic_name": null,
+      "strength": "625 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "for 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 204,
+        "end": 270,
+        "text": "Tab Augmentin 625 mg - 1 tablet twice daily after meals for 5 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Azithromycin",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "for 3 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 274,
+        "end": 330,
+        "text": "Tab Azithromycin 500 mg - 1 tablet once daily for 3 days"
+      }
+    },
+    {
+      "brand_name": "Dolo",
+      "generic_name": "Paracetamol",
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": null,
+        "is_prn": true
+      },
+      "duration_days": 30,
+      "duration_text": "for 30 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 334,
+        "end": 401,
+        "text": "Tab Dolo (Paracetamol) 650 mg - 1 tablet only if needed for 30 days"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Ambroxol",
+      "strength": "30 mg/5 mL",
+      "form": "syrup",
+      "route": "oral",
+      "dose": "5 mL",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "for 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 405,
+        "end": 466,
+        "text": "Syrup Ambroxol 30 mg/5 mL - 5 mL three times daily for 5 days"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "Please review at the chest clinic after 2 weeks with a repeat chest X-ray.",
+      "date_text": "after 2 weeks",
+      "days_from_discharge": 14,
+      "source_span": {
+        "start": 481,
+        "end": 555,
+        "text": "Please review at the chest clinic after 2 weeks with a repeat chest X-ray."
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Fever that does not settle.",
+      "source_span": {
+        "start": 707,
+        "end": 734,
+        "text": "Fever that does not settle."
+      }
+    },
+    {
+      "text": "Worsening breathlessness or chest pain.",
+      "source_span": {
+        "start": 737,
+        "end": 776,
+        "text": "Worsening breathlessness or chest pain."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink plenty of warm fluids.",
+    "Take rest and avoid smoke and dust."
+  ],
+  "document_language": "en"
+}

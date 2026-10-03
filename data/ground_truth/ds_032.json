@@ -1,0 +1,115 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": "Niftran",
+      "generic_name": null,
+      "strength": "100 mg",
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": "BD",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 433,
+        "end": 463,
+        "text": "Cap Niftran 100 mg 1 cap BD PC"
+      }
+    },
+    {
+      "brand_name": "CROCIN",
+      "generic_name": "PARACETAMOL",
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 467,
+        "end": 508,
+        "text": "TAB CROCIN (PARACETAMOL) 500 MG 1 tab SOS"
+      }
+    },
+    {
+      "brand_name": "MOTILIUM",
+      "generic_name": null,
+      "strength": "10 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "before_meals",
+        "original_abbreviation": "1-1-1",
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "X 3/7",
+      "special_instructions": null,
+      "source_span": {
+        "start": 512,
+        "end": 543,
+        "text": "T. MOTILIUM 10MG 1-1-1 AC X 3/7"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "F/U medicine OPD in 5 days with urine R/M",
+      "date_text": "in 5 days",
+      "days_from_discharge": 5,
+      "source_span": {
+        "start": 552,
+        "end": 593,
+        "text": "F/U medicine OPD in 5 days with urine R/M"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Fever with chills or back pain.",
+      "source_span": {
+        "start": 708,
+        "end": 739,
+        "text": "Fever with chills or back pain."
+      }
+    },
+    {
+      "text": "Blood in urine.",
+      "source_span": {
+        "start": 742,
+        "end": 757,
+        "text": "Blood in urine."
+      }
+    },
+    {
+      "text": "Unable to pass urine.",
+      "source_span": {
+        "start": 760,
+        "end": 781,
+        "text": "Unable to pass urine."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink plenty of water.",
+    "Do not hold urine for long periods.",
+    "Maintain genital hygiene."
+  ],
+  "document_language": "en"
+}

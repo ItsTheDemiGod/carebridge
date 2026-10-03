@@ -1,0 +1,89 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "Paracetamol",
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 192,
+        "end": 224,
+        "text": "Tab Paracetamol 650 mg 1 tab SOS"
+      }
+    },
+    {
+      "brand_name": "PANTOP",
+      "generic_name": null,
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 228,
+        "end": 255,
+        "text": "T. PANTOP 40 MG 1 tab OD AC"
+      }
+    },
+    {
+      "brand_name": "EMESET",
+      "generic_name": "ONDANSETRON",
+      "strength": "4 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": 30,
+      "duration_text": "X 30 DAYS",
+      "special_instructions": null,
+      "source_span": {
+        "start": 259,
+        "end": 307,
+        "text": "T. ONDANSETRON (EMESET) 4 MG 1 tab SOS X 30 DAYS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "F/U medicine OPD in 5 days with repeat CBC",
+      "date_text": "in 5 days",
+      "days_from_discharge": 5,
+      "source_span": {
+        "start": 316,
+        "end": 358,
+        "text": "F/U medicine OPD in 5 days with repeat CBC"
+      }
+    }
+  ],
+  "red_flags": [],
+  "diet_activity_advice": [
+    "Drink plenty of fluids such as ORS, coconut water and soups.",
+    "Take adequate rest for one week."
+  ],
+  "document_language": "en"
+}

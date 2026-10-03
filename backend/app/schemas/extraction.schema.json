@@ -1,0 +1,354 @@
+{
+  "$defs": {
+    "DocumentType": {
+      "enum": [
+        "discharge_summary",
+        "prescription"
+      ],
+      "title": "DocumentType",
+      "type": "string"
+    },
+    "FollowUp": {
+      "description": "A follow-up visit or test mentioned in the document.",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "date_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Date/timeframe as written.",
+          "title": "Date Text"
+        },
+        "days_from_discharge": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Days From Discharge"
+        },
+        "source_span": {
+          "$ref": "#/$defs/SourceSpan"
+        }
+      },
+      "required": [
+        "description",
+        "source_span"
+      ],
+      "title": "FollowUp",
+      "type": "object"
+    },
+    "Form": {
+      "enum": [
+        "tablet",
+        "capsule",
+        "syrup",
+        "injection",
+        "ointment",
+        "drops",
+        "inhaler",
+        "other"
+      ],
+      "title": "Form",
+      "type": "string"
+    },
+    "Frequency": {
+      "description": "How often a medicine is taken.",
+      "properties": {
+        "times_per_day": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Doses per day; null if unstated or PRN.",
+          "title": "Times Per Day"
+        },
+        "timing_label": {
+          "$ref": "#/$defs/TimingLabel",
+          "description": "When in the day / relative to meals."
+        },
+        "original_abbreviation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Shorthand as written, e.g. \"BD\", \"TDS\", \"SOS\".",
+          "title": "Original Abbreviation"
+        },
+        "is_prn": {
+          "default": false,
+          "description": "True if taken only as needed.",
+          "title": "Is Prn",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "timing_label"
+      ],
+      "title": "Frequency",
+      "type": "object"
+    },
+    "Medication": {
+      "description": "One medicine as written in the document. Do not infer fields that are not stated.",
+      "properties": {
+        "brand_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Brand name as written, if any.",
+          "title": "Brand Name"
+        },
+        "generic_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Generic name as written, if any.",
+          "title": "Generic Name"
+        },
+        "strength": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "e.g. \"500 mg\".",
+          "title": "Strength"
+        },
+        "form": {
+          "$ref": "#/$defs/Form"
+        },
+        "route": {
+          "$ref": "#/$defs/Route"
+        },
+        "dose": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Amount per intake, e.g. \"1 tablet\".",
+          "title": "Dose"
+        },
+        "frequency": {
+          "$ref": "#/$defs/Frequency"
+        },
+        "duration_days": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Duration in days, if stated.",
+          "title": "Duration Days"
+        },
+        "duration_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Duration as written, e.g. \"x 5/7\".",
+          "title": "Duration Text"
+        },
+        "special_instructions": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Other instructions written for this medicine.",
+          "title": "Special Instructions"
+        },
+        "source_span": {
+          "$ref": "#/$defs/SourceSpan",
+          "description": "Span covering the medicine line/entry."
+        }
+      },
+      "required": [
+        "form",
+        "route",
+        "frequency",
+        "source_span"
+      ],
+      "title": "Medication",
+      "type": "object"
+    },
+    "RedFlag": {
+      "description": "A warning sign that appears IN the document. Never invented.",
+      "properties": {
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "source_span": {
+          "$ref": "#/$defs/SourceSpan"
+        }
+      },
+      "required": [
+        "text",
+        "source_span"
+      ],
+      "title": "RedFlag",
+      "type": "object"
+    },
+    "Route": {
+      "enum": [
+        "oral",
+        "topical",
+        "injection",
+        "inhalation",
+        "other"
+      ],
+      "title": "Route",
+      "type": "string"
+    },
+    "SourceSpan": {
+      "description": "Character offsets into the document text; text must equal document[start:end].",
+      "properties": {
+        "start": {
+          "description": "Start offset (inclusive).",
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "description": "End offset (exclusive).",
+          "minimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "text": {
+          "description": "Exact source text at [start:end].",
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "text"
+      ],
+      "title": "SourceSpan",
+      "type": "object"
+    },
+    "TimingLabel": {
+      "enum": [
+        "morning",
+        "afternoon",
+        "evening",
+        "night",
+        "with_meals",
+        "before_meals",
+        "after_meals",
+        "bedtime",
+        "as_needed",
+        "other"
+      ],
+      "title": "TimingLabel",
+      "type": "string"
+    }
+  },
+  "description": "Full extraction result for one document.",
+  "properties": {
+    "document_type": {
+      "$ref": "#/$defs/DocumentType"
+    },
+    "medications": {
+      "items": {
+        "$ref": "#/$defs/Medication"
+      },
+      "title": "Medications",
+      "type": "array"
+    },
+    "follow_ups": {
+      "items": {
+        "$ref": "#/$defs/FollowUp"
+      },
+      "title": "Follow Ups",
+      "type": "array"
+    },
+    "red_flags": {
+      "items": {
+        "$ref": "#/$defs/RedFlag"
+      },
+      "title": "Red Flags",
+      "type": "array"
+    },
+    "diet_activity_advice": {
+      "description": "Advice lines as written.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Diet Activity Advice",
+      "type": "array"
+    },
+    "document_language": {
+      "default": "en",
+      "title": "Document Language",
+      "type": "string"
+    }
+  },
+  "required": [
+    "document_type"
+  ],
+  "title": "ExtractedDocument",
+  "type": "object"
+}

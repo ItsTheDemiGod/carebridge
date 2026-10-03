@@ -1,0 +1,32 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Vikram Fictional   Age/Sex: 70/M   ID: SYN-IP-00163
+Admitted: 04 Aug 2025   Discharged: 06 Aug 2025
+Consultant: Dr. S. Testwala
+
+Dx: CAP
+
+Course:
+Vikram Fictional, a 70-year-old man, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
+
+Rx on discharge:
+1) T. Augmentin 625mg 1 tab BD PC x 5 days
+2) T. Azithromycin 500 mg 1-0-0
+3) T. Crocin 650 mg 1 tab SOS
+4) Syp Ambroxol 30 mg/5 mL 5 mL TDS
+
+F/U:
+- F/U chest clinic in 7 days with repeat CXR
+
+Advice:
+- Drink plenty of warm fluids.
+- Take rest and avoid smoke and dust.
+- Do deep breathing exercises as taught.
+- Eat light, nutritious food.
+
+Return if:
+- Fever that does not settle.
+- Worsening breathlessness or chest pain.
+- Coughing up blood.
+
+Sample document for software testing only. All details are fictional.

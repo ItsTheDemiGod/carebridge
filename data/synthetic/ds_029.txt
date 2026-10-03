@@ -1,0 +1,32 @@
+SAMPLE CITY HOSPITAL
+DISCHARGE SUMMARY
+Patient: Lakshmi Mockerjee   Age/Sex: 73/F   ID: SYN-IP-07034
+Admitted: 17 Aug 2025   Discharged: 20 Aug 2025
+Consultant: Dr. Priya Example
+
+Dx: CAP
+
+Course:
+Lakshmi Mockerjee, a 73-year-old woman, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
+
+Rx on discharge:
+1) Tab. Clavam 625mg 1 tab BD PC x 5 days
+2) T. AZITHROMYCIN 500 MG 1 tab OD X 3/7
+3) Tab Dolo 650 mg 1 tab SOS
+4) Syrup Ambroxol (Ambrodil) 30 mg/5 mL 5 mL TDS x 5d
+
+F/U:
+- F/U chest clinic in 1 wk with repeat CXR
+
+Advice:
+- Drink plenty of warm fluids.
+- Take rest and avoid smoke and dust.
+- Do deep breathing exercises as taught.
+- Eat light, nutritious food.
+
+Return if:
+- Fever that does not settle.
+- Worsening breathlessness or chest pain.
+- Coughing up blood.
+
+Sample document for software testing only. All details are fictional.

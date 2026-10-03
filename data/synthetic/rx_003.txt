@@ -1,0 +1,25 @@
+Sample City Hospital  OPD
+Dr. Anil Sample (Reg. No. SYN-50847)
+Date: 18/03/25
+Patient: Meena Demo   Age/Sex: 67/F   ID: SYN-OP-09585
+
+Phone: 000-000-0000
+
+dx: UTI
+
+Rx
+- CAP NIFTRAN (NITROFURANTOIN)
+    1 cap BD X5/7
+2) Tab Dolo 500mg 1 tab SOS x30d
+3) TAB DOMSTAL 10 MG
+    1 tab TDS AC X3/7
+
+review:
+f/u medicine opd 7/7 with urine r/m
+
+Diet / activity
+* Drink plenty of water.
+- Do not hold urine for long periods.
+
+Pharmacy copy
+Sample document for software testing only. All details are fictional.

@@ -1,0 +1,23 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. R. Demo (Reg. No. SYN-48000)
+Date: 26 Mar 2025
+Patient: Meena Demo   Age/Sex: 24/F   ID: SYN-OP-01201
+
+Dx: ACS s/p PTCA with stent
+
+Rx
+1) T. Disprin (Aspirin) 75 mg 1 tab OD PC x 30d
+2) Tab. Clopilet 75 mg 1 tab OD x 30d - do not stop w/o asking cardiologist
+3) Tab Atorvastatin (Lipitor) 40 mg 1 tab HS x 30 days
+4) Tab Metoprolol succinate 25 mg 1 tab OD x 30d
+5) Tab Cardace 2.5mg 1 tab OD x 30d
+6) T. Pan (Pantoprazole) 40 mg 1-0-0 AC x 30d
+
+F/U:
+- F/U cardiology OPD in 14 days with ECG
+
+Advice:
+- Eat a low-salt, low-fat diet.
+- Walk short distances on level ground and increase slowly.
+
+Sample document for software testing only. All details are fictional.

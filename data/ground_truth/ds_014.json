@@ -1,0 +1,93 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": "Niftran",
+      "generic_name": null,
+      "strength": "100 mg",
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": "1-0-1",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "x 5 days",
+      "special_instructions": null,
+      "source_span": {
+        "start": 441,
+        "end": 477,
+        "text": "Cap Niftran 100 mg 1-0-1 PC x 5 days"
+      }
+    },
+    {
+      "brand_name": "Calpol",
+      "generic_name": null,
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 481,
+        "end": 507,
+        "text": "T. Calpol 500 mg 1 tab SOS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "F/U medicine OPD in 7 days with urine R/M",
+      "date_text": "in 7 days",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 516,
+        "end": 557,
+        "text": "F/U medicine OPD in 7 days with urine R/M"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Fever with chills or back pain.",
+      "source_span": {
+        "start": 672,
+        "end": 703,
+        "text": "Fever with chills or back pain."
+      }
+    },
+    {
+      "text": "Blood in urine.",
+      "source_span": {
+        "start": 706,
+        "end": 721,
+        "text": "Blood in urine."
+      }
+    },
+    {
+      "text": "Unable to pass urine.",
+      "source_span": {
+        "start": 724,
+        "end": 745,
+        "text": "Unable to pass urine."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink plenty of water.",
+    "Do not hold urine for long periods.",
+    "Maintain genital hygiene."
+  ],
+  "document_language": "en"
+}

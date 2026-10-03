@@ -1,0 +1,106 @@
+{
+  "document_type": "prescription",
+  "medications": [
+    {
+      "brand_name": "Niftran",
+      "generic_name": "Nitrofurantoin",
+      "strength": "100 mg",
+      "form": "capsule",
+      "route": "oral",
+      "dose": "1 capsule",
+      "frequency": {
+        "times_per_day": 2,
+        "timing_label": "after_meals",
+        "original_abbreviation": "1-0-1",
+        "is_prn": false
+      },
+      "duration_days": 5,
+      "duration_text": "x 5d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 166,
+        "end": 215,
+        "text": "Cap Niftran (Nitrofurantoin) 100 mg 1-0-1 PC x 5d"
+      }
+    },
+    {
+      "brand_name": "DOLO",
+      "generic_name": null,
+      "strength": "500 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": 30,
+      "duration_text": "X 30 DAYS",
+      "special_instructions": null,
+      "source_span": {
+        "start": 219,
+        "end": 253,
+        "text": "TAB DOLO 500MG 1 tab SOS X 30 DAYS"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Domperidone",
+      "strength": "10 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 3,
+        "timing_label": "before_meals",
+        "original_abbreviation": "TDS",
+        "is_prn": false
+      },
+      "duration_days": 3,
+      "duration_text": "x 3d",
+      "special_instructions": null,
+      "source_span": {
+        "start": 257,
+        "end": 296,
+        "text": "Tab. Domperidone 10mg 1 tab TDS AC x 3d"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "F/U medicine OPD in 5 days with urine R/M",
+      "date_text": "in 5 days",
+      "days_from_discharge": 5,
+      "source_span": {
+        "start": 305,
+        "end": 346,
+        "text": "F/U medicine OPD in 5 days with urine R/M"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Fever with chills or back pain.",
+      "source_span": {
+        "start": 433,
+        "end": 464,
+        "text": "Fever with chills or back pain."
+      }
+    },
+    {
+      "text": "Blood in urine.",
+      "source_span": {
+        "start": 467,
+        "end": 482,
+        "text": "Blood in urine."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink plenty of water.",
+    "Do not hold urine for long periods."
+  ],
+  "document_language": "en"
+}

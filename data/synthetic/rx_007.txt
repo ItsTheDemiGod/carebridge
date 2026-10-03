@@ -1,0 +1,23 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. S. Testwala (Reg. No. SYN-27434)
+Date: 08 Oct 2025
+Patient: Meena Testwala   Age/Sex: 71/F   ID: SYN-OP-02655
+
+Diagnosis: Acute coronary syndrome treated with angioplasty and stent
+
+Rx
+1. Tab Ecosprin (Aspirin) 75 mg - 1 tablet once daily after meals for 30 days
+2. Tab Clopidogrel 75 mg - 1 tablet once daily for 30 days. Do not stop without asking your cardiologist.
+3. Tab Atorvastatin 40 mg - 1 tablet at bedtime for 30 days
+4. Tab Metoprolol succinate 25 mg - 1 tablet once daily for 30 days
+5. Tab Ramace 2.5 mg - 1 tablet once daily for 30 days
+6. Tab Pantoprazole 40 mg - 1 tablet once daily before meals for 30 days
+
+Follow-up:
+- Please review at the cardiology OPD after 2 weeks with a repeat ECG.
+
+Diet and activity advice:
+- Eat a low-salt, low-fat diet.
+- Walk short distances on level ground and increase slowly.
+
+Sample document for software testing only. All details are fictional.

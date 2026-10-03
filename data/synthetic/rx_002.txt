@@ -1,0 +1,25 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. Priya Example (Reg. No. SYN-33415)
+Date: 23 Jan 2025
+Patient: Ravi Example   Age/Sex: 48/F   ID: SYN-OP-00451
+
+Dx: CAP
+
+Rx
+1) Tab Amoxicillin + Clavulanic acid 625mg 1 tab BD PC x 5 days
+2) Tab. Azee (Azithromycin) 500mg 1-0-0
+3) T. CALPOL 650MG 1 tab SOS
+4) SYP AMBROXOL (AMBRODIL) 30 MG/5 ML 5 mL TDS X 5D
+
+F/U:
+- F/U chest clinic in 2 wk with repeat CXR
+
+Advice:
+- Drink plenty of warm fluids.
+- Take rest and avoid smoke and dust.
+
+Return if:
+- Fever that does not settle.
+- Worsening breathlessness or chest pain.
+
+Sample document for software testing only. All details are fictional.

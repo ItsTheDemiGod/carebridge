@@ -1,0 +1,200 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": null,
+      "generic_name": "Aspirin",
+      "strength": "75 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "after_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 499,
+        "end": 550,
+        "text": "Tab Aspirin 75 mg - 1 tablet once daily after meals"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Clopidogrel",
+      "strength": "75 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": "Do not stop without asking your cardiologist.",
+      "source_span": {
+        "start": 554,
+        "end": 644,
+        "text": "Tab Clopidogrel 75 mg - 1 tablet once daily. Do not stop without asking your cardiologist."
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "Atorvastatin",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "bedtime",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 648,
+        "end": 692,
+        "text": "Tab Atorvastatin 40 mg - 1 tablet at bedtime"
+      }
+    },
+    {
+      "brand_name": "Seloken XL",
+      "generic_name": "Metoprolol succinate",
+      "strength": "25 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 696,
+        "end": 761,
+        "text": "Tab Metoprolol succinate (Seloken XL) 25 mg - 1 tablet once daily"
+      }
+    },
+    {
+      "brand_name": "Cardace",
+      "generic_name": "Ramipril",
+      "strength": "2.5 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 765,
+        "end": 816,
+        "text": "Tab Cardace (Ramipril) 2.5 mg - 1 tablet once daily"
+      }
+    },
+    {
+      "brand_name": "Pantop",
+      "generic_name": "Pantoprazole",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "before_meals",
+        "original_abbreviation": null,
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 820,
+        "end": 886,
+        "text": "Tab Pantoprazole (Pantop) 40 mg - 1 tablet once daily before meals"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "Please review at the cardiology OPD after 1 week with a repeat ECG.",
+      "date_text": "after 1 week",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 901,
+        "end": 968,
+        "text": "Please review at the cardiology OPD after 1 week with a repeat ECG."
+      }
+    },
+    {
+      "description": "Please get a lipid profile and liver function test done after 30 days.",
+      "date_text": "after 30 days",
+      "days_from_discharge": 30,
+      "source_span": {
+        "start": 971,
+        "end": 1041,
+        "text": "Please get a lipid profile and liver function test done after 30 days."
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Chest pain not relieved by rest.",
+      "source_span": {
+        "start": 1275,
+        "end": 1307,
+        "text": "Chest pain not relieved by rest."
+      }
+    },
+    {
+      "text": "Breathlessness or cold sweats.",
+      "source_span": {
+        "start": 1310,
+        "end": 1340,
+        "text": "Breathlessness or cold sweats."
+      }
+    },
+    {
+      "text": "Fainting.",
+      "source_span": {
+        "start": 1343,
+        "end": 1352,
+        "text": "Fainting."
+      }
+    },
+    {
+      "text": "Black stools or unusual bleeding.",
+      "source_span": {
+        "start": 1355,
+        "end": 1388,
+        "text": "Black stools or unusual bleeding."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Eat a low-salt, low-fat diet.",
+    "Walk short distances on level ground and increase slowly.",
+    "Do not smoke.",
+    "Avoid strenuous exercise until reviewed."
+  ],
+  "document_language": "en"
+}

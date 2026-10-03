@@ -1,0 +1,123 @@
+{
+  "document_type": "discharge_summary",
+  "medications": [
+    {
+      "brand_name": "Crocin",
+      "generic_name": null,
+      "strength": "650 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 505,
+        "end": 540,
+        "text": "Tab.  Crocin  650 mg\n    1 tab  SOS"
+      }
+    },
+    {
+      "brand_name": null,
+      "generic_name": "PANTOPRAZOLE",
+      "strength": "40 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": 1,
+        "timing_label": "other",
+        "original_abbreviation": "OD",
+        "is_prn": false
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 541,
+        "end": 579,
+        "text": "TAB.  PANTOPRAZOLE  40MG\n    1 tab  OD"
+      }
+    },
+    {
+      "brand_name": "Ondem",
+      "generic_name": null,
+      "strength": "4 mg",
+      "form": "tablet",
+      "route": "oral",
+      "dose": "1 tablet",
+      "frequency": {
+        "times_per_day": null,
+        "timing_label": "as_needed",
+        "original_abbreviation": "SOS",
+        "is_prn": true
+      },
+      "duration_days": null,
+      "duration_text": null,
+      "special_instructions": null,
+      "source_span": {
+        "start": 584,
+        "end": 613,
+        "text": "Tab.  Ondem  4 mg  1 tab  SOS"
+      }
+    }
+  ],
+  "follow_ups": [
+    {
+      "description": "f/u medicine opd 1/52 with repeat cbc",
+      "date_text": "1/52",
+      "days_from_discharge": 7,
+      "source_span": {
+        "start": 646,
+        "end": 683,
+        "text": "f/u medicine opd 1/52 with repeat cbc"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "text": "Bleeding from gums or nose.",
+      "source_span": {
+        "start": 864,
+        "end": 891,
+        "text": "Bleeding from gums or nose."
+      }
+    },
+    {
+      "text": "Black stools or vomiting blood.",
+      "source_span": {
+        "start": 894,
+        "end": 925,
+        "text": "Black stools or vomiting blood."
+      }
+    },
+    {
+      "text": "Severe abdominal pain or repeated vomiting.",
+      "source_span": {
+        "start": 928,
+        "end": 971,
+        "text": "Severe abdominal pain or repeated vomiting."
+      }
+    },
+    {
+      "text": "Extreme drowsiness or restlessness.",
+      "source_span": {
+        "start": 974,
+        "end": 1009,
+        "text": "Extreme drowsiness or restlessness."
+      }
+    }
+  ],
+  "diet_activity_advice": [
+    "Drink plenty of fluids such as ORS, coconut water and soups.",
+    "Take adequate rest for one week.",
+    "Avoid ibuprofen and diclofenac unless your doctor advises."
+  ],
+  "document_language": "en"
+}
