@@ -1,6 +1,6 @@
 # Run oracle-dev
 
-split=dev prompt=v1 oracle=True docs=20 api_calls=0 cache_hits=0 tokens=0 mean_latency_s=None
+split=dev prompt=v1 oracle=True docs=20 api_calls=0 api_failed_not_scored=0 cache_hits=0 tokens=0 mean_latency_s=None
 
 ### By overall
 

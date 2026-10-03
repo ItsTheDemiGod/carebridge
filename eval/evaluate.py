@@ -71,6 +71,10 @@ def run(args):
                     incomplete = True
                     break
                 pred = res.output
+                if not res.ok and res.error.startswith("api_error"):  # infrastructure failure (503...): not scored, rerun resumes from the cache
+                    meta["api_failed"] += 1
+                    meta["api_calls"] += res.api_calls
+                    continue
                 (raw_dir / f"{cond}_{d['id']}.json").write_text(res.raw_text or json.dumps({"error": res.error}), encoding="utf-8")
                 meta["api_calls"] += res.api_calls
                 meta["cached"] += res.cached
@@ -83,13 +87,13 @@ def run(args):
         if incomplete:
             break
     result = dict(run_id=run_id, split=args.split, conditions=conds, prompt_version=args.prompt_version, oracle=args.oracle, incomplete=incomplete,
-                  api_calls=meta["api_calls"], cache_hits=meta["cached"], total_tokens=meta["tokens"],
+                  api_calls=meta["api_calls"], api_failed_not_scored=meta["api_failed"], cache_hits=meta["cached"], total_tokens=meta["tokens"],
                   mean_latency_s=round(sum(latencies) / len(latencies), 2) if latencies else None,
                   metrics={dim: {k: summarize(v) for k, v in vals.items()} for dim, vals in groups.items()})
     out = REPO / "eval" / "results" / run_id
     out.mkdir(parents=True, exist_ok=True)
     (out / "metrics.json").write_text(json.dumps(result, indent=1) + "\n", encoding="utf-8", newline="\n")
-    head = (f"# Run {run_id}\n\nsplit={args.split} prompt={args.prompt_version} oracle={args.oracle} docs={len(docs)} api_calls={meta['api_calls']} "
+    head = (f"# Run {run_id}\n\nsplit={args.split} prompt={args.prompt_version} oracle={args.oracle} docs={len(docs)} api_calls={meta['api_calls']} api_failed_not_scored={meta['api_failed']} "
             f"cache_hits={meta['cached']} tokens={meta['tokens']} mean_latency_s={result['mean_latency_s']}"
             + ("\n\n**INCOMPLETE: daily quota exhausted. Re-run the same command to resume from the cache.**" if incomplete else "") + "\n\n")
     (out / "metrics.md").write_text(head + tables(groups) + "\n", encoding="utf-8", newline="\n")

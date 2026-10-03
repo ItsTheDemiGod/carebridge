@@ -8,6 +8,7 @@
  "oracle": true,
  "incomplete": false,
  "api_calls": 0,
+ "api_failed_not_scored": 0,
  "cache_hits": 0,
  "total_tokens": 0,
  "mean_latency_s": null,
