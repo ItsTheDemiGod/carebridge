@@ -18,8 +18,8 @@
       "duration_text": "3 days",
       "special_instructions": null,
       "source_span": {
-        "start": 425,
-        "end": 485,
+        "start": 431,
+        "end": 491,
         "text": "cap.  redotil (racecadotril)  100 mg  1 cap  tds  ac  3 days"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 489,
-        "end": 526,
+        "start": 495,
+        "end": 532,
         "text": "T. Ondansetron (Ondem) 4 mg 1 tab SOS"
       }
     },
@@ -54,7 +54,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 2,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "bd",
         "is_prn": false
       },
@@ -62,8 +62,8 @@
       "duration_text": "for 3d",
       "special_instructions": null,
       "source_span": {
-        "start": 531,
-        "end": 569,
+        "start": 537,
+        "end": 575,
         "text": "tab.  cifran  500mg  1 tab  bd  for 3d"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "5/7",
       "days_from_discharge": 5,
       "source_span": {
-        "start": 579,
-        "end": 639,
+        "start": 585,
+        "end": 645,
         "text": "f/u medicine opd 5/7 with stool r/m if loose stools continue"
       }
     }
@@ -84,24 +84,24 @@
     {
       "text": "Vomiting that does not stop.",
       "source_span": {
-        "start": 866,
-        "end": 894,
+        "start": 872,
+        "end": 900,
         "text": "Vomiting that does not stop."
       }
     },
     {
       "text": "Blood in stool.",
       "source_span": {
-        "start": 897,
-        "end": 912,
+        "start": 903,
+        "end": 918,
         "text": "Blood in stool."
       }
     },
     {
       "text": "Very little urine, dry mouth or extreme drowsiness.",
       "source_span": {
-        "start": 915,
-        "end": 966,
+        "start": 921,
+        "end": 972,
         "text": "Very little urine, dry mouth or extreme drowsiness."
       }
     }

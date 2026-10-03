@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Suresh Example   Age/Sex: 62/F   ID: SYN-IP-06978
+Patient: Meena Demo   Age/Sex: 62/F   ID: SYN-IP-06978
 Admitted: 02 Jun 2025   Discharged: 08 Jun 2025
 Consultant: Dr. Priya Example
 
 Diagnosis: Type 2 diabetes mellitus with hypertension
 
 Hospital course:
-Suresh Example, a 62-year-old woman, was admitted with high blood sugar and raised blood pressure. Blood sugar was brought under control with medicines and diet advice, and blood pressure settled. The patient is being discharged in stable condition.
+Meena Demo, a 62-year-old woman, was admitted with high blood sugar and raised blood pressure. Blood sugar was brought under control with medicines and diet advice, and blood pressure settled. The patient is being discharged in stable condition.
 
 Discharge medications:
 1. Tab Metformin (Glycomet) 500 mg - 1 tablet twice daily after meals

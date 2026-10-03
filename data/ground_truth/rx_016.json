@@ -18,8 +18,8 @@
       "duration_text": "for 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 204,
-        "end": 270,
+        "start": 203,
+        "end": 269,
         "text": "Tab Augmentin 625 mg - 1 tablet twice daily after meals for 5 days"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": "for 3 days",
       "special_instructions": null,
       "source_span": {
-        "start": 274,
-        "end": 330,
+        "start": 273,
+        "end": 329,
         "text": "Tab Azithromycin 500 mg - 1 tablet once daily for 3 days"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "for 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 334,
-        "end": 401,
+        "start": 333,
+        "end": 400,
         "text": "Tab Dolo (Paracetamol) 650 mg - 1 tablet only if needed for 30 days"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "5 mL",
       "frequency": {
         "times_per_day": 3,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": "for 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 405,
-        "end": 466,
+        "start": 404,
+        "end": 465,
         "text": "Syrup Ambroxol 30 mg/5 mL - 5 mL three times daily for 5 days"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "after 2 weeks",
       "days_from_discharge": 14,
       "source_span": {
-        "start": 481,
-        "end": 555,
+        "start": 480,
+        "end": 554,
         "text": "Please review at the chest clinic after 2 weeks with a repeat chest X-ray."
       }
     }
@@ -106,16 +106,16 @@
     {
       "text": "Fever that does not settle.",
       "source_span": {
-        "start": 707,
-        "end": 734,
+        "start": 706,
+        "end": 733,
         "text": "Fever that does not settle."
       }
     },
     {
       "text": "Worsening breathlessness or chest pain.",
       "source_span": {
-        "start": 737,
-        "end": 776,
+        "start": 736,
+        "end": 775,
         "text": "Worsening breathlessness or chest pain."
       }
     }

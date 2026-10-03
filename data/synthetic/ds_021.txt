@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 Discharge summary (fictional)
-Patient: Vikram Testwala   Age/Sex: 52/F   ID: SYN-IP-02433
+Patient: Fatima Example   Age/Sex: 52/F   ID: SYN-IP-02433
 Admitted: 15-10-2025   Discharged: 23/10/25
 Consultant: Dr. S. Testwala
 
 dx: Dengue fever (recovering)
 
 COURSE IN HOSPITAL -
-Vikram Testwala, a 52-year-old woman, was admitted with fever and body ache. The blood platelet count fell during the illness and later recovered with fluids and rest. The patient is eating well and is being discharged in stable condition.
+Fatima Example, a 52-year-old woman, was admitted with fever and body ache. The blood platelet count fell during the illness and later recovered with fluids and rest. The patient is eating well and is being discharged in stable condition.
 
 Rx -
 - T.  DOLO  650 MG

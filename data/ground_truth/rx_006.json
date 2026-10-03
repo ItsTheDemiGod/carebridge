@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 180,
-        "end": 216,
+        "start": 181,
+        "end": 217,
         "text": "tab.  paracetamol  650mg  1 tab  sos"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": "X 5/7",
       "special_instructions": null,
       "source_span": {
-        "start": 217,
-        "end": 259,
+        "start": 218,
+        "end": 260,
         "text": "TAB  PANTOPRAZOLE (PANTOCID)  1-0-0  X 5/7"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 262,
-        "end": 307,
+        "start": 263,
+        "end": 308,
         "text": "T.  Ondansetron (Emeset)  4 mg\n    1 tab  SOS"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "7/7",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 344,
-        "end": 380,
+        "start": 345,
+        "end": 381,
         "text": "f/u medicine opd 7/7 with repeat cbc"
       }
     }

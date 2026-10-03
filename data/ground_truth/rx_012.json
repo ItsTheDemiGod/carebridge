@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 180,
-        "end": 216,
+        "start": 181,
+        "end": 217,
         "text": "t.  omnacortil  20 mg  1 tab  od  pc"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": "x 3/7",
       "special_instructions": null,
       "source_span": {
-        "start": 220,
-        "end": 258,
+        "start": 221,
+        "end": 259,
         "text": "Tab  Azee  500 mg\n    1 tab  OD  x 3/7"
       }
     },
@@ -54,7 +54,7 @@
       "dose": "2 puffs",
       "frequency": {
         "times_per_day": 2,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "BD",
         "is_prn": false
       },
@@ -62,8 +62,8 @@
       "duration_text": "X30D",
       "special_instructions": "RINSE MOUTH AFTER USE",
       "source_span": {
-        "start": 261,
-        "end": 317,
+        "start": 262,
+        "end": 318,
         "text": "INHALER FORACORT 2 puffs BD X30D - RINSE MOUTH AFTER USE"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "1 capsule",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": "30 days",
       "special_instructions": "inhale via device",
       "source_span": {
-        "start": 320,
-        "end": 381,
+        "start": 321,
+        "end": 382,
         "text": "Inh.  Spiriva  18 mcg  1 cap  OD  30 days - inhale via device"
       }
     },
@@ -106,8 +106,8 @@
       "duration_text": "for 30d",
       "special_instructions": null,
       "source_span": {
-        "start": 385,
-        "end": 429,
+        "start": 386,
+        "end": 430,
         "text": "Inhaler Asthalin 100 mcg 2 puffs SOS for 30d"
       }
     },
@@ -128,8 +128,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 434,
-        "end": 472,
+        "start": 435,
+        "end": 473,
         "text": "tab  pantoprazole  40mg  1 tab  od  ac"
       }
     }
@@ -140,8 +140,8 @@
       "date_text": "7/7",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 482,
-        "end": 511,
+        "start": 483,
+        "end": 512,
         "text": "f/u chest clinic 7/7 with pft"
       }
     }
@@ -150,16 +150,16 @@
     {
       "text": "Worsening breathlessness.",
       "source_span": {
-        "start": 638,
-        "end": 663,
+        "start": 639,
+        "end": 664,
         "text": "Worsening breathlessness."
       }
     },
     {
       "text": "Lips or fingers turning bluish.",
       "source_span": {
-        "start": 666,
-        "end": 697,
+        "start": 667,
+        "end": 698,
         "text": "Lips or fingers turning bluish."
       }
     }

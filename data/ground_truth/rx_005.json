@@ -18,8 +18,8 @@
       "duration_text": "x 5d",
       "special_instructions": null,
       "source_span": {
-        "start": 174,
-        "end": 204,
+        "start": 175,
+        "end": 205,
         "text": "T. Wysolone 20mg 1-0-0 PC x 5d"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": "x 3/7",
       "special_instructions": null,
       "source_span": {
-        "start": 208,
-        "end": 256,
+        "start": 209,
+        "end": 257,
         "text": "Tab Azithromycin (Azithral) 500mg 1 tab OD x 3/7"
       }
     },
@@ -54,7 +54,7 @@
       "dose": "2 puffs",
       "frequency": {
         "times_per_day": 2,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "BD",
         "is_prn": false
       },
@@ -62,8 +62,8 @@
       "duration_text": "x 30 days",
       "special_instructions": "rinse mouth after use",
       "source_span": {
-        "start": 260,
-        "end": 354,
+        "start": 261,
+        "end": 355,
         "text": "Inh. Budesonide + Formoterol (Foracort) 200/6 mcg 2 puffs BD x 30 days - rinse mouth after use"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "1 capsule",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": null,
       "special_instructions": "inhale via device",
       "source_span": {
-        "start": 358,
-        "end": 419,
+        "start": 359,
+        "end": 420,
         "text": "Inhaler Tiova (Tiotropium) 18mcg 1 cap OD - inhale via device"
       }
     },
@@ -106,8 +106,8 @@
       "duration_text": "x 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 423,
-        "end": 478,
+        "start": 424,
+        "end": 479,
         "text": "Inh. Salbutamol (Ventolin) 100mcg 2 puffs SOS x 30 days"
       }
     },
@@ -128,8 +128,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 482,
-        "end": 507,
+        "start": 483,
+        "end": 508,
         "text": "TAB. PAN 40MG 1 tab OD AC"
       }
     }
@@ -140,8 +140,8 @@
       "date_text": "in 1 wk",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 516,
-        "end": 549,
+        "start": 517,
+        "end": 550,
         "text": "F/U chest clinic in 1 wk with PFT"
       }
     }

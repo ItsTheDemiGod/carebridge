@@ -18,8 +18,8 @@
       "duration_text": "x 30d",
       "special_instructions": null,
       "source_span": {
-        "start": 183,
-        "end": 227,
+        "start": 187,
+        "end": 231,
         "text": "T. Disprin (Aspirin) 75 mg 1 tab OD PC x 30d"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": "x 30d",
       "special_instructions": "do not stop w/o asking cardiologist",
       "source_span": {
-        "start": 231,
-        "end": 303,
+        "start": 235,
+        "end": 307,
         "text": "Tab. Clopilet 75 mg 1 tab OD x 30d - do not stop w/o asking cardiologist"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "x 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 307,
-        "end": 358,
+        "start": 311,
+        "end": 362,
         "text": "Tab Atorvastatin (Lipitor) 40 mg 1 tab HS x 30 days"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": "x 30d",
       "special_instructions": null,
       "source_span": {
-        "start": 362,
-        "end": 407,
+        "start": 366,
+        "end": 411,
         "text": "Tab Metoprolol succinate 25 mg 1 tab OD x 30d"
       }
     },
@@ -98,7 +98,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -106,8 +106,8 @@
       "duration_text": "x 30d",
       "special_instructions": null,
       "source_span": {
-        "start": 411,
-        "end": 443,
+        "start": 415,
+        "end": 447,
         "text": "Tab Cardace 2.5mg 1 tab OD x 30d"
       }
     },
@@ -128,8 +128,8 @@
       "duration_text": "x 30d",
       "special_instructions": null,
       "source_span": {
-        "start": 447,
-        "end": 489,
+        "start": 451,
+        "end": 493,
         "text": "T. Pan (Pantoprazole) 40 mg 1-0-0 AC x 30d"
       }
     }
@@ -140,8 +140,8 @@
       "date_text": "in 14 days",
       "days_from_discharge": 14,
       "source_span": {
-        "start": 498,
-        "end": 536,
+        "start": 502,
+        "end": 540,
         "text": "F/U cardiology OPD in 14 days with ECG"
       }
     }

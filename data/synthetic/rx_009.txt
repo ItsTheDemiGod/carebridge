@@ -1,7 +1,7 @@
 Sample City Hospital  OPD
 Dr. Anil Sample (Reg. No. SYN-63700)
 Date: 14/04/25
-Patient: Vikram Demo   Age/Sex: 33/F   ID: SYN-OP-04491
+Patient: Kavya Testwala   Age/Sex: 33/F   ID: SYN-OP-04491
 
 Bill No. SYN-00231
 dx: CAP

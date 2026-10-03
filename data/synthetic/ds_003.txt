@@ -1,6 +1,6 @@
 SAMPLE CITY HOSPITAL
 Discharge summary (fictional)
-Patient: Vikram Example   Age/Sex: 66/M   ID: SYN-IP-03780
+Patient: Kumar Testwala   Age/Sex: 66/M   ID: SYN-IP-03780
 Admitted: 10-06-2025   Discharged: 14-06-2025
 Consultant: Dr. Anil Sample
 
@@ -9,7 +9,7 @@ Phone: 000-000-0000
 dx: Dengue fever (recovering)
 
 COURSE IN HOSPITAL -
-Vikram Example, a 66-year-old man, was admitted with fever and body ache. The blood platelet count fell during the illness and later recovered with fluids and rest. The patient is eating well and is being discharged in stable condition.
+Kumar Testwala, a 66-year-old man, was admitted with fever and body ache. The blood platelet count fell during the illness and later recovered with fluids and rest. The patient is eating well and is being discharged in stable condition.
 
 Rx -
 (1) Tab.  Crocin  650 mg

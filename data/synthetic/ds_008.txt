@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Asha Mockerjee   Age/Sex: 29/M   ID: SYN-IP-03402
+Patient: Imran Fictional   Age/Sex: 29/M   ID: SYN-IP-03402
 Admitted: 14 Aug 2025   Discharged: 18 Aug 2025
 Consultant: Dr. R. Demo
 
 Dx: AECOPD
 
 Course:
-Asha Mockerjee, a 29-year-old man, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
+Imran Fictional, a 29-year-old man, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
 
 Rx on discharge:
 1) Tab Prednisolone (Omnacortil) 20mg 1-0-0 PC x 5/7

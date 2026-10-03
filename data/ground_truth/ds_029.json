@@ -18,8 +18,8 @@
       "duration_text": "x 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 481,
-        "end": 519,
+        "start": 475,
+        "end": 513,
         "text": "Tab. Clavam 625mg 1 tab BD PC x 5 days"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": "X 3/7",
       "special_instructions": null,
       "source_span": {
-        "start": 523,
-        "end": 560,
+        "start": 517,
+        "end": 554,
         "text": "T. AZITHROMYCIN 500 MG 1 tab OD X 3/7"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 564,
-        "end": 589,
+        "start": 558,
+        "end": 583,
         "text": "Tab Dolo 650 mg 1 tab SOS"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "5 mL",
       "frequency": {
         "times_per_day": 3,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "TDS",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": "x 5d",
       "special_instructions": null,
       "source_span": {
-        "start": 593,
-        "end": 643,
+        "start": 587,
+        "end": 637,
         "text": "Syrup Ambroxol (Ambrodil) 30 mg/5 mL 5 mL TDS x 5d"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "in 1 wk",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 652,
-        "end": 692,
+        "start": 646,
+        "end": 686,
         "text": "F/U chest clinic in 1 wk with repeat CXR"
       }
     }
@@ -106,24 +106,24 @@
     {
       "text": "Fever that does not settle.",
       "source_span": {
-        "start": 856,
-        "end": 883,
+        "start": 850,
+        "end": 877,
         "text": "Fever that does not settle."
       }
     },
     {
       "text": "Worsening breathlessness or chest pain.",
       "source_span": {
-        "start": 886,
-        "end": 925,
+        "start": 880,
+        "end": 919,
         "text": "Worsening breathlessness or chest pain."
       }
     },
     {
       "text": "Coughing up blood.",
       "source_span": {
-        "start": 928,
-        "end": 946,
+        "start": 922,
+        "end": 940,
         "text": "Coughing up blood."
       }
     }

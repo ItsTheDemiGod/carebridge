@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 150,
-        "end": 195,
+        "start": 154,
+        "end": 199,
         "text": "c. redotil (racecadotril) 100 mg 1 cap tds ac"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": "for 30d",
       "special_instructions": null,
       "source_span": {
-        "start": 199,
-        "end": 235,
+        "start": 203,
+        "end": 239,
         "text": "t. ondansetron 4mg 1 tab sos for 30d"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "for 3d",
       "special_instructions": null,
       "source_span": {
-        "start": 239,
-        "end": 291,
+        "start": 243,
+        "end": 295,
         "text": "Tab.  Ciprofloxacin  500mg\n    1 tab  BD  PC  for 3d"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "5/7",
       "days_from_discharge": 5,
       "source_span": {
-        "start": 301,
-        "end": 361,
+        "start": 305,
+        "end": 365,
         "text": "f/u medicine opd 5/7 with stool r/m if loose stools continue"
       }
     }
@@ -84,16 +84,16 @@
     {
       "text": "Vomiting that does not stop.",
       "source_span": {
-        "start": 481,
-        "end": 509,
+        "start": 485,
+        "end": 513,
         "text": "Vomiting that does not stop."
       }
     },
     {
       "text": "Blood in stool.",
       "source_span": {
-        "start": 512,
-        "end": 527,
+        "start": 516,
+        "end": 531,
         "text": "Blood in stool."
       }
     }

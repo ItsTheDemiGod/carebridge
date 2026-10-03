@@ -1,6 +1,6 @@
 SAMPLE CITY HOSPITAL
 Discharge summary (fictional)
-Patient: Ravi Example   Age/Sex: 75/M   ID: SYN-IP-01963
+Patient: Farhan Sample   Age/Sex: 75/M   ID: SYN-IP-01963
 Admitted: 17 Apr 2025   Discharged: 21/04/25
 Consultant: Dr. Priya Example
 
@@ -8,7 +8,7 @@ Phone: 000-000-0000
 DIAGNOSIS AGE
 
 COURSE IN HOSPITAL -
-Ravi Example, a 75-year-old man, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
+Farhan Sample, a 75-year-old man, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
 
 Ref: SYN/DS/2025
 Rx -

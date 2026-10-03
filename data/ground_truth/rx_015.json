@@ -18,8 +18,8 @@
       "duration_text": "for 30d",
       "special_instructions": null,
       "source_span": {
-        "start": 180,
-        "end": 225,
+        "start": 183,
+        "end": 228,
         "text": "t.  metformin  500 mg  1 tab  bd  pc  for 30d"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 230,
-        "end": 267,
+        "start": 233,
+        "end": 270,
         "text": "TAB.  GLIMEPIRIDE  1 MG\n    1 tab  OD"
       }
     },
@@ -54,7 +54,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "od",
         "is_prn": false
       },
@@ -62,8 +62,8 @@
       "duration_text": "30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 270,
-        "end": 319,
+        "start": 273,
+        "end": 322,
         "text": "tab. telmisartan (micardis) 40mg 1 tab od 30 days"
       }
     },
@@ -84,8 +84,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 320,
-        "end": 364,
+        "start": 323,
+        "end": 367,
         "text": "TAB ATORVASTATIN (LIPITOR) 10MG\n    1 tab HS"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "14/7",
       "days_from_discharge": 14,
       "source_span": {
-        "start": 405,
-        "end": 448,
+        "start": 408,
+        "end": 451,
         "text": "f/u medicine opd 14/7 with fbs/ppbs reports"
       }
     }

@@ -1,7 +1,7 @@
 Sample City Hospital  OPD
 Dr. Anil Sample (Reg. No. SYN-50847)
 Date: 18/03/25
-Patient: Meena Demo   Age/Sex: 67/F   ID: SYN-OP-09585
+Patient: Asha Mockerjee   Age/Sex: 67/F   ID: SYN-OP-09585
 
 Phone: 000-000-0000
 

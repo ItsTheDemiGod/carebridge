@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. Anil Sample (Reg. No. SYN-84259)
 Date: 03 Aug 2025
-Patient: Meena Demo   Age/Sex: 45/F   ID: SYN-OP-01793
+Patient: Nasreen Sample   Age/Sex: 45/F   ID: SYN-OP-01793
 
 Diagnosis: Urinary tract infection
 

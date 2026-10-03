@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 505,
-        "end": 534,
+        "start": 495,
+        "end": 524,
         "text": "t. calpol 650mg\n    1 tab sos"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 535,
-        "end": 572,
+        "start": 525,
+        "end": 562,
         "text": "T.  PANTOPRAZOLE  40MG  1 tab  OD  AC"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 576,
-        "end": 607,
+        "start": 566,
+        "end": 597,
         "text": "Tab. Ondansetron 4 mg 1 tab SOS"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "1/52",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 637,
-        "end": 674,
+        "start": 627,
+        "end": 664,
         "text": "f/u medicine opd 1/52 with repeat cbc"
       }
     }
@@ -84,32 +84,32 @@
     {
       "text": "Bleeding from gums or nose.",
       "source_span": {
-        "start": 885,
-        "end": 912,
+        "start": 875,
+        "end": 902,
         "text": "Bleeding from gums or nose."
       }
     },
     {
       "text": "Black stools or vomiting blood.",
       "source_span": {
-        "start": 913,
-        "end": 944,
+        "start": 903,
+        "end": 934,
         "text": "Black stools or vomiting blood."
       }
     },
     {
       "text": "Severe abdominal pain or repeated vomiting.",
       "source_span": {
-        "start": 947,
-        "end": 990,
+        "start": 937,
+        "end": 980,
         "text": "Severe abdominal pain or repeated vomiting."
       }
     },
     {
       "text": "Extreme drowsiness or restlessness.",
       "source_span": {
-        "start": 993,
-        "end": 1028,
+        "start": 983,
+        "end": 1018,
         "text": "Extreme drowsiness or restlessness."
       }
     }

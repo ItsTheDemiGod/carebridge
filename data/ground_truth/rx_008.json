@@ -18,8 +18,8 @@
       "duration_text": "x 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 184,
-        "end": 224,
+        "start": 182,
+        "end": 222,
         "text": "Tab Glycomet 500mg 1 tab BD PC x 30 days"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": "x 30d",
       "special_instructions": null,
       "source_span": {
-        "start": 228,
-        "end": 275,
+        "start": 226,
+        "end": 273,
         "text": "Tab. Glimepiride (Glimy) 1 mg 1 tab OD AC x 30d"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "x 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 279,
-        "end": 310,
+        "start": 277,
+        "end": 308,
         "text": "Tab. Telma 40mg 1-0-0 x 30 days"
       }
     },
@@ -84,8 +84,8 @@
       "duration_text": "x 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 314,
-        "end": 355,
+        "start": 312,
+        "end": 353,
         "text": "Tab Atorvastatin 10 mg 1 tab HS x 30 days"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "in 2 wk",
       "days_from_discharge": 14,
       "source_span": {
-        "start": 364,
-        "end": 410,
+        "start": 362,
+        "end": 408,
         "text": "F/U medicine OPD in 2 wk with FBS/PPBS reports"
       }
     }

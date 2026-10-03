@@ -22,7 +22,8 @@ class TimingLabel(str, Enum):
     after_meals = "after_meals"
     bedtime = "bedtime"
     as_needed = "as_needed"
-    other = "other"
+    unspecified = "unspecified"  # frequency stated but no time of day / meal relation
+    other = "other"  # genuinely unusual instruction
 
 
 class Form(str, Enum):

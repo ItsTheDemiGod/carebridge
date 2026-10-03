@@ -10,7 +10,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 4,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "QID",
         "is_prn": false
       },
@@ -18,8 +18,8 @@
       "duration_text": "X5/7",
       "special_instructions": null,
       "source_span": {
-        "start": 514,
-        "end": 549,
+        "start": 520,
+        "end": 555,
         "text": "T. PARACETAMOL 650MG 1 tab QID X5/7"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 injection",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "od",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": "sc",
       "source_span": {
-        "start": 552,
-        "end": 605,
+        "start": 558,
+        "end": 611,
         "text": "inj enoxaparin (lovenox) 40mg\n    1 injection od - sc"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "FOR 30D",
       "special_instructions": null,
       "source_span": {
-        "start": 609,
-        "end": 652,
+        "start": 615,
+        "end": 658,
         "text": "T.  SHELCAL  500 MG  1 tab  OD  PC  FOR 30D"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "1 capsule",
       "frequency": {
         "times_per_day": null,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": "X 8 WEEKS",
       "special_instructions": null,
       "source_span": {
-        "start": 655,
-        "end": 706,
+        "start": 661,
+        "end": 712,
         "text": "CAP  D-RISE  60000IU  1 cap  once weekly  X 8 WEEKS"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "10/7",
       "days_from_discharge": 10,
       "source_span": {
-        "start": 733,
-        "end": 778,
+        "start": 739,
+        "end": 784,
         "text": "f/u ortho opd 10/7 with x-ray and wound check"
       }
     }
@@ -106,32 +106,32 @@
     {
       "text": "Severe pain not relieved by medicines.",
       "source_span": {
-        "start": 936,
-        "end": 974,
+        "start": 942,
+        "end": 980,
         "text": "Severe pain not relieved by medicines."
       }
     },
     {
       "text": "Numbness, coldness or bluish colour of the toes.",
       "source_span": {
-        "start": 977,
-        "end": 1025,
+        "start": 983,
+        "end": 1031,
         "text": "Numbness, coldness or bluish colour of the toes."
       }
     },
     {
       "text": "Pus or foul smell from the wound.",
       "source_span": {
-        "start": 1028,
-        "end": 1061,
+        "start": 1034,
+        "end": 1067,
         "text": "Pus or foul smell from the wound."
       }
     },
     {
       "text": "Swelling or pain in the calf.",
       "source_span": {
-        "start": 1064,
-        "end": 1093,
+        "start": 1070,
+        "end": 1099,
         "text": "Swelling or pain in the calf."
       }
     }

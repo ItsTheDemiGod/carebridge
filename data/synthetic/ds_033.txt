@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 Discharge summary (fictional)
-Patient: Asha Example   Age/Sex: 78/F   ID: SYN-IP-00932
+Patient: Priya Fictional   Age/Sex: 78/F   ID: SYN-IP-00932
 Admitted: 29/09/25   Discharged: 07/10/25
 Consultant: Dr. Anil Sample
 
 DIAGNOSIS AGE
 
 Course
-Asha Example, a 78-year-old woman, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
+Priya Fictional, a 78-year-old woman, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
 
 TREATMENT ON DISCHARGE
 1. cap.  redotil (racecadotril)  100 mg  1 cap  tds  ac  3 days

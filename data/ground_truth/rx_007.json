@@ -18,8 +18,8 @@
       "duration_text": "for 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 233,
-        "end": 307,
+        "start": 235,
+        "end": 309,
         "text": "Tab Ecosprin (Aspirin) 75 mg - 1 tablet once daily after meals for 30 days"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": "for 30 days",
       "special_instructions": "Do not stop without asking your cardiologist.",
       "source_span": {
-        "start": 311,
-        "end": 413,
+        "start": 313,
+        "end": 415,
         "text": "Tab Clopidogrel 75 mg - 1 tablet once daily for 30 days. Do not stop without asking your cardiologist."
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "for 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 417,
-        "end": 473,
+        "start": 419,
+        "end": 475,
         "text": "Tab Atorvastatin 40 mg - 1 tablet at bedtime for 30 days"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": "for 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 477,
-        "end": 541,
+        "start": 479,
+        "end": 543,
         "text": "Tab Metoprolol succinate 25 mg - 1 tablet once daily for 30 days"
       }
     },
@@ -98,7 +98,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -106,8 +106,8 @@
       "duration_text": "for 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 545,
-        "end": 596,
+        "start": 547,
+        "end": 598,
         "text": "Tab Ramace 2.5 mg - 1 tablet once daily for 30 days"
       }
     },
@@ -128,8 +128,8 @@
       "duration_text": "for 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 600,
-        "end": 669,
+        "start": 602,
+        "end": 671,
         "text": "Tab Pantoprazole 40 mg - 1 tablet once daily before meals for 30 days"
       }
     }
@@ -140,8 +140,8 @@
       "date_text": "after 2 weeks",
       "days_from_discharge": 14,
       "source_span": {
-        "start": 684,
-        "end": 752,
+        "start": 686,
+        "end": 754,
         "text": "Please review at the cardiology OPD after 2 weeks with a repeat ECG."
       }
     }

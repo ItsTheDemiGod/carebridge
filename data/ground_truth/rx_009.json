@@ -18,8 +18,8 @@
       "duration_text": "X 5/7",
       "special_instructions": null,
       "source_span": {
-        "start": 170,
-        "end": 237,
+        "start": 173,
+        "end": 240,
         "text": "TAB.  AMOXICILLIN + CLAVULANIC ACID  625MG\n    1 tab  BD  PC  X 5/7"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "od",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 240,
-        "end": 266,
+        "start": 243,
+        "end": 269,
         "text": "t. azee 500mg\n    1 tab od"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 269,
-        "end": 312,
+        "start": 272,
+        "end": 315,
         "text": "TAB PARACETAMOL (DOLO) 650 MG\n    1 tab SOS"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "5 mL",
       "frequency": {
         "times_per_day": 3,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "TDS",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": "FOR 5D",
       "special_instructions": null,
       "source_span": {
-        "start": 316,
-        "end": 372,
+        "start": 319,
+        "end": 375,
         "text": "SYP.  AMBRODIL (AMBROXOL)  30 MG/5 ML  5 mL  TDS  FOR 5D"
       }
     }

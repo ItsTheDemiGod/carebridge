@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. R. Demo (Reg. No. SYN-07279)
 Date: 15 May 2025
-Patient: Suresh Sample   Age/Sex: 36/F   ID: SYN-OP-08910
+Patient: Fatima Sample   Age/Sex: 36/F   ID: SYN-OP-08910
 
 Dx: UTI
 

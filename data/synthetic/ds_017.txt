@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Kumar Fictional   Age/Sex: 25/M   ID: SYN-IP-04251
+Patient: Arjun Demo   Age/Sex: 25/M   ID: SYN-IP-04251
 Admitted: 01 Feb 2025   Discharged: 06 Feb 2025
 Consultant: Dr. Priya Example
 
 Dx: AECOPD
 
 Course:
-Kumar Fictional, a 25-year-old man, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
+Arjun Demo, a 25-year-old man, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
 
 Rx on discharge:
 1) Tab Prednisolone 20 mg 1 tab OD PC x 5 days

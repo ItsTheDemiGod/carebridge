@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 192,
-        "end": 224,
+        "start": 193,
+        "end": 225,
         "text": "Tab Paracetamol 650 mg 1 tab SOS"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 228,
-        "end": 255,
+        "start": 229,
+        "end": 256,
         "text": "T. PANTOP 40 MG 1 tab OD AC"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "X 30 DAYS",
       "special_instructions": null,
       "source_span": {
-        "start": 259,
-        "end": 307,
+        "start": 260,
+        "end": 308,
         "text": "T. ONDANSETRON (EMESET) 4 MG 1 tab SOS X 30 DAYS"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "in 5 days",
       "days_from_discharge": 5,
       "source_span": {
-        "start": 316,
-        "end": 358,
+        "start": 317,
+        "end": 359,
         "text": "F/U medicine OPD in 5 days with repeat CBC"
       }
     }

@@ -10,7 +10,7 @@
       "dose": "1 capsule",
       "frequency": {
         "times_per_day": 2,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "BD",
         "is_prn": false
       },
@@ -18,8 +18,8 @@
       "duration_text": "X5/7",
       "special_instructions": null,
       "source_span": {
-        "start": 169,
-        "end": 215,
+        "start": 173,
+        "end": 219,
         "text": "CAP NIFTRAN (NITROFURANTOIN)\n    1 cap BD X5/7"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": "x30d",
       "special_instructions": null,
       "source_span": {
-        "start": 219,
-        "end": 248,
+        "start": 223,
+        "end": 252,
         "text": "Tab Dolo 500mg 1 tab SOS x30d"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "X3/7",
       "special_instructions": null,
       "source_span": {
-        "start": 252,
-        "end": 291,
+        "start": 256,
+        "end": 295,
         "text": "TAB DOMSTAL 10 MG\n    1 tab TDS AC X3/7"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "7/7",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 301,
-        "end": 336,
+        "start": 305,
+        "end": 340,
         "text": "f/u medicine opd 7/7 with urine r/m"
       }
     }

@@ -18,8 +18,8 @@
       "duration_text": "x 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 442,
-        "end": 485,
+        "start": 432,
+        "end": 475,
         "text": "Tab Prednisolone 20 mg 1 tab OD PC x 5 days"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": "x 3/7",
       "special_instructions": null,
       "source_span": {
-        "start": 489,
-        "end": 535,
+        "start": 479,
+        "end": 525,
         "text": "T. Zithromax (Azithromycin) 500 mg 1-0-0 x 3/7"
       }
     },
@@ -54,7 +54,7 @@
       "dose": "2 puffs",
       "frequency": {
         "times_per_day": 2,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "BD",
         "is_prn": false
       },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": "rinse mouth after use",
       "source_span": {
-        "start": 539,
-        "end": 601,
+        "start": 529,
+        "end": 591,
         "text": "Inhaler Symbicort 200/6 mcg 2 puffs BD - rinse mouth after use"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "1 capsule",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": null,
       "special_instructions": "inhale via device",
       "source_span": {
-        "start": 605,
-        "end": 654,
+        "start": 595,
+        "end": 644,
         "text": "Inh Tiotropium 18mcg 1 cap OD - inhale via device"
       }
     },
@@ -106,8 +106,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 658,
-        "end": 690,
+        "start": 648,
+        "end": 680,
         "text": "Inh Ventolin 100 mcg 2 puffs SOS"
       }
     },
@@ -128,8 +128,8 @@
       "duration_text": "x 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 694,
-        "end": 742,
+        "start": 684,
+        "end": 732,
         "text": "Tab Pantoprazole (Pan) 40mg 1 tab OD AC x 5 days"
       }
     }
@@ -140,8 +140,8 @@
       "date_text": "in 1 wk",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 751,
-        "end": 784,
+        "start": 741,
+        "end": 774,
         "text": "F/U chest clinic in 1 wk with PFT"
       }
     }
@@ -150,24 +150,24 @@
     {
       "text": "Worsening breathlessness.",
       "source_span": {
-        "start": 918,
-        "end": 943,
+        "start": 908,
+        "end": 933,
         "text": "Worsening breathlessness."
       }
     },
     {
       "text": "Lips or fingers turning bluish.",
       "source_span": {
-        "start": 946,
-        "end": 977,
+        "start": 936,
+        "end": 967,
         "text": "Lips or fingers turning bluish."
       }
     },
     {
       "text": "Fever with yellow-green sputum.",
       "source_span": {
-        "start": 980,
-        "end": 1011,
+        "start": 970,
+        "end": 1001,
         "text": "Fever with yellow-green sputum."
       }
     }

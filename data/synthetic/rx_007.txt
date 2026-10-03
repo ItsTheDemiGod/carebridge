@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. S. Testwala (Reg. No. SYN-27434)
 Date: 08 Oct 2025
-Patient: Meena Testwala   Age/Sex: 71/F   ID: SYN-OP-02655
+Patient: Fatima Fictional   Age/Sex: 71/F   ID: SYN-OP-02655
 
 Diagnosis: Acute coronary syndrome treated with angioplasty and stent
 

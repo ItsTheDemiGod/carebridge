@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -54,7 +54,7 @@
       "dose": "2 puffs",
       "frequency": {
         "times_per_day": 2,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -76,7 +76,7 @@
       "dose": "1 capsule",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },

@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Arjun Demo   Age/Sex: 26/M   ID: SYN-IP-01225
+Patient: Suresh Testwala   Age/Sex: 26/M   ID: SYN-IP-01225
 Admitted: 23 Sep 2025   Discharged: 30 Sep 2025
 Consultant: Dr. Priya Example
 
 Diagnosis: Type 2 diabetes mellitus with hypertension
 
 Hospital course:
-Arjun Demo, a 26-year-old man, was admitted with high blood sugar and raised blood pressure. Blood sugar was brought under control with medicines and diet advice, and blood pressure settled. The patient is being discharged in stable condition.
+Suresh Testwala, a 26-year-old man, was admitted with high blood sugar and raised blood pressure. Blood sugar was brought under control with medicines and diet advice, and blood pressure settled. The patient is being discharged in stable condition.
 
 Discharge medications:
 1. Tab Glycomet 500 mg - 1 tablet twice daily after meals

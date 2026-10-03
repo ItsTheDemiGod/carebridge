@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Ravi Example   Age/Sex: 61/F   ID: SYN-IP-01274
+Patient: Anitha Testwala   Age/Sex: 61/F   ID: SYN-IP-01274
 Admitted: 11 Oct 2025   Discharged: 13 Oct 2025
 Consultant: Dr. R. Demo
 
 Diagnosis: Acute coronary syndrome treated with angioplasty and stent
 
 Hospital course:
-Ravi Example, a 61-year-old woman, was admitted with chest pain. ECG and blood tests were done, and an angiogram showed a blocked artery. A stent was placed and the patient remained stable and pain-free afterwards.
+Anitha Testwala, a 61-year-old woman, was admitted with chest pain. ECG and blood tests were done, and an angiogram showed a blocked artery. A stent was placed and the patient remained stable and pain-free afterwards.
 
 Discharge medications:
 1. Tab Aspirin 75 mg - 1 tablet once daily after meals

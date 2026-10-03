@@ -18,8 +18,8 @@
       "duration_text": "X 5/7",
       "special_instructions": null,
       "source_span": {
-        "start": 441,
-        "end": 484,
+        "start": 435,
+        "end": 478,
         "text": "CAP. NITROFURANTOIN 100MG 1 cap BD PC X 5/7"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 488,
-        "end": 518,
+        "start": 482,
+        "end": 512,
         "text": "T. Paracetamol 500mg 1 tab SOS"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "X 3 DAYS",
       "special_instructions": null,
       "source_span": {
-        "start": 522,
-        "end": 570,
+        "start": 516,
+        "end": 564,
         "text": "T. DOMSTAL (DOMPERIDONE) 10 MG 1-1-1 AC X 3 DAYS"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "in 1 wk",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 579,
-        "end": 618,
+        "start": 573,
+        "end": 612,
         "text": "F/U medicine OPD in 1 wk with urine R/M"
       }
     }
@@ -84,24 +84,24 @@
     {
       "text": "Fever with chills or back pain.",
       "source_span": {
-        "start": 733,
-        "end": 764,
+        "start": 727,
+        "end": 758,
         "text": "Fever with chills or back pain."
       }
     },
     {
       "text": "Blood in urine.",
       "source_span": {
-        "start": 767,
-        "end": 782,
+        "start": 761,
+        "end": 776,
         "text": "Blood in urine."
       }
     },
     {
       "text": "Unable to pass urine.",
       "source_span": {
-        "start": 785,
-        "end": 806,
+        "start": 779,
+        "end": 800,
         "text": "Unable to pass urine."
       }
     }

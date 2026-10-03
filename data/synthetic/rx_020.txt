@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. S. Testwala (Reg. No. SYN-20813)
 Date: 16 Jan 2025
-Patient: Arjun Example   Age/Sex: 31/M   ID: SYN-OP-05258
+Patient: Arjun Testwala   Age/Sex: 31/M   ID: SYN-OP-05258
 
 Dx: Dengue fever (recovering)
 

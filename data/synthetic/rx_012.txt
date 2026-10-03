@@ -1,7 +1,7 @@
 Sample City Hospital  OPD
 Dr. Priya Example (Reg. No. SYN-58768)
 Date: 05 Mar 2025
-Patient: Arjun Mockerjee   Age/Sex: 69/F   ID: SYN-OP-01343
+Patient: Sunita Fictional   Age/Sex: 69/F   ID: SYN-OP-01343
 
 Bill No. SYN-00231
 

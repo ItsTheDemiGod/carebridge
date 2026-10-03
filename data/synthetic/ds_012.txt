@@ -1,6 +1,6 @@
 SAMPLE CITY HOSPITAL
 Discharge summary (fictional)
-Patient: Meena Fictional   Age/Sex: 34/M   ID: SYN-IP-01701
+Patient: Kumar Example   Age/Sex: 34/M   ID: SYN-IP-01701
 Admitted: 06 Oct 2025   Discharged: 14-10-2025
 Consultant: Dr. Anil Sample
 
@@ -8,7 +8,7 @@ Ward: 3B / Bed 12
 dx: Dengue fever (recovering)
 
 h/o & course:
-Meena Fictional, a 34-year-old man, was admitted with fever and body ache. The blood platelet count fell during the illness and later recovered with fluids and rest. The patient is eating well and is being discharged in stable condition.
+Kumar Example, a 34-year-old man, was admitted with fever and body ache. The blood platelet count fell during the illness and later recovered with fluids and rest. The patient is eating well and is being discharged in stable condition.
 
 Pharmacy copy
 Meds on d/c:

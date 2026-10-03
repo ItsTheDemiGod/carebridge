@@ -18,8 +18,8 @@
       "duration_text": "x 3/7",
       "special_instructions": null,
       "source_span": {
-        "start": 172,
-        "end": 209,
+        "start": 171,
+        "end": 208,
         "text": "C. Racecadotril 100 mg 1-1-1 AC x 3/7"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": "x 30d",
       "special_instructions": null,
       "source_span": {
-        "start": 213,
-        "end": 244,
+        "start": 212,
+        "end": 243,
         "text": "Tab. Emeset 4mg 1 tab SOS x 30d"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "x 3/7",
       "special_instructions": null,
       "source_span": {
-        "start": 248,
-        "end": 289,
+        "start": 247,
+        "end": 288,
         "text": "Tab Ciprofloxacin 500mg 1 tab BD PC x 3/7"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "in 5 days",
       "days_from_discharge": 5,
       "source_span": {
-        "start": 298,
-        "end": 364,
+        "start": 297,
+        "end": 363,
         "text": "F/U medicine OPD in 5 days with stool R/M if loose stools continue"
       }
     }
@@ -84,16 +84,16 @@
     {
       "text": "Vomiting that does not stop.",
       "source_span": {
-        "start": 472,
-        "end": 500,
+        "start": 471,
+        "end": 499,
         "text": "Vomiting that does not stop."
       }
     },
     {
       "text": "Blood in stool.",
       "source_span": {
-        "start": 503,
-        "end": 518,
+        "start": 502,
+        "end": 517,
         "text": "Blood in stool."
       }
     }

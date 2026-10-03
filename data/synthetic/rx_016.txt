@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. S. Testwala (Reg. No. SYN-74055)
 Date: 24 Jan 2025
-Patient: Suresh Testwala   Age/Sex: 56/M   ID: SYN-OP-02907
+Patient: Kumar Testwala   Age/Sex: 56/M   ID: SYN-OP-02907
 
 Diagnosis: Community-acquired pneumonia
 

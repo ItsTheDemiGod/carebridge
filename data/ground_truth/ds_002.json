@@ -18,8 +18,8 @@
       "duration_text": "x 5d",
       "special_instructions": null,
       "source_span": {
-        "start": 479,
-        "end": 545,
+        "start": 469,
+        "end": 535,
         "text": "Tab. Clavam (Amoxicillin + Clavulanic acid) 625mg 1 tab BD PC x 5d"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": "x 3/7",
       "special_instructions": null,
       "source_span": {
-        "start": 549,
-        "end": 576,
+        "start": 539,
+        "end": 566,
         "text": "Tab. Azee 500mg 1-0-0 x 3/7"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 580,
-        "end": 606,
+        "start": 570,
+        "end": 596,
         "text": "T. CROCIN 650 MG 1 tab SOS"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "5 mL",
       "frequency": {
         "times_per_day": 3,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "TDS",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 610,
-        "end": 644,
+        "start": 600,
+        "end": 634,
         "text": "Syrup Ambrodil 30 mg/5 mL 5 mL TDS"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "in 14 days",
       "days_from_discharge": 14,
       "source_span": {
-        "start": 653,
-        "end": 696,
+        "start": 643,
+        "end": 686,
         "text": "F/U chest clinic in 14 days with repeat CXR"
       }
     }
@@ -106,24 +106,24 @@
     {
       "text": "Fever that does not settle.",
       "source_span": {
-        "start": 860,
-        "end": 887,
+        "start": 850,
+        "end": 877,
         "text": "Fever that does not settle."
       }
     },
     {
       "text": "Worsening breathlessness or chest pain.",
       "source_span": {
-        "start": 890,
-        "end": 929,
+        "start": 880,
+        "end": 919,
         "text": "Worsening breathlessness or chest pain."
       }
     },
     {
       "text": "Coughing up blood.",
       "source_span": {
-        "start": 932,
-        "end": 950,
+        "start": 922,
+        "end": 940,
         "text": "Coughing up blood."
       }
     }

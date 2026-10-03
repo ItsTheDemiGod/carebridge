@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. R. Demo (Reg. No. SYN-48000)
 Date: 26 Mar 2025
-Patient: Meena Demo   Age/Sex: 24/F   ID: SYN-OP-01201
+Patient: Lakshmi Sample   Age/Sex: 24/F   ID: SYN-OP-01201
 
 Dx: ACS s/p PTCA with stent
 

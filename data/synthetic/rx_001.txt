@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. Priya Example (Reg. No. SYN-83382)
 Date: 10 Oct 2025
-Patient: Kumar Mockerjee   Age/Sex: 35/M   ID: SYN-OP-08139
+Patient: Suresh Sample   Age/Sex: 35/M   ID: SYN-OP-08139
 
 Diagnosis: Type 2 diabetes mellitus with hypertension
 

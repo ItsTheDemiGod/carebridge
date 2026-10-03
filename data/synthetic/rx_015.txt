@@ -1,7 +1,7 @@
 Sample City Hospital  OPD
 Dr. R. Demo (Reg. No. SYN-70472)
 Date: 20-09-2025
-Patient: Ravi Demo   Age/Sex: 31/M   ID: SYN-OP-06340
+Patient: Ravi Example   Age/Sex: 31/M   ID: SYN-OP-06340
 
 Ward: 3B / Bed 12
 

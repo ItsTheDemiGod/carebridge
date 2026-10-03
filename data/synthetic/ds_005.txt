@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Anitha Example   Age/Sex: 38/F   ID: SYN-IP-08189
+Patient: Anitha Demo   Age/Sex: 38/F   ID: SYN-IP-08189
 Admitted: 19 Feb 2025   Discharged: 23 Feb 2025
 Consultant: Dr. Priya Example
 
 Dx: UTI
 
 Course:
-Anitha Example, a 38-year-old woman, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
+Anitha Demo, a 38-year-old woman, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
 
 Rx on discharge:
 1) CAP. NITROFURANTOIN 100MG 1 cap BD PC X 5/7

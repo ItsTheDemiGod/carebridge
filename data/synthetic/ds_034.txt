@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Anitha Testwala   Age/Sex: 26/F   ID: SYN-IP-03148
+Patient: Asha Testwala   Age/Sex: 26/F   ID: SYN-IP-03148
 Admitted: 03 Apr 2025   Discharged: 10 Apr 2025
 Consultant: Dr. R. Demo
 
 Diagnosis: Acute coronary syndrome treated with angioplasty and stent
 
 Hospital course:
-Anitha Testwala, a 26-year-old woman, was admitted with chest pain. ECG and blood tests were done, and an angiogram showed a blocked artery. A stent was placed and the patient remained stable and pain-free afterwards.
+Asha Testwala, a 26-year-old woman, was admitted with chest pain. ECG and blood tests were done, and an angiogram showed a blocked artery. A stent was placed and the patient remained stable and pain-free afterwards.
 
 Discharge medications:
 1. Tab Aspirin 75 mg - 1 tablet once daily after meals

@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 447,
-        "end": 497,
+        "start": 453,
+        "end": 503,
         "text": "Cap Redotil (Racecadotril) 100 mg\n    1 cap TDS AC"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 502,
-        "end": 536,
+        "start": 508,
+        "end": 542,
         "text": "tab.  ondansetron  4mg  1 tab  sos"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "for 3d",
       "special_instructions": null,
       "source_span": {
-        "start": 539,
-        "end": 591,
+        "start": 545,
+        "end": 597,
         "text": "tab. ciplox (ciprofloxacin) 500mg 1 tab bd pc for 3d"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "3/7",
       "days_from_discharge": 3,
       "source_span": {
-        "start": 603,
-        "end": 663,
+        "start": 609,
+        "end": 669,
         "text": "f/u medicine opd 3/7 with stool r/m if loose stools continue"
       }
     }
@@ -84,24 +84,24 @@
     {
       "text": "Vomiting that does not stop.",
       "source_span": {
-        "start": 863,
-        "end": 891,
+        "start": 869,
+        "end": 897,
         "text": "Vomiting that does not stop."
       }
     },
     {
       "text": "Blood in stool.",
       "source_span": {
-        "start": 894,
-        "end": 909,
+        "start": 900,
+        "end": 915,
         "text": "Blood in stool."
       }
     },
     {
       "text": "Very little urine, dry mouth or extreme drowsiness.",
       "source_span": {
-        "start": 912,
-        "end": 963,
+        "start": 918,
+        "end": 969,
         "text": "Very little urine, dry mouth or extreme drowsiness."
       }
     }

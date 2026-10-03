@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 530,
-        "end": 553,
+        "start": 528,
+        "end": 551,
         "text": "t. dolo 650mg 1 tab sos"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 556,
-        "end": 593,
+        "start": 554,
+        "end": 591,
         "text": "T.  Pantocid  40 mg\n    1 tab  OD  AC"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 597,
-        "end": 625,
+        "start": 595,
+        "end": 623,
         "text": "T. ONDANSETRON 4MG 1 tab SOS"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "5/7",
       "days_from_discharge": 5,
       "source_span": {
-        "start": 633,
-        "end": 669,
+        "start": 631,
+        "end": 667,
         "text": "f/u medicine opd 5/7 with repeat cbc"
       }
     }
@@ -84,32 +84,32 @@
     {
       "text": "Bleeding from gums or nose.",
       "source_span": {
-        "start": 874,
-        "end": 901,
+        "start": 872,
+        "end": 899,
         "text": "Bleeding from gums or nose."
       }
     },
     {
       "text": "Black stools or vomiting blood.",
       "source_span": {
-        "start": 904,
-        "end": 935,
+        "start": 902,
+        "end": 933,
         "text": "Black stools or vomiting blood."
       }
     },
     {
       "text": "Severe abdominal pain or repeated vomiting.",
       "source_span": {
-        "start": 936,
-        "end": 979,
+        "start": 934,
+        "end": 977,
         "text": "Severe abdominal pain or repeated vomiting."
       }
     },
     {
       "text": "Extreme drowsiness or restlessness.",
       "source_span": {
-        "start": 982,
-        "end": 1017,
+        "start": 980,
+        "end": 1015,
         "text": "Extreme drowsiness or restlessness."
       }
     }

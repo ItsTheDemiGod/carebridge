@@ -1,7 +1,7 @@
 Sample City Hospital  OPD
 Dr. R. Demo (Reg. No. SYN-28482)
 Date: 12-05-2025
-Patient: Arjun Sample   Age/Sex: 75/F   ID: SYN-OP-01925
+Patient: Sunita Fictional   Age/Sex: 75/F   ID: SYN-OP-01925
 
 DX - AGE
 

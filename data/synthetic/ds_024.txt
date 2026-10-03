@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 Discharge summary (fictional)
-Patient: Meena Mockerjee   Age/Sex: 68/M   ID: SYN-IP-07180
+Patient: Arjun Mockerjee   Age/Sex: 68/M   ID: SYN-IP-07180
 Admitted: 15 Jan 2025   Discharged: 22-01-2025
 Consultant: Dr. Priya Example
 
 dx: AGE
 
 COURSE IN HOSPITAL -
-Meena Mockerjee, a 68-year-old man, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
+Arjun Mockerjee, a 68-year-old man, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
 
 Dispensed by: ________
 TREATMENT ON DISCHARGE

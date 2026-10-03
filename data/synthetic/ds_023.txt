@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Deepa Mockerjee   Age/Sex: 25/F   ID: SYN-IP-04519
+Patient: Kavya Fictional   Age/Sex: 25/F   ID: SYN-IP-04519
 Admitted: 15 Jul 2025   Discharged: 17 Jul 2025
 Consultant: Dr. Priya Example
 
 Dx: UTI
 
 Course:
-Deepa Mockerjee, a 25-year-old woman, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
+Kavya Fictional, a 25-year-old woman, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
 
 Rx on discharge:
 1) C. Niftran 100 mg 1 cap BD PC x 5 days

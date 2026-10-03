@@ -18,8 +18,8 @@
       "duration_text": "x 5/7",
       "special_instructions": null,
       "source_span": {
-        "start": 434,
-        "end": 483,
+        "start": 436,
+        "end": 485,
         "text": "Tab Prednisolone (Omnacortil) 20mg 1-0-0 PC x 5/7"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 487,
-        "end": 516,
+        "start": 489,
+        "end": 518,
         "text": "Tab. Azithral 500 mg 1 tab OD"
       }
     },
@@ -54,7 +54,7 @@
       "dose": "2 puffs",
       "frequency": {
         "times_per_day": 2,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "BD",
         "is_prn": false
       },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": "rinse mouth after use",
       "source_span": {
-        "start": 520,
-        "end": 604,
+        "start": 522,
+        "end": 606,
         "text": "Inh Budesonide + Formoterol (Symbicort) 200/6 mcg 2 puffs BD - rinse mouth after use"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "1 capsule",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": null,
       "special_instructions": "INHALE VIA DEVICE",
       "source_span": {
-        "start": 608,
-        "end": 652,
+        "start": 610,
+        "end": 654,
         "text": "INH TIOVA 18MCG 1 cap OD - INHALE VIA DEVICE"
       }
     },
@@ -106,8 +106,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 656,
-        "end": 687,
+        "start": 658,
+        "end": 689,
         "text": "Inh Asthalin 100mcg 2 puffs SOS"
       }
     },
@@ -128,8 +128,8 @@
       "duration_text": "x 5/7",
       "special_instructions": null,
       "source_span": {
-        "start": 691,
-        "end": 732,
+        "start": 693,
+        "end": 734,
         "text": "Tab. Pantoprazole 40 mg 1 tab OD AC x 5/7"
       }
     }
@@ -140,8 +140,8 @@
       "date_text": "in 7 days",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 741,
-        "end": 776,
+        "start": 743,
+        "end": 778,
         "text": "F/U chest clinic in 7 days with PFT"
       }
     }
@@ -150,24 +150,24 @@
     {
       "text": "Worsening breathlessness.",
       "source_span": {
-        "start": 910,
-        "end": 935,
+        "start": 912,
+        "end": 937,
         "text": "Worsening breathlessness."
       }
     },
     {
       "text": "Lips or fingers turning bluish.",
       "source_span": {
-        "start": 938,
-        "end": 969,
+        "start": 940,
+        "end": 971,
         "text": "Lips or fingers turning bluish."
       }
     },
     {
       "text": "Fever with yellow-green sputum.",
       "source_span": {
-        "start": 972,
-        "end": 1003,
+        "start": 974,
+        "end": 1005,
         "text": "Fever with yellow-green sputum."
       }
     }

@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Anitha Sample   Age/Sex: 80/F   ID: SYN-IP-01586
+Patient: Nasreen Testwala   Age/Sex: 80/F   ID: SYN-IP-01586
 Admitted: 24 Jan 2025   Discharged: 31 Jan 2025
 Consultant: Dr. Priya Example
 
 Dx: CAP
 
 Course:
-Anitha Sample, a 80-year-old woman, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
+Nasreen Testwala, a 80-year-old woman, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
 
 Rx on discharge:
 1) TAB. AUGMENTIN 625MG 1 tab BD PC

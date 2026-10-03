@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Ravi Testwala   Age/Sex: 64/F   ID: SYN-IP-07984
+Patient: Asha Sample   Age/Sex: 64/F   ID: SYN-IP-07984
 Admitted: 04 Sep 2025   Discharged: 12 Sep 2025
 Consultant: Dr. Anil Sample
 
 Diagnosis: Acute appendicitis, post appendectomy
 
 Hospital course:
-Ravi Testwala, a 64-year-old woman, was admitted with pain in the right lower abdomen. Appendicitis was confirmed and an appendectomy was done. Recovery after surgery was uneventful and the patient is taking a normal diet.
+Asha Sample, a 64-year-old woman, was admitted with pain in the right lower abdomen. Appendicitis was confirmed and an appendectomy was done. Recovery after surgery was uneventful and the patient is taking a normal diet.
 
 Discharge medications:
 1. Tab Ceftum (Cefuroxime) 500 mg - 1 tablet twice daily after meals for 5 days

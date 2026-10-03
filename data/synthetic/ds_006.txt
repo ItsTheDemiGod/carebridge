@@ -1,6 +1,6 @@
 SAMPLE CITY HOSPITAL
 Discharge summary (fictional)
-Patient: Lakshmi Demo   Age/Sex: 70/F   ID: SYN-IP-02414
+Patient: Meena Fictional   Age/Sex: 70/F   ID: SYN-IP-02414
 Admitted: 22-08-2025   Discharged: 29-08-2025
 Consultant: Dr. S. Testwala
 
@@ -8,7 +8,7 @@ Pharmacy copy
 DX - AGE
 
 Course
-Lakshmi Demo, a 70-year-old woman, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
+Meena Fictional, a 70-year-old woman, was admitted with loose stools, vomiting and dehydration. Fluids were given through a drip and symptoms improved. The patient is now taking oral fluids and food.
 
 Printed on: 08/03/2025 14:22
 

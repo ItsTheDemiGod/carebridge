@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Arjun Sample   Age/Sex: 77/M   ID: SYN-IP-08064
+Patient: Kumar Fictional   Age/Sex: 77/M   ID: SYN-IP-08064
 Admitted: 17 Sep 2025   Discharged: 21 Sep 2025
 Consultant: Dr. S. Testwala
 
 Dx: UTI
 
 Course:
-Arjun Sample, a 77-year-old man, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
+Kumar Fictional, a 77-year-old man, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
 
 Rx on discharge:
 1) Cap Niftran 100 mg 1 cap BD PC

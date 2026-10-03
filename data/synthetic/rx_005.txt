@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. Priya Example (Reg. No. SYN-32326)
 Date: 05 Feb 2025
-Patient: Deepa Sample   Age/Sex: 34/M   ID: SYN-OP-08541
+Patient: Manoj Example   Age/Sex: 34/M   ID: SYN-OP-08541
 
 Dx: AECOPD
 

@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 Discharge summary (fictional)
-Patient: Meena Sample   Age/Sex: 31/F   ID: SYN-IP-03882
+Patient: Deepa Mockerjee   Age/Sex: 31/F   ID: SYN-IP-03882
 Admitted: 30 Jul 2025   Discharged: 02 Aug 2025
 Consultant: Dr. Priya Example
 
 dx: # R tibia s/p IM nailing
 
 h/o & course:
-Meena Sample, a 31-year-old woman, was admitted after a fall with a fracture of the right leg bone. Surgery was done to fix the bone with a nail. The wound is clean and the patient is being discharged for follow-up and walking practice.
+Deepa Mockerjee, a 31-year-old woman, was admitted after a fall with a fracture of the right leg bone. Surgery was done to fix the bone with a nail. The wound is clean and the patient is being discharged for follow-up and walking practice.
 
 Printed on: 08/03/2025 14:22
 

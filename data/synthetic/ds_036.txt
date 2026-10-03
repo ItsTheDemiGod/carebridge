@@ -1,6 +1,6 @@
 SAMPLE CITY HOSPITAL
 Discharge summary (fictional)
-Patient: Deepa Sample   Age/Sex: 25/M   ID: SYN-IP-09963
+Patient: Suresh Mockerjee   Age/Sex: 25/M   ID: SYN-IP-09963
 Admitted: 24 Jul 2025   Discharged: 28-07-2025
 Consultant: Dr. S. Testwala
 
@@ -8,7 +8,7 @@ Phone: 000-000-0000
 DX - # R tibia s/p IM nailing
 
 h/o & course:
-Deepa Sample, a 25-year-old man, was admitted after a fall with a fracture of the right leg bone. Surgery was done to fix the bone with a nail. The wound is clean and the patient is being discharged for follow-up and walking practice.
+Suresh Mockerjee, a 25-year-old man, was admitted after a fall with a fracture of the right leg bone. Surgery was done to fix the bone with a nail. The wound is clean and the patient is being discharged for follow-up and walking practice.
 
 Page 1 of 2
 Meds on d/c:

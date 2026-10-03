@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Suresh Example   Age/Sex: 58/M   ID: SYN-IP-00980
+Patient: Farhan Mockerjee   Age/Sex: 58/M   ID: SYN-IP-00980
 Admitted: 23 Jun 2025   Discharged: 29 Jun 2025
 Consultant: Dr. R. Demo
 
 Dx: AECOPD
 
 Course:
-Suresh Example, a 58-year-old man, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
+Farhan Mockerjee, a 58-year-old man, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
 
 Rx on discharge:
 1) Tab Wysolone 20mg 1 tab OD PC x 5/7

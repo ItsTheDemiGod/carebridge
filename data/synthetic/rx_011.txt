@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. Anil Sample (Reg. No. SYN-02616)
 Date: 09 May 2025
-Patient: Imran Mockerjee   Age/Sex: 42/F   ID: SYN-OP-07955
+Patient: Fatima Example   Age/Sex: 42/F   ID: SYN-OP-07955
 
 Dx: AGE
 

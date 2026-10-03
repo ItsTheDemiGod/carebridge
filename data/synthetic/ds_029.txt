@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Lakshmi Mockerjee   Age/Sex: 73/F   ID: SYN-IP-07034
+Patient: Priya Testwala   Age/Sex: 73/F   ID: SYN-IP-07034
 Admitted: 17 Aug 2025   Discharged: 20 Aug 2025
 Consultant: Dr. Priya Example
 
 Dx: CAP
 
 Course:
-Lakshmi Mockerjee, a 73-year-old woman, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
+Priya Testwala, a 73-year-old woman, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
 
 Rx on discharge:
 1) Tab. Clavam 625mg 1 tab BD PC x 5 days

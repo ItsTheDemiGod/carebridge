@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Fatima Sample   Age/Sex: 62/F   ID: SYN-IP-07730
+Patient: Nasreen Mockerjee   Age/Sex: 62/F   ID: SYN-IP-07730
 Admitted: 24 Aug 2025   Discharged: 28 Aug 2025
 Consultant: Dr. S. Testwala
 
 Dx: AECOPD
 
 Course:
-Fatima Sample, a 62-year-old woman, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
+Nasreen Mockerjee, a 62-year-old woman, was admitted with worsening breathlessness and cough. Nebulisation, steroids and antibiotics were given and breathing improved. Oxygen levels were stable at rest on the day of discharge.
 
 Rx on discharge:
 1) T. Prednisolone 20 mg 1-0-0 PC

@@ -1,7 +1,7 @@
 Sample City Hospital  OPD
 Dr. Anil Sample (Reg. No. SYN-56426)
 Date: 30 Jan 2025
-Patient: Deepa Demo   Age/Sex: 27/F   ID: SYN-OP-02425
+Patient: Anitha Demo   Age/Sex: 27/F   ID: SYN-OP-02425
 
 DIAGNOSIS Dengue fever (recovering)
 

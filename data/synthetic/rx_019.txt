@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. Anil Sample (Reg. No. SYN-45645)
 Date: 13 Jun 2025
-Patient: Meena Example   Age/Sex: 39/F   ID: SYN-OP-06083
+Patient: Sunita Sample   Age/Sex: 39/F   ID: SYN-OP-06083
 
 Diagnosis: Acute exacerbation of COPD
 

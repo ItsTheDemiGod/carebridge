@@ -150,7 +150,9 @@ TEMPLATES = {
 }
 RX_TEMPLATES = ["t2dm_htn", "cap", "uti", "gastro", "copd", "dengue", "cardiac"]
 
-FIRST = ["Asha", "Ravi", "Meena", "Kumar", "Lakshmi", "Arjun", "Fatima", "Suresh", "Anitha", "Imran", "Deepa", "Vikram"]
+FIRST = ["Asha", "Ravi", "Meena", "Kumar", "Lakshmi", "Arjun", "Fatima", "Suresh", "Anitha", "Imran", "Deepa", "Vikram"]  # legacy list, only keeps the main RNG stream unchanged
+FIRST_M = ["Ravi", "Kumar", "Arjun", "Suresh", "Imran", "Vikram", "Karthik", "Rahul", "Farhan", "Manoj"]
+FIRST_F = ["Asha", "Meena", "Lakshmi", "Fatima", "Anitha", "Deepa", "Priya", "Kavya", "Nasreen", "Sunita"]
 LAST = ["Sample", "Example", "Testwala", "Demo", "Mockerjee", "Fictional"]
 DOCS = ["Dr. Anil Sample", "Dr. Priya Example", "Dr. R. Demo", "Dr. S. Testwala"]
 CLUTTER = ["Page 1 of 2", "-------------------------", "Printed on: 08/03/2025 14:22", "Bill No. SYN-00231", "Ward: 3B / Bed 12",
@@ -267,7 +269,7 @@ def render_med(rng, tm, diff, is_rx):
     elif pattern and ftok == "1-0-0":
         label = "morning"
     else:
-        label = "other"
+        label = "unspecified"  # frequency stated, but no time of day or meal relation
     meal_s = None
     if meal:
         meal_s = {"ac": "before meals", "pc": "after meals"}[meal] if diff == "clean" else cs({"ac": "AC", "pc": "PC"}[meal])
@@ -327,8 +329,10 @@ def build(spec):
     rng = random.Random(f"{SEED}-{spec['id']}")
     diff, is_rx, tpl = spec["difficulty"], spec["document_type"] == "prescription", TEMPLATES[spec["template"]]
     b = Buf()
-    name = f"{rng.choice(FIRST)} {rng.choice(LAST)}"
+    rng.choice(FIRST), rng.choice(LAST)  # burn the draws the old name code made, so all other output stays identical
     age, sex = rng.randrange(24, 82), rng.choice("MF")
+    nrng = random.Random(f"{SEED}-names-{spec['id']}")  # independent stream for names
+    name = f"{nrng.choice(FIRST_M if sex == 'M' else FIRST_F)} {nrng.choice(LAST)}"
     sexw = "man" if sex == "M" else "woman"
     doc = rng.choice(DOCS)
     secs = SECTIONS[diff] if diff != "messy" else {k: rng.choice(v) for k, v in MESSY_HEADS.items()}

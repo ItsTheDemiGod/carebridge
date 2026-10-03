@@ -18,8 +18,8 @@
       "duration_text": "for 5d",
       "special_instructions": null,
       "source_span": {
-        "start": 527,
-        "end": 569,
+        "start": 521,
+        "end": 563,
         "text": "T.  Calpol  650 mg  1 tab  QID  PC  for 5d"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 injection",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": "SC",
       "source_span": {
-        "start": 572,
-        "end": 617,
+        "start": 566,
+        "end": 611,
         "text": "INJ.  ENOXAPARIN  40 MG  1 injection  OD - SC"
       }
     },
@@ -54,7 +54,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "od",
         "is_prn": false
       },
@@ -62,8 +62,8 @@
       "duration_text": "for 30d",
       "special_instructions": null,
       "source_span": {
-        "start": 620,
-        "end": 680,
+        "start": 614,
+        "end": 674,
         "text": "t. calcium carbonate + vitamin d3 500mg\n    1 tab od for 30d"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "1 capsule",
       "frequency": {
         "times_per_day": null,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 684,
-        "end": 725,
+        "start": 678,
+        "end": 719,
         "text": "Cap. D-Rise 60000IU\n    1 cap once weekly"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "2/52",
       "days_from_discharge": 14,
       "source_span": {
-        "start": 750,
-        "end": 795,
+        "start": 744,
+        "end": 789,
         "text": "f/u ortho opd 2/52 with x-ray and wound check"
       }
     }
@@ -106,32 +106,32 @@
     {
       "text": "Severe pain not relieved by medicines.",
       "source_span": {
-        "start": 955,
-        "end": 993,
+        "start": 949,
+        "end": 987,
         "text": "Severe pain not relieved by medicines."
       }
     },
     {
       "text": "Numbness, coldness or bluish colour of the toes.",
       "source_span": {
-        "start": 996,
-        "end": 1044,
+        "start": 990,
+        "end": 1038,
         "text": "Numbness, coldness or bluish colour of the toes."
       }
     },
     {
       "text": "Pus or foul smell from the wound.",
       "source_span": {
-        "start": 1047,
-        "end": 1080,
+        "start": 1041,
+        "end": 1074,
         "text": "Pus or foul smell from the wound."
       }
     },
     {
       "text": "Swelling or pain in the calf.",
       "source_span": {
-        "start": 1083,
-        "end": 1112,
+        "start": 1077,
+        "end": 1106,
         "text": "Swelling or pain in the calf."
       }
     }

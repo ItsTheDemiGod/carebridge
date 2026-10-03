@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 433,
-        "end": 463,
+        "start": 439,
+        "end": 469,
         "text": "Cap Niftran 100 mg 1 cap BD PC"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 467,
-        "end": 508,
+        "start": 473,
+        "end": 514,
         "text": "TAB CROCIN (PARACETAMOL) 500 MG 1 tab SOS"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "X 3/7",
       "special_instructions": null,
       "source_span": {
-        "start": 512,
-        "end": 543,
+        "start": 518,
+        "end": 549,
         "text": "T. MOTILIUM 10MG 1-1-1 AC X 3/7"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "in 5 days",
       "days_from_discharge": 5,
       "source_span": {
-        "start": 552,
-        "end": 593,
+        "start": 558,
+        "end": 599,
         "text": "F/U medicine OPD in 5 days with urine R/M"
       }
     }
@@ -84,24 +84,24 @@
     {
       "text": "Fever with chills or back pain.",
       "source_span": {
-        "start": 708,
-        "end": 739,
+        "start": 714,
+        "end": 745,
         "text": "Fever with chills or back pain."
       }
     },
     {
       "text": "Blood in urine.",
       "source_span": {
-        "start": 742,
-        "end": 757,
+        "start": 748,
+        "end": 763,
         "text": "Blood in urine."
       }
     },
     {
       "text": "Unable to pass urine.",
       "source_span": {
-        "start": 760,
-        "end": 781,
+        "start": 766,
+        "end": 787,
         "text": "Unable to pass urine."
       }
     }

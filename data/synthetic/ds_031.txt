@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Deepa Mockerjee   Age/Sex: 56/M   ID: SYN-IP-01668
+Patient: Manoj Fictional   Age/Sex: 56/M   ID: SYN-IP-01668
 Admitted: 25 Mar 2025   Discharged: 29 Mar 2025
 Consultant: Dr. R. Demo
 
 Diagnosis: Acute appendicitis, post appendectomy
 
 Hospital course:
-Deepa Mockerjee, a 56-year-old man, was admitted with pain in the right lower abdomen. Appendicitis was confirmed and an appendectomy was done. Recovery after surgery was uneventful and the patient is taking a normal diet.
+Manoj Fictional, a 56-year-old man, was admitted with pain in the right lower abdomen. Appendicitis was confirmed and an appendectomy was done. Recovery after surgery was uneventful and the patient is taking a normal diet.
 
 Discharge medications:
 1. Tab Cefuroxime 500 mg - 1 tablet twice daily after meals for 5 days

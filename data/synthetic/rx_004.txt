@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. Priya Example (Reg. No. SYN-12737)
 Date: 26 Jun 2025
-Patient: Imran Mockerjee   Age/Sex: 75/M   ID: SYN-OP-00190
+Patient: Vikram Testwala   Age/Sex: 75/M   ID: SYN-OP-00190
 
 Diagnosis: Acute gastroenteritis
 

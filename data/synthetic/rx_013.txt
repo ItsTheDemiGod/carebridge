@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. S. Testwala (Reg. No. SYN-40650)
 Date: 22 Jun 2025
-Patient: Meena Sample   Age/Sex: 32/M   ID: SYN-OP-05938
+Patient: Kumar Example   Age/Sex: 32/M   ID: SYN-OP-05938
 
 Diagnosis: Dengue fever, recovering
 

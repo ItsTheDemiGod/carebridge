@@ -18,8 +18,8 @@
       "duration_text": "for 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 491,
-        "end": 567,
+        "start": 483,
+        "end": 559,
         "text": "Tab Ceftum (Cefuroxime) 500 mg - 1 tablet twice daily after meals for 5 days"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": "for 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 571,
-        "end": 647,
+        "start": 563,
+        "end": 639,
         "text": "Tab Metronidazole 400 mg - 1 tablet three times daily after meals for 5 days"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "for 3 days",
       "special_instructions": null,
       "source_span": {
-        "start": 651,
-        "end": 725,
+        "start": 643,
+        "end": 717,
         "text": "Tab Paracetamol 650 mg - 1 tablet three times daily after meals for 3 days"
       }
     },
@@ -84,8 +84,8 @@
       "duration_text": "for 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 729,
-        "end": 797,
+        "start": 721,
+        "end": 789,
         "text": "Tab Pantoprazole 40 mg - 1 tablet once daily before meals for 5 days"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "after 7 days",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 812,
-        "end": 874,
+        "start": 804,
+        "end": 866,
         "text": "Please review at the surgery OPD after 7 days for wound check."
       }
     }
@@ -106,24 +106,24 @@
     {
       "text": "Fever or chills.",
       "source_span": {
-        "start": 1082,
-        "end": 1098,
+        "start": 1074,
+        "end": 1090,
         "text": "Fever or chills."
       }
     },
     {
       "text": "Redness, swelling or discharge from the wound.",
       "source_span": {
-        "start": 1101,
-        "end": 1147,
+        "start": 1093,
+        "end": 1139,
         "text": "Redness, swelling or discharge from the wound."
       }
     },
     {
       "text": "Severe abdominal pain or repeated vomiting.",
       "source_span": {
-        "start": 1150,
-        "end": 1193,
+        "start": 1142,
+        "end": 1185,
         "text": "Severe abdominal pain or repeated vomiting."
       }
     }

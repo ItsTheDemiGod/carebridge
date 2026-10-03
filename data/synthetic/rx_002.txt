@@ -1,7 +1,7 @@
 SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
 Dr. Priya Example (Reg. No. SYN-33415)
 Date: 23 Jan 2025
-Patient: Ravi Example   Age/Sex: 48/F   ID: SYN-OP-00451
+Patient: Fatima Demo   Age/Sex: 48/F   ID: SYN-OP-00451
 
 Dx: CAP
 

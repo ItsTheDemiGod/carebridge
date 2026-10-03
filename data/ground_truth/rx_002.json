@@ -18,8 +18,8 @@
       "duration_text": "x 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 171,
-        "end": 231,
+        "start": 170,
+        "end": 230,
         "text": "Tab Amoxicillin + Clavulanic acid 625mg 1 tab BD PC x 5 days"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 235,
-        "end": 271,
+        "start": 234,
+        "end": 270,
         "text": "Tab. Azee (Azithromycin) 500mg 1-0-0"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 275,
-        "end": 300,
+        "start": 274,
+        "end": 299,
         "text": "T. CALPOL 650MG 1 tab SOS"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "5 mL",
       "frequency": {
         "times_per_day": 3,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "TDS",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": "X 5D",
       "special_instructions": null,
       "source_span": {
-        "start": 304,
-        "end": 352,
+        "start": 303,
+        "end": 351,
         "text": "SYP AMBROXOL (AMBRODIL) 30 MG/5 ML 5 mL TDS X 5D"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "in 2 wk",
       "days_from_discharge": 14,
       "source_span": {
-        "start": 361,
-        "end": 401,
+        "start": 360,
+        "end": 400,
         "text": "F/U chest clinic in 2 wk with repeat CXR"
       }
     }
@@ -106,16 +106,16 @@
     {
       "text": "Fever that does not settle.",
       "source_span": {
-        "start": 494,
-        "end": 521,
+        "start": 493,
+        "end": 520,
         "text": "Fever that does not settle."
       }
     },
     {
       "text": "Worsening breathlessness or chest pain.",
       "source_span": {
-        "start": 524,
-        "end": 563,
+        "start": 523,
+        "end": 562,
         "text": "Worsening breathlessness or chest pain."
       }
     }

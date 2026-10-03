@@ -18,8 +18,8 @@
       "duration_text": "for 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 197,
-        "end": 257,
+        "start": 198,
+        "end": 258,
         "text": "Tab Paracetamol 650 mg - 1 tablet only if needed for 30 days"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": "for 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 261,
-        "end": 340,
+        "start": 262,
+        "end": 341,
         "text": "Tab Pantoprazole (Pantocid) 40 mg - 1 tablet once daily before meals for 5 days"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "for 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 344,
-        "end": 397,
+        "start": 345,
+        "end": 398,
         "text": "Tab Zofran 4 mg - 1 tablet only if needed for 30 days"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "after 7 days",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 412,
-        "end": 485,
+        "start": 413,
+        "end": 486,
         "text": "Please review at the medicine OPD after 7 days with a repeat blood count."
       }
     }

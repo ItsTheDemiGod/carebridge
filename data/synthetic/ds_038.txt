@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Vikram Fictional   Age/Sex: 70/M   ID: SYN-IP-00163
+Patient: Karthik Mockerjee   Age/Sex: 70/M   ID: SYN-IP-00163
 Admitted: 04 Aug 2025   Discharged: 06 Aug 2025
 Consultant: Dr. S. Testwala
 
 Dx: CAP
 
 Course:
-Vikram Fictional, a 70-year-old man, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
+Karthik Mockerjee, a 70-year-old man, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
 
 Rx on discharge:
 1) T. Augmentin 625mg 1 tab BD PC x 5 days

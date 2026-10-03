@@ -1,6 +1,6 @@
 SAMPLE CITY HOSPITAL
 Discharge summary (fictional)
-Patient: Kumar Testwala   Age/Sex: 64/F   ID: SYN-IP-04353
+Patient: Priya Example   Age/Sex: 64/F   ID: SYN-IP-04353
 Admitted: 19-08-2025   Discharged: 22 Aug 2025
 Consultant: Dr. Anil Sample
 
@@ -8,7 +8,7 @@ Phone: 000-000-0000
 dx: # R tibia s/p IM nailing
 
 COURSE IN HOSPITAL -
-Kumar Testwala, a 64-year-old woman, was admitted after a fall with a fracture of the right leg bone. Surgery was done to fix the bone with a nail. The wound is clean and the patient is being discharged for follow-up and walking practice.
+Priya Example, a 64-year-old woman, was admitted after a fall with a fracture of the right leg bone. Surgery was done to fix the bone with a nail. The wound is clean and the patient is being discharged for follow-up and walking practice.
 
 Page 1 of 2
 TREATMENT ON DISCHARGE

@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Meena Mockerjee   Age/Sex: 33/M   ID: SYN-IP-07296
+Patient: Suresh Testwala   Age/Sex: 33/M   ID: SYN-IP-07296
 Admitted: 23 Apr 2025   Discharged: 29 Apr 2025
 Consultant: Dr. Priya Example
 
 Dx: UTI
 
 Course:
-Meena Mockerjee, a 33-year-old man, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
+Suresh Testwala, a 33-year-old man, was admitted with burning while passing urine and fever. Urine tests showed an infection and treatment was started. Symptoms improved and the patient is being discharged on oral medicines.
 
 Rx on discharge:
 1) Cap Niftran 100 mg 1-0-1 PC x 5 days

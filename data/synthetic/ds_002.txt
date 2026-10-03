@@ -1,13 +1,13 @@
 SAMPLE CITY HOSPITAL
 DISCHARGE SUMMARY
-Patient: Lakshmi Fictional   Age/Sex: 70/M   ID: SYN-IP-05426
+Patient: Manoj Sample   Age/Sex: 70/M   ID: SYN-IP-05426
 Admitted: 28 Jan 2025   Discharged: 04 Feb 2025
 Consultant: Dr. Priya Example
 
 Dx: CAP
 
 Course:
-Lakshmi Fictional, a 70-year-old man, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
+Manoj Sample, a 70-year-old man, was admitted with fever, cough and breathlessness. A chest X-ray showed a lung infection and treatment was started with antibiotics. Fever settled and breathing improved, and extra oxygen was no longer needed at discharge.
 
 Rx on discharge:
 1) Tab. Clavam (Amoxicillin + Clavulanic acid) 625mg 1 tab BD PC x 5d

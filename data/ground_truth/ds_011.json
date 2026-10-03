@@ -18,8 +18,8 @@
       "duration_text": "x 5/7",
       "special_instructions": null,
       "source_span": {
-        "start": 467,
-        "end": 505,
+        "start": 473,
+        "end": 511,
         "text": "Tab. Augmentin 625mg 1 tab BD PC x 5/7"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "OD",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 509,
-        "end": 539,
+        "start": 515,
+        "end": 545,
         "text": "T. Azithromycin 500mg 1 tab OD"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 543,
-        "end": 569,
+        "start": 549,
+        "end": 575,
         "text": "Tab Crocin 650mg 1 tab SOS"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "5 mL",
       "frequency": {
         "times_per_day": 3,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "TDS",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": "X 5D",
       "special_instructions": null,
       "source_span": {
-        "start": 573,
-        "end": 610,
+        "start": 579,
+        "end": 616,
         "text": "SYP AMBROXOL 30 MG/5 ML 5 mL TDS X 5D"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "in 7 days",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 619,
-        "end": 661,
+        "start": 625,
+        "end": 667,
         "text": "F/U chest clinic in 7 days with repeat CXR"
       }
     }
@@ -106,24 +106,24 @@
     {
       "text": "Fever that does not settle.",
       "source_span": {
-        "start": 825,
-        "end": 852,
+        "start": 831,
+        "end": 858,
         "text": "Fever that does not settle."
       }
     },
     {
       "text": "Worsening breathlessness or chest pain.",
       "source_span": {
-        "start": 855,
-        "end": 894,
+        "start": 861,
+        "end": 900,
         "text": "Worsening breathlessness or chest pain."
       }
     },
     {
       "text": "Coughing up blood.",
       "source_span": {
-        "start": 897,
-        "end": 915,
+        "start": 903,
+        "end": 921,
         "text": "Coughing up blood."
       }
     }

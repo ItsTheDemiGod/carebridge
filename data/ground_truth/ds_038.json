@@ -18,8 +18,8 @@
       "duration_text": "x 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 475,
-        "end": 514,
+        "start": 477,
+        "end": 516,
         "text": "T. Augmentin 625mg 1 tab BD PC x 5 days"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 518,
-        "end": 546,
+        "start": 520,
+        "end": 548,
         "text": "T. Azithromycin 500 mg 1-0-0"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 550,
-        "end": 576,
+        "start": 552,
+        "end": 578,
         "text": "T. Crocin 650 mg 1 tab SOS"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "5 mL",
       "frequency": {
         "times_per_day": 3,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "TDS",
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 580,
-        "end": 612,
+        "start": 582,
+        "end": 614,
         "text": "Syp Ambroxol 30 mg/5 mL 5 mL TDS"
       }
     }
@@ -96,8 +96,8 @@
       "date_text": "in 7 days",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 621,
-        "end": 663,
+        "start": 623,
+        "end": 665,
         "text": "F/U chest clinic in 7 days with repeat CXR"
       }
     }
@@ -106,24 +106,24 @@
     {
       "text": "Fever that does not settle.",
       "source_span": {
-        "start": 827,
-        "end": 854,
+        "start": 829,
+        "end": 856,
         "text": "Fever that does not settle."
       }
     },
     {
       "text": "Worsening breathlessness or chest pain.",
       "source_span": {
-        "start": 857,
-        "end": 896,
+        "start": 859,
+        "end": 898,
         "text": "Worsening breathlessness or chest pain."
       }
     },
     {
       "text": "Coughing up blood.",
       "source_span": {
-        "start": 899,
-        "end": 917,
+        "start": 901,
+        "end": 919,
         "text": "Coughing up blood."
       }
     }

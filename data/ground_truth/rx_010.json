@@ -18,8 +18,8 @@
       "duration_text": "for 5 days",
       "special_instructions": null,
       "source_span": {
-        "start": 194,
-        "end": 266,
+        "start": 198,
+        "end": 270,
         "text": "Cap Nitrofurantoin 100 mg - 1 capsule twice daily after meals for 5 days"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": "for 30 days",
       "special_instructions": null,
       "source_span": {
-        "start": 270,
-        "end": 330,
+        "start": 274,
+        "end": 334,
         "text": "Tab Paracetamol 500 mg - 1 tablet only if needed for 30 days"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": "for 3 days",
       "special_instructions": null,
       "source_span": {
-        "start": 334,
-        "end": 408,
+        "start": 338,
+        "end": 412,
         "text": "Tab Domperidone 10 mg - 1 tablet three times daily before meals for 3 days"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "after 7 days",
       "days_from_discharge": 7,
       "source_span": {
-        "start": 423,
-        "end": 495,
+        "start": 427,
+        "end": 499,
         "text": "Please review at the medicine OPD after 7 days with a repeat urine test."
       }
     }

@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 460,
-        "end": 505,
+        "start": 462,
+        "end": 507,
         "text": "CAP REDOTIL (RACECADOTRIL) 100MG 1 cap TDS AC"
       }
     },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 510,
-        "end": 534,
+        "start": 512,
+        "end": 536,
         "text": "Tab Ondem 4 mg 1 tab SOS"
       }
     },
@@ -54,7 +54,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 2,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "BD",
         "is_prn": false
       },
@@ -62,8 +62,8 @@
       "duration_text": "x3d",
       "special_instructions": null,
       "source_span": {
-        "start": 538,
-        "end": 566,
+        "start": 540,
+        "end": 568,
         "text": "T. Cifran 500mg 1 tab BD x3d"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "5/7",
       "days_from_discharge": 5,
       "source_span": {
-        "start": 574,
-        "end": 634,
+        "start": 576,
+        "end": 636,
         "text": "f/u medicine opd 5/7 with stool r/m if loose stools continue"
       }
     }
@@ -84,24 +84,24 @@
     {
       "text": "Vomiting that does not stop.",
       "source_span": {
-        "start": 832,
-        "end": 860,
+        "start": 834,
+        "end": 862,
         "text": "Vomiting that does not stop."
       }
     },
     {
       "text": "Blood in stool.",
       "source_span": {
-        "start": 863,
-        "end": 878,
+        "start": 865,
+        "end": 880,
         "text": "Blood in stool."
       }
     },
     {
       "text": "Very little urine, dry mouth or extreme drowsiness.",
       "source_span": {
-        "start": 881,
-        "end": 932,
+        "start": 883,
+        "end": 934,
         "text": "Very little urine, dry mouth or extreme drowsiness."
       }
     }

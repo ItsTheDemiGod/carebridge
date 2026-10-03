@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 501,
-        "end": 552,
+        "start": 503,
+        "end": 554,
         "text": "Tab Disprin 75 mg - 1 tablet once daily after meals"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": null,
       "special_instructions": "Do not stop without asking your cardiologist.",
       "source_span": {
-        "start": 556,
-        "end": 646,
+        "start": 558,
+        "end": 648,
         "text": "Tab Clopidogrel 75 mg - 1 tablet once daily. Do not stop without asking your cardiologist."
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 650,
-        "end": 704,
+        "start": 652,
+        "end": 706,
         "text": "Tab Lipitor (Atorvastatin) 40 mg - 1 tablet at bedtime"
       }
     },
@@ -76,7 +76,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -84,8 +84,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 708,
-        "end": 760,
+        "start": 710,
+        "end": 762,
         "text": "Tab Metoprolol succinate 25 mg - 1 tablet once daily"
       }
     },
@@ -98,7 +98,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": null,
         "is_prn": false
       },
@@ -106,8 +106,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 764,
-        "end": 805,
+        "start": 766,
+        "end": 807,
         "text": "Tab Ramipril 2.5 mg - 1 tablet once daily"
       }
     },
@@ -128,8 +128,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 809,
-        "end": 875,
+        "start": 811,
+        "end": 877,
         "text": "Tab Pantoprazole (Pantop) 40 mg - 1 tablet once daily before meals"
       }
     }
@@ -140,8 +140,8 @@
       "date_text": "after 14 days",
       "days_from_discharge": 14,
       "source_span": {
-        "start": 890,
-        "end": 958,
+        "start": 892,
+        "end": 960,
         "text": "Please review at the cardiology OPD after 14 days with a repeat ECG."
       }
     },
@@ -150,8 +150,8 @@
       "date_text": "after 30 days",
       "days_from_discharge": 30,
       "source_span": {
-        "start": 961,
-        "end": 1031,
+        "start": 963,
+        "end": 1033,
         "text": "Please get a lipid profile and liver function test done after 30 days."
       }
     }
@@ -160,32 +160,32 @@
     {
       "text": "Chest pain not relieved by rest.",
       "source_span": {
-        "start": 1265,
-        "end": 1297,
+        "start": 1267,
+        "end": 1299,
         "text": "Chest pain not relieved by rest."
       }
     },
     {
       "text": "Breathlessness or cold sweats.",
       "source_span": {
-        "start": 1300,
-        "end": 1330,
+        "start": 1302,
+        "end": 1332,
         "text": "Breathlessness or cold sweats."
       }
     },
     {
       "text": "Fainting.",
       "source_span": {
-        "start": 1333,
-        "end": 1342,
+        "start": 1335,
+        "end": 1344,
         "text": "Fainting."
       }
     },
     {
       "text": "Black stools or unusual bleeding.",
       "source_span": {
-        "start": 1345,
-        "end": 1378,
+        "start": 1347,
+        "end": 1380,
         "text": "Black stools or unusual bleeding."
       }
     }

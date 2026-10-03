@@ -18,8 +18,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 516,
-        "end": 544,
+        "start": 512,
+        "end": 540,
         "text": "Tab. Calpol 650 mg 1 tab SOS"
       }
     },
@@ -32,7 +32,7 @@
       "dose": "1 tablet",
       "frequency": {
         "times_per_day": 1,
-        "timing_label": "other",
+        "timing_label": "unspecified",
         "original_abbreviation": "od",
         "is_prn": false
       },
@@ -40,8 +40,8 @@
       "duration_text": "x 5/7",
       "special_instructions": null,
       "source_span": {
-        "start": 548,
-        "end": 592,
+        "start": 544,
+        "end": 588,
         "text": "t.  pantoprazole  40 mg\n    1 tab  od  x 5/7"
       }
     },
@@ -62,8 +62,8 @@
       "duration_text": null,
       "special_instructions": null,
       "source_span": {
-        "start": 596,
-        "end": 618,
+        "start": 592,
+        "end": 614,
         "text": "T. Ondem 4mg 1 tab SOS"
       }
     }
@@ -74,8 +74,8 @@
       "date_text": "3/7",
       "days_from_discharge": 3,
       "source_span": {
-        "start": 640,
-        "end": 676,
+        "start": 636,
+        "end": 672,
         "text": "f/u medicine opd 3/7 with repeat cbc"
       }
     }
@@ -84,32 +84,32 @@
     {
       "text": "Bleeding from gums or nose.",
       "source_span": {
-        "start": 869,
-        "end": 896,
+        "start": 865,
+        "end": 892,
         "text": "Bleeding from gums or nose."
       }
     },
     {
       "text": "Black stools or vomiting blood.",
       "source_span": {
-        "start": 899,
-        "end": 930,
+        "start": 895,
+        "end": 926,
         "text": "Black stools or vomiting blood."
       }
     },
     {
       "text": "Severe abdominal pain or repeated vomiting.",
       "source_span": {
-        "start": 933,
-        "end": 976,
+        "start": 929,
+        "end": 972,
         "text": "Severe abdominal pain or repeated vomiting."
       }
     },
     {
       "text": "Extreme drowsiness or restlessness.",
       "source_span": {
-        "start": 979,
-        "end": 1014,
+        "start": 975,
+        "end": 1010,
         "text": "Extreme drowsiness or restlessness."
       }
     }
