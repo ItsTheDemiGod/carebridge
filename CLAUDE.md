@@ -93,8 +93,8 @@ Frontend (from `frontend/`):
 - Build: `npm run build`
 
 Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`):
-- Render: `python dataender_documents.py` (about 4 minutes; 240 PNG + 120 PDF)
+- Render: `python data\render_documents.py` (about 4 minutes; 240 PNG + 120 PDF)
 - Smoke: `python backend\scripts\smoke_test_gemini.py`; one doc: `python backend\scripts\extract.py ds_006 --condition clean`
 - Evaluate (dev): `python -m eval.evaluate --split dev --conditions text,clean,scan,photo,poor [--limit N] [--run-id NAME]`; oracle (no API): add `--oracle`
 - Tests: `cd backend; .venv\Scripts\python -m pytest` (live API tests: `-m live`)
-- DDInter: `python dataeferenceetch_ddinter.py` then `python dataeference\ddinter_coverage.py`
+- DDInter: `python data\reference\fetch_ddinter.py` then `python data\reference\ddinter_coverage.py`

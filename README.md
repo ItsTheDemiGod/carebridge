@@ -28,7 +28,7 @@ Dataset (from repo root):
 
 Phase 2 (extraction with Google Gemini; only synthetic documents are ever sent):
 
-    backend\.venv\Scripts\python dataender_documents.py
+    backend\.venv\Scripts\python data\render_documents.py
     backend\.venv\Scripts\python -m eval.evaluate --split dev
 
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
