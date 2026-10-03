@@ -19,3 +19,9 @@ Thumbs.db
 desktop.ini
 .idea/
 .vscode/
+
+# Phase 2 generated
+data/rendered/
+data/cache/
+eval/runs/
+data/reference/ddinter/raw/

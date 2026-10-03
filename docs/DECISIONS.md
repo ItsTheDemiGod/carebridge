@@ -6,7 +6,7 @@
 - **Python 3.12 venv**: 3.11 not installed locally; 3.12 is compatible with the stack.
 - **pydantic-settings for config**: typed env-var loading; API key optional until LLM phases.
 - **pytest.ini sets `pythonpath = .`**: lets `pytest` import `app` from `backend/`.
-- **Claude API for LLM calls**: required for explanation and faithfulness verification.
+- **Gemini API for LLM calls** (replaced the earlier Claude API plan in Phase 2): free tier suits a student project. See the Phase 2 entries below.
 - **Storage (Postgres vs SQLite) deferred to Phase 5**: not needed until persistence exists.
 - **GSAP and tsParticles deferred**: installed in Phase 6 when design work begins, per instruction.
 - **Spans recorded at build time**: the generator's text buffer records offsets as it appends strings, then asserts text[start:end] equals the span. Never typed by hand; the validator re-checks.
@@ -16,3 +16,15 @@
 - **Prescriptions give chronic medicines a 30-day duration; discharge summaries leave them open-ended**: matches common practice and adds variety.
 - **Interaction data: DDInter + own formulary mapping** (see docs/DRUG_DATABASE_RECOMMENDATION.md). RxNav interaction API was discontinued 2 Jan 2024; DrugBank academic downloads are paused.
 - **Interaction checks are table lookups, never LLM memory**; an unlisted pair means "not checked", not "safe".
+
+## Phase 2
+- **Model: `gemini-3.8-flash`** (checked 2026-10-04). Reasons: Flash-class, listed as Stable (not preview), accepts text/image/PDF, supports structured output, free tier for input and output. Sources: https://ai.google.dev/gemini-api/docs/models (3.8, 3.7, 3.6, 3.5 Flash all Stable; 3 Flash is preview; 2.5 Flash is limited access), https://ai.google.dev/gemini-api/docs/pricing (3.8 Flash: free tier yes; paid $0.75 / $3.75 per 1M tokens in/out until 2026-12-31).
+- **Free-tier limits NOT published in the docs**: https://ai.google.dev/gemini-api/docs/rate-limits says limits depend on usage tier and "can be viewed in Google AI Studio" (https://aistudio.google.com/rate-limit). The numbers (RPM, TPM, RPD) therefore could not be recorded here; check them in AI Studio. Default `GEMINI_MAX_REQUESTS_PER_MINUTE=5` is a conservative guess, not a documented limit.
+- **Privacy**: free tier may let Google use content for product improvement and human review, so only synthetic documents are ever sent. Enforced in code by `app/services/guards.py` (path must be inside data/synthetic or data/rendered), unit-tested.
+- **Test-split guard**: any extraction or evaluation on the test split needs `--final-test-run` and is appended to `eval/test_runs.log`.
+- **Extraction output schema** (`extraction_output.py`): offsets replaced by `source_quote`, plus `confidence` and `unreadable_parts`. Gemini accepted the Pydantic schema as-is via `response_schema`; no simplification was needed.
+- **Own retry/backoff instead of the SDK's**: needed to honour RetryInfo hints, enforce requests per minute, and stop early on daily-quota errors (waiting a minute cannot fix those).
+- **Keep a reference to the genai Client**: a temporary client is closed when garbage-collected and the call fails with "client has been closed".
+- **`unspecified` timing label**: used when a frequency is stated but no time of day or meal relation is given; `other` is kept for genuinely unusual instructions (the generator no longer emits it).
+- **Patient names drawn from an independent RNG** (seeded per document id); the old name draws are still consumed from the main RNG so every other part of every document is unchanged (tested against the Phase 1 commit).
+- **Renders**: PNG outputs for all conditions (JPEG compression applied in memory, then saved as PNG); PDFs for clean and scan use fixed creation dates so files are byte-identical across runs.
