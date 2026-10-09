@@ -61,6 +61,15 @@ def test_success_and_payload_options():
     assert req["format"]["type"] == "object" and req["messages"][0]["role"] == "system" and "images" not in req["messages"][1]
 
 
+def test_schema_sent_has_all_properties_required():
+    gen(provider(body()), [Part("text", "d")])
+    fmt = seen[0]["format"]
+    assert set(fmt["required"]) == set(fmt["properties"]) and "medications" in fmt["required"]
+    med = fmt["$defs"]["OutMedication"]
+    assert set(med["required"]) == set(med["properties"])
+    assert "medications" not in ExtractionOutput.model_json_schema()["required"]  # our own schema is untouched
+
+
 def test_image_payload_is_base64_and_downscaled(monkeypatch):
     import base64
 
@@ -111,8 +120,10 @@ def test_context_truncated():
 
 def test_image_not_received():
     with pytest.raises(LLMError) as e:
-        gen(provider(body(prompt=700)), [Part("image", png(), "image/png")])
+        gen(provider(body(prompt=1300)), [Part("image", png(), "image/png")])
     assert e.value.reason == "image_not_received"
+    with pytest.raises(LLMError, match="image_not_received"):  # image bytes removed
+        gen(provider(body()), [Part("image", b"", "image/png")])
     gen(provider(body(prompt=700)), [Part("text", "d")])  # a text-only call is not subject to the image check
 
 

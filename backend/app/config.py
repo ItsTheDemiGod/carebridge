@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     ollama_keep_alive: str = "30m"
     ollama_max_image_side: int = 1280
     ollama_max_retries: int = 2
-    ollama_min_image_prompt_tokens: int = 1200  # below this an image call is treated as image_not_received (calibrated in Phase 2 step 4)
+    ollama_min_image_prompt_tokens: int = 1500  # text-only prompt measured at 1168 tokens; real image calls 2200+
     cors_origin: str = "http://localhost:5173"
 
 

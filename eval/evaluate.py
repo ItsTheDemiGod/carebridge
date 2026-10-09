@@ -20,6 +20,7 @@ from app.prompts import PROMPT_VERSION  # noqa: E402
 from app.schemas.extraction import ExtractedDocument  # noqa: E402
 from app.schemas.extraction_output import from_ground_truth  # noqa: E402
 from app.services.guards import check_split  # noqa: E402
+from eval.name_sanity import THRESHOLD, check_names, formulary_names  # noqa: E402
 from eval.matching import MED_FIELDS, score_document, summarize  # noqa: E402
 
 CONDITIONS = ["text", "clean", "scan", "photo", "poor"]
@@ -59,6 +60,9 @@ def run(args):
     groups = {"overall": defaultdict(Counter), "condition": defaultdict(Counter), "difficulty": defaultdict(Counter), "split": defaultdict(Counter)}
     meta = Counter()
     latencies, incomplete = [], False
+    attempted, skips, lat = Counter(), defaultdict(Counter), defaultdict(list)  # per condition
+    name_tot, name_bad, bad_examples = Counter(), Counter(), []
+    fnames = formulary_names()
     for cond in conds:
         for d in docs:
             gt = from_ground_truth(ExtractedDocument.model_validate_json((REPO / "data/ground_truth" / f"{d['id']}.json").read_text(encoding="utf-8")))
@@ -66,12 +70,14 @@ def run(args):
             if args.oracle:
                 pred, res = gt, None
             else:
+                attempted[cond] += 1
                 res = extract_document(doc_path(d["id"], cond), prompt_version=args.prompt_version)
                 if res.quota_exhausted:
                     incomplete = True
                     break
                 pred = res.output
-                if res.skipped:  # infrastructure failure (503...): not scored, rerun resumes from the cache
+                if res.skipped:  # provider/model failure (503, context_truncated, image_not_received...): not scored, listed in the report
+                    skips[cond][res.error] += 1
                     meta["api_failed"] += 1
                     meta["api_calls"] += res.api_calls
                     continue
@@ -81,14 +87,25 @@ def run(args):
                 meta["tokens"] += res.usage.get("total_tokens", 0)
                 if not res.cached:
                     latencies.append(res.latency_s)
+                lat[cond].append(res.latency_s)  # cached runs keep the original latency
+                for n, f, r in check_names(pred, fnames) if pred else ():
+                    name_tot[cond] += 1
+                    if r < THRESHOLD:
+                        name_bad[cond] += 1
+                        bad_examples.append((cond, d["id"], n, f, round(r, 2)))
             c = score_document(gt, pred, text)
             for dim, key in (("overall", "all"), ("condition", cond), ("difficulty", d["difficulty"]), ("split", d["split"])):
                 groups[dim][key] += c
         if incomplete:
             break
+    pct = lambda xs, q: round(sorted(xs)[min(len(xs) - 1, int(q * len(xs)))], 1) if xs else None  # noqa: E731
+    coverage = {c: dict(attempted=attempted[c], scored=groups["condition"][c]["docs"], skipped=sum(skips[c].values()), skip_reasons=dict(skips[c]),
+                        latency_median_s=pct(lat[c], 0.5), latency_p95_s=pct(lat[c], 0.95)) for c in conds}
+    sanity = {c: dict(names=name_tot[c], unmatched=name_bad[c], unmatched_rate=round(name_bad[c] / name_tot[c], 3) if name_tot[c] else None) for c in conds}
     result = dict(run_id=run_id, split=args.split, conditions=conds, prompt_version=args.prompt_version, oracle=args.oracle, incomplete=incomplete,
                   api_calls=meta["api_calls"], api_failed_not_scored=meta["api_failed"], cache_hits=meta["cached"], total_tokens=meta["tokens"],
                   mean_latency_s=round(sum(latencies) / len(latencies), 2) if latencies else None,
+                  coverage=coverage, drug_name_sanity=dict(threshold=THRESHOLD, by_condition=sanity, examples=bad_examples[:10]),
                   metrics={dim: {k: summarize(v) for k, v in vals.items()} for dim, vals in groups.items()})
     out = REPO / "eval" / "results" / run_id
     out.mkdir(parents=True, exist_ok=True)
@@ -96,7 +113,12 @@ def run(args):
     head = (f"# Run {run_id}\n\nsplit={args.split} prompt={args.prompt_version} oracle={args.oracle} docs={len(docs)} api_calls={meta['api_calls']} api_failed_not_scored={meta['api_failed']} "
             f"cache_hits={meta['cached']} tokens={meta['tokens']} mean_latency_s={result['mean_latency_s']}"
             + ("\n\n**INCOMPLETE: daily quota exhausted. Re-run the same command to resume from the cache.**" if incomplete else "") + "\n\n")
-    (out / "metrics.md").write_text(head + tables(groups) + "\n", encoding="utf-8", newline="\n")
+    cov = ["### Coverage (documents attempted / scored / SKIPPED)\n", "| condition | attempted | scored | skipped | skip reasons | latency median s | latency p95 s |", "|---|---|---|---|---|---|---|"]
+    cov += [f"| {c} | {v['attempted']} | {v['scored']} | {v['skipped']} | {v['skip_reasons'] or '-'} | {v['latency_median_s']} | {v['latency_p95_s']} |" for c, v in coverage.items()]
+    san = [f"\n### Drug-name sanity (predicted names with no formulary match >= {THRESHOLD})\n", "| condition | names | unmatched | rate |", "|---|---|---|---|"]
+    san += [f"| {c} | {v['names']} | {v['unmatched']} | {v['unmatched_rate']} |" for c, v in sanity.items()]
+    san += ["", "Examples (condition, doc, predicted, closest formulary, ratio):", *[f"- {e}" for e in bad_examples[:10]]]
+    (out / "metrics.md").write_text(head + "\n".join(cov + san) + "\n\n" + tables(groups) + "\n", encoding="utf-8", newline="\n")
     return result, out
 
 

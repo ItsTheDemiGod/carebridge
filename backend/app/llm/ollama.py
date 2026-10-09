@@ -34,6 +34,17 @@ def downscale(data: bytes, max_side: int) -> bytes:
     return buf.getvalue()
 
 
+def require_all(node):
+    """Copy of a JSON schema with every object property required. Pydantic marks defaulted fields optional, and the
+    grammar then lets a small model stop early (empty medication list). Validation on our side stays unchanged."""
+    if isinstance(node, dict):
+        out = {k: require_all(v) for k, v in node.items()}
+        if isinstance(out.get("properties"), dict):
+            out["required"] = list(out["properties"])
+        return out
+    return [require_all(v) for v in node] if isinstance(node, list) else node
+
+
 class OllamaProvider:
     name = "ollama"
 
@@ -47,18 +58,21 @@ class OllamaProvider:
 
     def cache_tag(self) -> str:
         s = settings
-        return f"ollama|{s.ollama_model}|ctx{s.ollama_num_ctx}|side{s.ollama_max_image_side}|seed{SEED}"
+        return f"ollama|{s.ollama_model}|ctx{s.ollama_num_ctx}|side{s.ollama_max_image_side}|seed{SEED}|wire-required-all"
 
     def _payload(self, system, parts, schema, temperature):
         text = "\n\n".join(p.data for p in parts if p.kind == "text")
-        images = [base64.b64encode(downscale(p.data, settings.ollama_max_image_side)).decode() for p in parts if p.kind == "image"]
+        try:
+            images = [base64.b64encode(downscale(p.data, settings.ollama_max_image_side)).decode() for p in parts if p.kind == "image"]
+        except (OSError, ValueError):  # empty or undecodable image bytes: never let the model answer without the image
+            raise LLMError("image_not_received", calls=0)
         user = {"role": "user", "content": text or "Extract the data from the attached document image.", **({"images": images} if images else {})}
         return {
             "model": self.model,
             "messages": [{"role": "system", "content": system}, user],
             "stream": False,
             "think": False,  # reasoning output off; only message.content is parsed
-            "format": schema.model_json_schema(),
+            "format": require_all(schema.model_json_schema()),
             "keep_alive": settings.ollama_keep_alive,
             "options": {"temperature": temperature, "seed": SEED, "num_ctx": settings.ollama_num_ctx, "num_predict": settings.ollama_num_predict},
         }, bool(images)
