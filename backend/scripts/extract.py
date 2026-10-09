@@ -18,7 +18,7 @@ split = next(d["split"] for d in json.loads((REPO / "data/manifest.json").read_t
 check_split(split, a.final_test_run, f"extract {a.doc_id} {a.condition}")
 path = REPO / "data" / ("synthetic" if a.condition == "text" else f"rendered/{a.condition}") / f"{a.doc_id}.{'txt' if a.condition == 'text' else 'png'}"
 r = extract_document(path)
-print(f"ok={r.ok} cached={r.cached} calls={r.api_calls} latency={r.latency_s:.1f}s tokens={r.usage.get('total_token_count')} error={r.error}")
+print(f"ok={r.ok} cached={r.cached} calls={r.api_calls} latency={r.latency_s:.1f}s prompt_tokens={r.usage.get('prompt_tokens')} gen_tokens={r.usage.get('output_tokens')} error={r.error}")
 if r.output:
     for m in r.output.medications:
         f = m.frequency

@@ -6,6 +6,8 @@ from google.genai import errors
 
 from app.schemas.extraction import ExtractedDocument
 from app.schemas.extraction_output import from_ground_truth
+from app.llm import gemini as gm
+from app.llm.gemini import GeminiProvider
 from app.services import extraction as ex
 from app.services.guards import REPO, NotSyntheticError, assert_synthetic, check_split
 
@@ -29,13 +31,13 @@ class FakeClient:
 
 @pytest.fixture(autouse=True)
 def fast(monkeypatch):
-    monkeypatch.setattr(ex, "_sleep", lambda s: sleeps.append(s))
-    ex._calls.clear()
+    monkeypatch.setattr(gm, "_sleep", lambda s: sleeps.append(s))
+    gm._calls.clear()
     sleeps.clear()
 
 
 def run(client, tmp_path, **kw):
-    return ex.extract_document(DOC, client=client, cache_dir=tmp_path, **kw)
+    return ex.extract_document(DOC, provider=GeminiProvider(client), cache_dir=tmp_path, **kw)
 
 
 def err(code, retry=None, message="x"):
@@ -45,7 +47,7 @@ def err(code, retry=None, message="x"):
 
 def test_success_records_usage(tmp_path):
     r = run(FakeClient(GOOD), tmp_path)
-    assert r.ok and r.usage["total_token_count"] == 15 and r.api_calls == 1 and r.latency_s >= 0
+    assert r.ok and r.usage["total_tokens"] == 15 and r.api_calls == 1 and r.latency_s >= 0
 
 
 def test_validation_failure_retries_once_then_fails(tmp_path):
@@ -63,7 +65,7 @@ def test_rate_limit_backoff_honours_hint(tmp_path):
 
 
 def test_gives_up_after_max_retries(tmp_path, monkeypatch):
-    monkeypatch.setattr(ex.settings, "gemini_max_retries", 2)
+    monkeypatch.setattr(gm.settings, "gemini_max_retries", 2)
     c = FakeClient(err(503), err(503), err(503))
     r = run(c, tmp_path)
     assert not r.ok and c.calls == 3 and "503" in r.error
@@ -83,12 +85,12 @@ def test_cache_hit_costs_no_calls(tmp_path):
 
 
 def test_throttle_waits_when_over_limit(monkeypatch):
-    monkeypatch.setattr(ex.settings, "gemini_max_requests_per_minute", 2)
+    monkeypatch.setattr(gm.settings, "gemini_max_requests_per_minute", 2)
     t = [0.0]
-    monkeypatch.setattr(ex, "_clock", lambda: t[0])
-    monkeypatch.setattr(ex, "_sleep", lambda s: t.__setitem__(0, t[0] + s))
+    monkeypatch.setattr(gm, "_clock", lambda: t[0])
+    monkeypatch.setattr(gm, "_sleep", lambda s: t.__setitem__(0, t[0] + s))
     for _ in range(3):
-        ex._throttle()
+        gm._throttle()
     assert t[0] >= 60
 
 
@@ -98,7 +100,7 @@ def test_guard_refuses_non_synthetic(tmp_path):
     with pytest.raises(NotSyntheticError):
         assert_synthetic(f)
     with pytest.raises(NotSyntheticError):
-        ex.extract_document(f, client=FakeClient())
+        ex.extract_document(f, provider=GeminiProvider(FakeClient()))
     with pytest.raises(NotSyntheticError):
         assert_synthetic(REPO / "data" / "synthetic" / ".." / ".." / "README.md")
     assert assert_synthetic(DOC) == DOC
@@ -116,5 +118,5 @@ def test_test_split_guard(tmp_path):
 
 @pytest.mark.live
 def test_live_text_extraction(tmp_path):
-    r = ex.extract_document(DOC, cache_dir=tmp_path)
+    r = ex.extract_document(DOC, provider=GeminiProvider(), cache_dir=tmp_path)
     assert r.ok and r.output.medications

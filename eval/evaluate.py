@@ -71,14 +71,14 @@ def run(args):
                     incomplete = True
                     break
                 pred = res.output
-                if not res.ok and res.error.startswith("api_error"):  # infrastructure failure (503...): not scored, rerun resumes from the cache
+                if res.skipped:  # infrastructure failure (503...): not scored, rerun resumes from the cache
                     meta["api_failed"] += 1
                     meta["api_calls"] += res.api_calls
                     continue
                 (raw_dir / f"{cond}_{d['id']}.json").write_text(res.raw_text or json.dumps({"error": res.error}), encoding="utf-8")
                 meta["api_calls"] += res.api_calls
                 meta["cached"] += res.cached
-                meta["tokens"] += res.usage.get("total_token_count", 0)
+                meta["tokens"] += res.usage.get("total_tokens", 0)
                 if not res.cached:
                     latencies.append(res.latency_s)
             c = score_document(gt, pred, text)
