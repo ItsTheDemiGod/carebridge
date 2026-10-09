@@ -41,3 +41,6 @@
 - **Ollama safety checks**: base URL must be localhost/127.0.0.1; `context_truncated` if `done_reason=length` or prompt+generated tokens reach `num_ctx`; `image_not_received` if an image call has fewer than `OLLAMA_MIN_IMAGE_PROMPT_TOKENS` (1200, to be calibrated) prompt tokens. Cached prompt tokens (`prompt_eval_cached_count`) are added to the prompt count. PDFs return `unsupported_input`.
 - **Cache key** = file bytes + provider tag (provider, model, num_ctx, image side cap, seed) + prompt version + schema version.
 - **Schema sent to Ollama**: unmodified Pydantic JSON schema so far; will be simplified only if Step 4 shows Ollama mishandles it.
+- **Wire schema for Ollama**: the JSON schema sent in `format` is the Pydantic schema with every object property marked `required` (`require_all`). Reason: with Pydantic's default (only `document_type` required) the model answered with no medications. `$defs`/`$ref`, enums and nullable `anyOf` were accepted as-is. Pydantic validation on our side is unchanged. Included in the cache tag (`wire-required-all`).
+- **Prompt choice**: v1 kept as default after v2/v3 (see docs/PROMPT_LOG.md).
+- **No Gemini baseline**: the earlier Gemini dev run was incomplete; comparison would need a quota-limited rerun.

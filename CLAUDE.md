@@ -7,7 +7,7 @@ End goal: a professional web app first; a mobile app only if time allows. Colleg
 ## Tech stack
 - Frontend: React + Vite + TypeScript, Tailwind CSS, Framer Motion, GSAP, tsParticles
 - Backend: FastAPI, Python 3.12, pytest
-- LLM: Google Gemini API (`google-genai`), model `gemini-3.8-flash` (GEMINI_API_KEY, GEMINI_MODEL in backend/.env)
+- LLM: local-first. Default provider Ollama (`qwen3-vl:8b-instruct`, called with httpx on localhost). Gemini (`google-genai`, `gemini-3.8-flash`, GEMINI_API_KEY in backend/.env) is an optional comparison provider only; its free tier is quota-limited (about 20 requests/day), so do not rely on it.
 - OCR: Tesseract or PaddleOCR
 - Storage: PostgreSQL or SQLite (decided in Phase 5)
 - Currently installed (Phase 0): react-router-dom, framer-motion, Tailwind v4 (@tailwindcss/vite). GSAP and tsParticles are NOT installed yet.
@@ -22,8 +22,10 @@ End goal: a professional web app first; a mobile app only if time allows. Colleg
 - backend/app/schemas/extraction.py : Pydantic schema (+ extraction.schema.json)
 - docs/DRUG_DATABASE_RECOMMENDATION.md : interaction database choice (DDInter, pending approval)
 - eval/ : evaluate.py, matching.py, results/<run_id>/metrics.{json,md} (committed), runs/ (raw outputs, gitignored), test_runs.log
-- backend/app/{prompts,services}/ : extraction_v1.txt, extraction.py (Gemini service + cache), guards.py (privacy + test-split guards)
+- backend/app/llm/ : base.py (Provider interface), ollama.py (localhost-only), gemini.py; LLM_PROVIDER selects (get_provider)
+- backend/app/{prompts,services}/ : extraction_v1..v3.txt (v1 is the default), extraction.py (provider-agnostic service + cache), guards.py (privacy + test-split guards)
 - backend/scripts/ : smoke_test_gemini.py, extract.py
+- eval/name_sanity.py : drug-name sanity diagnostic (names matching no formulary entry)
 - data/render_documents.py -> data/rendered/ (gitignored), data/cache/ (gitignored), docs/samples/render_preview.png
 - data/reference/ : fetch_ddinter.py, ddinter_coverage.py; docs/DDINTER_COVERAGE.md, docs/PROMPT_LOG.md
 - assets/ATTRIBUTION.md : photo credits (file, source URL, photographer, license)
@@ -32,7 +34,7 @@ End goal: a professional web app first; a mobile app only if time allows. Colleg
 Status: [x] done, [ ] not started, [~] in progress
 - [x] 0 Setup and foundation
 - [x] 1 Synthetic data, schema, drug database choice
-- [~] 2 Document extraction pipeline plus evaluation script (code, renders, DDInter check done; live dev run blocked by Gemini daily quota, see PROGRESS.md)
+- [x] 2 Document extraction pipeline plus evaluation script (local Ollama provider; dev run done, prompt v1 kept; see PROGRESS.md)
 - [ ] 3 Plain-language explanation (EN/TA/HI) plus faithfulness verification
 - [ ] 4 Safety layer (interactions, red flags, no-diagnosis guardrail, low-confidence flag)
 - [ ] 5 Backend API, database, consent flow, encryption, delete-my-data
@@ -60,7 +62,11 @@ Status: [x] done, [ ] not started, [~] in progress
 - Regenerate: `backend\.venv\Scripts\python data\generate_synthetic.py`; check: same command with `data\validate_dataset.py`.
 - RULE: the 40-document TEST split (manifest.json) is NEVER used for prompt tuning or debugging. Only the 20-document DEV split is. Any extraction/evaluation on it needs `--final-test-run` and is logged to eval/test_runs.log. Do not use that flag before Phase 7.
 - PRIVACY RULE: the Gemini free tier lets Google use submitted content to improve its products and human reviewers may read it. ONLY synthetic documents (data/synthetic, data/rendered) may be sent to Gemini; `guards.assert_synthetic` enforces it. Never send real patient data.
-- Gemini free tier daily quota is tiny (20 requests/day/model seen on 2026-10-04). The disk cache (data/cache) makes reruns free; do not try to bypass quotas.
+- Gemini free tier daily quota is tiny (20 requests/day/model seen on 2026-10-04); it is only an optional comparison provider. The disk cache (data/cache) makes reruns free; do not try to bypass quotas.
+- LOCAL-ONLY RULE: the Ollama adapter refuses any OLLAMA_BASE_URL host other than localhost/127.0.0.1. PDFs are unsupported by it (images and text only).
+- Ollama config (backend/.env.example): LLM_PROVIDER (default ollama), OLLAMA_BASE_URL, OLLAMA_MODEL (qwen3-vl:8b-instruct; the plain qwen3-vl:8b tag is a thinking model that ignores think:false), OLLAMA_NUM_CTX 6144, OLLAMA_NUM_PREDICT 3000, OLLAMA_TIMEOUT_SECONDS, OLLAMA_KEEP_ALIVE 30m, OLLAMA_MAX_IMAGE_SIDE 1280.
+- GPU findings (RTX 4060 8 GB, OLLAMA_FLASH_ATTENTION=1, OLLAMA_KV_CACHE_TYPE=q8_0 set by the user): instruct tag is 91% GPU at ctx 6144, 89% at 8192. Longest dev doc uses about 2.2k prompt + 1.4k generated tokens, so 6144 is enough. About 30 s per call; a 100-call dev run takes about 50 minutes.
+- Guards: Ollama calls fail as context_truncated (output cut off or prompt+output reached num_ctx) or image_not_received (too few prompt tokens; without the image the model invents medicines). The evaluator reports such documents as skipped, never silently drops them.
 
 ## Safety and product rules
 - CareBridge explains and organizes. It never diagnoses, never recommends changing a dose, and always tells users to confirm with their doctor.
@@ -92,7 +98,7 @@ Frontend (from `frontend/`):
 - Run: `npm run dev` (port 5173, proxies /api to localhost:8000)
 - Build: `npm run build`
 
-Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`):
+Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`; Ollama must be running with qwen3-vl:8b-instruct pulled):
 - Render: `python data\render_documents.py` (about 4 minutes; 240 PNG + 120 PDF)
 - Smoke: `python backend\scripts\smoke_test_gemini.py`; one doc: `python backend\scripts\extract.py ds_006 --condition clean`
 - Evaluate (dev): `python -m eval.evaluate --split dev --conditions text,clean,scan,photo,poor [--limit N] [--run-id NAME]`; oracle (no API): add `--oracle`

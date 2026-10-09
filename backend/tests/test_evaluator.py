@@ -97,3 +97,12 @@ def test_ground_truth_converter_keeps_content():
     raw = json.loads((REPO / "data/ground_truth/ds_001.json").read_text(encoding="utf-8"))
     assert [m.source_quote for m in gt.medications] == [m["source_span"]["text"] for m in raw["medications"]]
     assert all(m.confidence.value == "high" for m in gt.medications) and gt.unreadable_parts == []
+
+
+def test_drug_name_sanity():
+    from eval.name_sanity import closest, formulary_names
+
+    names = formulary_names()
+    assert closest("Tab. Glucophage", names)[1] == 1.0  # form prefix ignored
+    assert closest("Xqzvib", names)[1] < 0.8 <= closest("Atorvastatin", names)[1]
+    assert closest("AtoRavastatin", names)[1] > 0.8  # known limit: a one-letter garble still counts as matched

@@ -41,7 +41,7 @@
 
 **Next (Phase 2)**: OCR/text input, LLM extraction into the schema, and an evaluation script scored on the DEV split only.
 
-## Phase 2: Extraction pipeline and evaluation (PARTIAL: live dev results pending)
+## Phase 2: Extraction pipeline and evaluation (DONE, local Ollama)
 **Built**
 - Data fixes: patient names now match sex (independent RNG; manifest and medication lists proven unchanged vs the Phase 1 commit by `test_data_stability.py`); new `unspecified` timing label (replaces `other` when a frequency has no time/meal relation).
 - Gemini config (`GEMINI_API_KEY`, `GEMINI_MODEL=gemini-3.8-flash`, `GEMINI_MAX_REQUESTS_PER_MINUTE=5`, `GEMINI_MAX_RETRIES=5`), smoke test (passes), model choice recorded in DECISIONS.md.
@@ -64,3 +64,13 @@
 
 **Next**: finish the dev run (options in the report), then Phase 3 (plain-language explanation EN/TA/HI plus faithfulness verification).
 
+
+### Phase 2 final entry (local Ollama provider)
+**Built**: `app/llm/` provider layer (Gemini adapter unchanged in behaviour; new localhost-only Ollama adapter using httpx, image downscaling, thinking off, context_truncated and image_not_received guards, PDFs unsupported); provider-aware cache key; evaluator now reports attempted/scored/skipped per condition with reasons, latency median and p95, and a drug-name sanity metric (`eval/name_sanity.py`). Model `qwen3-vl:8b-instruct` (same 8B size as the thinking tag, which ignored `think:false`).
+**Key fix**: the Pydantic schema marks only `document_type` as required, so the model returned empty medication lists; the adapter now sends a copy with all properties required (our validation is unchanged).
+**Run**: `python -m eval.evaluate --split dev --conditions text,clean,scan,photo,poor --run-id NAME` (about 50 min, resumable from the cache). Config in CLAUDE.md.
+**Dev metrics, prompt v1 (kept default)**: medicine F1 0.964 text, 0.988 clean/scan/photo/poor; 7 hallucinated medicines in 100 calls; no documents skipped; follow-up and red-flag recall 1.0. Median latency 27-30 s per call. Weak: fully-correct medicines 0.24-0.40, invented values 0.20-0.35, brand/generic accuracy 0.59-0.83, timing label 0.69-0.77 (AC/PC confusion). Drug names matching no formulary entry: 13% text, 2-5% images. Details: `eval/results/dev-ollama-v1`, prompt history in `docs/PROMPT_LOG.md` (v2, v3 tried and rejected).
+**Tested**: offline suite passes (mocked Ollama and Gemini, guards, evaluator).
+**Limitations**: one small model; the name-field confusion (brand vs generic) is unresolved; no Gemini baseline exists; PDFs unsupported locally; 8 GB GPU means about 30 s per document; the 1500-token image check threshold is calibrated on only a few images.
+**Phase 3**: plain-language explanation (EN/TA/HI) with faithfulness verification; Phase 7 can retune the prompt (combine the AC/PC rule with v1).
+**Sanity metric limit**: threshold 0.8 flags grossly wrong names only; a one-letter garble such as `AtoRavastatin` still scores 0.96 against `atorvastatin`. Exact-name accuracy against ground truth (acc_brand_name/acc_generic_name) is the stricter check.

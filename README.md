@@ -12,7 +12,7 @@ Backend (http://localhost:8000):
     py -3.12 -m venv .venv
     .venv\Scripts\activate
     pip install -r requirements.txt
-    copy .env.example .env   (then set GEMINI_API_KEY in .env; never commit it)
+    copy .env.example .env   (Gemini is optional: set GEMINI_API_KEY only to compare; never commit it)
     uvicorn app.main:app --reload
 
 Frontend (http://localhost:5173):
@@ -26,10 +26,14 @@ Dataset (from repo root):
     backend\.venv\Scripts\python data\generate_synthetic.py
     backend\.venv\Scripts\python data\validate_dataset.py
 
-Phase 2 (extraction with Google Gemini; only synthetic documents are ever sent):
+Phase 2 (extraction runs locally with Ollama; only synthetic documents are ever sent, and only to localhost):
+
+    ollama pull qwen3-vl:8b-instruct
+    setx OLLAMA_FLASH_ATTENTION 1
+    setx OLLAMA_KV_CACHE_TYPE q8_0      (then restart Ollama)
 
     backend\.venv\Scripts\python data\render_documents.py
-    backend\.venv\Scripts\python -m eval.evaluate --split dev
+    backend\.venv\Scripts\python -m eval.evaluate --split dev --run-id my-run
 
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
