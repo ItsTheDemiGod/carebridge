@@ -130,9 +130,16 @@ def main():
     ap.add_argument("--run-id")
     ap.add_argument("--prompt-version", default=PROMPT_VERSION)
     ap.add_argument("--oracle", action="store_true")
+    ap.add_argument("--rescore", choices=["normalised"], help="re-score the cached raw outputs of --run-id with the normalisation layer (no model calls)")
     ap.add_argument("--final-test-run", action="store_true")
     args = ap.parse_args()
     check_split(args.split, args.final_test_run, "evaluate " + " ".join(sys.argv[1:]))
+    if args.rescore:
+        from eval.rescore import run as rescore_run
+
+        result, out = rescore_run(args)
+        print(f"{result['run_id']}: f1 raw={result['raw']['all']['med_f1']} normalised={result['normalised']['all']['med_f1']} -> {out}")
+        return
     result, out = run(args)
     o = result["metrics"]["overall"]["all"]
     print(f"{result['run_id']}: F1={o['med_f1']} recall={o['med_recall']} halluc={o['hallucinated_meds']} calls={result['api_calls']} cached={result['cache_hits']} -> {out}")

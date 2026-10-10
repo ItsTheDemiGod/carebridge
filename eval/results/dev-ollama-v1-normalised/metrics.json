@@ -1,0 +1,1102 @@
+{
+ "run_id": "dev-ollama-v1-normalised",
+ "source_run": "dev-ollama-v1",
+ "skipped_unreadable_raw": [],
+ "conditions": [
+  "text",
+  "clean",
+  "scan",
+  "photo",
+  "poor",
+  "all"
+ ],
+ "raw": {
+  "text": {
+   "docs": 20,
+   "med_precision": 0.9643,
+   "med_recall": 0.9643,
+   "med_f1": 0.9643,
+   "med_fully_correct_rate": 0.3086,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.8095,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 3,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.2,
+   "quote_exact_rate": 0.8994,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9753,
+   "acc_form": 0.9506,
+   "acc_dose": 0.9506,
+   "acc_times_per_day": 0.9383,
+   "acc_timing_label": 0.7037,
+   "acc_is_prn": 1.0,
+   "acc_duration_days": 1.0,
+   "acc_brand_name": 0.716,
+   "acc_generic_name": 0.8272,
+   "exact_ci_brand_name": 0.3827,
+   "exact_ci_generic_name": 0.8272,
+   "invented_strength": {
+    "of_null": 2,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 2,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 15,
+    "invented": 3,
+    "role_confusion": 0,
+    "in_document": 3,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 35,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_brand_name": {
+    "of_null": 23,
+    "invented": 14,
+    "role_confusion": 14,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_generic_name": {
+    "of_null": 35,
+    "invented": 3,
+    "role_confusion": 1,
+    "in_document": 0,
+    "made_up": 2
+   }
+  },
+  "clean": {
+   "docs": 20,
+   "med_precision": 0.9881,
+   "med_recall": 0.9881,
+   "med_f1": 0.9881,
+   "med_fully_correct_rate": 0.3976,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.9048,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 1,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.2193,
+   "quote_exact_rate": 0.8742,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9639,
+   "acc_form": 0.988,
+   "acc_dose": 0.9518,
+   "acc_times_per_day": 0.9398,
+   "acc_timing_label": 0.7711,
+   "acc_is_prn": 1.0,
+   "acc_duration_days": 0.9398,
+   "acc_brand_name": 0.6867,
+   "acc_generic_name": 0.8313,
+   "exact_ci_brand_name": 0.5783,
+   "exact_ci_generic_name": 0.8313,
+   "invented_strength": {
+    "of_null": 2,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 2,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 16,
+    "invented": 3,
+    "role_confusion": 0,
+    "in_document": 3,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 37,
+    "invented": 1,
+    "role_confusion": 0,
+    "in_document": 1,
+    "made_up": 0
+   },
+   "invented_brand_name": {
+    "of_null": 23,
+    "invented": 18,
+    "role_confusion": 18,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_generic_name": {
+    "of_null": 36,
+    "invented": 1,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 1
+   }
+  },
+  "scan": {
+   "docs": 20,
+   "med_precision": 0.9881,
+   "med_recall": 0.9881,
+   "med_f1": 0.9881,
+   "med_fully_correct_rate": 0.2892,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.8571,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 1,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.3482,
+   "quote_exact_rate": 0.7925,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9639,
+   "acc_form": 0.9759,
+   "acc_dose": 0.9639,
+   "acc_times_per_day": 0.9157,
+   "acc_timing_label": 0.747,
+   "acc_is_prn": 0.988,
+   "acc_duration_days": 0.9157,
+   "acc_brand_name": 0.6867,
+   "acc_generic_name": 0.6627,
+   "exact_ci_brand_name": 0.6145,
+   "exact_ci_generic_name": 0.6506,
+   "invented_strength": {
+    "of_null": 2,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 2,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 16,
+    "invented": 5,
+    "role_confusion": 0,
+    "in_document": 5,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 36,
+    "invented": 1,
+    "role_confusion": 0,
+    "in_document": 1,
+    "made_up": 0
+   },
+   "invented_brand_name": {
+    "of_null": 23,
+    "invented": 17,
+    "role_confusion": 17,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_generic_name": {
+    "of_null": 35,
+    "invented": 14,
+    "role_confusion": 2,
+    "in_document": 2,
+    "made_up": 10
+   }
+  },
+  "photo": {
+   "docs": 20,
+   "med_precision": 0.9881,
+   "med_recall": 0.9881,
+   "med_f1": 0.9881,
+   "med_fully_correct_rate": 0.241,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.9524,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 1,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.3125,
+   "quote_exact_rate": 0.7862,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9518,
+   "acc_form": 0.9759,
+   "acc_dose": 0.9759,
+   "acc_times_per_day": 0.9157,
+   "acc_timing_label": 0.6867,
+   "acc_is_prn": 0.988,
+   "acc_duration_days": 0.9157,
+   "acc_brand_name": 0.5904,
+   "acc_generic_name": 0.6988,
+   "exact_ci_brand_name": 0.5181,
+   "exact_ci_generic_name": 0.6988,
+   "invented_strength": {
+    "of_null": 2,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 2,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 16,
+    "invented": 5,
+    "role_confusion": 0,
+    "in_document": 5,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 36,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_brand_name": {
+    "of_null": 23,
+    "invented": 20,
+    "role_confusion": 20,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_generic_name": {
+    "of_null": 35,
+    "invented": 8,
+    "role_confusion": 5,
+    "in_document": 0,
+    "made_up": 3
+   }
+  },
+  "poor": {
+   "docs": 20,
+   "med_precision": 0.9881,
+   "med_recall": 0.9881,
+   "med_f1": 0.9881,
+   "med_fully_correct_rate": 0.3012,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.9524,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 1,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.3482,
+   "quote_exact_rate": 0.7044,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9277,
+   "acc_form": 0.988,
+   "acc_dose": 0.9398,
+   "acc_times_per_day": 0.9277,
+   "acc_timing_label": 0.7349,
+   "acc_is_prn": 0.988,
+   "acc_duration_days": 0.8795,
+   "acc_brand_name": 0.6867,
+   "acc_generic_name": 0.6506,
+   "exact_ci_brand_name": 0.6145,
+   "exact_ci_generic_name": 0.6506,
+   "invented_strength": {
+    "of_null": 2,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 2,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 16,
+    "invented": 4,
+    "role_confusion": 0,
+    "in_document": 4,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 36,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 1,
+    "made_up": 1
+   },
+   "invented_brand_name": {
+    "of_null": 22,
+    "invented": 16,
+    "role_confusion": 15,
+    "in_document": 0,
+    "made_up": 1
+   },
+   "invented_generic_name": {
+    "of_null": 36,
+    "invented": 15,
+    "role_confusion": 7,
+    "in_document": 0,
+    "made_up": 8
+   }
+  },
+  "all": {
+   "docs": 100,
+   "med_precision": 0.9833,
+   "med_recall": 0.9833,
+   "med_f1": 0.9833,
+   "med_fully_correct_rate": 0.3075,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.8952,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 7,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.2857,
+   "quote_exact_rate": 0.8113,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9564,
+   "acc_form": 0.9758,
+   "acc_dose": 0.9564,
+   "acc_times_per_day": 0.9274,
+   "acc_timing_label": 0.7288,
+   "acc_is_prn": 0.9927,
+   "acc_duration_days": 0.9298,
+   "acc_brand_name": 0.6731,
+   "acc_generic_name": 0.7337,
+   "exact_ci_brand_name": 0.5424,
+   "exact_ci_generic_name": 0.7312,
+   "invented_strength": {
+    "of_null": 10,
+    "invented": 10,
+    "role_confusion": 0,
+    "in_document": 10,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 79,
+    "invented": 20,
+    "role_confusion": 0,
+    "in_document": 20,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 180,
+    "invented": 4,
+    "role_confusion": 0,
+    "in_document": 3,
+    "made_up": 1
+   },
+   "invented_brand_name": {
+    "of_null": 114,
+    "invented": 85,
+    "role_confusion": 84,
+    "in_document": 0,
+    "made_up": 1
+   },
+   "invented_generic_name": {
+    "of_null": 177,
+    "invented": 41,
+    "role_confusion": 15,
+    "in_document": 2,
+    "made_up": 24
+   }
+  }
+ },
+ "normalised": {
+  "text": {
+   "docs": 20,
+   "med_precision": 1.0,
+   "med_recall": 1.0,
+   "med_f1": 1.0,
+   "med_fully_correct_rate": 0.869,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.8095,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 0,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.0439,
+   "quote_exact_rate": 0.8994,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9762,
+   "acc_form": 0.9524,
+   "acc_dose": 0.9524,
+   "acc_times_per_day": 0.9643,
+   "acc_timing_label": 0.9881,
+   "acc_is_prn": 1.0,
+   "acc_duration_days": 1.0,
+   "acc_brand_name": 1.0,
+   "acc_generic_name": 1.0,
+   "exact_ci_brand_name": 1.0,
+   "exact_ci_generic_name": 1.0,
+   "invented_strength": {
+    "of_null": 2,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 2,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 16,
+    "invented": 3,
+    "role_confusion": 0,
+    "in_document": 3,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 37,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_brand_name": {
+    "of_null": 23,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_generic_name": {
+    "of_null": 36,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   }
+  },
+  "clean": {
+   "docs": 20,
+   "med_precision": 1.0,
+   "med_recall": 1.0,
+   "med_f1": 1.0,
+   "med_fully_correct_rate": 0.8571,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.9048,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 0,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.0526,
+   "quote_exact_rate": 0.8742,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9643,
+   "acc_form": 0.9881,
+   "acc_dose": 0.9524,
+   "acc_times_per_day": 0.9643,
+   "acc_timing_label": 1.0,
+   "acc_is_prn": 1.0,
+   "acc_duration_days": 0.9881,
+   "acc_brand_name": 1.0,
+   "acc_generic_name": 1.0,
+   "exact_ci_brand_name": 1.0,
+   "exact_ci_generic_name": 1.0,
+   "invented_strength": {
+    "of_null": 2,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 2,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 16,
+    "invented": 3,
+    "role_confusion": 0,
+    "in_document": 3,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 37,
+    "invented": 1,
+    "role_confusion": 0,
+    "in_document": 1,
+    "made_up": 0
+   },
+   "invented_brand_name": {
+    "of_null": 23,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_generic_name": {
+    "of_null": 36,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   }
+  },
+  "scan": {
+   "docs": 20,
+   "med_precision": 1.0,
+   "med_recall": 1.0,
+   "med_f1": 1.0,
+   "med_fully_correct_rate": 0.7857,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.8571,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 0,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.0614,
+   "quote_exact_rate": 0.7925,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9643,
+   "acc_form": 0.9762,
+   "acc_dose": 0.9643,
+   "acc_times_per_day": 0.9643,
+   "acc_timing_label": 0.9881,
+   "acc_is_prn": 0.9881,
+   "acc_duration_days": 0.9643,
+   "acc_brand_name": 0.9643,
+   "acc_generic_name": 0.9881,
+   "exact_ci_brand_name": 0.9643,
+   "exact_ci_generic_name": 0.9881,
+   "invented_strength": {
+    "of_null": 2,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 2,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 16,
+    "invented": 3,
+    "role_confusion": 0,
+    "in_document": 3,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 37,
+    "invented": 1,
+    "role_confusion": 0,
+    "in_document": 1,
+    "made_up": 0
+   },
+   "invented_brand_name": {
+    "of_null": 23,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_generic_name": {
+    "of_null": 36,
+    "invented": 1,
+    "role_confusion": 0,
+    "in_document": 1,
+    "made_up": 0
+   }
+  },
+  "photo": {
+   "docs": 20,
+   "med_precision": 1.0,
+   "med_recall": 1.0,
+   "med_f1": 1.0,
+   "med_fully_correct_rate": 0.8214,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.9524,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 0,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.0439,
+   "quote_exact_rate": 0.7862,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9524,
+   "acc_form": 0.9762,
+   "acc_dose": 0.9762,
+   "acc_times_per_day": 0.9643,
+   "acc_timing_label": 1.0,
+   "acc_is_prn": 0.9881,
+   "acc_duration_days": 0.9643,
+   "acc_brand_name": 0.9762,
+   "acc_generic_name": 0.9762,
+   "exact_ci_brand_name": 0.9762,
+   "exact_ci_generic_name": 0.9762,
+   "invented_strength": {
+    "of_null": 2,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 2,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 16,
+    "invented": 3,
+    "role_confusion": 0,
+    "in_document": 3,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 37,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_brand_name": {
+    "of_null": 23,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_generic_name": {
+    "of_null": 36,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   }
+  },
+  "poor": {
+   "docs": 20,
+   "med_precision": 0.9881,
+   "med_recall": 0.9881,
+   "med_f1": 0.9881,
+   "med_fully_correct_rate": 0.7229,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.9524,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 1,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.0982,
+   "quote_exact_rate": 0.7044,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.9277,
+   "acc_form": 0.988,
+   "acc_dose": 0.9398,
+   "acc_times_per_day": 0.9518,
+   "acc_timing_label": 0.9759,
+   "acc_is_prn": 0.988,
+   "acc_duration_days": 0.9277,
+   "acc_brand_name": 0.9398,
+   "acc_generic_name": 0.9518,
+   "exact_ci_brand_name": 0.9398,
+   "exact_ci_generic_name": 0.9518,
+   "invented_strength": {
+    "of_null": 2,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 2,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 16,
+    "invented": 4,
+    "role_confusion": 0,
+    "in_document": 4,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 36,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 1,
+    "made_up": 1
+   },
+   "invented_brand_name": {
+    "of_null": 22,
+    "invented": 2,
+    "role_confusion": 1,
+    "in_document": 0,
+    "made_up": 1
+   },
+   "invented_generic_name": {
+    "of_null": 36,
+    "invented": 1,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 1
+   }
+  },
+  "all": {
+   "docs": 100,
+   "med_precision": 0.9976,
+   "med_recall": 0.9976,
+   "med_f1": 0.9976,
+   "med_fully_correct_rate": 0.8115,
+   "followup_recall": 1.0,
+   "followup_precision": 1.0,
+   "followup_days_accuracy": 0.8952,
+   "redflag_recall": 1.0,
+   "redflag_precision": 1.0,
+   "hallucinated_meds": 1,
+   "hallucinated_followups": 0,
+   "hallucinated_redflags": 0,
+   "invented_value_rate": 0.0599,
+   "quote_exact_rate": 0.8113,
+   "quote_fuzzy_rate": 1.0,
+   "parse_failure_rate": 0.0,
+   "low_confidence_rate": 0.0,
+   "acc_strength": 0.957,
+   "acc_form": 0.9761,
+   "acc_dose": 0.957,
+   "acc_times_per_day": 0.9618,
+   "acc_timing_label": 0.9905,
+   "acc_is_prn": 0.9928,
+   "acc_duration_days": 0.969,
+   "acc_brand_name": 0.9761,
+   "acc_generic_name": 0.9833,
+   "exact_ci_brand_name": 0.9761,
+   "exact_ci_generic_name": 0.9833,
+   "invented_strength": {
+    "of_null": 10,
+    "invented": 10,
+    "role_confusion": 0,
+    "in_document": 10,
+    "made_up": 0
+   },
+   "invented_dose": {
+    "of_null": 0,
+    "invented": 0,
+    "role_confusion": 0,
+    "in_document": 0,
+    "made_up": 0
+   },
+   "invented_times_per_day": {
+    "of_null": 80,
+    "invented": 16,
+    "role_confusion": 0,
+    "in_document": 16,
+    "made_up": 0
+   },
+   "invented_duration_days": {
+    "of_null": 184,
+    "invented": 4,
+    "role_confusion": 0,
+    "in_document": 3,
+    "made_up": 1
+   },
+   "invented_brand_name": {
+    "of_null": 114,
+    "invented": 2,
+    "role_confusion": 1,
+    "in_document": 0,
+    "made_up": 1
+   },
+   "invented_generic_name": {
+    "of_null": 180,
+    "invented": 2,
+    "role_confusion": 0,
+    "in_document": 1,
+    "made_up": 1
+   }
+  }
+ },
+ "near_miss_names": {
+  "raw": {
+   "by_condition": {
+    "clean": 5,
+    "photo": 8,
+    "poor": 13,
+    "scan": 7,
+    "text": 10
+   },
+   "total": 43,
+   "examples": [
+    [
+     "clean",
+     "ds_026",
+     "T. Prednisolone",
+     "prednisolone",
+     0.89
+    ],
+    [
+     "clean",
+     "ds_026",
+     "Inh Symbicort",
+     "symbicort",
+     0.82
+    ],
+    [
+     "clean",
+     "ds_027",
+     "SHELICAL",
+     "shelcal",
+     0.93
+    ],
+    [
+     "clean",
+     "ds_032",
+     "T. MOTILIMUM",
+     "motilium",
+     0.8
+    ],
+    [
+     "clean",
+     "ds_032",
+     "MOTILIMUM",
+     "motilium",
+     0.94
+    ],
+    [
+     "photo",
+     "ds_023",
+     "Caipol",
+     "calpol",
+     0.83
+    ],
+    [
+     "photo",
+     "ds_027",
+     "SHELICAL",
+     "shelcal",
+     0.93
+    ],
+    [
+     "photo",
+     "ds_027",
+     "SHELICAL",
+     "shelcal",
+     0.93
+    ],
+    [
+     "photo",
+     "ds_032",
+     "MOTILIMUM",
+     "motilium",
+     0.94
+    ],
+    [
+     "photo",
+     "ds_037",
+     "Telms",
+     "telma",
+     0.8
+    ]
+   ]
+  },
+  "normalised": {
+   "by_condition": {
+    "clean": 0,
+    "photo": 1,
+    "poor": 4,
+    "scan": 2,
+    "text": 0
+   },
+   "total": 7,
+   "examples": [
+    [
+     "photo",
+     "ds_023",
+     "Caipol",
+     "calpol",
+     0.83
+    ],
+    [
+     "poor",
+     "ds_018",
+     "ENDOKAPARIN",
+     "enoxaparin",
+     0.86
+    ],
+    [
+     "poor",
+     "ds_026",
+     "Vertolin",
+     "ventolin",
+     0.88
+    ],
+    [
+     "poor",
+     "ds_036",
+     "T. CALCIUM CARBONATE + VITAMIN D3",
+     "calcium carbonate + vitamin d3",
+     0.95
+    ],
+    [
+     "poor",
+     "rx_005",
+     "Mysolone",
+     "wysolone",
+     0.88
+    ],
+    [
+     "scan",
+     "ds_032",
+     "Cap Niffran",
+     "niftran",
+     0.86
+    ],
+    [
+     "scan",
+     "rx_003",
+     "Tab Dol",
+     "dolo",
+     0.86
+    ]
+   ]
+  }
+ },
+ "flag_effectiveness": {
+  "name": {
+   "medications": 420,
+   "remaining_errors": 14,
+   "needs_verification": {
+    "flag_recall": 1.0,
+    "flag_precision": 0.055,
+    "flagged": 255,
+    "unflagged_errors": 0
+   },
+   "field_specific_flags": {
+    "flag_recall": 0.786,
+    "flag_precision": 0.193,
+    "flagged": 57,
+    "unflagged_errors": 3
+   },
+   "unflagged_examples": []
+  },
+  "timing": {
+   "medications": 420,
+   "remaining_errors": 4,
+   "needs_verification": {
+    "flag_recall": 0.5,
+    "flag_precision": 0.008,
+    "flagged": 255,
+    "unflagged_errors": 2
+   },
+   "field_specific_flags": {
+    "flag_recall": 0.0,
+    "flag_precision": 0.0,
+    "flagged": 109,
+    "unflagged_errors": 4
+   },
+   "unflagged_examples": [
+    {
+     "condition": "scan",
+     "doc": "ds_008",
+     "predicted": "unspecified",
+     "ground_truth": "before_meals",
+     "quote": "Tab. Pantoprazole 40 mg 1 tab OD x 5/7"
+    },
+    {
+     "condition": "text",
+     "doc": "ds_036",
+     "predicted": "as_needed",
+     "ground_truth": "unspecified",
+     "quote": "(4) Cap Uprise-D3 60000IU 1 cap once weekly x 8 weeks"
+    }
+   ]
+  }
+ },
+ "flag_counts": {
+  "role_corrected": 116,
+  "conflict_timing_label": 109,
+  "near_miss_name": 38,
+  "name_not_in_quote": 19,
+  "conflict_duration_days": 18,
+  "unusual_strength": 16,
+  "conflict_times_per_day": 13,
+  "unresolved_name": 8
+ },
+ "medications_total": 420,
+ "medications_needing_verification": 255,
+ "timing_rule_overrides": 109
+}

@@ -83,8 +83,26 @@ def text_sim(g_text, p_text, p_quote=None):
     return max(ratio(norm_text(g_text), norm_text(p_text)), ratio(norm_text(g_text), norm_text(p_quote)))
 
 
-def score_document(gt, pred, doc_text):
-    """gt, pred: ExtractionOutput. pred=None means the call failed (counts as an empty prediction)."""
+def exact_ci(s):
+    """Name equality after case and spacing normalisation only (no prefix stripping)."""
+    return re.sub(r"\s+", " ", s.lower()).strip() if s else None
+
+
+def classify_invented(f, pv, g, doc_text):
+    """Why a value exists where ground truth is null: role_confusion (a real name in the wrong field), in_document (the value is written
+    somewhere in the document but is not this field's), or made_up (appears nowhere in the document text)."""
+    if f in ("brand_name", "generic_name") and pv in {field_value(g, "brand_name"), field_value(g, "generic_name")} - {None}:
+        return "role"
+    doc = re.sub(r"[^a-z0-9]", "", doc_text.lower())
+    if f in ("times_per_day", "duration_days"):
+        return "in_doc" if re.search(rf"(?<!\d){pv}(?!\d)", doc_text) else "made_up"
+    return "in_doc" if re.sub(r"[^a-z0-9]", "", str(pv).lower()) in doc else "made_up"
+
+
+def score_document(gt, pred, doc_text, pair_with=None):
+    """gt, pred: ExtractionOutput. pred=None means the call failed (counts as an empty prediction).
+    pair_with: optional second list of predicted medications (same order), e.g. the raw extraction when pred is normalised; a
+    medicine pairs with the ground truth if EITHER name set matches, so detection never gets worse by dropping a name."""
     c = Counter()
     c["docs"] = 1
     if pred is None:
@@ -93,7 +111,8 @@ def score_document(gt, pred, doc_text):
 
         pred = ExtractionOutput(document_type=gt.document_type)
     G, P = gt.medications, pred.medications
-    pairs = one_to_one(len(G), len(P), lambda i, j: med_similarity(G[i], P[j]), NAME_THRESHOLD)
+    sim = (lambda i, j: max(med_similarity(G[i], P[j]), med_similarity(G[i], pair_with[j]))) if pair_with else (lambda i, j: med_similarity(G[i], P[j]))
+    pairs = one_to_one(len(G), len(P), sim, NAME_THRESHOLD)
     c["med_tp"], c["med_fn"], c["med_fp"] = len(pairs), len(G) - len(pairs), len(P) - len(pairs)
     for i, j in pairs:
         ok_all = True
@@ -105,6 +124,14 @@ def score_document(gt, pred, doc_text):
             if f in INVENTABLE and gv is None:
                 c["null_total"] += 1
                 c["invented"] += pv is not None
+                c[f"null_{f}"] += 1
+                if pv is not None:
+                    c[f"inv_{f}"] += 1
+                    c[f"inv_{f}_{classify_invented(f, pv, G[i], doc_text)}"] += 1
+            if f in ("brand_name", "generic_name"):
+                gn, pn = getattr(G[i], f), getattr(P[j], f)
+                c[f"exact_total_{f}"] += 1
+                c[f"exact_ok_{f}"] += exact_ci(gn) == exact_ci(pn)
         c["med_fully_correct"] += ok_all
 
     # follow-ups
@@ -145,7 +172,7 @@ def summarize(c):
         med_fully_correct_rate=div(c["med_fully_correct"], c["med_tp"]),
         followup_recall=div(c["fu_tp"], c["fu_tp"] + c["fu_fn"]), followup_precision=div(c["fu_tp"], c["fu_tp"] + c["fu_fp"]),
         followup_days_accuracy=div(c["fu_days_ok"], c["fu_days_total"]),
-        redflag_recall=div(c["rf_tp"], c["rf_tp"] + c["rf_fn"]),
+        redflag_recall=div(c["rf_tp"], c["rf_tp"] + c["rf_fn"]), redflag_precision=div(c["rf_tp"], c["rf_tp"] + c["rf_fp"]),
         hallucinated_meds=c["med_fp"], hallucinated_followups=c["fu_fp"], hallucinated_redflags=c["rf_fp"],
         invented_value_rate=div(c["invented"], c["null_total"]),
         quote_exact_rate=div(c["quote_exact"], c["quotes"]), quote_fuzzy_rate=div(c["quote_fuzzy"], c["quotes"]),
@@ -153,4 +180,8 @@ def summarize(c):
     )
     for f in MED_FIELDS:
         m[f"acc_{f}"] = div(c[f"field_ok_{f}"], c[f"field_total_{f}"])
+    for f in ("brand_name", "generic_name"):
+        m[f"exact_ci_{f}"] = div(c[f"exact_ok_{f}"], c[f"exact_total_{f}"])
+    for f in INVENTABLE:
+        m[f"invented_{f}"] = dict(of_null=c[f"null_{f}"], invented=c[f"inv_{f}"], role_confusion=c[f"inv_{f}_role"], in_document=c[f"inv_{f}_in_doc"], made_up=c[f"inv_{f}_made_up"])
     return m
