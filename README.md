@@ -39,6 +39,8 @@ Normalisation re-score (no model calls, uses cached outputs of a finished run):
 
     backend\.venv\Scripts\python -m eval.evaluate --split dev --run-id dev-ollama-v1 --rescore normalised
 
+The re-score writes `eval/results/<run-id>-normalised-v2/` (raw vs normalised, quote checks, review levels, readiness).
+
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
 See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.

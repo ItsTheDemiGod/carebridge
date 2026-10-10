@@ -82,3 +82,11 @@
 **Tested**: 149 offline tests (67 abbreviation cases, resolver incl. every formulary name, service).
 **Limits**: 66-drug formulary and synthetic names make name scores optimistic; rules depend on the model's quote being complete; flag precision is low (0.10 for names); one revision used.
 **Next**: Phase 3 (explanation EN/TA/HI + faithfulness); Phase 4 will use `resolved_generic` for interaction checks.
+
+## Phase 2i: Hardening of the normalisation layer (DONE)
+**Built**: strict quote checks (`app/normalisation/quote_check.py`: normalised-exact and strict-fuzzy with digit and dosing-token gates, threshold 0.95 from the dev distribution), `incomplete_quote` flag (model output only; one revision, 60 -> 18 flagged medicines), `review_level` (must_confirm/note/none, `needs_verification` kept as alias), `interaction_ready` and `schedule_ready`, evaluator reporting (`eval/rescore.py`, output `eval/results/dev-ollama-v1-normalised-v2`). Details and numbers: `docs/NORMALISATION.md` (Phase 2i).
+**Strength finding**: the ten strength mismatches are model errors on documents where the generator deliberately omits the strength; ground truth was correct, nothing changed.
+**Dev result**: 194 of 420 medicines at must_confirm (46%, was 32% in 2h); all 14 remaining name errors flagged; 1 timing error (truncated quote) unflagged; interaction_ready 226 with 0 wrong resolved_generic; schedule_ready 180 with 1 wrong timing label. Quote validity pooled: exact 0.81, normalised-exact 0.92, strict 0.95.
+**Tested**: 174 offline tests.
+**Limits**: synthetic names use the same formulary as the resolver (optimistic); the confirm load is high for photo and poor conditions (54% and 58%); one model run.
+**Next**: Phase 3 (explanations and faithfulness); Phase 4 consumes interaction_ready; Phase 6 consumes schedule_ready.

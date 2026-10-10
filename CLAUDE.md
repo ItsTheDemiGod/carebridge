@@ -37,6 +37,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 1 Synthetic data, schema, drug database choice
 - [x] 2 Document extraction pipeline plus evaluation script (local Ollama provider; dev run done, prompt v1 kept; see PROGRESS.md)
 - [x] 2h Normalisation layer (rules, formulary name resolver, flags; dev re-score from cache, no model calls)
+- [x] 2i Hardening: strict quote checks, incomplete_quote flag, review levels, interaction_ready / schedule_ready
 - [ ] 3 Plain-language explanation (EN/TA/HI) plus faithfulness verification
 - [ ] 4 Safety layer (interactions, red flags, no-diagnosis guardrail, low-confidence flag)
 - [ ] 5 Backend API, database, consent flow, encryption, delete-my-data
@@ -70,6 +71,8 @@ Status: [x] done, [ ] not started, [~] in progress
 - GPU findings (RTX 4060 8 GB, OLLAMA_FLASH_ATTENTION=1, OLLAMA_KV_CACHE_TYPE=q8_0 set by the user): instruct tag is 91% GPU at ctx 6144, 89% at 8192. Longest dev doc uses about 2.2k prompt + 1.4k generated tokens, so 6144 is enough. About 30 s per call; a 100-call dev run takes about 50 minutes.
 - Guards: Ollama calls fail as context_truncated (output cut off or prompt+output reached num_ctx) or image_not_received (too few prompt tokens; without the image the model invents medicines). The evaluator reports such documents as skipped, never silently drops them.
 - NORMALISATION RULES: where the abbreviation table derives timing/frequency/duration from the verbatim source_quote, the RULE value is final (a disagreement is kept as a conflict flag); the model never sets a final value when a rule applies. Names are never silently corrected: as_written, printed (formulary spelling) and resolved_generic (provenance formulary) are kept apart; unknown names are flagged `unresolved_name`, never forced onto a drug. Synthetic names are all in the 66-drug formulary, so name scores are optimistic.
+- READINESS RULE: each normalised medicine has review_level (must_confirm/note/none; needs_verification = alias of must_confirm), interaction_ready and schedule_ready. Interaction checks run ONLY for interaction_ready medicines (resolved_generic from an EXACT printed formulary name, never from the model's generic field); all others are reported "not checked". Reminders are built ONLY for schedule_ready medicines (daily, known times/timing, not PRN, never weekly); the user confirms the rest. Any new flag is must_confirm unless explicitly listed as note.
+- The normalisation service uses only the model's output; document text is optional (evaluation and tests only).
 
 ## Safety and product rules
 - CareBridge explains and organizes. It never diagnoses, never recommends changing a dose, and always tells users to confirm with their doctor.

@@ -50,3 +50,10 @@
 - **Fuzzy name threshold 0.92**: above the most confusable formulary pair (omeprazole/esomeprazole 0.91), so a fuzzy match cannot land on another drug; fuzzy matches are always flagged `near_miss_name`.
 - **Evaluation pairs a medicine if raw OR normalised names match**, so normalisation cannot improve F1 by hiding a medicine or lose it by dropping a name.
 - **Audit-only flags** (`conflict_*`, `role_corrected`) do not raise `needs_verification` after the Step 6 revision (255/420 flagged before, 133/420 after).
+
+## Phase 2i
+- **Ground truth for strength is correct**: the generator deliberately omits strength in some messy documents (and labels null); the model filled the gap from the dose or a neighbouring line. No change to data.
+- **Quote check threshold 0.95 plus digit and dosing-token gates**, chosen from the dev distribution (docs/NORMALISATION.md). Document text stays optional; the live app cannot use it.
+- **incomplete_quote** derives only from the model's output. One revision after dev results: the timing and frequency parts count only when the unsupported value survives or is a meal relation.
+- **Safe-by-default flag tiers**: any flag not listed in NOTE_FLAGS is must_confirm. role_corrected was promoted to must_confirm (name-related, sat on a real error). conflict_* stay note (as must_confirm: 65% load, no extra error caught).
+- **interaction_ready needs an EXACT printed name**; fuzzy-accepted names show resolved_generic but are never interaction_ready. schedule_ready excludes PRN and non-daily.

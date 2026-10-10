@@ -66,3 +66,75 @@ The trade is explicit: precision doubled and the flagged load halved, at the cos
 - Rules read the model's `source_quote`. If the model truncates its quote (drops "AC"), the rule cannot see the text; this produced the remaining unflagged timing errors.
 - `unspecified` is derived when a frequency is known and no meal/time word is in the quote; it is only as good as the quote.
 - Hyphen patterns are assumed morning-noon-night; other conventions are not handled.
+
+# Phase 2i: hardening (re-scored from cached `dev-ollama-v1`, results in `eval/results/dev-ollama-v1-normalised-v2`)
+
+## Strength mismatch (ground truth is right)
+The ten cells with a model strength where ground truth is null are two prescriptions (rx_003, rx_012) x five conditions. In `data/generate_synthetic.py` (line ~245) a "messy" document drops the strength with 10% probability and sets the ground-truth strength to null at the same time, so text and label agree: the strength is not printed. The model filled the empty field with the dose ("1 cap", "2 puffs") or with another medicine's strength from a neighbouring line ("500 mg", "18 mcg"). No generator or ground-truth change was made (document text untouched).
+
+## Quote checks (`backend/app/normalisation/quote_check.py`, evaluator and tests only)
+The live app has no document text, so `normalise_document` takes the text only as an optional argument (it then adds `quote_not_in_document`); the service never depends on it.
+- **normalised-exact**: Unicode NFKC, lowercase, all whitespace and line breaks collapsed, leading and trailing punctuation stripped.
+- **strict-fuzzy**: best near-contiguous window of the document (window length varies by +-3 characters) with difflib ratio >= **0.95**, AND the window and the quote contain the same digits AND the same dosing abbreviations (OD, BD, TDS, QID, HS, AC, PC, SOS, PRN...).
+- **Threshold choice** (420 dev medicine quotes): 375 are normalised-exact. The other 45 have ratios 0.83 to 0.99, with a clear mass at 0.96 to 0.99 (single misread characters such as `5D` read as `SD`, `MG/5 ML` as `MG/S ML`) and a thin tail at 0.83 to 0.95 (dropped or garbled tokens). Mutation tests on the exact quotes: at 0.95 a quote with one digit changed passes 0/375 (the digit gate does this at any threshold); a quote with another formulary drug name swapped in passes 9/351 (2.6%; 85/351 at the old 0.9 level, 2/351 at 0.97); 397 of 420 real quotes pass (399 at 0.9, 391 at 0.97). 0.95 keeps OCR-style noise and rejects the tail. The old 0.9 character-containment check was 1.0 everywhere; it is kept only as `quote_fuzzy_rate` for comparison.
+- **Limit**: a dosing token dropped from the very END of a quote cannot be seen against the document, because the document legitimately continues after it. `incomplete_quote` (below) is the document-free safeguard.
+
+Quote validity by condition (all item quotes, dev): exact 0.811, normalised-exact 0.916, strict 0.954 pooled (strict: text 0.975, clean 0.994, scan 0.950, photo 0.962, poor 0.887). 37 quotes fail strict: 13 with differing digits (for example `X B WEEKS`, `650mg` written `65mg`), 24 with low similarity (misread words or dropped tokens). Full table: `metrics.md`.
+
+## `incomplete_quote` (model output only)
+Raised when the quote cannot support values the model returned:
+1. `strength`: a strength was returned but its characters (digits and unit) are not in the quote.
+2. `dose`: a dose with a number was returned but that number is not a token in the quote.
+3. `frequency`: times_per_day or is_prn was returned but the quote has no dosing abbreviation or phrase (a once-daily value supported by "at bedtime" or "at night" is accepted).
+4. `timing`: the model returned a meal relation (before, after or with meals) and the quote shows no meal token (a different meal token is a conflict, not a gap); or it returned another specific time word or as_needed that the rules cannot find and which therefore survives into the final value.
+5. `duration`: duration_days was returned but the quote has no duration token (days, weeks, fractions, months or years phrases, or the model's duration_text).
+6. `too_short`: the quote is shorter than the printed name plus strength.
+`reasons` names the parts (`incomplete_quote: strength,dose`).
+
+**Revision (the one allowed for this rule).** The first version flagged `timing` whenever the model value had no supporting token, even when a rule had already replaced it with the quote-derived value. Before: 60 medicines carried the flag (precision 0.35) and 215 (51%) were at must_confirm. After (only meal-relation claims and surviving unsupported values count; "at bedtime" or "at night" supports once daily): 18 medicines carry it, 15 with a real remaining error (precision 0.83), and 194 (46%) are at must_confirm. No name error was unflagged before or after.
+
+## Review levels
+`review_level` is `must_confirm`, `note` or `none`; `needs_verification` is a computed alias (true when must_confirm). Any flag not explicitly in `NOTE_FLAGS` is must_confirm, so a new flag is safe by default.
+- **must_confirm**: unresolved_name, near_miss_name (includes every fuzzy-accepted name), name_not_in_quote, role_corrected, duplicate_name_fields, missing_name, multiple_drugs_in_quote, possible_combination, incomplete_quote, conflicting_frequency, conflicting_meal_relation, conflicting_duration, ambiguous_OD, non_daily_frequency, unusual_strength, quote_not_in_document (only with document text), low model confidence.
+- **note** (audit trail, no action): `conflict_times_per_day`, `conflict_timing_label`, `conflict_is_prn`, `conflict_duration_days`. The rule value is final and comes from the verbatim quote, and the incomplete_quote check guards against a truncated quote. Evidence: treating them as must_confirm raises the share from 46% to 65% and catches no additional error (timing unflagged stays 1).
+- `role_corrected` was audit-only in Phase 2h. The Phase 2i breakdown showed it on a real remaining name error (a brand lost from the model's fields and quote), and it is name-related, so it is now must_confirm.
+
+## Flag breakdown (pooled, dev, after revision)
+| flag | medicines | with any remaining error | precision |
+|---|---|---|---|
+| conflict_timing_label (note) | 109 | 23 | 0.21 |
+| role_corrected | 61 | 10 | 0.16 |
+| duplicate_name_fields | 59 | 14 | 0.24 |
+| near_miss_name | 38 | 19 | 0.50 |
+| name_not_in_quote | 19 | 2 | 0.11 |
+| conflict_duration_days (note) | 18 | 4 | 0.22 |
+| incomplete_quote | 18 | 15 | 0.83 |
+| unusual_strength | 16 | 16 | 1.00 |
+| non_daily_frequency | 15 | 15 | 1.00 |
+| conflict_times_per_day (note) | 13 | 7 | 0.54 |
+| unresolved_name | 8 | 8 | 1.00 |
+
+Name-related flags have low precision because only 14 of 420 medicines have a wrong name left; they fire on correct medicines as warnings about the model's input. No name, strength, frequency or duration flag was downgraded to improve a number.
+
+## Review-level results (app mode, dev, 420 medicines)
+| | Phase 2h | Phase 2i |
+|---|---|---|
+| medicines needing confirmation | 133 (32%) | 194 (46%) |
+| name errors left / unflagged | 14 / 1 | 14 / 0 |
+| name flag precision / recall | 0.098 / 0.929 | 0.072 / 1.0 |
+| timing errors left / unflagged | 4 / 1 | 4 / 1 |
+| timing precision / recall | 0.023 / 0.75 | 0.015 / 0.75 |
+
+The load is higher than Phase 2h by design: promoting role_corrected and adding incomplete_quote bought full name recall. Per condition the share is 30% (text), 39% (clean), 50% (scan), 54% (photo) and 58% (poor). The remaining unflagged timing error is a truncated quote whose lost token the model never reported ("AC" dropped, model said unspecified); only the document-text check sees it. With document text, unflagged name and timing errors are both 0.
+
+## Readiness fields
+- `resolved_generic` comes ONLY from the formulary via a name PRINTED in the quote (exact, or fuzzy at >= 0.92 with a 0.05 margin over any other drug). The model's own `generic_name` is never used to resolve (audited: `resolve_names` takes `hits` from the quote scan only; the model's names are compared with the quote and kept as `as_written_*`). A garbled or unknown printed name gives `resolved_generic = None`; a garbled combination containing "+" is refused (`possible_combination`).
+- `interaction_ready` = `resolved_generic` set from an EXACT printed-name match AND review_level is not must_confirm. A fuzzy-accepted name carries `resolved_generic` for display but is never interaction_ready.
+- `schedule_ready` = review_level is not must_confirm AND not PRN AND no `non_daily_frequency` AND times_per_day known AND timing_label known and not `as_needed` or `other` (`unspecified` counts as known: no time of day was written). Weekly and other non-daily medicines are never schedule_ready.
+- **Rule for later phases**: Phase 4 checks interactions only for interaction_ready medicines and reports every other medicine as "not checked"; Phase 6 builds reminders only for schedule_ready medicines and asks the user to confirm the rest.
+- Dev counts: interaction_ready 226 of 420 (text 59, clean 51, scan 42, photo 39, poor 35), schedule_ready 180 (48, 39, 35, 30, 28). Against ground truth: 0 interaction_ready medicines with a wrong resolved_generic; 1 schedule_ready medicine with a wrong timing label (the truncated-quote case).
+
+## Limits (additions)
+- Name-resolution scores on synthetic data are an optimistic UPPER BOUND: the generator and the resolver share the same 66-drug formulary.
+- Combination products resolve to a "+"-joined generic; Phase 4 must split components before looking up interactions.
+- Readiness numbers come from one local model run (prompt v1) on 20 dev documents.
