@@ -4,6 +4,8 @@ import re
 from collections import Counter
 from difflib import SequenceMatcher
 
+from app.normalisation import quote_check as qc
+
 PREFIXES = {"tab", "t", "cap", "c", "inj", "syp", "syrup", "oint", "ointment", "inh", "inhaler", "tablet", "capsule", "injection"}
 UNITS = {"tab": "tablet", "tabs": "tablet", "tablets": "tablet", "cap": "capsule", "caps": "capsule", "capsules": "capsule", "puff": "puffs", "ml": "ml"}
 NAME_THRESHOLD = 0.8
@@ -152,7 +154,13 @@ def score_document(gt, pred, doc_text, pair_with=None):
     for q, conf in items:
         c["quotes"] += 1
         c["quote_exact"] += q in doc_text
-        c["quote_fuzzy"] += best_window_ratio(q, doc_text) >= FUZZY_QUOTE
+        c["quote_fuzzy"] += best_window_ratio(q, doc_text) >= FUZZY_QUOTE  # old loose check, kept for comparison
+        k = qc.check(q, doc_text)
+        c["quote_norm_exact"] += k["normalised_exact"]
+        ok = k["normalised_exact"] or k["strict_fuzzy"]
+        c["quote_strict"] += ok
+        if not ok:
+            c["quote_fail_digits" if k["ratio"] >= qc.STRICT_FUZZY_MIN and not k["digits_match"] else "quote_fail_similarity"] += 1
         c["items"] += 1
         c["low_conf"] += conf.value == "low"
     c["docs_with_unreadable"] = bool(pred.unreadable_parts)
@@ -176,6 +184,8 @@ def summarize(c):
         hallucinated_meds=c["med_fp"], hallucinated_followups=c["fu_fp"], hallucinated_redflags=c["rf_fp"],
         invented_value_rate=div(c["invented"], c["null_total"]),
         quote_exact_rate=div(c["quote_exact"], c["quotes"]), quote_fuzzy_rate=div(c["quote_fuzzy"], c["quotes"]),
+        quote_norm_exact_rate=div(c["quote_norm_exact"], c["quotes"]), quote_strict_rate=div(c["quote_strict"], c["quotes"]),
+        quote_fail_digits=c["quote_fail_digits"], quote_fail_similarity=c["quote_fail_similarity"],
         parse_failure_rate=div(c["parse_fail"], c["docs"]), low_confidence_rate=div(c["low_conf"], c["items"]),
     )
     for f in MED_FIELDS:

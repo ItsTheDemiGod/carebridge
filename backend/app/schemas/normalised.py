@@ -1,6 +1,7 @@
 """Medication after rule-based normalisation. Every changed value keeps the model's value, the rule's value and its provenance."""
 
 from enum import Enum
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -55,8 +56,12 @@ class NormalisedMedication(BaseModel):
     confidence: Confidence
 
     flags: list[str] = Field(default_factory=list)
-    needs_verification: bool = False
-    reasons: list[str] = Field(default_factory=list)
+    review_level: Literal["must_confirm", "note", "none"] = "none"
+    needs_verification: bool = False  # alias: True exactly when review_level is must_confirm
+    reasons: list[str] = Field(default_factory=list, description="Why review is needed (must_confirm flags, low_confidence, incomplete_quote details).")
+    interaction_ready: bool = Field(False, description="resolved_generic from an EXACT printed formulary name and review_level is not must_confirm. Phase 4 checks interactions only for these.")
+    schedule_ready: bool = Field(False, description="Daily, known times_per_day and timing_label, not PRN, review_level is not must_confirm. Phase 6 builds reminders only for these.")
+    quote_check: str | None = Field(None, description="Only when document text was supplied (evaluation/tests): exact | normalised_exact | strict_fuzzy | failed.")
 
 
 class NormalisedDocument(BaseModel):
