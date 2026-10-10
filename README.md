@@ -35,6 +35,10 @@ Phase 2 (extraction runs locally with Ollama; only synthetic documents are ever 
     backend\.venv\Scripts\python data\render_documents.py
     backend\.venv\Scripts\python -m eval.evaluate --split dev --run-id my-run
 
+Normalisation re-score (no model calls, uses cached outputs of a finished run):
+
+    backend\.venv\Scripts\python -m eval.evaluate --split dev --run-id dev-ollama-v1 --rescore normalised
+
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
 See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.

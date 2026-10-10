@@ -74,3 +74,11 @@
 **Limitations**: one small model; the name-field confusion (brand vs generic) is unresolved; no Gemini baseline exists; PDFs unsupported locally; 8 GB GPU means about 30 s per document; the 1500-token image check threshold is calibrated on only a few images.
 **Phase 3**: plain-language explanation (EN/TA/HI) with faithfulness verification; Phase 7 can retune the prompt (combine the AC/PC rule with v1).
 **Sanity metric limit**: threshold 0.8 flags grossly wrong names only; a one-letter garble such as `AtoRavastatin` still scores 0.96 against `atorvastatin`. Exact-name accuracy against ground truth (acc_brand_name/acc_generic_name) is the stricter check.
+
+## Phase 2h: Normalisation layer (DONE)
+**Built**: `backend/app/normalisation/abbreviations.py` (deterministic frequency/timing/PRN/duration rules from the verbatim quote, ambiguity flags), `names.py` (formulary resolver; thresholds chosen from the formulary's own confusable pairs), `services/normalisation.py` + `schemas/normalised.py` (rule value final, model value and provenance kept, flags, needs_verification), `eval/rescore.py` (raw vs normalised from cached outputs, flag effectiveness). Rules and numbers: `docs/NORMALISATION.md`.
+**Run**: `python -m eval.evaluate --split dev --run-id dev-ollama-v1 --rescore normalised` (no model calls).
+**Dev result (prompt v1 cached outputs, all conditions, raw -> normalised)**: medicine F1 0.983 -> 0.998; fully-correct medicines 0.31 -> 0.81; timing label 0.73 -> 0.99; brand 0.67 -> 0.98; generic 0.73 -> 0.99; hallucinated medicines 7 -> 1; invented-value rate 0.29 -> 0.056. 133 of 420 medicines flagged for verification; 1 name error and 1 timing error remain unflagged.
+**Tested**: 149 offline tests (67 abbreviation cases, resolver incl. every formulary name, service).
+**Limits**: 66-drug formulary and synthetic names make name scores optimistic; rules depend on the model's quote being complete; flag precision is low (0.10 for names); one revision used.
+**Next**: Phase 3 (explanation EN/TA/HI + faithfulness); Phase 4 will use `resolved_generic` for interaction checks.

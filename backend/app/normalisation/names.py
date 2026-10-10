@@ -108,8 +108,8 @@ def scan_quote(quote: str, guard: bool = True):
 
 
 def _clean(name: str) -> str:
-    """Name without form words and numeric tokens (strength), for the in-quote check only."""
-    return "".join(key(t) for t in _tokens(name) if t.lower() not in FORM_WORDS and not any(c.isdigit() for c in t))
+    """Name without form words and strength tokens (those starting with a digit: 500, 500mg), so D3 or XR stay part of a name."""
+    return "".join(key(t) for t in _tokens(name) if t.lower() not in FORM_WORDS and not t[0].isdigit())
 
 
 def _in_quote(name: str, quote: str) -> bool:
@@ -155,9 +155,9 @@ def resolve_names(brand: str | None, generic: str | None, quote: str, strength: 
 
     # final names: only text that the document prints. Role comes from the formulary, not from the model's field choice.
     def own(name):  # a model name the formulary does not know, but which IS in the quote: keep as written, flagged
-        return name if name and _in_quote(name, quote) and key(name) not in index() else None
+        return name if name and _in_quote(name, quote) and key(name) not in index() and key(_clean(name)) not in index() else None
 
-    r.final_brand = r.printed_brand or (own(brand) if not r.printed_generic and not hits else None)
+    r.final_brand = r.printed_brand or own(brand)
     r.final_generic = r.printed_generic or (own(generic) if not hits else None)
     # never copy a generic into the brand field
     if r.final_brand and r.final_generic and key(r.final_brand) == key(r.final_generic):
@@ -168,9 +168,9 @@ def resolve_names(brand: str | None, generic: str | None, quote: str, strength: 
             r.flags.append("name_not_in_quote")
             break
     wrote = {"brand": key(_clean(brand or "")), "generic": key(_clean(generic or ""))}
-    if (r.printed_brand and wrote["generic"] == key(r.printed_brand)) or (r.printed_generic and wrote["brand"] == key(r.printed_generic)) or (
-        wrote["brand"] and wrote["brand"] == wrote["generic"]
-    ):
+    if wrote["brand"] and wrote["brand"] == wrote["generic"]:
+        r.flags.append("duplicate_name_fields")  # same name in both fields: the other printed name was probably lost
+    elif (r.printed_brand and wrote["generic"] == key(r.printed_brand)) or (r.printed_generic and wrote["brand"] == key(r.printed_generic)):
         r.flags.append("role_corrected")
     if not (r.final_brand or r.final_generic) and not {"unresolved_name", "multiple_drugs_in_quote", "possible_combination"} & set(r.flags):
         r.flags.append("missing_name")

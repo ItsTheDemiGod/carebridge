@@ -24,6 +24,7 @@ TIME_WORDS = {  # label -> patterns (hs / at bedtime = bedtime, "night" = night)
     "afternoon": [r"afternoon"],
     "evening": [r"evening"],
 }
+NON_DAILY = r"(?:weekly|(?:once|twice|thrice|\d+ times?) (?:a|per) week|every other day|alternate days?|monthly|fortnightly|every \d+ days?)"
 EYE_RE = re.compile(r"(?<![a-z0-9])(?:eyes?|ocular|ophthalmic)(?![a-z0-9])")
 
 
@@ -111,6 +112,9 @@ def derive(quote: str, form: str | None = None) -> Derived:
     eye = form == "drops" or bool(EYE_RE.search(t))
 
     freqs = _frequencies(t, eye, d.flags)
+    if re.search(_tok(NON_DAILY), t):  # times_per_day cannot express "once weekly": derive nothing and flag
+        d.flags.append("non_daily_frequency")
+        freqs = set()
     prn = bool(re.search(_tok(PRN_RE), t))
     d.is_prn = True if prn else None
     if len(freqs) > 1:

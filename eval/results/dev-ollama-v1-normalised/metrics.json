@@ -611,7 +611,7 @@
    "hallucinated_meds": 0,
    "hallucinated_followups": 0,
    "hallucinated_redflags": 0,
-   "invented_value_rate": 0.0614,
+   "invented_value_rate": 0.0526,
    "quote_exact_rate": 0.7925,
    "quote_fuzzy_rate": 1.0,
    "parse_failure_rate": 0.0,
@@ -624,9 +624,9 @@
    "acc_is_prn": 0.9881,
    "acc_duration_days": 0.9643,
    "acc_brand_name": 0.9643,
-   "acc_generic_name": 0.9881,
+   "acc_generic_name": 1.0,
    "exact_ci_brand_name": 0.9643,
-   "exact_ci_generic_name": 0.9881,
+   "exact_ci_generic_name": 1.0,
    "invented_strength": {
     "of_null": 2,
     "invented": 2,
@@ -664,9 +664,9 @@
    },
    "invented_generic_name": {
     "of_null": 36,
-    "invented": 1,
+    "invented": 0,
     "role_confusion": 0,
-    "in_document": 1,
+    "in_document": 0,
     "made_up": 0
    }
   },
@@ -757,7 +757,7 @@
    "hallucinated_meds": 1,
    "hallucinated_followups": 0,
    "hallucinated_redflags": 0,
-   "invented_value_rate": 0.0982,
+   "invented_value_rate": 0.0893,
    "quote_exact_rate": 0.7044,
    "quote_fuzzy_rate": 1.0,
    "parse_failure_rate": 0.0,
@@ -769,9 +769,9 @@
    "acc_timing_label": 0.9759,
    "acc_is_prn": 0.988,
    "acc_duration_days": 0.9277,
-   "acc_brand_name": 0.9398,
+   "acc_brand_name": 0.9518,
    "acc_generic_name": 0.9518,
-   "exact_ci_brand_name": 0.9398,
+   "exact_ci_brand_name": 0.9518,
    "exact_ci_generic_name": 0.9518,
    "invented_strength": {
     "of_null": 2,
@@ -803,8 +803,8 @@
    },
    "invented_brand_name": {
     "of_null": 22,
-    "invented": 2,
-    "role_confusion": 1,
+    "invented": 1,
+    "role_confusion": 0,
     "in_document": 0,
     "made_up": 1
    },
@@ -830,7 +830,7 @@
    "hallucinated_meds": 1,
    "hallucinated_followups": 0,
    "hallucinated_redflags": 0,
-   "invented_value_rate": 0.0599,
+   "invented_value_rate": 0.0563,
    "quote_exact_rate": 0.8113,
    "quote_fuzzy_rate": 1.0,
    "parse_failure_rate": 0.0,
@@ -842,10 +842,10 @@
    "acc_timing_label": 0.9905,
    "acc_is_prn": 0.9928,
    "acc_duration_days": 0.969,
-   "acc_brand_name": 0.9761,
-   "acc_generic_name": 0.9833,
-   "exact_ci_brand_name": 0.9761,
-   "exact_ci_generic_name": 0.9833,
+   "acc_brand_name": 0.9785,
+   "acc_generic_name": 0.9857,
+   "exact_ci_brand_name": 0.9785,
+   "exact_ci_generic_name": 0.9857,
    "invented_strength": {
     "of_null": 10,
     "invented": 10,
@@ -876,16 +876,16 @@
    },
    "invented_brand_name": {
     "of_null": 114,
-    "invented": 2,
-    "role_confusion": 1,
+    "invented": 1,
+    "role_confusion": 0,
     "in_document": 0,
     "made_up": 1
    },
    "invented_generic_name": {
     "of_null": 180,
-    "invented": 2,
+    "invented": 1,
     "role_confusion": 0,
-    "in_document": 1,
+    "in_document": 0,
     "made_up": 1
    }
   }
@@ -976,8 +976,8 @@
   "normalised": {
    "by_condition": {
     "clean": 0,
-    "photo": 1,
-    "poor": 4,
+    "photo": 2,
+    "poor": 3,
     "scan": 2,
     "text": 0
    },
@@ -989,6 +989,13 @@
      "Caipol",
      "calpol",
      0.83
+    ],
+    [
+     "photo",
+     "ds_037",
+     "Telms",
+     "telma",
+     0.8
     ],
     [
      "poor",
@@ -1003,13 +1010,6 @@
      "Vertolin",
      "ventolin",
      0.88
-    ],
-    [
-     "poor",
-     "ds_036",
-     "T. CALCIUM CARBONATE + VITAMIN D3",
-     "calcium carbonate + vitamin d3",
-     0.95
     ],
     [
      "poor",
@@ -1040,33 +1040,47 @@
    "medications": 420,
    "remaining_errors": 14,
    "needs_verification": {
-    "flag_recall": 1.0,
-    "flag_precision": 0.055,
-    "flagged": 255,
-    "unflagged_errors": 0
+    "flag_recall": 0.929,
+    "flag_precision": 0.098,
+    "flagged": 133,
+    "unflagged_errors": 1
    },
    "field_specific_flags": {
-    "flag_recall": 0.786,
-    "flag_precision": 0.193,
-    "flagged": 57,
-    "unflagged_errors": 3
+    "flag_recall": 0.929,
+    "flag_precision": 0.119,
+    "flagged": 109,
+    "unflagged_errors": 1
    },
-   "unflagged_examples": []
+   "unflagged_examples": [
+    {
+     "condition": "scan",
+     "doc": "ds_026",
+     "predicted": [
+      null,
+      "Pantoprazole"
+     ],
+     "ground_truth": [
+      "PANTOP",
+      "PANTOPRAZOLE"
+     ],
+     "quote": "6) TAB PANTOPRAZOLE 40 MG 1-0-0 AC X 5/7"
+    }
+   ]
   },
   "timing": {
    "medications": 420,
    "remaining_errors": 4,
    "needs_verification": {
-    "flag_recall": 0.5,
-    "flag_precision": 0.008,
-    "flagged": 255,
-    "unflagged_errors": 2
+    "flag_recall": 0.75,
+    "flag_precision": 0.023,
+    "flagged": 133,
+    "unflagged_errors": 1
    },
    "field_specific_flags": {
-    "flag_recall": 0.0,
-    "flag_precision": 0.0,
-    "flagged": 109,
-    "unflagged_errors": 4
+    "flag_recall": 0.25,
+    "flag_precision": 0.067,
+    "flagged": 15,
+    "unflagged_errors": 3
    },
    "unflagged_examples": [
     {
@@ -1075,28 +1089,23 @@
      "predicted": "unspecified",
      "ground_truth": "before_meals",
      "quote": "Tab. Pantoprazole 40 mg 1 tab OD x 5/7"
-    },
-    {
-     "condition": "text",
-     "doc": "ds_036",
-     "predicted": "as_needed",
-     "ground_truth": "unspecified",
-     "quote": "(4) Cap Uprise-D3 60000IU 1 cap once weekly x 8 weeks"
     }
    ]
   }
  },
  "flag_counts": {
-  "role_corrected": 116,
   "conflict_timing_label": 109,
+  "role_corrected": 61,
+  "duplicate_name_fields": 59,
   "near_miss_name": 38,
   "name_not_in_quote": 19,
   "conflict_duration_days": 18,
   "unusual_strength": 16,
+  "non_daily_frequency": 15,
   "conflict_times_per_day": 13,
   "unresolved_name": 8
  },
  "medications_total": 420,
- "medications_needing_verification": 255,
+ "medications_needing_verification": 133,
  "timing_rule_overrides": 109
 }

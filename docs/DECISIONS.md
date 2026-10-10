@@ -44,3 +44,9 @@
 - **Wire schema for Ollama**: the JSON schema sent in `format` is the Pydantic schema with every object property marked `required` (`require_all`). Reason: with Pydantic's default (only `document_type` required) the model answered with no medications. `$defs`/`$ref`, enums and nullable `anyOf` were accepted as-is. Pydantic validation on our side is unchanged. Included in the cache tag (`wire-required-all`).
 - **Prompt choice**: v1 kept as default after v2/v3 (see docs/PROMPT_LOG.md).
 - **No Gemini baseline**: the earlier Gemini dev run was incomplete; comparison would need a quota-limited rerun.
+
+## Phase 2h
+- **Fix in code, not in the prompt**: two prompt revisions failed, so timing/frequency/duration and name roles are derived after extraction by deterministic rules (docs/NORMALISATION.md). The rule value is final when it derives something; disagreements are kept as `conflict_*` flags.
+- **Fuzzy name threshold 0.92**: above the most confusable formulary pair (omeprazole/esomeprazole 0.91), so a fuzzy match cannot land on another drug; fuzzy matches are always flagged `near_miss_name`.
+- **Evaluation pairs a medicine if raw OR normalised names match**, so normalisation cannot improve F1 by hiding a medicine or lose it by dropping a name.
+- **Audit-only flags** (`conflict_*`, `role_corrected`) do not raise `needs_verification` after the Step 6 revision (255/420 flagged before, 133/420 after).

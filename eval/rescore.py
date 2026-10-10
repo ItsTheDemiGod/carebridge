@@ -20,8 +20,8 @@ from app.services.normalisation import normalise_document  # noqa: E402
 from eval.matching import NAME_THRESHOLD, field_value, med_similarity, norm_name, one_to_one, score_document, summarize  # noqa: E402
 from eval.name_sanity import _norm, formulary_names  # noqa: E402
 
-NAME_FLAGS = {"unresolved_name", "near_miss_name", "name_not_in_quote", "multiple_drugs_in_quote", "possible_combination", "missing_name"}
-TIMING_FLAGS = {"conflict_timing_label", "conflicting_meal_relation"}
+NAME_FLAGS = {"unresolved_name", "duplicate_name_fields", "near_miss_name", "name_not_in_quote", "multiple_drugs_in_quote", "possible_combination", "missing_name"}
+TIMING_FLAGS = {"conflicting_meal_relation", "conflicting_frequency", "non_daily_frequency", "ambiguous_OD"}
 NEAR_RATIO = 0.8
 HEAD = ["med_precision", "med_recall", "med_f1", "med_fully_correct_rate", "hallucinated_meds", "invented_value_rate", "followup_precision", "followup_recall",
         "redflag_precision", "redflag_recall", "quote_exact_rate", "quote_fuzzy_rate"]

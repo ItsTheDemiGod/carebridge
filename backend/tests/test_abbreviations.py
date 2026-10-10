@@ -111,3 +111,11 @@ def test_meal_beats_time_word_and_prn():
     assert derive("Tab X OD at night after food").timing_label == "after_meals"
     assert derive("Tab X SOS at night").timing_label == "night"
     assert derive("Tab X BD morning and night").timing_label == "unspecified"  # two time words: no single label
+
+
+def test_non_daily_frequency_derives_nothing_and_flags():
+    for q in ("Cap X 60000IU once weekly x 8 weeks", "Tab X weekly", "Tab X twice a week", "Tab X every other day", "Tab X alternate days", "Tab X monthly"):
+        d = derive(q)
+        assert d.times_per_day is None and "non_daily_frequency" in d.flags, q
+    assert derive("Cap X once weekly x 8 weeks").duration_days == 56
+    assert "non_daily_frequency" not in derive("Tab X BD x 8 weeks").flags

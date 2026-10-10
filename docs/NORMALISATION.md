@@ -29,7 +29,9 @@ Scan the quote for formulary names: exact n-gram matches (up to 5 tokens, longes
 | `unresolved_name` | no formulary name found in the quote; names kept as written, no drug forced |
 | `near_miss_name` | a name is close to, but not exactly, a formulary name (fuzzy-accepted or only suggested); see `near_miss_name` field |
 | `name_not_in_quote` | a name the model returned is not in its own quote |
-| `role_corrected` | the model put a generic in the brand field (or reverse), or wrote one name in both fields |
+| `role_corrected` | the model put a generic in the brand field (or reverse); audit-only |
+| `duplicate_name_fields` | the model wrote the same name in both fields; the other printed name was probably lost |
+| `non_daily_frequency` | weekly / monthly / alternate-day wording: `times_per_day` cannot express it, nothing derived |
 | `missing_name` | no usable name at all |
 | `multiple_drugs_in_quote`, `possible_combination` | see above |
 | `unusual_strength` | strength is not one of the formulary strengths for the resolved drug (not changed) |
@@ -37,10 +39,26 @@ Scan the quote for formulary names: exact n-gram matches (up to 5 tokens, longes
 | `ambiguous_OD`, `conflicting_*` | rules refused to derive a value |
 | low confidence | model said `low`; added to `reasons` |
 
-`needs_verification` is true if any flag is raised or the model's confidence is low; `reasons` lists them.
+`needs_verification` is true if any flag except the audit-only ones (`conflict_*`, `role_corrected`) is raised, or the model's confidence is low; `reasons` lists them. All flags stay in `flags` (audit trail). Before the revision below, every flag raised it.
 
 ## Results (dev, prompt v1, cached outputs of `dev-ollama-v1`)
 See `eval/results/dev-ollama-v1-normalised/metrics.md` (raw and normalised side by side, flag effectiveness).
+
+## The one revision (Step 6), general rules only
+Evidence from the first pass: 255 of 420 medicines needed verification (61%) and flag precision was 0.055 for names, because `conflict_*` and `role_corrected` mostly describe cases the rules had already fixed. Changes: (1) those flags became audit-only; new `duplicate_name_fields` (verify) separates "same name in both fields" from a plain role swap; (2) `non_daily_frequency` rule (weekly etc. derive nothing and flag); (3) an unknown model-written brand that is in the quote is kept even when a generic is printed (strength and form words are stripped before the formulary check; a first version of that strip also dropped tokens like `D3` and kept a formulary generic as a brand: fixed, tested).
+
+| dev, all conditions | before | after |
+|---|---|---|
+| medicines needing verification | 255 / 420 | 133 / 420 |
+| name errors remaining / unflagged (needs_verification) | 14 / 0 | 14 / 1 |
+| name flag precision (needs_verification) | 0.055 | 0.098 |
+| name flag recall | 1.0 | 0.929 |
+| timing errors remaining / unflagged | 4 / 2 | 4 / 1 |
+| timing flag recall / precision | 0.5 / 0.008 | 0.75 / 0.023 |
+| brand accuracy | 0.976 | 0.979 |
+| invented-value rate | 0.060 | 0.056 |
+
+The trade is explicit: precision doubled and the flagged load halved, at the cost of one remaining unflagged name error (a brand missing from both the model's fields and its quote, shown as null, not a wrong name). Flag precision is still low because most flags (near-miss, duplicate name fields) fire on medicines whose final values are correct; they are warnings about the model's input, not about the output.
 
 ## Limits
 - The formulary has **66 drugs**. Real-world names outside it are `unresolved_name` and flagged, never forced.

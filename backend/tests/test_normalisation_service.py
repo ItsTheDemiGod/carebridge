@@ -20,7 +20,7 @@ def test_rule_overrides_model_and_records_conflict():
     m = med(quote="Tab Glucophage 500 mg 1 tab BD PC", brand="Glucophage", times=2, timing="before_meals", strength="500 mg")
     t = m.frequency.timing_label
     assert (t.value, t.provenance.value, t.model_value, t.rule_value) == ("after_meals", "conflict", "before_meals", "after_meals")
-    assert "conflict_timing_label" in m.flags and m.needs_verification
+    assert "conflict_timing_label" in m.flags and not m.needs_verification  # audit-only: the rule value is final
     assert m.frequency.times_per_day.provenance.value == "rule"  # model agreed
 
 
@@ -61,3 +61,15 @@ def test_low_confidence_needs_verification():
 def test_ambiguous_od_keeps_model_value_and_flags():
     m = med(quote="Eye drops Xyz 1 drop OD", brand="Xyz", times=1, form="drops")
     assert "ambiguous_OD" in m.flags and m.frequency.times_per_day.provenance.value == "model" and m.needs_verification
+
+
+def test_duplicate_name_fields_needs_verification_but_role_swap_does_not():
+    m = med(quote="Tab Pantoprazole 40 mg OD", brand="Pantoprazole", generic="Pantoprazole", times=1, strength="40 mg")
+    assert "duplicate_name_fields" in m.flags and m.needs_verification and m.brand_name is None
+    m = med(quote="Tab Pantoprazole 40 mg OD", brand="Pantoprazole", times=1, strength="40 mg")
+    assert "role_corrected" in m.flags and not m.needs_verification
+
+
+def test_unknown_brand_kept_next_to_a_printed_generic():
+    m = med(quote="Tab Telmisartan (Zzqx) 40 mg OD", brand="Zzqx", generic="Telmisartan", times=1, strength="40 mg")
+    assert m.brand_name == "Zzqx" and m.generic_name == "Telmisartan" and m.resolved_generic == "Telmisartan"

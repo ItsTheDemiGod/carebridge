@@ -11,6 +11,10 @@ from app.schemas.extraction_output import ExtractionOutput, OutMedication
 from app.schemas.normalised import NormalisedDocument, NormalisedFrequency, NormalisedMedication, Provenance, Sourced
 
 
+# Recorded in `flags` (audit trail) but they describe something already resolved, so they do not raise needs_verification
+AUDIT_FLAGS = {"conflict_times_per_day", "conflict_timing_label", "conflict_is_prn", "conflict_duration_days", "role_corrected"}
+
+
 def _sourced(model_value, rule_value, derived: bool, flags: list[str], name: str) -> Sourced:
     if not derived:
         return Sourced(value=model_value, provenance=Provenance.model, model_value=model_value, rule_value=None)
@@ -37,7 +41,7 @@ def normalise_medication(m: OutMedication) -> NormalisedMedication:
     flags += names.flags
     flags = list(dict.fromkeys(flags))
 
-    reasons = list(flags)
+    reasons = [x for x in flags if x not in AUDIT_FLAGS]
     if m.confidence.value == "low":
         reasons.append("low_confidence")
     return NormalisedMedication(

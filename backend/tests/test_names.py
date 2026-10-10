@@ -118,3 +118,8 @@ def test_multiword_names():
 def test_garbled_combination_is_not_matched_to_one_component():
     r = resolve_names(None, None, "Tab moxicillin + clavulanicacid 625 mg")
     assert "possible_combination" in r.flags and r.resolved_generic is None
+
+
+def test_unknown_brand_check_does_not_keep_a_formulary_generic_with_a_digit_token():
+    r = resolve_names("T. Calcium carbonate + Vitamin D3", None, "T. Calcium carbonate + Vitamin D3 500mg 1 tab od")
+    assert r.final_brand is None and r.final_generic == "Calcium carbonate + Vitamin D3"

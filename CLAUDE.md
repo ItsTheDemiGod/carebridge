@@ -25,7 +25,8 @@ End goal: a professional web app first; a mobile app only if time allows. Colleg
 - backend/app/llm/ : base.py (Provider interface), ollama.py (localhost-only), gemini.py; LLM_PROVIDER selects (get_provider)
 - backend/app/{prompts,services}/ : extraction_v1..v3.txt (v1 is the default), extraction.py (provider-agnostic service + cache), guards.py (privacy + test-split guards)
 - backend/scripts/ : smoke_test_gemini.py, extract.py
-- eval/name_sanity.py : drug-name sanity diagnostic (names matching no formulary entry)
+- eval/name_sanity.py : drug-name sanity diagnostic (names matching no formulary entry); eval/rescore.py : raw vs normalised re-scoring from cached outputs
+- backend/app/normalisation/{abbreviations,names}.py, services/normalisation.py, schemas/normalised.py : rule-based normalisation (docs/NORMALISATION.md)
 - data/render_documents.py -> data/rendered/ (gitignored), data/cache/ (gitignored), docs/samples/render_preview.png
 - data/reference/ : fetch_ddinter.py, ddinter_coverage.py; docs/DDINTER_COVERAGE.md, docs/PROMPT_LOG.md
 - assets/ATTRIBUTION.md : photo credits (file, source URL, photographer, license)
@@ -35,6 +36,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 0 Setup and foundation
 - [x] 1 Synthetic data, schema, drug database choice
 - [x] 2 Document extraction pipeline plus evaluation script (local Ollama provider; dev run done, prompt v1 kept; see PROGRESS.md)
+- [x] 2h Normalisation layer (rules, formulary name resolver, flags; dev re-score from cache, no model calls)
 - [ ] 3 Plain-language explanation (EN/TA/HI) plus faithfulness verification
 - [ ] 4 Safety layer (interactions, red flags, no-diagnosis guardrail, low-confidence flag)
 - [ ] 5 Backend API, database, consent flow, encryption, delete-my-data
@@ -67,6 +69,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - Ollama config (backend/.env.example): LLM_PROVIDER (default ollama), OLLAMA_BASE_URL, OLLAMA_MODEL (qwen3-vl:8b-instruct; the plain qwen3-vl:8b tag is a thinking model that ignores think:false), OLLAMA_NUM_CTX 6144, OLLAMA_NUM_PREDICT 3000, OLLAMA_TIMEOUT_SECONDS, OLLAMA_KEEP_ALIVE 30m, OLLAMA_MAX_IMAGE_SIDE 1280.
 - GPU findings (RTX 4060 8 GB, OLLAMA_FLASH_ATTENTION=1, OLLAMA_KV_CACHE_TYPE=q8_0 set by the user): instruct tag is 91% GPU at ctx 6144, 89% at 8192. Longest dev doc uses about 2.2k prompt + 1.4k generated tokens, so 6144 is enough. About 30 s per call; a 100-call dev run takes about 50 minutes.
 - Guards: Ollama calls fail as context_truncated (output cut off or prompt+output reached num_ctx) or image_not_received (too few prompt tokens; without the image the model invents medicines). The evaluator reports such documents as skipped, never silently drops them.
+- NORMALISATION RULES: where the abbreviation table derives timing/frequency/duration from the verbatim source_quote, the RULE value is final (a disagreement is kept as a conflict flag); the model never sets a final value when a rule applies. Names are never silently corrected: as_written, printed (formulary spelling) and resolved_generic (provenance formulary) are kept apart; unknown names are flagged `unresolved_name`, never forced onto a drug. Synthetic names are all in the 66-drug formulary, so name scores are optimistic.
 
 ## Safety and product rules
 - CareBridge explains and organizes. It never diagnoses, never recommends changing a dose, and always tells users to confirm with their doctor.
@@ -102,5 +105,6 @@ Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`; O
 - Render: `python data\render_documents.py` (about 4 minutes; 240 PNG + 120 PDF)
 - Smoke: `python backend\scripts\smoke_test_gemini.py`; one doc: `python backend\scripts\extract.py ds_006 --condition clean`
 - Evaluate (dev): `python -m eval.evaluate --split dev --conditions text,clean,scan,photo,poor [--limit N] [--run-id NAME]`; oracle (no API): add `--oracle`
+- Re-score with normalisation (no model calls): `python -m eval.evaluate --split dev --run-id dev-ollama-v1 --rescore normalised` -> eval/results/dev-ollama-v1-normalised
 - Tests: `cd backend; .venv\Scripts\python -m pytest` (live API tests: `-m live`)
 - DDInter: `python data\reference\fetch_ddinter.py` then `python data\reference\ddinter_coverage.py`
