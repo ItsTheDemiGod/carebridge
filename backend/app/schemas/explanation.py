@@ -10,7 +10,7 @@ from pydantic import BaseModel, Field
 
 Lang = Literal["en", "ta", "hi"]
 LANGS: tuple[str, ...] = ("en", "ta", "hi")
-Kind = Literal["medicine", "follow_up", "advice", "warning", "not_found"]
+Kind = Literal["disclaimer", "medicine", "follow_up", "advice", "warning", "not_found"]
 LineStatus = Literal["template", "verified", "unverified", "original_only"]
 DisplayMode = Literal["explanation", "original_with_notice"]
 # not_required: English fixed text written by the authors. Every Tamil/Hindi string and every model-written line starts as draft_unreviewed.
@@ -26,6 +26,7 @@ class Verification(BaseModel):
     deterministic_reasons: list[str] = Field(default_factory=list, description="exact reason for every failed check")
     judge_verdict: Verdict | None = None
     judge_reason: str | None = None
+    candidate: str | None = Field(None, description="The model-written text that was checked. Kept for review; shown to the user ONLY when passed is True.")
     back_translation: str | None = Field(None, description="Tamil/Hindi only: literal English back-translation the judge saw.")
     passed: bool = False
     reason: str | None = Field(None, description="Why the line is not verified (first failing check, judge verdict, or model/call failure).")
