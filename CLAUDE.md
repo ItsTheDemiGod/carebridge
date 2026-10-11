@@ -30,6 +30,7 @@ End goal: a professional web app first; a mobile app only if time allows. Colleg
 - data/render_documents.py -> data/rendered/ (gitignored), data/cache/ (gitignored), docs/samples/render_preview.png
 - data/reference/ : fetch_ddinter.py, ddinter_coverage.py; docs/DDINTER_COVERAGE.md, docs/PROMPT_LOG.md
 - assets/ATTRIBUTION.md : photo credits (file, source URL, photographer, license)
+- Phase 3: backend/app/schemas/explanation.py; services/{templates,narrative,verification,explain,script}.py; prompts/narrative_v{1,2}/ (A simplify, B translate, C back-translate, D judge; v2 default); data/templates/{templates.json,review_sheet.csv}; scripts/{export_review_sheet,import_review_sheet,import_review_pack}.py; eval/{run_narrative,corruption_eval,make_corruptions,phase3_metrics,readability,make_review_pack}.py; docs/{EXPLANATION,EXPLANATION_PROMPT_LOG,TRANSLATION_REVIEW}.md; docs/review_pack/
 
 ## Phases
 Status: [x] done, [ ] not started, [~] in progress
@@ -38,7 +39,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 2 Document extraction pipeline plus evaluation script (local Ollama provider; dev run done, prompt v1 kept; see PROGRESS.md)
 - [x] 2h Normalisation layer (rules, formulary name resolver, flags; dev re-score from cache, no model calls)
 - [x] 2i Hardening: strict quote checks, incomplete_quote flag, review levels, interaction_ready / schedule_ready
-- [ ] 3 Plain-language explanation (EN/TA/HI) plus faithfulness verification
+- [x] 3 Plain-language explanation (EN/TA/HI) plus faithfulness verification (dev only; Tamil/Hindi quality not yet reviewed by natives)
 - [ ] 4 Safety layer (interactions, red flags, no-diagnosis guardrail, low-confidence flag)
 - [ ] 5 Backend API, database, consent flow, encryption, delete-my-data
 - [ ] 6 Web application UI
@@ -73,6 +74,13 @@ Status: [x] done, [ ] not started, [~] in progress
 - NORMALISATION RULES: where the abbreviation table derives timing/frequency/duration from the verbatim source_quote, the RULE value is final (a disagreement is kept as a conflict flag); the model never sets a final value when a rule applies. Names are never silently corrected: as_written, printed (formulary spelling) and resolved_generic (provenance formulary) are kept apart; unknown names are flagged `unresolved_name`, never forced onto a drug. Synthetic names are all in the 66-drug formulary, so name scores are optimistic.
 - READINESS RULE: each normalised medicine has review_level (must_confirm/note/none; needs_verification = alias of must_confirm), interaction_ready and schedule_ready. Interaction checks run ONLY for interaction_ready medicines (resolved_generic from an EXACT printed formulary name, never from the model's generic field); all others are reported "not checked". Reminders are built ONLY for schedule_ready medicines (daily, known times/timing, not PRN, never weekly); the user confirms the rest. Any new flag is must_confirm unless explicitly listed as note.
 - The normalisation service uses only the model's output; document text is optional (evaluation and tests only).
+
+## Explanation pipeline (Phase 3)
+- Works from the NORMALISED extraction only (never document text). Medicine lines: fixed templates (en/ta/hi), no model. Advice, follow-ups, warnings: local text-only model (A simplify en, B translate ta/hi, C back-translate, D judge).
+- A language text is "verified" only if ALL deterministic checks pass (id integrity, numbers, drug names, script, length, forbidden additions, urgency) AND the judge says supported. Otherwise the user sees the ORIGINAL extracted English with a fallback notice. Unverified text is never shown as verified. Each language falls back on its own.
+- Warning lines in output == extracted warnings (never dropped or merged). must_confirm medicines always carry the confirm banner; a medicine that is not schedule_ready is never "settled".
+- Every ta/hi string and model-written line is draft_unreviewed until the native-speaker CSV import (docs/TRANSLATION_REVIEW.md). Tamil is translated in chunks of 4 with per-line retry (repetition loops); deterministic failures are cached.
+- Dev numbers (v2): verified en 1.00, hi 0.76, ta 0.27. The same model writes and judges (weak judge). Cache: data/cache/narrative/. Run: `python -m eval.run_narrative --run-id phase3-dev-clean`.
 
 ## Safety and product rules
 - CareBridge explains and organizes. It never diagnoses, never recommends changing a dose, and always tells users to confirm with their doctor.

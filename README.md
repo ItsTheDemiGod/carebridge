@@ -41,6 +41,16 @@ Normalisation re-score (no model calls, uses cached outputs of a finished run):
 
 The re-score writes `eval/results/<run-id>-normalised-v2/` (raw vs normalised, quote checks, review levels, readiness).
 
+Phase 3 (explanations; local model, dev split, clean condition, resumable from the cache; python = `backend\.venv\Scripts\python`):
+
+    python -m eval.run_narrative --run-id phase3-dev-clean            (about 35 min cold, 8 model calls per document)
+    python -m eval.corruption_eval --run-id phase3-dev-clean          (known-fault detection; judge calls are cached)
+    python -m eval.phase3_metrics --run-id phase3-dev-clean           (writes eval/results/phase3-dev-clean/metrics.{json,md})
+    python -m eval.make_review_pack                                  (docs/review_pack/, no model calls)
+    python scripts\export_review_sheet.py                            (data/templates/review_sheet.csv for native review)
+    python scripts\import_review_sheet.py returned.csv --reviewer AB (refuses the whole file on any bad row)
+    python scripts\import_review_pack.py returned_ta.csv --reviewer AB
+
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
 See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.

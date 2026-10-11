@@ -57,3 +57,13 @@
 - **incomplete_quote** derives only from the model's output. One revision after dev results: the timing and frequency parts count only when the unsupported value survives or is a meal relation.
 - **Safe-by-default flag tiers**: any flag not listed in NOTE_FLAGS is must_confirm. role_corrected was promoted to must_confirm (name-related, sat on a real error). conflict_* stay note (as must_confirm: 65% load, no extra error caught).
 - **interaction_ready needs an EXACT printed name**; fuzzy-accepted names show resolved_generic but are never interaction_ready. schedule_ready excludes PRN and non-daily.
+
+## Phase 3
+- **Templates for medicines, model only for free text**: medicine lines are deterministic and reviewable; the model never writes a dose, name or schedule.
+- **Fallback rule**: a language text that fails verification is replaced by the original extracted English plus a notice, per language. Unverified text is never labelled verified; the rejected text is kept in the verification record for reviewers only.
+- **Verified = all deterministic checks AND judge supported**. Thresholds (verification.py, script.py): English >= 0.9 Latin letters; Tamil/Hindi >= 0.8 target-script letters outside Latin tokens (fails closed when none); length bounds; numbers compared as sets with Unicode digits normalised; drug names compared against the formulary in both directions.
+- **Batch anomalies fail the batch**: an extra id or changed order fails every line of that batch; a missing or duplicate id fails that line.
+- **Tamil chunking** (4 lines, per-line retry) and failure caching: a code fix for repetition loops, not a prompt change. Hindi stays one call per document.
+- **Prompt v2 kept** (one of two revisions used): only the translate prompt changed (general rules). Numbers in docs/EXPLANATION_PROMPT_LOG.md.
+- **Probe lines** for the drug-name and urgency corruption types because dev lines contain neither; labelled as probes, not from dev documents.
+- **No new dependencies**: readability, script detection and CSV use the standard library.
