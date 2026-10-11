@@ -111,3 +111,31 @@ def test_full_document_makes_eight_calls(tmp_path):
     assert len(seen) == 8 and len(n.calls()) == 8 and all(s.ok for s in (n.simplified, *n.translated.values(), *n.back.values(), *n.judged.values()))
     assert n.judged["ta"].values["a1"] == ("supported", "same")
     assert json.loads(seen[2]["messages"][1]["content"])["language"] == "Tamil" and json.loads(seen[5]["messages"][1]["content"])["language"] == "Hindi"
+
+
+def test_tamil_translation_is_chunked_and_a_failed_chunk_fails_only_its_ids(tmp_path):
+    plain = {f"a{i}": f"text {i}" for i in range(6)}
+    first = out([(f"a{i}", "t") for i in range(4)], "text")
+    trunc = httpx.Response(200, json={**body("{}"), "done_reason": "length"})
+    seq = [httpx.Response(200, json=body(first)), trunc, trunc, trunc]  # second chunk fails, then each of its two lines fails alone
+    p = OllamaProvider(transport=httpx.MockTransport(lambda r: seq.pop(0)))
+    s = nv.translate(plain, "ta", p, tmp_path)
+    assert set(s.values) == {"a0", "a1", "a2", "a3"} and s.id_problems == {"a4": "call_failed: context_truncated", "a5": "call_failed: context_truncated"}
+    assert "context_truncated" in s.call.error and not s.batch_problems
+
+
+def test_hindi_translation_is_one_call(tmp_path):
+    plain = {f"a{i}": "t" for i in range(6)}
+    s = nv.translate(plain, "hi", provider(out([(i, "x") for i in plain], "text")), tmp_path)
+    assert len(seen) == 1 and len(s.values) == 6
+
+
+def test_failed_chunk_is_retried_line_by_line_and_failures_are_cached(tmp_path):
+    plain = {"a0": "x", "a1": "loops"}
+    trunc = httpx.Response(200, json={**body("{}"), "done_reason": "length"})
+    seq = [trunc, httpx.Response(200, json=body(out([("a0", "t")], "text"))), trunc]
+    p = OllamaProvider(transport=httpx.MockTransport(lambda r: seq.pop(0)))
+    s = nv.translate(plain, "hi", p, tmp_path)
+    assert s.values == {"a0": "t"} and s.id_problems == {"a1": "call_failed: context_truncated"}
+    s2 = nv.translate(plain, "hi", OllamaProvider(transport=httpx.MockTransport(lambda r: 1 / 0)), tmp_path)  # everything now comes from the cache, failures included
+    assert s2.values == {"a0": "t"} and s2.id_problems == s.id_problems

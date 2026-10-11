@@ -1,0 +1,155 @@
+{
+ "run_id": "phase3-dev-clean",
+ "documents": 20,
+ "lines": 135,
+ "lines_by_kind": {
+  "follow_up": 21,
+  "advice": 60,
+  "warning": 54
+ },
+ "medicine_lines": 84,
+ "verified_share": {
+  "en": {
+   "all": 1.0,
+   "advice": 1.0,
+   "follow_up": 1.0,
+   "warning": 1.0
+  },
+  "ta": {
+   "all": 0.2,
+   "advice": 0.3,
+   "follow_up": 0.095,
+   "warning": 0.13
+  },
+  "hi": {
+   "all": 0.696,
+   "advice": 0.8,
+   "follow_up": 0.714,
+   "warning": 0.574
+  }
+ },
+ "line_verified_all_languages": 0.156,
+ "fallback_rate": {
+  "en": 0.0,
+  "ta": 0.8,
+  "hi": 0.304
+ },
+ "failure_reasons": {
+  "en": {},
+  "ta": {
+   "judge:contradicts": 43,
+   "judge:omits_information": 29,
+   "no_model_text": 18,
+   "judge:adds_information": 11,
+   "forbidden_additions": 6,
+   "judge:unclear": 1
+  },
+  "hi": {
+   "judge:contradicts": 17,
+   "judge:omits_information": 14,
+   "judge:adds_information": 6,
+   "forbidden_additions": 2,
+   "script": 1,
+   "numbers": 1
+  }
+ },
+ "deterministic_check_failures_any": {
+  "en": {},
+  "ta": {
+   "forbidden_additions": 6
+  },
+  "hi": {
+   "script": 1,
+   "forbidden_additions": 2,
+   "numbers": 1
+  }
+ },
+ "judge_verdicts": {
+  "en": {
+   "supported": 135
+  },
+  "ta": {
+   "null": 18,
+   "supported": 29,
+   "omits_information": 31,
+   "contradicts": 45,
+   "adds_information": 11,
+   "unclear": 1
+  },
+  "hi": {
+   "supported": 97,
+   "omits_information": 14,
+   "contradicts": 18,
+   "adds_information": 6
+  }
+ },
+ "latency_s_by_call_type": {
+  "simplify": {
+   "n": 20,
+   "median": 7.1,
+   "p95": 9.2,
+   "max": 13.6
+  },
+  "translate": {
+   "n": 40,
+   "median": 15.1,
+   "p95": 103.2,
+   "max": 199.9
+  },
+  "back": {
+   "n": 40,
+   "median": 7.0,
+   "p95": 8.6,
+   "max": 8.9
+  },
+  "judge": {
+   "n": 60,
+   "median": 9.5,
+   "p95": 13.2,
+   "max": 14.3
+  }
+ },
+ "calls": {
+  "total": 160,
+  "failed": 5,
+  "errors": {
+   "context_truncated": 5
+  },
+  "total_latency_s": 2165,
+  "tokens": 207322
+ },
+ "readability": {
+  "source": {
+   "lines": 135,
+   "fk_median": 3.65,
+   "fk_p25": 1.03,
+   "fk_p75": 6.42,
+   "fk_mean": 4.32,
+   "mean_sentence_len": 6.27,
+   "long_word_share": 0.011,
+   "pooled_fk_grade": 3.7
+  },
+  "plain_english_all": {
+   "lines": 135,
+   "fk_median": 2.88,
+   "fk_p25": 0.8,
+   "fk_p75": 4.96,
+   "fk_mean": 3.23,
+   "mean_sentence_len": 6.67,
+   "long_word_share": 0.008,
+   "pooled_fk_grade": 2.89
+  },
+  "plain_english_verified": {
+   "lines": 135,
+   "fk_median": 2.88,
+   "fk_p25": 0.8,
+   "fk_p75": 4.96,
+   "fk_mean": 3.23,
+   "mean_sentence_len": 6.67,
+   "long_word_share": 0.008,
+   "pooled_fk_grade": 2.89
+  },
+  "note": "English only; Tamil and Hindi readability is not scored."
+ },
+ "corruptions": null
+}

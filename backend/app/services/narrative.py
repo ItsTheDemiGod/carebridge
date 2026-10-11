@@ -18,7 +18,7 @@ from pydantic import BaseModel, ValidationError
 from app.llm.base import LLMError, Part
 from app.services.guards import REPO
 
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"
 PROMPT_ROOT = Path(__file__).resolve().parents[1] / "prompts"
 CACHE_DIR = REPO / "data" / "cache" / "narrative"  # gitignored (data/cache/)
 LANG_NAME = {"ta": "Tamil", "hi": "Hindi"}
@@ -116,6 +116,11 @@ def _key(provider, stage: str, version: str, system: str, user: str) -> str:
     return h
 
 
+def _store(f: Path, obj: dict) -> None:
+    f.parent.mkdir(parents=True, exist_ok=True)
+    f.write_text(json.dumps(obj, ensure_ascii=False), encoding="utf-8")
+
+
 def _generate(provider, system: str, user: str, schema, cache_dir, version: str, call: Call):
     """Returns the validated model output or None (call.error set). One retry on invalid JSON."""
     cdir = Path(cache_dir or CACHE_DIR)
@@ -123,6 +128,9 @@ def _generate(provider, system: str, user: str, schema, cache_dir, version: str,
     if f.exists():
         c = json.loads(f.read_text(encoding="utf-8"))
         call.cached, call.latency_s, call.usage, call.raw = True, c["latency_s"], c["usage"], c["raw"]
+        if c.get("error"):  # deterministic failure (temperature 0, fixed seed): repeating it would cost the same time again
+            call.error = c["error"]
+            return None
         return schema.model_validate_json(c["raw"])
     parts, start = [Part("text", user)], time.perf_counter()
     for _ in range(2):
@@ -132,6 +140,8 @@ def _generate(provider, system: str, user: str, schema, cache_dir, version: str,
             call.error, call.raw = e.reason, e.raw
             call.api_calls += e.calls
             call.latency_s = time.perf_counter() - start
+            if e.reason == "context_truncated":
+                _store(f, {"error": e.reason, "raw": (e.raw or "")[:300], "usage": e.usage, "latency_s": call.latency_s})
             return None
         call.api_calls += resp.calls
         for k, v in resp.usage.items():
@@ -145,10 +155,10 @@ def _generate(provider, system: str, user: str, schema, cache_dir, version: str,
     else:
         call.error = "validation_failed"
         call.latency_s = time.perf_counter() - start
+        _store(f, {"error": call.error, "raw": (call.raw or "")[:300], "usage": call.usage, "latency_s": call.latency_s})
         return None
     call.latency_s = time.perf_counter() - start
-    cdir.mkdir(parents=True, exist_ok=True)
-    f.write_text(json.dumps({"raw": call.raw, "usage": call.usage, "latency_s": call.latency_s}), encoding="utf-8")
+    _store(f, {"raw": call.raw, "usage": call.usage, "latency_s": call.latency_s})
     return out
 
 
@@ -167,8 +177,41 @@ def simplify(items: list[Item], provider, cache_dir=None, version=PROMPT_VERSION
     return _run(provider, "simplify", "en", {"items": [i.model_dump() for i in items]}, SimplifyOut, [i.id for i in items], lambda x: x.plain_english, cache_dir, version)
 
 
+TRANSLATE_CHUNK = {"ta": 4}  # Tamil costs many tokens per word: a whole document overran the 6144 context, so Tamil goes in chunks
+
+
+def _merge(parts: list[tuple[list[str], Stage]], stage: str, lang: str) -> Stage:
+    call = Call(stage, lang, cached=all(p.call.cached for _, p in parts), latency_s=sum(p.call.latency_s for _, p in parts), api_calls=sum(p.call.api_calls for _, p in parts),
+                error="; ".join(sorted({p.call.error for _, p in parts if p.call.error})) or None)
+    st = Stage(call)
+    for c, p in parts:
+        for k, v in p.call.usage.items():
+            call.usage[k] = call.usage.get(k, 0) + v
+        st.values.update(p.values)
+        st.id_problems.update(p.id_problems)
+        if p.call.error:  # a failed chunk fails only its own ids
+            st.id_problems.update({i: f"call_failed: {p.call.error}" for i in c})
+        else:
+            st.batch_problems += p.batch_problems
+    return st
+
+
 def translate(plain: dict[str, str], lang: str, provider, cache_dir=None, version=PROMPT_VERSION) -> Stage:
-    return _run(provider, "translate", lang, {"language": LANG_NAME[lang], "items": [{"id": i, "text": t} for i, t in plain.items()]}, TranslateOut, list(plain), lambda x: x.text, cache_dir, version)
+    """Chunked for Tamil. A failed chunk (for example a repetition loop on one line) is retried one line at a time, so only that line is lost."""
+    ids = list(plain)
+    n = TRANSLATE_CHUNK.get(lang, len(ids) or 1)
+
+    def one(c):
+        return _run(provider, "translate", lang, {"language": LANG_NAME[lang], "items": [{"id": i, "text": plain[i]} for i in c]}, TranslateOut, c, lambda x: x.text, cache_dir, version)
+
+    def safe(c):
+        st = one(c)
+        if st.call.error and len(c) > 1:
+            return _merge([([i], one([i])) for i in c], "translate", lang)
+        return st
+
+    chunks = [ids[k:k + n] for k in range(0, len(ids), n)]
+    return safe(ids) if len(chunks) <= 1 else _merge([(c, safe(c)) for c in chunks], "translate", lang)
 
 
 def back_translate(texts: dict[str, str], lang: str, provider, cache_dir=None, version=PROMPT_VERSION) -> Stage:

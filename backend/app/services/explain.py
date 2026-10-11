@@ -48,7 +48,7 @@ def _fixed(line_id: str, kind: str, template_id: str, **kw) -> ExplanationLine:
     return ExplanationLine(line_id=line_id, source_ref=None, kind=kind, text=T.lang_texts([(template_id, kw)]), source_text="", status="template", display_mode="explanation")
 
 
-def build_explanation(nd: NormalisedDocument, narrative: Narrative | None, document_id: str | None = None, model: str = "") -> ExplanationDocument:
+def build_explanation(nd: NormalisedDocument, narrative: Narrative | None, document_id: str | None = None, model: str = "", prompt_version: str = PROMPT_VERSION) -> ExplanationDocument:
     """narrative=None means the model did not run: every free-text line falls back to the original text."""
     verified = verify_narrative(narrative) if narrative is not None else {}
     by_id = {i.id: i for i in (narrative.items if narrative is not None else narrative_items(nd))}
@@ -70,5 +70,5 @@ def build_explanation(nd: NormalisedDocument, narrative: Narrative | None, docum
     assert len(sec["warnings"]) == len(nd.red_flags), "every extracted warning must produce exactly one output line"
     heads = {k: {lang: T.render(f"heading.{h}", lang) for lang in LANGS} for k, h in SECTIONS}
     return ExplanationDocument(
-        document_id=document_id, document_type=nd.document_type.value, templates_version=T.version(), prompt_version=PROMPT_VERSION, model=model,
+        document_id=document_id, document_type=nd.document_type.value, templates_version=T.version(), prompt_version=prompt_version, model=model,
         sections=[Section(id=k, heading=heads[k], lines=sec[k]) for k, _ in SECTIONS if sec[k] or k in ("disclaimer", "medicines")])

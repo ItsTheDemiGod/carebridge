@@ -1,0 +1,117 @@
+{
+ "run_id": "phase3-dev-clean",
+ "seed": 20261011,
+ "cap_per_type": 40,
+ "by_type": {
+  "en/clause_dropped": {
+   "n": 40,
+   "deterministic": 0.075,
+   "judge": 1.0,
+   "judge_n": 40,
+   "combined": 1.0,
+   "missed_by_both": []
+  },
+  "en/drug_name_swapped": {
+   "n": 12,
+   "deterministic": 1.0,
+   "judge": 1.0,
+   "judge_n": 12,
+   "combined": 1.0,
+   "missed_by_both": []
+  },
+  "en/invented_advice": {
+   "n": 40,
+   "deterministic": 0.6,
+   "judge": 1.0,
+   "judge_n": 40,
+   "combined": 1.0,
+   "missed_by_both": []
+  },
+  "en/negation_dropped": {
+   "n": 40,
+   "deterministic": 0.0,
+   "judge": 1.0,
+   "judge_n": 40,
+   "combined": 1.0,
+   "missed_by_both": []
+  },
+  "en/number_changed": {
+   "n": 40,
+   "deterministic": 1.0,
+   "judge": 1.0,
+   "judge_n": 40,
+   "combined": 1.0,
+   "missed_by_both": []
+  },
+  "en/timing_swapped": {
+   "n": 8,
+   "deterministic": 0.0,
+   "judge": 1.0,
+   "judge_n": 8,
+   "combined": 1.0,
+   "missed_by_both": []
+  },
+  "en/urgency_dropped": {
+   "n": 8,
+   "deterministic": 1.0,
+   "judge": 1.0,
+   "judge_n": 8,
+   "combined": 1.0,
+   "missed_by_both": []
+  },
+  "hi/number_changed": {
+   "n": 18,
+   "deterministic": 1.0,
+   "judge": 1.0,
+   "judge_n": 18,
+   "combined": 1.0,
+   "missed_by_both": []
+  },
+  "hi/wrong_script": {
+   "n": 40,
+   "deterministic": 1.0,
+   "judge": 0.0,
+   "judge_n": 40,
+   "combined": 1.0,
+   "missed_by_both": []
+  },
+  "ta/number_changed": {
+   "n": 3,
+   "deterministic": 1.0,
+   "judge": 1.0,
+   "judge_n": 3,
+   "combined": 1.0,
+   "missed_by_both": []
+  },
+  "ta/wrong_script": {
+   "n": 27,
+   "deterministic": 1.0,
+   "judge": 0.0,
+   "judge_n": 27,
+   "combined": 1.0,
+   "missed_by_both": []
+  }
+ },
+ "item_dropped": {
+  "n": 135,
+  "deterministic": 1.0,
+  "judge": null,
+  "combined": 1.0
+ },
+ "false_reject_identity": {
+  "n": 135,
+  "deterministic": 0.0,
+  "judge": 0.0,
+  "combined": 0.0
+ },
+ "model_plain_english_reject_rate": {
+  "n": 135,
+  "rejected": 0,
+  "note": "includes real model errors, so it is not a false-reject rate"
+ },
+ "judge_calls": {
+  "n": 119,
+  "fresh": 63,
+  "errors": []
+ }
+}

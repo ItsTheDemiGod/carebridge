@@ -1,0 +1,263 @@
+{
+ "run_id": "phase3-dev-clean",
+ "documents": 20,
+ "lines": 135,
+ "lines_by_kind": {
+  "follow_up": 21,
+  "advice": 60,
+  "warning": 54
+ },
+ "medicine_lines": 84,
+ "verified_share": {
+  "en": {
+   "all": 1.0,
+   "advice": 1.0,
+   "follow_up": 1.0,
+   "warning": 1.0
+  },
+  "ta": {
+   "all": 0.274,
+   "advice": 0.4,
+   "follow_up": 0.143,
+   "warning": 0.185
+  },
+  "hi": {
+   "all": 0.763,
+   "advice": 0.867,
+   "follow_up": 0.762,
+   "warning": 0.648
+  }
+ },
+ "line_verified_all_languages": 0.237,
+ "fallback_rate": {
+  "en": 0.0,
+  "ta": 0.726,
+  "hi": 0.237
+ },
+ "failure_reasons": {
+  "en": {},
+  "ta": {
+   "judge:contradicts": 49,
+   "judge:omits_information": 34,
+   "forbidden_additions": 8,
+   "judge:adds_information": 6,
+   "numbers": 1
+  },
+  "hi": {
+   "judge:omits_information": 15,
+   "judge:adds_information": 9,
+   "judge:contradicts": 7,
+   "script": 1
+  }
+ },
+ "deterministic_check_failures_any": {
+  "en": {},
+  "ta": {
+   "forbidden_additions": 9,
+   "numbers": 1
+  },
+  "hi": {
+   "script": 1
+  }
+ },
+ "judge_verdicts": {
+  "en": {
+   "supported": 135
+  },
+  "ta": {
+   "adds_information": 7,
+   "omits_information": 40,
+   "supported": 38,
+   "contradicts": 50
+  },
+  "hi": {
+   "supported": 104,
+   "omits_information": 15,
+   "adds_information": 9,
+   "contradicts": 7
+  }
+ },
+ "latency_s_by_call_type": {
+  "simplify": {
+   "n": 20,
+   "median": 7.1,
+   "p95": 8.2,
+   "max": 9.2
+  },
+  "translate": {
+   "n": 40,
+   "median": 13.9,
+   "p95": 34.9,
+   "max": 35.7
+  },
+  "back": {
+   "n": 40,
+   "median": 6.9,
+   "p95": 8.9,
+   "max": 9.2
+  },
+  "judge": {
+   "n": 60,
+   "median": 9.1,
+   "p95": 12.5,
+   "max": 13.9
+  }
+ },
+ "calls": {
+  "total": 160,
+  "failed": 0,
+  "errors": {},
+  "total_latency_s": 1622,
+  "tokens": 221296
+ },
+ "readability": {
+  "source": {
+   "lines": 135,
+   "fk_median": 3.65,
+   "fk_p25": 1.03,
+   "fk_p75": 6.42,
+   "fk_mean": 4.32,
+   "mean_sentence_len": 6.27,
+   "long_word_share": 0.011,
+   "pooled_fk_grade": 3.7
+  },
+  "plain_english_all": {
+   "lines": 135,
+   "fk_median": 2.88,
+   "fk_p25": 0.8,
+   "fk_p75": 5.23,
+   "fk_mean": 3.35,
+   "mean_sentence_len": 6.61,
+   "long_word_share": 0.008,
+   "pooled_fk_grade": 3.01
+  },
+  "plain_english_verified": {
+   "lines": 135,
+   "fk_median": 2.88,
+   "fk_p25": 0.8,
+   "fk_p75": 5.23,
+   "fk_mean": 3.35,
+   "mean_sentence_len": 6.61,
+   "long_word_share": 0.008,
+   "pooled_fk_grade": 3.01
+  },
+  "note": "English only; Tamil and Hindi readability is not scored."
+ },
+ "corruptions": {
+  "run_id": "phase3-dev-clean",
+  "seed": 20261011,
+  "cap_per_type": 40,
+  "by_type": {
+   "en/clause_dropped": {
+    "n": 40,
+    "deterministic": 0.075,
+    "judge": 1.0,
+    "judge_n": 40,
+    "combined": 1.0,
+    "missed_by_both": []
+   },
+   "en/drug_name_swapped": {
+    "n": 12,
+    "deterministic": 1.0,
+    "judge": 1.0,
+    "judge_n": 12,
+    "combined": 1.0,
+    "missed_by_both": []
+   },
+   "en/invented_advice": {
+    "n": 40,
+    "deterministic": 0.6,
+    "judge": 1.0,
+    "judge_n": 40,
+    "combined": 1.0,
+    "missed_by_both": []
+   },
+   "en/negation_dropped": {
+    "n": 40,
+    "deterministic": 0.0,
+    "judge": 1.0,
+    "judge_n": 40,
+    "combined": 1.0,
+    "missed_by_both": []
+   },
+   "en/number_changed": {
+    "n": 40,
+    "deterministic": 1.0,
+    "judge": 1.0,
+    "judge_n": 40,
+    "combined": 1.0,
+    "missed_by_both": []
+   },
+   "en/timing_swapped": {
+    "n": 8,
+    "deterministic": 0.0,
+    "judge": 1.0,
+    "judge_n": 8,
+    "combined": 1.0,
+    "missed_by_both": []
+   },
+   "en/urgency_dropped": {
+    "n": 8,
+    "deterministic": 1.0,
+    "judge": 1.0,
+    "judge_n": 8,
+    "combined": 1.0,
+    "missed_by_both": []
+   },
+   "hi/number_changed": {
+    "n": 19,
+    "deterministic": 1.0,
+    "judge": 1.0,
+    "judge_n": 19,
+    "combined": 1.0,
+    "missed_by_both": []
+   },
+   "hi/wrong_script": {
+    "n": 40,
+    "deterministic": 1.0,
+    "judge": 0.0,
+    "judge_n": 40,
+    "combined": 1.0,
+    "missed_by_both": []
+   },
+   "ta/number_changed": {
+    "n": 5,
+    "deterministic": 1.0,
+    "judge": 0.8,
+    "judge_n": 5,
+    "combined": 1.0,
+    "missed_by_both": []
+   },
+   "ta/wrong_script": {
+    "n": 37,
+    "deterministic": 1.0,
+    "judge": 0.0,
+    "judge_n": 37,
+    "combined": 1.0,
+    "missed_by_both": []
+   }
+  },
+  "item_dropped": {
+   "n": 135,
+   "deterministic": 1.0,
+   "judge": null,
+   "combined": 1.0
+  },
+  "false_reject_identity": {
+   "n": 135,
+   "deterministic": 0.0,
+   "judge": 0.0,
+   "combined": 0.0
+  },
+  "model_plain_english_reject_rate": {
+   "n": 135,
+   "rejected": 0,
+   "note": "includes real model errors, so it is not a false-reject rate"
+  },
+  "judge_calls": {
+   "n": 129,
+   "fresh": 121,
+   "errors": []
+  }
+ }
+}
