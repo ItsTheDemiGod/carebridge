@@ -1,0 +1,762 @@
+{
+ "version": "1",
+ "note": "No native Tamil or Hindi speaker has reviewed any ta/hi string yet: every one is draft_unreviewed. English strings are author-written (review_status not_required). Style for ta/hi: simple everyday words, short sentences, polite neutral register, gender-neutral verb forms where possible, Western digits 0-9, drug names kept in Latin script.",
+ "strings": {
+  "disclaimer": {
+   "en": {
+    "text": "This page explains your document in simple words. It is not medical advice. Please confirm everything with your doctor or pharmacist.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தப் பக்கம் உங்கள் ஆவணத்தை எளிய வார்த்தைகளில் விளக்குகிறது. இது மருத்துவ ஆலோசனை அல்ல. எல்லாவற்றையும் உங்கள் மருத்துவர் அல்லது மருந்தாளருடன் உறுதிசெய்யவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह पेज आपके दस्तावेज़ को आसान शब्दों में समझाता है। यह चिकित्सा सलाह नहीं है। कृपया हर बात की पुष्टि अपने डॉक्टर या फ़ार्मासिस्ट से करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "heading.disclaimer": {
+   "en": {
+    "text": "Please note",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "கவனிக்கவும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कृपया ध्यान दें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "heading.medicines": {
+   "en": {
+    "text": "Your medicines",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் மருந்துகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी दवाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "heading.follow_ups": {
+   "en": {
+    "text": "Follow-up visits",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மறுபரிசோதனை வருகைகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ॉलो-अप मुलाक़ात",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "heading.advice": {
+   "en": {
+    "text": "Diet and activity",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உணவு மற்றும் செயல்பாடு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खान-पान और गतिविधि",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "heading.warnings": {
+   "en": {
+    "text": "Warning signs",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எச்சரிக்கை அறிகுறிகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "चेतावनी के संकेत",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "heading.not_found": {
+   "en": {
+    "text": "Not found in your document",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் ஆவணத்தில் காணப்படவில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपके दस्तावेज़ में नहीं मिला",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.title": {
+   "en": {
+    "text": "{name}",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "{name}",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{name}",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.title_generic": {
+   "en": {
+    "text": "{name} (generic name: {generic})",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "{name} (பொதுப் பெயர்: {generic})",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{name} (जेनेरिक नाम: {generic})",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.name_missing": {
+   "en": {
+    "text": "Medicine name: not found in the document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மருந்தின் பெயர்: ஆவணத்தில் காணப்படவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दवा का नाम: दस्तावेज़ में नहीं मिला।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.strength": {
+   "en": {
+    "text": "Strength: {strength}.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "வீரியம்: {strength}.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दवा की ताक़त: {strength}।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.strength_missing": {
+   "en": {
+    "text": "Strength: not found in the document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "வீரியம்: ஆவணத்தில் காணப்படவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दवा की ताक़त: दस्तावेज़ में नहीं मिली।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.dose": {
+   "en": {
+    "text": "Dose each time: {dose}.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒவ்வொரு முறையும் அளவு: {dose}.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हर बार की मात्रा: {dose}।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.dose_missing": {
+   "en": {
+    "text": "Dose each time: not found in the document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒவ்வொரு முறையும் அளவு: ஆவணத்தில் காணப்படவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हर बार की मात्रा: दस्तावेज़ में नहीं मिली।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.times_missing": {
+   "en": {
+    "text": "Times per day: not found in the document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளில் எத்தனை முறை: ஆவணத்தில் காணப்படவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में कितनी बार: दस्तावेज़ में नहीं मिला।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.times_1": {
+   "en": {
+    "text": "{n} time a day.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளைக்கு {n} முறை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में {n} बार।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.as_needed": {
+   "en": {
+    "text": "Only when needed, as your document says.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தேவைப்படும்போது மட்டும், உங்கள் ஆவணத்தில் கூறியபடி.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ज़रूरत पड़ने पर ही, जैसा आपके दस्तावेज़ में लिखा है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.original": {
+   "en": {
+    "text": "Written in your document as: {original}",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் ஆவணத்தில் எழுதியிருப்பது: {original}",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपके दस्तावेज़ में लिखा है: {original}",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.non_daily": {
+   "en": {
+    "text": "This medicine is not taken every day. Your document says: {original}. Please confirm the schedule with your doctor or pharmacist.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்து தினமும் எடுக்க வேண்டியது அல்ல. உங்கள் ஆவணத்தில் உள்ளது: {original}. அட்டவணையை உங்கள் மருத்துவர் அல்லது மருந்தாளருடன் உறுதிசெய்யவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह दवा रोज़ नहीं ली जाती। आपके दस्तावेज़ में लिखा है: {original}। कृपया समय-सारणी की पुष्टि अपने डॉक्टर या फ़ार्मासिस्ट से करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.duration_1": {
+   "en": {
+    "text": "Duration: {n} day.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "காலம்: {n} நாள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अवधि: {n} दिन।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.duration_days": {
+   "en": {
+    "text": "Duration: {n} days.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "காலம்: {n} நாட்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अवधि: {n} दिन।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.duration_text": {
+   "en": {
+    "text": "Duration written in your document: {text}",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஆவணத்தில் உள்ள காலம்: {text}",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दस्तावेज़ में लिखी अवधि: {text}",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.duration_missing": {
+   "en": {
+    "text": "Duration: not stated in the document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "காலம்: ஆவணத்தில் குறிப்பிடப்படவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अवधि: दस्तावेज़ में नहीं लिखी है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.special": {
+   "en": {
+    "text": "Note in your document: {text}",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஆவணத்தில் உள்ள குறிப்பு: {text}",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दस्तावेज़ में लिखा नोट: {text}",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.schedule_unconfirmed": {
+   "en": {
+    "text": "Please confirm this schedule with your doctor or pharmacist before relying on it.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த அட்டவணையை நம்புவதற்கு முன் உங்கள் மருத்துவர் அல்லது மருந்தாளருடன் உறுதிசெய்யவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस समय-सारणी पर भरोसा करने से पहले अपने डॉक्टर या फ़ार्मासिस्ट से पुष्टि करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.unknown_value": {
+   "en": {
+    "text": "A detail was not understood. Please check your document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு விவரம் புரிந்துகொள்ள முடியவில்லை. உங்கள் ஆவணத்தைப் பார்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "एक जानकारी समझ नहीं आई। कृपया अपना दस्तावेज़ देखें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "timing.before_meals": {
+   "en": {
+    "text": "Before meals.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உணவுக்கு முன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खाने से पहले।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "timing.after_meals": {
+   "en": {
+    "text": "After meals.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உணவுக்குப் பின்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खाने के बाद।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "timing.with_meals": {
+   "en": {
+    "text": "With meals.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உணவுடன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खाने के साथ।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "timing.morning": {
+   "en": {
+    "text": "In the morning.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "காலையில்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सुबह।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "timing.afternoon": {
+   "en": {
+    "text": "In the afternoon.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மதியம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दोपहर में।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "timing.evening": {
+   "en": {
+    "text": "In the evening.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மாலையில்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "शाम को।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "timing.night": {
+   "en": {
+    "text": "At night.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இரவில்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रात को।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "timing.bedtime": {
+   "en": {
+    "text": "At bedtime.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தூங்கச் செல்லும் முன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सोने से पहले।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "timing.other": {
+   "en": {
+    "text": "Timing written in your document: {original}",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஆவணத்தில் உள்ள நேரம்: {original}",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दस्तावेज़ में लिखा समय: {original}",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "timing.unspecified": {
+   "en": {
+    "text": "No meal timing was found in the document. Please check the label or ask a pharmacist.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உணவு தொடர்பான நேரம் ஆவணத்தில் காணப்படவில்லை. லேபிளைப் பார்க்கவும் அல்லது மருந்தாளரிடம் கேட்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दस्तावेज़ में खाने के समय की जानकारी नहीं मिली। कृपया लेबल देखें या फ़ार्मासिस्ट से पूछें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "banner.must_confirm": {
+   "en": {
+    "text": "Please check this medicine against your document or label before using it.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்தைப் பயன்படுத்தும் முன் உங்கள் ஆவணம் அல்லது லேபிளுடன் சரிபார்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कृपया इस दवा का इस्तेमाल करने से पहले इसे अपने दस्तावेज़ या लेबल से मिलाकर जाँच लें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "notice.unresolved_name": {
+   "en": {
+    "text": "This medicine name was not found in our list. Please check the name against your document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்தின் பெயர் எங்கள் பட்டியலில் இல்லை. பெயரை உங்கள் ஆவணத்துடன் சரிபார்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस दवा का नाम हमारी सूची में नहीं मिला। कृपया नाम को अपने दस्तावेज़ से मिलाकर देखें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "notice.near_miss_name": {
+   "en": {
+    "text": "This name is close to, but not exactly the same as, a known medicine name. Please check the spelling against your document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தப் பெயர் அறியப்பட்ட மருந்துப் பெயருக்கு அருகில் உள்ளது, ஆனால் சரியாக ஒன்றல்ல. எழுத்துப்பிழையை உங்கள் ஆவணத்துடன் சரிபார்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह नाम एक जानी-पहचानी दवा के नाम के क़रीब है, पर बिल्कुल वही नहीं है। कृपया वर्तनी अपने दस्तावेज़ से मिलाकर देखें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "notice.unusual_strength": {
+   "en": {
+    "text": "This strength is not one we usually see for this medicine. Please check it against your document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்துக்கு இந்த வீரியம் வழக்கமாகக் காணப்படுவதில்லை. உங்கள் ஆவணத்துடன் சரிபார்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस दवा के लिए यह ताक़त आम तौर पर नहीं दिखती। कृपया इसे अपने दस्तावेज़ से मिलाकर देखें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "notice.non_daily_frequency": {
+   "en": {
+    "text": "This medicine may not be taken every day. Please confirm the schedule.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்து தினமும் எடுக்க வேண்டியதாக இல்லாமல் இருக்கலாம். அட்டவணையை உறுதிசெய்யவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हो सकता है यह दवा रोज़ न ली जाती हो। कृपया समय-सारणी की पुष्टि करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "notice.incomplete_quote": {
+   "en": {
+    "text": "Some of the text for this medicine may be missing or unclear. Please check it against your document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்தின் உரையில் சில பகுதிகள் விடுபட்டிருக்கலாம் அல்லது தெளிவாக இல்லாமல் இருக்கலாம். உங்கள் ஆவணத்துடன் சரிபார்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस दवा के पाठ का कुछ हिस्सा छूटा या अस्पष्ट हो सकता है। कृपया इसे अपने दस्तावेज़ से मिलाकर देखें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "notice.ambiguous_OD": {
+   "en": {
+    "text": "\"OD\" can mean once a day, or it can mean something else, such as the right eye. Please check with your doctor or pharmacist.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "\"OD\" என்பது ஒரு நாளைக்கு ஒரு முறை என்றும் பொருள்படலாம், அல்லது வலது கண் போன்ற வேறு பொருளும் இருக்கலாம். உங்கள் மருத்துவர் அல்லது மருந்தாளரிடம் கேட்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "\"OD\" का मतलब दिन में एक बार हो सकता है, या कुछ और भी, जैसे दाहिनी आँख। कृपया अपने डॉक्टर या फ़ार्मासिस्ट से पूछें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "fallback.notice": {
+   "en": {
+    "text": "Automatic explanation not available for this line. Showing the original text.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த வரிக்கு தானியங்கி விளக்கம் கிடைக்கவில்லை. அசல் உரை காட்டப்படுகிறது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस पंक्ति के लिए अपने-आप बनी व्याख्या उपलब्ध नहीं है। मूल पाठ दिखाया जा रहा है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "not_found.line": {
+   "en": {
+    "text": "Not found in the document: {item}.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஆவணத்தில் காணப்படவில்லை: {item}.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दस्तावेज़ में नहीं मिला: {item}।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "not_found.item.medicines": {
+   "en": {
+    "text": "medicines",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மருந்துகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दवाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "not_found.item.follow_ups": {
+   "en": {
+    "text": "follow-up visits",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மறுபரிசோதனை வருகைகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ॉलो-अप मुलाक़ात",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "not_found.item.advice": {
+   "en": {
+    "text": "diet or activity instructions",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உணவு அல்லது செயல்பாடு பற்றிய வழிமுறைகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खान-पान या गतिविधि के निर्देश",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "not_found.item.warnings": {
+   "en": {
+    "text": "warning signs",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எச்சரிக்கை அறிகுறிகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "चेतावनी के संकेत",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.times_2": {
+   "en": {
+    "text": "{n} times a day.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளைக்கு {n} முறை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में {n} बार।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.times_3": {
+   "en": {
+    "text": "{n} times a day.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளைக்கு {n} முறை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में {n} बार।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.times_4": {
+   "en": {
+    "text": "{n} times a day.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளைக்கு {n} முறை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में {n} बार।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.times_5": {
+   "en": {
+    "text": "{n} times a day.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளைக்கு {n} முறை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में {n} बार।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "med.times_6": {
+   "en": {
+    "text": "{n} times a day.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளைக்கு {n} முறை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में {n} बार।",
+    "review_status": "draft_unreviewed"
+   }
+  }
+ }
+}
