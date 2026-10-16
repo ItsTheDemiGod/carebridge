@@ -1,0 +1,300 @@
+{
+ "run_id": "phase3e-dev-clean",
+ "documents": 20,
+ "lines": 135,
+ "lines_by_kind": {
+  "follow_up": 21,
+  "advice": 60,
+  "warning": 54
+ },
+ "provenance_share": {
+  "en": {
+   "all": {
+    "n": 135,
+    "phrase_library": 0.067,
+    "model_checked": 0.933,
+    "original_only": 0.0,
+    "shown_in_language": 1.0,
+    "english_fallback": 0.0
+   },
+   "advice": {
+    "n": 60,
+    "phrase_library": 0.15,
+    "model_checked": 0.85,
+    "original_only": 0.0,
+    "shown_in_language": 1.0,
+    "english_fallback": 0.0
+   },
+   "follow_up": {
+    "n": 21,
+    "phrase_library": 0.0,
+    "model_checked": 1.0,
+    "original_only": 0.0,
+    "shown_in_language": 1.0,
+    "english_fallback": 0.0
+   },
+   "warning": {
+    "n": 54,
+    "phrase_library": 0.0,
+    "model_checked": 1.0,
+    "original_only": 0.0,
+    "shown_in_language": 1.0,
+    "english_fallback": 0.0
+   }
+  },
+  "ta": {
+   "all": {
+    "n": 135,
+    "phrase_library": 0.067,
+    "model_checked": 0.185,
+    "original_only": 0.748,
+    "shown_in_language": 0.252,
+    "english_fallback": 0.748
+   },
+   "advice": {
+    "n": 60,
+    "phrase_library": 0.15,
+    "model_checked": 0.3,
+    "original_only": 0.55,
+    "shown_in_language": 0.45,
+    "english_fallback": 0.55
+   },
+   "follow_up": {
+    "n": 21,
+    "phrase_library": 0.0,
+    "model_checked": 0.095,
+    "original_only": 0.905,
+    "shown_in_language": 0.095,
+    "english_fallback": 0.905
+   },
+   "warning": {
+    "n": 54,
+    "phrase_library": 0.0,
+    "model_checked": 0.093,
+    "original_only": 0.907,
+    "shown_in_language": 0.093,
+    "english_fallback": 0.907
+   }
+  },
+  "hi": {
+   "all": {
+    "n": 135,
+    "phrase_library": 0.067,
+    "model_checked": 0.741,
+    "original_only": 0.193,
+    "shown_in_language": 0.807,
+    "english_fallback": 0.193
+   },
+   "advice": {
+    "n": 60,
+    "phrase_library": 0.15,
+    "model_checked": 0.8,
+    "original_only": 0.05,
+    "shown_in_language": 0.95,
+    "english_fallback": 0.05
+   },
+   "follow_up": {
+    "n": 21,
+    "phrase_library": 0.0,
+    "model_checked": 0.81,
+    "original_only": 0.19,
+    "shown_in_language": 0.81,
+    "english_fallback": 0.19
+   },
+   "warning": {
+    "n": 54,
+    "phrase_library": 0.0,
+    "model_checked": 0.648,
+    "original_only": 0.352,
+    "shown_in_language": 0.648,
+    "english_fallback": 0.352
+   }
+  }
+ },
+ "phase3_verified_share": {
+  "en": {
+   "all": 1.0,
+   "advice": 1.0,
+   "follow_up": 1.0,
+   "warning": 1.0
+  },
+  "ta": {
+   "all": 0.274,
+   "advice": 0.4,
+   "follow_up": 0.143,
+   "warning": 0.185
+  },
+  "hi": {
+   "all": 0.763,
+   "advice": 0.867,
+   "follow_up": 0.762,
+   "warning": 0.648
+  }
+ },
+ "delta_shown_in_language_vs_phase3": {
+  "en": {
+   "all": 0.0,
+   "advice": 0.0,
+   "follow_up": 0.0,
+   "warning": 0.0
+  },
+  "ta": {
+   "all": -0.022,
+   "advice": 0.05,
+   "follow_up": -0.048,
+   "warning": -0.092
+  },
+  "hi": {
+   "all": 0.044,
+   "advice": 0.083,
+   "follow_up": 0.048,
+   "warning": 0.0
+  }
+ },
+ "matched_lines": [
+  {
+   "doc": "ds_006",
+   "line": "advice-3",
+   "text": "Drink only boiled or filtered water."
+  },
+  {
+   "doc": "ds_008",
+   "line": "advice-2",
+   "text": "Eat small, frequent meals."
+  },
+  {
+   "doc": "ds_023",
+   "line": "advice-0",
+   "text": "Drink plenty of water."
+  },
+  {
+   "doc": "ds_025",
+   "line": "advice-2",
+   "text": "Do not smoke."
+  },
+  {
+   "doc": "ds_026",
+   "line": "advice-2",
+   "text": "Eat small, frequent meals."
+  },
+  {
+   "doc": "ds_032",
+   "line": "advice-0",
+   "text": "Drink plenty of water."
+  },
+  {
+   "doc": "ds_040",
+   "line": "advice-2",
+   "text": "Keep the wound clean and dry."
+  },
+  {
+   "doc": "rx_003",
+   "line": "advice-0",
+   "text": "Drink plenty of water."
+  },
+  {
+   "doc": "rx_017",
+   "line": "advice-0",
+   "text": "Drink plenty of water."
+  }
+ ],
+ "near_miss_lines": 5,
+ "near_misses_top20": [
+  {
+   "line": "drink plenty of warm fluids",
+   "phrase": "adv.001",
+   "count": 4,
+   "ratio": 0.898,
+   "closest_wording": "Drink plenty of fluids."
+  },
+  {
+   "line": "walk for 30 minutes daily as tolerated",
+   "phrase": "adv.024",
+   "count": 2,
+   "ratio": 0.8,
+   "closest_wording": "Walk for {n} minutes daily."
+  },
+  {
+   "line": "reduce salt in food",
+   "phrase": "adv.011",
+   "count": 1,
+   "ratio": 0.809,
+   "closest_wording": "Reduce the salt in your food."
+  },
+  {
+   "line": "check blood sugar at home as advised",
+   "phrase": "adv.042",
+   "count": 1,
+   "ratio": 0.82,
+   "closest_wording": "Check blood sugar at home."
+  },
+  {
+   "line": "redness, swelling or discharge from the wound",
+   "phrase": "warn.033",
+   "count": 1,
+   "ratio": 0.837,
+   "closest_wording": "Watch for redness, swelling or discharge at the wound."
+  }
+ ],
+ "unmatched_line_frequency_top10": [
+  {
+   "line": "avoid smoke, dust and strong smells",
+   "count": 4
+  },
+  {
+   "line": "practise breathing exercises as taught",
+   "count": 4
+  },
+  {
+   "line": "drink plenty of warm fluids",
+   "count": 4
+  },
+  {
+   "line": "take rest and avoid smoke and dust",
+   "count": 4
+  },
+  {
+   "line": "fever that does not settle",
+   "count": 4
+  },
+  {
+   "line": "worsening breathlessness or chest pain",
+   "count": 4
+  },
+  {
+   "line": "do not hold urine for long periods",
+   "count": 4
+  },
+  {
+   "line": "worsening breathlessness",
+   "count": 3
+  },
+  {
+   "line": "lips or fingers turning bluish",
+   "count": 3
+  },
+  {
+   "line": "do deep breathing exercises as taught",
+   "count": 3
+  }
+ ],
+ "calls": {
+  "total": 160,
+  "fresh": 64,
+  "failed": 0,
+  "total_latency_s": 1798
+ },
+ "stress_source_coverage": {
+  "realistic_english_sources": {
+   "lines": 55,
+   "matched": 4,
+   "share": 0.073
+  },
+  "short_translation_sources": {
+   "lines": 12,
+   "matched": 6,
+   "share": 0.5
+  },
+  "note": "The short translation sources were written after the library and are biased towards it; the realistic sources are the second, independent estimate."
+ }
+}
