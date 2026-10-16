@@ -87,4 +87,6 @@ Not stored anywhere: names, accounts, email, IP address, the original unprocesse
 
 ## 7. End-of-phase status
 
-(Filled in at the end of Phase 5.)
+Offline tests: 716 pass (canary, cache-untouched, logging, Gemini fail-closed, IDOR over every route, CSRF, upload hardening, encryption, deletion, expiry).
+Live smoke (`docs/smoke/phase5_live_smoke.json`, clean and poor ds_037, real local model): full flow ran, deletion left 0 rows for the session (checked through a read-only SQLite connection), the server log held 0 occurrences of medicine or advice words.
+Not done / needs a human: lawyer review of the DPDP checklist and consent notice; native review of Tamil/Hindi consent, deletion and error strings (`data/templates/review_sheet_phase5_new.csv`); hosting is out of scope (cookie `Secure` and HTTPS must be set when deployed).

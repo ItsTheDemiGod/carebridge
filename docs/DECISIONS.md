@@ -83,3 +83,13 @@
 - **Guardrail blames a model line only for families absent from its source**, so faithfully copying the doctor's own instruction is not rejected; fixed templates are scanned without a source.
 - **Supplement `basis`**: pair_specific_label (5) or class_statement_applied (11); the pharmacist confirms class membership.
 - **Attribution line is English only** and lives in templates.json under `english_only` (not in review sheets).
+
+## Phase 5
+- **No accounts**: anonymous browser session, random token in an HttpOnly SameSite=Lax cookie; only its SHA-256 is stored; 24 h lifetime, lazy plus periodic erasure.
+- **SQLite** (stdlib, versioned migrations), journal_mode=DELETE and secure_delete so deleted rows leave no WAL; all content payloads Fernet-encrypted with the id and kind inside the envelope. Key from `scripts/generate_data_key.py`, never printed.
+- **Photo discarded by default**; opt-in `keep_photo_for_session` stores it encrypted (needed for retry only).
+- **Data origin**: `user_upload` is processed only by the localhost Ollama adapter (Gemini fails closed) and never touches `data/cache` (`extract_bytes`, `narrative.NO_CACHE`). Synthetic behaviour is byte-identical.
+- **Confirmation overlay** is a pure function over the normalised extraction; the frozen safety engine runs on the overlay. Name reasons clear only by choosing a formulary drug or confirming an exact identity (stricter than the brief: also missing_name, multiple_drugs_in_quote, possible_combination). Non-daily is never schedule_ready.
+- **Raw-body upload** (not multipart) to avoid a new dependency; OpenAPI declares image/png and image/jpeg.
+- **One worker, bounded queue**; narrative per language starts in the background at awaiting_confirmation, so confirmation overlaps it. Free-text lines show "still preparing" until ready.
+- **Reworded** the limit-reached string so the frozen "you have" guardrail rule does not flag it; the rule itself was not changed.

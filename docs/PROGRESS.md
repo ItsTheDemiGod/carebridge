@@ -119,3 +119,11 @@
 **Limits**: DDInter is partial, so most unchecked pairs say nothing; 11 of 16 supplement entries apply class-level label statements; ta/hi safety strings unreviewed; the extraction must see a medicine for it to be checked; dev set only.
 **Needs you**: send `send_to_reviewers/pharmacist/` to the pharmacist (about Oct 19 to 25) and `send_to_reviewers/tamil_hindi/` to the native reviewers; nothing is marked sent.
 **Next**: Phase 5 (backend API, database, consent, encryption, delete-my-data).
+
+## Phase 5: Backend API, database, consent, privacy, confirmation, schedule, delete-my-data (DONE; no UI)
+**Built**: FastAPI app factory (`app/main.py`), 21 paths (`docs/API.md`, `docs/openapi.json`); SQLite + Fernet (`app/db/`); sessions, consent notice v1, CSRF/Origin checks; raw-body upload with hardening; single worker with queue and timeout; medicines review and formulary picker; confirmation overlay (`docs/CONFIRMATION.md`); result, schedule (suggestions), adherence, doctor summary (counts only); delete-my-data with receipt, expiry sweep, logging policy; 91 new templates (ta/hi drafts); `docs/PRIVACY.md` (written first).
+**Run**: README (Phase 5). Key: `backend\.venv\Scripts\python scripts\generate_data_key.py`; API: `cd backend; .venv\Scripts\uvicorn app.main:app`; smoke: `python scripts\smoke_api.py`.
+**Tested**: 716 offline tests (was 483). Live smoke on dev ds_037, clean and poor: see `docs/smoke/phase5_live_smoke.json`. Extraction 59 s / 47 s, narrative en 24 s, ta 63-65 s (after extraction), total 147 s / 136 s; the narrative started at awaiting_confirmation and was still running when confirmation was sent; deletion left 0 rows.
+**Frozen code**: only additive changes (`extract_bytes`, origin guard, `NO_CACHE`).
+**Open**: ta/hi strings unreviewed (`data/templates/review_sheet_phase5_new.csv`); consent notice and DPDP checklist not lawyer-reviewed; the guardrail `you have` rule still false-flags "You have reached..."; Hindi narrative not exercised live; no auth beyond the anonymous session; single-process only.
+**Next**: Phase 6 (web UI).
