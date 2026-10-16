@@ -6,7 +6,7 @@ Unverified model text is never presented as verified; the fallback is the origin
 
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, computed_field
 
 Lang = Literal["en", "ta", "hi"]
 LANGS: tuple[str, ...] = ("en", "ta", "hi")
@@ -17,6 +17,20 @@ DisplayMode = Literal["explanation", "original_with_notice"]
 ReviewStatus = Literal["draft_unreviewed", "reviewed", "not_required"]
 Verdict = Literal["supported", "adds_information", "omits_information", "contradicts", "unclear"]
 Level = Literal["must_confirm", "note", "none"]
+# Where a displayed text came from. model_checked = written by the local model and passed software checks (never by a human).
+Provenance = Literal["template", "phrase_library", "model_checked", "original_only"]
+LabelKey = Literal["native_reviewed", "draft_unreviewed", "machine_checked", "original_only"]
+
+
+def label_key(provenance: str, review_status: str) -> str | None:
+    """Trust label for one displayed text. RULE: only a fixed (template / phrase_library) text whose review_status is `reviewed`
+    can be native_reviewed; a model-written text is machine_checked whatever its review_status says. Authored English
+    (review_status not_required) has no human-review claim to make, so it gets no label (None)."""
+    if provenance == "original_only":
+        return "original_only"
+    if provenance == "model_checked":
+        return "machine_checked"
+    return {"reviewed": "native_reviewed", "draft_unreviewed": "draft_unreviewed"}.get(review_status)
 
 
 class Verification(BaseModel):
@@ -38,6 +52,13 @@ class LangText(BaseModel):
     display_mode: DisplayMode = "explanation"
     review_status: ReviewStatus = "draft_unreviewed"
     verification: Verification = Field(default_factory=Verification)
+    provenance: Provenance = "template"
+    label: str | None = Field(None, description="Rendered label text (phrase_library and model_checked lines); the key is label_key.")
+
+    @computed_field
+    @property
+    def label_key(self) -> str | None:
+        return label_key(self.provenance, self.review_status)
 
 
 class Notice(BaseModel):
@@ -53,6 +74,7 @@ class ExplanationLine(BaseModel):
     kind: Kind
     text: dict[str, LangText]
     source_text: str = Field(description="The extracted English exactly as returned by extraction (medicines: the verbatim source quote).")
+    provenance: Provenance = Field("template", description="Line-level summary; the per-language LangText.provenance is authoritative (languages fall back independently).")
     status: LineStatus = Field(description="template | verified (all three languages) | unverified (any language failed) | original_only (no model text).")
     display_mode: DisplayMode = Field(description="Summary: explanation only if every language shows its explanation. Each LangText has its own mode.")
     review_level: Level = "none"

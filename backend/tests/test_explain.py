@@ -11,7 +11,14 @@ from app.schemas.extraction_output import Confidence, OutFollowUp, OutRedFlag
 from app.schemas.normalised import NormalisedDocument
 from app.services import narrative as nv
 from app.services import verification as vf
-from app.services.explain import build_explanation, narrative_items
+from app.services.explain import build_explanation as _build
+from app.services.explain import narrative_items
+
+
+def build_explanation(*a, **k):
+    """These tests exercise the MODEL path with plain lines that the phrase library would match; the library has its own tests."""
+    k.setdefault("use_library", False)
+    return _build(*a, **k)
 
 SRC = {
     "advice-0": "Drink 2 litres of water daily.",

@@ -157,5 +157,5 @@ def verify_narrative(nar: Narrative) -> dict[str, dict[str, tuple[str | None, Ve
 def lang_text_for(source: str, candidate: str | None, v: Verification) -> LangText:
     """Verified candidate is shown; otherwise the original extracted English, flagged original_with_notice."""
     if v.passed and candidate is not None:
-        return LangText(text=candidate, status="verified", display_mode="explanation", review_status="draft_unreviewed", verification=v)
-    return LangText(text=source, status="original_only" if candidate is None else "unverified", display_mode="original_with_notice", review_status="not_required", verification=v)
+        return LangText(text=candidate, status="verified", display_mode="explanation", review_status="draft_unreviewed", verification=v, provenance="model_checked")
+    return LangText(text=source, status="original_only" if candidate is None else "unverified", display_mode="original_with_notice", review_status="not_required", verification=v, provenance="original_only")

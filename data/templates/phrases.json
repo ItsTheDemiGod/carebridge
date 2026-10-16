@@ -1,0 +1,2013 @@
+{
+ "version": "1",
+ "note": "Authored blind: general knowledge of discharge wording only, no dev/test document and no model output was consulted. English is author-written (not_required); every ta/hi string is draft_unreviewed until the native-speaker import (docs/TRANSLATION_REVIEW.md). Style for ta/hi: simple everyday words, short sentences, neutral polite register, digits 0-9, no drug names.",
+ "phrases": [
+  {
+   "id": "adv.001",
+   "kind": "advice",
+   "topic": "fluids",
+   "english": "Drink plenty of fluids.",
+   "english_aliases": [
+    "Drink enough fluids.",
+    "Keep drinking plenty of fluids.",
+    "Take plenty of fluids."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "நிறைய திரவங்களைக் குடிக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खूब तरल पदार्थ पिएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.002",
+   "kind": "advice",
+   "topic": "fluids",
+   "english": "Drink plenty of water.",
+   "english_aliases": [
+    "Drink enough water.",
+    "Drink a lot of water.",
+    "Take plenty of water."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "நிறைய தண்ணீர் குடிக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खूब पानी पिएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.003",
+   "kind": "advice",
+   "topic": "fluids",
+   "english": "Drink {n} litres of water every day.",
+   "english_aliases": [
+    "Drink {n} litres of water daily.",
+    "Drink {n} litres of water a day.",
+    "Drink {n} liters of water every day."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 1,
+    "max": 5
+   },
+   "ta": {
+    "text": "தினமும் {n} லிட்டர் தண்ணீர் குடிக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रोज़ {n} लीटर पानी पिएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.004",
+   "kind": "advice",
+   "topic": "habits",
+   "english": "Avoid alcohol.",
+   "english_aliases": [
+    "Do not drink alcohol.",
+    "Avoid drinking alcohol.",
+    "Do not take alcohol."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "மது அருந்த வேண்டாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "शराब न पिएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.005",
+   "kind": "advice",
+   "topic": "habits",
+   "english": "Do not smoke.",
+   "english_aliases": [
+    "Avoid smoking.",
+    "Do not smoke cigarettes.",
+    "Do not smoke tobacco."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "புகை பிடிக்க வேண்டாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "धूम्रपान न करें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.006",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Eat light food that is easy to digest.",
+   "english_aliases": [
+    "Eat a light diet.",
+    "Eat light and easily digestible food.",
+    "Take light food that is easy to digest."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "எளிதில் செரிக்கும் லேசான உணவை உண்ணவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हल्का और आसानी से पचने वाला भोजन करें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.007",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Eat soft food.",
+   "english_aliases": [
+    "Eat a soft diet.",
+    "Take soft food.",
+    "Have a soft diet."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "மென்மையான உணவை உண்ணவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नरम भोजन करें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.008",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Eat small meals more often.",
+   "english_aliases": [
+    "Eat small, frequent meals.",
+    "Eat small frequent meals.",
+    "Take small meals many times a day."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "சிறிய அளவில் அடிக்கடி உணவு உண்ணவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "थोड़ा-थोड़ा करके बार-बार खाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.009",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Avoid oily and fried food.",
+   "english_aliases": [
+    "Do not eat oily or fried food.",
+    "Avoid fried and oily foods.",
+    "Do not eat fried or oily foods."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "எண்ணெய் மற்றும் பொரித்த உணவுகளைத் தவிர்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "तैलीय और तले हुए भोजन से बचें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.010",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Avoid spicy food.",
+   "english_aliases": [
+    "Do not eat spicy food.",
+    "Avoid spicy foods.",
+    "Do not eat spicy foods."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காரமான உணவைத் தவிர்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मसालेदार भोजन से बचें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.011",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Eat less salt.",
+   "english_aliases": [
+    "Reduce the salt in your food.",
+    "Use less salt in your food.",
+    "Take a low-salt diet."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "உணவில் உப்பைக் குறைவாகச் சேர்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खाने में नमक कम डालें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.012",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Avoid sweets and sugary drinks.",
+   "english_aliases": [
+    "Do not eat sweets or drink sugary drinks.",
+    "Avoid sugary foods and drinks.",
+    "Avoid sweets and sweetened drinks."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "இனிப்புகள் மற்றும் சர்க்கரை கலந்த பானங்களைத் தவிர்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मिठाई और चीनी वाले पेय से बचें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.013",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Avoid outside food.",
+   "english_aliases": [
+    "Do not eat outside food.",
+    "Avoid eating food from outside.",
+    "Avoid food from outside the home."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வெளியில் விற்கும் உணவைத் தவிர்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बाहर का खाना खाने से बचें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.014",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Do not skip meals.",
+   "english_aliases": [
+    "Do not miss meals.",
+    "Do not skip any meal.",
+    "Do not miss any meal."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "உணவு வேளைகளைத் தவிர்க்க வேண்டாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "भोजन न छोड़ें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.015",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Eat meals at regular times.",
+   "english_aliases": [
+    "Eat your meals on time.",
+    "Take meals at regular times.",
+    "Eat regular meals."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "சரியான நேரத்தில் உணவு உண்ணவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "समय पर भोजन करें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.016",
+   "kind": "advice",
+   "topic": "diet",
+   "english": "Eat plenty of fruits and vegetables.",
+   "english_aliases": [
+    "Eat more fruits and vegetables.",
+    "Include fruits and vegetables in your diet.",
+    "Have plenty of fresh fruits and vegetables."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "நிறைய பழங்கள் மற்றும் காய்கறிகளை உண்ணவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खूब फल और सब्ज़ियाँ खाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.017",
+   "kind": "advice",
+   "topic": "rest",
+   "english": "Take rest.",
+   "english_aliases": [
+    "Get plenty of rest.",
+    "Get enough rest.",
+    "Rest well.",
+    "Take adequate rest."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "ஓய்வு எடுக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आराम करें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.018",
+   "kind": "advice",
+   "topic": "rest",
+   "english": "Take rest for {n} days.",
+   "english_aliases": [
+    "Rest for {n} days.",
+    "Take rest at home for {n} days.",
+    "Rest at home for {n} days."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 2,
+    "max": 30
+   },
+   "ta": {
+    "text": "{n} நாட்கள் ஓய்வு எடுக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} दिन आराम करें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.019",
+   "kind": "advice",
+   "topic": "rest",
+   "english": "Get enough sleep.",
+   "english_aliases": [
+    "Sleep well.",
+    "Take adequate sleep.",
+    "Have a good night's sleep."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "போதுமான அளவு தூங்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पर्याप्त नींद लें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.020",
+   "kind": "advice",
+   "topic": "activity",
+   "english": "Avoid lifting heavy objects.",
+   "english_aliases": [
+    "Do not lift heavy objects.",
+    "Do not lift heavy weights.",
+    "Avoid lifting heavy weights.",
+    "Do not lift heavy things."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "கனமான பொருட்களைத் தூக்க வேண்டாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "भारी सामान न उठाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.021",
+   "kind": "advice",
+   "topic": "activity",
+   "english": "Avoid strenuous activity.",
+   "english_aliases": [
+    "Avoid strenuous exercise.",
+    "Do not do strenuous activity.",
+    "Avoid heavy physical activity.",
+    "Do not do heavy physical work."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "கடினமான உடல் உழைப்பைத் தவிர்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कठिन शारीरिक मेहनत से बचें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.022",
+   "kind": "advice",
+   "topic": "activity",
+   "english": "Return to normal activities slowly.",
+   "english_aliases": [
+    "Return to normal activities gradually.",
+    "Slowly return to your normal activities.",
+    "Gradually return to your normal activities.",
+    "Restart normal activities slowly."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வழக்கமான செயல்களுக்கு மெதுவாகத் திரும்பவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सामान्य गतिविधियों पर धीरे-धीरे लौटें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.023",
+   "kind": "advice",
+   "topic": "activity",
+   "english": "Walk a little every day.",
+   "english_aliases": [
+    "Walk a short distance every day.",
+    "Take short walks every day.",
+    "Go for a short walk every day.",
+    "Walk a little daily."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "தினமும் சிறிது நடக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रोज़ थोड़ा टहलें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.024",
+   "kind": "advice",
+   "topic": "activity",
+   "english": "Walk for {n} minutes every day.",
+   "english_aliases": [
+    "Walk for {n} minutes daily.",
+    "Walk for {n} minutes a day.",
+    "Walk {n} minutes every day."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 5,
+    "max": 60
+   },
+   "ta": {
+    "text": "தினமும் {n} நிமிடங்கள் நடக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रोज़ {n} मिनट टहलें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.025",
+   "kind": "advice",
+   "topic": "activity",
+   "english": "Do not drive.",
+   "english_aliases": [
+    "Avoid driving.",
+    "Do not drive a vehicle.",
+    "Avoid driving a vehicle."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வாகனம் ஓட்ட வேண்டாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "गाड़ी न चलाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.026",
+   "kind": "advice",
+   "topic": "activity",
+   "english": "Do not drive for {n} days.",
+   "english_aliases": [
+    "Avoid driving for {n} days.",
+    "Do not drive a vehicle for {n} days.",
+    "Avoid driving a vehicle for {n} days."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 2,
+    "max": 60
+   },
+   "ta": {
+    "text": "{n} நாட்கள் வாகனம் ஓட்ட வேண்டாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} दिन तक गाड़ी न चलाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.027",
+   "kind": "advice",
+   "topic": "activity",
+   "english": "Avoid crowded places.",
+   "english_aliases": [
+    "Stay away from crowded places.",
+    "Do not go to crowded places.",
+    "Avoid crowds."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "கூட்டமான இடங்களைத் தவிர்க்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "भीड़-भाड़ वाली जगहों से बचें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.028",
+   "kind": "advice",
+   "topic": "hygiene",
+   "english": "Wash your hands often with soap and water.",
+   "english_aliases": [
+    "Wash hands often with soap and water.",
+    "Wash your hands frequently with soap and water.",
+    "Wash your hands regularly with soap and water."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "சோப்பு மற்றும் தண்ணீரால் அடிக்கடி கைகளைக் கழுவவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "साबुन और पानी से बार-बार हाथ धोएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.029",
+   "kind": "advice",
+   "topic": "hygiene",
+   "english": "Wash your hands before eating.",
+   "english_aliases": [
+    "Wash your hands before meals.",
+    "Wash hands before eating.",
+    "Wash hands before meals."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "சாப்பிடுவதற்கு முன் கைகளைக் கழுவவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खाने से पहले हाथ धोएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.030",
+   "kind": "advice",
+   "topic": "hygiene",
+   "english": "Wash your hands before touching the wound or dressing.",
+   "english_aliases": [
+    "Wash your hands before touching the wound or the dressing.",
+    "Wash hands before touching the wound or dressing.",
+    "Wash your hands before you touch the wound or dressing."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காயம் அல்லது கட்டைத் தொடுவதற்கு முன் கைகளைக் கழுவவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घाव या पट्टी को छूने से पहले हाथ धोएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.031",
+   "kind": "advice",
+   "topic": "wound",
+   "english": "Keep the wound clean and dry.",
+   "english_aliases": [
+    "Keep the wound dry and clean.",
+    "Keep the wound area clean and dry.",
+    "Keep your wound clean and dry."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காயத்தைச் சுத்தமாகவும் உலர்ந்ததாகவும் வைத்திருக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घाव को साफ़ और सूखा रखें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.032",
+   "kind": "advice",
+   "topic": "wound",
+   "english": "Keep the wound dry.",
+   "english_aliases": [
+    "Keep the wound area dry.",
+    "Keep your wound dry.",
+    "Do not let the wound get wet.",
+    "Do not wet the wound."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காயத்தை உலர்ந்ததாக வைத்திருக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घाव को सूखा रखें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.033",
+   "kind": "advice",
+   "topic": "wound",
+   "english": "Do not scratch or touch the wound.",
+   "english_aliases": [
+    "Do not scratch or touch the wound area.",
+    "Avoid scratching or touching the wound.",
+    "Do not scratch or touch your wound."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காயத்தைச் சொறியவோ தொடவோ வேண்டாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घाव को खुजलाएँ या छुएँ नहीं।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.034",
+   "kind": "advice",
+   "topic": "wound",
+   "english": "Do not remove the dressing.",
+   "english_aliases": [
+    "Do not take off the dressing.",
+    "Leave the dressing in place.",
+    "Keep the dressing in place.",
+    "Do not remove the bandage."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "கட்டை அகற்ற வேண்டாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पट्टी न हटाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.035",
+   "kind": "advice",
+   "topic": "wound",
+   "english": "Change the dressing every day.",
+   "english_aliases": [
+    "Change the dressing daily.",
+    "Change the dressing once a day.",
+    "Change the bandage every day.",
+    "Change the bandage daily."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "தினமும் கட்டை மாற்றவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रोज़ पट्टी बदलें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.036",
+   "kind": "advice",
+   "topic": "wound",
+   "english": "Do not apply powder or oil to the wound.",
+   "english_aliases": [
+    "Do not put powder or oil on the wound.",
+    "Avoid applying powder or oil on the wound.",
+    "Do not apply oil or powder to the wound."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காயத்தின் மீது பொடி அல்லது எண்ணெய் தடவ வேண்டாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घाव पर पाउडर या तेल न लगाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.037",
+   "kind": "advice",
+   "topic": "wound",
+   "english": "Do not soak the wound in water.",
+   "english_aliases": [
+    "Avoid soaking the wound in water.",
+    "Do not put the wound in water.",
+    "Keep the wound out of water.",
+    "Avoid soaking the wound."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காயத்தைத் தண்ணீரில் ஊற வைக்க வேண்டாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घाव को पानी में न भिगोएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.038",
+   "kind": "advice",
+   "topic": "safe_water",
+   "english": "Drink boiled or filtered water.",
+   "english_aliases": [
+    "Drink only boiled or filtered water.",
+    "Drink clean boiled or filtered water.",
+    "Use only boiled or filtered water for drinking."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காய்ச்சிய அல்லது வடிகட்டிய தண்ணீரைக் குடிக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "उबला हुआ या छना हुआ पानी पिएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.039",
+   "kind": "advice",
+   "topic": "safe_water",
+   "english": "Use clean drinking water.",
+   "english_aliases": [
+    "Drink clean water.",
+    "Use safe drinking water.",
+    "Drink safe water."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "சுத்தமான குடிநீரைப் பயன்படுத்தவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "साफ़ पीने के पानी का उपयोग करें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.040",
+   "kind": "advice",
+   "topic": "monitoring",
+   "english": "Check your temperature at home.",
+   "english_aliases": [
+    "Monitor your temperature at home.",
+    "Check your body temperature at home.",
+    "Measure your temperature at home."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வீட்டில் உடல் வெப்பநிலையை அளவிடவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घर पर अपना तापमान जाँचें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.041",
+   "kind": "advice",
+   "topic": "monitoring",
+   "english": "Check your blood pressure at home.",
+   "english_aliases": [
+    "Monitor your blood pressure at home.",
+    "Measure your blood pressure at home.",
+    "Check blood pressure at home."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வீட்டில் இரத்த அழுத்தத்தை அளவிடவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घर पर अपना रक्तचाप जाँचें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.042",
+   "kind": "advice",
+   "topic": "monitoring",
+   "english": "Check your blood sugar at home.",
+   "english_aliases": [
+    "Monitor your blood sugar at home.",
+    "Measure your blood sugar at home.",
+    "Check blood sugar at home."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வீட்டில் இரத்தச் சர்க்கரையை அளவிடவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घर पर अपनी ब्लड शुगर जाँचें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.043",
+   "kind": "advice",
+   "topic": "monitoring",
+   "english": "Write down your readings.",
+   "english_aliases": [
+    "Keep a record of your readings.",
+    "Note down your readings.",
+    "Keep a written record of your readings."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "அளவீடுகளை எழுதி வைக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अपनी रीडिंग लिखकर रखें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "adv.044",
+   "kind": "advice",
+   "topic": "monitoring",
+   "english": "Watch for any new symptoms.",
+   "english_aliases": [
+    "Look out for any new symptoms.",
+    "Watch out for any new symptoms.",
+    "Keep an eye out for any new symptoms."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "புதிய அறிகுறிகள் ஏதேனும் உள்ளதா எனக் கவனிக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नए लक्षणों पर ध्यान दें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "warn.001",
+   "kind": "warning",
+   "topic": "return_fever",
+   "english": "Return to the hospital if there is fever.",
+   "english_aliases": [
+    "Return to hospital if you develop fever.",
+    "Come back to the hospital if there is fever.",
+    "Go back to the hospital if there is fever."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காய்ச்சல் இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बुखार हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.002",
+   "kind": "warning",
+   "topic": "return_fever",
+   "english": "Return to the hospital if there is fever with chills.",
+   "english_aliases": [
+    "Return to hospital if you develop fever with chills.",
+    "Come back to the hospital if there is fever with chills.",
+    "Go back to the hospital if there is fever with chills."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "குளிருடன் காய்ச்சல் இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ठंड के साथ बुखार हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.003",
+   "kind": "warning",
+   "topic": "return_fainting",
+   "english": "Return to the hospital if there is fainting.",
+   "english_aliases": [
+    "Return to hospital if you develop fainting.",
+    "Come back to the hospital if there is fainting.",
+    "Go back to the hospital if there is fainting."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "மயங்கி விழுந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बेहोशी हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.004",
+   "kind": "warning",
+   "topic": "return_dizziness",
+   "english": "Return to the hospital if there is dizziness.",
+   "english_aliases": [
+    "Return to hospital if you develop dizziness.",
+    "Come back to the hospital if there is dizziness.",
+    "Go back to the hospital if there is dizziness.",
+    "Return to the hospital if there is giddiness."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "தலைச்சுற்றல் இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "चक्कर आएँ तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.005",
+   "kind": "warning",
+   "topic": "return_swelling",
+   "english": "Return to the hospital if there is swelling.",
+   "english_aliases": [
+    "Return to hospital if you develop swelling.",
+    "Come back to the hospital if there is swelling.",
+    "Go back to the hospital if there is swelling."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வீக்கம் இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सूजन हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.006",
+   "kind": "warning",
+   "topic": "return_redness",
+   "english": "Return to the hospital if there is redness or swelling around the wound.",
+   "english_aliases": [
+    "Return to hospital if you develop redness or swelling around the wound.",
+    "Come back to the hospital if there is redness or swelling around the wound.",
+    "Go back to the hospital if there is redness or swelling around the wound."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காயத்தைச் சுற்றி சிவப்பு அல்லது வீக்கம் இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घाव के आसपास लालिमा या सूजन हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.007",
+   "kind": "warning",
+   "topic": "return_swelling",
+   "english": "Return to the hospital if there is swelling in the legs.",
+   "english_aliases": [
+    "Return to hospital if you develop swelling in the legs.",
+    "Come back to the hospital if there is swelling in the legs.",
+    "Go back to the hospital if there is swelling in the legs."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "கால்களில் வீக்கம் இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पैरों में सूजन हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.008",
+   "kind": "warning",
+   "topic": "return_severe",
+   "english": "Return to the hospital if there is severe pain.",
+   "english_aliases": [
+    "Return to hospital if you develop severe pain.",
+    "Come back to the hospital if there is severe pain.",
+    "Go back to the hospital if there is severe pain."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "கடுமையான வலி இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "तेज़ दर्द हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.009",
+   "kind": "warning",
+   "topic": "return_severe",
+   "english": "Return to the hospital if there is severe headache.",
+   "english_aliases": [
+    "Return to hospital if you develop severe headache.",
+    "Come back to the hospital if there is severe headache.",
+    "Go back to the hospital if there is severe headache."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "கடுமையான தலைவலி இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "तेज़ सिरदर्द हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.010",
+   "kind": "warning",
+   "topic": "return_pus",
+   "english": "Return to the hospital if there is pus or discharge from the wound.",
+   "english_aliases": [
+    "Return to hospital if you develop pus or discharge from the wound.",
+    "Come back to the hospital if there is pus or discharge from the wound.",
+    "Go back to the hospital if there is pus or discharge from the wound."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காயத்திலிருந்து சீழ் அல்லது திரவம் வெளியேறினால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घाव से मवाद या स्राव निकले तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.011",
+   "kind": "warning",
+   "topic": "return_blood",
+   "english": "Return to the hospital if there is blood in the stool.",
+   "english_aliases": [
+    "Return to hospital if you develop blood in the stool.",
+    "Come back to the hospital if there is blood in the stool.",
+    "Go back to the hospital if there is blood in the stool."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "மலத்தில் இரத்தம் இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मल में खून आए तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.012",
+   "kind": "warning",
+   "topic": "return_blood",
+   "english": "Return to the hospital if there is blood in the urine.",
+   "english_aliases": [
+    "Return to hospital if you develop blood in the urine.",
+    "Come back to the hospital if there is blood in the urine.",
+    "Go back to the hospital if there is blood in the urine."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "சிறுநீரில் இரத்தம் இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पेशाब में खून आए तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.013",
+   "kind": "warning",
+   "topic": "return_reduced",
+   "english": "Return to the hospital if there is reduced urine output.",
+   "english_aliases": [
+    "Return to hospital if you develop reduced urine output.",
+    "Come back to the hospital if there is reduced urine output.",
+    "Go back to the hospital if there is reduced urine output."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "சிறுநீர் அளவு குறைந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पेशाब की मात्रा कम हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.014",
+   "kind": "warning",
+   "topic": "return_confusion",
+   "english": "Return to the hospital if there is confusion.",
+   "english_aliases": [
+    "Return to hospital if you develop confusion.",
+    "Come back to the hospital if there is confusion.",
+    "Go back to the hospital if there is confusion."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "குழப்பம் ஏற்பட்டால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "भ्रम की स्थिति हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.015",
+   "kind": "warning",
+   "topic": "return_extreme",
+   "english": "Return to the hospital if there is extreme drowsiness.",
+   "english_aliases": [
+    "Return to hospital if you develop extreme drowsiness.",
+    "Come back to the hospital if there is extreme drowsiness.",
+    "Go back to the hospital if there is extreme drowsiness."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "அதிகமான தூக்க மயக்கம் இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बहुत ज़्यादा नींद आए तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.016",
+   "kind": "warning",
+   "topic": "return_a",
+   "english": "Return to the hospital if there is a seizure.",
+   "english_aliases": [
+    "Return to hospital if you develop a seizure.",
+    "Come back to the hospital if there is a seizure.",
+    "Go back to the hospital if there is a seizure."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வலிப்பு வந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दौरा पड़े तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.017",
+   "kind": "warning",
+   "topic": "return_persistent",
+   "english": "Return to the hospital if there is persistent diarrhoea.",
+   "english_aliases": [
+    "Return to hospital if you develop persistent diarrhoea.",
+    "Come back to the hospital if there is persistent diarrhoea.",
+    "Go back to the hospital if there is persistent diarrhoea.",
+    "Return to the hospital if there is persistent diarrhea."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வயிற்றுப்போக்கு நிற்காமல் தொடர்ந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दस्त लगातार होते रहें तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.018",
+   "kind": "warning",
+   "topic": "return_severe",
+   "english": "Return to the hospital if there is severe vomiting.",
+   "english_aliases": [
+    "Return to hospital if you develop severe vomiting.",
+    "Come back to the hospital if there is severe vomiting.",
+    "Go back to the hospital if there is severe vomiting."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "கடுமையான வாந்தி இருந்தால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "तेज़ उल्टी हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.019",
+   "kind": "warning",
+   "topic": "emergency_breathlessness",
+   "english": "Go to the emergency department immediately if there is breathlessness.",
+   "english_aliases": [
+    "Go to the emergency room immediately if there is breathlessness.",
+    "Go to the hospital immediately if there is breathlessness.",
+    "Go to the emergency department at once if there is breathlessness."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "மூச்சுத் திணறல் இருந்தால் உடனடியாக அவசர சிகிச்சைப் பிரிவுக்குச் செல்லவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "साँस फूले तो तुरंत आपातकालीन विभाग में जाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.020",
+   "kind": "warning",
+   "topic": "emergency_difficulty",
+   "english": "Go to the emergency department immediately if there is difficulty in breathing.",
+   "english_aliases": [
+    "Go to the emergency room immediately if there is difficulty in breathing.",
+    "Go to the hospital immediately if there is difficulty in breathing.",
+    "Go to the emergency department at once if there is difficulty in breathing.",
+    "Go to the emergency department immediately if there is trouble breathing."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "சுவாசிப்பதில் சிரமம் இருந்தால் உடனடியாக அவசர சிகிச்சைப் பிரிவுக்குச் செல்லவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "साँस लेने में तकलीफ़ हो तो तुरंत आपातकालीन विभाग में जाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.021",
+   "kind": "warning",
+   "topic": "emergency_chest",
+   "english": "Go to the emergency department immediately if there is chest pain.",
+   "english_aliases": [
+    "Go to the emergency room immediately if there is chest pain.",
+    "Go to the hospital immediately if there is chest pain.",
+    "Go to the emergency department at once if there is chest pain."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "நெஞ்சு வலி இருந்தால் உடனடியாக அவசர சிகிச்சைப் பிரிவுக்குச் செல்லவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सीने में दर्द हो तो तुरंत आपातकालीन विभाग में जाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.022",
+   "kind": "warning",
+   "topic": "emergency_bleeding",
+   "english": "Go to the emergency department immediately if there is bleeding.",
+   "english_aliases": [
+    "Go to the emergency room immediately if there is bleeding.",
+    "Go to the hospital immediately if there is bleeding.",
+    "Go to the emergency department at once if there is bleeding."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "இரத்தப்போக்கு இருந்தால் உடனடியாக அவசர சிகிச்சைப் பிரிவுக்குச் செல்லவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खून बहे तो तुरंत आपातकालीन विभाग में जाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.023",
+   "kind": "warning",
+   "topic": "emergency_heavy",
+   "english": "Go to the emergency department immediately if there is heavy bleeding.",
+   "english_aliases": [
+    "Go to the emergency room immediately if there is heavy bleeding.",
+    "Go to the hospital immediately if there is heavy bleeding.",
+    "Go to the emergency department at once if there is heavy bleeding."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "அதிக இரத்தப்போக்கு இருந்தால் உடனடியாக அவசர சிகிச்சைப் பிரிவுக்குச் செல்லவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बहुत ज़्यादा खून बहे तो तुरंत आपातकालीन विभाग में जाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.024",
+   "kind": "warning",
+   "topic": "emergency_weakness",
+   "english": "Go to the emergency department immediately if there is weakness on one side of the body.",
+   "english_aliases": [
+    "Go to the emergency room immediately if there is weakness on one side of the body.",
+    "Go to the hospital immediately if there is weakness on one side of the body.",
+    "Go to the emergency department at once if there is weakness on one side of the body."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "உடலின் ஒரு பக்கம் பலவீனமாக இருந்தால் உடனடியாக அவசர சிகிச்சைப் பிரிவுக்குச் செல்லவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "शरीर के एक तरफ़ कमज़ोरी हो तो तुरंत आपातकालीन विभाग में जाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.025",
+   "kind": "warning",
+   "topic": "return_clause_0",
+   "english": "Return to the hospital if the fever does not go down.",
+   "english_aliases": [
+    "Return to hospital if the fever does not come down.",
+    "Return to the hospital if the fever persists.",
+    "Return to the hospital if the fever continues."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காய்ச்சல் குறையவில்லை என்றால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बुखार कम न हो तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.026",
+   "kind": "warning",
+   "topic": "return_clause_1",
+   "english": "Return to the hospital if vomiting does not stop.",
+   "english_aliases": [
+    "Return to hospital if the vomiting does not stop.",
+    "Return to the hospital if vomiting continues.",
+    "Return to the hospital if there is persistent vomiting."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வாந்தி நிற்காவிட்டால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "उल्टी न रुके तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.027",
+   "kind": "warning",
+   "topic": "return_clause_2",
+   "english": "Return to the hospital if the pain gets worse.",
+   "english_aliases": [
+    "Return to hospital if the pain increases.",
+    "Return to the hospital if the pain worsens.",
+    "Return to the hospital if the pain becomes worse."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "வலி அதிகமானால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दर्द बढ़े तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.028",
+   "kind": "warning",
+   "topic": "return_clause_3",
+   "english": "Return to the hospital if symptoms get worse.",
+   "english_aliases": [
+    "Return to hospital if the symptoms worsen.",
+    "Return to the hospital if symptoms worsen.",
+    "Come back to the hospital if the symptoms get worse."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "அறிகுறிகள் மோசமானால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "लक्षण बिगड़ें तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.029",
+   "kind": "warning",
+   "topic": "return_clause_4",
+   "english": "Return to the hospital if new symptoms appear.",
+   "english_aliases": [
+    "Return to hospital if any new symptoms appear.",
+    "Return to the hospital if you notice new symptoms.",
+    "Return to the hospital if new symptoms develop."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "புதிய அறிகுறிகள் தோன்றினால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नए लक्षण दिखें तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.030",
+   "kind": "warning",
+   "topic": "return_clause_5",
+   "english": "Return to the hospital if you are unable to pass urine.",
+   "english_aliases": [
+    "Return to hospital if you cannot pass urine.",
+    "Return to the hospital if you are not able to pass urine.",
+    "Return to the hospital if you cannot urinate."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "சிறுநீர் கழிக்க முடியாவிட்டால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पेशाब न कर पाएँ तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.031",
+   "kind": "warning",
+   "topic": "return_clause_6",
+   "english": "Return to the hospital if the wound opens up.",
+   "english_aliases": [
+    "Return to hospital if the wound opens.",
+    "Return to the hospital if the wound reopens.",
+    "Return to the hospital if the wound opens again."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காயம் திறந்துவிட்டால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घाव खुल जाए तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.032",
+   "kind": "warning",
+   "topic": "return_clause_7",
+   "english": "Return to the hospital if breathlessness gets worse.",
+   "english_aliases": [
+    "Return to hospital if breathlessness increases.",
+    "Return to the hospital if breathlessness worsens.",
+    "Return to the hospital if the breathlessness becomes worse."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "மூச்சுத் திணறல் அதிகமானால் மருத்துவமனைக்குத் திரும்பி வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "साँस फूलना बढ़े तो अस्पताल वापस आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": true,
+   "notes": ""
+  },
+  {
+   "id": "warn.033",
+   "kind": "warning",
+   "topic": "watch_wound",
+   "english": "Watch for redness, swelling or discharge at the wound.",
+   "english_aliases": [
+    "Look out for redness, swelling or discharge at the wound.",
+    "Watch the wound for redness, swelling or discharge.",
+    "Check the wound for redness, swelling or discharge."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காயத்தில் சிவப்பு, வீக்கம் அல்லது திரவம் வெளியேறுகிறதா எனக் கவனிக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "घाव पर लालिमा, सूजन या स्राव पर नज़र रखें।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": false,
+   "notes": ""
+  },
+  {
+   "id": "warn.034",
+   "kind": "warning",
+   "topic": "watch_fever",
+   "english": "Watch for fever.",
+   "english_aliases": [
+    "Look out for fever.",
+    "Keep an eye out for fever.",
+    "Check for fever."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "காய்ச்சல் வருகிறதா எனக் கவனிக்கவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बुखार पर नज़र रखें।",
+    "review_status": "draft_unreviewed"
+   },
+   "urgent": false,
+   "notes": ""
+  },
+  {
+   "id": "fu.001",
+   "kind": "follow_up",
+   "topic": "review_time",
+   "english": "Review after {n} days.",
+   "english_aliases": [
+    "Follow up after {n} days.",
+    "Follow-up after {n} days.",
+    "Come for a review after {n} days.",
+    "Review in {n} days."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 2,
+    "max": 90
+   },
+   "ta": {
+    "text": "{n} நாட்களுக்குப் பிறகு மறுபரிசோதனைக்கு வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} दिन बाद दोबारा जाँच के लिए आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.002",
+   "kind": "follow_up",
+   "topic": "review_time",
+   "english": "Review after 1 week.",
+   "english_aliases": [
+    "Follow up after 1 week.",
+    "Follow-up after 1 week.",
+    "Come for a review after 1 week.",
+    "Review in 1 week."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "1 வாரத்திற்குப் பிறகு மறுபரிசோதனைக்கு வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "1 हफ़्ते बाद दोबारा जाँच के लिए आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.003",
+   "kind": "follow_up",
+   "topic": "review_time",
+   "english": "Review after {n} weeks.",
+   "english_aliases": [
+    "Follow up after {n} weeks.",
+    "Follow-up after {n} weeks.",
+    "Come for a review after {n} weeks.",
+    "Review in {n} weeks."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 2,
+    "max": 12
+   },
+   "ta": {
+    "text": "{n} வாரங்களுக்குப் பிறகு மறுபரிசோதனைக்கு வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} हफ़्ते बाद दोबारा जाँच के लिए आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.004",
+   "kind": "follow_up",
+   "topic": "review_time",
+   "english": "Review after 1 month.",
+   "english_aliases": [
+    "Follow up after 1 month.",
+    "Follow-up after 1 month.",
+    "Come for a review after 1 month.",
+    "Review in 1 month."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "1 மாதத்திற்குப் பிறகு மறுபரிசோதனைக்கு வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "1 महीने बाद दोबारा जाँच के लिए आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.005",
+   "kind": "follow_up",
+   "topic": "review_time",
+   "english": "Review after {n} months.",
+   "english_aliases": [
+    "Follow up after {n} months.",
+    "Follow-up after {n} months.",
+    "Come for a review after {n} months.",
+    "Review in {n} months."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 2,
+    "max": 12
+   },
+   "ta": {
+    "text": "{n} மாதங்களுக்குப் பிறகு மறுபரிசோதனைக்கு வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} महीने बाद दोबारा जाँच के लिए आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.006",
+   "kind": "follow_up",
+   "topic": "review_place",
+   "english": "Review in the clinic.",
+   "english_aliases": [
+    "Come to the clinic for a review.",
+    "Follow up in the clinic.",
+    "Visit the clinic for a review."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "மறுபரிசோதனைக்காக கிளினிக்கிற்கு வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दोबारा जाँच के लिए क्लिनिक आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.007",
+   "kind": "follow_up",
+   "topic": "review_place",
+   "english": "Review in the clinic after {n} days.",
+   "english_aliases": [
+    "Follow up in the clinic after {n} days.",
+    "Come to the clinic for a review after {n} days.",
+    "Visit the clinic for a review after {n} days."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 2,
+    "max": 90
+   },
+   "ta": {
+    "text": "{n} நாட்களுக்குப் பிறகு கிளினிக்கில் மறுபரிசோதனைக்கு வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} दिन बाद क्लिनिक में दोबारा जाँच के लिए आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.008",
+   "kind": "follow_up",
+   "topic": "review_place",
+   "english": "Review in the clinic after {n} weeks.",
+   "english_aliases": [
+    "Follow up in the clinic after {n} weeks.",
+    "Come to the clinic for a review after {n} weeks.",
+    "Visit the clinic for a review after {n} weeks."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 2,
+    "max": 12
+   },
+   "ta": {
+    "text": "{n} வாரங்களுக்குப் பிறகு கிளினிக்கில் மறுபரிசோதனைக்கு வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} हफ़्ते बाद क्लिनिक में दोबारा जाँच के लिए आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.009",
+   "kind": "follow_up",
+   "topic": "review_place",
+   "english": "Review in the outpatient department.",
+   "english_aliases": [
+    "Follow up in the outpatient department.",
+    "Review in the OPD.",
+    "Follow up in the OPD.",
+    "Come to the OPD for a review."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "புறநோயாளிகள் பிரிவில் மறுபரிசோதனைக்கு வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बाह्य रोगी विभाग में दोबारा जाँच के लिए आएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.010",
+   "kind": "follow_up",
+   "topic": "bring",
+   "english": "Bring your reports.",
+   "english_aliases": [
+    "Bring all your reports.",
+    "Bring all reports with you.",
+    "Carry your reports with you."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "உங்கள் அறிக்கைகளைக் கொண்டு வரவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अपनी रिपोर्ट साथ लाएँ।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.011",
+   "kind": "follow_up",
+   "topic": "tests",
+   "english": "Get blood tests done before the review.",
+   "english_aliases": [
+    "Get the blood tests done before the review.",
+    "Have blood tests done before the review.",
+    "Do the blood tests before the review."
+   ],
+   "slot": null,
+   "ta": {
+    "text": "மறுபரிசோதனைக்கு முன் இரத்தப் பரிசோதனைகளைச் செய்து கொள்ளவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दोबारा जाँच से पहले खून की जाँच करवा लें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.012",
+   "kind": "follow_up",
+   "topic": "wound_followup",
+   "english": "Get the stitches removed after {n} days.",
+   "english_aliases": [
+    "Have the stitches removed after {n} days.",
+    "Stitch removal after {n} days.",
+    "Remove the stitches after {n} days."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 2,
+    "max": 30
+   },
+   "ta": {
+    "text": "{n} நாட்களுக்குப் பிறகு தையல்களை அகற்றிக் கொள்ளவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} दिन बाद टाँके हटवा लें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  },
+  {
+   "id": "fu.013",
+   "kind": "follow_up",
+   "topic": "wound_followup",
+   "english": "Get the dressing changed after {n} days.",
+   "english_aliases": [
+    "Have the dressing changed after {n} days.",
+    "Dressing change after {n} days.",
+    "Get the wound dressing changed after {n} days."
+   ],
+   "slot": {
+    "name": "n",
+    "min": 2,
+    "max": 30
+   },
+   "ta": {
+    "text": "{n} நாட்களுக்குப் பிறகு கட்டை மாற்றிக் கொள்ளவும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} दिन बाद पट्टी बदलवा लें।",
+    "review_status": "draft_unreviewed"
+   },
+   "notes": ""
+  }
+ ]
+}

@@ -757,6 +757,62 @@
     "text": "दिन में {n} बार।",
     "review_status": "draft_unreviewed"
    }
+  },
+  "label.native_reviewed": {
+   "en": {
+    "text": "Checked by a native speaker.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தாய்மொழி பேசுபவரால் சரிபார்க்கப்பட்டது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मातृभाषा बोलने वाले व्यक्ति द्वारा जाँचा गया।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "label.draft_unreviewed": {
+   "en": {
+    "text": "Draft translation, not yet checked by a native speaker.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "வரைவு மொழிபெயர்ப்பு; தாய்மொழி பேசுபவர் இன்னும் சரிபார்க்கவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "प्रारूप अनुवाद; मातृभाषा बोलने वाले व्यक्ति ने अभी जाँचा नहीं है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "label.machine_checked": {
+   "en": {
+    "text": "Automatic translation checked by software only, not by a native speaker.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தானியங்கி மொழிபெயர்ப்பு; மென்பொருள் மட்டுமே சரிபார்த்தது, தாய்மொழி பேசுபவர் அல்ல.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "स्वचालित अनुवाद; केवल सॉफ़्टवेयर ने जाँचा है, मातृभाषा बोलने वाले व्यक्ति ने नहीं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "label.machine_checked_en": {
+   "en": {
+    "text": "Automatic rewording checked by software only.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தானியங்கி மறுவடிவம்; மென்பொருள் மட்டுமே சரிபார்த்தது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "स्वचालित सरल रूप; केवल सॉफ़्टवेयर ने जाँचा है।",
+    "review_status": "draft_unreviewed"
+   }
   }
  }
 }
