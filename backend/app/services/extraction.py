@@ -12,7 +12,7 @@ from app.llm import get_provider
 from app.llm.base import LLMError, Part
 from app.prompts import PROMPT_VERSION, load_prompt
 from app.schemas.extraction_output import SCHEMA_VERSION, ExtractionOutput
-from app.services.guards import REPO, assert_synthetic
+from app.services.guards import REPO, assert_origin_allowed, assert_synthetic
 
 CACHE_DIR = REPO / "data" / "cache"
 MIME = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".pdf": "application/pdf"}
@@ -57,6 +57,20 @@ def extract_document(path, provider=None, use_cache=True, prompt_version=PROMPT_
     if doc is None:
         return ExtractionResult(ok=False, error=f"unsupported_input: file type {p.suffix}", skipped=True)
 
+    res = _call_model(doc, provider, prompt_version)
+    if res.ok and use_cache:
+        cache_file.parent.mkdir(parents=True, exist_ok=True)
+        cache_file.write_text(json.dumps({"output": res.output.model_dump(mode="json"), "output_raw": res.raw_text, "usage": res.usage, "latency_s": res.latency_s}), encoding="utf-8")
+    return res
+
+
+def extract_bytes(data: bytes, mime: str, provider, origin: str = "user_upload", prompt_version=PROMPT_VERSION) -> ExtractionResult:
+    """Extraction for a user upload (image bytes in memory). Never reads or writes the disk cache; only the local Ollama adapter may be used."""
+    assert_origin_allowed(origin, provider)
+    return _call_model(Part("image", data, mime), provider, prompt_version)
+
+
+def _call_model(doc: Part, provider, prompt_version) -> ExtractionResult:
     system = load_prompt(prompt_version)
     parts = [doc]
     start, calls, usage, raw = time.perf_counter(), 0, {}, None
@@ -78,7 +92,4 @@ def extract_document(path, provider=None, use_cache=True, prompt_version=PROMPT_
         return ExtractionResult(ok=False, error="validation_failed", api_calls=calls, usage=usage, raw_text=raw, latency_s=time.perf_counter() - start)
 
     latency = time.perf_counter() - start
-    if use_cache:
-        cache_file.parent.mkdir(parents=True, exist_ok=True)
-        cache_file.write_text(json.dumps({"output": out.model_dump(mode="json"), "output_raw": raw, "usage": usage, "latency_s": latency}), encoding="utf-8")
     return ExtractionResult(ok=True, output=out, api_calls=calls, usage=usage, latency_s=latency, raw_text=raw)

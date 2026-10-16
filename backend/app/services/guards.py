@@ -21,6 +21,18 @@ def assert_synthetic(path, allowed=ALLOWED_DIRS) -> Path:
     return p
 
 
+ORIGINS = ("synthetic", "user_upload")
+
+
+def assert_origin_allowed(origin: str, provider) -> None:
+    """Data-origin rule: user uploads may only be processed by the local Ollama adapter. Anything else (Gemini, an unknown provider)
+    fails closed. Synthetic documents are unaffected (they are guarded by assert_synthetic)."""
+    if origin not in ORIGINS:
+        raise ValueError(f"unknown data origin {origin!r}")
+    if origin == "user_upload" and getattr(provider, "name", None) != "ollama":
+        raise NotSyntheticError("Refusing to send a user upload to a provider other than the local Ollama adapter")
+
+
 def check_split(split: str, final_test_run: bool, what: str, log=TEST_LOG) -> None:
     """Running on the test split needs --final-test-run; every such run is logged."""
     if split == "dev":

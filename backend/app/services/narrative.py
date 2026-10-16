@@ -21,6 +21,7 @@ from app.services.guards import REPO
 PROMPT_VERSION = "v2"
 PROMPT_ROOT = Path(__file__).resolve().parents[1] / "prompts"
 CACHE_DIR = REPO / "data" / "cache" / "narrative"  # gitignored (data/cache/)
+NO_CACHE = "no-cache"  # pass as cache_dir to neither read nor write the disk cache (user uploads: nothing is cached on disk)
 LANG_NAME = {"ta": "Tamil", "hi": "Hindi"}
 PROMPT_FILE = {"simplify": "A_simplify.txt", "translate": "B_translate.txt", "back": "C_backtranslate.txt", "judge": "D_judge.txt"}
 Verdict = Literal["supported", "adds_information", "omits_information", "contradicts", "unclear"]
@@ -116,16 +117,17 @@ def _key(provider, stage: str, version: str, system: str, user: str) -> str:
     return h
 
 
-def _store(f: Path, obj: dict) -> None:
+def _store(f: Path | None, obj: dict) -> None:
+    if f is None:
+        return
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_text(json.dumps(obj, ensure_ascii=False), encoding="utf-8")
 
 
 def _generate(provider, system: str, user: str, schema, cache_dir, version: str, call: Call):
     """Returns the validated model output or None (call.error set). One retry on invalid JSON."""
-    cdir = Path(cache_dir or CACHE_DIR)
-    f = cdir / f"{_key(provider, call.stage, version, system, user)}.json"
-    if f.exists():
+    f = None if cache_dir == NO_CACHE else Path(cache_dir or CACHE_DIR) / f"{_key(provider, call.stage, version, system, user)}.json"
+    if f is not None and f.exists():
         c = json.loads(f.read_text(encoding="utf-8"))
         call.cached, call.latency_s, call.usage, call.raw = True, c["latency_s"], c["usage"], c["raw"]
         if c.get("error"):  # deterministic failure (temperature 0, fixed seed): repeating it would cost the same time again

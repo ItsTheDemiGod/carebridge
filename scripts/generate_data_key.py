@@ -1,4 +1,4 @@
-"""Create CAREBRIDGE_DATA_KEY (a Fernet key) in backend/.env if it is not there yet. Never prints the key.   python scripts\generate_data_key.py"""
+"""Create CAREBRIDGE_DATA_KEY (a Fernet key) in backend/.env if it is not there yet. Never prints the key.   python scripts/generate_data_key.py"""
 import re
 from pathlib import Path
 

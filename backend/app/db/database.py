@@ -34,7 +34,7 @@ KINDS = ("normalised", "narrative", "explanation", "confirmations", "decisions",
 def connect(path) -> sqlite3.Connection:
     p = Path(path)
     p.parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(p, timeout=10, isolation_level=None)  # autocommit; transactions are explicit (tx)
+    conn = sqlite3.connect(p, timeout=10, isolation_level=None, check_same_thread=False)  # autocommit; explicit transactions (tx); a request uses its connection sequentially, possibly from two pool threads
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys=ON")
     conn.execute("PRAGMA secure_delete=ON")

@@ -1009,6 +1009,1266 @@
     "text": "कुछ दवाओं की समय-सारणी रोज़ाना नहीं है या बताई नहीं गई है। कृपया उन दवाओं के नोट देख लें।",
     "review_status": "draft_unreviewed"
    }
+  },
+  "consent.title": {
+   "en": {
+    "text": "Before we start",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தொடங்குவதற்கு முன்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "शुरू करने से पहले",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.item.what": {
+   "en": {
+    "text": "CareBridge reads a photo of your medical document and explains it in simple words.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "கேர்பிரிட்ஜ் உங்கள் மருத்துவ ஆவணத்தின் புகைப்படத்தைப் படித்து எளிய சொற்களில் விளக்குகிறது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "केयरब्रिज आपके चिकित्सा दस्तावेज़ की फ़ोटो पढ़ता है और उसे आसान शब्दों में समझाता है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.item.where": {
+   "en": {
+    "text": "The photo is read on this computer by a local model. Nothing is sent to any outside service.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படம் இந்தக் கணினியிலேயே உள்ளூர் மாதிரியால் படிக்கப்படுகிறது. எந்த வெளிச் சேவைக்கும் எதுவும் அனுப்பப்படுவதில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ोटो इसी कंप्यूटर पर एक स्थानीय मॉडल द्वारा पढ़ी जाती है। किसी बाहरी सेवा को कुछ नहीं भेजा जाता।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.item.stored": {
+   "en": {
+    "text": "We keep the results, not the photo, unless you choose to keep the photo. Everything we keep is encrypted.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீங்கள் புகைப்படத்தை வைத்திருக்கத் தேர்வு செய்யாவிட்டால், முடிவுகளை மட்டும் வைத்திருப்போம், புகைப்படத்தை அல்ல. நாங்கள் வைத்திருப்பவை அனைத்தும் மறையாக்கம் செய்யப்படும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "जब तक आप फ़ोटो रखने का चुनाव नहीं करते, हम केवल नतीजे रखते हैं, फ़ोटो नहीं। जो कुछ हम रखते हैं वह सब एन्क्रिप्ट किया जाता है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.item.how_long": {
+   "en": {
+    "text": "Saved results are kept until you delete them or 24 hours pass, whichever comes first.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "சேமித்த முடிவுகள் நீங்கள் அவற்றை நீக்கும் வரை அல்லது 24 மணி நேரம் கடக்கும் வரை, எது முதலில் வருகிறதோ அதுவரை வைக்கப்படும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सहेजे गए नतीजे तब तक रखे जाते हैं जब तक आप उन्हें मिटा नहीं देते या 24 घंटे नहीं बीत जाते, जो भी पहले हो।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.item.delete": {
+   "en": {
+    "text": "You can delete everything now with one button. This also withdraws your consent.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரே பொத்தானால் எல்லாவற்றையும் இப்போதே நீக்கலாம். இது உங்கள் ஒப்புதலையும் திரும்பப் பெறும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आप एक बटन से अभी सब कुछ मिटा सकते हैं। इससे आपकी सहमति भी वापस हो जाती है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.item.no_sharing": {
+   "en": {
+    "text": "We do not sell or share your data.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் தரவை நாங்கள் விற்கவோ பகிரவோ மாட்டோம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हम आपका डेटा न बेचते हैं, न साझा करते हैं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.item.prototype": {
+   "en": {
+    "text": "This is a class project prototype. It is not medical advice. Always confirm with your doctor or pharmacist.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இது ஒரு வகுப்புத் திட்ட மாதிரி. இது மருத்துவ ஆலோசனை அல்ல. எப்போதும் உங்கள் மருத்துவர் அல்லது மருந்தாளருடன் உறுதிசெய்யுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह एक कक्षा परियोजना का प्रोटोटाइप है। यह चिकित्सा सलाह नहीं है। हमेशा अपने डॉक्टर या फ़ार्मासिस्ट से पुष्टि करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.item.contact": {
+   "en": {
+    "text": "Questions? Contact: [contact person to be added].",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "கேள்விகள் உள்ளதா? தொடர்புக்கு: [தொடர்பு நபர் சேர்க்கப்படும்].",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सवाल हैं? संपर्क करें: [संपर्क व्यक्ति जोड़ा जाएगा]।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.purpose.process_photo": {
+   "en": {
+    "text": "Read the photo of my document (required)",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் ஆவணத்தின் புகைப்படத்தைப் படிக்க (கட்டாயம்)",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरे दस्तावेज़ की फ़ोटो पढ़ना (ज़रूरी)",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.purpose.store_results_for_session": {
+   "en": {
+    "text": "Save the results for this session (required)",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த அமர்வுக்கு முடிவுகளைச் சேமிக்க (கட்டாயம்)",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस सत्र के लिए नतीजे सहेजना (ज़रूरी)",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "consent.purpose.keep_photo_for_session": {
+   "en": {
+    "text": "Also keep the photo for this session (optional)",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த அமர்வுக்கு புகைப்படத்தையும் வைத்திருக்க (விருப்பம்)",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस सत्र के लिए फ़ोटो भी रखना (वैकल्पिक)",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "delete.confirm": {
+   "en": {
+    "text": "Delete everything now? This removes your session, results and any kept photo. It cannot be undone.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இப்போதே எல்லாவற்றையும் நீக்கவா? இது உங்கள் அமர்வு, முடிவுகள் மற்றும் வைத்த புகைப்படத்தை நீக்கும். இதைத் திரும்பப் பெற முடியாது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "क्या अभी सब कुछ मिटाएँ? इससे आपका सत्र, नतीजे और रखी गई फ़ोटो हट जाएगी। इसे वापस नहीं किया जा सकता।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "delete.receipt": {
+   "en": {
+    "text": "Deleted: {documents} documents, {payloads} saved results, {images} photos.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீக்கப்பட்டவை: {documents} ஆவணங்கள், {payloads} சேமித்த முடிவுகள், {images} புகைப்படங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मिटाया गया: {documents} दस्तावेज़, {payloads} सहेजे गए नतीजे, {images} फ़ोटो।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "delete.done": {
+   "en": {
+    "text": "Your data has been deleted and your consent is withdrawn.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் தரவு நீக்கப்பட்டது, உங்கள் ஒப்புதலும் திரும்பப் பெறப்பட்டது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपका डेटा मिटा दिया गया है और आपकी सहमति वापस ले ली गई है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.consent_required": {
+   "en": {
+    "text": "Please read and accept the notice before continuing.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தொடர்வதற்கு முன் அறிவிப்பைப் படித்து ஒப்புக்கொள்ளுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आगे बढ़ने से पहले कृपया सूचना पढ़ें और स्वीकार करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.consent_invalid": {
+   "en": {
+    "text": "The consent could not be saved. Please accept the required items and try again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒப்புதலைச் சேமிக்க முடியவில்லை. கட்டாயமானவற்றை ஏற்றுக்கொண்டு மீண்டும் முயலுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सहमति सहेजी नहीं जा सकी। कृपया ज़रूरी बातें स्वीकार करके फिर कोशिश करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.no_session": {
+   "en": {
+    "text": "No active session. Please start again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "செயலில் உள்ள அமர்வு இல்லை. மீண்டும் தொடங்குங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कोई सक्रिय सत्र नहीं है। कृपया फिर से शुरू करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.session_expired": {
+   "en": {
+    "text": "Your session has expired and the data was removed. Please start again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் அமர்வு காலாவதியானது, தரவு நீக்கப்பட்டது. மீண்டும் தொடங்குங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपका सत्र समाप्त हो गया है और डेटा हटा दिया गया है। कृपया फिर से शुरू करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.upload_too_large": {
+   "en": {
+    "text": "This file is too large. Please use a smaller photo.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தக் கோப்பு மிகப் பெரியது. சிறிய புகைப்படத்தைப் பயன்படுத்துங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह फ़ाइल बहुत बड़ी है। कृपया छोटी फ़ोटो इस्तेमाल करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.unsupported_file": {
+   "en": {
+    "text": "Please upload a photo or image (PNG or JPG).",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படம் அல்லது படத்தைப் (PNG அல்லது JPG) பதிவேற்றுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कृपया फ़ोटो या छवि (PNG या JPG) अपलोड करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.pdf_not_supported": {
+   "en": {
+    "text": "Please upload a photo or image (PNG or JPG). PDF is not supported yet.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படம் அல்லது படத்தைப் (PNG அல்லது JPG) பதிவேற்றுங்கள். PDF இன்னும் ஆதரிக்கப்படவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कृपया फ़ोटो या छवि (PNG या JPG) अपलोड करें। PDF अभी समर्थित नहीं है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.image_invalid": {
+   "en": {
+    "text": "This image could not be opened or is too large in pixels. Please try another photo.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தப் படத்தைத் திறக்க முடியவில்லை அல்லது பிக்சல் அளவு மிகப் பெரியது. வேறு புகைப்படத்தை முயலுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह छवि खोली नहीं जा सकी या पिक्सेल में बहुत बड़ी है। कृपया दूसरी फ़ोटो आज़माएँ।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.queue_full": {
+   "en": {
+    "text": "The reader is busy. Please try again in a minute.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "படிக்கும் பகுதி பிஸியாக உள்ளது. ஒரு நிமிடம் கழித்து மீண்டும் முயலுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पढ़ने वाला हिस्सा व्यस्त है। कृपया एक मिनट बाद फिर कोशिश करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.too_many_documents": {
+   "en": {
+    "text": "The limit of documents for this session has been reached. Delete your data to start again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த அமர்வுக்கான ஆவண வரம்பை அடைந்துவிட்டீர்கள். மீண்டும் தொடங்க தரவை நீக்குங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस सत्र के लिए दस्तावेज़ों की सीमा पूरी हो गई है। फिर से शुरू करने के लिए अपना डेटा मिटाएँ।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.not_found": {
+   "en": {
+    "text": "We could not find that.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "அது கிடைக்கவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "वह नहीं मिला।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.not_ready": {
+   "en": {
+    "text": "This is not ready yet. Please wait for the reading to finish.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இது இன்னும் தயாராகவில்லை. படித்து முடியும் வரை காத்திருங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह अभी तैयार नहीं है। कृपया पढ़ना पूरा होने तक प्रतीक्षा करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.request_blocked": {
+   "en": {
+    "text": "This request was blocked for security reasons.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பாதுகாப்பு காரணங்களுக்காக இந்தக் கோரிக்கை தடுக்கப்பட்டது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सुरक्षा कारणों से यह अनुरोध रोका गया।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.invalid_request": {
+   "en": {
+    "text": "The request was not valid. Please check it and try again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "கோரிக்கை சரியாக இல்லை. சரிபார்த்து மீண்டும் முயலுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अनुरोध सही नहीं था। कृपया जाँचकर फिर कोशिश करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.internal_error": {
+   "en": {
+    "text": "Something went wrong on our side. Please try again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எங்கள் பக்கத்தில் ஏதோ தவறு நடந்தது. மீண்டும் முயலுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हमारी तरफ़ से कुछ गड़बड़ हुई। कृपया फिर कोशिश करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "error.retry_unavailable": {
+   "en": {
+    "text": "The photo was not kept, so it has to be uploaded again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படம் வைக்கப்படவில்லை, எனவே மீண்டும் பதிவேற்ற வேண்டும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ोटो रखी नहीं गई थी, इसलिए उसे फिर से अपलोड करना होगा।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "job.failed.ollama_unavailable": {
+   "en": {
+    "text": "The local reader is not running. Please start it and upload again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உள்ளூர் வாசிப்பான் இயங்கவில்லை. அதைத் தொடங்கி மீண்டும் பதிவேற்றுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "स्थानीय रीडर चालू नहीं है। कृपया उसे चालू करके फिर अपलोड करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "job.failed.image_unreadable": {
+   "en": {
+    "text": "We could not read this photo. Please try a clearer photo.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தப் புகைப்படத்தைப் படிக்க முடியவில்லை. தெளிவான புகைப்படத்தை முயலுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह फ़ोटो पढ़ी नहीं जा सकी। कृपया साफ़ फ़ोटो आज़माएँ।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "job.failed.context_truncated": {
+   "en": {
+    "text": "This document is too long to read in one go. Please upload one page at a time.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த ஆவணம் ஒரே நேரத்தில் படிக்க மிக நீளமானது. ஒரு நேரத்தில் ஒரு பக்கத்தைப் பதிவேற்றுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह दस्तावेज़ एक बार में पढ़ने के लिए बहुत लंबा है। कृपया एक बार में एक पन्ना अपलोड करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "job.failed.image_not_received": {
+   "en": {
+    "text": "The reader did not receive the photo. Please upload it again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "வாசிப்பான் புகைப்படத்தைப் பெறவில்லை. மீண்டும் பதிவேற்றுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रीडर को फ़ोटो नहीं मिली। कृपया उसे फिर से अपलोड करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "job.failed.timeout": {
+   "en": {
+    "text": "Reading took too long. Please try again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "படிக்க அதிக நேரம் ஆனது. மீண்டும் முயலுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पढ़ने में बहुत समय लगा। कृपया फिर कोशिश करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "job.failed.interrupted": {
+   "en": {
+    "text": "Reading was interrupted when the app restarted. Please upload again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பயன்பாடு மறுதொடக்கம் ஆனதால் படிப்பது நின்றுவிட்டது. மீண்டும் பதிவேற்றுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ऐप दोबारा चालू होने से पढ़ना रुक गया। कृपया फिर से अपलोड करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "status.narrative_preparing": {
+   "en": {
+    "text": "Still preparing this explanation. Please check again in a moment.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த விளக்கம் இன்னும் தயாராகிறது. சிறிது நேரம் கழித்துப் பாருங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह व्याख्या अभी तैयार हो रही है। कृपया थोड़ी देर बाद फिर देखें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.action.confirm_as_extracted": {
+   "en": {
+    "text": "This matches my document",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இது என் ஆவணத்துடன் பொருந்துகிறது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह मेरे दस्तावेज़ से मेल खाता है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.action.select_formulary_drug": {
+   "en": {
+    "text": "Choose the right medicine from the list",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सूची से सही दवा चुनें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.action.not_in_list": {
+   "en": {
+    "text": "My medicine is not in the list",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் மருந்து பட்டியலில் இல்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरी दवा सूची में नहीं है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.action.remove": {
+   "en": {
+    "text": "Remove: this is not on my document",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீக்கு: இது என் ஆவணத்தில் இல்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हटाएँ: यह मेरे दस्तावेज़ में नहीं है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.you_confirmed": {
+   "en": {
+    "text": "You confirmed this.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீங்கள் இதை உறுதிசெய்தீர்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपने इसकी पुष्टि की है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.you_selected": {
+   "en": {
+    "text": "You chose this medicine from the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீங்கள் பட்டியலிலிருந்து இந்த மருந்தைத் தேர்ந்தெடுத்தீர்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपने सूची से यह दवा चुनी है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.you_added": {
+   "en": {
+    "text": "You added this medicine from the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீங்கள் பட்டியலிலிருந்து இந்த மருந்தைச் சேர்த்தீர்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपने सूची से यह दवा जोड़ी है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.note_label": {
+   "en": {
+    "text": "Note (optional, up to 80 characters)",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "குறிப்பு (விருப்பம், 80 எழுத்துகள் வரை)",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "टिप्पणी (वैकल्पिक, 80 अक्षरों तक)",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "picker.compare_note": {
+   "en": {
+    "text": "Compare the brand name, generic name and strength with your document before you choose.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தேர்ந்தெடுக்கும் முன் பிராண்ட் பெயர், பொதுப் பெயர் மற்றும் வலிமையை உங்கள் ஆவணத்துடன் ஒப்பிடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "चुनने से पहले ब्रांड नाम, जेनेरिक नाम और मात्रा की अपने दस्तावेज़ से तुलना करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "picker.search": {
+   "en": {
+    "text": "Search medicine by brand or generic name",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பிராண்ட் அல்லது பொதுப் பெயரால் மருந்தைத் தேடுங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ब्रांड या जेनेरिक नाम से दवा खोजें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "picker.no_results": {
+   "en": {
+    "text": "No medicine found in the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பட்டியலில் மருந்து எதுவும் இல்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सूची में कोई दवा नहीं मिली।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "picker.brand": {
+   "en": {
+    "text": "Brand names",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பிராண்ட் பெயர்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ब्रांड नाम",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "picker.generic": {
+   "en": {
+    "text": "Generic name",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பொதுப் பெயர்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "जेनेरिक नाम",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "picker.strength": {
+   "en": {
+    "text": "Strength",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "வலிமை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मात्रा",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "picker.strength_as_label": {
+   "en": {
+    "text": "Strength as on my label",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் லேபிளில் உள்ள வலிமை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरे लेबल पर लिखी मात्रा",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.unresolved_name": {
+   "en": {
+    "text": "The name could not be found in our list. Choose the right medicine from the list, or say it is not in the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எங்கள் பட்டியலில் இந்தப் பெயர் கிடைக்கவில்லை. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள், அல்லது அது பட்டியலில் இல்லை என்று சொல்லுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह नाम हमारी सूची में नहीं मिला। सूची से सही दवा चुनें, या बताएँ कि वह सूची में नहीं है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.near_miss_name": {
+   "en": {
+    "text": "The name is close to a known medicine but not an exact match. Choose the right medicine from the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தப் பெயர் அறிந்த மருந்துக்கு நெருக்கமானது, ஆனால் சரியாகப் பொருந்தவில்லை. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह नाम किसी जानी-पहचानी दवा के क़रीब है पर ठीक वही नहीं है। सूची से सही दवा चुनें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.role_corrected": {
+   "en": {
+    "text": "The brand and generic names may have been mixed up. Choose the right medicine from the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பிராண்ட் மற்றும் பொதுப் பெயர்கள் மாறியிருக்கலாம். பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ब्रांड और जेनेरिक नाम आपस में बदल गए हो सकते हैं। सूची से सही दवा चुनें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.duplicate_name_fields": {
+   "en": {
+    "text": "Only one name was found for this medicine. Choose the right medicine from the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்துக்கு ஒரே ஒரு பெயர் மட்டுமே கிடைத்தது. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस दवा का केवल एक नाम मिला। सूची से सही दवा चुनें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.name_not_in_quote": {
+   "en": {
+    "text": "The name does not appear in the text that was read. Choose the right medicine from the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "படிக்கப்பட்ட உரையில் இந்தப் பெயர் இல்லை. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पढ़े गए पाठ में यह नाम नहीं है। सूची से सही दवा चुनें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.missing_name": {
+   "en": {
+    "text": "No medicine name was found. Choose the right medicine from the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மருந்தின் பெயர் கிடைக்கவில்லை. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दवा का कोई नाम नहीं मिला। सूची से सही दवा चुनें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.multiple_drugs_in_quote": {
+   "en": {
+    "text": "More than one medicine seems to be on this line. Choose the right medicine from the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த வரியில் ஒன்றுக்கு மேற்பட்ட மருந்துகள் இருப்பதாகத் தெரிகிறது. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस पंक्ति में एक से ज़्यादा दवाएँ दिखती हैं। सूची से सही दवा चुनें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.possible_combination": {
+   "en": {
+    "text": "This may be a combination medicine that we could not match. Choose the right medicine from the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இது எங்களால் பொருத்த முடியாத கூட்டு மருந்தாக இருக்கலாம். பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह मिली-जुली दवा हो सकती है जिसे हम मिला नहीं सके। सूची से सही दवा चुनें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.incomplete_quote": {
+   "en": {
+    "text": "Some details may be missing from what was read. I have compared them with my document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "படிக்கப்பட்டதில் சில விவரங்கள் விடுபட்டிருக்கலாம். அவற்றை என் ஆவணத்துடன் ஒப்பிட்டுப் பார்த்தேன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पढ़ी गई बातों में कुछ ब्यौरे छूटे हो सकते हैं। मैंने उन्हें अपने दस्तावेज़ से मिला लिया है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.unusual_strength": {
+   "en": {
+    "text": "This strength is not one of the usual strengths for this medicine. I have checked it on my label.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த வலிமை இந்த மருந்துக்கான வழக்கமான வலிமைகளில் ஒன்று அல்ல. என் லேபிளில் சரிபார்த்தேன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह मात्रा इस दवा की सामान्य मात्राओं में से नहीं है। मैंने इसे अपने लेबल पर जाँच लिया है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.non_daily_frequency": {
+   "en": {
+    "text": "This medicine does not seem to be taken every day. I have checked how often with my document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்து தினமும் எடுக்கப்படுவதாகத் தெரியவில்லை. எத்தனை முறை என்பதை என் ஆவணத்தில் சரிபார்த்தேன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह दवा रोज़ लेने वाली नहीं लगती। मैंने अपने दस्तावेज़ में देख लिया है कि कितनी बार लेनी है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.ambiguous_OD": {
+   "en": {
+    "text": "The short form OD can mean once a day or the right eye. I have checked what it means here.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "OD என்பது தினமும் ஒரு முறை அல்லது வலது கண் என்று பொருள்படலாம். இங்கே அதன் பொருளைச் சரிபார்த்தேன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "OD का मतलब दिन में एक बार या दाईं आँख हो सकता है। मैंने देख लिया है कि यहाँ इसका क्या मतलब है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.conflicting_frequency": {
+   "en": {
+    "text": "The text gives more than one way to take this medicine. I have checked it with my document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்தை எடுக்கும் முறை ஒன்றுக்கு மேற்பட்ட விதமாக எழுதப்பட்டுள்ளது. என் ஆவணத்தில் சரிபார்த்தேன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पाठ में इस दवा को लेने के एक से ज़्यादा तरीक़े लिखे हैं। मैंने अपने दस्तावेज़ से जाँच लिया है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.conflicting_meal_relation": {
+   "en": {
+    "text": "The text says both before and after meals. I have checked it with my document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உணவுக்கு முன் மற்றும் பின் என இரண்டும் எழுதப்பட்டுள்ளது. என் ஆவணத்தில் சரிபார்த்தேன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पाठ में खाने से पहले और बाद दोनों लिखा है। मैंने अपने दस्तावेज़ से जाँच लिया है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.conflicting_duration": {
+   "en": {
+    "text": "The text gives more than one duration. I have checked it with my document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "காலம் ஒன்றுக்கு மேற்பட்ட விதமாக எழுதப்பட்டுள்ளது. என் ஆவணத்தில் சரிபார்த்தேன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पाठ में अवधि एक से ज़्यादा तरह से लिखी है। मैंने अपने दस्तावेज़ से जाँच ली है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.low_confidence": {
+   "en": {
+    "text": "The reader was not sure about this line. I have compared it with my document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த வரியைப் பற்றி வாசிப்பான் உறுதியாக இல்லை. என் ஆவணத்துடன் ஒப்பிட்டுப் பார்த்தேன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रीडर को इस पंक्ति के बारे में पक्का भरोसा नहीं था। मैंने इसे अपने दस्तावेज़ से मिला लिया है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.quote_not_in_document": {
+   "en": {
+    "text": "This line could not be matched to the document text. I have compared it with my document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த வரியை ஆவண உரையுடன் பொருத்த முடியவில்லை. என் ஆவணத்துடன் ஒப்பிட்டுப் பார்த்தேன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस पंक्ति को दस्तावेज़ के पाठ से मिलाया नहीं जा सका। मैंने इसे अपने दस्तावेज़ से मिला लिया है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.user_not_in_list": {
+   "en": {
+    "text": "You said this medicine is not in the list. It was not checked for interactions.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்து பட்டியலில் இல்லை என்று சொன்னீர்கள். இடைவினைகளுக்காக இது சரிபார்க்கப்படவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपने कहा कि यह दवा सूची में नहीं है। इसके आपसी असर की जाँच नहीं की गई।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "confirm.flag.not_identifiable": {
+   "en": {
+    "text": "We could not identify this medicine, so it was not checked for interactions.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்தை அடையாளம் காண முடியவில்லை, எனவே இடைவினைகளுக்காகச் சரிபார்க்கப்படவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हम इस दवा की पहचान नहीं कर सके, इसलिए इसके आपसी असर की जाँच नहीं की गई।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "schedule.notice": {
+   "en": {
+    "text": "Suggested times only; adjust them to match your doctor's instructions.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பரிந்துரைக்கப்பட்ட நேரங்கள் மட்டுமே; உங்கள் மருத்துவரின் அறிவுறுத்தலுக்கு ஏற்ப அவற்றை மாற்றிக்கொள்ளுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ये केवल सुझाए गए समय हैं; अपने डॉक्टर के निर्देश के अनुसार इन्हें बदल लें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "schedule.no_meal_timing": {
+   "en": {
+    "text": "No meal timing was found in the document, so these times are spread through the day.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஆவணத்தில் உணவு நேரம் குறிப்பிடப்படவில்லை, எனவே இந்த நேரங்கள் நாள் முழுவதும் பிரித்து வைக்கப்பட்டுள்ளன.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दस्तावेज़ में खाने का समय नहीं मिला, इसलिए ये समय दिन भर में बाँटे गए हैं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "schedule.duration_days": {
+   "en": {
+    "text": "About {n} days in total.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மொத்தம் சுமார் {n} நாட்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कुल लगभग {n} दिन।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "schedule.not.not_confirmed": {
+   "en": {
+    "text": "Not scheduled: please confirm this medicine first.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "அட்டவணையில் இல்லை: முதலில் இந்த மருந்தை உறுதிசெய்யுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "समय-सारणी में नहीं: पहले इस दवा की पुष्टि करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "schedule.not.non_daily": {
+   "en": {
+    "text": "Not scheduled: this medicine is not taken every day. Follow your document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "அட்டவணையில் இல்லை: இந்த மருந்து தினமும் எடுக்கப்படுவதில்லை. உங்கள் ஆவணத்தைப் பின்பற்றுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "समय-सारणी में नहीं: यह दवा रोज़ नहीं ली जाती। अपने दस्तावेज़ के अनुसार चलें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "schedule.not.as_needed": {
+   "en": {
+    "text": "Not scheduled: this medicine is only taken when needed.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "அட்டவணையில் இல்லை: இந்த மருந்து தேவைப்படும்போது மட்டுமே எடுக்கப்படும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "समय-सारणी में नहीं: यह दवा केवल ज़रूरत पड़ने पर ली जाती है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "schedule.not.too_many_doses": {
+   "en": {
+    "text": "Not scheduled automatically: please set your own times for this medicine.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தானாக அட்டவணையிடப்படவில்லை: இந்த மருந்துக்கான நேரங்களை நீங்களே அமையுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अपने आप तय नहीं हुआ: इस दवा के समय आप खुद तय करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "schedule.not.no_identity": {
+   "en": {
+    "text": "Not scheduled: we could not identify this medicine.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "அட்டவணையில் இல்லை: இந்த மருந்தை அடையாளம் காண முடியவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "समय-सारणी में नहीं: हम इस दवा की पहचान नहीं कर सके।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "summary.title": {
+   "en": {
+    "text": "Summary to show your doctor",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் மருத்துவரிடம் காட்டுவதற்கான சுருக்கம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "डॉक्टर को दिखाने के लिए सार",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "summary.heading.medicines": {
+   "en": {
+    "text": "Medicines",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மருந்துகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दवाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "summary.heading.adherence": {
+   "en": {
+    "text": "Taken, skipped and missed",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எடுத்தவை, தவிர்த்தவை, தவறியவை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ली गईं, छोड़ी गईं और छूटी हुई",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "summary.heading.unconfirmed": {
+   "en": {
+    "text": "Not confirmed yet",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இன்னும் உறுதிசெய்யப்படாதவை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "जिनकी पुष्टि अभी नहीं हुई",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "summary.heading.interactions": {
+   "en": {
+    "text": "Interactions found",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "கண்டறியப்பட்ட இடைவினைகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मिले आपसी असर",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "summary.label.taken": {
+   "en": {
+    "text": "Taken",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எடுத்தது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ली गई",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "summary.label.skipped": {
+   "en": {
+    "text": "Skipped",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தவிர்த்தது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "छोड़ी गई",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "summary.label.missed": {
+   "en": {
+    "text": "Missed",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தவறியது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "छूटी",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "summary.disclaimer": {
+   "en": {
+    "text": "This summary lists what was read from your document and what you entered. It may contain mistakes. It is not medical advice. Your doctor decides about your treatment.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தச் சுருக்கம் உங்கள் ஆவணத்திலிருந்து படிக்கப்பட்டவற்றையும் நீங்கள் உள்ளிட்டவற்றையும் பட்டியலிடுகிறது. இதில் தவறுகள் இருக்கலாம். இது மருத்துவ ஆலோசனை அல்ல. உங்கள் சிகிச்சை பற்றி மருத்துவர் முடிவு செய்வார்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह सार आपके दस्तावेज़ से पढ़ी गई बातें और आपकी दर्ज की हुई बातें बताता है। इसमें ग़लतियाँ हो सकती हैं। यह चिकित्सा सलाह नहीं है। आपके इलाज के बारे में डॉक्टर तय करते हैं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "job.failed.provider_not_allowed": {
+   "en": {
+    "text": "This app is set to read photos with an outside service, which is not allowed for your photos. Nothing was sent.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தப் பயன்பாடு புகைப்படங்களை வெளிச் சேவை மூலம் படிக்கும்படி அமைக்கப்பட்டுள்ளது; உங்கள் புகைப்படங்களுக்கு இது அனுமதிக்கப்படாது. எதுவும் அனுப்பப்படவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह ऐप फ़ोटो को बाहरी सेवा से पढ़ने के लिए सेट है, जो आपकी फ़ोटो के लिए मंज़ूर नहीं है। कुछ भी नहीं भेजा गया।",
+    "review_status": "draft_unreviewed"
+   }
   }
  },
  "english_only": {
