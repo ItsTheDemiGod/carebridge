@@ -78,7 +78,7 @@ Phase 5 (backend API; python = `backend\.venv\Scripts\python`):
 Phase 5c (prototype review mode; no independent review has taken place, see `docs/REVIEW_STATUS.md`):
 
     python scripts\import_pharmacist_sheets.py FILE.csv --author-selfcheck   (only sets author_checked; a pharmacist sheet without the flag sets reviewed)
-    python scriptsdd_phase5c_templates.py                                  (idempotent; writes data/templates/review_sheet_phase5c_new.csv)
+    python scripts\add_phase5c_templates.py                                  (idempotent; writes data/templates/review_sheet_phase5c_new.csv)
 
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
