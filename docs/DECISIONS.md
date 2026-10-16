@@ -102,3 +102,5 @@
 - **Guardrail left unchanged**: no logic edits; the new strings pass it without allow-list entries (`safety.author.major` was tested without one). Only report plumbing changed in the engine (`supplement_author_checked` field) so the right attribution line is chosen; decision logic is untouched.
 - **Attribution/notice templates**: one new attribution variant (used when any author_checked entry exists) and a brand-mapping notice shown whenever the interaction section is displayed, with ta/hi drafts.
 - **Contact setting**: `CONTACT_NAME` (default Demian) and `CONTACT_EMAIL` (default empty, never in the repository); the consent contact line shows the name alone when the email is empty. Notice version 2 (hash pinned); consent under v1 is asked again.
+
+- **S11 source note (domperidone + levofloxacin)**: the current UK SmPC on emc.medicines.org.uk was read as corroboration only. The evidence of record is HPRA and EMA. This is an exception to the regulator-domains-only network rule, accepted by the project owner (Phase 6a-0).

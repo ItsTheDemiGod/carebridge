@@ -17,3 +17,5 @@ Wording for the project report (use exactly):
 What the app tells users: the consent notice (v2) says it is a class prototype and not medical advice, that Tamil and Hindi are machine-drafted and unreviewed, and that the interaction information is limited, was drafted from official labels by the project author and is not pharmacist-reviewed. Interaction output says "may interact ... according to drug-label information collected by the project author (not checked by a pharmacist)". An English notice says brand names are matched to generic names with an unverified list.
 
 Statuses: `draft_unreviewed` (disabled for interactions), `author_checked` (enabled, prototype), `reviewed` (enabled; only a real reviewer's returned sheet can set it).
+
+**S11 (domperidone + levofloxacin):** the current UK SmPC on emc.medicines.org.uk was read as corroboration only; the evidence of record is HPRA and EMA. The exception to the regulator-domains-only network rule was accepted by the owner.

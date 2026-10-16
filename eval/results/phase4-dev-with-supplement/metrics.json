@@ -1,0 +1,4344 @@
+{
+ "run_id": "dev-ollama-v1",
+ "split": "dev",
+ "model_calls": 0,
+ "documents": 20,
+ "skipped": [],
+ "docs_by_condition": {
+  "text": 20,
+  "clean": 20,
+  "scan": 20,
+  "photo": 20,
+  "poor": 20
+ },
+ "store_available": true,
+ "supplement_entries_ignored": 0,
+ "supplement_reviewed_entries": 16,
+ "pairs_by_condition": {
+  "text": 148,
+  "clean": 148,
+  "scan": 148,
+  "photo": 148,
+  "poor": 148
+ },
+ "pair_statuses_by_condition": {
+  "text": {
+   "not_checked_no_record": 23,
+   "not_checked_unconfirmed": 77,
+   "interaction_found": 48
+  },
+  "clean": {
+   "not_checked_no_record": 13,
+   "not_checked_unconfirmed": 95,
+   "interaction_found": 40
+  },
+  "scan": {
+   "not_checked_no_record": 9,
+   "not_checked_unconfirmed": 113,
+   "interaction_found": 26
+  },
+  "photo": {
+   "not_checked_no_record": 7,
+   "not_checked_unconfirmed": 122,
+   "interaction_found": 19
+  },
+  "poor": {
+   "not_checked_no_record": 9,
+   "not_checked_unconfirmed": 123,
+   "interaction_found": 16
+  }
+ },
+ "share_not_checked_by_condition": {
+  "text": 0.676,
+  "clean": 0.73,
+  "scan": 0.824,
+  "photo": 0.872,
+  "poor": 0.892
+ },
+ "ground_truth": {
+  "pairs": 148,
+  "statuses": {
+   "interaction_found": 96,
+   "not_checked_no_record": 52
+  },
+  "interactions_by_level": {
+   "major": 0,
+   "moderate": 21,
+   "minor": 14,
+   "unknown": 61
+  }
+ },
+ "safety": {
+  "silent_misses_strict": 3,
+  "silent_misses_not_covered_by_a_flag": 0,
+  "silent_miss_cases": [
+   {
+    "cond": "poor",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Glimepiride"
+    ],
+    "gt_level": "moderate",
+    "why": "no entry (a medicine was not extracted or not matched)",
+    "covered_by_flag": true
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "why": "no entry (a medicine was not extracted or not matched)",
+    "covered_by_flag": true
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "why": "no entry (a medicine was not extracted or not matched)",
+    "covered_by_flag": true
+   }
+  ],
+  "missed_entirely_by_condition": {
+   "text": {
+    "medicines": 0,
+    "interactions": 0
+   },
+   "clean": {
+    "medicines": 0,
+    "interactions": 0
+   },
+   "scan": {
+    "medicines": 0,
+    "interactions": 0
+   },
+   "photo": {
+    "medicines": 0,
+    "interactions": 0
+   },
+   "poor": {
+    "medicines": 0,
+    "interactions": 0
+   }
+  },
+  "downgrades": 328,
+  "downgrade_causes": {
+   "duplicate_name_fields": 74,
+   "near_miss_name": 120,
+   "conflict_timing_label": 87,
+   "role_corrected": 119,
+   "conflict_duration_days": 3,
+   "incomplete_quote": 38,
+   "unusual_strength": 26,
+   "name_not_in_quote": 58,
+   "unresolved_name": 10,
+   "conflict_times_per_day": 7
+  },
+  "downgrade_cases": [
+   {
+    "cond": "clean",
+    "doc": "ds_006",
+    "gt": [
+     "Ondansetron",
+     "Ciprofloxacin"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_011",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Clopidogrel"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Ramipril"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Atorvastatin"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Pantoprazole"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Atorvastatin",
+     "Pantoprazole"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Metoprolol succinate"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Pantoprazole"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Metoprolol succinate"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Ramipril"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Metoprolol succinate",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_025",
+    "gt": [
+     "Ramipril",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Azithromycin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_029",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_duration_days",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Glimepiride"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_037",
+    "gt": [
+     "Glimepiride",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_040",
+    "gt": [
+     "Cefuroxime",
+     "Pantoprazole"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_040",
+    "gt": [
+     "Cefuroxime",
+     "Metronidazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_040",
+    "gt": [
+     "Metronidazole",
+     "Paracetamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_040",
+    "gt": [
+     "Metronidazole",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "ds_040",
+    "gt": [
+     "Paracetamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_005",
+    "gt": [
+     "Tiotropium",
+     "Salbutamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_005",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_012",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "incomplete_quote",
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "incomplete_quote",
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_012",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "incomplete_quote",
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_012",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_012",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote",
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote",
+     "near_miss_name",
+     "role_corrected",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_012",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_012",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "clean",
+    "doc": "rx_016",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_006",
+    "gt": [
+     "Ondansetron",
+     "Ciprofloxacin"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Azithromycin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Tiotropium",
+     "Salbutamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_008",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_011",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Clopidogrel"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Ramipril"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Atorvastatin"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Pantoprazole"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Atorvastatin",
+     "Pantoprazole"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Metoprolol succinate"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Pantoprazole"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Metoprolol succinate"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Ramipril"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Metoprolol succinate",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_025",
+    "gt": [
+     "Ramipril",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Azithromycin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_026",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_029",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_duration_days",
+     "conflict_timing_label",
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_029",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Paracetamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Glimepiride"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_037",
+    "gt": [
+     "Glimepiride",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_037",
+    "gt": [
+     "Glimepiride",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_040",
+    "gt": [
+     "Cefuroxime",
+     "Metronidazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_040",
+    "gt": [
+     "Metronidazole",
+     "Paracetamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_040",
+    "gt": [
+     "Metronidazole",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "ds_040",
+    "gt": [
+     "Paracetamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_001",
+    "gt": [
+     "Metformin",
+     "Glimepiride"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_001",
+    "gt": [
+     "Glimepiride",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_001",
+    "gt": [
+     "Glimepiride",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Azithromycin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Tiotropium",
+     "Salbutamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_005",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_012",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_012",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_012",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_012",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "role_corrected",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_012",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_012",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "photo",
+    "doc": "rx_016",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_006",
+    "gt": [
+     "Ondansetron",
+     "Ciprofloxacin"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Azithromycin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Tiotropium",
+     "Salbutamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_008",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "incomplete_quote",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_011",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_011",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Paracetamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_020",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_020",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Paracetamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Clopidogrel"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Ramipril"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Atorvastatin"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Pantoprazole"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Atorvastatin",
+     "Pantoprazole"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Metoprolol succinate"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Pantoprazole"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Metoprolol succinate"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Ramipril"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Metoprolol succinate",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_025",
+    "gt": [
+     "Ramipril",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "incomplete_quote",
+     "near_miss_name",
+     "unresolved_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "incomplete_quote",
+     "near_miss_name",
+     "unresolved_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "incomplete_quote",
+     "near_miss_name",
+     "unresolved_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Azithromycin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "incomplete_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Tiotropium",
+     "Salbutamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "incomplete_quote",
+     "near_miss_name",
+     "unresolved_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_026",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "incomplete_quote",
+     "near_miss_name",
+     "unresolved_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_029",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_duration_days",
+     "conflict_times_per_day",
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_029",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Paracetamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_times_per_day",
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "ds_037",
+    "gt": [
+     "Glimepiride",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_001",
+    "gt": [
+     "Metformin",
+     "Glimepiride"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_001",
+    "gt": [
+     "Metformin",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_001",
+    "gt": [
+     "Glimepiride",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "incomplete_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_001",
+    "gt": [
+     "Glimepiride",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name",
+     "unresolved_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name",
+     "unresolved_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Azithromycin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "unresolved_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "incomplete_quote",
+     "near_miss_name",
+     "unresolved_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "near_miss_name",
+     "unresolved_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "incomplete_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Tiotropium",
+     "Salbutamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields",
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_005",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_012",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_012",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_012",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_012",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "role_corrected",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_012",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_012",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "poor",
+    "doc": "rx_016",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_006",
+    "gt": [
+     "Ondansetron",
+     "Ciprofloxacin"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Azithromycin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Tiotropium",
+     "Salbutamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_008",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_011",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_020",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_020",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Paracetamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Clopidogrel"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Ramipril"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Atorvastatin"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Pantoprazole"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Atorvastatin",
+     "Pantoprazole"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Metoprolol succinate"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Pantoprazole"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Aspirin",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Metoprolol succinate"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Clopidogrel",
+     "Ramipril"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Metoprolol succinate",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_025",
+    "gt": [
+     "Ramipril",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_times_per_day",
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_times_per_day",
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_times_per_day",
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Azithromycin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Tiotropium",
+     "Salbutamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_times_per_day",
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_026",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_times_per_day",
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_029",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_029",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Paracetamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "duplicate_name_fields",
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Glimepiride"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "ds_037",
+    "gt": [
+     "Glimepiride",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_005",
+    "gt": [
+     "Tiotropium",
+     "Salbutamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_005",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "incomplete_quote"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_012",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_012",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_012",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_012",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "role_corrected",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_012",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_012",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "scan",
+    "doc": "rx_016",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_006",
+    "gt": [
+     "Ondansetron",
+     "Ciprofloxacin"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_008",
+    "gt": [
+     "Azithromycin",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_008",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_008",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_008",
+    "gt": [
+     "Tiotropium",
+     "Salbutamol"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_008",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_011",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_026",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Salbutamol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Azithromycin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_026",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_026",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_029",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Glimepiride"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_037",
+    "gt": [
+     "Metformin",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "ds_037",
+    "gt": [
+     "Glimepiride",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_001",
+    "gt": [
+     "Metformin",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_001",
+    "gt": [
+     "Metformin",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_001",
+    "gt": [
+     "Glimepiride",
+     "Telmisartan"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_001",
+    "gt": [
+     "Glimepiride",
+     "Atorvastatin"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "duplicate_name_fields"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_005",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_005",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_005",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote",
+     "near_miss_name"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_005",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_005",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "conflict_timing_label",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_012",
+    "gt": [
+     "Azithromycin",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Salbutamol"
+    ],
+    "gt_level": "moderate",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_012",
+    "gt": [
+     "Prednisolone",
+     "Budesonide + Formoterol"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_012",
+    "gt": [
+     "Prednisolone",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_012",
+    "gt": [
+     "Azithromycin",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Tiotropium"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_012",
+    "gt": [
+     "Budesonide + Formoterol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "near_miss_name",
+     "role_corrected",
+     "unusual_strength"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_012",
+    "gt": [
+     "Tiotropium",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_012",
+    "gt": [
+     "Salbutamol",
+     "Pantoprazole"
+    ],
+    "gt_level": "unknown",
+    "causes": [
+     "role_corrected"
+    ]
+   },
+   {
+    "cond": "text",
+    "doc": "rx_016",
+    "gt": [
+     "Amoxicillin + Clavulanic acid",
+     "Azithromycin"
+    ],
+    "gt_level": "minor",
+    "causes": [
+     "role_corrected"
+    ]
+   }
+  ],
+  "false_alarms": 0,
+  "false_alarm_cases": [],
+  "level_mismatches": 0,
+  "level_mismatch_cases": []
+ },
+ "duplicates": {
+  "flagged": 0,
+  "true_flagged": 0,
+  "false_flagged": 0,
+  "false_cases": [],
+  "ground_truth_duplicates": 0,
+  "missed_cases": []
+ },
+ "overall_state": {
+  "text": {
+   "confirm_first": 15,
+   "ok_to_review": 3,
+   "review_interactions": 2
+  },
+  "clean": {
+   "confirm_first": 18,
+   "ok_to_review": 1,
+   "review_interactions": 1
+  },
+  "scan": {
+   "confirm_first": 17,
+   "ok_to_review": 1,
+   "review_interactions": 2
+  },
+  "photo": {
+   "confirm_first": 20
+  },
+  "poor": {
+   "confirm_first": 17,
+   "ok_to_review": 2,
+   "review_interactions": 1
+  }
+ },
+ "confirm_first_share": {
+  "text": 0.75,
+  "clean": 0.9,
+  "scan": 0.85,
+  "photo": 1.0,
+  "poor": 0.85
+ },
+ "confirm_first_share_all": 0.87,
+ "supplement_would_change_formulary_pairs": 0,
+ "supplement_entries": 16
+}
