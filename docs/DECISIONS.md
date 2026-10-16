@@ -104,3 +104,12 @@
 - **Contact setting**: `CONTACT_NAME` (default Demian) and `CONTACT_EMAIL` (default empty, never in the repository); the consent contact line shows the name alone when the email is empty. Notice version 2 (hash pinned); consent under v1 is asked again.
 
 - **S11 source note (domperidone + levofloxacin)**: the current UK SmPC on emc.medicines.org.uk was read as corroboration only. The evidence of record is HPRA and EMA. This is an exception to the regulator-domains-only network rule, accepted by the project owner (Phase 6a-0).
+
+## Phase 6a: frontend design system, shell, ambient layer, landing
+- **Wording of "not checked never means safe"**: the owner's copy rules ban the word "safe" and also ask for this statement. The how-it-works note says "Could not check only means we found no information... It is not a sign that the medicines go well together." A test bans the forbidden words in all `ui.*` English copy.
+- **Strings**: every visible string is a `ui.*` template exported to `strings.generated.json` (a test fails when stale), so the landing works with the backend off; the landing's sample line is copied from the existing `schedule.notice` template (no new translation). Footer does not show a contact: contact comes from the backend setting, so the footer points to the privacy page, which shows the notice's contact line.
+- **Fonts**: only the needed subset/weight CSS files are imported (Latin, Tamil, Devanagari; 400/600; variable Fraunces). Letter-spacing and uppercase labels are switched off for ta/hi because tracking breaks Indic conjuncts; display sizes are smaller for ta/hi.
+- **Ambient layer**: Canvas 2D + CSS only. Particle field is a fixed canvas at z-index -1 inside the content stacking context so it never covers text; frame stats are collected only in development or with `?perf=1`. Duotone photographs use CSS blend modes (pine background, grayscale image with `screen`, paper layer with `multiply`), no SVG filters.
+- **Photos**: Wikimedia Commons only, CC0 or CC BY (no share-alike because the site adapts the images); search stopped at HTTP 429. Source data lives in `assets/photo_sources.json`; `prepare_photos.py` generates the manifest, responsive files and `ATTRIBUTION.md`. A photo with readable text was cropped to its text-free half. CC BY credits are shown in the footer.
+- **Tests compile outside `tsc -b`** (`*.test.ts` excluded from tsconfig.app) so the app build needs no Node types.
+- **Backend-off tests** use Playwright request blocking (same effect as a stopped server for the browser).

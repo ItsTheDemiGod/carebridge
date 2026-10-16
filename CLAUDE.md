@@ -10,7 +10,7 @@ End goal: a professional web app first; a mobile app only if time allows. Colleg
 - LLM: local-first. Default provider Ollama (`qwen3-vl:8b-instruct`, called with httpx on localhost). Gemini (`google-genai`, `gemini-3.8-flash`, GEMINI_API_KEY in backend/.env) is an optional comparison provider only; its free tier is quota-limited (about 20 requests/day), so do not rely on it.
 - OCR: Tesseract or PaddleOCR
 - Storage: SQLite (stdlib sqlite3), content Fernet-encrypted (`cryptography`)
-- Currently installed (Phase 0): react-router-dom, framer-motion, Tailwind v4 (@tailwindcss/vite). GSAP and tsParticles are NOT installed yet.
+- Frontend installed: react-router-dom, framer-motion, Tailwind v4, gsap, @fontsource (Fraunces, Noto Sans/Tamil/Devanagari, Noto Serif Tamil/Devanagari), vitest, @playwright/test, @axe-core/playwright. NOT installed (ask first): tsparticles, three.js, UI kits, icon libraries.
 
 ## Folder layout
 - CLAUDE.md, README.md, .gitignore
@@ -46,7 +46,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 4 Safety layer (interaction lookup, duplicates, guardrail, safety section; dev only; supplement and ta/hi strings await review; red-flag/low-confidence handling reuse Phase 2i flags)
 - [x] 5 Backend API, SQLite + Fernet, consent, confirmation overlay, schedule, delete-my-data (no UI; live smoke done; ta/hi strings and DPDP checklist unreviewed)
 - [x] 5c Prototype review mode: honest author self-check of the interaction supplement, notice v2, labels (docs/REVIEW_STATUS.md)
-- [ ] 6 Web application UI
+- [~] 6 Web application UI: [x] 6a design system, shell, ambient layer, landing (docs/DESIGN.md); [ ] 6b working flow; [ ] 6c polish, phones, demo mode
 - [ ] 7 Evaluation, testing, native-speaker review, usability test
 - [ ] 8 Deployment, demo, report
 - [ ] 9 Stretch: PWA and mobile app
@@ -115,17 +115,13 @@ Status: [x] done, [ ] not started, [~] in progress
 - Low-confidence output must be flagged.
 - Design for India's DPDP Act: explicit consent, data minimization, a delete-my-data function.
 
-## Design direction (applies from Phase 6)
-Must look like a professionally designed product, not an AI-generated template.
-- Deliberate custom color palette via CSS variables: calm medical tone, no default purple/blue gradients.
-- Real typographic pair: a serif or distinctive display font plus a clean sans.
-- Consistent spacing scale.
-- Animated particle background; custom cursor animation; moving tile/card effects.
-- Smooth scroll and page transitions.
-- Real licensed photographs from Unsplash or Pexels, tracked in assets/ATTRIBUTION.md.
-- No emoji as icons; no generic stock hero layout.
-- Accessible contrast; responsive, works well on phones.
-- Respect prefers-reduced-motion.
+## Frontend rules (Phase 6; details docs/DESIGN.md)
+- Direction "calm clinical editorial": paper tones, pine ink, one terracotta accent, Fraunces + Noto. Forbidden: purple gradients, centred 3-card hero, emoji icons, glassmorphism, fake logos/testimonials/statistics, identical card grids, neon. Severity/status always icon + text + colour.
+- ALL visible text is a `ui.*` template (en/ta/hi; ta/hi `draft_unreviewed`): edit `scripts/add_phase6a_templates.py`, run it, then `scripts/export_ui_strings.py` (stale file fails a test). Components hold no literal text (source-scan test).
+- Honest copy: never write safe, safely, guaranteed, accurate, certified, clinically validated, doctor-approved (tested); never imply a pharmacist/doctor/native speaker reviewed anything; no number without a committed metrics file; ta/hi pages always show the machine-drafted note.
+- Nothing loads from the network at runtime (self-hosted fonts and photos, no CDN/analytics). localStorage: only `carebridge.language` and `carebridge.calm`; no frontend cookies.
+- GPU rule: Canvas 2D and CSS transforms only (no WebGL, no backdrop-filter); at most 60/24 particles, DPR cap 1.5, paused when hidden, calm, reduced-motion or on processing screens (`useProcessingScreen`). Calm mode turns off particles, cursor ring, tile drift, parallax.
+- Contrast is a gate: `npm run check:contrast`. Photos: `scripts/prepare_photos.py` from `assets/photo_sources.json`; missing ones in docs/PHOTOS_NEEDED.md.
 
 ## Commands
 Backend (from `backend/`; venv is `backend/.venv`, built with Python 3.12):
@@ -146,3 +142,4 @@ Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`; O
 - Re-score with normalisation (no model calls): `python -m eval.evaluate --split dev --run-id dev-ollama-v1 --rescore normalised` -> eval/results/dev-ollama-v1-normalised
 - Tests: `cd backend; .venv\Scripts\python -m pytest` (live API tests: `-m live`)
 - DDInter: `python data\reference\fetch_ddinter.py` then `python data\reference\ddinter_coverage.py`
+- Frontend tests: `npm test` (vitest), `npm run check:contrast`, `npx playwright test` (e2e + axe + perf; needs `npx vite preview --port 4173` or builds it; the privacy test needs the backend on 8000), `node scripts/screenshots.mjs <dir> [quality]`

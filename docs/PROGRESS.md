@@ -135,3 +135,11 @@
 **Tested**: 735 offline tests (was 716).
 **Open**: no independent review exists; formulary brands unverified; UK/EU current SmPC text for domperidone was read on emc.medicines.org.uk (not a regulator domain) as corroboration, regulator sources cited are HPRA and EMA; set CONTACT_EMAIL in backend/.env if wanted.
 **Next**: Phase 6 (web UI).
+
+## Phase 6a: Frontend design system, shell, ambient motion layer, landing page (DONE; flow comes in 6b)
+**Built**: tokens, self-hosted fonts, 19 hand-drawn icons, base components, wordmark (`docs/DESIGN.md`); 114 `ui.*` templates (en/ta/hi, ta/hi drafts) exported to `frontend/src/i18n/strings.generated.json`; typed API client; i18n runtime and language switching with the persistent draft note; routes `/`, `/how-it-works`, `/privacy` (live consent notice), `/start` (placeholder), 404; particle field, cursor ring, drifting tile mosaic, GSAP scroll effects, calm mode; four Commons photographs (CC0 and CC BY) with duotone; landing page. Step 0: safety re-check with the 16 author-checked supplement pairs enabled changed nothing on the dev set (`eval/results/phase4-dev-with-supplement/`: strict silent misses 3, not covered by a flag 0, false alarms 0, pairs found per condition text 48, clean 40, scan 26, photo 19, poor 16, same as before); S11 note recorded.
+**Run**: `cd frontend; npm install; npm run dev` (backend on 8000 for /privacy). Strings: `python scriptsdd_phase6a_templates.py; python scripts\export_ui_strings.py`. Photos: drop files in `frontend/public/photos/raw/`, edit `assets/photo_sources.json`, `python scripts\prepare_photos.py`.
+**Tested**: 855 backend tests (was 735), 18 vitest, 32 Playwright (site, axe, perf), contrast 36/36, build passes. Details and numbers in `docs/DESIGN.md`. Screenshots: `docs/screenshots/phase6a/`.
+**Open**: 6 of 10 photo themes missing (`docs/PHOTOS_NEEDED.md`); ta/hi UI strings unreviewed (`data/templates/review_sheet_phase6a_new.csv`); GPU memory effect not measurable; lint shows 4 warnings (fast-refresh exports, one setState in an effect).
+**Next**: Phase 6b (consent, upload, confirmation, results, schedule).
+

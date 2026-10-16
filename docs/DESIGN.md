@@ -35,3 +35,12 @@ All user-visible text is `ui.*` in `data/templates/templates.json` (en, ta, hi; 
 
 ## No network at runtime
 Fonts and photographs are self-hosted; no CDN, analytics or third-party script. localStorage holds only `language` and `calm`. No cookies are set by the frontend.
+
+## What was built and measured (Phase 6a)
+Routes: `/` landing (hero with a 15-tile drifting mosaic, steps strip, "why you confirm first" figure, languages block, privacy band, limits notice, testing teaser), `/how-it-works` (SVG diagram shown from 48 rem up, numbered list below), `/privacy` (live consent notice, clear message when the backend is unreachable, retry), `/start` (placeholder), 404.
+- **Tests**: vitest 18 (API client, strings, source scan, particle and pointer logic); Playwright 32 (21 site, 10 axe, 1 perf); contrast 36 of 36 pairs pass; backend 855.
+- **axe** (wcag2a, 2aa, 21a, 21aa, 22aa) on all 5 routes in en and ta: 0 violations of any impact. Axe cannot judge reading order, focus return or Tamil/Hindi quality; those were checked only through the keyboard tests and screenshots.
+- **Frame cost** (headless Chromium, production build, `?perf=1`): 60 particles, work per frame average 0.29 ms, p95 0.50 ms; frame interval average 16.67 ms, p95 16.8 ms (60 fps pacing). Headless is not a real GPU or display, so treat this as a CPU-cost figure.
+- **Build**: main JS 479 KB raw, 143 KB gzip; GSAP and ScrollTrigger load on demand (27 KB and 17 KB gzip) only when motion is allowed; CSS 34 KB raw, 8.5 KB gzip; fonts: all subsets are in `dist` (328 KB woff2) but a page downloads only the scripts it shows; photos: 4 images in 800/1400/2000 px WebP and JPEG, largest files 105 to 290 KB (the leaves JPEG is above the 250 KB target because it is very detailed).
+- **No WebGL** anywhere (test scans the bundle). **GPU memory**: nvidia-smi showed 1884 MiB before and 1770 MiB after the page ran in headless Chromium: not measurable (other applications dominate; headless rasterises on the CPU).
+- **Known limits**: the how-it-works diagram is hidden under 48 rem (the list carries the content); the full-page screenshots show the particle canvas only in the first screen because it is a fixed layer; Tamil and Hindi headings use smaller display sizes than English because the glyphs are wider; 6 of 10 photo themes are placeholders.

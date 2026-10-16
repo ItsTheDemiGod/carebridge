@@ -83,3 +83,12 @@ Phase 5c (prototype review mode; no independent review has taken place, see `doc
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
 See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.
+
+## Frontend (Phase 6a)
+- Run: `cd frontend; npm install; npm run dev` (port 5173, proxies `/api` to the backend on 8000).
+- Unit tests `npm test`; contrast gate `npm run check:contrast`; production build `npm run build`; preview `npx vite preview --port 4173`.
+- End-to-end (Playwright, Chromium; first time `npx playwright install chromium`): `npx playwright test` (the privacy test needs the backend running).
+- Screenshots: `node scripts/screenshots.mjs ../docs/screenshots/phase6a 45` with the preview running.
+- UI strings: edit `scripts/add_phase6a_templates.py`, run it and `scripts/export_ui_strings.py`.
+- Photos: see `docs/PHOTOS_NEEDED.md`; `backend\.venv\Scripts\python scripts\prepare_photos.py`.
+
