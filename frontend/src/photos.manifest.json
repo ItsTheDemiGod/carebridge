@@ -1,1 +1,39 @@
-{}
+{
+ "blister": {
+  "width": 800,
+  "height": 1032,
+  "widths": [
+   800
+  ],
+  "credit": "Tmeers91, CC0 1.0"
+ },
+ "leaves": {
+  "width": 1400,
+  "height": 1867,
+  "widths": [
+   800,
+   1400
+  ],
+  "credit": "Kurt Kaiser, CC0 1.0"
+ },
+ "linen": {
+  "width": 2000,
+  "height": 1428,
+  "widths": [
+   800,
+   1400,
+   2000
+  ],
+  "credit": "Delany Dean, CC BY 2.0"
+ },
+ "water": {
+  "width": 2000,
+  "height": 2338,
+  "widths": [
+   800,
+   1400,
+   2000
+  ],
+  "credit": "Mysterymanblue, CC BY 4.0"
+ }
+}

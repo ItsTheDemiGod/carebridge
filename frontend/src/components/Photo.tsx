@@ -2,9 +2,8 @@ import { useState, type CSSProperties, type ReactNode } from 'react'
 import manifest from '../photos.manifest.json'
 import { Icon } from './icons'
 
-type Entry = { width: number; height: number }
+type Entry = { width: number; height: number; widths: number[]; credit?: string }
 const MAN = manifest as Record<string, Entry>
-const WIDTHS = [800, 1400, 2000]
 
 type PhotoProps = {
   name: string // base file name written by scripts/prepare_photos.py, e.g. "pillbox"
@@ -25,16 +24,16 @@ export function Photo({ name, alt, missingLabel, sizes = '(min-width: 64rem) 40v
     return (
       <div className={`photo photo-missing ${className}`.trim()} role={alt ? 'img' : undefined} aria-label={alt || undefined} aria-hidden={alt ? undefined : true}>
         <Icon name="leaf" size={40} />
-        <span className="photo-missing-label">{missingLabel}</span>
+        {missingLabel ? <span className="photo-missing-label">{missingLabel}</span> : null}
       </div>
     )
   }
-  const set = (ext: string) => WIDTHS.map((w) => `/photos/${name}-${w}.${ext} ${w}w`).join(', ')
+  const set = (ext: string) => e.widths.map((w) => `/photos/${name}-${w}.${ext} ${w}w`).join(', ')
   return (
     <div className={`photo ${duotone ? 'photo-duotone' : ''} ${className}`.trim()} style={{ aspectRatio: `${e.width} / ${e.height}` } as CSSProperties}>
       <picture>
         <source type="image/webp" srcSet={set('webp')} sizes={sizes} />
-        <img src={`/photos/${name}-1400.jpg`} srcSet={set('jpg')} sizes={sizes} width={e.width} height={e.height} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setFailed(true)} />
+        <img src={`/photos/${name}-${e.widths[Math.min(1, e.widths.length - 1)]}.jpg`} srcSet={set('jpg')} sizes={sizes} width={e.width} height={e.height} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setFailed(true)} />
       </picture>
     </div>
   )

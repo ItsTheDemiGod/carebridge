@@ -1,0 +1,31 @@
+{
+  "blister": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Alprazolam_orally_disintegrating_tablets,_blister_packs.jpg",
+    "photographer": "Tmeers91",
+    "license": "CC0 1.0",
+    "date_fetched": "2026-10-16",
+    "crop": [0.5, 0, 1, 1],
+    "note": "right half only (the empty foil side); the printed side with readable text is cropped out"
+  },
+  "leaves": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Close_up_yellow_and_green_leaves_in_Spring_texture.jpg",
+    "photographer": "Kurt Kaiser",
+    "license": "CC0 1.0",
+    "date_fetched": "2026-10-16"
+  },
+  "linen": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Book_cover_fabric_-_Flickr_-_Delany_Dean.jpg",
+    "photographer": "Delany Dean",
+    "license": "CC BY 2.0",
+    "date_fetched": "2026-10-16",
+    "note": "duotone and resizing applied by the site; metadata stripped"
+  },
+  "water": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Alka-Seltzer_tablet_sinking_in_glass.jpg",
+    "photographer": "Mysterymanblue",
+    "license": "CC BY 4.0",
+    "date_fetched": "2026-10-16",
+    "crop": [0, 0.06, 1, 0.9],
+    "note": "cropped, duotone and resizing applied by the site; metadata stripped"
+  }
+}

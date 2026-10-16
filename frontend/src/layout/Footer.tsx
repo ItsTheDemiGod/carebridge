@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import { Icon } from '../components/icons'
 import { useT } from '../i18n/I18n'
+import manifest from '../photos.manifest.json'
 import { Wordmark } from './Wordmark'
+
+const CREDITS = Object.values(manifest as Record<string, { credit?: string }>).flatMap((e) => (e.credit ? [e.credit] : []))
 
 export function Footer() {
   const { t } = useT()
@@ -23,6 +26,7 @@ export function Footer() {
           <p className="footer-small">
             <strong>{t('ui.footer.credits')}.</strong> {t('ui.footer.credits_body')}
           </p>
+          {CREDITS.length ? <p className="footer-small footer-credits">{CREDITS.join(' · ')}</p> : null}
         </div>
       </div>
     </footer>
