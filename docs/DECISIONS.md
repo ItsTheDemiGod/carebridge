@@ -67,3 +67,11 @@
 - **Prompt v2 kept** (one of two revisions used): only the translate prompt changed (general rules). Numbers in docs/EXPLANATION_PROMPT_LOG.md.
 - **Probe lines** for the drug-name and urgency corruption types because dev lines contain neither; labelled as probes, not from dev documents.
 - **No new dependencies**: readability, script detection and CSV use the standard library.
+
+## Phase 3e
+- **Phrase library before the model, exact match only**: reviewable text for common lines, no model call, no fuzzy matching; near-misses are reported, never shown. A different number, negation, symptom or extra clause falls through to the model path.
+- **Provenance and labels**: `model_checked` can never be labelled as human-reviewed; authored English carries no label. Per-language provenance is authoritative (languages fall back independently).
+- **Blind authoring** of library and stress set so dev coverage and stress results are not tuned; the library is not extended from dev near-misses.
+- **Dev re-run re-batches** the model items (matched lines removed), so documents with a match lose their cached batch; Tamil moved -2 points from batching noise.
+- **No prompt revision** (see EXPLANATION_PROMPT_LOG.md). The `you have` regex finding is left for the user to decide (code rule, outside this phase).
+- **Placeholders `{n}` only, integers 1-3 digits without leading zero, per-phrase range**; phrase corrections may not add or drop a number.

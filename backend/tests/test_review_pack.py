@@ -33,4 +33,4 @@ def test_real_pack_files_have_a_bom_and_columns():
     for lang in ("ta", "hi"):
         p = REPO / "docs" / "review_pack" / f"review_{lang}.csv"
         assert p.read_bytes().startswith(b"\xef\xbb\xbf")
-        assert list(csv.DictReader(p.open(encoding="utf-8-sig")).fieldnames) == ["document_id", "line_id", "language", "source_text", "shown_text", "status", "reviewer_verdict", "reviewer_comment"]
+        assert list(csv.DictReader(p.open(encoding="utf-8-sig")).fieldnames) == ["document_id", "line_id", "language", "source_text", "shown_text", "status", "provenance", "label", "reviewer_verdict", "reviewer_comment"]

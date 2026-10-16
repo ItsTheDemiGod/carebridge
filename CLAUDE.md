@@ -31,6 +31,7 @@ End goal: a professional web app first; a mobile app only if time allows. Colleg
 - data/reference/ : fetch_ddinter.py, ddinter_coverage.py; docs/DDINTER_COVERAGE.md, docs/PROMPT_LOG.md
 - assets/ATTRIBUTION.md : photo credits (file, source URL, photographer, license)
 - Phase 3: backend/app/schemas/explanation.py; services/{templates,narrative,verification,explain,script}.py; prompts/narrative_v{1,2}/ (A simplify, B translate, C back-translate, D judge; v2 default); data/templates/{templates.json,review_sheet.csv}; scripts/{export_review_sheet,import_review_sheet,import_review_pack}.py; eval/{run_narrative,corruption_eval,make_corruptions,phase3_metrics,readability,make_review_pack}.py; docs/{EXPLANATION,EXPLANATION_PROMPT_LOG,TRANSLATION_REVIEW}.md; docs/review_pack/
+- Phase 3e: data/templates/{phrases.json,phrase_review_sheet.csv}; services/phrase_match.py; scripts/{export,import}_phrase_sheet.py; eval/stress/{stress_set.json,run_stress.py,README.md}; eval/phase3e_metrics.py; docs/PHRASE_LIBRARY.md
 
 ## Phases
 Status: [x] done, [ ] not started, [~] in progress
@@ -40,6 +41,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 2h Normalisation layer (rules, formulary name resolver, flags; dev re-score from cache, no model calls)
 - [x] 2i Hardening: strict quote checks, incomplete_quote flag, review levels, interaction_ready / schedule_ready
 - [x] 3 Plain-language explanation (EN/TA/HI) plus faithfulness verification (dev only; Tamil/Hindi quality not yet reviewed by natives)
+- [x] 3e Phrase library (91 phrases), provenance labels, stress set, dev re-run (no native review yet; send review sheets before Phase 7)
 - [ ] 4 Safety layer (interactions, red flags, no-diagnosis guardrail, low-confidence flag)
 - [ ] 5 Backend API, database, consent flow, encryption, delete-my-data
 - [ ] 6 Web application UI
@@ -75,7 +77,11 @@ Status: [x] done, [ ] not started, [~] in progress
 - READINESS RULE: each normalised medicine has review_level (must_confirm/note/none; needs_verification = alias of must_confirm), interaction_ready and schedule_ready. Interaction checks run ONLY for interaction_ready medicines (resolved_generic from an EXACT printed formulary name, never from the model's generic field); all others are reported "not checked". Reminders are built ONLY for schedule_ready medicines (daily, known times/timing, not PRN, never weekly); the user confirms the rest. Any new flag is must_confirm unless explicitly listed as note.
 - The normalisation service uses only the model's output; document text is optional (evaluation and tests only).
 
-## Explanation pipeline (Phase 3)
+## Explanation pipeline (Phase 3, 3e)
+- Per free-text line, in order: (A) strict phrase-library match (exact, no model) -> (B) local model with verification -> (C) original English with notice. Matched lines make no model call.
+- LABEL RULE: a model-written line is `machine_checked` (software only) and may NEVER carry a human-review label; only a template/library text with review_status `reviewed` is `native_reviewed`. Provenance: template | phrase_library | model_checked | original_only (per language on LangText).
+- PHRASE LIBRARY RULE: near-misses are reported, NEVER displayed; the library is never extended from dev or stress lines (keeps coverage honest). Library ta/hi are draft_unreviewed until the native import.
+- Dev 3e: 9/135 lines match the library (6.7%); stress-set sources 4/55. The stress set is authored, never shipped, never used as prompt examples.
 - Works from the NORMALISED extraction only (never document text). Medicine lines: fixed templates (en/ta/hi), no model. Advice, follow-ups, warnings: local text-only model (A simplify en, B translate ta/hi, C back-translate, D judge).
 - A language text is "verified" only if ALL deterministic checks pass (id integrity, numbers, drug names, script, length, forbidden additions, urgency) AND the judge says supported. Otherwise the user sees the ORIGINAL extracted English with a fallback notice. Unverified text is never shown as verified. Each language falls back on its own.
 - Warning lines in output == extracted warnings (never dropped or merged). must_confirm medicines always carry the confirm banner; a medicine that is not schedule_ready is never "settled".

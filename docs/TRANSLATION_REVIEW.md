@@ -13,6 +13,7 @@ Pick your language. You get two files:
 - **English explanation**: the plain English version.
 - **Shown to user**: the Tamil or Hindi text a patient would see. **This is the text you judge.**
 - **Status**: `template` = a fixed sentence written by us; `verified` = our automatic checks accepted a machine-written text; `unverified` or `original_only` = the machine text was rejected, so the patient sees the original English with a notice. For rejected lines the grey text shows what the machine wrote; it is not shown to patients, but if it is good or bad tell us in the comment.
+- **Provenance / label** (review pack, Phase 3e): `phrase_library` = a standard sentence from the phrase library (review it in `phrase_review_sheet.csv`); `model_checked` = machine-written, software-checked only; `original_only` = English shown; `template` = fixed sentence.
 - **Judge**: what our checker said. You can ignore it while reviewing; it is there for us to compare.
 
 ## Your job, row by row

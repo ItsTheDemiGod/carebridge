@@ -29,3 +29,6 @@ v2 kept. The second allowed revision was NOT used: the remaining Tamil failures 
 - English is 100% verified because the simplifier returns the source text unchanged for 64 of 135 lines and only lightly rewords the rest; readability barely changes (Flesch-Kincaid median 3.65 to 2.88). The English path therefore proves the verification layer more than it proves simplification.
 - Tamil falls back to the original English text for 72.6% of free-text lines, Hindi for 23.7%. This is the safe outcome by design, but it means the Tamil experience is mostly original English with a notice until a stronger model or a native-speaker pass exists.
 - No Tamil or Hindi string has been reviewed by a native speaker. The judge is the same model that wrote the text; native review in Phase 7 is the real check.
+
+## Phase 3e: no revision
+The stress set (eval/results/stress-v1) showed no failure that a general prompt rule fixes: the English simplifier changed every hard line (FK median 13.9 to 8.3), 14 of 15 verified, none lost or added a fact according to the judge, and the judge detected 19 of 20 wrong English candidates. The failures are (1) a deterministic regex (`you have` flagged as a diagnosis in "if you have chest pain"), which is a code rule, not a prompt, and (2) Tamil back-translation noise. The second allowed revision remains unused.

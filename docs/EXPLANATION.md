@@ -2,7 +2,16 @@
 
 CareBridge explains and organises. It never diagnoses, never advises a dose change, and always tells the user to confirm with their doctor or pharmacist.
 
-## Pipeline
+## Pipeline order (Phase 3e)
+For each extracted advice, follow-up or warning line: (A) **phrase library**, exact match of the normalised line to a phrase or alias (`services/phrase_match.py`, `docs/PHRASE_LIBRARY.md`); matched lines show the library text in en/ta/hi and never reach the model; (B) otherwise the **local model path** below, with verification; (C) if verification fails, the **original English with a notice**. Near-misses (very similar but unequal wording) are reported for maintenance and never displayed.
+
+## Provenance and labels
+Every displayed text carries `provenance` (template, phrase_library, model_checked, original_only) and a computed `label_key`: `native_reviewed` (template or library text whose review_status is `reviewed`), `draft_unreviewed` (not yet reviewed), `machine_checked` (model-written, passed software checks only), `original_only`. A model-written line can never be `native_reviewed`. Authored English has no label. Label texts are templates `label.*`.
+
+## Blind authoring
+The phrase library (`phrases.json`) and the stress set (`eval/stress/stress_set.json`) were written from general knowledge of discharge wording only. No file under data/synthetic, data/ground_truth, data/rendered, eval/runs, eval/results, the data cache or docs/review_pack, no dev document, no earlier model output and not data/generate_synthetic.py was opened for that purpose. Coverage measured afterwards is therefore an honest dev-set number, though probably still optimistic (the generator uses common wording); real-world coverage is unmeasured.
+
+## Pipeline (model path)
 Input is the NORMALISED extraction (medicines with review_level / flags / readiness, follow-ups, red flags, advice). The live app has no document text, so nothing here reads it; evaluation may use it only for checking.
 
 1. **Medicine lines: fixed templates, no model.** `services/templates.py` builds each line from structured fields using `data/templates/templates.json` (en / ta / hi). Human-reviewable, deterministic.
@@ -39,3 +48,5 @@ Explaining the diagnosis (the extraction schema has no diagnosis field), hospita
 - Back-translation can hide a translation error (a wrong Tamil sentence can back-translate to a correct English one). Native review in Phase 7 is the real check on Tamil and Hindi.
 - Tamil and Hindi template strings are drafts written without a native speaker.
 - Dev set only, 20 synthetic documents, one model, one run per prompt version.
+- Phase 3e dev numbers: the library covers 9 of 135 dev lines (6.7%); Hindi shown in Hindi 81%, Tamil 25% (Phase 3: 76% and 27%; the Tamil change is re-batching noise, not an effect of the library). The stress set (authored, 20+20 English pairs, 6+6 per Tamil/Hindi) gives false-reject 5% English, 50% Tamil, 17% Hindi and 95-100% combined detection; three false rejects come from the `you have` diagnosis regex firing on "if you have chest pain" while the judge said supported. See eval/results/stress-v1.
+- `model_checked` is software-checked only; native review (Phase 7) is the real check.

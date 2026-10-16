@@ -51,6 +51,14 @@ Phase 3 (explanations; local model, dev split, clean condition, resumable from t
     python scripts\import_review_sheet.py returned.csv --reviewer AB (refuses the whole file on any bad row)
     python scripts\import_review_pack.py returned_ta.csv --reviewer AB
 
+Phase 3e (phrase library, stress set; same conventions):
+
+    python -m eval.stress.run_stress --run-id stress-v1                (17 local calls, about 7 min; eval/results/stress-v1)
+    python -m eval.run_narrative --run-id phase3e-dev-clean            (phrase library active)
+    python -m eval.phase3e_metrics --run-id phase3e-dev-clean          (provenance shares, near-misses, comparison with Phase 3)
+    python scripts\export_phrase_sheet.py                              (data/templates/phrase_review_sheet.csv)
+    python scripts\import_phrase_sheet.py returned.csv --reviewer AB   (refuses the whole file on any bad row)
+
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
 See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.

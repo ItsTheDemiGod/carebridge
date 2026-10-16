@@ -100,3 +100,12 @@
 **Limits**: same model writes and judges; no native review yet; back-translation can hide an error; dev set only (test split untouched, no --final-test-run); number words are not checked; Tamil/Hindi negation and urgency rest on the judge.
 **Needs the user**: send the review pack to a Tamil and a Hindi reviewer; decide whether to try a stronger model for Tamil (Phase 7).
 **Next**: Phase 4 (safety layer: interactions for interaction_ready medicines, red flags, no-diagnosis guardrail).
+
+## Phase 3e: Phrase library, provenance labels, stress set (DONE on the dev set)
+**Housekeeping**: `eval/results/phase3-dev-clean-prompt-v1/metrics.json` run_id corrected to match its folder name.
+**Built**: provenance + `label_key` on every text (`schemas/explanation.py`, `label.*` templates); `data/templates/phrases.json` (91 phrases: 44 advice, 34 warning, 13 follow-up; en/ta/hi, draft_unreviewed); strict matcher `services/phrase_match.py` with near-miss reporting; pipeline order library -> model -> original in `services/explain.py`; phrase review sheet export/import; stress set `eval/stress/` and `eval/phase3e_metrics.py`; review pack with provenance column; `docs/PHRASE_LIBRARY.md`.
+**Run**: see README (Phase 3e). Results: `eval/results/stress-v1`, `eval/results/phase3e-dev-clean`.
+**Stress (blind, small samples)**: English false-reject 1/20, detection 19/20 (judge 0.95, deterministic 0.25; missed one item_merged); Tamil false-reject 3/6, detection 6/6; Hindi false-reject 1/6, detection 6/6. Simplifier on 15 harder lines: all changed, FK median 13.9 -> 8.3, 14/15 verified, no fact lost or added per judge.
+**Dev re-run**: library matches 9/135 lines (6.7%); shown in language: Hindi 81% (was 76%), Tamil 25% (was 27%, batching noise); English 100%. Stress-source coverage 4/55. 160 calls, 64 fresh.
+**Issues**: (1) the `you have` diagnosis regex false-rejects correct warnings ("if you have chest pain") although the judge says supported: 3 of 7 correct warning candidates across languages; suggest limiting it to statements not introduced by if/when (needs your decision). (2) Library coverage is low; it must not be extended from dev lines. (3) Tamil judge false-rejects with `adds_information` from back-translation noise. (4) Same 8B model writes, back-translates and judges.
+**Needs you**: send `docs/review_pack/review_{ta,hi}.{html,csv}`, `docs/review_pack/phrase_review_sheet.csv` and `data/templates/review_sheet.csv` to reviewers when ready (nothing is marked sent).
