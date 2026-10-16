@@ -1,0 +1,1338 @@
+{
+ "components": {
+  "schemas": {
+   "AddedMedicine": {
+    "additionalProperties": false,
+    "properties": {
+     "dose": {
+      "enum": [
+       "1/2 tablet",
+       "1 tablet",
+       "2 tablets",
+       "1 capsule",
+       "2 capsules",
+       "5 ml",
+       "10 ml",
+       "1 puff",
+       "2 puffs",
+       "1 drop",
+       "2 drops",
+       "1 application"
+      ],
+      "title": "Dose",
+      "type": "string"
+     },
+     "formulary_id": {
+      "maxLength": 80,
+      "title": "Formulary Id",
+      "type": "string"
+     },
+     "schedule": {
+      "$ref": "#/components/schemas/ScheduleEdit"
+     },
+     "strength_choice": {
+      "maxLength": 40,
+      "title": "Strength Choice",
+      "type": "string"
+     }
+    },
+    "required": [
+     "formulary_id",
+     "strength_choice",
+     "dose",
+     "schedule"
+    ],
+    "title": "AddedMedicine",
+    "type": "object"
+   },
+   "AdherenceIn": {
+    "additionalProperties": false,
+    "properties": {
+     "date": {
+      "maxLength": 10,
+      "title": "Date",
+      "type": "string"
+     },
+     "document_id": {
+      "maxLength": 64,
+      "title": "Document Id",
+      "type": "string"
+     },
+     "med_ref": {
+      "maxLength": 4,
+      "title": "Med Ref",
+      "type": "string"
+     },
+     "scheduled_time": {
+      "maxLength": 5,
+      "title": "Scheduled Time",
+      "type": "string"
+     },
+     "status": {
+      "enum": [
+       "taken",
+       "skipped"
+      ],
+      "title": "Status",
+      "type": "string"
+     }
+    },
+    "required": [
+     "document_id",
+     "med_ref",
+     "scheduled_time",
+     "date",
+     "status"
+    ],
+    "title": "AdherenceIn",
+    "type": "object"
+   },
+   "Confirmations": {
+    "additionalProperties": false,
+    "properties": {
+     "added_medicines": {
+      "items": {
+       "$ref": "#/components/schemas/AddedMedicine"
+      },
+      "maxItems": 10,
+      "title": "Added Medicines",
+      "type": "array"
+     },
+     "decisions": {
+      "items": {
+       "$ref": "#/components/schemas/MedicineDecision"
+      },
+      "maxItems": 40,
+      "title": "Decisions",
+      "type": "array"
+     }
+    },
+    "title": "Confirmations",
+    "type": "object"
+   },
+   "ConsentIn": {
+    "properties": {
+     "notice_version": {
+      "title": "Notice Version",
+      "type": "string"
+     },
+     "purposes": {
+      "items": {
+       "type": "string"
+      },
+      "title": "Purposes",
+      "type": "array"
+     }
+    },
+    "required": [
+     "notice_version",
+     "purposes"
+    ],
+    "title": "ConsentIn",
+    "type": "object"
+   },
+   "HTTPValidationError": {
+    "properties": {
+     "detail": {
+      "items": {
+       "$ref": "#/components/schemas/ValidationError"
+      },
+      "title": "Detail",
+      "type": "array"
+     }
+    },
+    "title": "HTTPValidationError",
+    "type": "object"
+   },
+   "LanguageIn": {
+    "properties": {
+     "language": {
+      "enum": [
+       "en",
+       "ta",
+       "hi"
+      ],
+      "title": "Language",
+      "type": "string"
+     }
+    },
+    "required": [
+     "language"
+    ],
+    "title": "LanguageIn",
+    "type": "object"
+   },
+   "MedicineDecision": {
+    "additionalProperties": false,
+    "properties": {
+     "acknowledged_flags": {
+      "items": {
+       "type": "string"
+      },
+      "maxItems": 20,
+      "title": "Acknowledged Flags",
+      "type": "array"
+     },
+     "action": {
+      "enum": [
+       "confirm_as_extracted",
+       "select_formulary_drug",
+       "not_in_list",
+       "remove"
+      ],
+      "title": "Action",
+      "type": "string"
+     },
+     "formulary_id": {
+      "anyOf": [
+       {
+        "maxLength": 80,
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Formulary Id"
+     },
+     "index": {
+      "minimum": 0.0,
+      "title": "Index",
+      "type": "integer"
+     },
+     "note": {
+      "anyOf": [
+       {
+        "maxLength": 80,
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Note"
+     },
+     "schedule_edit": {
+      "anyOf": [
+       {
+        "$ref": "#/components/schemas/ScheduleEdit"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "strength_choice": {
+      "anyOf": [
+       {
+        "maxLength": 40,
+        "type": "string"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Strength Choice"
+     }
+    },
+    "required": [
+     "index",
+     "action"
+    ],
+    "title": "MedicineDecision",
+    "type": "object"
+   },
+   "OverridesIn": {
+    "additionalProperties": false,
+    "properties": {
+     "overrides": {
+      "additionalProperties": {
+       "items": {
+        "type": "string"
+       },
+       "type": "array"
+      },
+      "maxProperties": 40,
+      "title": "Overrides",
+      "type": "object"
+     }
+    },
+    "title": "OverridesIn",
+    "type": "object"
+   },
+   "ScheduleEdit": {
+    "additionalProperties": false,
+    "properties": {
+     "duration_days": {
+      "anyOf": [
+       {
+        "maximum": 365.0,
+        "minimum": 1.0,
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Duration Days"
+     },
+     "times_per_day": {
+      "anyOf": [
+       {
+        "maximum": 6.0,
+        "minimum": 1.0,
+        "type": "integer"
+       },
+       {
+        "const": "as_needed",
+        "type": "string"
+       }
+      ],
+      "title": "Times Per Day"
+     },
+     "timing_label": {
+      "$ref": "#/components/schemas/TimingLabel"
+     }
+    },
+    "required": [
+     "times_per_day",
+     "timing_label"
+    ],
+    "title": "ScheduleEdit",
+    "type": "object"
+   },
+   "SessionIn": {
+    "properties": {
+     "language": {
+      "default": "en",
+      "enum": [
+       "en",
+       "ta",
+       "hi"
+      ],
+      "title": "Language",
+      "type": "string"
+     }
+    },
+    "title": "SessionIn",
+    "type": "object"
+   },
+   "TimingLabel": {
+    "enum": [
+     "morning",
+     "afternoon",
+     "evening",
+     "night",
+     "with_meals",
+     "before_meals",
+     "after_meals",
+     "bedtime",
+     "as_needed",
+     "unspecified",
+     "other"
+    ],
+    "title": "TimingLabel",
+    "type": "string"
+   },
+   "ValidationError": {
+    "properties": {
+     "ctx": {
+      "title": "Context",
+      "type": "object"
+     },
+     "input": {
+      "title": "Input"
+     },
+     "loc": {
+      "items": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ]
+      },
+      "title": "Location",
+      "type": "array"
+     },
+     "msg": {
+      "title": "Message",
+      "type": "string"
+     },
+     "type": {
+      "title": "Error Type",
+      "type": "string"
+     }
+    },
+    "required": [
+     "loc",
+     "msg",
+     "type"
+    ],
+    "title": "ValidationError",
+    "type": "object"
+   }
+  }
+ },
+ "info": {
+  "title": "CareBridge",
+  "version": "0.1.0"
+ },
+ "openapi": "3.1.0",
+ "paths": {
+  "/api/health": {
+   "get": {
+    "operationId": "health_api_health_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     }
+    },
+    "summary": "Health"
+   }
+  },
+  "/api/v1/adherence": {
+   "get": {
+    "operationId": "list_adherence_api_v1_adherence_get",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "document_id",
+      "required": true,
+      "schema": {
+       "maxLength": 64,
+       "title": "Document Id",
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "from",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "maxLength": 10,
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "From"
+      }
+     },
+     {
+      "in": "query",
+      "name": "to",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "maxLength": 10,
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "To"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "List Adherence"
+   },
+   "post": {
+    "operationId": "log_adherence_api_v1_adherence_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/AdherenceIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Log Adherence"
+   }
+  },
+  "/api/v1/adherence/{event_id}": {
+   "delete": {
+    "operationId": "delete_adherence_api_v1_adherence__event_id__delete",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "event_id",
+      "required": true,
+      "schema": {
+       "title": "Event Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "204": {
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Delete Adherence"
+   }
+  },
+  "/api/v1/consent": {
+   "post": {
+    "operationId": "give_consent_api_v1_consent_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ConsentIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Give Consent"
+   }
+  },
+  "/api/v1/consent-notice": {
+   "get": {
+    "operationId": "consent_notice_api_v1_consent_notice_get",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "lang",
+      "required": false,
+      "schema": {
+       "default": "en",
+       "enum": [
+        "en",
+        "ta",
+        "hi"
+       ],
+       "title": "Lang",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Consent Notice"
+   }
+  },
+  "/api/v1/documents": {
+   "get": {
+    "operationId": "list_documents_api_v1_documents_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     }
+    },
+    "summary": "List Documents"
+   },
+   "post": {
+    "description": "Raw image bytes as the body (Content-Type image/png or image/jpeg). The photo is processed and discarded unless keep_photo_for_session was consented.",
+    "operationId": "upload_api_v1_documents_post",
+    "requestBody": {
+     "content": {
+      "image/jpeg": {
+       "schema": {
+        "format": "binary",
+        "type": "string"
+       }
+      },
+      "image/png": {
+       "schema": {
+        "format": "binary",
+        "type": "string"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "202": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     }
+    },
+    "summary": "Upload"
+   }
+  },
+  "/api/v1/documents/{doc_id}": {
+   "get": {
+    "operationId": "get_document_api_v1_documents__doc_id__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "doc_id",
+      "required": true,
+      "schema": {
+       "title": "Doc Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Get Document"
+   }
+  },
+  "/api/v1/documents/{doc_id}/confirmations": {
+   "post": {
+    "description": "Replaces the whole previous set (idempotent). The server validates every rule; nothing the user typed is used for any lookup.",
+    "operationId": "put_confirmations_api_v1_documents__doc_id__confirmations_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "doc_id",
+      "required": true,
+      "schema": {
+       "title": "Doc Id",
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/Confirmations"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Put Confirmations"
+   }
+  },
+  "/api/v1/documents/{doc_id}/doctor-summary": {
+   "get": {
+    "description": "A plain list for the user to show a doctor: confirmed medicines with strength and schedule, taken / skipped / missed counts, what is still unconfirmed,\nand the interaction lines exactly as the user sees them. Counts only: no percentages, no scores, no advice.",
+    "operationId": "doctor_summary_api_v1_documents__doc_id__doctor_summary_get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "doc_id",
+      "required": true,
+      "schema": {
+       "title": "Doc Id",
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "from",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "maxLength": 10,
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "From"
+      }
+     },
+     {
+      "in": "query",
+      "name": "to",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "maxLength": 10,
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "To"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Doctor Summary"
+   }
+  },
+  "/api/v1/documents/{doc_id}/image": {
+   "get": {
+    "operationId": "get_image_api_v1_documents__doc_id__image_get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "doc_id",
+      "required": true,
+      "schema": {
+       "title": "Doc Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Get Image"
+   }
+  },
+  "/api/v1/documents/{doc_id}/languages": {
+   "post": {
+    "operationId": "add_language_api_v1_documents__doc_id__languages_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "doc_id",
+      "required": true,
+      "schema": {
+       "title": "Doc Id",
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/LanguageIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "202": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Add Language"
+   }
+  },
+  "/api/v1/documents/{doc_id}/medicines": {
+   "get": {
+    "operationId": "medicines_api_v1_documents__doc_id__medicines_get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "doc_id",
+      "required": true,
+      "schema": {
+       "title": "Doc Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Medicines"
+   }
+  },
+  "/api/v1/documents/{doc_id}/result": {
+   "get": {
+    "description": "Before confirmation: the unconfirmed normalised document (names that are not interaction_ready are `not_checked_unconfirmed`).\nAfter confirmation: the overlay. A narrative that is not ready is marked `narrative_pending`, never guessed.",
+    "operationId": "get_result_api_v1_documents__doc_id__result_get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "doc_id",
+      "required": true,
+      "schema": {
+       "title": "Doc Id",
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "lang",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "enum": [
+          "en",
+          "ta",
+          "hi"
+         ],
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Lang"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Get Result"
+   }
+  },
+  "/api/v1/documents/{doc_id}/retry": {
+   "post": {
+    "description": "Only possible when the photo was kept (it is stored encrypted); otherwise the user must upload again.",
+    "operationId": "retry_api_v1_documents__doc_id__retry_post",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "doc_id",
+      "required": true,
+      "schema": {
+       "title": "Doc Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "202": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Retry"
+   }
+  },
+  "/api/v1/documents/{doc_id}/schedule": {
+   "get": {
+    "operationId": "get_schedule_api_v1_documents__doc_id__schedule_get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "doc_id",
+      "required": true,
+      "schema": {
+       "title": "Doc Id",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Get Schedule"
+   }
+  },
+  "/api/v1/documents/{doc_id}/schedule-overrides": {
+   "put": {
+    "description": "Replaces the whole set. Times are HH:MM, at most 6 per medicine. Only medicines that can be scheduled accept times.",
+    "operationId": "put_overrides_api_v1_documents__doc_id__schedule_overrides_put",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "doc_id",
+      "required": true,
+      "schema": {
+       "title": "Doc Id",
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/OverridesIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Put Overrides"
+   }
+  },
+  "/api/v1/formulary/search": {
+   "get": {
+    "operationId": "formulary_search_api_v1_formulary_search_get",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "q",
+      "required": false,
+      "schema": {
+       "default": "",
+       "maxLength": 60,
+       "title": "Q",
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "limit",
+      "required": false,
+      "schema": {
+       "default": 20,
+       "maximum": 20,
+       "minimum": 1,
+       "title": "Limit",
+       "type": "integer"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Formulary Search"
+   }
+  },
+  "/api/v1/formulary/{fid}": {
+   "get": {
+    "operationId": "formulary_get_api_v1_formulary__fid__get",
+    "parameters": [
+     {
+      "in": "path",
+      "name": "fid",
+      "required": true,
+      "schema": {
+       "title": "Fid",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Formulary Get"
+   }
+  },
+  "/api/v1/session": {
+   "delete": {
+    "description": "Delete-my-data and withdraw consent: one call. Idempotent: no session (already deleted) gives 204.",
+    "operationId": "delete_session_api_v1_session_delete",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     }
+    },
+    "summary": "Delete Session"
+   },
+   "get": {
+    "operationId": "get_session_api_v1_session_get",
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     }
+    },
+    "summary": "Get Session"
+   }
+  },
+  "/api/v1/sessions": {
+   "post": {
+    "description": "Start (or resume) the anonymous session. A valid cookie is reused, so a page reload does not orphan data.",
+    "operationId": "create_session_api_v1_sessions_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/SessionIn"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "201": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Create Session"
+   }
+  },
+  "/api/v1/strings": {
+   "get": {
+    "description": "Static template text (no user data) so the UI can show errors, labels and notices in the user's language.",
+    "operationId": "strings_api_v1_strings_get",
+    "parameters": [
+     {
+      "in": "query",
+      "name": "lang",
+      "required": false,
+      "schema": {
+       "default": "en",
+       "enum": [
+        "en",
+        "ta",
+        "hi"
+       ],
+       "title": "Lang",
+       "type": "string"
+      }
+     },
+     {
+      "in": "query",
+      "name": "prefix",
+      "required": false,
+      "schema": {
+       "default": "",
+       "maxLength": 40,
+       "title": "Prefix",
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      },
+      "description": "Successful Response"
+     },
+     "422": {
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      },
+      "description": "Validation Error"
+     }
+    },
+    "summary": "Strings"
+   }
+  }
+ }
+}

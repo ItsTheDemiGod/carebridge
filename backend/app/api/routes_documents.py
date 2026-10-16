@@ -48,7 +48,10 @@ async def read_body(request: Request, limit: int) -> bytes:
     return b"".join(chunks)
 
 
-@router.post("/documents", status_code=202)
+BINARY = {"schema": {"type": "string", "format": "binary"}}
+
+
+@router.post("/documents", status_code=202, openapi_extra={"requestBody": {"required": True, "content": {"image/png": BINARY, "image/jpeg": BINARY}}})
 async def upload(request: Request, s: Sess = Depends(require_consent), ctx: Ctx = Depends(get_ctx), conn=Depends(db_conn)):
     """Raw image bytes as the body (Content-Type image/png or image/jpeg). The photo is processed and discarded unless keep_photo_for_session was consented."""
     cfg = ctx.settings
