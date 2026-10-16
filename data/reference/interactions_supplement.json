@@ -1,0 +1,257 @@
+{
+ "note": "Drafted by Claude Code from official label / regulator pages. Pairs with NO DDInter record only. Only documented interactions; no entry ever says 'no interaction'. Ignored by the app until status is 'reviewed' (pharmacist). Summaries are own-words paraphrases. Severity 'unclassified' = the source gives no severity.",
+ "entries": [
+  {
+   "pair_id": "S01",
+   "drug_a": "Enalapril",
+   "drug_b": "Spironolactone",
+   "proposed_severity": "unclassified",
+   "summary_en": "Both medicines can raise blood potassium, so taking them together can push potassium too high.",
+   "source_url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22enalapril+maleate%22+AND+openfda.brand_name:%22vasotec%22&limit=1",
+   "source_section": "Vasotec label, 7 Drug Interactions: Agents Increasing Serum Potassium (potassium-sparing diuretics)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22spironolactone%22+AND+openfda.brand_name:%22aldactone%22&limit=1",
+     "section": "Aldactone label, 7.1 Drugs and Supplements Increasing Serum Potassium (ACE inhibitors and ARBs are listed as drugs that can raise potassium)"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S02",
+   "drug_a": "Ramipril",
+   "drug_b": "Spironolactone",
+   "proposed_severity": "unclassified",
+   "summary_en": "Taking these together increases the chance of high blood potassium, which needs regular blood tests.",
+   "source_url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:ramipril&limit=1",
+   "source_section": "Ramipril capsules label, 7.1 Diuretics (names spironolactone)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22spironolactone%22+AND+openfda.brand_name:%22aldactone%22&limit=1",
+     "section": "Aldactone label, 7.1 Drugs and Supplements Increasing Serum Potassium (ACE inhibitors and ARBs are listed as drugs that can raise potassium)"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S03",
+   "drug_a": "Olmesartan",
+   "drug_b": "Spironolactone",
+   "proposed_severity": "unclassified",
+   "summary_en": "Together they can raise blood potassium, so potassium may need to be monitored.",
+   "source_url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22olmesartan+medoxomil%22+AND+openfda.brand_name:%22benicar%22&limit=1",
+   "source_section": "Benicar label, 7.1 Agents Increasing Serum Potassium (names spironolactone)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22spironolactone%22+AND+openfda.brand_name:%22aldactone%22&limit=1",
+     "section": "Aldactone label, 7.1 Drugs and Supplements Increasing Serum Potassium (ACE inhibitors and ARBs are listed as drugs that can raise potassium)"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S04",
+   "drug_a": "Losartan",
+   "drug_b": "Spironolactone",
+   "proposed_severity": "unclassified",
+   "summary_en": "Both can raise blood potassium, so using them together may cause too much potassium in the blood.",
+   "source_url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22losartan+potassium%22+AND+openfda.brand_name:%22cozaar%22&limit=1",
+   "source_section": "Cozaar label, 7.1 Agents Increasing Serum Potassium (drugs that raise serum potassium)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22spironolactone%22+AND+openfda.brand_name:%22aldactone%22&limit=1",
+     "section": "Aldactone label, 7.1 Drugs and Supplements Increasing Serum Potassium (ACE inhibitors and ARBs are listed as drugs that can raise potassium)"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S05",
+   "drug_a": "Telmisartan",
+   "drug_b": "Spironolactone",
+   "proposed_severity": "unclassified",
+   "summary_en": "Both can raise blood potassium, so using them together may cause too much potassium in the blood.",
+   "source_url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22telmisartan%22+AND+openfda.brand_name:%22micardis%22&limit=1",
+   "source_section": "Micardis label, 7.1 Agents Increasing Serum Potassium (drugs that raise serum potassium)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22spironolactone%22+AND+openfda.brand_name:%22aldactone%22&limit=1",
+     "section": "Aldactone label, 7.1 Drugs and Supplements Increasing Serum Potassium (ACE inhibitors and ARBs are listed as drugs that can raise potassium)"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S06",
+   "drug_a": "Telmisartan",
+   "drug_b": "Ramipril",
+   "proposed_severity": "unclassified",
+   "summary_en": "The ramipril label says this pair is not recommended because it adds kidney, potassium and blood-pressure risks without extra benefit.",
+   "source_url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:ramipril&limit=1",
+   "source_section": "Ramipril capsules label, 5.7 Dual Blockade of the Renin-Angiotensin-Aldosterone System (names telmisartan)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22telmisartan%22+AND+openfda.brand_name:%22micardis%22&limit=1",
+     "section": "Micardis label, 7.4 Dual Blockade of the Renin-Angiotensin-Aldosterone System"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S07",
+   "drug_a": "Losartan",
+   "drug_b": "Ramipril",
+   "proposed_severity": "unclassified",
+   "summary_en": "Using an ACE inhibitor together with an angiotensin receptor blocker generally should be avoided because of low blood pressure, high potassium and kidney changes.",
+   "source_url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22losartan+potassium%22+AND+openfda.brand_name:%22cozaar%22&limit=1",
+   "source_section": "Cozaar label, 7.4 Dual Blockade of the Renin-Angiotensin System (ACE inhibitors)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:ramipril&limit=1",
+     "section": "Ramipril capsules label, 5.7 Dual Blockade of the Renin-Angiotensin-Aldosterone System"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S08",
+   "drug_a": "Losartan",
+   "drug_b": "Enalapril",
+   "proposed_severity": "unclassified",
+   "summary_en": "Using an ACE inhibitor together with an angiotensin receptor blocker generally should be avoided because of low blood pressure, high potassium and kidney changes.",
+   "source_url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22enalapril+maleate%22+AND+openfda.brand_name:%22vasotec%22&limit=1",
+   "source_section": "Vasotec label, Dual Blockade of the Renin-Angiotensin System (RAS)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:%22losartan+potassium%22+AND+openfda.brand_name:%22cozaar%22&limit=1",
+     "section": "Cozaar label, 7.4 Dual Blockade of the Renin-Angiotensin System"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S09",
+   "drug_a": "Gliclazide",
+   "drug_b": "Levofloxacin",
+   "proposed_severity": "unclassified",
+   "summary_en": "The levofloxacin label says blood sugar can swing too low or too high in people on diabetes tablets, so sugar should be checked more often (label example: glyburide, a sulfonylurea like gliclazide).",
+   "source_url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:levofloxacin&limit=1",
+   "source_section": "Levofloxacin tablets label, 7.3 Antidiabetic Agents",
+   "supporting_sources": [],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S10",
+   "drug_a": "Gliclazide",
+   "drug_b": "Ciprofloxacin",
+   "proposed_severity": "unclassified",
+   "summary_en": "The ciprofloxacin label warns of low blood sugar, sometimes severe, with diabetes tablets such as sulfonylureas, so sugar should be monitored (gliclazide is a sulfonylurea).",
+   "source_url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:ciprofloxacin+AND+openfda.route:ORAL&limit=1",
+   "source_section": "Ciprofloxacin tablets label, 7 Drug Interactions, Table 11 (Oral antidiabetic drugs); 5.19 Blood Glucose Disturbances",
+   "supporting_sources": [],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S11",
+   "drug_a": "Domperidone",
+   "drug_b": "Levofloxacin",
+   "proposed_severity": "major",
+   "summary_en": "The domperidone product information says it must not be taken with medicines that lengthen the heart's QT interval, and it names levofloxacin among such antibiotics.",
+   "source_url": "https://www.ema.europa.eu/en/documents/referral/domperidone-article-31-referral-annex-iii_en.pdf",
+   "source_section": "Domperidone EU Article 31 referral, Annex III, product information section 4.5 (contraindicated: QTc-prolonging medicinal products, antibiotics e.g. levofloxacin) and 4.3",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:levofloxacin&limit=1",
+     "section": "Levofloxacin label, 5.11 Prolongation of the QT Interval"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S12",
+   "drug_a": "Domperidone",
+   "drug_b": "Azithromycin",
+   "proposed_severity": "unclassified",
+   "summary_en": "The domperidone product information says caution is needed with azithromycin because both can affect the heart's QT interval.",
+   "source_url": "https://www.ema.europa.eu/en/documents/referral/domperidone-article-31-referral-annex-iii_en.pdf",
+   "source_section": "Domperidone EU Article 31 referral, Annex III, product information section 4.5 (caution: azithromycin and roxithromycin)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:azithromycin&limit=1",
+     "section": "Azithromycin label, 5.4 QT Prolongation"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S13",
+   "drug_a": "Domperidone",
+   "drug_b": "Ondansetron",
+   "proposed_severity": "unclassified",
+   "summary_en": "Domperidone is not to be used with medicines that lengthen the heart's QT interval, and ondansetron is labelled as one that can do this.",
+   "source_url": "https://www.ema.europa.eu/en/documents/referral/domperidone-article-31-referral-annex-iii_en.pdf",
+   "source_section": "Domperidone EU Article 31 referral, Annex III, section 4.3/4.5 (contraindicated: QTc-prolonging medicinal products; ondansetron is not named)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:ondansetron&limit=1",
+     "section": "Ondansetron tablets label, 5.2 QT Prolongation"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S14",
+   "drug_a": "Domperidone",
+   "drug_b": "Ciprofloxacin",
+   "proposed_severity": "unclassified",
+   "summary_en": "Domperidone is not to be used with medicines that lengthen the heart's QT interval, and ciprofloxacin is labelled as one that can do this.",
+   "source_url": "https://www.ema.europa.eu/en/documents/referral/domperidone-article-31-referral-annex-iii_en.pdf",
+   "source_section": "Domperidone EU Article 31 referral, Annex III, section 4.3/4.5 (contraindicated: QTc-prolonging medicinal products; ciprofloxacin is not named)",
+   "supporting_sources": [
+    {
+     "url": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:ciprofloxacin+AND+openfda.route:ORAL&limit=1",
+     "section": "Ciprofloxacin tablets label, 5.12 Prolongation of the QT Interval; Table 11 (Drugs Known to Prolong QT Interval)"
+    }
+   ],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S15",
+   "drug_a": "Vildagliptin",
+   "drug_b": "Enalapril",
+   "proposed_severity": "unclassified",
+   "summary_en": "The vildagliptin product information says taking it with an ACE inhibitor such as enalapril may raise the chance of angioedema (swelling of the face, lips or throat).",
+   "source_url": "https://www.ema.europa.eu/en/documents/product-information/galvus-epar-product-information_en.pdf",
+   "source_section": "Galvus SmPC, 4.5 Interaction with other medicinal products: Combination with ACE-inhibitors; 4.8 Angioedema",
+   "supporting_sources": [],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  },
+  {
+   "pair_id": "S16",
+   "drug_a": "Vildagliptin",
+   "drug_b": "Ramipril",
+   "proposed_severity": "unclassified",
+   "summary_en": "The vildagliptin product information says taking it with an ACE inhibitor such as ramipril may raise the chance of angioedema (swelling of the face, lips or throat).",
+   "source_url": "https://www.ema.europa.eu/en/documents/product-information/galvus-epar-product-information_en.pdf",
+   "source_section": "Galvus SmPC, 4.5 Interaction with other medicinal products: Combination with ACE-inhibitors; 4.8 Angioedema",
+   "supporting_sources": [],
+   "fetched": "2026-10-16",
+   "status": "draft_unreviewed"
+  }
+ ]
+}
