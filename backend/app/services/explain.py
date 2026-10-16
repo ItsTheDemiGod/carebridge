@@ -4,14 +4,17 @@ Hard rules: one output line per extracted warning (never dropped, merged or adde
 banner; unverified model text is never shown as verified (the original extracted English is shown with a fallback notice instead).
 """
 
+from app.safety import interactions as I
+from app.safety.engine import build_report
 from app.schemas.explanation import LANGS, ExplanationDocument, ExplanationLine, LangText, Notice, Section, Verification
 from app.schemas.normalised import NormalisedDocument
 from app.services import phrase_match as PM
 from app.services import templates as T
 from app.services.narrative import PROMPT_VERSION, Item, Narrative
+from app.services.safety_section import safety_lines
 from app.services.verification import lang_text_for, verify_narrative
 
-SECTIONS = [("disclaimer", "disclaimer"), ("medicines", "medicines"), ("follow_ups", "follow_ups"), ("advice", "advice"), ("warnings", "warnings"), ("not_found", "not_found")]
+SECTIONS = [("disclaimer", "disclaimer"), ("medicines", "medicines"), ("safety", "safety"), ("follow_ups", "follow_ups"), ("advice", "advice"), ("warnings", "warnings"), ("not_found", "not_found")]
 
 
 def follow_up_text(fu) -> str:
@@ -81,7 +84,7 @@ def _fixed(line_id: str, kind: str, template_id: str, **kw) -> ExplanationLine:
 
 
 def build_explanation(nd: NormalisedDocument, narrative: Narrative | None, document_id: str | None = None, model: str = "", prompt_version: str = PROMPT_VERSION,
-                      use_library: bool = True) -> ExplanationDocument:
+                      use_library: bool = True, safety_data: I.Data | None = None) -> ExplanationDocument:
     """Pipeline per free-text line: (A) strict phrase-library match, (B) verified model text, (C) original English with a notice.
     narrative=None means the model did not run: every line the library does not match falls back to the original text.
     The narrative must hold only the items model_items(nd) returned; a library-matched line never reads it."""
@@ -93,6 +96,8 @@ def build_explanation(nd: NormalisedDocument, narrative: Narrative | None, docum
     sec = {k: [] for k, _ in SECTIONS}
     sec["disclaimer"].append(_fixed("disclaimer", "disclaimer", "disclaimer"))
     sec["medicines"] = [T.medicine_line(m, i) for i, m in enumerate(nd.medications)]
+    report = build_report(nd, safety_data)
+    sec["safety"], events = safety_lines(nd, report)
     for kind, key, count in (("follow_up", "follow_ups", len(nd.follow_ups)), ("advice", "advice", len(nd.diet_activity_advice)), ("warning", "warnings", len(nd.red_flags))):
         for i in range(count):
             item = by_id.get(f"{kind}-{i}")
@@ -109,4 +114,5 @@ def build_explanation(nd: NormalisedDocument, narrative: Narrative | None, docum
     heads = {k: {lang: T.render(f"heading.{h}", lang) for lang in LANGS} for k, h in SECTIONS}
     return ExplanationDocument(
         document_id=document_id, document_type=nd.document_type.value, templates_version=T.version(), prompt_version=prompt_version, model=model,
+        safety=report, guardrail_events=events,
         sections=[Section(id=k, heading=heads[k], lines=sec[k]) for k, _ in SECTIONS if sec[k] or k in ("disclaimer", "medicines")])

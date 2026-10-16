@@ -17,6 +17,7 @@ import re
 import unicodedata
 from functools import lru_cache
 
+from app.safety.guardrails import in_conditional_clause, scan
 from app.schemas.explanation import LANGS, LangText, Verification
 from app.services.guards import REPO
 from app.services.narrative import Item, Narrative, Stage
@@ -34,7 +35,6 @@ FORBIDDEN = [  # (label, regex). A match fails the line only if the same regex d
     ("reason", r"\b(because|so that|in order to|this helps|which helps|this is why|due to|caused by|a sign of)\b"),
     ("see_doctor", r"\b(consult|see|visit|call|contact|ask)\b[^.]{0,12}\b(a|your|the) (doctor|physician|pharmacist|nurse)\b"),
 ]
-_CONDITIONAL = re.compile(r"\b(if|when|whenever|unless|in case)\b(\W+\w+){0,3}?\W*$", re.I)
 
 
 def _flagged(label: str, rx: str, text: str) -> bool:
@@ -42,8 +42,7 @@ def _flagged(label: str, rx: str, text: str) -> bool:
     for m in re.finditer(rx, text, re.I):
         if label != "diagnosis":
             return True
-        clause = re.split(r"[.;:!?,]", text[: m.start()])[-1]
-        if not _CONDITIONAL.search(clause):
+        if not in_conditional_clause(text, m.start()):
             return True
     return False
 
@@ -99,9 +98,12 @@ def deterministic(kind: str, source: str, text: str, lang: str, number_ref: str 
     view = text if lang == "en" else english_view
     if view is None:
         put("forbidden_additions", True)
+        put("guardrail", True)
     else:
         hits = [lbl for lbl, rx in FORBIDDEN if _flagged(lbl, rx, view) and not re.search(rx, source, re.I)]
         put("forbidden_additions", not hits, f"phrases not in the source: {hits}")
+        claims = scan(view, source=source)  # safety guardrail: reassurance / dose-or-medicine change / diagnosis (docs/SAFETY.md)
+        put("guardrail", not claims, f"forbidden claim not in the source: {claims}")
     if kind == "warning" and lang == "en":
         put("urgency", not URGENCY_SOURCE.search(source) or bool(URGENCY_OUTPUT.search(text)), "source has an urgency cue, output has none")
     return res, why

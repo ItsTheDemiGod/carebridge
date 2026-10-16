@@ -8,9 +8,11 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, computed_field
 
+from app.schemas.safety import SafetyReport
+
 Lang = Literal["en", "ta", "hi"]
 LANGS: tuple[str, ...] = ("en", "ta", "hi")
-Kind = Literal["disclaimer", "medicine", "follow_up", "advice", "warning", "not_found"]
+Kind = Literal["disclaimer", "medicine", "safety", "follow_up", "advice", "warning", "not_found"]
 LineStatus = Literal["template", "verified", "unverified", "original_only"]
 DisplayMode = Literal["explanation", "original_with_notice"]
 # not_required: English fixed text written by the authors. Every Tamil/Hindi string and every model-written line starts as draft_unreviewed.
@@ -84,7 +86,7 @@ class ExplanationLine(BaseModel):
 
 
 class Section(BaseModel):
-    id: Literal["disclaimer", "medicines", "follow_ups", "advice", "warnings", "not_found"]
+    id: Literal["disclaimer", "medicines", "safety", "follow_ups", "advice", "warnings", "not_found"]
     heading: dict[str, str]
     lines: list[ExplanationLine] = Field(default_factory=list)
 
@@ -96,6 +98,8 @@ class ExplanationDocument(BaseModel):
     templates_version: str = ""
     prompt_version: str = ""
     model: str = ""
+    safety: SafetyReport | None = Field(None, description="Full per-pair safety report (data only); users see the safety section lines.")
+    guardrail_events: list[str] = Field(default_factory=list, description="Safety messages rejected by the guardrail (fail closed), with the reason.")
 
     def lines(self, kind: str | None = None) -> list[ExplanationLine]:
         return [ln for s in self.sections for ln in s.lines if kind is None or ln.kind == kind]

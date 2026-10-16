@@ -98,6 +98,10 @@ def test_required_template_ids_exist():
     need += [f"heading.{h}" for h in ("disclaimer", "medicines", "follow_ups", "advice", "warnings", "not_found")] + [f"med.times_{n}" for n in range(1, 7)]
     need += [f"timing.{t}" for t in ("before_meals", "after_meals", "with_meals", "morning", "afternoon", "evening", "night", "bedtime", "other", "unspecified")]
     need += [f"notice.{f}" for f in T.NOTICE_FLAGS]
+    need += ["heading.safety", "safety.not_checked", "safety.not_checked_1", "safety.unconfirmed", "safety.unconfirmed_1", "safety.db_missing", "safety.duplicate",
+             "safety.schedule_reminder", "banner.safety.confirm_first", "banner.safety.review_interactions"] + [f"safety.level.{lv}" for lv in ("major", "moderate", "minor", "unknown")]
+    assert set(T.load()["english_only"]) == {"safety.attribution_reviewed", "safety.attribution_unreviewed"}
+    assert not {"safety.no_interaction_listed", "safety.not_covered"} & set(S)  # these statuses no longer exist
     assert not [n for n in need if n not in S]
 
 
