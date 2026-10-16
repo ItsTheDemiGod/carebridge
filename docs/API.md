@@ -16,7 +16,7 @@ CareBridge explains and organises. It never diagnoses, never recommends a dose c
 ## Endpoints
 | Method | Path | Needs | Purpose |
 |---|---|---|---|
-| GET | `/consent-notice?lang=en\|ta\|hi` | nothing | notice text, `version`, `sha256`, itemised `purposes` |
+| GET | `/consent-notice?lang=en|ta|hi` | nothing | notice text (version 2: 10 items incl. prototype, machine-drafted ta/hi and limited-interaction statements; contact line from `CONTACT_NAME`/`CONTACT_EMAIL`), `version`, `sha256`, itemised `purposes` |
 | GET | `/strings?lang=&prefix=` | nothing | static template text for the UI (error., job., status., confirm., picker., schedule., summary., consent., delete., label., heading., timing., banner., notice.) |
 | POST | `/sessions` `{language}` | nothing | start or resume the anonymous session; sets the cookie (201 new, 200 resumed) |
 | GET | `/session` | session | language, expiry, consent state, document count, limits |
@@ -72,7 +72,7 @@ The uploaded photo is processed and discarded by default, so a failed job **cann
 Start, consent, upload:
 ```
 POST /api/v1/sessions            {"language": "ta"}                      -> 201 {"language":"ta","expires_at":"...","consent":{"granted":false,"current_version":"1","purposes":[]},"documents":0,"limits":{...}}
-POST /api/v1/consent             {"notice_version":"1","purposes":["process_photo","store_results_for_session"]}
+POST /api/v1/consent             {"notice_version":"2","purposes":["process_photo","store_results_for_session"]}
 POST /api/v1/documents           <PNG bytes>   Content-Type: image/png    -> 202 {"id":"Vm6V...","state":"queued","error_code":null,"narrative":{},"timings":{},"retry_possible":false,"confirmed":false,...}
 GET  /api/v1/documents/Vm6V...   -> {"state":"awaiting_confirmation","narrative":{"en":"ready","ta":"running"},"timings":{"queued_s":0.0,"extracting_s":31.2,"normalising_s":0.0,"narrative_en_s":44.1},...}
 ```

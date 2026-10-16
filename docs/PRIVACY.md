@@ -58,14 +58,14 @@ Not stored anywhere: names, accounts, email, IP address, the original unprocesse
 
 | Duty (plain language) | What the prototype does | Gap |
 |---|---|---|
-| Plain-language notice | consent notice in English, Tamil, Hindi, short sentences | Tamil/Hindi are drafts until native review; contact person is a placeholder |
+| Plain-language notice | consent notice in English, Tamil, Hindi, short sentences | Tamil/Hindi are drafts until native review; the contact line comes from settings CONTACT_NAME (default Demian) and optional CONTACT_EMAIL; notice v2 says it is a prototype, ta/hi are machine-drafted and the interaction data is author-drafted and not pharmacist-reviewed; consent given under v1 is asked again |
 | Itemised consent | three separate purposes, two required, one optional and off by default; version + hash of the notice stored | no consent manager integration |
 | Purpose limitation | data used only to extract, explain, check and schedule for this session | none known |
 | Data minimisation | no accounts, no names, photo dropped by default, metadata stripped | the extracted text still contains health data by nature |
 | Retention limit | 24 h absolute session lifetime, then complete deletion | cannot control backups of the machine |
 | Erasure on request | one button/call erases everything and returns a receipt | residue limits in section 5 |
 | Security safeguards | encryption at rest, access control per session, input validation, no external transfer | key stored on the same machine (section 5) |
-| Children / verifiable parental consent, data-breach notification, grievance officer | **not implemented** | out of scope for a class prototype; contact person is a placeholder |
+| Children / verifiable parental consent, data-breach notification, grievance officer | **not implemented** | out of scope for a class prototype; the contact person is a name from settings, with no grievance process |
 
 ## 5. Honest limits
 
