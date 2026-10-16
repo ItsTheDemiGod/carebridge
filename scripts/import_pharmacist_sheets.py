@@ -98,6 +98,9 @@ def _import_supplement(rows: list[dict], ref: Path, dry_run: bool, author: bool 
             e.update(selfcheck_verdict=r["reviewer_verdict"], selfcheck_severity=r["reviewer_severity"], selfcheck_comment=r["reviewer_comment"],
                      checked_by=AUTHOR, checked_on=r["checked_on"], basis=r["basis"] or e.get("basis"),
                      evidence={"url": r["evidence_url"], "section": r["evidence_section"], "note": r["evidence_note"]})
+            if r.get("summary_en") and r["summary_en"] != e["summary_en"]:  # optional rewrite; the old text is kept for the audit trail
+                e.setdefault("summary_en_before_selfcheck", e["summary_en"])
+                e["summary_en"] = r["summary_en"]
             e["status"] = "author_checked" if ok else "draft_unreviewed"  # remove / needs_more_info stay disabled
         if not dry_run:
             sup_path.write_text(json.dumps(doc, indent=1, ensure_ascii=False), encoding="utf-8")

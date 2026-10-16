@@ -149,3 +149,9 @@ def test_normal_mode_cannot_produce_author_checked(ref):
     fill(p, reviewer_verdict="agree", reviewer_severity="moderate", **GOOD)
     M.import_sheet(p, ref)
     assert entry(ref)["status"] == "reviewed"
+
+
+def test_author_mode_can_rewrite_the_summary_and_keeps_the_old_text(ref):
+    M.import_sheet(author_sheet(ref, summary_en="New wording."), ref, author=True)
+    e = entry(ref)
+    assert e["summary_en"] == "New wording." and e["summary_en_before_selfcheck"] == "x"
