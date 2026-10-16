@@ -1,0 +1,324 @@
+{
+ "run_id": "stress-v1b",
+ "model": "qwen3-vl:8b-instruct",
+ "calls": {
+  "total": 17,
+  "fresh": 0,
+  "failed": 0,
+  "total_latency_s": 439,
+  "by_type": {
+   "judge_en": {
+    "n": 4,
+    "fresh": 0,
+    "median_s": 45.5,
+    "max_s": 49.5
+   },
+   "back_ta": {
+    "n": 3,
+    "fresh": 0,
+    "median_s": 9.3,
+    "max_s": 9.7
+   },
+   "judge_ta": {
+    "n": 2,
+    "fresh": 0,
+    "median_s": 19.8,
+    "max_s": 20.3
+   },
+   "back_hi": {
+    "n": 2,
+    "fresh": 0,
+    "median_s": 13.4,
+    "max_s": 13.6
+   },
+   "judge_hi": {
+    "n": 2,
+    "fresh": 0,
+    "median_s": 20.8,
+    "max_s": 22.8
+   },
+   "simplify": {
+    "n": 2,
+    "fresh": 0,
+    "median_s": 30.0,
+    "max_s": 32.3
+   },
+   "judge_en(simplify)": {
+    "n": 2,
+    "fresh": 0,
+    "median_s": 31.8,
+    "max_s": 44.0
+   }
+  }
+ },
+ "en": {
+  "n": 40,
+  "correct": 20,
+  "wrong": 20,
+  "false_reject": {
+   "rate": 0.0,
+   "n": 0,
+   "of": 20,
+   "by_deterministic": 0,
+   "by_judge": 0,
+   "deterministic_checks": {}
+  },
+  "detection": {
+   "overall": {
+    "n": 20,
+    "deterministic": 0.25,
+    "judge": 0.95,
+    "combined": 0.95
+   },
+   "by_type": {
+    "clause_dropped": {
+     "n": 3,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "invented_advice": {
+     "n": 3,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "item_merged": {
+     "n": 2,
+     "deterministic": 0.0,
+     "judge": 0.5,
+     "combined": 0.5
+    },
+    "negation_dropped_or_flipped": {
+     "n": 3,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "number_changed": {
+     "n": 3,
+     "deterministic": 1.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "timing_swapped": {
+     "n": 2,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "unit_changed": {
+     "n": 2,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "urgency_softened": {
+     "n": 2,
+     "deterministic": 1.0,
+     "judge": 1.0,
+     "combined": 1.0
+    }
+   }
+  },
+  "accuracy": 0.975,
+  "confusion": {
+   "correct": {
+    "verified": 20,
+    "rejected": 0
+   },
+   "wrong": {
+    "verified": 1,
+    "rejected": 19
+   }
+  },
+  "judge_unavailable": 0,
+  "false_rejects": [],
+  "missed": [
+   {
+    "id": "en-w17",
+    "type": "item_merged",
+    "verdict": "supported",
+    "reason": "The candidate rephrases 'Take rest for 3 days. Walk for 10 minutes daily after that.' as 'Take rest and walk for 10 minutes daily for 3 days.' which conveys the same instruction."
+   }
+  ]
+ },
+ "ta": {
+  "n": 12,
+  "correct": 6,
+  "wrong": 6,
+  "false_reject": {
+   "rate": 0.333,
+   "n": 2,
+   "of": 6,
+   "by_deterministic": 0,
+   "by_judge": 2,
+   "deterministic_checks": {}
+  },
+  "detection": {
+   "overall": {
+    "n": 6,
+    "deterministic": 0.167,
+    "judge": 1.0,
+    "combined": 1.0
+   },
+   "by_type": {
+    "clause_dropped": {
+     "n": 1,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "invented_advice": {
+     "n": 1,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "negation_dropped_or_flipped": {
+     "n": 1,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "number_changed": {
+     "n": 1,
+     "deterministic": 1.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "timing_swapped": {
+     "n": 1,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "urgency_softened": {
+     "n": 1,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    }
+   }
+  },
+  "accuracy": 0.833,
+  "confusion": {
+   "correct": {
+    "verified": 4,
+    "rejected": 2
+   },
+   "wrong": {
+    "verified": 0,
+    "rejected": 6
+   }
+  },
+  "judge_unavailable": 0,
+  "false_rejects": [
+   {
+    "id": "ta-c2",
+    "det": [],
+    "verdict": "adds_information",
+    "reason": "The candidate adds 'for a follow-up test' which is not in the original."
+   },
+   {
+    "id": "ta-c6",
+    "det": [],
+    "verdict": "adds_information",
+    "reason": "The candidate adds 'every day' which is not in the original."
+   }
+  ],
+  "missed": []
+ },
+ "hi": {
+  "n": 12,
+  "correct": 6,
+  "wrong": 6,
+  "false_reject": {
+   "rate": 0.0,
+   "n": 0,
+   "of": 6,
+   "by_deterministic": 0,
+   "by_judge": 0,
+   "deterministic_checks": {}
+  },
+  "detection": {
+   "overall": {
+    "n": 6,
+    "deterministic": 0.167,
+    "judge": 1.0,
+    "combined": 1.0
+   },
+   "by_type": {
+    "clause_dropped": {
+     "n": 1,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "invented_advice": {
+     "n": 1,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "negation_dropped_or_flipped": {
+     "n": 1,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "number_changed": {
+     "n": 1,
+     "deterministic": 1.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "timing_swapped": {
+     "n": 1,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    },
+    "urgency_softened": {
+     "n": 1,
+     "deterministic": 0.0,
+     "judge": 1.0,
+     "combined": 1.0
+    }
+   }
+  },
+  "accuracy": 1.0,
+  "confusion": {
+   "correct": {
+    "verified": 6,
+    "rejected": 0
+   },
+   "wrong": {
+    "verified": 0,
+    "rejected": 6
+   }
+  },
+  "judge_unavailable": 0,
+  "false_rejects": [],
+  "missed": []
+ },
+ "simplifier": {
+  "n": 15,
+  "produced": 15,
+  "unchanged_share": 0.0,
+  "verified_share": 1.0,
+  "fk_before": {
+   "median": 13.86,
+   "pooled": 12.79,
+   "mean_sentence_len": 15.93,
+   "long_word_share": 0.029
+  },
+  "fk_after": {
+   "median": 8.26,
+   "pooled": 6.42,
+   "mean_sentence_len": 17.7,
+   "long_word_share": 0.007
+  },
+  "lost_or_added": []
+ }
+}

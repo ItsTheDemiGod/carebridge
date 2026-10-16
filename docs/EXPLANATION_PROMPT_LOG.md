@@ -32,3 +32,14 @@ v2 kept. The second allowed revision was NOT used: the remaining Tamil failures 
 
 ## Phase 3e: no revision
 The stress set (eval/results/stress-v1) showed no failure that a general prompt rule fixes: the English simplifier changed every hard line (FK median 13.9 to 8.3), 14 of 15 verified, none lost or added a fact according to the judge, and the judge detected 19 of 20 wrong English candidates. The failures are (1) a deterministic regex (`you have` flagged as a diagnosis in "if you have chest pain"), which is a code rule, not a prompt, and (2) Tamil back-translation noise. The second allowed revision remains unused.
+
+## Phase 4-0: conditional "you have" check
+**Change** (`services/verification.py`, `_flagged`): the `diagnosis` forbidden-additions rule no longer fires when "you have" (or may/might/could have, suffer from) sits in a conditional clause: `if`, `when`, `whenever`, `unless` or `in case` earlier in the same clause (clauses end at . ; : ! ? ,) with at most three words between. "You have an infection." and "You have diabetes." are still flagged. Tests: `tests/test_you_have.py`. Source-side check unchanged.
+**Re-run from cache only (no model call)**: `stress-v1b`, `phase3e-dev-clean-b`.
+| | before (stress-v1) | after (stress-v1b) |
+|---|---|---|
+| English false-reject | 1/20 (0.05) | 0/20 (0.00) |
+| Tamil false-reject | 3/6 (0.50) | 2/6 (0.33), remaining 2 are judge verdicts `adds_information` |
+| Hindi false-reject | 1/6 (0.17) | 0/6 (0.00) |
+The wrong-item results are unchanged: no wrong stress item newly passes (only the earlier miss en-w17, item_merged, is still verified; Tamil and Hindi: 0 missed).
+**Dev (phase3e-dev-clean vs -b)**: verified shares identical (no dev line used the rule): en 1.00 for advice/follow_up/warning; ta 0.274 (advice 0.40, follow_up 0.143, warning 0.185); hi 0.763 (advice 0.867, follow_up 0.762, warning 0.648).

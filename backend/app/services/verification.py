@@ -34,6 +34,20 @@ FORBIDDEN = [  # (label, regex). A match fails the line only if the same regex d
     ("reason", r"\b(because|so that|in order to|this helps|which helps|this is why|due to|caused by|a sign of)\b"),
     ("see_doctor", r"\b(consult|see|visit|call|contact|ask)\b[^.]{0,12}\b(a|your|the) (doctor|physician|pharmacist|nurse)\b"),
 ]
+_CONDITIONAL = re.compile(r"\b(if|when|whenever|unless|in case)\b(\W+\w+){0,3}?\W*$", re.I)
+
+
+def _flagged(label: str, rx: str, text: str) -> bool:
+    """True if rx matches text; for the diagnosis rule, matches inside a conditional clause ("if you have chest pain") do not count."""
+    for m in re.finditer(rx, text, re.I):
+        if label != "diagnosis":
+            return True
+        clause = re.split(r"[.;:!?,]", text[: m.start()])[-1]
+        if not _CONDITIONAL.search(clause):
+            return True
+    return False
+
+
 URGENCY_SOURCE = re.compile(r"\b(return|go to|emergency|immediately|urgent(ly)?|at once|right away|straight away|ambulance)\b", re.I)
 URGENCY_OUTPUT = re.compile(r"\b(return|returns|go to|come back|emergency|immediately|urgent(ly)?|at once|right away|straight away|ambulance|hospital|seek help|get help|quickly|without delay)\b", re.I)
 
@@ -86,7 +100,7 @@ def deterministic(kind: str, source: str, text: str, lang: str, number_ref: str 
     if view is None:
         put("forbidden_additions", True)
     else:
-        hits = [lbl for lbl, rx in FORBIDDEN if re.search(rx, view, re.I) and not re.search(rx, source, re.I)]
+        hits = [lbl for lbl, rx in FORBIDDEN if _flagged(lbl, rx, view) and not re.search(rx, source, re.I)]
         put("forbidden_additions", not hits, f"phrases not in the source: {hits}")
     if kind == "warning" and lang == "en":
         put("urgency", not URGENCY_SOURCE.search(source) or bool(URGENCY_OUTPUT.search(text)), "source has an urgency cue, output has none")
