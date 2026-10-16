@@ -9,7 +9,7 @@ End goal: a professional web app first; a mobile app only if time allows. Colleg
 - Backend: FastAPI, Python 3.12, pytest
 - LLM: local-first. Default provider Ollama (`qwen3-vl:8b-instruct`, called with httpx on localhost). Gemini (`google-genai`, `gemini-3.8-flash`, GEMINI_API_KEY in backend/.env) is an optional comparison provider only; its free tier is quota-limited (about 20 requests/day), so do not rely on it.
 - OCR: Tesseract or PaddleOCR
-- Storage: PostgreSQL or SQLite (decided in Phase 5)
+- Storage: SQLite (stdlib sqlite3), content Fernet-encrypted (`cryptography`)
 - Currently installed (Phase 0): react-router-dom, framer-motion, Tailwind v4 (@tailwindcss/vite). GSAP and tsParticles are NOT installed yet.
 
 ## Folder layout
@@ -44,7 +44,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 3 Plain-language explanation (EN/TA/HI) plus faithfulness verification (dev only; Tamil/Hindi quality not yet reviewed by natives)
 - [x] 3e Phrase library (91 phrases), provenance labels, stress set, dev re-run (no native review yet; send review sheets before Phase 7)
 - [x] 4 Safety layer (interaction lookup, duplicates, guardrail, safety section; dev only; supplement and ta/hi strings await review; red-flag/low-confidence handling reuse Phase 2i flags)
-- [ ] 5 Backend API, database, consent flow, encryption, delete-my-data
+- [x] 5 Backend API, SQLite + Fernet, consent, confirmation overlay, schedule, delete-my-data (no UI; live smoke done; ta/hi strings and DPDP checklist unreviewed)
 - [ ] 6 Web application UI
 - [ ] 7 Evaluation, testing, native-speaker review, usability test
 - [ ] 8 Deployment, demo, report
@@ -95,6 +95,13 @@ Status: [x] done, [ ] not started, [~] in progress
 - DDInter raw files and data/reference/interactions_ddinter.json are NEVER committed (CC BY-NC-SA); missing store fails safe. Rebuild: `python scripts\build_interaction_store.py`. Tests use synthetic fixtures only.
 - Guardrail (safety/guardrails.py) scans English model lines and safety messages for reassurance, dose-change and diagnosis claims; hit = fail closed. The "you have" rule ignores conditional clauses.
 - Eval: `python -m eval.phase4_safety` (cached dev outputs). Silent misses not covered by a flag must be 0. Details: docs/SAFETY.md.
+
+## Backend API (Phase 5; details docs/API.md, PRIVACY.md, CONFIRMATION.md)
+- Data origin `user_upload` vs `synthetic`: user uploads go ONLY to the localhost Ollama adapter (Gemini fails closed) and NEVER write data/cache (`extract_bytes`, `narrative.NO_CACHE`). Never log document content, names, quotes or user text (PolicyFilter: ids, states, codes).
+- Key rule: never open/print backend/.env. CAREBRIDGE_DATA_KEY comes from `scripts/generate_data_key.py`; if missing, stop and ask the user to run it.
+- No accounts: anonymous cookie session (hash stored), consent before processing, photo discarded unless opted in, DELETE /api/v1/session erases everything (receipt), 24 h expiry.
+- Confirmation overlay (`services/confirmation.py`) is pure; the safety engine runs unchanged on it. interaction_ready only with identity and resolved reasons; name reasons clear only via formulary pick; non-daily never schedule_ready; removed/not_in_list medicines are never checked. Fail closed; never say "safe".
+- Tests: synthetic only, mocked providers (tests/apihelpers.py). Live: `scripts/smoke_api.py` (dev doc only). Timings: extraction 30-60 s, narrative en ~25 s, ta ~65 s.
 
 ## Safety and product rules
 - CareBridge explains and organizes. It never diagnoses, never recommends changing a dose, and always tells users to confirm with their doctor.

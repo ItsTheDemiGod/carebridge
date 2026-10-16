@@ -67,6 +67,14 @@ Phase 3e (phrase library, stress set; same conventions):
     python scripts\export_phrase_sheet.py                              (data/templates/phrase_review_sheet.csv)
     python scripts\import_phrase_sheet.py returned.csv --reviewer AB   (refuses the whole file on any bad row)
 
+Phase 5 (backend API; python = `backend\.venv\Scripts\python`):
+
+    python scripts\generate_data_key.py                              (once; writes CAREBRIDGE_DATA_KEY to backend/.env, never prints it)
+    cd backend; .venv\Scripts\uvicorn app.main:app                   (API on localhost:8000; needs Ollama for real uploads)
+    python scripts\smoke_api.py                                      (live flow on dev ds_037, clean and poor; needs the API and the model)
+    python scripts\export_openapi.py                                 (rewrites docs/openapi.json; a test fails if it is stale)
+    python scripts\add_phase5_templates.py                           (idempotent; writes data/templates/review_sheet_phase5_new.csv)
+
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
 See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.
