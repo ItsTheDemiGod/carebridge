@@ -99,3 +99,11 @@ Interaction levels in the files: Major, Moderate, Minor, Unknown (Unknown = list
 
 ## Recommendation
 **Usable with a small pharmacist-reviewed supplement.** DDInter is a good base for the 60 matched drugs and covers any pair that includes a drug from groups A, B, D, H, L, P, R, V (including the cardiac antiplatelet/anticoagulant pairs). It cannot cover pairs where both drugs are in C, G, J, M or N, nor the 6 absent drugs. Before Phase 4: a pharmacist should review the 692 no-data pairs (most are likely "no known interaction", but the Major ones, such as RAAS drugs with spironolactone, QT-prolonging combinations, and NSAIDs with antihypertensives, must be written down by hand with a source). The checker must show "not checked" for any pair that has no data. Not recommended: treating DDInter silence as safety.
+
+## Addendum (Phase 4): Why an ATC coverage rule was rejected
+**Row count**: 222,383 data rows; the earlier 222,391 was a line count that included the 8 header lines (`cat *.csv | wc -l` = 222,391).
+**Structure**: columns `DDInterID_A, Drug_A, DDInterID_B, Drug_B, Level`; UTF-8, no BOM; levels Major 33,896, Moderate 130,367, Minor 10,938, Unknown 47,182; 160,235 distinct pairs; no pair appears in both orders; 43,826 pairs appear in more than one file.
+**The rule tried**: a pair counts as covered only if one drug has an authored ATC letter in {A,B,D,H,L,P,R,V} and appears in that letter's file. Evidence is archived in `scripts/evidence/` (not used by the app).
+**Result**: of 2,211 component pairs, 1,581 covered and 630 not covered, but **96 of the "not covered" pairs do appear in a downloaded file** (49 in file A, 27 in D, 27 in R; the acceptance condition was 0).
+**Causes**: (1) secondary and combination-product ATC codes: DDInter files a drug under every group it has a code in (for example amoxicillin and rosuvastatin in A, diclofenac in D, ibuprofen in R), while the authored list had one main code per drug; (2) every drug appears in all 8 files as a partner, so "appears in the matching file" can never expose a wrong letter. The authored letters therefore cannot be validated here, and a wrong letter would let the app call a pair "covered, nothing listed" when its group was never downloaded.
+**Decision**: no coverage rule. A pair absent from the store is reported only as "not checked" (see docs/SAFETY.md).

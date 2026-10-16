@@ -1,0 +1,1029 @@
+{
+ "status": "authored_requires_pharmacist_review",
+ "source_note": "ATC codes written by Claude Code from general knowledge of the WHO ATC index; NOT checked against the WHO list. Used only to decide which drugs a DDInter file for that ATC letter can contain. A pharmacist must review (data/reference/review/formulary_atc_review.csv).",
+ "downloaded_letters": [
+  "A",
+  "B",
+  "D",
+  "H",
+  "L",
+  "P",
+  "R",
+  "V"
+ ],
+ "medicines": [
+  {
+   "generic_name": "Metformin",
+   "atc_codes": [
+    "A10BA02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Metformin",
+     "atc_codes": [
+      "A10BA02"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Glimepiride",
+   "atc_codes": [
+    "A10BB12"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Glimepiride",
+     "atc_codes": [
+      "A10BB12"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Gliclazide",
+   "atc_codes": [
+    "A10BB09"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Gliclazide",
+     "atc_codes": [
+      "A10BB09"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Sitagliptin",
+   "atc_codes": [
+    "A10BH01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Sitagliptin",
+     "atc_codes": [
+      "A10BH01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Vildagliptin",
+   "atc_codes": [
+    "A10BH02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Vildagliptin",
+     "atc_codes": [
+      "A10BH02"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Pioglitazone",
+   "atc_codes": [
+    "A10BG03"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Pioglitazone",
+     "atc_codes": [
+      "A10BG03"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Dapagliflozin",
+   "atc_codes": [
+    "A10BK01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Dapagliflozin",
+     "atc_codes": [
+      "A10BK01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Empagliflozin",
+   "atc_codes": [
+    "A10BK03"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Empagliflozin",
+     "atc_codes": [
+      "A10BK03"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Amlodipine",
+   "atc_codes": [
+    "C08CA01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Amlodipine",
+     "atc_codes": [
+      "C08CA01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Telmisartan",
+   "atc_codes": [
+    "C09CA07"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Telmisartan",
+     "atc_codes": [
+      "C09CA07"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Losartan",
+   "atc_codes": [
+    "C09CA01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Losartan",
+     "atc_codes": [
+      "C09CA01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Olmesartan",
+   "atc_codes": [
+    "C09CA08"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Olmesartan",
+     "atc_codes": [
+      "C09CA08"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Ramipril",
+   "atc_codes": [
+    "C09AA05"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Ramipril",
+     "atc_codes": [
+      "C09AA05"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Enalapril",
+   "atc_codes": [
+    "C09AA02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Enalapril",
+     "atc_codes": [
+      "C09AA02"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Metoprolol succinate",
+   "atc_codes": [
+    "C07AB02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Metoprolol",
+     "atc_codes": [
+      "C07AB02"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Atenolol",
+   "atc_codes": [
+    "C07AB03"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Atenolol",
+     "atc_codes": [
+      "C07AB03"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Bisoprolol",
+   "atc_codes": [
+    "C07AB07"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Bisoprolol",
+     "atc_codes": [
+      "C07AB07"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Carvedilol",
+   "atc_codes": [
+    "C07AG02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Carvedilol",
+     "atc_codes": [
+      "C07AG02"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Furosemide",
+   "atc_codes": [
+    "C03CA01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Furosemide",
+     "atc_codes": [
+      "C03CA01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Torsemide",
+   "atc_codes": [
+    "C03CA04"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Torasemide",
+     "atc_codes": [
+      "C03CA04"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Spironolactone",
+   "atc_codes": [
+    "C03DA01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Spironolactone",
+     "atc_codes": [
+      "C03DA01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Isosorbide mononitrate",
+   "atc_codes": [
+    "C01DA14"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Isosorbide mononitrate",
+     "atc_codes": [
+      "C01DA14"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Atorvastatin",
+   "atc_codes": [
+    "C10AA05"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Atorvastatin",
+     "atc_codes": [
+      "C10AA05"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Rosuvastatin",
+   "atc_codes": [
+    "C10AA07"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Rosuvastatin",
+     "atc_codes": [
+      "C10AA07"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Aspirin",
+   "atc_codes": [
+    "B01AC06",
+    "N02BA01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Acetylsalicylic acid",
+     "atc_codes": [
+      "B01AC06",
+      "N02BA01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Clopidogrel",
+   "atc_codes": [
+    "B01AC04"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Clopidogrel",
+     "atc_codes": [
+      "B01AC04"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Ticagrelor",
+   "atc_codes": [
+    "B01AC24"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Ticagrelor",
+     "atc_codes": [
+      "B01AC24"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Enoxaparin",
+   "atc_codes": [
+    "B01AB05"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Enoxaparin",
+     "atc_codes": [
+      "B01AB05"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Pantoprazole",
+   "atc_codes": [
+    "A02BC02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Pantoprazole",
+     "atc_codes": [
+      "A02BC02"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Rabeprazole",
+   "atc_codes": [
+    "A02BC04"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Rabeprazole",
+     "atc_codes": [
+      "A02BC04"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Omeprazole",
+   "atc_codes": [
+    "A02BC01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Omeprazole",
+     "atc_codes": [
+      "A02BC01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Esomeprazole",
+   "atc_codes": [
+    "A02BC05"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Esomeprazole",
+     "atc_codes": [
+      "A02BC05"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Famotidine",
+   "atc_codes": [
+    "A02BA03"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Famotidine",
+     "atc_codes": [
+      "A02BA03"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Domperidone",
+   "atc_codes": [
+    "A03FA03"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Domperidone",
+     "atc_codes": [
+      "A03FA03"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Ondansetron",
+   "atc_codes": [
+    "A04AA01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Ondansetron",
+     "atc_codes": [
+      "A04AA01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Racecadotril",
+   "atc_codes": [
+    "A07XA04"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Racecadotril",
+     "atc_codes": [
+      "A07XA04"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Lactulose",
+   "atc_codes": [
+    "A06AD11"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Lactulose",
+     "atc_codes": [
+      "A06AD11"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Paracetamol",
+   "atc_codes": [
+    "N02BE01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Acetaminophen",
+     "atc_codes": [
+      "N02BE01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Ibuprofen",
+   "atc_codes": [
+    "M01AE01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Ibuprofen",
+     "atc_codes": [
+      "M01AE01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Diclofenac",
+   "atc_codes": [
+    "M01AB05"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Diclofenac",
+     "atc_codes": [
+      "M01AB05"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Aceclofenac",
+   "atc_codes": [
+    "M01AB16"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Aceclofenac",
+     "atc_codes": [
+      "M01AB16"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Amoxicillin",
+   "atc_codes": [
+    "J01CA04"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Amoxicillin",
+     "atc_codes": [
+      "J01CA04"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Amoxicillin + Clavulanic acid",
+   "atc_codes": [
+    "J01CR02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Amoxicillin",
+     "atc_codes": [
+      "J01CA04"
+     ]
+    },
+    {
+     "ddinter_name": "Clavulanic acid",
+     "atc_codes": [
+      "J01CR02"
+     ]
+    }
+   ],
+   "combination": true
+  },
+  {
+   "generic_name": "Azithromycin",
+   "atc_codes": [
+    "J01FA10"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Azithromycin",
+     "atc_codes": [
+      "J01FA10"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Cefixime",
+   "atc_codes": [
+    "J01DD08"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Cefixime",
+     "atc_codes": [
+      "J01DD08"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Cefuroxime",
+   "atc_codes": [
+    "J01DC02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Cefuroxime",
+     "atc_codes": [
+      "J01DC02"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Cefpodoxime",
+   "atc_codes": [
+    "J01DD13"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Cefpodoxime",
+     "atc_codes": [
+      "J01DD13"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Ciprofloxacin",
+   "atc_codes": [
+    "J01MA02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Ciprofloxacin",
+     "atc_codes": [
+      "J01MA02"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Levofloxacin",
+   "atc_codes": [
+    "J01MA12"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Levofloxacin",
+     "atc_codes": [
+      "J01MA12"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Nitrofurantoin",
+   "atc_codes": [
+    "J01XE01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Nitrofurantoin",
+     "atc_codes": [
+      "J01XE01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Metronidazole",
+   "atc_codes": [
+    "P01AB01",
+    "J01XD01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Metronidazole",
+     "atc_codes": [
+      "P01AB01",
+      "J01XD01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Mupirocin",
+   "atc_codes": [
+    "D06AX09"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Mupirocin",
+     "atc_codes": [
+      "D06AX09"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Cetirizine",
+   "atc_codes": [
+    "R06AE07"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Cetirizine",
+     "atc_codes": [
+      "R06AE07"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Levocetirizine",
+   "atc_codes": [
+    "R06AE09"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Levocetirizine",
+     "atc_codes": [
+      "R06AE09"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Montelukast",
+   "atc_codes": [
+    "R03DC03"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Montelukast",
+     "atc_codes": [
+      "R03DC03"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Salbutamol",
+   "atc_codes": [
+    "R03AC02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Salbutamol",
+     "atc_codes": [
+      "R03AC02"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Budesonide + Formoterol",
+   "atc_codes": [
+    "R03AK07"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Budesonide",
+     "atc_codes": [
+      "R03BA02"
+     ]
+    },
+    {
+     "ddinter_name": "Formoterol",
+     "atc_codes": [
+      "R03AC13"
+     ]
+    }
+   ],
+   "combination": true
+  },
+  {
+   "generic_name": "Tiotropium",
+   "atc_codes": [
+    "R03BB04"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Tiotropium",
+     "atc_codes": [
+      "R03BB04"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Ambroxol",
+   "atc_codes": [
+    "R05CB06"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Ambroxol",
+     "atc_codes": [
+      "R05CB06"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Prednisolone",
+   "atc_codes": [
+    "H02AB06"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Prednisolone",
+     "atc_codes": [
+      "H02AB06"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Levothyroxine",
+   "atc_codes": [
+    "H03AA01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Levothyroxine",
+     "atc_codes": [
+      "H03AA01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Calcium carbonate + Vitamin D3",
+   "atc_codes": [
+    "A12AX"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Calcium carbonate",
+     "atc_codes": [
+      "A12AA04"
+     ]
+    },
+    {
+     "ddinter_name": "Cholecalciferol",
+     "atc_codes": [
+      "A11CC05"
+     ]
+    }
+   ],
+   "combination": true
+  },
+  {
+   "generic_name": "Cholecalciferol",
+   "atc_codes": [
+    "A11CC05"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Cholecalciferol",
+     "atc_codes": [
+      "A11CC05"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Folic acid",
+   "atc_codes": [
+    "B03BB01"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Folic acid",
+     "atc_codes": [
+      "B03BB01"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Tamsulosin",
+   "atc_codes": [
+    "G04CA02"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Tamsulosin",
+     "atc_codes": [
+      "G04CA02"
+     ]
+    }
+   ],
+   "combination": false
+  },
+  {
+   "generic_name": "Gabapentin",
+   "atc_codes": [
+    "N03AX12"
+   ],
+   "components": [
+    {
+     "ddinter_name": "Gabapentin",
+     "atc_codes": [
+      "N03AX12"
+     ]
+    }
+   ],
+   "combination": false
+  }
+ ],
+ "review": {}
+}

@@ -75,3 +75,7 @@
 - **Dev re-run re-batches** the model items (matched lines removed), so documents with a match lose their cached batch; Tamil moved -2 points from batching noise.
 - **No prompt revision** (see EXPLANATION_PROMPT_LOG.md). The `you have` regex finding is left for the user to decide (code rule, outside this phase).
 - **Placeholders `{n}` only, integers 1-3 digits without leading zero, per-phrase range**; phrase corrections may not add or drop a number.
+
+## Phase 4
+- **Coverage rule rejected (2026-10-16)**: the ATC-letter coverage rule had 96 violations (pairs in the downloads that the rule called not covered). Authored letters cannot be validated (every drug appears as a partner in all 8 files; secondary and combination ATC codes). Absence from a partial download is uninformative, so the product has only four statuses: `interaction_found`, `not_checked_no_record`, `not_checked_unconfirmed`, `not_checked_database_missing`. No "no interaction listed" and no "not covered" status exists. Evidence archived in `scripts/evidence/`; the formulary ATC pharmacist sheet is dropped; the formulary review sheet covers brands, strengths, forms and routes only.
+- **Phase 4-0**: the `you have` diagnosis rule ignores conditional clauses (if, when, whenever, unless, in case; up to three words between); see EXPLANATION_PROMPT_LOG.md.
