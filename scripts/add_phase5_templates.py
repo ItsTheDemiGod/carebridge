@@ -93,6 +93,10 @@ NEW = {
         "This is not ready yet. Please wait for the reading to finish.",
         "இது இன்னும் தயாராகவில்லை. படித்து முடியும் வரை காத்திருங்கள்.",
         "यह अभी तैयार नहीं है। कृपया पढ़ना पूरा होने तक प्रतीक्षा करें।"),
+    "error.invalid_confirmation": (
+        "Some of your choices could not be used. Please check them and try again.",
+        "உங்கள் சில தேர்வுகளைப் பயன்படுத்த முடியவில்லை. சரிபார்த்து மீண்டும் முயலுங்கள்.",
+        "आपके कुछ चुनाव इस्तेमाल नहीं हो सके। कृपया जाँचकर फिर कोशिश करें।"),
     "error.request_blocked": ("This request was blocked for security reasons.", "பாதுகாப்பு காரணங்களுக்காக இந்தக் கோரிக்கை தடுக்கப்பட்டது.", "सुरक्षा कारणों से यह अनुरोध रोका गया।"),
     "error.invalid_request": (
         "The request was not valid. Please check it and try again.",
