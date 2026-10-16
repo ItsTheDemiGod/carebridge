@@ -104,3 +104,4 @@ html.calm { scroll-behavior: auto; }
 html.calm *, html.calm *::before, html.calm *::after { animation: none !important; }
 ol.limits-list, ol.consent-list { list-style: decimal; }
 .section-heading { margin-bottom: var(--s-5); }
+h1, h2, h3, .display { overflow-wrap: break-word; }
