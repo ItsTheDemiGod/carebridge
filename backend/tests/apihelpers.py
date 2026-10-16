@@ -1,6 +1,7 @@
 """Shared helpers for API tests: app/client factory, fake (mocked) provider and narrative, tiny test images. Synthetic data only, no model calls."""
 import io
 import json
+import re
 from pathlib import Path
 
 from cryptography.fernet import Fernet
@@ -59,7 +60,7 @@ def fake_narrate(items, nar, lang, provider, calls=None):
         return n
     word = {"ta": "இது ஒரு சோதனை உரை", "hi": "यह एक परीक्षण पाठ है"}[lang]
     n = nar
-    n.translated[lang] = N.Stage(N.Call("translate", lang), values={i: word for i in src})
+    n.translated[lang] = N.Stage(N.Call("translate", lang), values={i: (word + " " + " ".join(re.findall(r"\d+", t))).strip() for i, t in src.items()})
     n.back[lang] = N.Stage(N.Call("back", lang), values=dict(src))
     n.judged[lang] = N.Stage(N.Call("judge", lang), values={i: ("supported", "ok") for i in src})
     return n

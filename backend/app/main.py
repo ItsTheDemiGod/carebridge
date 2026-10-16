@@ -64,11 +64,13 @@ def create_app(cfg: Settings | None = None, provider_factory=None, narrate=None,
     app.add_middleware(CORSMiddleware, allow_origins=cfg.origins, allow_credentials=True, allow_methods=["GET", "POST", "PUT", "DELETE"],
                        allow_headers=["Content-Type", "X-CareBridge-Request"])
 
-    from app.api import routes_documents, routes_review, routes_session
+    from app.api import routes_documents, routes_result, routes_review, routes_schedule, routes_session
 
     app.include_router(routes_session.router)
     app.include_router(routes_documents.router)
     app.include_router(routes_review.router)
+    app.include_router(routes_result.router)
+    app.include_router(routes_schedule.router)
 
     @app.get("/api/health")
     def health():
