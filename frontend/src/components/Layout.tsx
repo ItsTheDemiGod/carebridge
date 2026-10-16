@@ -1,7 +1,11 @@
-import type { ElementType, ReactNode } from 'react'
+import type { ElementType, HTMLAttributes, ReactNode } from 'react'
 
-export function Container({ children, as: Tag = 'div', className = '' }: { children: ReactNode; as?: ElementType; className?: string }) {
-  return <Tag className={`container ${className}`.trim()}>{children}</Tag>
+export function Container({ children, as: Tag = 'div', className = '', ...rest }: { children: ReactNode; as?: ElementType; className?: string } & HTMLAttributes<HTMLElement>) {
+  return (
+    <Tag className={`container ${className}`.trim()} {...rest}>
+      {children}
+    </Tag>
+  )
 }
 
 export function Rule({ className = '' }: { className?: string }) {

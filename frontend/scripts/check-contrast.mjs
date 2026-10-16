@@ -1,4 +1,4 @@
-// WCAG 2.2 contrast check for every text-on-background and UI-component pair the design uses.
+﻿// WCAG 2.2 contrast check for every text-on-background and UI-component pair the design uses.
 // Colours are read from src/styles/tokens.css. Exit code 1 if any pair fails.   npm run check:contrast
 import { readFileSync } from 'node:fs'
 
@@ -35,6 +35,7 @@ const pairs = [
   ['on-dark', 'ink', TEXT, 'footer'],
   ['on-dark-soft', 'pine-deep', TEXT, 'secondary text on dark'],
   ['on-dark-soft', 'ink', TEXT, 'secondary text on footer'],
+  ['sage', 'pine-deep', TEXT, 'labels and icons on the privacy band'],
   ...sev.flatMap((s) => [
     [`sev-${s}`, `sev-${s}-bg`, TEXT, `severity badge ${s}`],
     [`sev-${s}`, 'paper', TEXT, `severity text on paper ${s}`],
