@@ -1,0 +1,249 @@
+{
+ "doc": "ds_037",
+ "condition": "clean",
+ "states": [
+  {
+   "t": 0.1,
+   "state": "queued",
+   "narrative": {}
+  },
+  {
+   "t": 2.1,
+   "state": "extracting",
+   "narrative": {}
+  },
+  {
+   "t": 60.6,
+   "state": "awaiting_confirmation",
+   "narrative": {
+    "en": "running",
+    "ta": "pending"
+   }
+  }
+ ],
+ "t_awaiting_confirmation_s": 60.6,
+ "narrative_at_that_moment": {
+  "en": "running",
+  "ta": "pending"
+ },
+ "medicines": {
+  "extracted": 4,
+  "ground_truth": 4,
+  "must_confirm": 2,
+  "name_reasons": 2,
+  "decisions": [
+   "select_formulary_drug",
+   "select_formulary_drug"
+  ]
+ },
+ "before_confirmation": {
+  "confirm_first": true,
+  "pairs": {
+   "interaction_found": 1,
+   "not_checked_unconfirmed": 5
+  }
+ },
+ "t_confirmation_sent_s": 60.7,
+ "timings_server": {
+  "queued_s": 0.01,
+  "extracting_s": 58.84,
+  "normalising_s": 0.02,
+  "narrative_en_s": 23.96,
+  "narrative_ta_s": 62.74
+ },
+ "narrative_done": {
+  "en": {
+   "state": "ready",
+   "t_s": 83.2
+  },
+  "ta": {
+   "state": "ready",
+   "t_s": 147.3
+  }
+ },
+ "narrative_finished_before_confirmation_sent": {
+  "en": false,
+  "ta": false
+ },
+ "after_confirmation": {
+  "confirm_first": false,
+  "pairs": {
+   "interaction_found": 5,
+   "not_checked_no_record": 1
+  },
+  "narrative_status": {
+   "en": "ready",
+   "ta": "ready",
+   "hi": "not_started"
+  }
+ },
+ "lines": {
+  "en": {
+   "model_checked": 8
+  },
+  "ta": {
+   "original_only": 5,
+   "model_checked": 3
+  }
+ },
+ "sample_lines": [
+  "Come back to the medicine OPD in 7 days with fasting and post-meal blood sugar results.",
+  "Eat a diabetic diet with small portions of rice and sweets.",
+  "Walk 30 minutes every day if you can."
+ ],
+ "schedule": {
+  "slots": 5,
+  "not_scheduled": {}
+ },
+ "adherence_logged": 2,
+ "summary": {
+  "medicines": 4,
+  "unconfirmed": 0,
+  "taken": 2
+ },
+ "total_s": 147.5,
+ "rows_before_delete": {
+  "sessions": 1,
+  "consents": 1,
+  "documents": 1,
+  "adherence_events": 2,
+  "payloads": 4
+ },
+ "rows_after_delete": {
+  "sessions": 0,
+  "consents": 0,
+  "documents": 0,
+  "adherence_events": 0,
+  "payloads": 0
+ },
+ "receipt": {
+  "consents": 1,
+  "documents": 1,
+  "adherence_events": 2,
+  "payloads": 4,
+  "images": 0,
+  "sessions": 1
+ }
+}
+{
+ "doc": "ds_037",
+ "condition": "poor",
+ "states": [
+  {
+   "t": 0.1,
+   "state": "extracting",
+   "narrative": {}
+  },
+  {
+   "t": 46.8,
+   "state": "awaiting_confirmation",
+   "narrative": {
+    "en": "running",
+    "ta": "pending"
+   }
+  }
+ ],
+ "t_awaiting_confirmation_s": 46.8,
+ "narrative_at_that_moment": {
+  "en": "running",
+  "ta": "pending"
+ },
+ "medicines": {
+  "extracted": 4,
+  "ground_truth": 4,
+  "must_confirm": 2,
+  "name_reasons": 2,
+  "decisions": [
+   "select_formulary_drug",
+   "select_formulary_drug"
+  ]
+ },
+ "before_confirmation": {
+  "confirm_first": true,
+  "pairs": {
+   "interaction_found": 1,
+   "not_checked_unconfirmed": 5
+  }
+ },
+ "t_confirmation_sent_s": 46.8,
+ "timings_server": {
+  "queued_s": 0.01,
+  "extracting_s": 46.53,
+  "normalising_s": 0.01,
+  "narrative_en_s": 23.93,
+  "narrative_ta_s": 65.14
+ },
+ "narrative_done": {
+  "en": {
+   "state": "ready",
+   "t_s": 71.8
+  },
+  "ta": {
+   "state": "ready",
+   "t_s": 136.0
+  }
+ },
+ "narrative_finished_before_confirmation_sent": {
+  "en": false,
+  "ta": false
+ },
+ "after_confirmation": {
+  "confirm_first": false,
+  "pairs": {
+   "interaction_found": 5,
+   "not_checked_no_record": 1
+  },
+  "narrative_status": {
+   "en": "ready",
+   "ta": "ready",
+   "hi": "not_started"
+  }
+ },
+ "lines": {
+  "en": {
+   "model_checked": 8
+  },
+  "ta": {
+   "original_only": 5,
+   "model_checked": 3
+  }
+ },
+ "sample_lines": [
+  "Come back to the medicine OPD in 7 days with fasting and post-meal blood sugar results.",
+  "Eat a diabetic diet with small portions of rice and sweets.",
+  "Walk 30 minutes every day if you can."
+ ],
+ "schedule": {
+  "slots": 5,
+  "not_scheduled": {}
+ },
+ "adherence_logged": 2,
+ "summary": {
+  "medicines": 4,
+  "unconfirmed": 0,
+  "taken": 2
+ },
+ "total_s": 136.3,
+ "rows_before_delete": {
+  "sessions": 1,
+  "consents": 1,
+  "documents": 1,
+  "adherence_events": 2,
+  "payloads": 4
+ },
+ "rows_after_delete": {
+  "sessions": 0,
+  "consents": 0,
+  "documents": 0,
+  "adherence_events": 0,
+  "payloads": 0
+ },
+ "receipt": {
+  "consents": 1,
+  "documents": 1,
+  "adherence_events": 2,
+  "payloads": 4,
+  "images": 0,
+  "sessions": 1
+ }
+}
