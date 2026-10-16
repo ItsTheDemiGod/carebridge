@@ -1,0 +1,1388 @@
+{
+ "en": {
+  "ui.brand.home": {
+   "text": "CareBridge, home page",
+   "review_status": "not_required"
+  },
+  "ui.calm.explain": {
+   "text": "Turns off the moving background, the cursor ring and the drifting tiles. It helps on older computers and when motion is distracting.",
+   "review_status": "not_required"
+  },
+  "ui.calm.label": {
+   "text": "Calm mode",
+   "review_status": "not_required"
+  },
+  "ui.calm.off": {
+   "text": "Off",
+   "review_status": "not_required"
+  },
+  "ui.calm.on": {
+   "text": "On",
+   "review_status": "not_required"
+  },
+  "ui.confirm.body1": {
+   "text": "Reading text from a photo can go wrong. A blurred letter can turn one medicine name into another, or into a word that is not a medicine at all.",
+   "review_status": "not_required"
+  },
+  "ui.confirm.body2": {
+   "text": "That is why you check the list of medicines before anything else. Medicines we are unsure about are marked, and they are not compared or scheduled until you confirm them.",
+   "review_status": "not_required"
+  },
+  "ui.confirm.body3": {
+   "text": "If a name does not match anything we know, we say so. We do not guess.",
+   "review_status": "not_required"
+  },
+  "ui.confirm.fig.caption": {
+   "text": "Illustration only, with made-up text. It is not from a real document.",
+   "review_status": "not_required"
+  },
+  "ui.confirm.fig.pick": {
+   "text": "Our list: Metformin 500 mg",
+   "review_status": "not_required"
+  },
+  "ui.confirm.fig.read": {
+   "text": "Photo said: Netfornin 5OO mg",
+   "review_status": "not_required"
+  },
+  "ui.confirm.fig.you": {
+   "text": "You pick the right one",
+   "review_status": "not_required"
+  },
+  "ui.confirm.label": {
+   "text": "Why you confirm first",
+   "review_status": "not_required"
+  },
+  "ui.confirm.title": {
+   "text": "A photo can be misread. So you check first.",
+   "review_status": "not_required"
+  },
+  "ui.draft_note": {
+   "text": "Machine-drafted translation, not yet checked by a native speaker.",
+   "review_status": "not_required"
+  },
+  "ui.error.backend": {
+   "text": "The CareBridge server on this computer is not reachable, so the notice cannot be shown. Start the backend and reload this page.",
+   "review_status": "not_required"
+  },
+  "ui.footer.contact": {
+   "text": "Contact details for questions are on the privacy page.",
+   "review_status": "not_required"
+  },
+  "ui.footer.credits": {
+   "text": "Photo credits",
+   "review_status": "not_required"
+  },
+  "ui.footer.credits_body": {
+   "text": "Photographs are self-hosted. Sources and licences are listed in assets/ATTRIBUTION.md in the project files.",
+   "review_status": "not_required"
+  },
+  "ui.footer.prototype": {
+   "text": "CareBridge is a class project prototype made for an AI in Healthcare course. It is not medical advice.",
+   "review_status": "not_required"
+  },
+  "ui.hero.cta": {
+   "text": "Start with a photo",
+   "review_status": "not_required"
+  },
+  "ui.hero.eyebrow": {
+   "text": "A class project prototype",
+   "review_status": "not_required"
+  },
+  "ui.hero.link": {
+   "text": "How it works",
+   "review_status": "not_required"
+  },
+  "ui.hero.note": {
+   "text": "Class project prototype. Not medical advice.",
+   "review_status": "not_required"
+  },
+  "ui.hero.sub": {
+   "text": "Upload a photo of a prescription or discharge summary. CareBridge reads it, helps you check it, and explains it in English, தமிழ் or हिन्दी.",
+   "review_status": "not_required"
+  },
+  "ui.hero.title": {
+   "text": "Make sense of your discharge papers.",
+   "review_status": "not_required"
+  },
+  "ui.how.fig.alt": {
+   "text": "Diagram: photo, reading, your check, explanation, then either an interaction found or could not check.",
+   "review_status": "not_required"
+  },
+  "ui.how.found": {
+   "text": "Interaction found",
+   "review_status": "not_required"
+  },
+  "ui.how.intro": {
+   "text": "Five steps, in plain language. Two of them are yours.",
+   "review_status": "not_required"
+  },
+  "ui.how.n1.body": {
+   "text": "You upload a photo of a prescription or discharge summary.",
+   "review_status": "not_required"
+  },
+  "ui.how.n1.title": {
+   "text": "Your photo",
+   "review_status": "not_required"
+  },
+  "ui.how.n2.body": {
+   "text": "A model on this computer reads the text and lists the medicines it finds. It can make mistakes.",
+   "review_status": "not_required"
+  },
+  "ui.how.n2.title": {
+   "text": "Reading",
+   "review_status": "not_required"
+  },
+  "ui.how.n3.body": {
+   "text": "You compare the list with your paper and correct it. Medicines we are unsure about are marked.",
+   "review_status": "not_required"
+  },
+  "ui.how.n3.title": {
+   "text": "Your check",
+   "review_status": "not_required"
+  },
+  "ui.how.n4.body": {
+   "text": "Fixed wording explains each medicine. Other advice is simplified and compared with the original. If a comparison fails, you see the original English instead.",
+   "review_status": "not_required"
+  },
+  "ui.how.n4.title": {
+   "text": "Explanation",
+   "review_status": "not_required"
+  },
+  "ui.how.n5.body": {
+   "text": "For the medicines you confirm, we look up known interactions. We report one that was found, or say that we could not check.",
+   "review_status": "not_required"
+  },
+  "ui.how.n5.title": {
+   "text": "Interactions",
+   "review_status": "not_required"
+  },
+  "ui.how.title": {
+   "text": "How CareBridge works",
+   "review_status": "not_required"
+  },
+  "ui.how.unchecked": {
+   "text": "Could not check",
+   "review_status": "not_required"
+  },
+  "ui.how.unchecked_note": {
+   "text": "“Could not check” only means we found no information, or we were unsure of a medicine name. It is not a sign that the medicines go well together. Ask your pharmacist.",
+   "review_status": "not_required"
+  },
+  "ui.how.you": {
+   "text": "Your step",
+   "review_status": "not_required"
+  },
+  "ui.lang.group": {
+   "text": "Choose a language",
+   "review_status": "not_required"
+  },
+  "ui.lang.label": {
+   "text": "Language",
+   "review_status": "not_required"
+  },
+  "ui.langblock.body": {
+   "text": "Explanations can be shown in any of the three. Below is one sample line from our fixed wording, shown in each language.",
+   "review_status": "not_required"
+  },
+  "ui.langblock.chip_draft": {
+   "text": "Draft translation, not yet checked by a native speaker",
+   "review_status": "not_required"
+  },
+  "ui.langblock.chip_en": {
+   "text": "English text written by the project author",
+   "review_status": "not_required"
+  },
+  "ui.langblock.label": {
+   "text": "Languages",
+   "review_status": "not_required"
+  },
+  "ui.langblock.title": {
+   "text": "In English, தமிழ் or हिन्दी.",
+   "review_status": "not_required"
+  },
+  "ui.limits.1": {
+   "text": "A class project prototype. It is not medical advice and it does not replace your doctor or pharmacist.",
+   "review_status": "not_required"
+  },
+  "ui.limits.2": {
+   "text": "Reading a photo can go wrong. Always compare the list with your paper.",
+   "review_status": "not_required"
+  },
+  "ui.limits.3": {
+   "text": "Interaction information is limited. It comes from a partial public database and a short list that the project author drafted from official drug labels. No pharmacist has reviewed it.",
+   "review_status": "not_required"
+  },
+  "ui.limits.4": {
+   "text": "Brand names are matched to generic names using a list that has not been verified.",
+   "review_status": "not_required"
+  },
+  "ui.limits.5": {
+   "text": "Tamil and Hindi are machine-drafted and have not been checked by a native speaker.",
+   "review_status": "not_required"
+  },
+  "ui.limits.6": {
+   "text": "Decisions about your medicines are for your doctor or pharmacist, not for this website.",
+   "review_status": "not_required"
+  },
+  "ui.limits.label": {
+   "text": "Limits",
+   "review_status": "not_required"
+  },
+  "ui.limits.title": {
+   "text": "What CareBridge is not.",
+   "review_status": "not_required"
+  },
+  "ui.nav.how": {
+   "text": "How it works",
+   "review_status": "not_required"
+  },
+  "ui.nav.label": {
+   "text": "Main navigation",
+   "review_status": "not_required"
+  },
+  "ui.nav.limits": {
+   "text": "Limits",
+   "review_status": "not_required"
+  },
+  "ui.nav.privacy": {
+   "text": "Privacy",
+   "review_status": "not_required"
+  },
+  "ui.nav.start": {
+   "text": "Start",
+   "review_status": "not_required"
+  },
+  "ui.notfound.body": {
+   "text": "There is nothing at this address.",
+   "review_status": "not_required"
+  },
+  "ui.notfound.link": {
+   "text": "Go to the home page",
+   "review_status": "not_required"
+  },
+  "ui.notfound.title": {
+   "text": "Page not found",
+   "review_status": "not_required"
+  },
+  "ui.photo.blister": {
+   "text": "Blister packs on a plain surface",
+   "review_status": "not_required"
+  },
+  "ui.photo.breakfast": {
+   "text": "A breakfast table in morning light",
+   "review_status": "not_required"
+  },
+  "ui.photo.clipboard": {
+   "text": "Papers on a clipboard, seen from above",
+   "review_status": "not_required"
+  },
+  "ui.photo.leaves": {
+   "text": "Close-up of green leaves",
+   "review_status": "not_required"
+  },
+  "ui.photo.linen": {
+   "text": "Linen texture",
+   "review_status": "not_required"
+  },
+  "ui.photo.missing": {
+   "text": "Photograph not available",
+   "review_status": "not_required"
+  },
+  "ui.photo.notebook": {
+   "text": "An open notebook and pen beside a cup of tea",
+   "review_status": "not_required"
+  },
+  "ui.photo.phone": {
+   "text": "A smartphone on a wooden table, screen off",
+   "review_status": "not_required"
+  },
+  "ui.photo.pillbox": {
+   "text": "Hands holding a weekly pill organiser",
+   "review_status": "not_required"
+  },
+  "ui.photo.stethoscope": {
+   "text": "A stethoscope on a desk, seen from above",
+   "review_status": "not_required"
+  },
+  "ui.photo.water": {
+   "text": "A glass of water and a tablet on a saucer",
+   "review_status": "not_required"
+  },
+  "ui.pp.delete.body": {
+   "text": "The one-button delete is part of the working flow, which comes next. It will remove your session, your results and any photo you chose to keep, and give you a receipt.",
+   "review_status": "not_required"
+  },
+  "ui.pp.delete.title": {
+   "text": "Delete my data",
+   "review_status": "not_required"
+  },
+  "ui.pp.intro": {
+   "text": "This is the notice you will be asked to accept before you upload anything. It is loaded live from the CareBridge server on this computer.",
+   "review_status": "not_required"
+  },
+  "ui.pp.loading": {
+   "text": "Loading the notice…",
+   "review_status": "not_required"
+  },
+  "ui.pp.retry": {
+   "text": "Try again",
+   "review_status": "not_required"
+  },
+  "ui.pp.title": {
+   "text": "Privacy",
+   "review_status": "not_required"
+  },
+  "ui.pp.version": {
+   "text": "Notice version {version}",
+   "review_status": "not_required"
+  },
+  "ui.privacy.delete.body": {
+   "text": "You can delete your session and everything stored for it at any time, and you get a receipt.",
+   "review_status": "not_required"
+  },
+  "ui.privacy.delete.title": {
+   "text": "One button deletes everything",
+   "review_status": "not_required"
+  },
+  "ui.privacy.label": {
+   "text": "Privacy",
+   "review_status": "not_required"
+  },
+  "ui.privacy.link": {
+   "text": "Read the full privacy notice",
+   "review_status": "not_required"
+  },
+  "ui.privacy.local.body": {
+   "text": "In this prototype the photo is processed by a model running on the same computer. Nothing is sent to external services.",
+   "review_status": "not_required"
+  },
+  "ui.privacy.local.title": {
+   "text": "Read here, not sent away",
+   "review_status": "not_required"
+  },
+  "ui.privacy.stored.body": {
+   "text": "Results are kept encrypted for your session and removed automatically after 24 hours. The photo is discarded unless you choose to keep it.",
+   "review_status": "not_required"
+  },
+  "ui.privacy.stored.title": {
+   "text": "Stored encrypted, for a short time",
+   "review_status": "not_required"
+  },
+  "ui.privacy.title": {
+   "text": "Your photo is read on this computer.",
+   "review_status": "not_required"
+  },
+  "ui.sample.line": {
+   "text": "Suggested times only; adjust them to match your doctor's instructions.",
+   "review_status": "not_required"
+  },
+  "ui.skip": {
+   "text": "Skip to main content",
+   "review_status": "not_required"
+  },
+  "ui.start.back": {
+   "text": "Back to the home page",
+   "review_status": "not_required"
+  },
+  "ui.start.body": {
+   "text": "Uploading a photo, checking the medicines and reading the results are still being built. This page is a placeholder.",
+   "review_status": "not_required"
+  },
+  "ui.start.title": {
+   "text": "The working flow comes next",
+   "review_status": "not_required"
+  },
+  "ui.steps.1.body": {
+   "text": "Take a clear photo of a prescription or discharge summary, or choose one you already have.",
+   "review_status": "not_required"
+  },
+  "ui.steps.1.title": {
+   "text": "Photograph the page",
+   "review_status": "not_required"
+  },
+  "ui.steps.2.body": {
+   "text": "We list each medicine we found. You compare the list with your paper and correct anything that looks wrong.",
+   "review_status": "not_required"
+  },
+  "ui.steps.2.title": {
+   "text": "Check what we read",
+   "review_status": "not_required"
+  },
+  "ui.steps.3.body": {
+   "text": "Get a short explanation, a daily timetable you can adjust, and any interaction we found or could not check.",
+   "review_status": "not_required"
+  },
+  "ui.steps.3.title": {
+   "text": "Understand it in plain words",
+   "review_status": "not_required"
+  },
+  "ui.steps.label": {
+   "text": "The steps",
+   "review_status": "not_required"
+  },
+  "ui.steps.title": {
+   "text": "Three steps from paper to plain words.",
+   "review_status": "not_required"
+  },
+  "ui.testing.body": {
+   "text": "We test on made-up documents only, never on real patients' papers. A write-up of the method and the results will be added here.",
+   "review_status": "not_required"
+  },
+  "ui.testing.label": {
+   "text": "Testing",
+   "review_status": "not_required"
+  },
+  "ui.testing.link": {
+   "text": "Testing notes: write-up coming",
+   "review_status": "not_required"
+  },
+  "ui.testing.title": {
+   "text": "How we tested it",
+   "review_status": "not_required"
+  },
+  "ui.title.home": {
+   "text": "CareBridge: make sense of your discharge papers",
+   "review_status": "not_required"
+  },
+  "ui.title.how": {
+   "text": "How it works · CareBridge",
+   "review_status": "not_required"
+  },
+  "ui.title.notfound": {
+   "text": "Page not found · CareBridge",
+   "review_status": "not_required"
+  },
+  "ui.title.privacy": {
+   "text": "Privacy · CareBridge",
+   "review_status": "not_required"
+  },
+  "ui.title.start": {
+   "text": "Start · CareBridge",
+   "review_status": "not_required"
+  }
+ },
+ "ta": {
+  "ui.brand.home": {
+   "text": "CareBridge, முகப்புப் பக்கம்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.calm.explain": {
+   "text": "நகரும் பின்னணி, சுட்டி வளையம் மற்றும் நகரும் ஓடுகளை நிறுத்துகிறது. பழைய கணினிகளிலும், அசைவு தொந்தரவாக இருக்கும்போதும் இது உதவும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.calm.label": {
+   "text": "அமைதி முறை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.calm.off": {
+   "text": "நிறுத்தத்தில்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.calm.on": {
+   "text": "இயக்கத்தில்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.body1": {
+   "text": "புகைப்படத்திலிருந்து எழுத்துகளைப் படிப்பதில் தவறு நேரலாம். மங்கலான ஒரு எழுத்து ஒரு மருந்தின் பெயரை வேறொன்றாக, அல்லது மருந்தே இல்லாத சொல்லாக மாற்றலாம்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.body2": {
+   "text": "அதனால் மற்ற எல்லாவற்றுக்கும் முன் மருந்துப் பட்டியலை நீங்கள் சரிபார்க்கிறீர்கள். உறுதியில்லாத மருந்துகள் குறிக்கப்படும்; நீங்கள் உறுதிசெய்யும் வரை அவை ஒப்பிடப்படாது, நேரப்பட்டியலிலும் சேராது.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.body3": {
+   "text": "ஒரு பெயர் எங்களுக்குத் தெரிந்த எதனுடனும் பொருந்தவில்லை என்றால் அதைச் சொல்கிறோம். ஊகிப்பதில்லை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.fig.caption": {
+   "text": "விளக்கப்படம் மட்டுமே; உரை கற்பனையானது. இது உண்மையான ஆவணத்தில் இருந்து அல்ல.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.fig.pick": {
+   "text": "எங்கள் பட்டியலில்: Metformin 500 mg",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.fig.read": {
+   "text": "புகைப்படத்தில்: Netfornin 5OO mg",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.fig.you": {
+   "text": "சரியானதை நீங்கள் தேர்ந்தெடுக்கிறீர்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.label": {
+   "text": "ஏன் முதலில் நீங்கள் உறுதிசெய்ய வேண்டும்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.title": {
+   "text": "புகைப்படத்தைத் தவறாகப் படிக்கலாம். அதனால் முதலில் நீங்கள் சரிபாருங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.draft_note": {
+   "text": "இயந்திரம் வரைந்த மொழிபெயர்ப்பு. தாய்மொழி பேசுபவர் இன்னும் சரிபார்க்கவில்லை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.error.backend": {
+   "text": "இந்தக் கணினியில் உள்ள CareBridge சேவையகத்தை அடைய முடியவில்லை, அதனால் அறிவிப்பைக் காட்ட முடியாது. பின்தளத்தைத் தொடங்கிப் பக்கத்தை மீண்டும் ஏற்றுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.footer.contact": {
+   "text": "கேள்விகளுக்கான தொடர்பு விவரங்கள் தனியுரிமைப் பக்கத்தில் உள்ளன.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.footer.credits": {
+   "text": "புகைப்பட நன்றிகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.footer.credits_body": {
+   "text": "புகைப்படங்கள் இந்தத் தளத்திலேயே உள்ளன. மூலங்களும் உரிமங்களும் திட்டக் கோப்புகளில் assets/ATTRIBUTION.md இல் உள்ளன.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.footer.prototype": {
+   "text": "CareBridge என்பது AI in Healthcare பாடத்திற்காக உருவாக்கிய வகுப்புத் திட்ட மாதிரி. இது மருத்துவ ஆலோசனை அல்ல.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.cta": {
+   "text": "புகைப்படத்தோடு தொடங்குங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.eyebrow": {
+   "text": "வகுப்புத் திட்ட மாதிரி",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.link": {
+   "text": "எப்படி வேலை செய்கிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.note": {
+   "text": "வகுப்புத் திட்ட மாதிரி. மருத்துவ ஆலோசனை அல்ல.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.sub": {
+   "text": "மருந்துச் சீட்டு அல்லது வெளியேற்றச் சுருக்கத்தின் புகைப்படத்தைப் பதிவேற்றுங்கள். CareBridge அதைப் படித்து, சரிபார்க்க உதவி, ஆங்கிலம், தமிழ் அல்லது हिन्दी மொழியில் விளக்குகிறது.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.title": {
+   "text": "உங்கள் வெளியேற்றக் காகிதங்களைப் புரிந்துகொள்ளுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.fig.alt": {
+   "text": "வரைபடம்: புகைப்படம், படித்தல், உங்கள் சரிபார்ப்பு, விளக்கம், பிறகு இடைவினை கண்டறியப்பட்டது அல்லது சரிபார்க்க முடியவில்லை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.found": {
+   "text": "இடைவினை கண்டறியப்பட்டது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.intro": {
+   "text": "ஐந்து படிகள், எளிய மொழியில். அவற்றில் இரண்டு உங்களுடையவை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n1.body": {
+   "text": "மருந்துச் சீட்டு அல்லது வெளியேற்றச் சுருக்கத்தின் புகைப்படத்தைப் பதிவேற்றுகிறீர்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n1.title": {
+   "text": "உங்கள் புகைப்படம்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n2.body": {
+   "text": "இந்தக் கணினியில் உள்ள ஒரு மாதிரி உரையைப் படித்து, கண்ட மருந்துகளைப் பட்டியலிடுகிறது. அதில் தவறுகள் இருக்கலாம்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n2.title": {
+   "text": "படித்தல்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n3.body": {
+   "text": "பட்டியலை உங்கள் காகிதத்துடன் ஒப்பிட்டுத் திருத்துகிறீர்கள். உறுதியில்லாத மருந்துகள் குறிக்கப்படும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n3.title": {
+   "text": "உங்கள் சரிபார்ப்பு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n4.body": {
+   "text": "நிலையான சொற்றொடர்கள் ஒவ்வொரு மருந்தையும் விளக்குகின்றன. மற்ற அறிவுரைகள் எளிமையாக்கப்பட்டு மூலத்துடன் ஒப்பிடப்படுகின்றன. ஒப்பீடு தோல்வியுற்றால் மூல ஆங்கிலத்தைப் பார்ப்பீர்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n4.title": {
+   "text": "விளக்கம்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n5.body": {
+   "text": "நீங்கள் உறுதிசெய்த மருந்துகளுக்கு அறியப்பட்ட இடைவினைகளைத் தேடுகிறோம். கண்டால் தெரிவிக்கிறோம்; சரிபார்க்க முடியவில்லை என்றால் அதைச் சொல்கிறோம்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n5.title": {
+   "text": "இடைவினைகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.title": {
+   "text": "CareBridge எப்படி வேலை செய்கிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.unchecked": {
+   "text": "சரிபார்க்க முடியவில்லை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.unchecked_note": {
+   "text": "“சரிபார்க்க முடியவில்லை” என்றால் தகவல் கிடைக்கவில்லை அல்லது மருந்தின் பெயரில் உறுதியில்லை என்று மட்டுமே பொருள். மருந்துகள் ஒன்றோடொன்று நன்றாகப் பொருந்துகின்றன என்பதற்கான அறிகுறி அல்ல. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.you": {
+   "text": "உங்கள் படி",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.lang.group": {
+   "text": "மொழியைத் தேர்ந்தெடுக்கவும்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.lang.label": {
+   "text": "மொழி",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.langblock.body": {
+   "text": "விளக்கங்களை மூன்றில் எந்த மொழியிலும் காட்டலாம். எங்கள் நிலையான சொற்றொடரிலிருந்து ஒரு மாதிரி வரி ஒவ்வொரு மொழியிலும் கீழே உள்ளது.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.langblock.chip_draft": {
+   "text": "வரைவு மொழிபெயர்ப்பு, தாய்மொழி பேசுபவர் இன்னும் சரிபார்க்கவில்லை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.langblock.chip_en": {
+   "text": "திட்ட ஆசிரியர் எழுதிய ஆங்கில உரை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.langblock.label": {
+   "text": "மொழிகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.langblock.title": {
+   "text": "ஆங்கிலம், தமிழ் அல்லது இந்தி மொழியில்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.1": {
+   "text": "வகுப்புத் திட்ட மாதிரி. இது மருத்துவ ஆலோசனை அல்ல; உங்கள் மருத்துவர் அல்லது மருந்தாளருக்கு மாற்றும் அல்ல.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.2": {
+   "text": "புகைப்படத்தைப் படிப்பதில் தவறு நேரலாம். பட்டியலை எப்போதும் உங்கள் காகிதத்துடன் ஒப்பிடுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.3": {
+   "text": "இடைவினைத் தகவல் குறைவானது. இது முழுமையற்ற பொதுத் தரவுத்தளத்திலிருந்தும், அதிகாரப்பூர்வ மருந்து லேபிள்களிலிருந்து திட்ட ஆசிரியர் எழுதிய சிறு பட்டியலிலிருந்தும் வருகிறது. எந்த மருந்தாளரும் இதைச் சரிபார்க்கவில்லை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.4": {
+   "text": "பிராண்ட் பெயர்கள் சரிபார்க்கப்படாத ஒரு பட்டியலைக் கொண்டு பொதுப் பெயர்களுடன் பொருத்தப்படுகின்றன.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.5": {
+   "text": "தமிழும் ஹிந்தியும் இயந்திரத்தால் வரையப்பட்டவை; தாய்மொழி பேசுபவர் சரிபார்க்கவில்லை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.6": {
+   "text": "உங்கள் மருந்துகள் பற்றிய முடிவுகள் உங்கள் மருத்துவர் அல்லது மருந்தாளருக்கானவை; இந்த இணையதளத்துக்கானவை அல்ல.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.label": {
+   "text": "வரம்புகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.title": {
+   "text": "CareBridge எது அல்ல.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.how": {
+   "text": "எப்படி வேலை செய்கிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.label": {
+   "text": "முதன்மை வழிசெலுத்தல்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.limits": {
+   "text": "வரம்புகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.privacy": {
+   "text": "தனியுரிமை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.start": {
+   "text": "தொடங்குங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.notfound.body": {
+   "text": "இந்த முகவரியில் எதுவும் இல்லை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.notfound.link": {
+   "text": "முகப்புப் பக்கத்துக்குச் செல்லுங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.notfound.title": {
+   "text": "பக்கம் கிடைக்கவில்லை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.blister": {
+   "text": "சமதளத்தில் மாத்திரை அட்டைகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.breakfast": {
+   "text": "காலை வெளிச்சத்தில் காலை உணவு மேசை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.clipboard": {
+   "text": "கிளிப்போர்டில் காகிதங்கள், மேலிருந்து பார்த்தது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.leaves": {
+   "text": "பச்சை இலைகளின் அருகாமைக் காட்சி",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.linen": {
+   "text": "லினன் துணியின் அமைப்பு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.missing": {
+   "text": "புகைப்படம் கிடைக்கவில்லை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.notebook": {
+   "text": "தேநீர்க் கோப்பைக்கு அருகில் திறந்த குறிப்பேடும் பேனாவும்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.phone": {
+   "text": "மரமேசையில் திரை அணைந்த ஸ்மார்ட்போன்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.pillbox": {
+   "text": "வாராந்திர மாத்திரைப் பெட்டியைப் பிடித்திருக்கும் கைகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.stethoscope": {
+   "text": "மேசையில் ஸ்டெதாஸ்கோப், மேலிருந்து பார்த்தது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.water": {
+   "text": "ஒரு குவளை தண்ணீரும் தட்டில் ஒரு மாத்திரையும்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.delete.body": {
+   "text": "ஒரே பொத்தானில் நீக்கும் வசதி செயல்படும் பகுதியில் வரும், அது அடுத்து வருகிறது. அது உங்கள் அமர்வு, முடிவுகள் மற்றும் நீங்கள் வைத்துக்கொள்ளத் தேர்ந்த புகைப்படத்தை நீக்கி ரசீது தரும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.delete.title": {
+   "text": "என் தரவை நீக்கு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.intro": {
+   "text": "எதையும் பதிவேற்றும் முன் நீங்கள் ஏற்க வேண்டிய அறிவிப்பு இதுவே. இது இந்தக் கணினியில் உள்ள CareBridge சேவையகத்திலிருந்து நேரடியாக ஏற்றப்படுகிறது.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.loading": {
+   "text": "அறிவிப்பு ஏற்றப்படுகிறது…",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.retry": {
+   "text": "மீண்டும் முயலுங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.title": {
+   "text": "தனியுரிமை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.version": {
+   "text": "அறிவிப்பு பதிப்பு {version}",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.delete.body": {
+   "text": "உங்கள் அமர்வையும் அதற்காகச் சேமித்த அனைத்தையும் எப்போது வேண்டுமானாலும் நீக்கலாம்; ஒரு ரசீதும் கிடைக்கும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.delete.title": {
+   "text": "ஒரே பொத்தான் எல்லாவற்றையும் நீக்கும்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.label": {
+   "text": "தனியுரிமை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.link": {
+   "text": "முழு தனியுரிமை அறிவிப்பைப் படியுங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.local.body": {
+   "text": "இந்த மாதிரியில் புகைப்படம் அதே கணினியில் இயங்கும் ஒரு மாதிரியால் செயலாக்கப்படுகிறது. வெளிச் சேவைகளுக்கு எதுவும் அனுப்பப்படாது.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.local.title": {
+   "text": "இங்கேயே படிக்கப்படுகிறது, வெளியே அனுப்பப்படாது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.stored.body": {
+   "text": "முடிவுகள் உங்கள் அமர்வுக்காக மறைகுறியாக்கி வைக்கப்பட்டு 24 மணி நேரத்திற்குப் பிறகு தானாக நீக்கப்படும். நீங்கள் வைத்துக்கொள்ளத் தேர்ந்தெடுக்காவிட்டால் புகைப்படம் நீக்கப்படும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.stored.title": {
+   "text": "மறைகுறியாக்கி, குறுகிய காலம் சேமிக்கப்படுகிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.title": {
+   "text": "உங்கள் புகைப்படம் இந்தக் கணினியிலேயே படிக்கப்படுகிறது.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.sample.line": {
+   "text": "பரிந்துரைக்கப்பட்ட நேரங்கள் மட்டுமே; உங்கள் மருத்துவரின் அறிவுறுத்தலுக்கு ஏற்ப அவற்றை மாற்றிக்கொள்ளுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.skip": {
+   "text": "முதன்மை உள்ளடக்கத்திற்குச் செல்லவும்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.start.back": {
+   "text": "முகப்புப் பக்கத்துக்குத் திரும்புங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.start.body": {
+   "text": "புகைப்படம் பதிவேற்றுதல், மருந்துகளைச் சரிபார்த்தல், முடிவுகளைப் படித்தல் ஆகியவை இன்னும் உருவாக்கப்படுகின்றன. இந்தப் பக்கம் இடைக்காலப் பக்கம்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.start.title": {
+   "text": "செயல்படும் பகுதி அடுத்து வருகிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.1.body": {
+   "text": "மருந்துச் சீட்டு அல்லது வெளியேற்றச் சுருக்கத்தைத் தெளிவாகப் படம் எடுங்கள், அல்லது ஏற்கனவே உள்ள படத்தைத் தேர்ந்தெடுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.1.title": {
+   "text": "பக்கத்தைப் படம் எடுங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.2.body": {
+   "text": "கண்டுபிடித்த ஒவ்வொரு மருந்தையும் பட்டியலிடுகிறோம். பட்டியலை உங்கள் காகிதத்துடன் ஒப்பிட்டு, தவறாகத் தோன்றுவதைத் திருத்துங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.2.title": {
+   "text": "நாங்கள் படித்ததைச் சரிபாருங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.3.body": {
+   "text": "சிறிய விளக்கம், நீங்கள் மாற்றக்கூடிய தினசரி நேரப்பட்டியல், மற்றும் நாங்கள் கண்ட அல்லது சரிபார்க்க முடியாத இடைவினைகளைப் பெறுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.3.title": {
+   "text": "எளிய சொற்களில் புரிந்துகொள்ளுங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.label": {
+   "text": "படிகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.title": {
+   "text": "காகிதத்திலிருந்து எளிய சொற்களுக்கு மூன்று படிகள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.testing.body": {
+   "text": "நாங்கள் கற்பனை ஆவணங்களில் மட்டுமே சோதிக்கிறோம்; உண்மையான நோயாளிகளின் காகிதங்களில் ஒருபோதும் இல்லை. முறையும் முடிவுகளும் பற்றிய எழுத்துக்குறிப்பு இங்கே சேர்க்கப்படும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.testing.label": {
+   "text": "சோதனை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.testing.link": {
+   "text": "சோதனைக் குறிப்புகள்: விரைவில்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.testing.title": {
+   "text": "நாங்கள் எப்படிச் சோதித்தோம்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.home": {
+   "text": "CareBridge: உங்கள் வெளியேற்றக் காகிதங்களைப் புரிந்துகொள்ளுங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.how": {
+   "text": "எப்படி வேலை செய்கிறது · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.notfound": {
+   "text": "பக்கம் கிடைக்கவில்லை · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.privacy": {
+   "text": "தனியுரிமை · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.start": {
+   "text": "தொடங்குங்கள் · CareBridge",
+   "review_status": "draft_unreviewed"
+  }
+ },
+ "hi": {
+  "ui.brand.home": {
+   "text": "CareBridge, मुख्य पृष्ठ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.calm.explain": {
+   "text": "चलती पृष्ठभूमि, कर्सर की रिंग और तैरती टाइलें बंद हो जाती हैं। इससे पुराने कंप्यूटर पर मदद मिलती है और हलचल से परेशानी हो तो भी।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.calm.label": {
+   "text": "शांत मोड",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.calm.off": {
+   "text": "बंद",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.calm.on": {
+   "text": "चालू",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.body1": {
+   "text": "फ़ोटो से अक्षर पढ़ने में गलती हो सकती है। धुंधला अक्षर एक दवा का नाम दूसरी दवा या ऐसे शब्द में बदल सकता है जो दवा है ही नहीं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.body2": {
+   "text": "इसीलिए सबसे पहले आप दवाओं की सूची जाँचते हैं। जिन दवाओं के बारे में हम निश्चित नहीं हैं उन पर निशान लगता है, और आपके पुष्टि करने तक उनकी तुलना या समय-सारणी नहीं बनती।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.body3": {
+   "text": "अगर कोई नाम हमारी जानकारी की किसी दवा से नहीं मिलता तो हम यह बता देते हैं। हम अंदाज़ा नहीं लगाते।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.fig.caption": {
+   "text": "केवल उदाहरण है, लिखावट बनावटी है। यह किसी असली दस्तावेज़ से नहीं है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.fig.pick": {
+   "text": "हमारी सूची में: Metformin 500 mg",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.fig.read": {
+   "text": "फ़ोटो में था: Netfornin 5OO mg",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.fig.you": {
+   "text": "सही वाला आप चुनते हैं",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.label": {
+   "text": "पहले आप पुष्टि क्यों करते हैं",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.confirm.title": {
+   "text": "फ़ोटो को गलत पढ़ा जा सकता है। इसलिए पहले आप जाँचते हैं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.draft_note": {
+   "text": "मशीन से तैयार किया गया अनुवाद। किसी मातृभाषी ने अभी इसकी जाँच नहीं की है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.error.backend": {
+   "text": "इस कंप्यूटर का CareBridge सर्वर नहीं मिल रहा, इसलिए सूचना नहीं दिखाई जा सकती। बैकएंड चालू करें और पेज दोबारा लोड करें।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.footer.contact": {
+   "text": "सवालों के लिए संपर्क की जानकारी गोपनीयता पृष्ठ पर है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.footer.credits": {
+   "text": "फ़ोटो श्रेय",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.footer.credits_body": {
+   "text": "तस्वीरें इसी साइट पर रखी गई हैं। स्रोत और लाइसेंस प्रोजेक्ट फ़ाइलों में assets/ATTRIBUTION.md में दिए हैं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.footer.prototype": {
+   "text": "CareBridge, AI in Healthcare पाठ्यक्रम के लिए बनाया गया कक्षा परियोजना का प्रोटोटाइप है। यह चिकित्सा सलाह नहीं है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.cta": {
+   "text": "फ़ोटो से शुरू करें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.eyebrow": {
+   "text": "कक्षा परियोजना का प्रोटोटाइप",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.link": {
+   "text": "यह कैसे काम करता है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.note": {
+   "text": "कक्षा परियोजना का प्रोटोटाइप। चिकित्सा सलाह नहीं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.sub": {
+   "text": "दवा की पर्ची या डिस्चार्ज सारांश की फ़ोटो अपलोड करें। CareBridge उसे पढ़ता है, जाँचने में मदद करता है और English, தமிழ் या हिन्दी में समझाता है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hero.title": {
+   "text": "अपने डिस्चार्ज के कागज़ात समझिए।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.fig.alt": {
+   "text": "चित्र: फ़ोटो, पढ़ना, आपकी जाँच, व्याख्या, फिर या तो इंटरैक्शन मिला या जाँच नहीं हो सकी।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.found": {
+   "text": "इंटरैक्शन मिला",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.intro": {
+   "text": "पाँच चरण, सरल भाषा में। इनमें से दो आपके हैं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n1.body": {
+   "text": "आप दवा की पर्ची या डिस्चार्ज सारांश की फ़ोटो अपलोड करते हैं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n1.title": {
+   "text": "आपकी फ़ोटो",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n2.body": {
+   "text": "इस कंप्यूटर पर चल रहा मॉडल पाठ पढ़कर मिली दवाओं की सूची बनाता है। उसमें गलतियाँ हो सकती हैं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n2.title": {
+   "text": "पढ़ना",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n3.body": {
+   "text": "आप सूची को अपने कागज़ से मिलाकर ठीक करते हैं। जिन दवाओं पर हमें शक है उन पर निशान लगता है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n3.title": {
+   "text": "आपकी जाँच",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n4.body": {
+   "text": "तय शब्द हर दवा को समझाते हैं। बाकी सलाह को सरल बनाकर मूल से मिलाया जाता है। मिलान न हो तो आपको मूल अंग्रेज़ी दिखती है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n4.title": {
+   "text": "व्याख्या",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n5.body": {
+   "text": "आपकी पुष्टि की हुई दवाओं के लिए हम ज्ञात इंटरैक्शन खोजते हैं। मिले तो बताते हैं, या कहते हैं कि जाँच नहीं हो सकी।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.n5.title": {
+   "text": "इंटरैक्शन",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.title": {
+   "text": "CareBridge कैसे काम करता है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.unchecked": {
+   "text": "जाँच नहीं हो सकी",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.unchecked_note": {
+   "text": "“जाँच नहीं हो सकी” का मतलब सिर्फ़ इतना है कि हमें जानकारी नहीं मिली, या दवा के नाम पर हमें शक था। यह इस बात का संकेत नहीं कि दवाएँ साथ में ठीक रहती हैं। अपने फ़ार्मासिस्ट से पूछें।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.how.you": {
+   "text": "आपका चरण",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.lang.group": {
+   "text": "भाषा चुनें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.lang.label": {
+   "text": "भाषा",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.langblock.body": {
+   "text": "व्याख्या इन तीनों में से किसी भी भाषा में दिखाई जा सकती है। नीचे हमारे तय शब्दों की एक नमूना पंक्ति हर भाषा में दी है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.langblock.chip_draft": {
+   "text": "ड्राफ़्ट अनुवाद, किसी मातृभाषी ने अभी जाँच नहीं की",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.langblock.chip_en": {
+   "text": "प्रोजेक्ट लेखक का लिखा अंग्रेज़ी पाठ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.langblock.label": {
+   "text": "भाषाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.langblock.title": {
+   "text": "अंग्रेज़ी, तमिल या हिन्दी में।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.1": {
+   "text": "कक्षा परियोजना का प्रोटोटाइप। यह चिकित्सा सलाह नहीं है और आपके डॉक्टर या फ़ार्मासिस्ट की जगह नहीं लेता।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.2": {
+   "text": "फ़ोटो पढ़ने में गलती हो सकती है। सूची को हमेशा अपने कागज़ से मिलाएँ।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.3": {
+   "text": "इंटरैक्शन की जानकारी सीमित है। यह एक अधूरे सार्वजनिक डेटाबेस और प्रोजेक्ट लेखक की आधिकारिक दवा लेबलों से बनाई छोटी सूची से आती है। किसी फ़ार्मासिस्ट ने इसकी जाँच नहीं की है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.4": {
+   "text": "ब्रांड नामों को जेनेरिक नामों से मिलाने के लिए ऐसी सूची इस्तेमाल होती है जिसकी जाँच नहीं हुई है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.5": {
+   "text": "तमिल और हिन्दी मशीन से तैयार किए गए हैं और किसी मातृभाषी ने उनकी जाँच नहीं की है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.6": {
+   "text": "आपकी दवाओं के बारे में फ़ैसले आपके डॉक्टर या फ़ार्मासिस्ट के हैं, इस वेबसाइट के नहीं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.label": {
+   "text": "सीमाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.limits.title": {
+   "text": "CareBridge क्या नहीं है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.how": {
+   "text": "यह कैसे काम करता है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.label": {
+   "text": "मुख्य नेविगेशन",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.limits": {
+   "text": "सीमाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.privacy": {
+   "text": "गोपनीयता",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.start": {
+   "text": "शुरू करें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.notfound.body": {
+   "text": "इस पते पर कुछ नहीं है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.notfound.link": {
+   "text": "मुख्य पृष्ठ पर जाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.notfound.title": {
+   "text": "पृष्ठ नहीं मिला",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.blister": {
+   "text": "सादी सतह पर गोलियों के पत्ते",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.breakfast": {
+   "text": "सुबह की रोशनी में नाश्ते की मेज़",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.clipboard": {
+   "text": "क्लिपबोर्ड पर कागज़, ऊपर से",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.leaves": {
+   "text": "हरी पत्तियों का क्लोज़-अप",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.linen": {
+   "text": "लिनन कपड़े की बुनावट",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.missing": {
+   "text": "फ़ोटो उपलब्ध नहीं है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.notebook": {
+   "text": "चाय के कप के पास खुली नोटबुक और कलम",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.phone": {
+   "text": "लकड़ी की मेज़ पर बंद स्क्रीन वाला स्मार्टफ़ोन",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.pillbox": {
+   "text": "साप्ताहिक गोली-डिब्बा पकड़े हुए हाथ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.stethoscope": {
+   "text": "मेज़ पर रखा स्टेथोस्कोप, ऊपर से",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.water": {
+   "text": "एक गिलास पानी और तश्तरी में एक गोली",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.delete.body": {
+   "text": "एक बटन से मिटाने की सुविधा काम करने वाले हिस्से में होगी, जो अगला है। वह आपका सत्र, नतीजे और आपकी रखी हुई फ़ोटो हटाकर रसीद देगी।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.delete.title": {
+   "text": "मेरा डेटा मिटाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.intro": {
+   "text": "कुछ भी अपलोड करने से पहले आपको यही सूचना स्वीकार करनी होगी। यह इस कंप्यूटर के CareBridge सर्वर से सीधे लोड होती है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.loading": {
+   "text": "सूचना लोड हो रही है…",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.retry": {
+   "text": "फिर कोशिश करें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.title": {
+   "text": "गोपनीयता",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.pp.version": {
+   "text": "सूचना संस्करण {version}",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.delete.body": {
+   "text": "आप कभी भी अपना सत्र और उसके लिए रखा सब कुछ मिटा सकते हैं, और आपको रसीद मिलती है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.delete.title": {
+   "text": "एक बटन सब कुछ मिटा देता है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.label": {
+   "text": "गोपनीयता",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.link": {
+   "text": "पूरी गोपनीयता सूचना पढ़ें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.local.body": {
+   "text": "इस प्रोटोटाइप में फ़ोटो उसी कंप्यूटर पर चल रहे मॉडल से प्रोसेस होती है। किसी बाहरी सेवा को कुछ नहीं भेजा जाता।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.local.title": {
+   "text": "यहीं पढ़ी जाती है, बाहर नहीं भेजी जाती",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.stored.body": {
+   "text": "नतीजे आपके सत्र के लिए एन्क्रिप्ट करके रखे जाते हैं और 24 घंटे बाद अपने आप हट जाते हैं। आप रखने का विकल्प न चुनें तो फ़ोटो हटा दी जाती है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.stored.title": {
+   "text": "एन्क्रिप्ट करके, थोड़े समय के लिए रखा जाता है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.privacy.title": {
+   "text": "आपकी फ़ोटो इसी कंप्यूटर पर पढ़ी जाती है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.sample.line": {
+   "text": "ये केवल सुझाए गए समय हैं; अपने डॉक्टर के निर्देश के अनुसार इन्हें बदल लें।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.skip": {
+   "text": "मुख्य सामग्री पर जाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.start.back": {
+   "text": "मुख्य पृष्ठ पर लौटें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.start.body": {
+   "text": "फ़ोटो अपलोड करना, दवाएँ जाँचना और नतीजे पढ़ना अभी बन रहे हैं। यह पृष्ठ अभी सिर्फ़ जगह भरने के लिए है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.start.title": {
+   "text": "काम करने वाला हिस्सा अगला है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.1.body": {
+   "text": "दवा की पर्ची या डिस्चार्ज सारांश की साफ़ फ़ोटो लें, या पहले से रखी फ़ोटो चुनें।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.1.title": {
+   "text": "पन्ने की फ़ोटो लें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.2.body": {
+   "text": "हमें मिली हर दवा की सूची बनती है। आप उसे अपने कागज़ से मिलाएँ और जो गलत लगे उसे ठीक करें।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.2.title": {
+   "text": "जो हमने पढ़ा उसे जाँचें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.3.body": {
+   "text": "एक छोटी व्याख्या, रोज़ का समय-सारणी जिसे आप बदल सकते हैं, और जो इंटरैक्शन मिला या जाँचा नहीं जा सका, वह मिलता है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.3.title": {
+   "text": "सरल शब्दों में समझें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.label": {
+   "text": "चरण",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.steps.title": {
+   "text": "कागज़ से सरल शब्दों तक तीन चरण।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.testing.body": {
+   "text": "हम केवल बनावटी दस्तावेज़ों पर परीक्षण करते हैं, असली मरीज़ों के कागज़ों पर कभी नहीं। तरीके और नतीजों का विवरण यहाँ जोड़ा जाएगा।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.testing.label": {
+   "text": "परीक्षण",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.testing.link": {
+   "text": "परीक्षण नोट्स: विवरण जल्द आएगा",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.testing.title": {
+   "text": "हमने इसका परीक्षण कैसे किया",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.home": {
+   "text": "CareBridge: अपने डिस्चार्ज के कागज़ात समझें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.how": {
+   "text": "यह कैसे काम करता है · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.notfound": {
+   "text": "पृष्ठ नहीं मिला · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.privacy": {
+   "text": "गोपनीयता · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.start": {
+   "text": "शुरू करें · CareBridge",
+   "review_status": "draft_unreviewed"
+  }
+ }
+}
