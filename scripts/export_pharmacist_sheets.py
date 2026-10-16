@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REF = ROOT / "data" / "reference"
 OUT = REF / "review"
-SUP_COLS = ["pair_id", "drug_a", "drug_b", "proposed_severity", "summary_en", "source_url", "source_section", "status",
+SUP_COLS = ["pair_id", "drug_a", "drug_b", "proposed_severity", "summary_en", "source_url", "source_section", "basis", "status",
             "reviewer_verdict", "reviewer_severity", "reviewer_comment", "reviewer_initials", "review_date"]
 FORM_COLS = ["generic_name", "brand_names", "strengths", "form", "route", "status",
              "reviewer_verdict", "reviewer_correction", "reviewer_comment", "reviewer_initials", "review_date"]

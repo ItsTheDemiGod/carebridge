@@ -18,8 +18,19 @@ def formulary_generics() -> tuple[str, ...]:
     return tuple(m["generic_name"] for m in json.loads(FORMULARY.read_text(encoding="utf-8"))["medicines"])
 
 
+@lru_cache
+def _by_lower() -> dict[str, str]:
+    return {g.lower(): g for g in formulary_generics()}
+
+
+def canonical(generic: str | None) -> str | None:
+    """Formulary spelling of a generic (case-insensitive exact match through the formulary only; no fuzzy matching), else None."""
+    return _by_lower().get(generic.strip().lower()) if generic else None
+
+
 def components(generic: str) -> list[str]:
     """Lowercased DDInter component names of a formulary generic; [] if the generic is not in the formulary."""
-    if generic not in formulary_generics():
+    g = canonical(generic)
+    if g is None:
         return []
-    return [c.lower() for c in RENAME.get(generic) or [x.strip() for x in generic.split(" + ")]]
+    return [c.lower() for c in RENAME.get(g) or [x.strip() for x in g.split(" + ")]]

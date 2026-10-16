@@ -94,3 +94,8 @@ def test_builder_keeps_highest_and_counts_conflicts(tmp_path):
     (tmp_path / "ddinter_downloads_code_B.csv").write_text(hdr + "2,omeprazole,1,metformin,Major\n", encoding="utf-8")
     res = B.build(tmp_path, {"metformin", "omeprazole"})
     assert res["pairs"] == {"metformin|omeprazole": {"severity": "major", "files": ["A", "B"], "conflicts": 1}}
+
+
+def test_case_is_handled_through_the_formulary_map_only():
+    assert I.check("metformin", "OMEPRAZOLE", data()).level == "minor"
+    assert components("aspirin") == ["acetylsalicylic acid"] and components("Notadrug") == []

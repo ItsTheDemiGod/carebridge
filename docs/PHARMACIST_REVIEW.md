@@ -12,7 +12,8 @@ Two CSV files (open them in Excel or Google Sheets; if accented letters look wro
 The app looks up interactions in a free database (DDInter). That database is incomplete, so many pairs have no record. When a pair has no record, the app only says "we could not check this", never "safe". The 16 pairs in sheet 1 have **no record in that database**, but we found a statement in an official label. Until you review them, **the app ignores them**.
 
 ## Sheet 1: interactions
-Columns already filled: `pair_id`, `drug_a`, `drug_b`, `proposed_severity`, `summary_en` (our one-sentence paraphrase), `source_url`, `source_section` (where to look; "also:" lists a second label), `status`.
+Columns already filled: `pair_id`, `drug_a`, `drug_b`, `proposed_severity`, `summary_en` (our one-sentence paraphrase), `source_url`, `source_section` (where to look; "also:" lists a second label), `basis`, `status`.
+`basis` is `pair_specific_label` (the source names the other drug) or `class_statement_applied` (the source only warns about a class such as "drugs that raise potassium" or "QT-prolonging medicines" and we applied it to this pair; **please confirm that both drugs really belong to that class**). 11 of the 16 rows are class statements.
 `proposed_severity` is `unclassified` when the label gives no severity.
 
 Please fill in, for every row:
