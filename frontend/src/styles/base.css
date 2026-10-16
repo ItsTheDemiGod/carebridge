@@ -1,0 +1,104 @@
+html {
+  background: var(--paper);
+  color: var(--ink);
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: var(--t-body);
+  line-height: 1.65;
+  background: var(--paper);
+  overflow-x: hidden;
+}
+/* paper grain: one static fixed layer, very low opacity */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: var(--grain);
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: var(--z-ambient);
+}
+#root {
+  position: relative;
+  z-index: var(--z-content);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: var(--ink);
+  text-wrap: balance;
+}
+html:lang(ta) h1, html:lang(ta) h2, html:lang(ta) h3, html:lang(ta) h4,
+html:lang(hi) h1, html:lang(hi) h2, html:lang(hi) h3, html:lang(hi) h4 {
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.3; /* Indic scripts need taller lines for matras */
+}
+html:lang(ta) body, html:lang(hi) body { line-height: 1.8; }
+.display { font-size: var(--t-display); line-height: 1.02; letter-spacing: -0.03em; font-variation-settings: 'opsz' 144; }
+html:lang(ta) .display, html:lang(hi) .display { line-height: 1.22; letter-spacing: 0; }
+.h1, h1 { font-size: var(--t-h1); }
+.h2, h2 { font-size: var(--t-h2); }
+h3 { font-size: var(--t-h3); }
+h4 { font-size: var(--t-h4); font-weight: 600; font-family: var(--font-body); letter-spacing: 0; }
+p { margin: 0; max-width: var(--measure); }
+.small { font-size: var(--t-small); }
+.muted { color: var(--ink-soft); }
+.lede { font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem); line-height: 1.55; color: var(--ink-soft); }
+
+/* small-caps label; letter-spacing is dropped for Indic scripts because it breaks conjuncts */
+.label {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  font-size: var(--t-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+  margin-bottom: var(--s-4);
+}
+html:lang(ta) .label, html:lang(hi) .label { letter-spacing: 0; text-transform: none; font-size: var(--t-small); }
+.label-num { font-family: var(--font-display); font-size: 1.05rem; letter-spacing: 0; color: var(--terracotta-ink); }
+.label-num::after { content: ''; display: inline-block; width: 2.2rem; height: 1px; background: var(--terracotta); margin-left: var(--s-3); vertical-align: middle; }
+
+a { color: inherit; }
+:focus { outline: none; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 3px; }
+.on-dark :focus-visible { outline-color: var(--focus-on-dark); }
+::selection { background: var(--sage); color: var(--ink); }
+
+.skip-link {
+  position: fixed;
+  left: var(--s-4);
+  top: var(--s-4);
+  z-index: var(--z-skip);
+  padding: var(--s-3) var(--s-5);
+  background: var(--ink);
+  color: var(--on-dark);
+  border-radius: var(--r-sm);
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.rule { border: 0; height: 1px; background: var(--line); margin: 0; }
+
+/* motion off: reduced-motion preference or calm mode (html.calm set by the app) */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+html.calm { scroll-behavior: auto; }
+html.calm *, html.calm *::before, html.calm *::after { animation: none !important; }

@@ -1,0 +1,99 @@
+/* Design tokens. Single source of truth: scripts/check-contrast.mjs reads the colour variables from this file. */
+:root {
+  /* colour: calm clinical editorial */
+  --paper: #f5efe3;
+  --paper-2: #ebe3d3;
+  --paper-3: #ddd2bc;
+  --ink: #10302b;
+  --ink-soft: #3f5a55;
+  --pine: #1e4d45;
+  --pine-deep: #143730;
+  --sage: #a9c0a6;
+  --mist: #dce6da;
+  --terracotta: #c4572f; /* decoration, large display text, icons: 3:1 only */
+  --terracotta-ink: #9c3d1a; /* terracotta for small text and text-sized UI */
+  --on-dark: #f5efe3;
+  --on-dark-soft: #cfdccb;
+
+  /* severity: always icon + text + colour */
+  --sev-major: #8c1d1d;
+  --sev-major-bg: #f3d9d6;
+  --sev-moderate: #6f4300;
+  --sev-moderate-bg: #f4e0b4;
+  --sev-minor: #0c5559;
+  --sev-minor-bg: #d0e6e2;
+  --sev-unknown: #484f4e;
+  --sev-unknown-bg: #e2e1da;
+
+  --line: rgb(16 48 43 / 0.22); /* hairline rules, decorative */
+  --line-strong: #5d7570; /* boundaries of controls: 3:1 */
+  --focus: #10302b;
+  --focus-on-dark: #f5efe3;
+
+  /* fonts: stacks are switched by the html lang attribute below */
+  --font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
+  --font-body: "Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  /* fluid type scale */
+  --t-display: clamp(2.6rem, 1.55rem + 4.6vw, 5.2rem);
+  --t-h1: clamp(2.1rem, 1.5rem + 2.6vw, 3.6rem);
+  --t-h2: clamp(1.7rem, 1.3rem + 1.7vw, 2.7rem);
+  --t-h3: clamp(1.3rem, 1.15rem + 0.8vw, 1.7rem);
+  --t-h4: 1.125rem;
+  --t-body: 1.0625rem;
+  --t-small: 0.9375rem;
+  --t-label: 0.8125rem;
+
+  /* spacing scale (rem) */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4.5rem;
+  --s-9: 6.5rem;
+  --s-10: 9rem;
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 3rem);
+  --measure: 62ch;
+  --container: 80rem;
+
+  /* radii: a small set */
+  --r-sm: 6px;
+  --r-md: 16px;
+  --r-lg: 30px;
+  --r-pill: 999px;
+
+  /* shadows: soft, restrained */
+  --shadow-soft: 0 1px 2px rgb(16 48 43 / 0.08), 0 10px 28px -14px rgb(16 48 43 / 0.3);
+  --shadow-lift: 0 2px 4px rgb(16 48 43 / 0.1), 0 18px 40px -16px rgb(16 48 43 / 0.38);
+
+  /* motion */
+  --dur-fast: 140ms;
+  --dur: 260ms;
+  --dur-slow: 640ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* z layers */
+  --z-ambient: 0;
+  --z-content: 1;
+  --z-header: 20;
+  --z-skip: 50;
+  --z-cursor: 60;
+
+  /* paper grain: inline SVG noise, very low opacity, no external image */
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.06  0 0 0 0 0.19  0 0 0 0 0.17  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* font stacks per language, applied from <html lang> */
+html:lang(ta) {
+  --font-display: "Noto Serif Tamil", "Noto Sans Tamil", "Noto Sans", serif;
+  --font-body: "Noto Sans Tamil", "Noto Sans", system-ui, sans-serif;
+}
+html:lang(hi) {
+  --font-display: "Noto Serif Devanagari", "Noto Sans Devanagari", "Noto Sans", serif;
+  --font-body: "Noto Sans Devanagari", "Noto Sans", system-ui, sans-serif;
+}

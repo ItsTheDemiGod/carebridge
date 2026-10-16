@@ -31,3 +31,9 @@ data/reference/interactions_ddinter.json
 
 # Phase 5 session database (encrypted payloads; never committed)
 data/app/
+
+# Phase 6a frontend test output
+frontend/test-results/
+frontend/playwright-report/
+frontend/public/photos/raw/
+frontend/e2e/.shots/
