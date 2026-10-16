@@ -1,0 +1,70 @@
+import { useCallback, useEffect, useState } from 'react'
+import { getConsentNotice, type ConsentNotice } from '../api/client'
+import { Button } from '../components/Button'
+import { Notice } from '../components/Badges'
+import { Container, SectionHeading } from '../components/Layout'
+import { useT } from '../i18n/I18n'
+import { usePageTitle } from './usePageTitle'
+
+type State = { kind: 'loading' } | { kind: 'error' } | { kind: 'ok'; notice: ConsentNotice }
+
+/** The only page that talks to the backend in Phase 6a: it shows the live consent notice. */
+export function PrivacyPage() {
+  const { t, lang } = useT()
+  usePageTitle('ui.title.privacy')
+  const [state, setState] = useState<State>({ kind: 'loading' })
+  const [attempt, setAttempt] = useState(0)
+
+  useEffect(() => {
+    const ctl = new AbortController()
+    setState({ kind: 'loading' })
+    getConsentNotice(lang, ctl.signal)
+      .then((notice) => setState({ kind: 'ok', notice }))
+      .catch((e) => {
+        if (!(e instanceof DOMException && e.name === 'AbortError')) setState({ kind: 'error' })
+      })
+    return () => ctl.abort()
+  }, [lang, attempt])
+  const retry = useCallback(() => setAttempt((n) => n + 1), [])
+
+  return (
+    <Container as="section" className="page-narrow">
+      <SectionHeading as="h1" label={t('ui.nav.privacy')} title={t('ui.pp.title')} />
+      <p className="lede">{t('ui.pp.intro')}</p>
+
+      <div className="notice-slot" aria-live="polite">
+        {state.kind === 'loading' ? <p className="muted">{t('ui.pp.loading')}</p> : null}
+        {state.kind === 'error' ? (
+          <Notice tone="caution">
+            <p>{t('ui.error.backend')}</p>
+            <div className="page-actions">
+              <Button variant="secondary" onClick={retry}>
+                {t('ui.pp.retry')}
+              </Button>
+            </div>
+          </Notice>
+        ) : null}
+        {state.kind === 'ok' ? (
+          <article className="consent-article">
+            <p className="label">{t('ui.pp.version', { version: state.notice.version })}</p>
+            <h2 className="h3-like">{state.notice.title}</h2>
+            <ol className="consent-list">
+              {state.notice.items.map((i) => (
+                <li key={i.id}>{i.text}</li>
+              ))}
+            </ol>
+            <ul className="consent-purposes">
+              {state.notice.purposes.map((p) => (
+                <li key={p.id}>{p.label}</li>
+              ))}
+            </ul>
+          </article>
+        ) : null}
+      </div>
+
+      <Notice tone="important" title={t('ui.pp.delete.title')}>
+        <p>{t('ui.pp.delete.body')}</p>
+      </Notice>
+    </Container>
+  )
+}
