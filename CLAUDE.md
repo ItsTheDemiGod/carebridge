@@ -31,6 +31,7 @@ End goal: a professional web app first; a mobile app only if time allows. Colleg
 - data/reference/ : fetch_ddinter.py, ddinter_coverage.py; docs/DDINTER_COVERAGE.md, docs/PROMPT_LOG.md
 - assets/ATTRIBUTION.md : photo credits (file, source URL, photographer, license)
 - Phase 3: backend/app/schemas/explanation.py; services/{templates,narrative,verification,explain,script}.py; prompts/narrative_v{1,2}/ (A simplify, B translate, C back-translate, D judge; v2 default); data/templates/{templates.json,review_sheet.csv}; scripts/{export_review_sheet,import_review_sheet,import_review_pack}.py; eval/{run_narrative,corruption_eval,make_corruptions,phase3_metrics,readability,make_review_pack}.py; docs/{EXPLANATION,EXPLANATION_PROMPT_LOG,TRANSLATION_REVIEW}.md; docs/review_pack/
+- Phase 4: backend/app/safety/{names,interactions,engine,guardrails}.py, schemas/safety.py, services/safety_section.py; scripts/{build_interaction_store,export_pharmacist_sheets,import_pharmacist_sheets,add_safety_templates}.py; scripts/evidence/ (rejected ATC coverage rule, archive only); data/reference/{interactions_supplement.json,review/}; eval/phase4_safety.py; docs/{SAFETY,PHARMACIST_REVIEW}.md
 - Phase 3e: data/templates/{phrases.json,phrase_review_sheet.csv}; services/phrase_match.py; scripts/{export,import}_phrase_sheet.py; eval/stress/{stress_set.json,run_stress.py,README.md}; eval/phase3e_metrics.py; docs/PHRASE_LIBRARY.md
 
 ## Phases
@@ -42,7 +43,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 2i Hardening: strict quote checks, incomplete_quote flag, review levels, interaction_ready / schedule_ready
 - [x] 3 Plain-language explanation (EN/TA/HI) plus faithfulness verification (dev only; Tamil/Hindi quality not yet reviewed by natives)
 - [x] 3e Phrase library (91 phrases), provenance labels, stress set, dev re-run (no native review yet; send review sheets before Phase 7)
-- [ ] 4 Safety layer (interactions, red flags, no-diagnosis guardrail, low-confidence flag)
+- [x] 4 Safety layer (interaction lookup, duplicates, guardrail, safety section; dev only; supplement and ta/hi strings await review; red-flag/low-confidence handling reuse Phase 2i flags)
 - [ ] 5 Backend API, database, consent flow, encryption, delete-my-data
 - [ ] 6 Web application UI
 - [ ] 7 Evaluation, testing, native-speaker review, usability test
@@ -87,6 +88,13 @@ Status: [x] done, [ ] not started, [~] in progress
 - Warning lines in output == extracted warnings (never dropped or merged). must_confirm medicines always carry the confirm banner; a medicine that is not schedule_ready is never "settled".
 - Every ta/hi string and model-written line is draft_unreviewed until the native-speaker CSV import (docs/TRANSLATION_REVIEW.md). Tamil is translated in chunks of 4 with per-line retry (repetition loops); deterministic failures are cached.
 - Dev numbers (v2): verified en 1.00, hi 0.76, ta 0.27. The same model writes and judges (weak judge). Cache: data/cache/narrative/. Run: `python -m eval.run_narrative --run-id phase3-dev-clean`.
+
+## Safety layer (Phase 4)
+- Interaction check = table lookup, no model. Exactly four statuses: interaction_found, not_checked_no_record, not_checked_unconfirmed, not_checked_database_missing. The app says "an interaction was found" or "we could not check", NEVER "safe" or "no interaction": the DDInter download is partial (groups A,B,D,H,L,P,R,V), so absence is uninformative (ATC coverage rule rejected, 96 violations; scripts/evidence/).
+- Only interaction_ready medicines are checked; the curated supplement counts ONLY when status is reviewed (pharmacist); users see found pairs one per line (severity order) plus ONE aggregated count line per kind of not-checked.
+- DDInter raw files and data/reference/interactions_ddinter.json are NEVER committed (CC BY-NC-SA); missing store fails safe. Rebuild: `python scripts\build_interaction_store.py`. Tests use synthetic fixtures only.
+- Guardrail (safety/guardrails.py) scans English model lines and safety messages for reassurance, dose-change and diagnosis claims; hit = fail closed. The "you have" rule ignores conditional clauses.
+- Eval: `python -m eval.phase4_safety` (cached dev outputs). Silent misses not covered by a flag must be 0. Details: docs/SAFETY.md.
 
 ## Safety and product rules
 - CareBridge explains and organizes. It never diagnoses, never recommends changing a dose, and always tells users to confirm with their doctor.

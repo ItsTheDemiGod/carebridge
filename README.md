@@ -51,6 +51,14 @@ Phase 3 (explanations; local model, dev split, clean condition, resumable from t
     python scripts\import_review_sheet.py returned.csv --reviewer AB (refuses the whole file on any bad row)
     python scripts\import_review_pack.py returned_ta.csv --reviewer AB
 
+Phase 4 (safety layer; no model calls; python = `backend\.venv\Scripts\python`):
+
+    python scripts\build_interaction_store.py                         (needs data/reference/ddinter/raw/*.csv; writes the gitignored store)
+    python scripts\export_pharmacist_sheets.py                        (data/reference/review/*.csv for the pharmacist)
+    python scripts\import_pharmacist_sheets.py returned.csv           (refuses the whole file on any bad row; --dry-run to check)
+    python scripts\add_safety_templates.py                            (idempotent; also writes data/templates/review_sheet_phase4_new.csv)
+    python -m eval.phase4_safety                                      (eval/results/phase4-dev/, cached dev outputs)
+
 Phase 3e (phrase library, stress set; same conventions):
 
     python -m eval.stress.run_stress --run-id stress-v1                (17 local calls, about 7 min; eval/results/stress-v1)
