@@ -3,16 +3,24 @@
 import hashlib
 import json
 
+from app.config import settings
+
 from app.services import templates as T
 
-NOTICE_VERSION = "1"
-ITEMS = ("what", "where", "stored", "how_long", "delete", "no_sharing", "prototype", "contact")
+NOTICE_VERSION = "2"  # 2: prototype/translation/interaction statements, contact from settings
+ITEMS = ("what", "where", "stored", "how_long", "delete", "no_sharing", "prototype", "translation_draft", "interaction_limited", "contact")
 PURPOSES = {"process_photo": True, "store_results_for_session": True, "keep_photo_for_session": False}  # id -> required
 REQUIRED = {p for p, req in PURPOSES.items() if req}
 
 
+def contact_line() -> str:
+    """Name only when no email is configured."""
+    name, email = settings.contact_name.strip(), settings.contact_email.strip()
+    return f"{name} ({email})" if name and email else name or email
+
+
 def notice(lang: str) -> dict:
-    items = [{"id": i, "text": T.render(f"consent.item.{i}", lang)} for i in ITEMS]
+    items = [{"id": i, "text": T.render(f"consent.item.{i}", lang, contact=contact_line())} for i in ITEMS]
     purposes = [{"id": p, "label": T.render(f"consent.purpose.{p}", lang), "required": req, "default": req} for p, req in PURPOSES.items()]
     title = T.render("consent.title", lang)
     canonical = json.dumps({"version": NOTICE_VERSION, "lang": lang, "title": title, "items": items, "purposes": purposes}, ensure_ascii=False, sort_keys=True)

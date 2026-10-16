@@ -96,3 +96,56 @@ def test_formulary_sheet(ref):
     fill(p, reviewer_verdict="agree", generic_name="Notadrug", **GOOD)
     with pytest.raises(M.SheetError, match="unknown generic"):
         M.import_sheet(p, ref)
+
+
+# --- Phase 5c: author self-check mode -------------------------------------------------------------------------------------------------
+AUTH = dict(checked_by="author_prototype_selfcheck", checked_on="2026-10-16", basis="pair_specific_label", evidence_url="https://example.org/label",
+            evidence_section="7.1 Drug interactions", evidence_note="names the other drug")
+
+
+def author_sheet(ref, **kw):
+    p = ref / "review" / "interactions_supplement_review.csv"
+    rows = list(csv.DictReader(p.open(encoding="utf-8-sig")))
+    for r in rows:
+        r.update({**AUTH, **{"reviewer_verdict": "agree", "reviewer_severity": "", "reviewer_comment": "", "reviewer_initials": "", "review_date": ""}, **kw})
+    out = ref / "selfcheck.csv"
+    with out.open("w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, list(rows[0]))
+        w.writeheader()
+        w.writerows(rows)
+    return out
+
+
+def entry(ref):
+    return json.loads((ref / "interactions_supplement.json").read_text())["entries"][0]
+
+
+def test_author_mode_sets_author_checked_never_reviewed(ref):
+    M.import_sheet(author_sheet(ref), ref, author=True)
+    e = entry(ref)
+    assert e["status"] == "author_checked" and e["checked_by"] == "author_prototype_selfcheck" and e["evidence"]["url"] and "reviewer_initials" not in e
+    for verdict in ("agree", "change_severity", "remove", "needs_more_info"):
+        M.import_sheet(author_sheet(ref, reviewer_verdict=verdict, reviewer_severity="moderate"), ref, author=True)
+        assert entry(ref)["status"] in ("author_checked", "draft_unreviewed")
+
+
+def test_author_mode_disabled_verdicts_stay_disabled(ref):
+    for verdict in ("remove", "needs_more_info"):
+        M.import_sheet(author_sheet(ref, reviewer_verdict=verdict), ref, author=True)
+        assert entry(ref)["status"] == "draft_unreviewed"
+
+
+def test_author_mode_refuses_other_checked_by_initials_and_missing_evidence(ref):
+    for bad in (dict(checked_by="AB"), dict(reviewer_initials="AB"), dict(evidence_note=""), dict(checked_on="yesterday")):
+        with pytest.raises(M.SheetError):
+            M.import_sheet(author_sheet(ref, **bad), ref, author=True)
+    assert entry(ref)["status"] == "draft_unreviewed"
+
+
+def test_normal_mode_cannot_produce_author_checked(ref):
+    with pytest.raises(M.SheetError):  # an author sheet fed to the normal mode: no initials, and checked_by is refused
+        M.import_sheet(author_sheet(ref), ref)
+    p = ref / "review" / "interactions_supplement_review.csv"
+    fill(p, reviewer_verdict="agree", reviewer_severity="moderate", **GOOD)
+    M.import_sheet(p, ref)
+    assert entry(ref)["status"] == "reviewed"

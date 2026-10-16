@@ -8,7 +8,7 @@ from app.services import consent as C
 from apihelpers import ALL_PURPOSES, REQUIRED, Env, make_cfg
 
 # Pin: the English notice hash for each version. Changing the text without bumping NOTICE_VERSION fails this test.
-PINNED = {"1": "c0fb8081d5922137130490e4d3a630a8f859c3c610d7be43d9392db84da0090d"}
+PINNED = {"1": "c0fb8081d5922137130490e4d3a630a8f859c3c610d7be43d9392db84da0090d", "2": "ec085b2cfd730dd7810517c0854c7599d518b09cab20332e92ae490a84ca385b"}
 
 
 def test_app_refuses_to_start_without_key(tmp_path):
@@ -25,13 +25,14 @@ def test_notice_all_languages_and_version(tmp_path):
     with Env(tmp_path) as e:
         for lang in ("en", "ta", "hi"):
             n = e.client.get(f"/api/v1/consent-notice?lang={lang}").json()
-            assert n["version"] == C.NOTICE_VERSION and len(n["sha256"]) == 64 and len(n["items"]) == 8
+            assert n["version"] == C.NOTICE_VERSION and len(n["sha256"]) == 64 and len(n["items"]) == 10
             assert {p["id"]: p["required"] for p in n["purposes"]} == {"process_photo": True, "store_results_for_session": True, "keep_photo_for_session": False}
             assert n["review_status"] == ("not_required" if lang == "en" else "draft_unreviewed")
         assert e.client.get("/api/v1/consent-notice?lang=fr").status_code == 422
 
 
-def test_notice_hash_is_pinned_to_the_version():
+def test_notice_hash_is_pinned_to_the_version(monkeypatch):
+    monkeypatch.setattr(C, "settings", Settings(_env_file=None))  # default contact (name only), whatever the local .env says
     assert PINNED[C.NOTICE_VERSION] == C.notice("en")["sha256"], "notice text changed: bump NOTICE_VERSION and pin the new hash"
 
 
@@ -47,14 +48,14 @@ def test_itemised_purposes_and_version(tmp_path):
     with Env(tmp_path) as e:
         e.client.post("/api/v1/sessions", json={"language": "en"})
         post = lambda **b: e.client.post("/api/v1/consent", json=b)  # noqa: E731
-        assert post(notice_version="1", purposes=["process_photo"]).status_code == 400  # a required purpose is missing
-        assert post(notice_version="1", purposes=["store_results_for_session"]).status_code == 400
-        assert post(notice_version="0", purposes=REQUIRED).status_code == 400  # not the current version
-        assert post(notice_version="1", purposes=REQUIRED + ["sell_data"]).status_code == 400  # unknown purpose
-        r = post(notice_version="1", purposes=REQUIRED)
-        assert r.status_code == 200 and r.json()["consent"] == {"granted": True, "current_version": "1", "purposes": sorted(REQUIRED)}
+        assert post(notice_version=C.NOTICE_VERSION, purposes=["process_photo"]).status_code == 400  # a required purpose is missing
+        assert post(notice_version=C.NOTICE_VERSION, purposes=["store_results_for_session"]).status_code == 400
+        assert post(notice_version="1", purposes=REQUIRED).status_code == 400  # not the current version
+        assert post(notice_version=C.NOTICE_VERSION, purposes=REQUIRED + ["sell_data"]).status_code == 400  # unknown purpose
+        r = post(notice_version=C.NOTICE_VERSION, purposes=REQUIRED)
+        assert r.status_code == 200 and r.json()["consent"] == {"granted": True, "current_version": C.NOTICE_VERSION, "purposes": sorted(REQUIRED)}
         assert e.client.get("/api/v1/documents").status_code == 200
-        r = post(notice_version="1", purposes=ALL_PURPOSES)  # optional purpose can be added later
+        r = post(notice_version=C.NOTICE_VERSION, purposes=ALL_PURPOSES)  # optional purpose can be added later
         assert "keep_photo_for_session" in r.json()["consent"]["purposes"]
 
 
@@ -63,7 +64,7 @@ def test_consent_record_stores_version_hash_language_purposes(tmp_path):
         e.start("ta")
         with e.ctx.db.session() as c:
             row = c.execute("SELECT * FROM consents").fetchone()
-        assert row["notice_version"] == "1" and row["language"] == "ta" and row["notice_sha256"] == C.notice("ta")["sha256"]
+        assert row["notice_version"] == C.NOTICE_VERSION and row["language"] == "ta" and row["notice_sha256"] == C.notice("ta")["sha256"]
 
 
 def test_cookie_flags_and_token_secrecy(tmp_path):
@@ -165,3 +166,24 @@ def test_delete_session_is_one_call_and_idempotent(tmp_path):
         assert "cb_session" in r.headers["set-cookie"] and 'max-age=0' in r.headers["set-cookie"].lower()
         assert e.client.delete("/api/v1/session").status_code == 204  # nothing left: no error
         assert e.client.get("/api/v1/session").status_code == 401
+
+
+def test_notice_v2_has_prototype_statements_and_contact_from_settings(monkeypatch):
+    monkeypatch.setattr(C, "settings", Settings(_env_file=None))
+    items = {i["id"]: i["text"] for i in C.notice("en")["items"]}
+    assert "not medical advice" in items["prototype"] and "machine-drafted" in items["translation_draft"] and "not been reviewed by a pharmacist" in items["interaction_limited"]
+    assert items["contact"] == "Questions? Contact: Demian." and "@" not in items["contact"]  # name only when the email is empty
+    monkeypatch.setattr(C, "settings", Settings(_env_file=None, contact_email="x@example.org"))
+    assert C.notice("hi")["items"][-1]["text"].endswith("Demian (x@example.org)।")
+    assert Settings(_env_file=None).contact_email == ""  # no address in the repository
+
+
+def test_consent_given_under_an_older_notice_is_asked_again(tmp_path):
+    with Env(tmp_path) as e:
+        e.start("en")  # consented to the current version
+        assert e.client.get("/api/v1/documents").status_code == 200
+        with e.ctx.db.session() as c:  # simulate a session whose only consent is for the previous notice version
+            c.execute("UPDATE consents SET notice_version='1'")
+        r = e.client.get("/api/v1/documents")
+        assert r.status_code == 403 and r.json()["error"]["code"] == "consent_required"
+        assert e.client.get("/api/v1/session").json()["consent"]["granted"] is False

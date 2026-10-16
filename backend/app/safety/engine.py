@@ -76,7 +76,8 @@ def analyse(meds: list[MedInput], data: I.Data) -> SafetyReport:
     return SafetyReport(
         pair_results=pairs, duplicate_notices=_duplicates(meds), counts=counts, overall_state=state,
         schedule_reminder=[i for i, m in enumerate(meds) if m.unspecified_or_non_daily],
-        supplement_reviewed=bool(data.supplement) and data.supplement_pending == 0, supplement_ignored=data.supplement_pending)
+        supplement_reviewed=bool(data.supplement) and data.supplement_pending == 0 and not data.author_checked,
+        supplement_author_checked=data.author_checked, supplement_ignored=data.supplement_pending)
 
 
 def build_report(nd: NormalisedDocument, data: I.Data | None = None) -> SafetyReport:

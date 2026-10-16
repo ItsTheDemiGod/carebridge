@@ -93,3 +93,33 @@ def test_guardrail_failure_fails_closed(monkeypatch):
     d = explain(m("Metformin"), m("Omeprazole"))
     assert d.guardrail_events and all("rejected by guardrail" in e for e in d.guardrail_events)
     assert "Automatic explanation not available" in texts(d)[0]
+
+
+# --- Phase 5c: author_checked pairs, attribution and the brand-mapping notice --------------------------------------------------------
+def _author(**kw):
+    return {"status": "author_checked", "proposed_severity": "unclassified", "checked_by": "author_prototype_selfcheck", "checked_on": "2026-10-16",
+            "basis": "pair_specific_label", "evidence": {"url": "u", "section": "s", "note": "n"}, **kw}
+
+
+def test_author_checked_pair_text_attribution_and_notice():
+    data = I.Data(STORE, {"metformin|ramipril": _author()})
+    d = explain(m("Metformin"), m("Ramipril"), data=data)
+    t = texts(d)
+    line = next(x for x in t if "Metformin" in x and "Ramipril" in x)
+    assert "may interact" in line and "project author" in line and "not checked by a pharmacist" in line
+    assert not re.search(r"\b(verified|confirmed|approved|validated)\b", line, re.I)
+    assert t[-1] == ("Interaction data: DDInter (CC BY-NC-SA 4.0) plus a supplement drafted from official drug labels by the project author; "
+                     "not reviewed by a pharmacist (prototype).")
+    assert t[-2] == "In this prototype, brand names are matched to generic names using a list that has not been verified by a pharmacist."
+    assert d.safety.supplement_author_checked and not d.safety.supplement_reviewed
+    assert next(p for p in d.safety.pair_results if p.status == I.FOUND).source == "curated_author_checked"
+    for lang in ("ta", "hi"):  # drafts, never a human-review label
+        sec = next(s for s in d.sections if s.id == "safety")
+        assert {ln.text[lang].review_status for ln in sec.lines if ln.line_id in ("safety-attribution", "safety-brand-notice")} == {"draft_unreviewed"}
+
+
+def test_author_checked_major_uses_the_serious_wording_and_notice_shows_with_any_result():
+    data = I.Data(STORE, {"metformin|ramipril": _author(proposed_severity="major")})
+    assert any("may interact in a serious way" in x and "project author" in x for x in texts(explain(m("Metformin"), m("Ramipril"), data=data)))
+    assert texts(explain(m("Ramipril"), m("Atenolol")))[-2].startswith("In this prototype, brand names")  # even with no interaction found
+    assert texts(explain(m("Ramipril"))) == []  # one medicine: no interaction section at all

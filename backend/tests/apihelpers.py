@@ -13,6 +13,7 @@ from app.llm.base import LLMError, LLMResponse
 from app.main import create_app
 from app.schemas.extraction import ExtractedDocument
 from app.schemas.extraction_output import ExtractionOutput, from_ground_truth
+from app.services import consent as C
 from app.services import narrative as N
 from app.services.guards import REPO
 
@@ -117,7 +118,7 @@ class Env:
     def start(self, lang="en", purposes=REQUIRED, client=None):
         c = client or self.client
         assert c.post("/api/v1/sessions", json={"language": lang}).status_code in (200, 201)
-        assert c.post("/api/v1/consent", json={"notice_version": "1", "purposes": purposes}).status_code == 200
+        assert c.post("/api/v1/consent", json={"notice_version": C.NOTICE_VERSION, "purposes": purposes}).status_code == 200
         return c
 
     def upload(self, data=None, ctype="image/png", client=None):

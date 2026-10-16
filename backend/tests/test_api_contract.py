@@ -17,6 +17,7 @@ from test_api_review import garbled_output
 
 sys.path.insert(0, str(REPO / "scripts"))
 import add_phase5_templates as P5  # noqa: E402
+import add_phase5c_templates as P5C  # noqa: E402
 import export_openapi as EO  # noqa: E402
 
 LINE_KEYS = {"line_id", "source_ref", "kind", "text", "source_text", "provenance", "status", "display_mode", "review_level", "flags", "notices", "settled", "narrative_pending"}
@@ -61,7 +62,7 @@ def test_main_response_shapes(tmp_path, monkeypatch):
             assert set(sec) == {"id", "heading", "lines"}
             for ln in sec["lines"]:
                 assert set(ln) == LINE_KEYS and set(ln["text"]) == {"en"} and set(ln["text"]["en"]) == LANGTEXT_KEYS
-        assert set(ex["safety"]) == {"pair_results", "duplicate_notices", "counts", "overall_state", "schedule_reminder", "supplement_reviewed", "supplement_ignored"}
+        assert set(ex["safety"]) == {"pair_results", "duplicate_notices", "counts", "overall_state", "schedule_reminder", "supplement_reviewed", "supplement_author_checked", "supplement_ignored"}
         assert set(ex["safety"]["pair_results"][0]) == {"a", "b", "generic_a", "generic_b", "status", "level", "source", "same_medicine"}
         assert set(r["medicines_meta"][0]) == {"line_id", "ref", "source_index", "resolution", "provenance", "unresolved", "not_checked_reason", "interaction_ready", "schedule_ready", "labels"}
         sc = c.get(f"/api/v1/documents/{did}/schedule").json()
@@ -116,4 +117,15 @@ def test_phase5_review_sheet_contains_exactly_the_new_ids():
     first = list(csv.DictReader((REPO / "data" / "templates" / "review_sheet.csv").read_bytes().decode("utf-8-sig").splitlines()))
     assert list(first[0]) == list(rows[0])  # same columns as the earlier sheet
     for t in P5.NEW:  # the script and the committed templates agree
-        assert T.load()["strings"][t]["en"]["text"] == P5.NEW[t][0]
+        assert T.load()["strings"][t]["en"]["text"] == (P5C.NEW.get(t) or P5.NEW[t])[0]  # 5c changed the contact line
+
+
+def test_phase5c_review_sheet_contains_exactly_the_new_ids():
+    raw = (REPO / "data" / "templates" / "review_sheet_phase5c_new.csv").read_bytes()
+    assert raw[:3] == bytes([0xEF, 0xBB, 0xBF])
+    rows = list(csv.DictReader(raw.decode("utf-8-sig").splitlines()))
+    assert {(r["template_id"], r["language"]) for r in rows} == {(t, lang) for t in P5C.NEW for lang in ("ta", "hi")}
+    assert all(r["status"] == "draft_unreviewed" and not r["reviewer_verdict"] for r in rows)
+    for t in P5C.NEW:
+        assert T.load()["strings"][t]["en"]["text"] == P5C.NEW[t][0]
+        assert {T.review_status(t, lang) for lang in ("ta", "hi")} == {"draft_unreviewed"}

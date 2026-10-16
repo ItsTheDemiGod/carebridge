@@ -37,7 +37,8 @@ def safety_lines(nd: NormalisedDocument, report: SafetyReport) -> tuple[list[Exp
         out.append(_line("safety-banner", f"banner.safety.{report.overall_state}", events))
     found = [p for p in report.pair_results if p.status == I.FOUND]
     for k, p in enumerate(found):
-        out.append(_line(f"safety-pair-{k}", f"safety.level.{p.level}", events, a=_name(nd, p.a), b=_name(nd, p.b)))
+        tid = f"safety.level.{p.level}" if p.source != "curated_author_checked" else "safety.author.major" if p.level == "major" else "safety.author.other"
+        out.append(_line(f"safety-pair-{k}", tid, events, a=_name(nd, p.a), b=_name(nd, p.b)))
     for k, d in enumerate(report.duplicate_notices):
         out.append(_line(f"safety-dup-{k}", "safety.duplicate", events, name=d.name))
     real = [p for p in report.pair_results if not p.same_medicine]
@@ -52,9 +53,14 @@ def safety_lines(nd: NormalisedDocument, report: SafetyReport) -> tuple[list[Exp
         out.append(_line("safety-unconfirmed", _plural("safety.unconfirmed", n_unc), events, n=n_unc))
     if report.schedule_reminder:
         out.append(_line("safety-reminder", "safety.schedule_reminder", events))
+    if out or report.counts.pairs:  # whenever the interaction section is displayed
+        out.append(_line("safety-brand-notice", "safety.notice.brand_mapping", events))
     if report.counts.pairs:
-        key = "safety.attribution_reviewed" if report.supplement_reviewed else "safety.attribution_unreviewed"
-        text = T.load()["english_only"][key]  # English only; ta/hi show the same English text
-        out.append(ExplanationLine(line_id="safety-attribution", source_ref=None, kind="safety", source_text="", status="template", display_mode="explanation",
-                                   text={lang: LangText(text=text, status="template", review_status="not_required") for lang in LANGS}))
+        if report.supplement_author_checked:  # ta/hi drafts; the other variants are English only
+            out.append(_line("safety-attribution", "safety.attribution_author_checked", events))
+        else:
+            key = "safety.attribution_reviewed" if report.supplement_reviewed else "safety.attribution_unreviewed"
+            text = T.load()["english_only"][key]  # English only; ta/hi show the same English text
+            out.append(ExplanationLine(line_id="safety-attribution", source_ref=None, kind="safety", source_text="", status="template", display_mode="explanation",
+                                       text={lang: LangText(text=text, status="template", review_status="not_required") for lang in LANGS}))
     return out, events

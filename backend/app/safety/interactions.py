@@ -1,6 +1,6 @@
 """Interaction lookup: a table lookup, no model. Exactly four statuses; a pair that is not found is NEVER reported as safe.
 
-  interaction_found            level + source (ddinter | curated_reviewed)
+  interaction_found            level + source (ddinter | curated_reviewed | curated_author_checked)
   not_checked_no_record        no record in the DDInter-derived store or the REVIEWED supplement (says nothing about safety)
   not_checked_unconfirmed      one or both medicines are not interaction_ready (generic passed as None)
   not_checked_database_missing the DDInter-derived store file is absent or unreadable
@@ -37,6 +37,10 @@ class Data:
     supplement: dict = field(default_factory=dict)
     supplement_pending: int = 0
 
+    @property
+    def author_checked(self) -> bool:  # selects the attribution line
+        return any(e.get("status") == "author_checked" for e in self.supplement.values())
+
 
 def load_store(path: Path = STORE_PATH) -> dict | None:
     try:
@@ -45,13 +49,28 @@ def load_store(path: Path = STORE_PATH) -> dict | None:
         return None
 
 
+AUTHOR = "author_prototype_selfcheck"  # the only checked_by value an author_checked entry may carry
+
+
+def _enabled(e: dict) -> bool:
+    """reviewed (pharmacist, not removed) or author_checked (complete audit fields). Anything else, including draft_unreviewed, is ignored."""
+    if e.get("status") == "reviewed":
+        return e.get("reviewer_verdict") != "remove"
+    ev = e.get("evidence")
+    return (e.get("status") == "author_checked" and e.get("checked_by") == AUTHOR and bool(e.get("checked_on")) and e.get("basis") in BASES
+            and isinstance(ev, dict) and all(ev.get(k) for k in ("url", "section", "note")))
+
+
+BASES = ("pair_specific_label", "class_statement_applied")
+
+
 def load_supplement(path: Path = SUPPLEMENT_PATH) -> tuple[dict, int]:
-    """(reviewed entries by pair key, number of entries ignored because they are not reviewed). A missing/broken file is an empty supplement."""
+    """(enabled entries by pair key, number of entries ignored). A missing/broken file is an empty supplement."""
     try:
         entries = json.loads(Path(path).read_text(encoding="utf-8"))["entries"]
     except (OSError, ValueError, KeyError):
         return {}, 0
-    ok = {pair_key(e["drug_a"], e["drug_b"]): e for e in entries if e.get("status") == "reviewed" and e.get("reviewer_verdict") != "remove"}
+    ok = {pair_key(e["drug_a"], e["drug_b"]): e for e in entries if _enabled(e)}
     return ok, len(entries) - len(ok)
 
 
@@ -61,7 +80,7 @@ def load_data(store_path: Path = STORE_PATH, supplement_path: Path = SUPPLEMENT_
 
 
 def _supplement_level(e: dict) -> str:
-    lv = e.get("reviewer_severity") or e.get("proposed_severity") or "unknown"
+    lv = e.get("reviewer_severity") or e.get("selfcheck_severity") or e.get("proposed_severity") or "unknown"
     return lv if lv in RANK else "unknown"  # "unclassified" -> unknown
 
 
@@ -79,5 +98,5 @@ def check(a: str | None, b: str | None, data: Data) -> Result:
                 best = Result(FOUND, e["severity"], "ddinter")
     s = data.supplement.get(pair_key(a, b))
     if s and (best is None or RANK[_supplement_level(s)] > RANK[best.level]):
-        best = Result(FOUND, _supplement_level(s), "curated_reviewed")
+        best = Result(FOUND, _supplement_level(s), "curated_author_checked" if s.get("status") == "author_checked" else "curated_reviewed")
     return best or Result(NO_RECORD)

@@ -99,3 +99,40 @@ def test_builder_keeps_highest_and_counts_conflicts(tmp_path):
 def test_case_is_handled_through_the_formulary_map_only():
     assert I.check("metformin", "OMEPRAZOLE", data()).level == "minor"
     assert components("aspirin") == ["acetylsalicylic acid"] and components("Notadrug") == []
+
+
+# --- Phase 5c: author_checked entries -------------------------------------------------------------------------------------------------
+def _author_entry(**kw):
+    e = {"pair_id": "S99", "drug_a": "Ramipril", "drug_b": "Spironolactone", "proposed_severity": "unclassified", "status": "author_checked",
+         "checked_by": "author_prototype_selfcheck", "checked_on": "2026-10-16", "basis": "pair_specific_label",
+         "evidence": {"url": "https://example.org", "section": "7.1", "note": "names the other drug"}}
+    return {**e, **kw}
+
+
+def test_author_checked_is_enabled_with_its_own_source_label(tmp_path):
+    p = tmp_path / "s.json"
+    p.write_text(json.dumps({"entries": [_author_entry(), _author_entry(pair_id="S98", drug_a="Losartan", status="draft_unreviewed")]}))
+    sup, ignored = I.load_supplement(p)
+    assert list(sup) == ["ramipril|spironolactone"] and ignored == 1
+    r = I.check("Ramipril", "Spironolactone", I.Data({}, sup, ignored))
+    assert (r.status, r.level, r.source) == (I.FOUND, "unknown", "curated_author_checked")
+    assert I.check("Losartan", "Spironolactone", I.Data({}, sup, ignored)).status == I.NO_RECORD  # disabled entries are ignored
+
+
+def test_author_checked_without_audit_fields_is_ignored(tmp_path):
+    for bad in (dict(checked_by="AB"), dict(checked_by=None), dict(checked_on=""), dict(basis="guess"), dict(evidence={"url": "u", "section": "s", "note": ""}), dict(evidence=None)):
+        p = tmp_path / "s.json"
+        p.write_text(json.dumps({"entries": [_author_entry(**bad)]}))
+        assert I.load_supplement(p) == ({}, 1), bad
+
+
+def test_every_enabled_entry_in_the_real_supplement_is_complete():
+    doc = json.loads(I.SUPPLEMENT_PATH.read_text(encoding="utf-8"))
+    for e in doc["entries"]:
+        assert e["status"] in ("draft_unreviewed", "author_checked", "reviewed"), e["pair_id"]  # never a made-up status
+        if e["status"] == "author_checked":
+            assert e["checked_by"] == "author_prototype_selfcheck" and e["checked_on"] and e["basis"] in I.BASES and all(e["evidence"][k] for k in ("url", "section", "note"))
+            assert "reviewer_initials" not in e and e["selfcheck_verdict"] in ("agree", "change_severity")
+        if e["status"] == "reviewed":
+            assert e["reviewer_initials"] and e["review_date"]
+    assert I.load_supplement()[1] == sum(e["status"] == "draft_unreviewed" for e in doc["entries"])

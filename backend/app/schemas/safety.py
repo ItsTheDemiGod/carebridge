@@ -19,7 +19,7 @@ class PairResult(BaseModel):
     generic_b: str | None = None
     status: Status
     level: Level | None = None
-    source: Literal["ddinter", "curated_reviewed"] | None = None
+    source: Literal["ddinter", "curated_reviewed", "curated_author_checked"] | None = None
     same_medicine: bool = Field(False, description="Both rows are the same resolved generic: reported as a duplicate notice, not as an unchecked pair.")
 
 
@@ -44,5 +44,6 @@ class SafetyReport(BaseModel):
     counts: Counts
     overall_state: OverallState
     schedule_reminder: list[int] = Field(default_factory=list, description="Medicine rows with an unspecified or non-daily frequency; points to their existing notices (no alarm).")
-    supplement_reviewed: bool = Field(False, description="True when the supplement has reviewed entries and none pending; selects the attribution line.")
+    supplement_reviewed: bool = Field(False, description="True when the supplement has enabled entries, none pending and none author_checked; selects the attribution line.")
+    supplement_author_checked: bool = Field(False, description="True when at least one enabled supplement entry is author_checked (prototype self-check, NOT a pharmacist review).")
     supplement_ignored: int = Field(0, description="Supplement entries ignored because they are not reviewed.")

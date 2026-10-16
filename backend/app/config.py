@@ -34,6 +34,8 @@ class Settings(BaseSettings):
     job_timeout_seconds: float = 900
     db_path: str = "data/app/carebridge.db"  # relative paths resolve against the repo root
     allowed_origins: str = "http://localhost:5173,http://127.0.0.1:5173"
+    contact_name: str = "Demian"  # shown in the consent notice
+    contact_email: str = ""  # optional; never hard-code an address in the repository (set CONTACT_EMAIL in the environment)
     cookie_secure: bool = False  # must be true behind HTTPS
 
     @property
