@@ -127,3 +127,11 @@
 **Frozen code**: only additive changes (`extract_bytes`, origin guard, `NO_CACHE`).
 **Open**: ta/hi strings unreviewed (`data/templates/review_sheet_phase5_new.csv`); consent notice and DPDP checklist not lawyer-reviewed; the guardrail `you have` rule still false-flags "You have reached..."; Hindi narrative not exercised live; no auth beyond the anonymous session; single-process only.
 **Next**: Phase 6 (web UI).
+
+## Phase 5c: Prototype review mode (DONE)
+**Decision**: prototype without clinical validation; no independent reviews. The review step became an honest author self-check with explicit labels (`docs/REVIEW_STATUS.md`, `docs/DECISIONS.md`).
+**Built**: status `author_checked` (loader, source label `curated_author_checked`, safe fail-closed on missing audit fields); `--author-selfcheck` import mode (cannot produce `reviewed`; normal mode cannot produce `author_checked`); attribution variant, interaction-pair wording and brand-mapping notice (ta/hi drafts, `data/templates/review_sheet_phase5c_new.csv`); self-check of all 16 pairs against re-fetched official sources (`data/reference/review/interactions_supplement_selfcheck.csv`): 16 agree, 16 enabled, no severity changed; `docs/FORMULARY_STATUS.md`; consent notice v2 with prototype, machine-drafted ta/hi and author-drafted interaction statements; `CONTACT_NAME`/`CONTACT_EMAIL` settings; `docs/openapi.json` regenerated.
+**Run**: `python scripts\import_pharmacist_sheets.py dataeferenceeview\interactions_supplement_selfcheck.csv --author-selfcheck` (already applied); `python scriptsdd_phase5c_templates.py`.
+**Tested**: 735 offline tests (was 716).
+**Open**: no independent review exists; formulary brands unverified; UK/EU current SmPC text for domperidone was read on emc.medicines.org.uk (not a regulator domain) as corroboration, regulator sources cited are HPRA and EMA; set CONTACT_EMAIL in backend/.env if wanted.
+**Next**: Phase 6 (web UI).

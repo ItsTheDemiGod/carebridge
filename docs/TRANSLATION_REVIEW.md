@@ -1,5 +1,7 @@
 # Translation review guide (Tamil and Hindi)
 
+> **Status (Phase 5c):** no native-speaker review has taken place; all Tamil and Hindi strings are machine-drafted and `draft_unreviewed`, and the app says so in its consent notice. This guide stays valid for a later real review. See `docs/REVIEW_STATUS.md`.
+
 You are helping check how CareBridge explains a medical document in Tamil or Hindi. All documents are invented (synthetic); no real patient is involved. Nothing you see is medical advice. About 2 hours for one language.
 
 ## What you receive

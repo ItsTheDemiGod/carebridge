@@ -1,5 +1,7 @@
 # Pharmacist review: instructions
 
+> **Status (Phase 5c):** no pharmacist review has taken place. The 16 pairs are currently `author_checked` (prototype self-check, `docs/REVIEW_STATUS.md`). These instructions stay valid for a real review: a returned sheet imported in the normal mode sets `reviewed` and replaces the self-check label.
+
 CareBridge is a college project that explains discharge papers and checks medicines against each other. You are asked to check **safety content** in two spreadsheets. You are **not** asked to check translations (other reviewers do that), and nothing here is used with real patients.
 
 ## What you receive

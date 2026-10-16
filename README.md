@@ -75,6 +75,11 @@ Phase 5 (backend API; python = `backend\.venv\Scripts\python`):
     python scripts\export_openapi.py                                 (rewrites docs/openapi.json; a test fails if it is stale)
     python scripts\add_phase5_templates.py                           (idempotent; writes data/templates/review_sheet_phase5_new.csv)
 
+Phase 5c (prototype review mode; no independent review has taken place, see `docs/REVIEW_STATUS.md`):
+
+    python scripts\import_pharmacist_sheets.py FILE.csv --author-selfcheck   (only sets author_checked; a pharmacist sheet without the flag sets reviewed)
+    python scriptsdd_phase5c_templates.py                                  (idempotent; writes data/templates/review_sheet_phase5c_new.csv)
+
 Tests: `cd backend && .venv\Scripts\python -m pytest`. Frontend build: `cd frontend && npm run build`.
 
 See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.

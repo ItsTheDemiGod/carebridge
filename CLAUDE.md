@@ -45,6 +45,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 3e Phrase library (91 phrases), provenance labels, stress set, dev re-run (no native review yet; send review sheets before Phase 7)
 - [x] 4 Safety layer (interaction lookup, duplicates, guardrail, safety section; dev only; supplement and ta/hi strings await review; red-flag/low-confidence handling reuse Phase 2i flags)
 - [x] 5 Backend API, SQLite + Fernet, consent, confirmation overlay, schedule, delete-my-data (no UI; live smoke done; ta/hi strings and DPDP checklist unreviewed)
+- [x] 5c Prototype review mode: honest author self-check of the interaction supplement, notice v2, labels (docs/REVIEW_STATUS.md)
 - [ ] 6 Web application UI
 - [ ] 7 Evaluation, testing, native-speaker review, usability test
 - [ ] 8 Deployment, demo, report
@@ -89,9 +90,14 @@ Status: [x] done, [ ] not started, [~] in progress
 - Every ta/hi string and model-written line is draft_unreviewed until the native-speaker CSV import (docs/TRANSLATION_REVIEW.md). Tamil is translated in chunks of 4 with per-line retry (repetition loops); deterministic failures are cached.
 - Dev numbers (v2): verified en 1.00, hi 0.76, ta 0.27. The same model writes and judges (weak judge). Cache: data/cache/narrative/. Run: `python -m eval.run_narrative --run-id phase3-dev-clean`.
 
+## Review labels (Phase 5c; docs/REVIEW_STATUS.md)
+- RULE: nothing may be labelled reviewed by a pharmacist or native speaker unless a real reviewer did it. Never write a person's initials into a reviewer field; never set status "reviewed" yourself; ta/hi stay draft_unreviewed.
+- `author_checked` = prototype self-check by the project author against official sources (checked_by fixed `author_prototype_selfcheck`, checked_on, basis, evidence). Enabled like reviewed, source label `curated_author_checked`, text says "may interact ... not checked by a pharmacist". Import: `scripts/import_pharmacist_sheets.py FILE --author-selfcheck`; the normal mode only sets `reviewed`.
+- Consent notice v2 (prototype / machine-drafted ta,hi / author-drafted interactions); contact from CONTACT_NAME, CONTACT_EMAIL (never committed).
+
 ## Safety layer (Phase 4)
 - Interaction check = table lookup, no model. Exactly four statuses: interaction_found, not_checked_no_record, not_checked_unconfirmed, not_checked_database_missing. The app says "an interaction was found" or "we could not check", NEVER "safe" or "no interaction": the DDInter download is partial (groups A,B,D,H,L,P,R,V), so absence is uninformative (ATC coverage rule rejected, 96 violations; scripts/evidence/).
-- Only interaction_ready medicines are checked; the curated supplement counts ONLY when status is reviewed (pharmacist); users see found pairs one per line (severity order) plus ONE aggregated count line per kind of not-checked.
+- Only interaction_ready medicines are checked; the curated supplement counts only when status is reviewed (a real pharmacist) or author_checked (see Phase 5c); users see found pairs one per line (severity order) plus ONE aggregated count line per kind of not-checked.
 - DDInter raw files and data/reference/interactions_ddinter.json are NEVER committed (CC BY-NC-SA); missing store fails safe. Rebuild: `python scripts\build_interaction_store.py`. Tests use synthetic fixtures only.
 - Guardrail (safety/guardrails.py) scans English model lines and safety messages for reassurance, dose-change and diagnosis claims; hit = fail closed. The "you have" rule ignores conditional clauses.
 - Eval: `python -m eval.phase4_safety` (cached dev outputs). Silent misses not covered by a flag must be 0. Details: docs/SAFETY.md.
