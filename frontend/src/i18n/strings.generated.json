@@ -216,6 +216,58 @@
    "text": "Please upload a photo or image (PNG or JPG).",
    "review_status": "not_required"
   },
+  "ui.flow.processing.estimate": {
+   "text": "This usually takes one to three minutes on this computer. It can take longer.",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.failed_title": {
+   "text": "The photo could not be read",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.kept_hint": {
+   "text": "You chose to keep the photo, so you can try reading it again.",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.not_kept_hint": {
+   "text": "The photo was not kept, so it has to be uploaded again.",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.nothing_to_do": {
+   "text": "There is nothing for you to do yet. You can leave this page open and come back; your place is kept.",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.offline": {
+   "text": "The connection to the server was lost. Trying again.",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.retry": {
+   "text": "Try reading again",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.stage.extracting": {
+   "text": "Reading the photo",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.stage.normalising": {
+   "text": "Organising the results",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.stage.queued": {
+   "text": "Waiting for the reader",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.title": {
+   "text": "Reading your photo",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.to_start": {
+   "text": "Return to the start",
+   "review_status": "not_required"
+  },
+  "ui.flow.processing.upload_again": {
+   "text": "Upload a photo again",
+   "review_status": "not_required"
+  },
   "ui.flow.progress.done": {
    "text": "(done)",
    "review_status": "not_required"
@@ -728,6 +780,10 @@
    "text": "Before we start · CareBridge",
    "review_status": "not_required"
   },
+  "ui.title.documents": {
+   "text": "Your documents · CareBridge",
+   "review_status": "not_required"
+  },
   "ui.title.home": {
    "text": "CareBridge: make sense of your discharge papers",
    "review_status": "not_required"
@@ -744,8 +800,28 @@
    "text": "Privacy · CareBridge",
    "review_status": "not_required"
   },
+  "ui.title.processing": {
+   "text": "Reading your photo · CareBridge",
+   "review_status": "not_required"
+  },
+  "ui.title.result": {
+   "text": "Your results · CareBridge",
+   "review_status": "not_required"
+  },
+  "ui.title.review": {
+   "text": "Check your medicines · CareBridge",
+   "review_status": "not_required"
+  },
+  "ui.title.schedule": {
+   "text": "Your schedule · CareBridge",
+   "review_status": "not_required"
+  },
   "ui.title.start": {
    "text": "Start · CareBridge",
+   "review_status": "not_required"
+  },
+  "ui.title.summary": {
+   "text": "Summary for your doctor · CareBridge",
    "review_status": "not_required"
   },
   "ui.title.upload": {
@@ -968,6 +1044,58 @@
   },
   "ui.flow.problem.unsupported": {
    "text": "புகைப்படம் அல்லது படத்தை (PNG அல்லது JPG) பதிவேற்றுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.estimate": {
+   "text": "இந்தக் கணினியில் இது பொதுவாக ஒன்று முதல் மூன்று நிமிடங்கள் ஆகும். அதிக நேரமும் ஆகலாம்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.failed_title": {
+   "text": "புகைப்படத்தைப் படிக்க முடியவில்லை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.kept_hint": {
+   "text": "புகைப்படத்தை வைத்திருக்கத் தேர்ந்தீர்கள்; எனவே மீண்டும் படிக்க முயலலாம்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.not_kept_hint": {
+   "text": "புகைப்படம் வைத்திருக்கப்படவில்லை; எனவே மீண்டும் பதிவேற்ற வேண்டும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.nothing_to_do": {
+   "text": "இப்போது நீங்கள் செய்ய எதுவும் இல்லை. இந்தப் பக்கத்தைத் திறந்தே வைக்கலாம், திரும்பியும் வரலாம்; உங்கள் இடம் பாதுகாக்கப்படும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.offline": {
+   "text": "சேவையகத்துடனான இணைப்பு துண்டிக்கப்பட்டது. மீண்டும் முயல்கிறது.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.retry": {
+   "text": "மீண்டும் படிக்க முயலுங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.stage.extracting": {
+   "text": "புகைப்படத்தைப் படிக்கிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.stage.normalising": {
+   "text": "முடிவுகளை ஒழுங்குபடுத்துகிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.stage.queued": {
+   "text": "வாசிப்பானுக்காகக் காத்திருக்கிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.title": {
+   "text": "உங்கள் புகைப்படத்தைப் படிக்கிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.to_start": {
+   "text": "தொடக்கத்துக்குத் திரும்புங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.upload_again": {
+   "text": "புகைப்படத்தை மீண்டும் பதிவேற்றுங்கள்",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.progress.done": {
@@ -1482,6 +1610,10 @@
    "text": "தொடங்கும் முன் · CareBridge",
    "review_status": "draft_unreviewed"
   },
+  "ui.title.documents": {
+   "text": "உங்கள் ஆவணங்கள் · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
   "ui.title.home": {
    "text": "CareBridge: உங்கள் வெளியேற்றக் காகிதங்களைப் புரிந்துகொள்ளுங்கள்",
    "review_status": "draft_unreviewed"
@@ -1498,8 +1630,28 @@
    "text": "தனியுரிமை · CareBridge",
    "review_status": "draft_unreviewed"
   },
+  "ui.title.processing": {
+   "text": "உங்கள் புகைப்படத்தைப் படிக்கிறது · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.result": {
+   "text": "உங்கள் முடிவுகள் · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.review": {
+   "text": "உங்கள் மருந்துகளைச் சரிபார்க்கவும் · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.schedule": {
+   "text": "உங்கள் அட்டவணை · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
   "ui.title.start": {
    "text": "தொடங்குங்கள் · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.summary": {
+   "text": "உங்கள் மருத்துவருக்கான சுருக்கம் · CareBridge",
    "review_status": "draft_unreviewed"
   },
   "ui.title.upload": {
@@ -1722,6 +1874,58 @@
   },
   "ui.flow.problem.unsupported": {
    "text": "कृपया फ़ोटो या चित्र (PNG या JPG) अपलोड करें।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.estimate": {
+   "text": "इस कंप्यूटर पर इसमें आम तौर पर एक से तीन मिनट लगते हैं। इससे ज़्यादा समय भी लग सकता है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.failed_title": {
+   "text": "फ़ोटो पढ़ी नहीं जा सकी",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.kept_hint": {
+   "text": "आपने फ़ोटो रखना चुना था, इसलिए आप उसे फिर से पढ़वा सकते हैं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.not_kept_hint": {
+   "text": "फ़ोटो रखी नहीं गई थी, इसलिए उसे फिर से अपलोड करना होगा।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.nothing_to_do": {
+   "text": "अभी आपको कुछ करने की ज़रूरत नहीं है। आप यह पन्ना खुला छोड़ सकते हैं या बाद में लौट सकते हैं; आपकी जगह बनी रहती है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.offline": {
+   "text": "सर्वर से संपर्क टूट गया। फिर कोशिश हो रही है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.retry": {
+   "text": "फिर से पढ़वाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.stage.extracting": {
+   "text": "फ़ोटो पढ़ी जा रही है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.stage.normalising": {
+   "text": "नतीजे व्यवस्थित हो रहे हैं",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.stage.queued": {
+   "text": "रीडर का इंतज़ार",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.title": {
+   "text": "आपकी फ़ोटो पढ़ी जा रही है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.to_start": {
+   "text": "शुरुआत पर लौटें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.processing.upload_again": {
+   "text": "फ़ोटो फिर से अपलोड करें",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.progress.done": {
@@ -2236,6 +2440,10 @@
    "text": "शुरू करने से पहले · CareBridge",
    "review_status": "draft_unreviewed"
   },
+  "ui.title.documents": {
+   "text": "आपके दस्तावेज़ · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
   "ui.title.home": {
    "text": "CareBridge: अपने डिस्चार्ज के कागज़ात समझें",
    "review_status": "draft_unreviewed"
@@ -2252,8 +2460,28 @@
    "text": "गोपनीयता · CareBridge",
    "review_status": "draft_unreviewed"
   },
+  "ui.title.processing": {
+   "text": "आपकी फ़ोटो पढ़ी जा रही है · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.result": {
+   "text": "आपके नतीजे · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.review": {
+   "text": "अपनी दवाओं की जाँच करें · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.schedule": {
+   "text": "आपकी समय-सारणी · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
   "ui.title.start": {
    "text": "शुरू करें · CareBridge",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.title.summary": {
+   "text": "आपके डॉक्टर के लिए सारांश · CareBridge",
    "review_status": "draft_unreviewed"
   },
   "ui.title.upload": {

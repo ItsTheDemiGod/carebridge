@@ -4985,6 +4985,272 @@
     "text": "फ़ोटो इसी कंप्यूटर पर एक मॉडल पढ़ता है। किसी बाहरी सेवा को कुछ नहीं भेजा जाता।",
     "review_status": "draft_unreviewed"
    }
+  },
+  "ui.title.processing": {
+   "en": {
+    "text": "Reading your photo · CareBridge",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் புகைப்படத்தைப் படிக்கிறது · CareBridge",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी फ़ोटो पढ़ी जा रही है · CareBridge",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.title.review": {
+   "en": {
+    "text": "Check your medicines · CareBridge",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் மருந்துகளைச் சரிபார்க்கவும் · CareBridge",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अपनी दवाओं की जाँच करें · CareBridge",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.title.result": {
+   "en": {
+    "text": "Your results · CareBridge",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் முடிவுகள் · CareBridge",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपके नतीजे · CareBridge",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.title.schedule": {
+   "en": {
+    "text": "Your schedule · CareBridge",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் அட்டவணை · CareBridge",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी समय-सारणी · CareBridge",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.title.summary": {
+   "en": {
+    "text": "Summary for your doctor · CareBridge",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் மருத்துவருக்கான சுருக்கம் · CareBridge",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपके डॉक्टर के लिए सारांश · CareBridge",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.title.documents": {
+   "en": {
+    "text": "Your documents · CareBridge",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் ஆவணங்கள் · CareBridge",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपके दस्तावेज़ · CareBridge",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.title": {
+   "en": {
+    "text": "Reading your photo",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் புகைப்படத்தைப் படிக்கிறது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी फ़ोटो पढ़ी जा रही है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.estimate": {
+   "en": {
+    "text": "This usually takes one to three minutes on this computer. It can take longer.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தக் கணினியில் இது பொதுவாக ஒன்று முதல் மூன்று நிமிடங்கள் ஆகும். அதிக நேரமும் ஆகலாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस कंप्यूटर पर इसमें आम तौर पर एक से तीन मिनट लगते हैं। इससे ज़्यादा समय भी लग सकता है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.stage.queued": {
+   "en": {
+    "text": "Waiting for the reader",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "வாசிப்பானுக்காகக் காத்திருக்கிறது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रीडर का इंतज़ार",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.stage.extracting": {
+   "en": {
+    "text": "Reading the photo",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படத்தைப் படிக்கிறது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ोटो पढ़ी जा रही है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.stage.normalising": {
+   "en": {
+    "text": "Organising the results",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "முடிவுகளை ஒழுங்குபடுத்துகிறது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नतीजे व्यवस्थित हो रहे हैं",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.nothing_to_do": {
+   "en": {
+    "text": "There is nothing for you to do yet. You can leave this page open and come back; your place is kept.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இப்போது நீங்கள் செய்ய எதுவும் இல்லை. இந்தப் பக்கத்தைத் திறந்தே வைக்கலாம், திரும்பியும் வரலாம்; உங்கள் இடம் பாதுகாக்கப்படும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अभी आपको कुछ करने की ज़रूरत नहीं है। आप यह पन्ना खुला छोड़ सकते हैं या बाद में लौट सकते हैं; आपकी जगह बनी रहती है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.offline": {
+   "en": {
+    "text": "The connection to the server was lost. Trying again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "சேவையகத்துடனான இணைப்பு துண்டிக்கப்பட்டது. மீண்டும் முயல்கிறது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सर्वर से संपर्क टूट गया। फिर कोशिश हो रही है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.failed_title": {
+   "en": {
+    "text": "The photo could not be read",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படத்தைப் படிக்க முடியவில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ोटो पढ़ी नहीं जा सकी",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.kept_hint": {
+   "en": {
+    "text": "You chose to keep the photo, so you can try reading it again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படத்தை வைத்திருக்கத் தேர்ந்தீர்கள்; எனவே மீண்டும் படிக்க முயலலாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपने फ़ोटो रखना चुना था, इसलिए आप उसे फिर से पढ़वा सकते हैं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.not_kept_hint": {
+   "en": {
+    "text": "The photo was not kept, so it has to be uploaded again.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படம் வைத்திருக்கப்படவில்லை; எனவே மீண்டும் பதிவேற்ற வேண்டும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ोटो रखी नहीं गई थी, इसलिए उसे फिर से अपलोड करना होगा।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.retry": {
+   "en": {
+    "text": "Try reading again",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மீண்டும் படிக்க முயலுங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फिर से पढ़वाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.upload_again": {
+   "en": {
+    "text": "Upload a photo again",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படத்தை மீண்டும் பதிவேற்றுங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ोटो फिर से अपलोड करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.processing.to_start": {
+   "en": {
+    "text": "Return to the start",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தொடக்கத்துக்குத் திரும்புங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "शुरुआत पर लौटें",
+    "review_status": "draft_unreviewed"
+   }
   }
  },
  "english_only": {

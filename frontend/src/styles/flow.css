@@ -45,3 +45,14 @@
 .dropzone svg { color: var(--pine); }
 .preview { margin: 0; display: grid; gap: var(--s-4); }
 .preview img { display: block; max-width: 100%; max-height: 28rem; object-fit: contain; border: 1px solid var(--line-strong); border-radius: var(--r-sm); background: var(--paper-3); justify-self: start; }
+
+/* processing */
+.busy-bar { height: 0.5rem; border-radius: var(--r-pill); background: var(--paper-3); overflow: hidden; max-width: var(--measure); }
+.busy-bar span { display: block; height: 100%; width: 35%; border-radius: inherit; background: var(--pine); animation: busy 1.8s var(--ease-inout) infinite; }
+html.calm .busy-bar span { animation: none; width: 100%; opacity: 0.55; }
+@media (prefers-reduced-motion: reduce) { .busy-bar span { animation: none; width: 100%; opacity: 0.55; } }
+@keyframes busy { 0% { transform: translateX(-100%); } 100% { transform: translateX(300%); } }
+.stage-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); max-width: var(--measure); }
+.stage-list li { display: flex; align-items: center; gap: var(--s-3); padding: var(--s-3) var(--s-4); border-left: 3px solid var(--line-strong); color: var(--ink-soft); }
+.stage-list li.now { border-color: var(--pine); color: var(--ink); font-weight: 600; background: var(--mist); }
+.stage-list li.done { border-color: var(--pine); }

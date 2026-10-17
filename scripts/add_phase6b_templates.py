@@ -105,6 +105,29 @@ NEW.update({
     "ui.flow.upload.local": ("The photo is read by a model on this computer. Nothing is sent to an outside service.", "புகைப்படம் இந்தக் கணினியிலுள்ள மாதிரியால் படிக்கப்படுகிறது. வெளிச் சேவைக்கு எதுவும் அனுப்பப்படாது.", "फ़ोटो इसी कंप्यूटर पर एक मॉडल पढ़ता है। किसी बाहरी सेवा को कुछ नहीं भेजा जाता।"),
 })
 
+# ---------------------------------------------------------------- page titles + processing (6b-3)
+NEW.update({
+    "ui.title.processing": ("Reading your photo · CareBridge", "உங்கள் புகைப்படத்தைப் படிக்கிறது · CareBridge", "आपकी फ़ोटो पढ़ी जा रही है · CareBridge"),
+    "ui.title.review": ("Check your medicines · CareBridge", "உங்கள் மருந்துகளைச் சரிபார்க்கவும் · CareBridge", "अपनी दवाओं की जाँच करें · CareBridge"),
+    "ui.title.result": ("Your results · CareBridge", "உங்கள் முடிவுகள் · CareBridge", "आपके नतीजे · CareBridge"),
+    "ui.title.schedule": ("Your schedule · CareBridge", "உங்கள் அட்டவணை · CareBridge", "आपकी समय-सारणी · CareBridge"),
+    "ui.title.summary": ("Summary for your doctor · CareBridge", "உங்கள் மருத்துவருக்கான சுருக்கம் · CareBridge", "आपके डॉक्टर के लिए सारांश · CareBridge"),
+    "ui.title.documents": ("Your documents · CareBridge", "உங்கள் ஆவணங்கள் · CareBridge", "आपके दस्तावेज़ · CareBridge"),
+    "ui.flow.processing.title": ("Reading your photo", "உங்கள் புகைப்படத்தைப் படிக்கிறது", "आपकी फ़ोटो पढ़ी जा रही है"),
+    "ui.flow.processing.estimate": ("This usually takes one to three minutes on this computer. It can take longer.", "இந்தக் கணினியில் இது பொதுவாக ஒன்று முதல் மூன்று நிமிடங்கள் ஆகும். அதிக நேரமும் ஆகலாம்.", "इस कंप्यूटर पर इसमें आम तौर पर एक से तीन मिनट लगते हैं। इससे ज़्यादा समय भी लग सकता है।"),
+    "ui.flow.processing.stage.queued": ("Waiting for the reader", "வாசிப்பானுக்காகக் காத்திருக்கிறது", "रीडर का इंतज़ार"),
+    "ui.flow.processing.stage.extracting": ("Reading the photo", "புகைப்படத்தைப் படிக்கிறது", "फ़ोटो पढ़ी जा रही है"),
+    "ui.flow.processing.stage.normalising": ("Organising the results", "முடிவுகளை ஒழுங்குபடுத்துகிறது", "नतीजे व्यवस्थित हो रहे हैं"),
+    "ui.flow.processing.nothing_to_do": ("There is nothing for you to do yet. You can leave this page open and come back; your place is kept.", "இப்போது நீங்கள் செய்ய எதுவும் இல்லை. இந்தப் பக்கத்தைத் திறந்தே வைக்கலாம், திரும்பியும் வரலாம்; உங்கள் இடம் பாதுகாக்கப்படும்.", "अभी आपको कुछ करने की ज़रूरत नहीं है। आप यह पन्ना खुला छोड़ सकते हैं या बाद में लौट सकते हैं; आपकी जगह बनी रहती है।"),
+    "ui.flow.processing.offline": ("The connection to the server was lost. Trying again.", "சேவையகத்துடனான இணைப்பு துண்டிக்கப்பட்டது. மீண்டும் முயல்கிறது.", "सर्वर से संपर्क टूट गया। फिर कोशिश हो रही है।"),
+    "ui.flow.processing.failed_title": ("The photo could not be read", "புகைப்படத்தைப் படிக்க முடியவில்லை", "फ़ोटो पढ़ी नहीं जा सकी"),
+    "ui.flow.processing.kept_hint": ("You chose to keep the photo, so you can try reading it again.", "புகைப்படத்தை வைத்திருக்கத் தேர்ந்தீர்கள்; எனவே மீண்டும் படிக்க முயலலாம்.", "आपने फ़ोटो रखना चुना था, इसलिए आप उसे फिर से पढ़वा सकते हैं।"),
+    "ui.flow.processing.not_kept_hint": ("The photo was not kept, so it has to be uploaded again.", "புகைப்படம் வைத்திருக்கப்படவில்லை; எனவே மீண்டும் பதிவேற்ற வேண்டும்.", "फ़ोटो रखी नहीं गई थी, इसलिए उसे फिर से अपलोड करना होगा।"),
+    "ui.flow.processing.retry": ("Try reading again", "மீண்டும் படிக்க முயலுங்கள்", "फिर से पढ़वाएँ"),
+    "ui.flow.processing.upload_again": ("Upload a photo again", "புகைப்படத்தை மீண்டும் பதிவேற்றுங்கள்", "फ़ोटो फिर से अपलोड करें"),
+    "ui.flow.processing.to_start": ("Return to the start", "தொடக்கத்துக்குத் திரும்புங்கள்", "शुरुआत पर लौटें"),
+})
+
 
 def main():
     p = X.TEMPLATES

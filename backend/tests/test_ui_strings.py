@@ -63,6 +63,6 @@ def test_review_sheet_has_every_new_id_for_ta_and_hi():
 
 def test_phase6b_review_sheet_has_every_new_id_for_ta_and_hi():
     raw = (REPO / "data" / "templates" / "review_sheet_phase6b_new.csv").read_bytes()
-    assert raw.startswith(b"ï»¿")
+    assert raw.startswith(b"\xef\xbb\xbf")
     rows = list(csv.DictReader(raw.decode("utf-8-sig").splitlines()))
     assert {(r["template_id"], r["language"]) for r in rows} == {(t, lang) for t in P6B.NEW for lang in ("ta", "hi")}
