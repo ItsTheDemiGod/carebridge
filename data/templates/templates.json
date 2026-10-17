@@ -7914,15 +7914,15 @@
   },
   "ui.flow.rv.num": {
    "en": {
-    "text": "#{n}",
+    "text": "No. {n}",
     "review_status": "not_required"
    },
    "ta": {
-    "text": "#{n}",
+    "text": "எண் {n}",
     "review_status": "draft_unreviewed"
    },
    "hi": {
-    "text": "#{n}",
+    "text": "क्र. {n}",
     "review_status": "draft_unreviewed"
    }
   },

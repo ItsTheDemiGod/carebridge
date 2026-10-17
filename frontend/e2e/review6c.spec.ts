@@ -12,7 +12,7 @@ test.describe('review page: list', () => {
     await page.goto(`/d/${DOC_ID}/review`)
     await page.locator('article.med-card').first().waitFor()
     expect(await headings(page)).toEqual(['Netfornin', 'Alendronate', 'Pantop', 'Glycomet'])
-    expect(await page.locator('.rv-num span[aria-hidden]').allInnerTexts()).toEqual(['#2', '#3', '#4', '#1'])
+    expect(await page.locator('.rv-num span[aria-hidden]').allInnerTexts()).toEqual(['No. 2', 'No. 3', 'No. 4', 'No. 1'])
     await expect(page.locator('.rv-num .sr-only').first()).toHaveText('Medicine 2 on your document')
     await page.getByRole('button', { name: 'Show in document order' }).click()
     expect(await headings(page)).toEqual(['Glycomet', 'Netfornin', 'Alendronate', 'Pantop'])

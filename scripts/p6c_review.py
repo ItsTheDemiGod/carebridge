@@ -6,7 +6,7 @@ STRINGS: dict[str, tuple[str, str, str]] = {
     "ui.flow.rv.chip.noaction": ("No action needed", "நடவடிக்கை தேவையில்லை", "कुछ करने की ज़रूरत नहीं"),
     "ui.flow.rv.edit": ("Edit", "திருத்து", "बदलें"),
     "ui.flow.rv.collapse": ("Collapse", "சுருக்கு", "समेटें"),
-    "ui.flow.rv.num": ("#{n}", "#{n}", "#{n}"),
+    "ui.flow.rv.num": ("No. {n}", "எண் {n}", "क्र. {n}"),
     "ui.flow.rv.num_label": ("Medicine {n} on your document", "உங்கள் ஆவணத்தில் மருந்து {n}", "आपके दस्तावेज़ में दवा {n}"),
     "ui.flow.rv.read": ("What we read", "நாங்கள் படித்தது", "हमने क्या पढ़ा"),
     "ui.flow.rv.not_read": ("not read", "படிக்கப்படவில்லை", "पढ़ा नहीं गया"),

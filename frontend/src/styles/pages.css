@@ -240,3 +240,6 @@ h1, h2, h3, .display, .lede { overflow-wrap: break-word; }
 /* Tamil labels are about twice as wide as the SVG boxes allow: Tamil always uses the vertical flow, so no label is ever cut off */
 html:lang(ta) .pipeline-wrap { display: none; }
 html:lang(ta) .pl-vertical { display: grid; }
+/* Tamil and Hindi glyphs are wider than the "ch" of the Latin face: heading measures in em so words are not broken mid-way */
+html:lang(ta) .section-heading .h1, html:lang(ta) .section-heading .h2, html:lang(hi) .section-heading .h1, html:lang(hi) .section-heading .h2 { max-width: 16em; }
+html:lang(ta) .privacy-band h2, html:lang(hi) .privacy-band h2 { max-width: 14em; }

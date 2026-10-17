@@ -777,7 +777,7 @@
    "review_status": "not_required"
   },
   "ui.flow.rv.num": {
-   "text": "#{n}",
+   "text": "No. {n}",
    "review_status": "not_required"
   },
   "ui.flow.rv.num_label": {
@@ -2431,7 +2431,7 @@
    "review_status": "draft_unreviewed"
   },
   "ui.flow.rv.num": {
-   "text": "#{n}",
+   "text": "எண் {n}",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.rv.num_label": {
@@ -4085,7 +4085,7 @@
    "review_status": "draft_unreviewed"
   },
   "ui.flow.rv.num": {
-   "text": "#{n}",
+   "text": "क्र. {n}",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.rv.num_label": {
