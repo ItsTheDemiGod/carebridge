@@ -200,7 +200,7 @@ export async function mockApi(page: Page, o: MockOptions = {}): Promise<Mock> {
     if (!sub) {
       if (d.state !== 'awaiting_confirmation' && d.state !== 'failed') {
         const next = steps[Math.min(step++, steps.length - 1)]
-        setDoc({ ...d, state: next, error_code: next === 'failed' ? (o.errorCode ?? 'timeout') : null, error_message: next === 'failed' ? `job.failed.${o.errorCode ?? 'timeout'}` : null, retry_possible: next === 'failed' && d.image_kept })
+        setDoc({ ...d, state: next, error_code: next === 'failed' ? (o.errorCode ?? 'timeout') : null, error_message: next === 'failed' ? stringsFor(sess.language)[`job.failed.${o.errorCode ?? 'timeout'}`] : null, retry_possible: next === 'failed' && d.image_kept })
       }
       return json(route, 200, view(mock.s.docs[0]))
     }

@@ -183,7 +183,7 @@ test('404 route and the /start placeholder', async ({ page }) => {
   await expect(page.locator('h1')).toHaveText('Page not found')
   expect(await page.title()).toContain('Page not found')
   await page.goto('/start', { waitUntil: 'networkidle' })
-  await expect(page.locator('h1')).toContainText('working flow')
+  await expect(page.locator('h1')).toContainText('Three steps')
 })
 
 test('document title follows the route and the language', async ({ page }) => {

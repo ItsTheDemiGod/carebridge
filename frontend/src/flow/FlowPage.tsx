@@ -52,7 +52,7 @@ export function FlowPage({ titleKey, need = 'consent', narrow = true, className 
           </div>
         </Notice>
       ) : (
-        <Navigate to="/start" replace />
+        <Navigate to={state.deleted ? '/' : '/start'} replace />
       )
   } else if (need === 'consent' && state.boot === 'ready' && !consentGranted(state)) {
     open = false
