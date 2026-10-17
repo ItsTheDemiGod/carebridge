@@ -60,6 +60,8 @@ export type MockOptions = {
   docSteps?: DocView['state'][]
   errorCode?: DocView['error_code']
   imageKept?: boolean
+  /** bytes served by GET /documents/{id}/image (default: a 1 px PNG); used for realistic screenshots */
+  imageBody?: Buffer
   /** failures keyed by "METHOD /api/v1/path-with-{id}" */
   fail?: Record<string, Fail>
   /** GETs of /result before a running narrative becomes ready */
@@ -204,7 +206,7 @@ export async function mockApi(page: Page, o: MockOptions = {}): Promise<Mock> {
       }
       return json(route, 200, view(mock.s.docs[0]))
     }
-    if (sub === 'image') return d.image_kept ? route.fulfill({ status: 200, contentType: 'image/png', body: PNG_1PX }) : err(route, 404, 'not_found')
+    if (sub === 'image') return d.image_kept ? route.fulfill({ status: 200, contentType: 'image/png', body: o.imageBody ?? PNG_1PX }) : err(route, 404, 'not_found')
     if (sub === 'retry') {
       if (!d.image_kept) return err(route, 409, 'retry_unavailable')
       step = 0

@@ -1,0 +1,25 @@
+"""Phase 6c-5 strings: review page redesign (status chips, ordering, progress, viewer, one-line reading). id -> (en, ta, hi). Drafts for ta/hi.
+No new clinical wording: only labels for the states the API already has, and the frequency and duration phrasing of values the model read."""
+STRINGS: dict[str, tuple[str, str, str]] = {
+    "ui.flow.rv.chip.attention": ("Needs your check", "உங்கள் சரிபார்ப்பு தேவை", "आपकी जाँच ज़रूरी है"),
+    "ui.flow.rv.chip.checked": ("Checked by you", "நீங்கள் சரிபார்த்தது", "आपने जाँच लिया"),
+    "ui.flow.rv.chip.noaction": ("No action needed", "நடவடிக்கை தேவையில்லை", "कुछ करने की ज़रूरत नहीं"),
+    "ui.flow.rv.edit": ("Edit", "திருத்து", "बदलें"),
+    "ui.flow.rv.collapse": ("Collapse", "சுருக்கு", "समेटें"),
+    "ui.flow.rv.num": ("#{n}", "#{n}", "#{n}"),
+    "ui.flow.rv.num_label": ("Medicine {n} on your document", "உங்கள் ஆவணத்தில் மருந்து {n}", "आपके दस्तावेज़ में दवा {n}"),
+    "ui.flow.rv.read": ("What we read", "நாங்கள் படித்தது", "हमने क्या पढ़ा"),
+    "ui.flow.rv.not_read": ("not read", "படிக்கப்படவில்லை", "पढ़ा नहीं गया"),
+    "ui.flow.rv.times.1": ("once a day", "ஒரு நாளைக்கு ஒரு முறை", "दिन में एक बार"),
+    "ui.flow.rv.times.2": ("twice a day", "ஒரு நாளைக்கு இரண்டு முறை", "दिन में दो बार"),
+    "ui.flow.rv.times.n": ("{n} times a day", "ஒரு நாளைக்கு {n} முறை", "दिन में {n} बार"),
+    "ui.flow.rv.days": ("for {n} days", "{n} நாட்களுக்கு", "{n} दिन तक"),
+    "ui.flow.rv.order.doc": ("Show in document order", "ஆவண வரிசையில் காட்டு", "दस्तावेज़ के क्रम में दिखाएँ"),
+    "ui.flow.rv.order.attention": ("Show needs-attention first", "கவனம் தேவையானவற்றை முதலில் காட்டு", "ध्यान वाली दवाएँ पहले दिखाएँ"),
+    "ui.flow.rv.progress": ("{n} of {m} medicines checked", "{m} மருந்துகளில் {n} சரிபார்க்கப்பட்டன", "{m} में से {n} दवाओं की जाँच हुई"),
+    "ui.flow.rv.attention": ("{n} still need your check", "{n} இன்னும் உங்கள் சரிபார்ப்பு தேவை", "{n} पर अभी आपकी जाँच बाकी है"),
+    "ui.flow.rv.jump": ("Jump to the next one that needs your check", "உங்கள் சரிபார்ப்பு தேவையான அடுத்ததுக்குச் செல்", "जिस पर आपकी जाँच बाकी है, उस पर जाएँ"),
+    "ui.flow.rv.paper_ref": ("Your paper document is the reference. This photo is only a copy of it.", "உங்கள் காகித ஆவணமே அடிப்படை. இந்தப் புகைப்படம் அதன் நகல் மட்டுமே.", "आपका कागज़ी दस्तावेज़ ही आधार है। यह फ़ोटो उसकी सिर्फ़ एक प्रति है।"),
+    "ui.flow.rv.viewer_close": ("Close the photo", "புகைப்படத்தை மூடு", "फ़ोटो बंद करें"),
+    "ui.flow.rv.list_label": ("Medicines found on your document", "உங்கள் ஆவணத்தில் கண்ட மருந்துகள்", "आपके दस्तावेज़ में मिली दवाएँ"),
+}

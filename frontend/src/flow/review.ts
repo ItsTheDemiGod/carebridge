@@ -114,3 +114,37 @@ export function buildConfirmations(meds: ReviewMedicine[], drafts: Record<number
 export function attentionCount(meds: ReviewMedicine[], drafts: Record<number, Draft>): number {
   return meds.filter((m) => m.review_level === 'must_confirm' && !(drafts[m.index] && toDecision(m, drafts[m.index]))).length
 }
+
+/* ---- Phase 6c-5: presentation helpers (no new rules: they only read review_level, the draft and the saved summary) ---- */
+export type Status = 'attention' | 'checked' | 'noaction'
+
+/** needs your check = must_confirm with no complete decision (or the server said it is still open after a save);
+ *  checked by you = a complete decision exists; no action needed = nothing flagged or notes only. */
+export function statusOf(m: ReviewMedicine, d: Draft | undefined, saved?: { unresolved: string[]; review_level: string }): Status {
+  if (saved && (saved.unresolved.length > 0 || saved.review_level === 'must_confirm')) return 'attention'
+  if (d && toDecision(m, d)) return 'checked'
+  return m.review_level === 'must_confirm' ? 'attention' : 'noaction'
+}
+
+/** Order by the API review level only (never by the person's decisions, so a card does not jump away when it is checked); ties keep document order. */
+export function orderMedicines(meds: ReviewMedicine[], mode: 'attention' | 'document'): ReviewMedicine[] {
+  const rank = { must_confirm: 0, note: 1, none: 2 } as const
+  return [...meds].sort((a, b) => (mode === 'document' ? 0 : rank[a.review_level] - rank[b.review_level]) || a.index - b.index)
+}
+
+export type ReadParts = { strength: string | null; dose: string | null; times: number | 'as_needed' | null; timing: ScheduleEdit['timing_label'] | null; abbreviation: string | null; days: number | null; durationText: string | null }
+
+/** What the model read, as pieces: the frequency is ONE phrase (times and timing), the abbreviation only when no number was read. */
+export function readParts(m: ReviewMedicine): ReadParts {
+  const f = m.frequency
+  const times = typeof f.times_per_day === 'number' ? f.times_per_day : f.is_prn ? 'as_needed' : null
+  return {
+    strength: m.strength ?? null,
+    dose: m.dose ?? null,
+    times,
+    timing: isTiming(f.timing_label) && f.timing_label !== 'unspecified' ? f.timing_label : null,
+    abbreviation: times === null ? f.original_abbreviation ?? null : null,
+    days: typeof m.duration_days === 'number' ? m.duration_days : null,
+    durationText: m.duration_text ?? null,
+  }
+}

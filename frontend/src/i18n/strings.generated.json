@@ -736,6 +736,90 @@
    "text": "What is right for this medicine?",
    "review_status": "not_required"
   },
+  "ui.flow.rv.attention": {
+   "text": "{n} still need your check",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.chip.attention": {
+   "text": "Needs your check",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.chip.checked": {
+   "text": "Checked by you",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.chip.noaction": {
+   "text": "No action needed",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.collapse": {
+   "text": "Collapse",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.days": {
+   "text": "for {n} days",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.edit": {
+   "text": "Edit",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.jump": {
+   "text": "Jump to the next one that needs your check",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.list_label": {
+   "text": "Medicines found on your document",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.not_read": {
+   "text": "not read",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.num": {
+   "text": "#{n}",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.num_label": {
+   "text": "Medicine {n} on your document",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.order.attention": {
+   "text": "Show needs-attention first",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.order.doc": {
+   "text": "Show in document order",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.paper_ref": {
+   "text": "Your paper document is the reference. This photo is only a copy of it.",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.progress": {
+   "text": "{n} of {m} medicines checked",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.read": {
+   "text": "What we read",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.times.1": {
+   "text": "once a day",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.times.2": {
+   "text": "twice a day",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.times.n": {
+   "text": "{n} times a day",
+   "review_status": "not_required"
+  },
+  "ui.flow.rv.viewer_close": {
+   "text": "Close the photo",
+   "review_status": "not_required"
+  },
   "ui.flow.saved.checked": {
    "text": "Will be looked up for interactions where our data allows",
    "review_status": "not_required"
@@ -2306,6 +2390,90 @@
    "text": "இந்த மருந்துக்கு எது சரி?",
    "review_status": "draft_unreviewed"
   },
+  "ui.flow.rv.attention": {
+   "text": "{n} இன்னும் உங்கள் சரிபார்ப்பு தேவை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.chip.attention": {
+   "text": "உங்கள் சரிபார்ப்பு தேவை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.chip.checked": {
+   "text": "நீங்கள் சரிபார்த்தது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.chip.noaction": {
+   "text": "நடவடிக்கை தேவையில்லை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.collapse": {
+   "text": "சுருக்கு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.days": {
+   "text": "{n} நாட்களுக்கு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.edit": {
+   "text": "திருத்து",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.jump": {
+   "text": "உங்கள் சரிபார்ப்பு தேவையான அடுத்ததுக்குச் செல்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.list_label": {
+   "text": "உங்கள் ஆவணத்தில் கண்ட மருந்துகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.not_read": {
+   "text": "படிக்கப்படவில்லை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.num": {
+   "text": "#{n}",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.num_label": {
+   "text": "உங்கள் ஆவணத்தில் மருந்து {n}",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.order.attention": {
+   "text": "கவனம் தேவையானவற்றை முதலில் காட்டு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.order.doc": {
+   "text": "ஆவண வரிசையில் காட்டு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.paper_ref": {
+   "text": "உங்கள் காகித ஆவணமே அடிப்படை. இந்தப் புகைப்படம் அதன் நகல் மட்டுமே.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.progress": {
+   "text": "{m} மருந்துகளில் {n} சரிபார்க்கப்பட்டன",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.read": {
+   "text": "நாங்கள் படித்தது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.times.1": {
+   "text": "ஒரு நாளைக்கு ஒரு முறை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.times.2": {
+   "text": "ஒரு நாளைக்கு இரண்டு முறை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.times.n": {
+   "text": "ஒரு நாளைக்கு {n} முறை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.viewer_close": {
+   "text": "புகைப்படத்தை மூடு",
+   "review_status": "draft_unreviewed"
+  },
   "ui.flow.saved.checked": {
    "text": "எங்கள் தரவு அனுமதிக்கும் இடங்களில் இடைவினைகளுக்காகத் தேடப்படும்",
    "review_status": "draft_unreviewed"
@@ -3874,6 +4042,90 @@
   },
   "ui.flow.review.what_is_right": {
    "text": "इस दवा के लिए क्या सही है?",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.attention": {
+   "text": "{n} पर अभी आपकी जाँच बाकी है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.chip.attention": {
+   "text": "आपकी जाँच ज़रूरी है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.chip.checked": {
+   "text": "आपने जाँच लिया",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.chip.noaction": {
+   "text": "कुछ करने की ज़रूरत नहीं",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.collapse": {
+   "text": "समेटें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.days": {
+   "text": "{n} दिन तक",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.edit": {
+   "text": "बदलें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.jump": {
+   "text": "जिस पर आपकी जाँच बाकी है, उस पर जाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.list_label": {
+   "text": "आपके दस्तावेज़ में मिली दवाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.not_read": {
+   "text": "पढ़ा नहीं गया",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.num": {
+   "text": "#{n}",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.num_label": {
+   "text": "आपके दस्तावेज़ में दवा {n}",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.order.attention": {
+   "text": "ध्यान वाली दवाएँ पहले दिखाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.order.doc": {
+   "text": "दस्तावेज़ के क्रम में दिखाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.paper_ref": {
+   "text": "आपका कागज़ी दस्तावेज़ ही आधार है। यह फ़ोटो उसकी सिर्फ़ एक प्रति है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.progress": {
+   "text": "{m} में से {n} दवाओं की जाँच हुई",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.read": {
+   "text": "हमने क्या पढ़ा",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.times.1": {
+   "text": "दिन में एक बार",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.times.2": {
+   "text": "दिन में दो बार",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.times.n": {
+   "text": "दिन में {n} बार",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.rv.viewer_close": {
+   "text": "फ़ोटो बंद करें",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.saved.checked": {

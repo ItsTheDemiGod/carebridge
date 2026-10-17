@@ -7841,6 +7841,300 @@
     "text": "हर फ़ोटो, उसके फ़ोटोग्राफ़र, लाइसेंस और स्रोत पन्ना",
     "review_status": "draft_unreviewed"
    }
+  },
+  "ui.flow.rv.chip.attention": {
+   "en": {
+    "text": "Needs your check",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் சரிபார்ப்பு தேவை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी जाँच ज़रूरी है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.chip.checked": {
+   "en": {
+    "text": "Checked by you",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீங்கள் சரிபார்த்தது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपने जाँच लिया",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.chip.noaction": {
+   "en": {
+    "text": "No action needed",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நடவடிக்கை தேவையில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कुछ करने की ज़रूरत नहीं",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.edit": {
+   "en": {
+    "text": "Edit",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "திருத்து",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बदलें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.collapse": {
+   "en": {
+    "text": "Collapse",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "சுருக்கு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "समेटें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.num": {
+   "en": {
+    "text": "#{n}",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "#{n}",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "#{n}",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.num_label": {
+   "en": {
+    "text": "Medicine {n} on your document",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் ஆவணத்தில் மருந்து {n}",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपके दस्तावेज़ में दवा {n}",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.read": {
+   "en": {
+    "text": "What we read",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நாங்கள் படித்தது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हमने क्या पढ़ा",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.not_read": {
+   "en": {
+    "text": "not read",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "படிக்கப்படவில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पढ़ा नहीं गया",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.times.1": {
+   "en": {
+    "text": "once a day",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளைக்கு ஒரு முறை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में एक बार",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.times.2": {
+   "en": {
+    "text": "twice a day",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளைக்கு இரண்டு முறை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में दो बार",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.times.n": {
+   "en": {
+    "text": "{n} times a day",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளைக்கு {n} முறை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में {n} बार",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.days": {
+   "en": {
+    "text": "for {n} days",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "{n} நாட்களுக்கு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} दिन तक",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.order.doc": {
+   "en": {
+    "text": "Show in document order",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஆவண வரிசையில் காட்டு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दस्तावेज़ के क्रम में दिखाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.order.attention": {
+   "en": {
+    "text": "Show needs-attention first",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "கவனம் தேவையானவற்றை முதலில் காட்டு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ध्यान वाली दवाएँ पहले दिखाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.progress": {
+   "en": {
+    "text": "{n} of {m} medicines checked",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "{m} மருந்துகளில் {n} சரிபார்க்கப்பட்டன",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{m} में से {n} दवाओं की जाँच हुई",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.attention": {
+   "en": {
+    "text": "{n} still need your check",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "{n} இன்னும் உங்கள் சரிபார்ப்பு தேவை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} पर अभी आपकी जाँच बाकी है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.jump": {
+   "en": {
+    "text": "Jump to the next one that needs your check",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் சரிபார்ப்பு தேவையான அடுத்ததுக்குச் செல்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "जिस पर आपकी जाँच बाकी है, उस पर जाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.paper_ref": {
+   "en": {
+    "text": "Your paper document is the reference. This photo is only a copy of it.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் காகித ஆவணமே அடிப்படை. இந்தப் புகைப்படம் அதன் நகல் மட்டுமே.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपका कागज़ी दस्तावेज़ ही आधार है। यह फ़ोटो उसकी सिर्फ़ एक प्रति है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.viewer_close": {
+   "en": {
+    "text": "Close the photo",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படத்தை மூடு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ोटो बंद करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.rv.list_label": {
+   "en": {
+    "text": "Medicines found on your document",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் ஆவணத்தில் கண்ட மருந்துகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपके दस्तावेज़ में मिली दवाएँ",
+    "review_status": "draft_unreviewed"
+   }
   }
  },
  "english_only": {

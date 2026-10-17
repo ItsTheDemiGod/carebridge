@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test'
 import { PNG as PNG_BYTES } from './flowhelpers'
 import { DOC_ID } from './fixtures'
-import { PDF, card, consented, pickDrug, reviewReady, setLangInit, watchErrors } from './flowhelpers'
+import { PDF, card, consented, openCard, pickDrug, reviewReady, setLangInit, watchErrors } from './flowhelpers'
 import { mockApi } from './mock'
 
 const png = { name: 'my-private-name.png', mimeType: 'image/png', buffer: PNG_BYTES }
@@ -140,12 +140,15 @@ test.describe('review', () => {
     const errors = watchErrors(page)
     await page.goto(`/d/${DOC_ID}/review`)
     await expect(page.getByRole('heading', { level: 1, name: 'Check your medicines' })).toBeFocused()
-    await expect(page.getByText('Still to confirm: 2')).toBeVisible()
+    await expect(page.getByText('2 still need your check')).toBeVisible()
+    await expect(page.getByText('0 of 4 medicines checked')).toBeVisible()
 
     // m0: clean, nothing to acknowledge
-    await card(page, 0).getByLabel('This matches my document').check()
-    await card(page, 0).getByRole('button', { name: 'Use this check' }).click()
-    await expect(card(page, 0).getByText('Your check is ready')).toBeVisible()
+    const c0 = await openCard(page, 0)
+    await c0.getByLabel('This matches my document').check()
+    await c0.getByRole('button', { name: 'Use this check' }).click()
+    await expect(c0.getByText('Checked by you')).toBeVisible() // the card folds away, the decision stays
+    await expect(c0.getByRole('button', { name: 'Edit' })).toBeFocused()
 
     // m1: garbled name -> picker; the button waits for the drug, the strength and the acknowledgement
     const c1 = card(page, 1)
@@ -167,7 +170,7 @@ test.describe('review', () => {
     await expect(c2.getByText('Change how often or when')).toHaveCount(0)
     await c2.getByLabel(/I have checked how often/).check()
     await c2.getByRole('button', { name: 'Use this check' }).click()
-    await expect(page.getByText('Still to confirm: 0').or(page.getByText('Every medicine that must be confirmed has your check.'))).toBeVisible()
+    await expect(page.getByText('Every medicine that must be confirmed has your check.')).toBeVisible()
 
     // add a medicine from the picker (no free text), fixed dose list
     await page.getByRole('button', { name: 'Add a medicine I do not see here' }).click()
@@ -191,10 +194,11 @@ test.describe('review', () => {
 
     // reload restores the saved decisions from the server and a second save REPLACES the set (everything is sent again)
     await page.reload()
-    await expect(card(page, 1).getByText('Your check is ready')).toBeVisible()
+    await expect(card(page, 1).getByText('Checked by you')).toBeVisible()
     await expect(page.getByText('You added this medicine from the list.')).toBeVisible()
-    await card(page, 3).getByLabel('My medicine is not in the list').check()
-    await card(page, 3).getByRole('button', { name: 'Mark as not in the list' }).click()
+    const c3 = await openCard(page, 3)
+    await c3.getByLabel('My medicine is not in the list').check()
+    await c3.getByRole('button', { name: 'Mark as not in the list' }).click()
     await page.getByRole('button', { name: 'Save my checks' }).click()
     await expect(page.getByRole('heading', { name: 'Your checks are saved' })).toBeVisible()
     const again = mock.calls.filter((x) => x.path.endsWith('/confirmations')).at(-1)!.body as { decisions: unknown[]; added_medicines: unknown[] }
@@ -266,7 +270,7 @@ test.describe('review', () => {
     await page.keyboard.press('+')
     await expect(page.locator('.pv-frame img')).toHaveAttribute('style', /scale\(1\.5\)/)
     await page.reload() // not kept: the preview is gone
-    await expect(page.getByText('hold your paper document next to the screen')).toBeVisible()
+    await expect(page.locator('.rv-pane').getByText('hold your paper document next to the screen')).toBeVisible()
   })
 })
 

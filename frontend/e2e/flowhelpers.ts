@@ -24,7 +24,14 @@ export async function consented(page: Page, o: MockOptions = {}) {
 /** A document that is waiting for the person's check */
 export const reviewReady = (page: Page, o: MockOptions = {}) => mockApi(page, { consented: true, docReady: true, ...o })
 
-export const card = (page: Page, i: number) => page.locator('article.med-card').nth(i)
+/** the card of the medicine with this DOCUMENT index (the list order puts needs-attention first, so the position is not the index) */
+export const card = (page: Page, i: number) => page.locator('article.med-card', { has: page.locator(`#rv-h-${i}`) })
+/** cards that need nothing start folded: open one with its Edit button */
+export async function openCard(page: Page, i: number) {
+  const t = page.locator(`#rv-toggle-${i}`)
+  if ((await t.count()) && (await t.getAttribute('aria-expanded')) === 'false') await t.click()
+  return card(page, i)
+}
 
 export async function pickDrug(page: Page, scope: ReturnType<typeof card> | Page, query: string, name: string) {
   const box = scope.getByRole('combobox', { name: /Search medicine/ })

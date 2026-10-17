@@ -2,7 +2,7 @@ import { useId } from 'react'
 import type { ConfirmedSummary, FormularyEntry, MedicineAction, ReviewMedicine } from '../../../api/types'
 import { Button } from '../../../components/Button'
 import { Icon } from '../../../components/icons'
-import { ackReasons, isNonDaily, isTiming, missing, NOTE_MAX, nameReasons, type Draft } from '../../../flow/review'
+import { ackReasons, isNonDaily, missing, NOTE_MAX, nameReasons, readParts, type Draft, type Status } from '../../../flow/review'
 import { fill, useServerStrings } from '../../../flow/serverStrings'
 import { useT } from '../../../i18n/I18n'
 import { FormularyPicker } from './FormularyPicker'
@@ -20,6 +20,48 @@ export function ReviewBadge({ level }: { level: ReviewMedicine['review_level'] }
   )
 }
 
+const STATUS_ICON = { attention: 'alert', checked: 'check', noaction: 'info' } as const
+
+/** Needs your check / Checked by you / No action needed: icon + words + colour, never colour alone. */
+export function StatusChip({ status }: { status: Status }) {
+  const { t } = useT()
+  return (
+    <span className={`rv-chip ${status}`}>
+      <Icon name={STATUS_ICON[status]} size={16} />
+      <span>{t(`ui.flow.rv.chip.${status}`)}</span>
+    </span>
+  )
+}
+
+/** ONE line for what was read: strength, dose, one frequency phrase, duration. A piece that was not read says so instead of disappearing. */
+function ReadLine({ m }: { m: ReviewMedicine }) {
+  const { t } = useT()
+  const r = readParts(m)
+  const freq =
+    r.times === 'as_needed' ? t('ui.flow.timing.as_needed') : r.times === 1 || r.times === 2 ? t(`ui.flow.rv.times.${r.times}`) : typeof r.times === 'number' ? t('ui.flow.rv.times.n', { n: r.times }) : r.abbreviation
+  const frequency = freq ? [freq, r.timing ? t(`ui.flow.timing.${r.timing}`).toLowerCase() : null].filter(Boolean).join(', ') : null
+  const duration = r.durationText ?? (r.days != null ? t('ui.flow.rv.days', { n: r.days }) : null)
+  const parts: { key: string; text: string | null; label: string }[] = [
+    { key: 's', text: r.strength, label: t('ui.flow.review.f.strength') },
+    { key: 'd', text: r.dose, label: t('ui.flow.review.f.dose') },
+    { key: 'f', text: frequency, label: t('ui.flow.review.f.frequency') },
+    { key: 'n', text: duration, label: t('ui.flow.review.f.duration') },
+  ]
+  return (
+    <p className="rv-read">
+      <span className="label">{t('ui.flow.rv.read')}</span>
+      <span className="rv-line">
+        {parts.map((p, i) => (
+          <span key={p.key}>
+            {i ? ' · ' : ''}
+            {p.text ?? <span className="rv-missing">{p.label}: {t('ui.flow.rv.not_read')}</span>}
+          </span>
+        ))}
+      </span>
+    </p>
+  )
+}
+
 type Props = {
   m: ReviewMedicine
   draft: Draft
@@ -27,9 +69,12 @@ type Props = {
   saved?: ConfirmedSummary
   strengthAsLabel: string
   compareNote: string
+  status: Status
+  expanded: boolean
+  onToggle: () => void
 }
 
-export function MedicineCard({ m, draft, onChange, saved, strengthAsLabel, compareNote }: Props) {
+export function MedicineCard({ m, draft, onChange, saved, strengthAsLabel, compareNote, status, expanded, onToggle }: Props) {
   const { t } = useT()
   const { s } = useServerStrings()
   const uid = useId()
@@ -45,29 +90,35 @@ export function MedicineCard({ m, draft, onChange, saved, strengthAsLabel, compa
   const chooseAction = (a: MedicineAction) => set({ action: a, decided: false })
   const decided = draft.decided && need.length === 0
 
+  const bodyId = `rv-body-${m.index}`
+  const showToggle = status !== 'attention' // a card that needs your check is always open
   return (
-    <article className={`med-card level-${m.review_level}`} aria-labelledby={`${uid}-h`}>
+    <article className={`med-card level-${m.review_level} status-${status}`} data-open={expanded} aria-labelledby={`rv-h-${m.index}`}>
       <header className="med-head">
-        <h3 id={`${uid}-h`} className="med-name">{name}</h3>
-        <ReviewBadge level={m.review_level} />
-        {decided ? (
-          <span className="tag tag-accent"><Icon name="check" size={16} /><span>{t('ui.flow.review.decided')}</span></span>
+        <span className="rv-num" title={t('ui.flow.rv.num_label', { n: m.index + 1 })}>
+          <span aria-hidden="true">{t('ui.flow.rv.num', { n: m.index + 1 })}</span>
+          <span className="sr-only">{t('ui.flow.rv.num_label', { n: m.index + 1 })}</span>
+        </span>
+        <div className="rv-title">
+          <h3 id={`rv-h-${m.index}`} className="med-name" tabIndex={-1}>{name}</h3>
+          {m.strength ? <span className="rv-strength">{m.strength}</span> : null}
+        </div>
+        {m.review_level === 'note' && status !== 'attention' ? <ReviewBadge level="note" /> : null}
+        <StatusChip status={status} />
+        {showToggle ? (
+          <button type="button" id={`rv-toggle-${m.index}`} className="card-toggle" aria-expanded={expanded} aria-controls={bodyId} onClick={onToggle}>
+            <Icon name="chevron" size={18} />
+            <span>{expanded ? t('ui.flow.rv.collapse') : t('ui.flow.rv.edit')}</span>
+          </button>
         ) : null}
       </header>
 
+      <div id={bodyId} className="rv-body" hidden={!expanded}>
       <figure className="quote">
         <figcaption className="label">{t('ui.flow.review.quote')}</figcaption>
         <blockquote>{m.source_quote ?? t('ui.flow.review.no_quote')}</blockquote>
       </figure>
-      <dl className="facts">
-        <div><dt>{t('ui.flow.review.f.strength')}</dt><dd>{m.strength ?? '—'}</dd></div>
-        <div><dt>{t('ui.flow.review.f.dose')}</dt><dd>{m.dose ?? '—'}</dd></div>
-        <div>
-          <dt>{t('ui.flow.review.f.frequency')}</dt>
-          <dd>{[m.frequency.original_abbreviation, m.frequency.times_per_day != null ? String(m.frequency.times_per_day) : null, isTiming(m.frequency.timing_label) ? t(`ui.flow.timing.${m.frequency.timing_label}`) : m.frequency.timing_label].filter(Boolean).join(' · ') || '—'}</dd>
-        </div>
-        <div><dt>{t('ui.flow.review.f.duration')}</dt><dd>{m.duration_text ?? (m.duration_days != null ? String(m.duration_days) : '—')}</dd></div>
-      </dl>
+      <ReadLine m={m} />
 
       {m.reasons.length ? (
         <div className="reasons">
@@ -186,6 +237,7 @@ export function MedicineCard({ m, draft, onChange, saved, strengthAsLabel, compa
           ) : null}
         </div>
       ) : null}
+      </div>
     </article>
   )
 }
