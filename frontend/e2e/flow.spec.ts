@@ -127,6 +127,7 @@ test.describe('processing', () => {
     await page.goto('/upload')
     await page.locator('#file-pick').setInputFiles(png)
     await page.getByRole('button', { name: 'Use this photo' }).click()
+    await page.waitForURL('**/processing') // the upload must have been accepted before the reload
     await page.reload()
     await expect(page).toHaveURL(/review$/, { timeout: 20_000 })
     await expect(page.getByRole('heading', { level: 1, name: 'Check your medicines' })).toBeVisible()
