@@ -29,7 +29,7 @@ export function DeleteControl({ labelKey = 'ui.flow.delete.button', className = 
   }
   return (
     <>
-      <button type="button" className={className} onClick={() => setOpen(true)}>
+      <button type="button" className={className} title={t(labelKey)} onClick={() => setOpen(true)}>
         <Icon name="trash" size={20} />
         <span>{t(labelKey)}</span>
       </button>

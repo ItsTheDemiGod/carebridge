@@ -7757,6 +7757,62 @@
     "text": "यह पन्ना मौजूद नहीं है।",
     "review_status": "draft_unreviewed"
    }
+  },
+  "ui.nav.menu": {
+   "en": {
+    "text": "Menu",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பட்டியல்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेन्यू",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.nav.how_c": {
+   "en": {
+    "text": "How it works",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "செயல்முறை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह कैसे काम करता है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.nav.docs_c": {
+   "en": {
+    "text": "Your documents",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஆவணங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपके दस्तावेज़",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.nav.start_c": {
+   "en": {
+    "text": "Start",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தொடக்கம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "शुरू करें",
+    "review_status": "draft_unreviewed"
+   }
   }
  },
  "english_only": {

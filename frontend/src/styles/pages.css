@@ -1,18 +1,40 @@
 ﻿/* ---------- shell ---------- */
 .site-header { position: sticky; top: 0; z-index: var(--z-header); background: var(--paper); border-bottom: 1px solid var(--line); }
-.header-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-5); padding-block: var(--s-3); }
+.header-row { position: relative; display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); padding-block: var(--s-3); }
 .brand-link { display: inline-flex; text-decoration: none; color: var(--pine); border-radius: var(--r-sm); min-height: 2.75rem; align-items: center; }
 .wordmark { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--pine); }
 .wordmark-text { font-family: var(--font-display) !important; font-size: 1.55rem; font-weight: 560; letter-spacing: -0.02em; color: var(--ink); line-height: 1; }
 .on-dark .wordmark, .on-dark .wordmark-text { color: var(--on-dark); }
-.site-nav { display: flex; flex-wrap: wrap; gap: 0 var(--s-5); order: 3; width: 100%; }
-.site-nav a { display: inline-flex; align-items: center; min-height: 2.75rem; text-decoration: none; font-weight: 600; font-size: var(--t-small); color: var(--ink); border-bottom: 2px solid transparent; }
+.header-menu { display: none; }
+.header-menu[data-open='true'] { display: flex; flex-direction: column; align-items: stretch; gap: var(--s-4); position: absolute; top: 100%; inset-inline: 0; padding: var(--s-4) var(--gutter) var(--s-5); max-height: calc(100dvh - 4.5rem); overflow-y: auto; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: var(--shadow-soft); }
+.menu-btn { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 2.75rem; padding: 0 var(--s-4); border: 1.5px solid var(--line-strong); border-radius: var(--r-pill); background: transparent; color: var(--ink); font: 600 var(--t-small)/1 var(--font-body); cursor: pointer; }
+.menu-btn:hover, .menu-btn[aria-expanded='true'] { background: var(--paper-2); }
+.site-nav { display: flex; flex-direction: column; }
+.site-nav a { display: flex; align-items: center; min-height: 2.75rem; text-decoration: none; font-weight: 600; font-size: var(--t-body); color: var(--ink); border-bottom: 1px solid var(--line); }
 .site-nav a:hover { border-bottom-color: var(--terracotta); }
-.site-nav a[aria-current='page'] { border-bottom-color: var(--pine); }
-.header-tools { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-3); margin-left: auto; }
-/* the nav always keeps its own row: long Tamil and Hindi labels would otherwise stack one word per line next to the tools */
+.site-nav a[aria-current='page'] { border-bottom: 2px solid var(--pine); }
+.nav-start { min-height: 2.75rem; }
+.header-tools { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); }
+/* one row (data-layout="row"): nothing wraps. The calm toggle is an icon button (its words are for screen readers and the tooltip); the delete label shows from 90 rem */
+.site-header[data-layout='row'] .menu-btn { display: none; }
+.site-header[data-layout='row'] .header-menu { display: flex; flex-direction: row; align-items: center; flex: 1; position: static; padding: 0; max-height: none; overflow: visible; background: none; border: 0; box-shadow: none; gap: var(--s-4); min-width: 0; }
+.site-header[data-layout='row'] .site-nav { flex-direction: row; flex: 1; justify-content: center; gap: var(--s-4); white-space: nowrap; }
+.site-header[data-layout='row'] .site-nav a { font-size: var(--t-small); border-bottom: 2px solid transparent; }
+.site-header[data-layout='row'] .site-nav a[aria-current='page'] { border-bottom: 2px solid var(--pine); }
+.site-header[data-layout='row'] .nav-start { padding: 0.4rem 1.1rem; font-size: var(--t-small); white-space: nowrap; }
+.site-header[data-layout='row'] .header-tools { flex-wrap: nowrap; gap: var(--s-2); white-space: nowrap; }
+.site-header[data-layout='row'] .lang-switch > svg { display: none; }
+.site-header[data-layout='row'] .lang-switch { padding-left: 3px; }
+.site-header[data-layout='row'] .calm-toggle { padding: 0; width: 2.75rem; justify-content: center; }
+.site-header[data-layout='row'] .calm-label, .site-header[data-layout='row'] .calm-state { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.site-header[data-layout='row'] .delete-btn { padding: 0 var(--s-3); }
+@media (max-width: 89.99rem) {
+  .site-header[data-layout='row'] .delete-btn span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+@media (min-width: 64rem) and (max-width: 79.99rem) { .wordmark-text { font-size: 1.35rem; } }
+
 .lang-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px 3px 3px var(--s-3); border: 1.5px solid var(--line-strong); border-radius: var(--r-pill); color: var(--ink-soft); }
-.lang-switch button { min-height: 2.5rem; min-width: 2.75rem; padding: 0 0.8rem; border: 0; border-radius: var(--r-pill); background: transparent; color: var(--ink); font: 600 var(--t-small)/1 var(--font-body); cursor: pointer; }
+.lang-switch button { min-height: 2.75rem; min-width: 2.75rem; padding: 0 0.8rem; border: 0; border-radius: var(--r-pill); background: transparent; color: var(--ink); font: 600 var(--t-small)/1 var(--font-body); cursor: pointer; }
 .lang-switch button:hover { background: var(--paper-2); }
 .lang-switch button[aria-pressed='true'] { background: var(--pine); color: var(--on-dark); }
 .calm-toggle { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 2.75rem; padding: 0 var(--s-4); border: 1.5px solid var(--line-strong); border-radius: var(--r-pill); background: transparent; color: var(--ink); font: 600 var(--t-small)/1 var(--font-body); cursor: pointer; }

@@ -87,6 +87,8 @@ const PATHS: Record<string, ReactNode> = {
   leaf: <path d="M5 19c0-8 5-13.5 14-14 .5 9-4.5 14-12.5 14M5 19l7-7" />,
   wave: <path d="M3 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0" />,
   close: <path d="M6 6l12 12M18 6L6 18" />,
+  still: <path d="M3 12h18" />,
+  menu: <path d="M4.5 7h15M4.5 12h15M4.5 17h15" />,
 }
 
 export type IconName = keyof typeof PATHS

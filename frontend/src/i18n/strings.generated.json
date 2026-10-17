@@ -1284,7 +1284,15 @@
    "text": "What CareBridge stores, where the photo is read, and how to delete everything. A class project prototype.",
    "review_status": "not_required"
   },
+  "ui.nav.docs_c": {
+   "text": "Your documents",
+   "review_status": "not_required"
+  },
   "ui.nav.how": {
+   "text": "How it works",
+   "review_status": "not_required"
+  },
+  "ui.nav.how_c": {
    "text": "How it works",
    "review_status": "not_required"
   },
@@ -1296,11 +1304,19 @@
    "text": "Limits",
    "review_status": "not_required"
   },
+  "ui.nav.menu": {
+   "text": "Menu",
+   "review_status": "not_required"
+  },
   "ui.nav.privacy": {
    "text": "Privacy",
    "review_status": "not_required"
   },
   "ui.nav.start": {
+   "text": "Start",
+   "review_status": "not_required"
+  },
+  "ui.nav.start_c": {
    "text": "Start",
    "review_status": "not_required"
   },
@@ -2830,8 +2846,16 @@
    "text": "CareBridge எதைச் சேமிக்கிறது, புகைப்படம் எங்கே படிக்கப்படுகிறது, எல்லாவற்றையும் எப்படி நீக்குவது என்பது. வகுப்புத் திட்ட முன்மாதிரி.",
    "review_status": "draft_unreviewed"
   },
+  "ui.nav.docs_c": {
+   "text": "ஆவணங்கள்",
+   "review_status": "draft_unreviewed"
+  },
   "ui.nav.how": {
    "text": "எப்படி வேலை செய்கிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.how_c": {
+   "text": "செயல்முறை",
    "review_status": "draft_unreviewed"
   },
   "ui.nav.label": {
@@ -2842,12 +2866,20 @@
    "text": "வரம்புகள்",
    "review_status": "draft_unreviewed"
   },
+  "ui.nav.menu": {
+   "text": "பட்டியல்",
+   "review_status": "draft_unreviewed"
+  },
   "ui.nav.privacy": {
    "text": "தனியுரிமை",
    "review_status": "draft_unreviewed"
   },
   "ui.nav.start": {
    "text": "தொடங்குங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.start_c": {
+   "text": "தொடக்கம்",
    "review_status": "draft_unreviewed"
   },
   "ui.notfound.body": {
@@ -4376,7 +4408,15 @@
    "text": "CareBridge क्या सहेजता है, फ़ोटो कहाँ पढ़ी जाती है और सब कुछ कैसे हटाएँ। कक्षा-प्रोजेक्ट प्रोटोटाइप।",
    "review_status": "draft_unreviewed"
   },
+  "ui.nav.docs_c": {
+   "text": "आपके दस्तावेज़",
+   "review_status": "draft_unreviewed"
+  },
   "ui.nav.how": {
+   "text": "यह कैसे काम करता है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.how_c": {
    "text": "यह कैसे काम करता है",
    "review_status": "draft_unreviewed"
   },
@@ -4388,11 +4428,19 @@
    "text": "सीमाएँ",
    "review_status": "draft_unreviewed"
   },
+  "ui.nav.menu": {
+   "text": "मेन्यू",
+   "review_status": "draft_unreviewed"
+  },
   "ui.nav.privacy": {
    "text": "गोपनीयता",
    "review_status": "draft_unreviewed"
   },
   "ui.nav.start": {
+   "text": "शुरू करें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.nav.start_c": {
    "text": "शुरू करें",
    "review_status": "draft_unreviewed"
   },

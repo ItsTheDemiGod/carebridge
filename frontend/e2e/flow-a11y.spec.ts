@@ -18,7 +18,7 @@ const STATES: State[] = [
       await card(p, 1).locator('input[type=radio]').nth(1).check()
       await card(p, 1).getByRole('combobox').first().fill('p'); await p.getByRole('listbox').first().waitFor()
       await card(p, 2).locator('input[type=radio]').nth(0).check()
-      await p.locator('.add-med, button:has(svg)').first().waitFor() } },
+      await p.locator('main .add-med, main button:has(svg)').first().waitFor() } },
   { name: 'review-saved', run: async (p) => { await reviewReady(p); await p.goto(`/d/${DOC_ID}/review`); await card(p, 3).waitFor(); await card(p, 3).locator('input[type=radio]').nth(3).check(); await card(p, 3).locator('.card-confirm .btn').click(); await p.locator('.summary-bar .btn').click(); await p.locator('.saved-panel').waitFor() } },
   { name: 'result', run: async (p) => { await reviewReady(p); await p.goto(`/d/${DOC_ID}/result`); await p.locator('.res-section').first().waitFor() } },
   { name: 'schedule', run: async (p) => { await reviewReady(p); await p.goto(`/d/${DOC_ID}/schedule`); await p.locator('.slot').first().waitFor() } },
