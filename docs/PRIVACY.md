@@ -90,3 +90,16 @@ Not stored anywhere: names, accounts, email, IP address, the original unprocesse
 Offline tests: 716 pass (canary, cache-untouched, logging, Gemini fail-closed, IDOR over every route, CSRF, upload hardening, encryption, deletion, expiry).
 Live smoke (`docs/smoke/phase5_live_smoke.json`, clean and poor ds_037, real local model): full flow ran, deletion left 0 rows for the session (checked through a read-only SQLite connection), the server log held 0 occurrences of medicine or advice words.
 Not done / needs a human: lawyer review of the DPDP checklist and consent notice; native review of Tamil/Hindi consent, deletion and error strings (`data/templates/review_sheet_phase5_new.csv`); hosting is out of scope (cookie `Secure` and HTTPS must be set when deployed).
+
+## 8. Browser side (Phase 6b)
+
+What the frontend keeps, and what it does not:
+- **localStorage**: only `carebridge.language` and `carebridge.calm` (a language code and a 0/1 flag). Nothing else, ever (`src/privacy.test.ts` scans the source; the Playwright audit checks the running app after a full flow).
+- **Not used at all**: sessionStorage, IndexedDB, Cache Storage, `document.cookie`, `history.pushState/replaceState` state, service workers. The only cookie is the backend's HttpOnly `cb_session`, which JavaScript cannot read.
+- **Document ids** appear only in the route path (`/d/<id>/review`). They are never put in a query string, the page title, a hash or any external link; `<meta name="referrer" content="no-referrer">` is set. Page titles are `ui.title.*` strings (language only).
+- **The chosen photo** lives only as an in-memory `Blob` and an object URL for the side-by-side view. It is uploaded once (raw body), never stored in the browser, and the URL is revoked when the person leaves the flow, replaces the photo or deletes their data. After a reload the preview is gone: the page says so and, if the person chose to keep the photo, fetches it from the server (`GET /documents/{id}/image`).
+- **Results, medicines, decisions, schedule and adherence** are held in React state only and rebuilt from the API after a reload. Unsaved decisions are lost on reload (the page asks before leaving).
+- **Rendering**: every server string is rendered as a text node. `dangerouslySetInnerHTML`, `innerHTML` and `insertAdjacentHTML` are banned (tested). The client never logs request or response bodies.
+- **Network**: only the app origin is contacted (fonts, photos and scripts are self-hosted; no CDN or analytics). The Playwright audit asserts a single host.
+- **Delete my data** (header, once a session exists) calls `DELETE /session`, then clears all in-memory state, revokes the photo URL and returns to the landing page with the backend's receipt text. A 401 (expired or already deleted) is treated as "nothing left".
+Residual risks: browser extensions and the operating system can read page memory; a printed or saved PDF of the results leaves the app's control; the in-memory photo is visible to anyone using the same browser tab.

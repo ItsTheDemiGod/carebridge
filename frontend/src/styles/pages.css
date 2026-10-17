@@ -10,9 +10,7 @@
 .site-nav a:hover { border-bottom-color: var(--terracotta); }
 .site-nav a[aria-current='page'] { border-bottom-color: var(--pine); }
 .header-tools { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-3); margin-left: auto; }
-@media (min-width: 64rem) {
-  .site-nav { order: 0; width: auto; margin-left: var(--s-5); flex: 1; }
-}
+/* the nav always keeps its own row: long Tamil and Hindi labels would otherwise stack one word per line next to the tools */
 .lang-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px 3px 3px var(--s-3); border: 1.5px solid var(--line-strong); border-radius: var(--r-pill); color: var(--ink-soft); }
 .lang-switch button { min-height: 2.5rem; min-width: 2.75rem; padding: 0 0.8rem; border: 0; border-radius: var(--r-pill); background: transparent; color: var(--ink); font: 600 var(--t-small)/1 var(--font-body); cursor: pointer; }
 .lang-switch button:hover { background: var(--paper-2); }

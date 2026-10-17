@@ -74,7 +74,7 @@ export function MedicineCard({ m, draft, onChange, saved, strengthAsLabel, compa
           <p className="label">{t('ui.flow.review.reasons')}</p>
           <ul>
             {m.reasons.map((r) => (
-              <li key={r.id}>
+              <li key={r.id} data-kind={r.kind}>
                 <Icon name={r.kind === 'name' ? 'search' : 'circle-alert'} size={18} />
                 <span>{r.text ?? t('ui.flow.review.reason_generic')}</span>
               </li>

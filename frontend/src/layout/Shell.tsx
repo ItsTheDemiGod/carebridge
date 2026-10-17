@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
-import { Outlet, useLocation } from 'react-router-dom'
+import { useLocation, useOutlet } from 'react-router-dom'
 import { CursorRing } from '../ambient/CursorRing'
 import { FrameMonitor } from '../ambient/FrameMonitor'
 import { useMotion } from '../ambient/motion'
@@ -36,6 +36,7 @@ function ShellInner() {
   const { t } = useT()
   const { motionOk } = useMotion()
   const loc = useLocation()
+  const outlet = useOutlet() // captured per render: an exiting page keeps its own element instead of re-rendering the new route (no double mount)
   const main = useRef<HTMLElement>(null)
   const first = useRef(true)
   useEffect(() => {
@@ -63,7 +64,7 @@ function ShellInner() {
       <main id="main" ref={main} tabIndex={-1}>
         <AnimatePresence mode="wait" initial={false}>
           <motion.div key={loc.pathname} initial={motionOk ? { opacity: 0, y: 10 } : false} animate={{ opacity: 1, y: 0 }} exit={motionOk ? { opacity: 0 } : { opacity: 1 }} transition={{ duration: motionOk ? 0.22 : 0 }}>
-            <Outlet />
+            {outlet}
           </motion.div>
         </AnimatePresence>
       </main>

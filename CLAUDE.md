@@ -46,7 +46,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 4 Safety layer (interaction lookup, duplicates, guardrail, safety section; dev only; supplement and ta/hi strings await review; red-flag/low-confidence handling reuse Phase 2i flags)
 - [x] 5 Backend API, SQLite + Fernet, consent, confirmation overlay, schedule, delete-my-data (no UI; live smoke done; ta/hi strings and DPDP checklist unreviewed)
 - [x] 5c Prototype review mode: honest author self-check of the interaction supplement, notice v2, labels (docs/REVIEW_STATUS.md)
-- [~] 6 Web application UI: [x] 6a design system, shell, ambient layer, landing (docs/DESIGN.md); [ ] 6b working flow; [ ] 6c polish, phones, demo mode
+- [~] 6 Web application UI: [x] 6a design system, shell, ambient layer, landing (docs/DESIGN.md); [x] 6b working flow (consent, upload, processing, review/picker, results, schedule, summary, delete; docs/DESIGN.md, PRIVACY.md section 8); [ ] 6c polish, phones, demo mode
 - [ ] 7 Evaluation, testing, native-speaker review, usability test
 - [ ] 8 Deployment, demo, report
 - [ ] 9 Stretch: PWA and mobile app
@@ -117,9 +117,11 @@ Status: [x] done, [ ] not started, [~] in progress
 
 ## Frontend rules (Phase 6; details docs/DESIGN.md)
 - Direction "calm clinical editorial": paper tones, pine ink, one terracotta accent, Fraunces + Noto. Forbidden: purple gradients, centred 3-card hero, emoji icons, glassmorphism, fake logos/testimonials/statistics, identical card grids, neon. Severity/status always icon + text + colour.
-- ALL visible text is a `ui.*` template (en/ta/hi; ta/hi `draft_unreviewed`): edit `scripts/add_phase6a_templates.py`, run it, then `scripts/export_ui_strings.py` (stale file fails a test). Components hold no literal text (source-scan test).
+- ALL visible text is a `ui.*` template (en/ta/hi; ta/hi `draft_unreviewed`): edit `scripts/add_phase6a_templates.py` or `scripts/add_phase6b_templates.py` + `scripts/p6b_*.py` (ids `ui.flow.*`), run them, then `scripts/export_ui_strings.py` (stale file fails a test). Components hold no literal text (source-scan test).
 - Honest copy: never write safe, safely, guaranteed, accurate, certified, clinically validated, doctor-approved (tested); never imply a pharmacist/doctor/native speaker reviewed anything; no number without a committed metrics file; ta/hi pages always show the machine-drafted note.
-- Nothing loads from the network at runtime (self-hosted fonts and photos, no CDN/analytics). localStorage: only `carebridge.language` and `carebridge.calm`; no frontend cookies.
+- Nothing loads from the network at runtime (self-hosted fonts and photos, no CDN/analytics). CLIENT STORAGE RULE: only `carebridge.language` and `carebridge.calm` in localStorage; no sessionStorage/IndexedDB/JS cookies; no document ids, names or results in the URL query, title or history state (ids only in the route path); the photo is an in-memory Blob URL only (tests: `src/privacy.test.ts`, `e2e/flow.spec.ts`).
+- NEVER use `dangerouslySetInnerHTML`/`innerHTML` (tested); render server text as text nodes. The word "safe" appears only in the negated "This does not mean they are safe." (tested). Backend-owned strings (errors, confirm, schedule, results) come from `GET /strings` and `/result`, never duplicated in the frontend.
+- FLOW RULES (6b): fail closed, never auto-select a medicine, never pre-fill the picker; `POST /confirmations` REPLACES the set so always send everything; no reminders/notifications are sent; unsaved decisions prompt before leaving; delete-my-data is one dialog (all or nothing). Mocked e2e: `e2e/mock.ts` validates request bodies against docs/openapi.json. Live e2e: `playwright.live.config.ts` (needs Ollama; backend `ALLOWED_ORIGINS` must include the preview origin).
 - GPU rule: Canvas 2D and CSS transforms only (no WebGL, no backdrop-filter); at most 60/24 particles, DPR cap 1.5, paused when hidden, calm, reduced-motion or on processing screens (`useProcessingScreen`). Calm mode turns off particles, cursor ring, tile drift, parallax.
 - Contrast is a gate: `npm run check:contrast`. Photos: `scripts/prepare_photos.py` from `assets/photo_sources.json`; missing ones in docs/PHOTOS_NEEDED.md.
 
@@ -137,7 +139,6 @@ Frontend (from `frontend/`):
 
 Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`; Ollama must be running with qwen3-vl:8b-instruct pulled):
 - Render: `python data\render_documents.py` (about 4 minutes; 240 PNG + 120 PDF)
-- Smoke: `python backend\scripts\smoke_test_gemini.py`; one doc: `python backend\scripts\extract.py ds_006 --condition clean`
 - Evaluate (dev): `python -m eval.evaluate --split dev --conditions text,clean,scan,photo,poor [--limit N] [--run-id NAME]`; oracle (no API): add `--oracle`
 - Re-score with normalisation (no model calls): `python -m eval.evaluate --split dev --run-id dev-ollama-v1 --rescore normalised` -> eval/results/dev-ollama-v1-normalised
 - Tests: `cd backend; .venv\Scripts\python -m pytest` (live API tests: `-m live`)
