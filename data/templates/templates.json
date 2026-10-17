@@ -5251,6 +5251,1392 @@
     "text": "शुरुआत पर लौटें",
     "review_status": "draft_unreviewed"
    }
+  },
+  "ui.flow.review.title": {
+   "en": {
+    "text": "Check your medicines",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் மருந்துகளைச் சரிபார்க்கவும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अपनी दवाओं की जाँच करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.intro": {
+   "en": {
+    "text": "Compare each medicine below with your own paper. Your photo is on the side so you can look at both.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "கீழுள்ள ஒவ்வொரு மருந்தையும் உங்கள் சொந்தக் காகிதத்துடன் ஒப்பிடுங்கள். இரண்டையும் பார்க்க உங்கள் புகைப்படம் பக்கத்தில் உள்ளது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नीचे की हर दवा को अपने कागज़ से मिलाएँ। दोनों देखने के लिए आपकी फ़ोटो बगल में है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.meaning.title": {
+   "en": {
+    "text": "What your check means",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் சரிபார்ப்பின் பொருள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी जाँच का मतलब",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.meaning": {
+   "en": {
+    "text": "When you confirm a medicine, you are telling CareBridge that it matches your document. Interaction checks and the schedule use what you confirm.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு மருந்தை உறுதிசெய்யும்போது, அது உங்கள் ஆவணத்துடன் பொருந்துகிறது என்று CareBridge-இடம் சொல்கிறீர்கள். இடைவினைச் சரிபார்ப்பும் அட்டவணையும் நீங்கள் உறுதிசெய்வதையே பயன்படுத்தும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "किसी दवा की पुष्टि करके आप CareBridge को बताते हैं कि वह आपके दस्तावेज़ से मेल खाती है। इंटरैक्शन जाँच और समय-सारणी उसी पर चलते हैं जिसकी आप पुष्टि करते हैं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.risk": {
+   "en": {
+    "text": "If you pick the wrong medicine, the results will be for the wrong medicine, and CareBridge cannot tell. Take your time and compare the brand name, generic name and strength.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீங்கள் தவறான மருந்தைத் தேர்ந்தெடுத்தால், முடிவுகளும் தவறான மருந்துக்கானவையாக இருக்கும்; அதை CareBridge-ஆல் அறிய முடியாது. நிதானமாக, பிராண்ட் பெயர், பொதுப் பெயர், அளவு ஆகியவற்றை ஒப்பிடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अगर आप गलत दवा चुनते हैं तो नतीजे गलत दवा के होंगे, और CareBridge यह पहचान नहीं सकता। आराम से ब्रांड नाम, जेनेरिक नाम और मात्रा मिलाएँ।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.level.must_confirm": {
+   "en": {
+    "text": "Must confirm",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உறுதிசெய்ய வேண்டும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पुष्टि ज़रूरी",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.level.note": {
+   "en": {
+    "text": "Note",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "குறிப்பு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ध्यान दें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.level.none": {
+   "en": {
+    "text": "Nothing flagged",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எதுவும் குறிக்கப்படவில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कुछ चिह्नित नहीं",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.decided": {
+   "en": {
+    "text": "Your check is ready",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் சரிபார்ப்பு தயார்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी जाँच तैयार है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.no_name": {
+   "en": {
+    "text": "(no name was read)",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "(பெயர் படிக்கப்படவில்லை)",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "(कोई नाम नहीं पढ़ा गया)",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.quote": {
+   "en": {
+    "text": "What your document says",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் ஆவணம் சொல்வது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपका दस्तावेज़ क्या कहता है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.no_quote": {
+   "en": {
+    "text": "(no text was matched)",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "(உரை பொருந்தவில்லை)",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "(कोई पाठ नहीं मिला)",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.f.strength": {
+   "en": {
+    "text": "Strength",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "அளவு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मात्रा",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.f.dose": {
+   "en": {
+    "text": "Dose",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "டோஸ்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खुराक",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.f.frequency": {
+   "en": {
+    "text": "How often",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எத்தனை முறை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कितनी बार",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.f.duration": {
+   "en": {
+    "text": "For how long",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எவ்வளவு காலம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कितने समय तक",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.reasons": {
+   "en": {
+    "text": "Why this needs your attention",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இதற்கு உங்கள் கவனம் ஏன் தேவை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस पर आपका ध्यान क्यों चाहिए",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.reason_generic": {
+   "en": {
+    "text": "This detail needs a check against your document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த விவரத்தை உங்கள் ஆவணத்துடன் சரிபார்க்க வேண்டும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस जानकारी को अपने दस्तावेज़ से मिलाना ज़रूरी है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.non_daily": {
+   "en": {
+    "text": "This medicine is not taken every day, so no schedule is made for it.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்து தினமும் எடுக்கப்படுவதில்லை; எனவே இதற்கு அட்டவணை உருவாக்கப்படாது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह दवा रोज़ नहीं ली जाती, इसलिए इसके लिए समय-सारणी नहीं बनती।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.saved_open": {
+   "en": {
+    "text": "Saved. This medicine still needs confirmation.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "சேமிக்கப்பட்டது. இந்த மருந்துக்கு இன்னும் உறுதிப்படுத்தல் தேவை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सहेज लिया। इस दवा की पुष्टि अभी बाकी है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.saved_ok": {
+   "en": {
+    "text": "Saved. Your check is recorded.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "சேமிக்கப்பட்டது. உங்கள் சரிபார்ப்பு பதிவாகியுள்ளது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सहेज लिया। आपकी जाँच दर्ज हो गई।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.what_is_right": {
+   "en": {
+    "text": "What is right for this medicine?",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்துக்கு எது சரி?",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस दवा के लिए क्या सही है?",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.unidentified_note": {
+   "en": {
+    "text": "If you confirm without choosing a medicine from the list, it cannot be checked for interactions.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பட்டியலிலிருந்து மருந்தைத் தேர்ந்தெடுக்காமல் உறுதிசெய்தால், இடைவினைகளுக்காகச் சரிபார்க்க முடியாது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सूची से दवा चुने बिना पुष्टि करने पर उसकी इंटरैक्शन जाँच नहीं हो सकती।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.note": {
+   "en": {
+    "text": "Note (optional)",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "குறிப்பு (விருப்பம்)",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "टिप्पणी (वैकल्पिक)",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.note_count": {
+   "en": {
+    "text": "{n} of {max} characters.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "{max} எழுத்துகளில் {n}.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{max} में से {n} अक्षर।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.note_hint": {
+   "en": {
+    "text": "Please do not enter names or other personal information.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பெயர்கள் அல்லது பிற தனிப்பட்ட தகவலை உள்ளிடாதீர்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कृपया नाम या अन्य निजी जानकारी न लिखें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.remove_note": {
+   "en": {
+    "text": "This takes the medicine out of your list. Use it only if it is not on your document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இது மருந்தை உங்கள் பட்டியலிலிருந்து நீக்கும். உங்கள் ஆவணத்தில் இல்லாவிட்டால் மட்டும் பயன்படுத்துங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह दवा आपकी सूची से हट जाती है। इसे तभी चुनें जब वह आपके दस्तावेज़ में न हो।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.acks": {
+   "en": {
+    "text": "Please tick each one once you have checked it",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒவ்வொன்றையும் சரிபார்த்த பின் டிக் செய்யுங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हर एक को जाँचने के बाद टिक करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.ack_generic": {
+   "en": {
+    "text": "I have checked this detail against my document.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த விவரத்தை என் ஆவணத்துடன் சரிபார்த்தேன்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मैंने यह जानकारी अपने दस्तावेज़ से मिला ली है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.sched_edit": {
+   "en": {
+    "text": "Change how often or when (optional)",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எத்தனை முறை அல்லது எப்போது என்பதை மாற்றவும் (விருப்பம்)",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कितनी बार या कब, बदलें (वैकल्पिक)",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.sched_hint": {
+   "en": {
+    "text": "Only change this to match what your document says.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் ஆவணம் சொல்வதற்கு ஏற்ப மட்டும் மாற்றுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इसे सिर्फ़ तभी बदलें जब वह आपके दस्तावेज़ से मेल खाता हो।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.btn_confirm": {
+   "en": {
+    "text": "Use this check",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தச் சரிபார்ப்பைப் பயன்படுத்து",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह जाँच इस्तेमाल करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.btn_remove": {
+   "en": {
+    "text": "Remove this medicine",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மருந்தை நீக்கு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह दवा हटाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.btn_not_in_list": {
+   "en": {
+    "text": "Mark as not in the list",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பட்டியலில் இல்லை என்று குறி",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सूची में नहीं, ऐसा चिह्नित करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.still_needed": {
+   "en": {
+    "text": "Still needed:",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இன்னும் தேவை:",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अभी बाकी:",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.needs.action": {
+   "en": {
+    "text": "choose what is right",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எது சரி என்பதைத் தேர்ந்தெடுக்கவும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सही विकल्प चुनें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.needs.ack": {
+   "en": {
+    "text": "tick each check",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒவ்வொரு சரிபார்ப்பையும் டிக் செய்யவும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हर जाँच पर टिक करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.needs.formulary": {
+   "en": {
+    "text": "choose a medicine from the list",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பட்டியலிலிருந்து மருந்தைத் தேர்ந்தெடுக்கவும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सूची से दवा चुनें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.needs.strength": {
+   "en": {
+    "text": "choose a strength",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "அளவைத் தேர்ந்தெடுக்கவும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मात्रा चुनें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.needs.schedule": {
+   "en": {
+    "text": "complete how often and when",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எத்தனை முறை, எப்போது என்பதை நிரப்பவும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कितनी बार और कब, पूरा करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.change_drug": {
+   "en": {
+    "text": "Choose a different medicine",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "வேறு மருந்தைத் தேர்ந்தெடுக்கவும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दूसरी दवा चुनें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.none_found": {
+   "en": {
+    "text": "No medicines were found on this photo. You can add one from the list below, or upload a clearer photo.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தப் புகைப்படத்தில் மருந்துகள் எதுவும் கிடைக்கவில்லை. கீழே பட்டியலிலிருந்து ஒன்றைச் சேர்க்கலாம், அல்லது தெளிவான புகைப்படத்தைப் பதிவேற்றலாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस फ़ोटो में कोई दवा नहीं मिली। आप नीचे सूची से एक जोड़ सकते हैं, या साफ़ फ़ोटो अपलोड कर सकते हैं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.bar": {
+   "en": {
+    "text": "Summary of your checks",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் சரிபார்ப்புகளின் சுருக்கம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी जाँचों का सारांश",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.left": {
+   "en": {
+    "text": "Still to confirm: {n}",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இன்னும் உறுதிசெய்ய வேண்டியவை: {n}",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अभी पुष्टि बाकी: {n}",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.left_none": {
+   "en": {
+    "text": "Every medicine that must be confirmed has your check.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உறுதிசெய்ய வேண்டிய ஒவ்வொரு மருந்துக்கும் உங்கள் சரிபார்ப்பு உள்ளது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पुष्टि ज़रूरी हर दवा पर आपकी जाँच हो चुकी है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.unsaved": {
+   "en": {
+    "text": "Not saved yet",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இன்னும் சேமிக்கப்படவில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अभी सहेजा नहीं गया",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.save": {
+   "en": {
+    "text": "Save my checks",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் சரிபார்ப்புகளைச் சேமி",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरी जाँचें सहेजें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.saved_title": {
+   "en": {
+    "text": "Your checks are saved",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் சரிபார்ப்புகள் சேமிக்கப்பட்டன",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी जाँचें सहेज ली गईं",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.review.see_results": {
+   "en": {
+    "text": "See results",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "முடிவுகளைப் பார்க்கவும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नतीजे देखें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.saved.checked": {
+   "en": {
+    "text": "Will be looked up for interactions where our data allows",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எங்கள் தரவு அனுமதிக்கும் இடங்களில் இடைவினைகளுக்காகத் தேடப்படும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हमारे डेटा के दायरे में इंटरैक्शन के लिए देखी जाएगी",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.saved.not_checked": {
+   "en": {
+    "text": "Will not be checked for interactions",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இடைவினைகளுக்காகச் சரிபார்க்கப்படாது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इंटरैक्शन के लिए नहीं जाँची जाएगी",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.saved.scheduled": {
+   "en": {
+    "text": "Has a suggested schedule",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பரிந்துரை அட்டவணை உள்ளது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सुझाई गई समय-सारणी है",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.saved.not_scheduled": {
+   "en": {
+    "text": "No schedule yet",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இன்னும் அட்டவணை இல்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अभी समय-सारणी नहीं",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.saved.removed_note": {
+   "en": {
+    "text": "Medicines you removed do not appear here and are left out of every result.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீங்கள் நீக்கிய மருந்துகள் இங்கே தோன்றாது; எல்லா முடிவுகளிலிருந்தும் விலக்கப்படும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "जो दवाएँ आपने हटाईं वे यहाँ नहीं दिखतीं और हर नतीजे से बाहर रहती हैं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.leave.title": {
+   "en": {
+    "text": "Leave without saving?",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "சேமிக்காமல் வெளியேறவா?",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बिना सहेजे छोड़ें?",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.leave.body": {
+   "en": {
+    "text": "Your checks on this page have not been saved. If you leave now, they are lost.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தப் பக்கத்தில் நீங்கள் செய்த சரிபார்ப்புகள் சேமிக்கப்படவில்லை. இப்போது வெளியேறினால் அவை இழக்கப்படும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस पन्ने की आपकी जाँचें सहेजी नहीं गई हैं। अभी छोड़ने पर वे खो जाएँगी।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.leave.stay": {
+   "en": {
+    "text": "Stay on this page",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்தப் பக்கத்திலேயே இருங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इसी पन्ने पर रहें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.leave.go": {
+   "en": {
+    "text": "Leave without saving",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "சேமிக்காமல் வெளியேறு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बिना सहेजे छोड़ें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.picker.search": {
+   "en": {
+    "text": "Search medicine by brand or generic name",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பிராண்ட் அல்லது பொதுப் பெயரால் மருந்தைத் தேடுங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ब्रांड या जेनेरिक नाम से दवा खोजें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.picker.listbox": {
+   "en": {
+    "text": "Matching medicines",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பொருந்தும் மருந்துகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मिलती-जुलती दवाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.picker.brand": {
+   "en": {
+    "text": "Brand names",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பிராண்ட் பெயர்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ब्रांड नाम",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.picker.strength": {
+   "en": {
+    "text": "Strength",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "அளவு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मात्रा",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.picker.count": {
+   "en": {
+    "text": "{n} medicines found. Use the arrow keys to move and Enter to choose.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "{n} மருந்துகள் கிடைத்தன. நகர அம்பு விசைகளையும், தேர்ந்தெடுக்க Enter-ஐயும் பயன்படுத்துங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "{n} दवाएँ मिलीं। चलने के लिए तीर कुंजियाँ और चुनने के लिए Enter दबाएँ।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.picker.none": {
+   "en": {
+    "text": "No medicine found in the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பட்டியலில் மருந்து எதுவும் கிடைக்கவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सूची में कोई दवा नहीं मिली।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.photo.label": {
+   "en": {
+    "text": "Your photo",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் புகைப்படம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी फ़ोटो",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.photo.tools": {
+   "en": {
+    "text": "Zoom controls",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பெரிதாக்கும் கட்டுப்பாடுகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ज़ूम नियंत्रण",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.photo.zoom_in": {
+   "en": {
+    "text": "Zoom in",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பெரிதாக்கு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ज़ूम इन",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.photo.zoom_out": {
+   "en": {
+    "text": "Zoom out",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "சிறிதாக்கு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ज़ूम आउट",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.photo.reset": {
+   "en": {
+    "text": "Reset view",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "காட்சியை மீட்டமை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दृश्य रीसेट करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.photo.alt": {
+   "en": {
+    "text": "The photo you uploaded, shown so you can compare it with the list",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீங்கள் பதிவேற்றிய புகைப்படம்; பட்டியலுடன் ஒப்பிட்டுப் பார்க்கக் காட்டப்படுகிறது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी अपलोड की हुई फ़ोटो, सूची से मिलाने के लिए",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.photo.help": {
+   "en": {
+    "text": "With the photo focused: arrow keys move it, plus and minus zoom, zero resets. You can also drag it.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "புகைப்படத்தில் கவனம் இருக்கும்போது: அம்பு விசைகள் நகர்த்தும், + மற்றும் − பெரிதாக்கும், 0 மீட்டமைக்கும். இழுக்கவும் செய்யலாம்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ोटो पर फ़ोकस होने पर: तीर कुंजियाँ खिसकाती हैं, + और − ज़ूम करते हैं, 0 रीसेट करता है। आप खींच भी सकते हैं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.photo.show": {
+   "en": {
+    "text": "Show my photo",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் புகைப்படத்தைக் காட்டு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरी फ़ोटो दिखाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.photo.hide": {
+   "en": {
+    "text": "Hide my photo",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் புகைப்படத்தை மறை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरी फ़ोटो छिपाएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.photo.none": {
+   "en": {
+    "text": "Your photo is not available here (it was not kept and this page was reloaded). Please hold your paper document next to the screen and compare with that.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் புகைப்படம் இங்கே கிடைக்கவில்லை (அது வைத்திருக்கப்படவில்லை, பக்கமும் மீண்டும் ஏற்றப்பட்டது). உங்கள் காகித ஆவணத்தைத் திரைக்கு அருகில் பிடித்து அதனுடன் ஒப்பிடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपकी फ़ोटो यहाँ उपलब्ध नहीं है (वह रखी नहीं गई थी और पन्ना दोबारा लोड हुआ)। कृपया अपना कागज़ी दस्तावेज़ स्क्रीन के पास पकड़कर उससे मिलाएँ।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.sched.times": {
+   "en": {
+    "text": "Times per day",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒரு நாளில் எத்தனை முறை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिन में कितनी बार",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.sched.timing": {
+   "en": {
+    "text": "When",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "எப்போது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "कब",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.sched.days": {
+   "en": {
+    "text": "Number of days (optional)",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நாட்களின் எண்ணிக்கை (விருப்பம்)",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दिनों की संख्या (वैकल्पिक)",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.sched.days_hint": {
+   "en": {
+    "text": "1 to 365. Leave empty if your document gives no duration.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "1 முதல் 365 வரை. உங்கள் ஆவணத்தில் காலம் இல்லையெனில் காலியாக விடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "1 से 365। अगर दस्तावेज़ में अवधि नहीं है तो खाली छोड़ें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.sched.choose": {
+   "en": {
+    "text": "Choose…",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தேர்ந்தெடுக்கவும்…",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "चुनें…",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.morning": {
+   "en": {
+    "text": "In the morning",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "காலையில்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सुबह",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.afternoon": {
+   "en": {
+    "text": "In the afternoon",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மதியம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दोपहर में",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.evening": {
+   "en": {
+    "text": "In the evening",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மாலையில்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "शाम को",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.night": {
+   "en": {
+    "text": "At night",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இரவில்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रात को",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.with_meals": {
+   "en": {
+    "text": "With meals",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உணவுடன்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खाने के साथ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.before_meals": {
+   "en": {
+    "text": "Before meals",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உணவுக்கு முன்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खाने से पहले",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.after_meals": {
+   "en": {
+    "text": "After meals",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உணவுக்குப் பின்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खाने के बाद",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.bedtime": {
+   "en": {
+    "text": "At bedtime",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "படுக்கும் நேரத்தில்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सोते समय",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.as_needed": {
+   "en": {
+    "text": "Only when needed",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தேவைப்படும்போது மட்டும்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ज़रूरत पड़ने पर ही",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.unspecified": {
+   "en": {
+    "text": "Not written in my document",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் ஆவணத்தில் எழுதப்படவில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरे दस्तावेज़ में नहीं लिखा",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.timing.other": {
+   "en": {
+    "text": "Other",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மற்றவை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अन्य",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.add.open": {
+   "en": {
+    "text": "Add a medicine I do not see here",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இங்கே காணப்படாத ஒரு மருந்தைச் சேர்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ऐसी दवा जोड़ें जो यहाँ नहीं दिखती",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.add.hint": {
+   "en": {
+    "text": "You can only add a medicine by choosing it from the list.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பட்டியலிலிருந்து தேர்ந்தெடுப்பதன் மூலம் மட்டுமே மருந்தைச் சேர்க்க முடியும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दवा सिर्फ़ सूची से चुनकर ही जोड़ी जा सकती है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.add.title": {
+   "en": {
+    "text": "Add a medicine from the list",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பட்டியலிலிருந்து மருந்தைச் சேர்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "सूची से दवा जोड़ें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.add.dose": {
+   "en": {
+    "text": "Dose",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "டோஸ்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "खुराक",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.add.confirm": {
+   "en": {
+    "text": "Add to my list",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் பட்டியலில் சேர்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरी सूची में जोड़ें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.add.cancel": {
+   "en": {
+    "text": "Cancel",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ரத்து செய்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रद्द करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.add.needs": {
+   "en": {
+    "text": "Choose a medicine, a strength, a dose, how many times a day and when.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மருந்து, அளவு, டோஸ், ஒரு நாளில் எத்தனை முறை, எப்போது என்பதைத் தேர்ந்தெடுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "दवा, मात्रा, खुराक, दिन में कितनी बार और कब, चुनें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.add.added": {
+   "en": {
+    "text": "You added this medicine",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "நீங்கள் இந்த மருந்தைச் சேர்த்தீர்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपने यह दवा जोड़ी",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.add.remove": {
+   "en": {
+    "text": "Remove from my list",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் பட்டியலிலிருந்து நீக்கு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरी सूची से हटाएँ",
+    "review_status": "draft_unreviewed"
+   }
   }
  },
  "english_only": {

@@ -128,6 +128,12 @@ NEW.update({
     "ui.flow.processing.to_start": ("Return to the start", "தொடக்கத்துக்குத் திரும்புங்கள்", "शुरुआत पर लौटें"),
 })
 
+# per-area string modules (scripts/p6b_*.py, each defines STRINGS)
+for _f in sorted(Path(__file__).parent.glob("p6b_*.py")):
+    _m = __import__(_f.stem)
+    assert not set(_m.STRINGS) & set(NEW), f"duplicate ids in {_f.name}"
+    NEW.update(_m.STRINGS)
+
 
 def main():
     p = X.TEMPLATES

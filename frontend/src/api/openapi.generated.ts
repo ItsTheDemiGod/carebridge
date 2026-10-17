@@ -45,7 +45,8 @@ export type ScheduleEdit = {
 export type SessionIn = {
   language?: "en" | "ta" | "hi"
 }
-export type TimingLabel = "morning" | "afternoon" | "evening" | "night" | "with_meals" | "before_meals" | "after_meals" | "bedtime" | "as_needed" | "unspecified" | "other"
+export const TIMING_LABELS = ["morning","afternoon","evening","night","with_meals","before_meals","after_meals","bedtime","as_needed","unspecified","other"] as const
+export type TimingLabel = (typeof TIMING_LABELS)[number]
 
 export const ENDPOINTS = [
   "DELETE /api/v1/adherence/{event_id}",
