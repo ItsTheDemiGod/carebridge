@@ -4,7 +4,12 @@
     "photographer": "Tmeers91",
     "license": "CC0 1.0",
     "date_fetched": "2026-10-16",
-    "crop": [0.5, 0, 1, 1],
+    "crop": [
+      0.5,
+      0,
+      1,
+      1
+    ],
     "note": "right half only (the empty foil side); the printed side with readable text is cropped out"
   },
   "leaves": {
@@ -25,7 +30,60 @@
     "photographer": "Mysterymanblue",
     "license": "CC BY 4.0",
     "date_fetched": "2026-10-16",
-    "crop": [0, 0.06, 1, 0.9],
+    "crop": [
+      0,
+      0.06,
+      1,
+      0.9
+    ],
     "note": "cropped, duotone and resizing applied by the site; metadata stripped"
+  },
+  "pillbox": {
+    "source_url": "https://www.pexels.com/photo/pills-in-organizer-14387794/",
+    "photographer": "Towfiqu barbhuiya",
+    "license": "Pexels License",
+    "date_fetched": "2026-10-17",
+    "note": "duotone and resizing applied by the site; metadata stripped"
+  },
+  "notebook": {
+    "source_url": "https://www.pexels.com/photo/blue-ceramic-mug-beside-clear-drinking-glass-5486002/",
+    "photographer": "cottonbro studio",
+    "license": "Pexels License",
+    "date_fetched": "2026-10-17",
+    "note": "duotone and resizing applied by the site; metadata stripped"
+  },
+  "stethoscope": {
+    "source_url": "https://www.pexels.com/photo/stethoscope-notebook-and-medicines-on-doctors-office-desk-5407237/",
+    "photographer": "Tima Miroshnichenko",
+    "license": "Pexels License",
+    "date_fetched": "2026-10-17",
+    "crop": [
+      0,
+      0,
+      1,
+      0.8
+    ],
+    "note": "cropped to remove the blurred blister packs at the bottom; duotone and resizing applied by the site; metadata stripped"
+  },
+  "breakfast": {
+    "source_url": "https://www.pexels.com/photo/breakfast-of-pancakes-and-buns-10388447/",
+    "photographer": "Ron Lach",
+    "license": "Pexels License",
+    "date_fetched": "2026-10-17",
+    "note": "duotone and resizing applied by the site; metadata stripped"
+  },
+  "phone": {
+    "source_url": "https://www.pexels.com/photo/smartphone-on-wooden-table-33039024/",
+    "photographer": "Valentin Ilas",
+    "license": "Pexels License",
+    "date_fetched": "2026-10-17",
+    "note": "duotone and resizing applied by the site; metadata stripped"
+  },
+  "clipboard": {
+    "source_url": "https://www.pexels.com/photo/notebook-and-clipboard-with-papers-placed-on-desk-with-folders-and-pens-5668469/",
+    "photographer": "Sora Shimazaki",
+    "license": "Pexels License",
+    "date_fetched": "2026-10-17",
+    "note": "duotone and resizing applied by the site; metadata stripped"
   }
 }

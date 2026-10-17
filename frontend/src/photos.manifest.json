@@ -7,6 +7,26 @@
   ],
   "credit": "Tmeers91, CC0 1.0"
  },
+ "breakfast": {
+  "width": 2000,
+  "height": 3000,
+  "widths": [
+   800,
+   1400,
+   2000
+  ],
+  "credit": "Ron Lach, Pexels License"
+ },
+ "clipboard": {
+  "width": 2000,
+  "height": 3000,
+  "widths": [
+   800,
+   1400,
+   2000
+  ],
+  "credit": "Sora Shimazaki, Pexels License"
+ },
  "leaves": {
   "width": 1400,
   "height": 1867,
@@ -25,6 +45,46 @@
    2000
   ],
   "credit": "Delany Dean, CC BY 2.0"
+ },
+ "notebook": {
+  "width": 2000,
+  "height": 1333,
+  "widths": [
+   800,
+   1400,
+   2000
+  ],
+  "credit": "cottonbro studio, Pexels License"
+ },
+ "phone": {
+  "width": 2000,
+  "height": 1333,
+  "widths": [
+   800,
+   1400,
+   2000
+  ],
+  "credit": "Valentin Ilas, Pexels License"
+ },
+ "pillbox": {
+  "width": 2000,
+  "height": 1333,
+  "widths": [
+   800,
+   1400,
+   2000
+  ],
+  "credit": "Towfiqu barbhuiya, Pexels License"
+ },
+ "stethoscope": {
+  "width": 2000,
+  "height": 2399,
+  "widths": [
+   800,
+   1400,
+   2000
+  ],
+  "credit": "Tima Miroshnichenko, Pexels License"
  },
  "water": {
   "width": 2000,
