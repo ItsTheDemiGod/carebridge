@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../components/Button'
 import { Dialog } from '../components/Dialog'
@@ -7,13 +7,14 @@ import { useT } from '../i18n/I18n'
 import { useFlow } from './FlowProvider'
 
 /** "Delete my data": shown in the header once a session exists. Withdrawing consent is the same action. */
-export function DeleteControl() {
+export function DeleteControl({ labelKey = 'ui.flow.delete.button', className = 'delete-btn' }: { labelKey?: string; className?: string } = {}) {
   const { t } = useT()
   const flow = useFlow()
   const nav = useNavigate()
   const [open, setOpen] = useState(false)
   const [busy, setBusy] = useState(false)
   const [failed, setFailed] = useState(false)
+  const tid = useId()
   if (!flow.state.session) return null
 
   const run = async () => {
@@ -24,20 +25,16 @@ export function DeleteControl() {
     if (receipt) {
       setOpen(false)
       nav('/')
-    } else if (flow.state.boot !== 'no_session') setFailed(true)
-    else {
-      setOpen(false) // the session was already gone (401): nothing left to delete
-      nav('/')
-    }
+    } else setFailed(true)
   }
   return (
     <>
-      <button type="button" className="delete-btn" onClick={() => setOpen(true)}>
+      <button type="button" className={className} onClick={() => setOpen(true)}>
         <Icon name="trash" size={20} />
-        <span>{t('ui.flow.delete.button')}</span>
+        <span>{t(labelKey)}</span>
       </button>
-      <Dialog open={open} onClose={() => !busy && setOpen(false)} labelledBy="delete-title">
-        <h2 id="delete-title" className="h3-like">
+      <Dialog open={open} onClose={() => !busy && setOpen(false)} labelledBy={tid}>
+        <h2 id={tid} className="h3-like">
           {t('ui.flow.delete.title')}
         </h2>
         <p>{t('ui.flow.delete.body')}</p>

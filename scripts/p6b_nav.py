@@ -1,0 +1,20 @@
+"""Phase 6b-7 strings: document list. id -> (en, ta, hi). Drafts for ta/hi."""
+STRINGS: dict[str, tuple[str, str, str]] = {
+    "ui.flow.docs.title": ("Documents in this session", "இந்த அமர்வில் உள்ள ஆவணங்கள்", "इस सत्र के दस्तावेज़"),
+    "ui.flow.docs.intro": ("These are the photos you added in this session. They are kept encrypted until you delete them or 24 hours pass.", "இந்த அமர்வில் நீங்கள் சேர்த்த புகைப்படங்கள் இவை. நீங்கள் நீக்கும் வரை அல்லது 24 மணி நேரம் ஆகும் வரை அவை குறியாக்கத்துடன் வைக்கப்படும்.", "ये इस सत्र में जोड़ी गई आपकी फ़ोटो हैं। आप हटाएँ या 24 घंटे बीतें, तब तक ये एन्क्रिप्टेड रहती हैं।"),
+    "ui.flow.docs.empty": ("No documents yet.", "இன்னும் ஆவணங்கள் இல்லை.", "अभी कोई दस्तावेज़ नहीं।"),
+    "ui.flow.docs.open": ("Open", "திற", "खोलें"),
+    "ui.flow.docs.open_review": ("Check medicines", "மருந்துகளைச் சரிபார்", "दवाएँ जाँचें"),
+    "ui.flow.docs.open_result": ("See results", "முடிவுகளைப் பார்", "नतीजे देखें"),
+    "ui.flow.docs.new": ("Add another photo", "மற்றொரு புகைப்படத்தைச் சேர்", "एक और फ़ोटो जोड़ें"),
+    "ui.flow.docs.state.queued": ("Waiting to be read", "படிக்கக் காத்திருக்கிறது", "पढ़े जाने की प्रतीक्षा"),
+    "ui.flow.docs.state.extracting": ("Being read", "படிக்கப்படுகிறது", "पढ़ी जा रही है"),
+    "ui.flow.docs.state.normalising": ("Being organised", "ஒழுங்குபடுத்தப்படுகிறது", "व्यवस्थित हो रही है"),
+    "ui.flow.docs.state.awaiting_confirmation": ("Ready for your check", "உங்கள் சரிபார்ப்புக்குத் தயார்", "आपकी जाँच के लिए तैयार"),
+    "ui.flow.docs.state.failed": ("Could not be read", "படிக்க முடியவில்லை", "पढ़ी नहीं जा सकी"),
+    "ui.flow.docs.state.expired": ("Expired", "காலாவதியானது", "समाप्त"),
+    "ui.flow.docs.state.deleted": ("Deleted", "நீக்கப்பட்டது", "हटाई गई"),
+    "ui.flow.docs.delete.title": ("Deleting is all or nothing", "நீக்குவது எல்லாம் அல்லது எதுவும் இல்லை", "हटाना या तो सब कुछ या कुछ नहीं"),
+    "ui.flow.docs.delete.body": ("A single document cannot be deleted on its own. Deleting removes everything for this session: every document, result, schedule time and taken or skipped mark, and withdraws your consent.", "ஒரு ஆவணத்தை மட்டும் தனியாக நீக்க முடியாது. நீக்கினால் இந்த அமர்வின் எல்லாமும் அகற்றப்படும்: ஒவ்வொரு ஆவணம், முடிவு, அட்டவணை நேரம், எடுத்த அல்லது தவிர்த்த குறிப்பு; உங்கள் ஒப்புதலும் திரும்பப் பெறப்படும்.", "किसी एक दस्तावेज़ को अलग से नहीं हटाया जा सकता। हटाने पर इस सत्र का सब कुछ मिट जाता है: हर दस्तावेज़, नतीजा, समय-सारणी का समय और ली या छोड़ी गई खुराक के निशान, और आपकी सहमति वापस हो जाती है।"),
+    "ui.flow.docs.delete.button": ("Delete everything, including these documents", "இந்த ஆவணங்கள் உட்பட எல்லாவற்றையும் நீக்கு", "इन दस्तावेज़ों समेत सब कुछ हटाएँ"),
+}

@@ -168,6 +168,74 @@
    "text": "Delete everything for this session?",
    "review_status": "not_required"
   },
+  "ui.flow.docs.delete.body": {
+   "text": "A single document cannot be deleted on its own. Deleting removes everything for this session: every document, result, schedule time and taken or skipped mark, and withdraws your consent.",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.delete.button": {
+   "text": "Delete everything, including these documents",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.delete.title": {
+   "text": "Deleting is all or nothing",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.empty": {
+   "text": "No documents yet.",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.intro": {
+   "text": "These are the photos you added in this session. They are kept encrypted until you delete them or 24 hours pass.",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.new": {
+   "text": "Add another photo",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.open": {
+   "text": "Open",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.open_result": {
+   "text": "See results",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.open_review": {
+   "text": "Check medicines",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.state.awaiting_confirmation": {
+   "text": "Ready for your check",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.state.deleted": {
+   "text": "Deleted",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.state.expired": {
+   "text": "Expired",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.state.extracting": {
+   "text": "Being read",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.state.failed": {
+   "text": "Could not be read",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.state.normalising": {
+   "text": "Being organised",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.state.queued": {
+   "text": "Waiting to be read",
+   "review_status": "not_required"
+  },
+  "ui.flow.docs.title": {
+   "text": "Documents in this session",
+   "review_status": "not_required"
+  },
   "ui.flow.expired.again": {
    "text": "Start again",
    "review_status": "not_required"
@@ -1626,6 +1694,74 @@
    "text": "இந்த அமர்வின் எல்லாவற்றையும் நீக்கவா?",
    "review_status": "draft_unreviewed"
   },
+  "ui.flow.docs.delete.body": {
+   "text": "ஒரு ஆவணத்தை மட்டும் தனியாக நீக்க முடியாது. நீக்கினால் இந்த அமர்வின் எல்லாமும் அகற்றப்படும்: ஒவ்வொரு ஆவணம், முடிவு, அட்டவணை நேரம், எடுத்த அல்லது தவிர்த்த குறிப்பு; உங்கள் ஒப்புதலும் திரும்பப் பெறப்படும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.delete.button": {
+   "text": "இந்த ஆவணங்கள் உட்பட எல்லாவற்றையும் நீக்கு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.delete.title": {
+   "text": "நீக்குவது எல்லாம் அல்லது எதுவும் இல்லை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.empty": {
+   "text": "இன்னும் ஆவணங்கள் இல்லை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.intro": {
+   "text": "இந்த அமர்வில் நீங்கள் சேர்த்த புகைப்படங்கள் இவை. நீங்கள் நீக்கும் வரை அல்லது 24 மணி நேரம் ஆகும் வரை அவை குறியாக்கத்துடன் வைக்கப்படும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.new": {
+   "text": "மற்றொரு புகைப்படத்தைச் சேர்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.open": {
+   "text": "திற",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.open_result": {
+   "text": "முடிவுகளைப் பார்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.open_review": {
+   "text": "மருந்துகளைச் சரிபார்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.awaiting_confirmation": {
+   "text": "உங்கள் சரிபார்ப்புக்குத் தயார்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.deleted": {
+   "text": "நீக்கப்பட்டது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.expired": {
+   "text": "காலாவதியானது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.extracting": {
+   "text": "படிக்கப்படுகிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.failed": {
+   "text": "படிக்க முடியவில்லை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.normalising": {
+   "text": "ஒழுங்குபடுத்தப்படுகிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.queued": {
+   "text": "படிக்கக் காத்திருக்கிறது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.title": {
+   "text": "இந்த அமர்வில் உள்ள ஆவணங்கள்",
+   "review_status": "draft_unreviewed"
+  },
   "ui.flow.expired.again": {
    "text": "மீண்டும் தொடங்குங்கள்",
    "review_status": "draft_unreviewed"
@@ -3082,6 +3218,74 @@
   },
   "ui.flow.delete.title": {
    "text": "इस सत्र का सब कुछ हटाएँ?",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.delete.body": {
+   "text": "किसी एक दस्तावेज़ को अलग से नहीं हटाया जा सकता। हटाने पर इस सत्र का सब कुछ मिट जाता है: हर दस्तावेज़, नतीजा, समय-सारणी का समय और ली या छोड़ी गई खुराक के निशान, और आपकी सहमति वापस हो जाती है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.delete.button": {
+   "text": "इन दस्तावेज़ों समेत सब कुछ हटाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.delete.title": {
+   "text": "हटाना या तो सब कुछ या कुछ नहीं",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.empty": {
+   "text": "अभी कोई दस्तावेज़ नहीं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.intro": {
+   "text": "ये इस सत्र में जोड़ी गई आपकी फ़ोटो हैं। आप हटाएँ या 24 घंटे बीतें, तब तक ये एन्क्रिप्टेड रहती हैं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.new": {
+   "text": "एक और फ़ोटो जोड़ें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.open": {
+   "text": "खोलें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.open_result": {
+   "text": "नतीजे देखें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.open_review": {
+   "text": "दवाएँ जाँचें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.awaiting_confirmation": {
+   "text": "आपकी जाँच के लिए तैयार",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.deleted": {
+   "text": "हटाई गई",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.expired": {
+   "text": "समाप्त",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.extracting": {
+   "text": "पढ़ी जा रही है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.failed": {
+   "text": "पढ़ी नहीं जा सकी",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.normalising": {
+   "text": "व्यवस्थित हो रही है",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.state.queued": {
+   "text": "पढ़े जाने की प्रतीक्षा",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.docs.title": {
+   "text": "इस सत्र के दस्तावेज़",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.expired.again": {

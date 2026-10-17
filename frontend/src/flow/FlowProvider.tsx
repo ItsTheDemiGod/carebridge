@@ -125,7 +125,12 @@ export function FlowProvider({ children }: { children: ReactNode }) {
           dispatch({ type: 'deleted', receipt })
           return receipt ?? ({ deleted: {}, deleted_at: '', message: '', receipt: '' } satisfies DeleteReceipt)
         } catch (e) {
-          report(e)
+          if (report(e).kind === 'expired') {
+            // the session was already gone: nothing is left to delete
+            setPhoto(null)
+            dispatch({ type: 'reset' })
+            return { deleted: {}, deleted_at: '', message: '', receipt: '' } satisfies DeleteReceipt
+          }
           return null
         }
       },

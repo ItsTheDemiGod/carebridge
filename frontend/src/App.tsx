@@ -5,6 +5,7 @@ import { LandingPage } from './pages/LandingPage'
 import { PrivacyPage } from './pages/PrivacyPage'
 import { ConsentPage } from './pages/flow/ConsentPage'
 import { ProcessingPage } from './pages/flow/ProcessingPage'
+import { DocumentsPage } from './pages/flow/DocumentsPage'
 import { ResultPage } from './pages/flow/ResultPage'
 import { ReviewPage } from './pages/flow/ReviewPage'
 import { SchedulePage } from './pages/flow/SchedulePage'
@@ -26,6 +27,7 @@ export const routes: RouteObject[] = [
       { path: 'd/:id/result', element: <ResultPage /> },
       { path: 'd/:id/schedule', element: <SchedulePage /> },
       { path: 'd/:id/summary', element: <SummaryPage /> },
+      { path: 'documents', element: <DocumentsPage /> },
       { path: 'privacy', element: <PrivacyPage /> },
       { path: 'how-it-works', element: <HowItWorksPage /> },
       { path: '*', element: <NotFoundPage /> },
