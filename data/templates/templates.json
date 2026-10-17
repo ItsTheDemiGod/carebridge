@@ -5632,7 +5632,7 @@
   },
   "ui.flow.review.acks": {
    "en": {
-    "text": "Please tick each one once you have checked it",
+    "text": "Please tick each one after you check it",
     "review_status": "not_required"
    },
    "ta": {

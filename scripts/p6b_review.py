@@ -27,7 +27,7 @@ STRINGS: dict[str, tuple[str, str, str]] = {
     "ui.flow.review.note_count": ("{n} of {max} characters.", "{max} எழுத்துகளில் {n}.", "{max} में से {n} अक्षर।"),
     "ui.flow.review.note_hint": ("Please do not enter names or other personal information.", "பெயர்கள் அல்லது பிற தனிப்பட்ட தகவலை உள்ளிடாதீர்கள்.", "कृपया नाम या अन्य निजी जानकारी न लिखें।"),
     "ui.flow.review.remove_note": ("This takes the medicine out of your list. Use it only if it is not on your document.", "இது மருந்தை உங்கள் பட்டியலிலிருந்து நீக்கும். உங்கள் ஆவணத்தில் இல்லாவிட்டால் மட்டும் பயன்படுத்துங்கள்.", "यह दवा आपकी सूची से हट जाती है। इसे तभी चुनें जब वह आपके दस्तावेज़ में न हो।"),
-    "ui.flow.review.acks": ("Please tick each one once you have checked it", "ஒவ்வொன்றையும் சரிபார்த்த பின் டிக் செய்யுங்கள்", "हर एक को जाँचने के बाद टिक करें"),
+    "ui.flow.review.acks": ("Please tick each one after you check it", "ஒவ்வொன்றையும் சரிபார்த்த பின் டிக் செய்யுங்கள்", "हर एक को जाँचने के बाद टिक करें"),
     "ui.flow.review.ack_generic": ("I have checked this detail against my document.", "இந்த விவரத்தை என் ஆவணத்துடன் சரிபார்த்தேன்.", "मैंने यह जानकारी अपने दस्तावेज़ से मिला ली है।"),
     "ui.flow.review.sched_edit": ("Change how often or when (optional)", "எத்தனை முறை அல்லது எப்போது என்பதை மாற்றவும் (விருப்பம்)", "कितनी बार या कब, बदलें (वैकल्पिक)"),
     "ui.flow.review.sched_hint": ("Only change this to match what your document says.", "உங்கள் ஆவணம் சொல்வதற்கு ஏற்ப மட்டும் மாற்றுங்கள்.", "इसे सिर्फ़ तभी बदलें जब वह आपके दस्तावेज़ से मेल खाता हो।"),

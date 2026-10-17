@@ -401,7 +401,7 @@
    "review_status": "not_required"
   },
   "ui.flow.review.acks": {
-   "text": "Please tick each one once you have checked it",
+   "text": "Please tick each one after you check it",
    "review_status": "not_required"
   },
   "ui.flow.review.bar": {
