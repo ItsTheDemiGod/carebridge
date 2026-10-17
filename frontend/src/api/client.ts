@@ -3,6 +3,8 @@
 export class ApiError extends Error {
   readonly status: number
   readonly code: string
+  /** seconds from a Retry-After header (429 queue_full), else null */
+  retryAfter: number | null = null
   /** status 0 means the server could not be reached at all (code "network_error"). */
   constructor(status: number, code: string, message: string) {
     super(message)
@@ -14,14 +16,17 @@ export class ApiError extends Error {
 
 const STATE_CHANGING = new Set(['POST', 'PUT', 'PATCH', 'DELETE'])
 
-type Options = { method?: string; body?: unknown; signal?: AbortSignal }
+type Options = { method?: string; body?: unknown; raw?: { data: Blob; type: string }; blob?: boolean; signal?: AbortSignal }
 
 export async function api<T>(path: string, opts: Options = {}): Promise<T> {
   const method = (opts.method ?? 'GET').toUpperCase()
   const headers: Record<string, string> = { Accept: 'application/json' }
   if (STATE_CHANGING.has(method)) headers['X-CareBridge-Request'] = '1'
   let body: BodyInit | undefined
-  if (opts.body !== undefined) {
+  if (opts.raw) {
+    headers['Content-Type'] = opts.raw.type // raw file body (upload): sent once, never stored
+    body = opts.raw.data
+  } else if (opts.body !== undefined) {
     headers['Content-Type'] = 'application/json'
     body = JSON.stringify(opts.body)
   }
@@ -33,6 +38,7 @@ export async function api<T>(path: string, opts: Options = {}): Promise<T> {
     throw new ApiError(0, 'network_error', 'network_error')
   }
   if (res.status === 204) return undefined as T
+  if (opts.blob && res.ok) return (await res.blob()) as T
   let data: unknown = null
   try {
     data = await res.json()
@@ -41,24 +47,16 @@ export async function api<T>(path: string, opts: Options = {}): Promise<T> {
   }
   if (!res.ok) {
     const err = (data as { error?: { code?: string; message?: string } } | null)?.error
-    throw new ApiError(res.status, err?.code ?? 'unknown_error', err?.message ?? '')
+    const e = new ApiError(res.status, err?.code ?? 'unknown_error', err?.message ?? '')
+    const ra = Number(res.headers.get('Retry-After'))
+    e.retryAfter = Number.isFinite(ra) && ra > 0 ? ra : null
+    throw e
   }
   return data as T
 }
 
-/* Types only for the endpoints used in Phase 6a. */
-export type Lang = 'en' | 'ta' | 'hi'
-export type Health = { status: string; app: string; version: string }
-export type ConsentNotice = {
-  version: string
-  language: Lang
-  sha256: string
-  title: string
-  items: { id: string; text: string }[]
-  purposes: { id: string; label: string; required?: boolean }[]
-  review_status: string
-}
-export type StringsResponse = { language: Lang; strings: Record<string, string>; draft_unreviewed: boolean }
+export type { Lang, Health, ConsentNotice, StringsResponse } from './types'
+import type { ConsentNotice, Health, Lang, StringsResponse } from './types'
 
 export const getHealth = (signal?: AbortSignal) => api<Health>('/api/health', { signal })
 export const getConsentNotice = (lang: Lang, signal?: AbortSignal) => api<ConsentNotice>(`/api/v1/consent-notice?lang=${lang}`, { signal })

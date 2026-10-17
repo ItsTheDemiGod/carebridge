@@ -3,3 +3,7 @@ INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 INFO:     127.0.0.1:59544 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60867 - "GET /api/v1/consent-notice HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60869 - "GET /api/v1/consent-notice HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60871 - "GET /api/v1/consent-notice HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53354 - "GET /api/v1/consent-notice HTTP/1.1" 200 OK
