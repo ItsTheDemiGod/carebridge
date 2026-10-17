@@ -5,7 +5,7 @@ const NODES = ['n1', 'n2', 'n3', 'n4', 'n5'] as const
 const YOURS = new Set(['n1', 'n3'])
 
 /** Simple SVG diagram: photo, reading, your check, explanation, interactions, then found / could not check.
- *  Labels come from strings. Hidden below 48 rem, where the numbered list carries the same information. */
+ *  Labels come from strings. Below 48 rem the vertical version below is shown instead (same five steps and the same two outcomes). */
 export function PipelineDiagram() {
   const { t } = useT()
   return (
@@ -42,5 +42,33 @@ export function PipelineDiagram() {
         {t('ui.how.unchecked')}
       </text>
     </svg>
+  )
+}
+
+/** The same pipeline for phones: five steps top to bottom, then the two outcomes side by side (stacked on very narrow screens). Nothing is hidden. */
+export function PipelineVertical() {
+  const { t } = useT()
+  return (
+    <div className="pl-vertical" role="group" aria-label={t('ui.how.fig.alt')}>
+      <ol>
+        {NODES.map((n, i) => (
+          <li key={n} className={YOURS.has(n) ? 'plv-node plv-yours' : 'plv-node'}>
+            <span className="plv-num" aria-hidden="true">{`0${i + 1}`}</span>
+            <span className="plv-title">{t(`ui.how.${n}.title`)}</span>
+            {YOURS.has(n) ? <span className="plv-you"><Icon name="check" size={16} />{t('ui.how.you')}</span> : null}
+          </li>
+        ))}
+      </ol>
+      <ul className="plv-outcomes">
+        <li className="plv-found">
+          <Icon name="alert" size={28} />
+          <span>{t('ui.how.found')}</span>
+        </li>
+        <li className="plv-unchecked">
+          <Icon name="help" size={28} />
+          <span>{t('ui.how.unchecked')}</span>
+        </li>
+      </ul>
+    </div>
   )
 }

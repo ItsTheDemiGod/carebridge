@@ -1,7 +1,7 @@
 import { Notice, Tag } from '../components/Badges'
 import { Icon, type IconName } from '../components/icons'
 import { Container, SectionHeading } from '../components/Layout'
-import { PipelineDiagram } from '../components/PipelineDiagram'
+import { PipelineDiagram, PipelineVertical } from '../components/PipelineDiagram'
 import { useT } from '../i18n/I18n'
 import { usePageTitle } from './usePageTitle'
 
@@ -19,6 +19,7 @@ export function HowItWorksPage() {
       <div className="pipeline-wrap">
         <PipelineDiagram />
       </div>
+      <PipelineVertical />
       <ol className="how-list">
         {STEPS.map((n, i) => (
           <li key={n}>

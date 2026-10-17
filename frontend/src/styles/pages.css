@@ -128,7 +128,7 @@ main { overflow-x: clip; }
 
 .steps-body { display: grid; gap: var(--s-7); margin-top: var(--s-6); }
 .land-steps { list-style: none; margin: 0; padding: 0; display: grid; }
-.land-steps li { display: grid; grid-template-columns: clamp(4rem, 12vw, 7.5rem) 1fr; gap: var(--s-4); padding-block: var(--s-6); border-top: 1px solid var(--line); }
+.land-steps li { display: grid; grid-template-columns: clamp(4rem, 12vw, 7.5rem) minmax(0, 1fr); gap: var(--s-4); padding-block: var(--s-6); border-top: 1px solid var(--line); }
 .land-steps li:last-child { border-bottom: 1px solid var(--line); }
 .step-num { font-family: var(--font-display); font-size: clamp(3.4rem, 7vw, 6rem); line-height: 0.9; color: var(--terracotta); font-variation-settings: 'opsz' 144; }
 .land-steps h3 { display: flex; align-items: center; gap: var(--s-3); margin-bottom: var(--s-2); }
@@ -210,3 +210,33 @@ html.calm .mosaic-cell { transform: none !important; }
 .footer-credits summary { cursor: pointer; min-height: 2.75rem; display: flex; align-items: center; color: var(--on-dark); }
 .footer-credits ul { margin: var(--s-2) 0 0; padding-left: 1.1rem; display: grid; gap: var(--s-1); }
 .footer-credits a { color: var(--on-dark); text-decoration-color: var(--sage); text-underline-offset: 0.2em; }
+
+/* Phase 6c-6: the pipeline as a vertical flow on phones (the SVG takes over from 48 rem) */
+.pl-vertical { display: grid; gap: var(--s-4); }
+@media (min-width: 48rem) { .pl-vertical { display: none; } }
+.pl-vertical ol { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-5); }
+.plv-node { position: relative; display: grid; grid-template-columns: auto 1fr; gap: 0 var(--s-3); align-items: baseline; padding: var(--s-3) var(--s-4); border: 1.5px solid var(--line-strong); border-radius: var(--r-md); background: var(--paper-2); }
+.plv-node.plv-yours { background: var(--mist); border: 2.5px solid var(--pine); }
+.plv-node:not(:last-child)::after { content: ''; position: absolute; left: 1.7rem; top: 100%; height: var(--s-5); border-left: 2px solid var(--ink-soft); }
+.plv-num { font-family: var(--font-display); font-size: 1.4rem; color: var(--terracotta-ink); }
+.plv-title { font-weight: 600; font-size: var(--t-h4); }
+.plv-you { grid-column: 2; display: inline-flex; align-items: center; gap: var(--s-2); color: var(--pine); font-size: var(--t-small); font-weight: 600; }
+.plv-outcomes { list-style: none; margin: 0; padding: var(--s-4) 0 0; border-top: 2px solid var(--ink-soft); display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: var(--s-3); }
+.plv-outcomes li { display: grid; justify-items: center; gap: var(--s-2); padding: var(--s-4); text-align: center; border-radius: var(--r-md); font-weight: 600; font-size: var(--t-h4); }
+.plv-found { background: var(--sev-moderate-bg); border: 2px solid var(--sev-moderate); color: var(--sev-moderate); }
+.plv-unchecked { background: var(--sev-unknown-bg); border: 2px dashed var(--sev-unknown); color: var(--sev-unknown); }
+
+/* Phase 6c-6: very narrow screens (320 px reflow) and long Tamil and Hindi words */
+.hero-copy, .hero-copy > *, .page-narrow > *, .flow-page > * { min-width: 0; }
+h1, h2, h3, .display, .lede { overflow-wrap: break-word; }
+@media (max-width: 23rem) {
+  .header-row { gap: var(--s-2); }
+  .wordmark { gap: 0.4rem; }
+  .wordmark svg { width: 32px; height: 24px; }
+  .wordmark-text { font-size: 1.2rem; }
+  .menu-btn { padding: 0 var(--s-3); gap: var(--s-1); }
+}
+.land-steps li > * { min-width: 0; }
+/* Tamil labels are about twice as wide as the SVG boxes allow: Tamil always uses the vertical flow, so no label is ever cut off */
+html:lang(ta) .pipeline-wrap { display: none; }
+html:lang(ta) .pl-vertical { display: grid; }
