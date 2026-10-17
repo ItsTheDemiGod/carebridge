@@ -92,3 +92,10 @@ See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.
 - UI strings: edit `scripts/add_phase6a_templates.py`, run it and `scripts/export_ui_strings.py`.
 - Photos: see `docs/PHOTOS_NEEDED.md`; `backend\.venv\Scripts\python scripts\prepare_photos.py`.
 
+
+## Frontend flow (Phase 6b)
+- Dev: `cd frontend; npm run dev` (port 5173). The backend default `ALLOWED_ORIGINS` (`http://localhost:5173,http://127.0.0.1:5173`) already allows it.
+- Preview and Playwright on port 4173 need the backend started with `ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,http://localhost:4173,http://127.0.0.1:4173` (set it in the shell, not in a committed file).
+- Mocked end-to-end (no model): `npx playwright test` (builds and previews on 4173; includes axe on 14 flow states in en, ta, hi).
+- Live end-to-end with the real model (Ollama running, model on GPU, `CAREBRIDGE_DATA_KEY` set, backend on 8000): `npm run build; npx vite preview --port 4173 --strictPort` then `npx playwright test -c playwright.live.config.ts`. It uses dev document ds_037 (clean and poor) from `data/rendered/`, writes `docs/smoke/phase6b_live.json` and screenshots under `docs/screenshots/phase6b/`. Do not rebuild while it runs.
+- Strings: edit `scripts/add_phase6b_templates.py` or `scripts/p6b_*.py`, run it and `scripts/export_ui_strings.py`. API types: `node frontend/scripts/gen-api-types.mjs` after `python scripts/export_openapi.py`.

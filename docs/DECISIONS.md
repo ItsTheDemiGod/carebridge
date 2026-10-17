@@ -116,3 +116,13 @@
 
 ## Phase 6b-0: negated "safe" is the one allowed use
 The how-it-works note now reads "This does not mean they are safe." (en; ta/hi drafts) instead of "not a sign that the medicines go well together". The 6a forbidden-word test strips exactly that sentence and nothing else; the English guardrail scan passes it by negation, so no ALLOW entry was added and guardrail logic is unchanged. A test now scans all English ui.* strings with the guardrail.
+
+## Phase 6b decisions
+- **Data router**: `createBrowserRouter` so `useBlocker` can guard unsaved decisions (the leave dialog); `FlowProvider` lives inside the Shell route.
+- **State is memory only**: the flow reducer is rebuilt from the API after a reload; nothing but language and calm mode is stored (source scan test + Playwright audit). The photo is an in-memory Blob URL; after a reload it is fetched from the server only if the person chose to keep it.
+- **Review semantics**: one explicit "Use this check" per card; the save posts the FULL set of decided cards (the endpoint replaces); undecided medicines are left out and stay unconfirmed; nothing is preselected or guessed; name reasons are cleared only through the picker.
+- **Request contract, not response contract**: openapi.json has no response schemas, so types for requests are generated and checked, responses are hand-typed. Proposed for later (backend, not done here): add response models.
+- **Server text first**: errors, confirmation strings, schedule and results come from `GET /strings` and `/result`; `ui.flow.*` text is used only for client-side states or as fallback.
+- **Timers**: only polling (stops on terminal states, pauses when hidden) and a 60 s refresh of the "next dose" label; no alarms, no notification permission.
+- **Shell fix**: `useOutlet()` inside AnimatePresence instead of `<Outlet/>` (double mount bug found by the live run).
+- **Live test hygiene**: never rebuild the preview while a run is in flight; the default Playwright config ignores `e2e/live/`.
