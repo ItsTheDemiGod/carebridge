@@ -708,6 +708,102 @@
    "text": "When",
    "review_status": "not_required"
   },
+  "ui.flow.schedule.add_time": {
+   "text": "Add a time",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.back_results": {
+   "text": "Back to my results",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.edit_times": {
+   "text": "Change times",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.future": {
+   "text": "Doses can only be marked for today and earlier days.",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.next": {
+   "text": "Next dose: {name} at {time}",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.no_reminders": {
+   "text": "There are no alarms or notifications, and CareBridge does not ask for your browser's notification permission. Use your own phone alarm if you want a reminder.",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.no_reminders.title": {
+   "text": "This prototype shows a schedule but sends no reminders",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.none": {
+   "text": "There are no scheduled times yet. Confirm your medicines first.",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.not_scheduled": {
+   "text": "Medicines without a schedule",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.remove": {
+   "text": "Remove",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.remove_time": {
+   "text": "Remove time {n}",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.save_times": {
+   "text": "Save times",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.set_times": {
+   "text": "Set my own times",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.skipped": {
+   "text": "Skipped",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.taken": {
+   "text": "Taken",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.time_error": {
+   "text": "Use one to six different times, each as hours and minutes.",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.time_n": {
+   "text": "Time {n}",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.times_title": {
+   "text": "Times for each medicine",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.title": {
+   "text": "Your schedule",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.today": {
+   "text": "Today",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.today_slots": {
+   "text": "Today",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.undo": {
+   "text": "Undo",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.week": {
+   "text": "Days around today",
+   "review_status": "not_required"
+  },
+  "ui.flow.schedule.yours": {
+   "text": "Your time",
+   "review_status": "not_required"
+  },
   "ui.flow.source.author": {
    "text": "Drafted from official drug labels by the project author, not checked by a pharmacist",
    "review_status": "not_required"
@@ -778,6 +874,50 @@
   },
   "ui.flow.start.step3.title": {
    "text": "Read the results",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.apply": {
+   "text": "Show this period",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.back_schedule": {
+   "text": "Back to my schedule",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.col.medicine": {
+   "text": "Medicine",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.col.times": {
+   "text": "Times",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.from": {
+   "text": "From",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.no_meds": {
+   "text": "No scheduled medicines yet.",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.none": {
+   "text": "None.",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.period": {
+   "text": "Period: {from} to {to}",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.range_error": {
+   "text": "The end date cannot be before the start date.",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.title": {
+   "text": "Summary to show your doctor",
+   "review_status": "not_required"
+  },
+  "ui.flow.summary.to": {
+   "text": "To",
    "review_status": "not_required"
   },
   "ui.flow.timing.after_meals": {
@@ -2026,6 +2166,102 @@
    "text": "எப்போது",
    "review_status": "draft_unreviewed"
   },
+  "ui.flow.schedule.add_time": {
+   "text": "ஒரு நேரத்தைச் சேர்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.back_results": {
+   "text": "என் முடிவுகளுக்குத் திரும்பு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.edit_times": {
+   "text": "நேரங்களை மாற்று",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.future": {
+   "text": "இன்றும் முந்தைய நாட்களுக்கும் மட்டுமே டோஸைக் குறிக்க முடியும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.next": {
+   "text": "அடுத்த டோஸ்: {name}, {time} மணிக்கு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.no_reminders": {
+   "text": "அலாரங்களோ அறிவிப்புகளோ இல்லை; உங்கள் உலாவியின் அறிவிப்பு அனுமதியையும் CareBridge கேட்காது. நினைவூட்டல் வேண்டுமெனில் உங்கள் சொந்த தொலைபேசி அலாரத்தைப் பயன்படுத்துங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.no_reminders.title": {
+   "text": "இந்த முன்மாதிரி அட்டவணையைக் காட்டுகிறது, நினைவூட்டல்களை அனுப்பாது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.none": {
+   "text": "இன்னும் அட்டவணைப்படுத்தப்பட்ட நேரங்கள் இல்லை. முதலில் உங்கள் மருந்துகளை உறுதிசெய்யுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.not_scheduled": {
+   "text": "அட்டவணை இல்லாத மருந்துகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.remove": {
+   "text": "நீக்கு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.remove_time": {
+   "text": "நேரம் {n}-ஐ நீக்கு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.save_times": {
+   "text": "நேரங்களைச் சேமி",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.set_times": {
+   "text": "என் சொந்த நேரங்களை அமை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.skipped": {
+   "text": "தவிர்த்தேன்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.taken": {
+   "text": "எடுத்தேன்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.time_error": {
+   "text": "ஒன்று முதல் ஆறு வெவ்வேறு நேரங்களை, மணி மற்றும் நிமிடங்களாகக் கொடுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.time_n": {
+   "text": "நேரம் {n}",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.times_title": {
+   "text": "ஒவ்வொரு மருந்துக்கும் நேரங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.title": {
+   "text": "உங்கள் அட்டவணை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.today": {
+   "text": "இன்று",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.today_slots": {
+   "text": "இன்று",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.undo": {
+   "text": "செயல்தவிர்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.week": {
+   "text": "இன்றைச் சுற்றியுள்ள நாட்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.yours": {
+   "text": "உங்கள் நேரம்",
+   "review_status": "draft_unreviewed"
+  },
   "ui.flow.source.author": {
    "text": "அதிகாரப்பூர்வ மருந்து லேபிள்களிலிருந்து திட்ட ஆசிரியரால் வரைவு செய்யப்பட்டது; மருந்தாளரால் சரிபார்க்கப்படவில்லை",
    "review_status": "draft_unreviewed"
@@ -2096,6 +2332,50 @@
   },
   "ui.flow.start.step3.title": {
    "text": "முடிவுகளைப் படிக்கவும்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.apply": {
+   "text": "இந்தக் காலத்தைக் காட்டு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.back_schedule": {
+   "text": "என் அட்டவணைக்குத் திரும்பு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.col.medicine": {
+   "text": "மருந்து",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.col.times": {
+   "text": "நேரங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.from": {
+   "text": "இதிலிருந்து",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.no_meds": {
+   "text": "இன்னும் அட்டவணைப்படுத்தப்பட்ட மருந்துகள் இல்லை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.none": {
+   "text": "எதுவும் இல்லை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.period": {
+   "text": "காலம்: {from} முதல் {to} வரை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.range_error": {
+   "text": "முடிவுத் தேதி தொடக்கத் தேதிக்கு முன் இருக்கக் கூடாது.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.title": {
+   "text": "உங்கள் மருத்துவரிடம் காட்டும் சுருக்கம்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.to": {
+   "text": "இதுவரை",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.timing.after_meals": {
@@ -3344,6 +3624,102 @@
    "text": "कब",
    "review_status": "draft_unreviewed"
   },
+  "ui.flow.schedule.add_time": {
+   "text": "एक समय जोड़ें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.back_results": {
+   "text": "मेरे नतीजों पर लौटें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.edit_times": {
+   "text": "समय बदलें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.future": {
+   "text": "खुराक सिर्फ़ आज और पिछले दिनों के लिए चिह्नित की जा सकती है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.next": {
+   "text": "अगली खुराक: {name}, {time} बजे",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.no_reminders": {
+   "text": "कोई अलार्म या सूचना नहीं है, और CareBridge आपके ब्राउज़र की सूचना-अनुमति भी नहीं माँगता। रिमाइंडर चाहिए तो अपने फ़ोन का अलार्म इस्तेमाल करें।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.no_reminders.title": {
+   "text": "यह प्रोटोटाइप समय-सारणी दिखाता है, पर रिमाइंडर नहीं भेजता",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.none": {
+   "text": "अभी कोई तय समय नहीं है। पहले अपनी दवाओं की पुष्टि करें।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.not_scheduled": {
+   "text": "बिना समय-सारणी वाली दवाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.remove": {
+   "text": "हटाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.remove_time": {
+   "text": "समय {n} हटाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.save_times": {
+   "text": "समय सहेजें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.set_times": {
+   "text": "अपने समय तय करें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.skipped": {
+   "text": "छोड़ी",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.taken": {
+   "text": "ली",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.time_error": {
+   "text": "एक से छह अलग-अलग समय दें, घंटे और मिनट में।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.time_n": {
+   "text": "समय {n}",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.times_title": {
+   "text": "हर दवा के समय",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.title": {
+   "text": "आपकी समय-सारणी",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.today": {
+   "text": "आज",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.today_slots": {
+   "text": "आज",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.undo": {
+   "text": "पूर्ववत करें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.week": {
+   "text": "आज के आसपास के दिन",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.schedule.yours": {
+   "text": "आपका समय",
+   "review_status": "draft_unreviewed"
+  },
   "ui.flow.source.author": {
    "text": "आधिकारिक दवा लेबलों से परियोजना लेखक द्वारा तैयार, फ़ार्मासिस्ट द्वारा जाँचा नहीं गया",
    "review_status": "draft_unreviewed"
@@ -3414,6 +3790,50 @@
   },
   "ui.flow.start.step3.title": {
    "text": "नतीजे पढ़ें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.apply": {
+   "text": "यह अवधि दिखाएँ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.back_schedule": {
+   "text": "मेरी समय-सारणी पर लौटें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.col.medicine": {
+   "text": "दवा",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.col.times": {
+   "text": "समय",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.from": {
+   "text": "से",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.no_meds": {
+   "text": "अभी कोई तय समय वाली दवा नहीं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.none": {
+   "text": "कोई नहीं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.period": {
+   "text": "अवधि: {from} से {to} तक",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.range_error": {
+   "text": "अंतिम तिथि शुरुआती तिथि से पहले नहीं हो सकती।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.title": {
+   "text": "डॉक्टर को दिखाने का सारांश",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.summary.to": {
+   "text": "तक",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.timing.after_meals": {

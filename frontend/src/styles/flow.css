@@ -149,3 +149,26 @@ input[type='radio'] { width: 1.4rem; height: 1.4rem; margin-top: 0.2rem; accent-
   .tag, .status { border: 1px solid #000; background: #fff !important; color: #000 !important; }
   a { color: #000; text-decoration: none; }
 }
+
+/* schedule, summary */
+.week { display: grid; grid-template-columns: repeat(auto-fit, minmax(6.2rem, 1fr)); gap: var(--s-2); }
+.week button { display: grid; gap: 2px; justify-items: start; padding: var(--s-3); min-height: 4.2rem; border: 1.5px solid var(--line-strong); border-radius: var(--r-sm); background: transparent; color: var(--ink); font: 600 var(--t-small)/1.2 var(--font-body); cursor: pointer; text-align: left; }
+.week button[aria-pressed='true'] { background: var(--pine); border-color: var(--pine); color: var(--on-dark); }
+.week button.today:not([aria-pressed='true']) { border-color: var(--terracotta-ink); }
+.next-dose { display: flex; align-items: center; gap: var(--s-2); font-weight: 600; }
+.slot-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+.slot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-4); padding: var(--s-3) var(--s-4); background: #fffdf8; border: 1px solid var(--line); border-radius: var(--r-sm); }
+.slot-time { font-family: var(--font-display); font-size: var(--t-h3); min-width: 4.5rem; }
+.slot-name { font-weight: 600; flex: 1 1 8rem; }
+.slot-actions { display: flex; flex-wrap: wrap; gap: var(--s-2); align-items: center; }
+.slot-actions .btn { min-height: 2.75rem; padding: 0.4rem 1rem; }
+.slot-actions .btn[aria-pressed='true'] { background: var(--pine); color: var(--on-dark); border-color: var(--pine); }
+.time-editor { display: grid; gap: var(--s-3); }
+.time-row { display: flex; gap: var(--s-3); align-items: center; }
+.time-row input { max-width: 10rem; }
+.range { display: flex; flex-wrap: wrap; gap: var(--s-4); align-items: end; }
+.table-wrap { overflow-x: auto; }
+.summary-table { border-collapse: collapse; width: 100%; max-width: 54rem; }
+.summary-table th, .summary-table td { text-align: left; padding: var(--s-3); border-bottom: 1px solid var(--line-strong); vertical-align: top; }
+.summary-table thead th { font-size: var(--t-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+@media print { .summary-table th, .summary-table td { border-color: #000; } .range { display: none; } }
