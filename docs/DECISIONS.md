@@ -113,3 +113,6 @@
 - **Photos**: Wikimedia Commons only, CC0 or CC BY (no share-alike because the site adapts the images); search stopped at HTTP 429. Source data lives in `assets/photo_sources.json`; `prepare_photos.py` generates the manifest, responsive files and `ATTRIBUTION.md`. A photo with readable text was cropped to its text-free half. CC BY credits are shown in the footer.
 - **Tests compile outside `tsc -b`** (`*.test.ts` excluded from tsconfig.app) so the app build needs no Node types.
 - **Backend-off tests** use Playwright request blocking (same effect as a stopped server for the browser).
+
+## Phase 6b-0: negated "safe" is the one allowed use
+The how-it-works note now reads "This does not mean they are safe." (en; ta/hi drafts) instead of "not a sign that the medicines go well together". The 6a forbidden-word test strips exactly that sentence and nothing else; the English guardrail scan passes it by negation, so no ALLOW entry was added and guardrail logic is unchanged. A test now scans all English ui.* strings with the guardrail.

@@ -22,8 +22,17 @@ def test_all_new_ids_are_in_templates_as_drafts():
         assert v["en"]["review_status"] == "not_required" and v["ta"]["review_status"] == v["hi"]["review_status"] == "draft_unreviewed"
 
 
+NEGATED_SAFE = "This does not mean they are safe."  # the ONLY allowed use of the word "safe" (same form as the backend template)
+
+
 def test_english_copy_has_no_forbidden_words():
-    assert [t for t, v in UI.items() if FORBIDDEN.search(v["en"]["text"])] == []
+    assert [t for t, v in UI.items() if FORBIDDEN.search(v["en"]["text"].replace(NEGATED_SAFE, ""))] == []
+
+
+def test_english_ui_copy_passes_guardrail():
+    # the negated "does not mean they are safe" passes by negation; no allow-list entry is needed
+    from app.safety.guardrails import scan
+    assert [(t, scan(v["en"]["text"])) for t, v in UI.items() if scan(v["en"]["text"])] == []
 
 
 def test_english_copy_does_not_claim_review_by_anyone():

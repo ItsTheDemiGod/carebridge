@@ -168,9 +168,9 @@ NEW = {
     "ui.how.fig.alt": ("Diagram: photo, reading, your check, explanation, then either an interaction found or could not check.",
                        "வரைபடம்: புகைப்படம், படித்தல், உங்கள் சரிபார்ப்பு, விளக்கம், பிறகு இடைவினை கண்டறியப்பட்டது அல்லது சரிபார்க்க முடியவில்லை.",
                        "चित्र: फ़ोटो, पढ़ना, आपकी जाँच, व्याख्या, फिर या तो इंटरैक्शन मिला या जाँच नहीं हो सकी।"),
-    "ui.how.unchecked_note": ("“Could not check” only means we found no information, or we were unsure of a medicine name. It is not a sign that the medicines go well together. Ask your pharmacist.",
-                              "“சரிபார்க்க முடியவில்லை” என்றால் தகவல் கிடைக்கவில்லை அல்லது மருந்தின் பெயரில் உறுதியில்லை என்று மட்டுமே பொருள். மருந்துகள் ஒன்றோடொன்று நன்றாகப் பொருந்துகின்றன என்பதற்கான அறிகுறி அல்ல. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
-                              "“जाँच नहीं हो सकी” का मतलब सिर्फ़ इतना है कि हमें जानकारी नहीं मिली, या दवा के नाम पर हमें शक था। यह इस बात का संकेत नहीं कि दवाएँ साथ में ठीक रहती हैं। अपने फ़ार्मासिस्ट से पूछें।"),
+    "ui.how.unchecked_note": ("“Could not check” only means we found no information, or we were unsure of a medicine name. This does not mean they are safe. Ask your pharmacist.",
+                              "“சரிபார்க்க முடியவில்லை” என்றால் தகவல் கிடைக்கவில்லை அல்லது மருந்தின் பெயரில் உறுதியில்லை என்று மட்டுமே பொருள். இது அவை பாதுகாப்பானவை என்று அர்த்தமல்ல. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+                              "“जाँच नहीं हो सकी” का मतलब सिर्फ़ इतना है कि हमें जानकारी नहीं मिली, या दवा के नाम पर हमें शक था। इसका मतलब यह नहीं कि वे सुरक्षित हैं। अपने फ़ार्मासिस्ट से पूछें।"),
     # ---- privacy page ----
     "ui.pp.title": ("Privacy", "தனியுரிமை", "गोपनीयता"),
     "ui.pp.intro": ("This is the notice you will be asked to accept before you upload anything. It is loaded live from the CareBridge server on this computer.",
