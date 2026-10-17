@@ -180,6 +180,10 @@
    "text": "Your session has ended",
    "review_status": "not_required"
   },
+  "ui.flow.label.original": {
+   "text": "Original text from your document",
+   "review_status": "not_required"
+  },
   "ui.flow.leave.body": {
    "text": "Your checks on this page have not been saved. If you leave now, they are lost.",
    "review_status": "not_required"
@@ -194,6 +198,22 @@
   },
   "ui.flow.leave.title": {
    "text": "Leave without saving?",
+   "review_status": "not_required"
+  },
+  "ui.flow.level.major": {
+   "text": "Major interaction found",
+   "review_status": "not_required"
+  },
+  "ui.flow.level.minor": {
+   "text": "Minor interaction found",
+   "review_status": "not_required"
+  },
+  "ui.flow.level.moderate": {
+   "text": "Moderate interaction found",
+   "review_status": "not_required"
+  },
+  "ui.flow.level.unknown": {
+   "text": "Interaction found, level not known",
    "review_status": "not_required"
   },
   "ui.flow.loading": {
@@ -390,6 +410,62 @@
   },
   "ui.flow.progress.label": {
    "text": "Progress",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.back_review": {
+   "text": "Back to checking my medicines",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.banner.confirm_first": {
+   "text": "Confirm first",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.banner.review": {
+   "text": "Interactions were found",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.failed_note": {
+   "text": "Some explanations could not be prepared in this language. The original text from your document is shown instead, with a notice.",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.intro": {
+   "text": "This is an explanation of what was read from your document and what you confirmed. It does not replace your doctor or pharmacist.",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.not_advice": {
+   "text": "CareBridge explains and organises. It is not medical advice and never changes a dose. Always confirm with your doctor or pharmacist.",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.preparing": {
+   "text": "Some explanations are still being prepared in this language. They will appear here by themselves.",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.print": {
+   "text": "Print or save as PDF",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.ready": {
+   "text": "The explanations in this language are ready.",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.source": {
+   "text": "Source",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.tabs": {
+   "text": "Language of the results",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.title": {
+   "text": "Your results",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.to_schedule": {
+   "text": "See my schedule",
+   "review_status": "not_required"
+  },
+  "ui.flow.result.to_summary": {
+   "text": "Summary for my doctor",
    "review_status": "not_required"
   },
   "ui.flow.retry": {
@@ -630,6 +706,22 @@
   },
   "ui.flow.sched.timing": {
    "text": "When",
+   "review_status": "not_required"
+  },
+  "ui.flow.source.author": {
+   "text": "Drafted from official drug labels by the project author, not checked by a pharmacist",
+   "review_status": "not_required"
+  },
+  "ui.flow.source.curated": {
+   "text": "Curated list",
+   "review_status": "not_required"
+  },
+  "ui.flow.source.ddinter": {
+   "text": "DDInter database",
+   "review_status": "not_required"
+  },
+  "ui.flow.source.unknown": {
+   "text": "Source not known",
    "review_status": "not_required"
   },
   "ui.flow.stage.check": {
@@ -1406,6 +1498,10 @@
    "text": "உங்கள் அமர்வு முடிந்துவிட்டது",
    "review_status": "draft_unreviewed"
   },
+  "ui.flow.label.original": {
+   "text": "உங்கள் ஆவணத்தின் அசல் உரை",
+   "review_status": "draft_unreviewed"
+  },
   "ui.flow.leave.body": {
    "text": "இந்தப் பக்கத்தில் நீங்கள் செய்த சரிபார்ப்புகள் சேமிக்கப்படவில்லை. இப்போது வெளியேறினால் அவை இழக்கப்படும்.",
    "review_status": "draft_unreviewed"
@@ -1420,6 +1516,22 @@
   },
   "ui.flow.leave.title": {
    "text": "சேமிக்காமல் வெளியேறவா?",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.level.major": {
+   "text": "பெரிய இடைவினை கண்டறியப்பட்டது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.level.minor": {
+   "text": "சிறிய இடைவினை கண்டறியப்பட்டது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.level.moderate": {
+   "text": "மிதமான இடைவினை கண்டறியப்பட்டது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.level.unknown": {
+   "text": "இடைவினை கண்டறியப்பட்டது, அளவு தெரியவில்லை",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.loading": {
@@ -1616,6 +1728,62 @@
   },
   "ui.flow.progress.label": {
    "text": "முன்னேற்றம்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.back_review": {
+   "text": "என் மருந்துகளைச் சரிபார்ப்பதற்குத் திரும்பு",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.banner.confirm_first": {
+   "text": "முதலில் உறுதிசெய்யுங்கள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.banner.review": {
+   "text": "இடைவினைகள் கண்டறியப்பட்டன",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.failed_note": {
+   "text": "இந்த மொழியில் சில விளக்கங்களைத் தயாரிக்க முடியவில்லை. அதற்குப் பதிலாக உங்கள் ஆவணத்தின் அசல் உரை அறிவிப்புடன் காட்டப்படுகிறது.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.intro": {
+   "text": "இது உங்கள் ஆவணத்திலிருந்து படிக்கப்பட்டதற்கும் நீங்கள் உறுதிசெய்ததற்கும் ஒரு விளக்கம். இது உங்கள் மருத்துவர் அல்லது மருந்தாளருக்கு மாற்று அல்ல.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.not_advice": {
+   "text": "CareBridge விளக்குகிறது, ஒழுங்குபடுத்துகிறது. இது மருத்துவ ஆலோசனை அல்ல; டோஸை ஒருபோதும் மாற்றாது. எப்போதும் உங்கள் மருத்துவர் அல்லது மருந்தாளரிடம் உறுதிசெய்யுங்கள்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.preparing": {
+   "text": "இந்த மொழியில் சில விளக்கங்கள் இன்னும் தயாராகின்றன. அவை தாமாகவே இங்கே தோன்றும்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.print": {
+   "text": "அச்சிடு அல்லது PDF ஆகச் சேமி",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.ready": {
+   "text": "இந்த மொழியின் விளக்கங்கள் தயார்.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.source": {
+   "text": "மூலம்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.tabs": {
+   "text": "முடிவுகளின் மொழி",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.title": {
+   "text": "உங்கள் முடிவுகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.to_schedule": {
+   "text": "என் அட்டவணையைப் பார்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.to_summary": {
+   "text": "என் மருத்துவருக்கான சுருக்கம்",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.retry": {
@@ -1856,6 +2024,22 @@
   },
   "ui.flow.sched.timing": {
    "text": "எப்போது",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.source.author": {
+   "text": "அதிகாரப்பூர்வ மருந்து லேபிள்களிலிருந்து திட்ட ஆசிரியரால் வரைவு செய்யப்பட்டது; மருந்தாளரால் சரிபார்க்கப்படவில்லை",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.source.curated": {
+   "text": "தொகுக்கப்பட்ட பட்டியல்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.source.ddinter": {
+   "text": "DDInter தரவுத்தளம்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.source.unknown": {
+   "text": "மூலம் தெரியவில்லை",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.stage.check": {
@@ -2632,6 +2816,10 @@
    "text": "आपका सत्र समाप्त हो गया है",
    "review_status": "draft_unreviewed"
   },
+  "ui.flow.label.original": {
+   "text": "आपके दस्तावेज़ का मूल पाठ",
+   "review_status": "draft_unreviewed"
+  },
   "ui.flow.leave.body": {
    "text": "इस पन्ने की आपकी जाँचें सहेजी नहीं गई हैं। अभी छोड़ने पर वे खो जाएँगी।",
    "review_status": "draft_unreviewed"
@@ -2646,6 +2834,22 @@
   },
   "ui.flow.leave.title": {
    "text": "बिना सहेजे छोड़ें?",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.level.major": {
+   "text": "बड़ा इंटरैक्शन मिला",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.level.minor": {
+   "text": "छोटा इंटरैक्शन मिला",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.level.moderate": {
+   "text": "मध्यम इंटरैक्शन मिला",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.level.unknown": {
+   "text": "इंटरैक्शन मिला, स्तर ज्ञात नहीं",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.loading": {
@@ -2842,6 +3046,62 @@
   },
   "ui.flow.progress.label": {
    "text": "प्रगति",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.back_review": {
+   "text": "मेरी दवाओं की जाँच पर लौटें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.banner.confirm_first": {
+   "text": "पहले पुष्टि करें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.banner.review": {
+   "text": "इंटरैक्शन मिले",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.failed_note": {
+   "text": "इस भाषा में कुछ स्पष्टीकरण तैयार नहीं हो सके। उनकी जगह आपके दस्तावेज़ का मूल पाठ सूचना के साथ दिखाया गया है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.intro": {
+   "text": "यह आपके दस्तावेज़ से पढ़े गए और आपके द्वारा पुष्टि की गई बातों का स्पष्टीकरण है। यह आपके डॉक्टर या फ़ार्मासिस्ट का विकल्प नहीं है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.not_advice": {
+   "text": "CareBridge समझाता और व्यवस्थित करता है। यह चिकित्सकीय सलाह नहीं है और खुराक कभी नहीं बदलता। हमेशा अपने डॉक्टर या फ़ार्मासिस्ट से पुष्टि करें।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.preparing": {
+   "text": "इस भाषा में कुछ स्पष्टीकरण अभी तैयार हो रहे हैं। वे अपने आप यहाँ दिखेंगे।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.print": {
+   "text": "प्रिंट करें या PDF में सहेजें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.ready": {
+   "text": "इस भाषा के स्पष्टीकरण तैयार हैं।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.source": {
+   "text": "स्रोत",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.tabs": {
+   "text": "नतीजों की भाषा",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.title": {
+   "text": "आपके नतीजे",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.to_schedule": {
+   "text": "मेरी समय-सारणी देखें",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.result.to_summary": {
+   "text": "मेरे डॉक्टर के लिए सारांश",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.retry": {
@@ -3082,6 +3342,22 @@
   },
   "ui.flow.sched.timing": {
    "text": "कब",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.source.author": {
+   "text": "आधिकारिक दवा लेबलों से परियोजना लेखक द्वारा तैयार, फ़ार्मासिस्ट द्वारा जाँचा नहीं गया",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.source.curated": {
+   "text": "संकलित सूची",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.source.ddinter": {
+   "text": "DDInter डेटाबेस",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.flow.source.unknown": {
+   "text": "स्रोत ज्ञात नहीं",
    "review_status": "draft_unreviewed"
   },
   "ui.flow.stage.check": {

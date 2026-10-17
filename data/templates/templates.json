@@ -6637,6 +6637,328 @@
     "text": "मेरी सूची से हटाएँ",
     "review_status": "draft_unreviewed"
    }
+  },
+  "ui.flow.result.title": {
+   "en": {
+    "text": "Your results",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் முடிவுகள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपके नतीजे",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.intro": {
+   "en": {
+    "text": "This is an explanation of what was read from your document and what you confirmed. It does not replace your doctor or pharmacist.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இது உங்கள் ஆவணத்திலிருந்து படிக்கப்பட்டதற்கும் நீங்கள் உறுதிசெய்ததற்கும் ஒரு விளக்கம். இது உங்கள் மருத்துவர் அல்லது மருந்தாளருக்கு மாற்று அல்ல.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह आपके दस्तावेज़ से पढ़े गए और आपके द्वारा पुष्टि की गई बातों का स्पष्टीकरण है। यह आपके डॉक्टर या फ़ार्मासिस्ट का विकल्प नहीं है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.tabs": {
+   "en": {
+    "text": "Language of the results",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "முடிவுகளின் மொழி",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नतीजों की भाषा",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.print": {
+   "en": {
+    "text": "Print or save as PDF",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "அச்சிடு அல்லது PDF ஆகச் சேமி",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "प्रिंट करें या PDF में सहेजें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.preparing": {
+   "en": {
+    "text": "Some explanations are still being prepared in this language. They will appear here by themselves.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மொழியில் சில விளக்கங்கள் இன்னும் தயாராகின்றன. அவை தாமாகவே இங்கே தோன்றும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस भाषा में कुछ स्पष्टीकरण अभी तैयार हो रहे हैं। वे अपने आप यहाँ दिखेंगे।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.ready": {
+   "en": {
+    "text": "The explanations in this language are ready.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மொழியின் விளக்கங்கள் தயார்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस भाषा के स्पष्टीकरण तैयार हैं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.failed_note": {
+   "en": {
+    "text": "Some explanations could not be prepared in this language. The original text from your document is shown instead, with a notice.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மொழியில் சில விளக்கங்களைத் தயாரிக்க முடியவில்லை. அதற்குப் பதிலாக உங்கள் ஆவணத்தின் அசல் உரை அறிவிப்புடன் காட்டப்படுகிறது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस भाषा में कुछ स्पष्टीकरण तैयार नहीं हो सके। उनकी जगह आपके दस्तावेज़ का मूल पाठ सूचना के साथ दिखाया गया है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.banner.confirm_first": {
+   "en": {
+    "text": "Confirm first",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "முதலில் உறுதிசெய்யுங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पहले पुष्टि करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.banner.review": {
+   "en": {
+    "text": "Interactions were found",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இடைவினைகள் கண்டறியப்பட்டன",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इंटरैक्शन मिले",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.back_review": {
+   "en": {
+    "text": "Back to checking my medicines",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் மருந்துகளைச் சரிபார்ப்பதற்குத் திரும்பு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरी दवाओं की जाँच पर लौटें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.source": {
+   "en": {
+    "text": "Source",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மூலம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "स्रोत",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.to_schedule": {
+   "en": {
+    "text": "See my schedule",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் அட்டவணையைப் பார்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरी समय-सारणी देखें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.to_summary": {
+   "en": {
+    "text": "Summary for my doctor",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "என் மருத்துவருக்கான சுருக்கம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मेरे डॉक्टर के लिए सारांश",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.result.not_advice": {
+   "en": {
+    "text": "CareBridge explains and organises. It is not medical advice and never changes a dose. Always confirm with your doctor or pharmacist.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "CareBridge விளக்குகிறது, ஒழுங்குபடுத்துகிறது. இது மருத்துவ ஆலோசனை அல்ல; டோஸை ஒருபோதும் மாற்றாது. எப்போதும் உங்கள் மருத்துவர் அல்லது மருந்தாளரிடம் உறுதிசெய்யுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "CareBridge समझाता और व्यवस्थित करता है। यह चिकित्सकीय सलाह नहीं है और खुराक कभी नहीं बदलता। हमेशा अपने डॉक्टर या फ़ार्मासिस्ट से पुष्टि करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.level.major": {
+   "en": {
+    "text": "Major interaction found",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "பெரிய இடைவினை கண்டறியப்பட்டது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "बड़ा इंटरैक्शन मिला",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.level.moderate": {
+   "en": {
+    "text": "Moderate interaction found",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மிதமான இடைவினை கண்டறியப்பட்டது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "मध्यम इंटरैक्शन मिला",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.level.minor": {
+   "en": {
+    "text": "Minor interaction found",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "சிறிய இடைவினை கண்டறியப்பட்டது",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "छोटा इंटरैक्शन मिला",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.level.unknown": {
+   "en": {
+    "text": "Interaction found, level not known",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இடைவினை கண்டறியப்பட்டது, அளவு தெரியவில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इंटरैक्शन मिला, स्तर ज्ञात नहीं",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.source.ddinter": {
+   "en": {
+    "text": "DDInter database",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "DDInter தரவுத்தளம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "DDInter डेटाबेस",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.source.author": {
+   "en": {
+    "text": "Drafted from official drug labels by the project author, not checked by a pharmacist",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "அதிகாரப்பூர்வ மருந்து லேபிள்களிலிருந்து திட்ட ஆசிரியரால் வரைவு செய்யப்பட்டது; மருந்தாளரால் சரிபார்க்கப்படவில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आधिकारिक दवा लेबलों से परियोजना लेखक द्वारा तैयार, फ़ार्मासिस्ट द्वारा जाँचा नहीं गया",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.source.curated": {
+   "en": {
+    "text": "Curated list",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தொகுக்கப்பட்ட பட்டியல்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "संकलित सूची",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.source.unknown": {
+   "en": {
+    "text": "Source not known",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மூலம் தெரியவில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "स्रोत ज्ञात नहीं",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.flow.label.original": {
+   "en": {
+    "text": "Original text from your document",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "உங்கள் ஆவணத்தின் அசல் உரை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आपके दस्तावेज़ का मूल पाठ",
+    "review_status": "draft_unreviewed"
+   }
   }
  },
  "english_only": {
