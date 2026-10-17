@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { getConsentNotice, type ConsentNotice } from '../api/client'
-import { Button } from '../components/Button'
+import { Button, ButtonLink } from '../components/Button'
 import { Notice } from '../components/Badges'
 import { Container, SectionHeading } from '../components/Layout'
 import { useT } from '../i18n/I18n'
@@ -64,6 +64,9 @@ export function PrivacyPage() {
 
       <Notice tone="important" title={t('ui.pp.delete.title')}>
         <p>{t('ui.pp.delete.body')}</p>
+        <ButtonLink to="/documents" variant="secondary" icon="trash">
+          {t('ui.flow.delete.button')}
+        </ButtonLink>
       </Notice>
     </Container>
   )

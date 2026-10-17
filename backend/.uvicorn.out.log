@@ -1,0 +1,7 @@
+INFO:     Started server process [32756]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60670 - "GET /api/v1/consent-notice HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62193 - "GET /api/v1/session HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:63626 - "GET /api/v1/session HTTP/1.1" 401 Unauthorized
