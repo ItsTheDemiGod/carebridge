@@ -9,6 +9,7 @@ from app.services.guards import REPO
 
 sys.path.insert(0, str(REPO / "scripts"))
 import add_phase6a_templates as P6  # noqa: E402
+import add_phase6b_templates as P6B  # noqa: E402
 import export_ui_strings as E  # noqa: E402
 
 # "safe" and "safely" as words; the others as phrases. "unsafe" and "safety" are different words and are not matched.
@@ -17,7 +18,7 @@ UI = {tid: v for tid, v in T.load()["strings"].items() if tid.startswith("ui.")}
 
 
 def test_all_new_ids_are_in_templates_as_drafts():
-    assert set(P6.NEW) == set(UI)
+    assert set(P6.NEW) | set(P6B.NEW) == set(UI) and not set(P6.NEW) & set(P6B.NEW)
     for v in UI.values():
         assert v["en"]["review_status"] == "not_required" and v["ta"]["review_status"] == v["hi"]["review_status"] == "draft_unreviewed"
 
@@ -58,3 +59,10 @@ def test_review_sheet_has_every_new_id_for_ta_and_hi():
     assert raw.startswith(b"\xef\xbb\xbf")
     rows = list(csv.DictReader(raw.decode("utf-8-sig").splitlines()))
     assert {(r["template_id"], r["language"]) for r in rows} == {(t, lang) for t in P6.NEW for lang in ("ta", "hi")}
+
+
+def test_phase6b_review_sheet_has_every_new_id_for_ta_and_hi():
+    raw = (REPO / "data" / "templates" / "review_sheet_phase6b_new.csv").read_bytes()
+    assert raw.startswith(b"ï»¿")
+    rows = list(csv.DictReader(raw.decode("utf-8-sig").splitlines()))
+    assert {(r["template_id"], r["language"]) for r in rows} == {(t, lang) for t in P6B.NEW for lang in ("ta", "hi")}

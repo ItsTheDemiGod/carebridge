@@ -8,6 +8,7 @@ import { Container, Rule, SectionHeading } from '../components/Layout'
 import { Mosaic } from '../components/Mosaic'
 import { Photo } from '../components/Photo'
 import { Reveal } from '../components/Reveal'
+import { useFlow } from '../flow/FlowProvider'
 import { useT } from '../i18n/I18n'
 import { LANGS, STRINGS, translate } from '../i18n/translate'
 import { usePageTitle } from './usePageTitle'
@@ -26,12 +27,22 @@ const LIMITS = ['1', '2', '3', '4', '5', '6'] as const
 
 export function LandingPage() {
   const { t } = useT()
+  const { state } = useFlow()
   usePageTitle('ui.title.home')
   const root = useRef<HTMLDivElement>(null)
   useParallax(root)
 
   return (
     <div ref={root} className="landing">
+      {state.deleted ? (
+        <Container>
+          <div role="status" className="deleted-note">
+            <Notice tone="info" title={state.deleted.message || t('ui.flow.delete.nothing')}>
+              {state.deleted.receipt ? <p>{state.deleted.receipt}</p> : null}
+            </Notice>
+          </div>
+        </Container>
+      ) : null}
       {/* 1 hero */}
       <Container as="section" className="hero">
         <div className="hero-copy">

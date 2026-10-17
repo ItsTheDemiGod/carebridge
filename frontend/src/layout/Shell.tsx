@@ -7,6 +7,7 @@ import { useMotion } from '../ambient/motion'
 import { ParticleField } from '../ambient/ParticleField'
 import { Icon } from '../components/icons'
 import { useT } from '../i18n/I18n'
+import { FlowProvider } from '../flow/FlowProvider'
 import { Footer } from './Footer'
 import { Header } from './Header'
 
@@ -24,6 +25,14 @@ function DraftNote() {
 }
 
 export function Shell() {
+  return (
+    <FlowProvider>
+      <ShellInner />
+    </FlowProvider>
+  )
+}
+
+function ShellInner() {
   const { t } = useT()
   const { motionOk } = useMotion()
   const loc = useLocation()
@@ -38,7 +47,7 @@ export function Shell() {
       requestAnimationFrame(() => document.getElementById(loc.hash.slice(1))?.scrollIntoView())
     } else {
       window.scrollTo(0, 0)
-      main.current?.focus({ preventScroll: true }) // move keyboard and screen-reader position to the new page
+      if (!main.current?.contains(document.activeElement)) main.current?.focus({ preventScroll: true }) // move keyboard and screen-reader position to the new page (flow pages focus their own heading)
     }
   }, [loc.pathname, loc.hash])
 

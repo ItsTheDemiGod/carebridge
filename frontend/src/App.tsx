@@ -1,20 +1,24 @@
-import { Route, Routes } from 'react-router-dom'
+import type { RouteObject } from 'react-router-dom'
 import { Shell } from './layout/Shell'
 import { HowItWorksPage } from './pages/HowItWorksPage'
 import { LandingPage } from './pages/LandingPage'
 import { PrivacyPage } from './pages/PrivacyPage'
-import { NotFoundPage, StartPage } from './pages/SimplePages'
+import { ConsentPage } from './pages/flow/ConsentPage'
+import { StartPage } from './pages/flow/StartPage'
+import { UploadPage } from './pages/flow/UploadPage'
+import { NotFoundPage } from './pages/SimplePages'
 
-export default function App() {
-  return (
-    <Routes>
-      <Route element={<Shell />}>
-        <Route index element={<LandingPage />} />
-        <Route path="start" element={<StartPage />} />
-        <Route path="privacy" element={<PrivacyPage />} />
-        <Route path="how-it-works" element={<HowItWorksPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Route>
-    </Routes>
-  )
-}
+export const routes: RouteObject[] = [
+  {
+    element: <Shell />,
+    children: [
+      { index: true, element: <LandingPage /> },
+      { path: 'start', element: <StartPage /> },
+      { path: 'consent', element: <ConsentPage /> },
+      { path: 'upload', element: <UploadPage /> },
+      { path: 'privacy', element: <PrivacyPage /> },
+      { path: 'how-it-works', element: <HowItWorksPage /> },
+      { path: '*', element: <NotFoundPage /> },
+    ],
+  },
+]

@@ -3,22 +3,6 @@ import { Container, SectionHeading } from '../components/Layout'
 import { useT } from '../i18n/I18n'
 import { usePageTitle } from './usePageTitle'
 
-export function StartPage() {
-  const { t } = useT()
-  usePageTitle('ui.title.start')
-  return (
-    <Container as="section" className="page-narrow">
-      <SectionHeading as="h1" label={t('ui.nav.start')} title={t('ui.start.title')} />
-      <p className="lede">{t('ui.start.body')}</p>
-      <div className="page-actions">
-        <ButtonLink to="/" variant="secondary">
-          {t('ui.start.back')}
-        </ButtonLink>
-      </div>
-    </Container>
-  )
-}
-
 export function NotFoundPage() {
   const { t } = useT()
   usePageTitle('ui.title.notfound')

@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useMotion } from '../ambient/motion'
 import { Icon } from '../components/icons'
+import { DeleteControl } from '../flow/DeleteControl'
 import { useT } from '../i18n/I18n'
 import { LANGS } from '../i18n/translate'
 import { Wordmark } from './Wordmark'
@@ -43,11 +44,13 @@ export function Header() {
           <NavLink to="/how-it-works">{t('ui.nav.how')}</NavLink>
           <NavLink to="/privacy">{t('ui.nav.privacy')}</NavLink>
           <Link to="/#limits">{t('ui.nav.limits')}</Link>
+          <NavLink to="/documents">{t('ui.flow.nav.documents')}</NavLink>
           <NavLink to="/start" className="nav-start">
             {t('ui.nav.start')}
           </NavLink>
         </nav>
         <div className="header-tools">
+          <DeleteControl />
           <LanguageSwitcher />
           <CalmToggle />
         </div>
