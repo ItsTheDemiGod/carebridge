@@ -6,14 +6,16 @@ import { startPolling } from '../../api/poll'
 import type { Lang, Level, PairResult, ResultLine, ResultResponse, ResultSection } from '../../api/types'
 import { Button, ButtonLink } from '../../components/Button'
 import { Notice, StatusBadge } from '../../components/Badges'
-import { Icon } from '../../components/icons'
-import { SectionHeading } from '../../components/Layout'
+import { Icon, type IconName } from '../../components/icons'
+import { IconHeading, SectionHeading } from '../../components/Layout'
 import { FlowPage } from '../../flow/FlowPage'
 import { useFlow } from '../../flow/FlowProvider'
 import { ProblemNotice } from '../../flow/ProblemNotice'
 import { useServerStrings } from '../../flow/serverStrings'
 import { useT } from '../../i18n/I18n'
 import { LANGS } from '../../i18n/translate'
+
+const SEC_ICON: Record<'follow_ups' | 'advice' | 'warnings', IconName> = { follow_ups: 'calendar', advice: 'leaf', warnings: 'alert' }
 
 export function ResultPage() {
   const { id = '' } = useParams()
@@ -144,11 +146,11 @@ function Result({ id }: { id: string }) {
 
         {get('medicines') ? (
           <section aria-labelledby="sec-medicines" className="res-section">
-            <h2 id="sec-medicines" className="h3-like">{get('medicines')!.heading[rl]}</h2>
+            <IconHeading id="sec-medicines" icon="pill">{get('medicines')!.heading[rl]}</IconHeading>
             <ul className="res-lines">
               {get('medicines')!.lines.map((l) => (
                 <li key={l.line_id} className={`res-line${l.review_level === 'must_confirm' ? ' must' : ''}`}>
-                  <p>{textOf(l, rl)}</p>
+                  <p className="line-text"><Icon name="pill" size={18} /><span>{textOf(l, rl)}</span></p>
                   <div className="chips">
                     {meta[l.line_id]?.labels.map((x) => <span key={x.template_id} className="tag tag-accent"><Icon name="check" size={14} /><span>{x.text}</span></span>)}
                     {chip(l, rl, t, s)}
@@ -165,11 +167,11 @@ function Result({ id }: { id: string }) {
           if (!sec || !FREE.has(sid) || !sec.lines.length) return null
           return (
             <section key={sid} aria-labelledby={`sec-${sid}`} className="res-section">
-              <h2 id={`sec-${sid}`} className="h3-like">{sec.heading[rl]}</h2>
+              <IconHeading id={`sec-${sid}`} icon={SEC_ICON[sid]}>{sec.heading[rl]}</IconHeading>
               <ul className="res-lines">
                 {sec.lines.map((l) => (
                   <li key={l.line_id} className={`res-line${sid === 'warnings' ? ' warn' : ''}`}>
-                    {l.narrative_pending ? <p className="preparing"><span className="btn-spinner" aria-hidden="true" /><span>{textOf(l, rl)}</span></p> : <p>{textOf(l, rl)}</p>}
+                    {l.narrative_pending ? <p className="preparing"><span className="btn-spinner" aria-hidden="true" /><span>{textOf(l, rl)}</span></p> : <p className="line-text">{sid === 'warnings' ? <Icon name="alert" size={18} /> : null}<span>{textOf(l, rl)}</span></p>}
                     <div className="chips">{l.narrative_pending ? null : chip(l, rl, t, s)}</div>
                     {l.notices.map((n) => <p key={n.code} className="inline-note"><Icon name="info" size={18} /><span>{n.text[rl]?.text}</span></p>)}
                   </li>
@@ -181,7 +183,7 @@ function Result({ id }: { id: string }) {
 
         {safety ? (
           <section aria-labelledby="sec-safety" className="res-section">
-            <h2 id="sec-safety" className="h3-like">{safety.heading[rl]}</h2>
+            <IconHeading id="sec-safety" icon="shield">{safety.heading[rl]}</IconHeading>
             <ul className="res-lines pairs">
               {found.map((p, k) => {
                 const line = pairLines[k]
@@ -208,7 +210,7 @@ function Result({ id }: { id: string }) {
 
         {get('not_found')?.lines.length ? (
           <section aria-labelledby="sec-nf" className="res-section">
-            <h2 id="sec-nf" className="h3-like">{get('not_found')!.heading[rl]}</h2>
+            <IconHeading id="sec-nf" icon="search">{get('not_found')!.heading[rl]}</IconHeading>
             <ul className="res-lines">{get('not_found')!.lines.map((l) => <li key={l.line_id} className="res-line"><p>{textOf(l, rl)}</p></li>)}</ul>
           </section>
         ) : null}

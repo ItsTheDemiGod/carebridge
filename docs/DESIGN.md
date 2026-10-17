@@ -53,3 +53,34 @@ Routes: `/start`, `/consent`, `/upload`, `/d/:id/processing`, `/d/:id/review`, `
 - **Components added**: `Dialog` (native `<dialog>`: focus trap, Escape, focus return), `DeleteControl`, `Progress`, `ProblemNotice` (icon + text, takes focus), `FormularyPicker`, `PhotoViewer`, `MedicineCard`, `ScheduleFields`, `AddMedicine`.
 - **Errors**: backend message first (`GET /strings` `error.<code>`, `job.failed.<code>`), client wording (`ui.flow.problem.*`) only as fallback; always an icon plus text; `role="alert"` and focus.
 - **Tests**: `e2e/mock.ts` is a stateful fake API that validates every request body against `docs/openapi.json`; `e2e/flow.spec.ts` covers the flow; `e2e/flow-a11y.spec.ts` runs axe on 14 flow states in en, ta and hi (0 violations); `e2e/live/` is the live run with the real model.
+
+## Icon audit (Phase 6c-3)
+Method: every route screenshotted at 1280 px (en) and read against the rule "status and severity are icon + text + colour; headings and list items that name a kind of thing carry an icon". Icon budget: 6 new icons at most; used 6 (`menu`, `still`, `zoomin`, `zoomout`, `chevron`, `reset`). Set total 26, all tested (`icons.test.ts`, `e2e/icons.spec.ts`).
+
+| Location | Before | Decision |
+|---|---|---|
+| Header: menu button | did not exist | `menu` / `close` icon + the word "Menu" |
+| Header: calm toggle | wave icon + words | icon-only on the desktop row (`wave` off, `still` on; words stay for screen readers, tooltip and the menu panel) |
+| Header: delete | trash + words | icon-only below 90 rem (name kept for screen readers and tooltip), words from 90 rem and in the menu |
+| Header: language | icon + names | unchanged (icon hidden on the compact row; names are the content) |
+| Landing: three steps strip | icon per step | unchanged |
+| Landing: why you confirm first (figure) | check on the good box only | `alert` added on the misread box (the bad side was colour and dashes only) |
+| Landing: languages block | chips with icon | unchanged |
+| Landing: privacy list | lock, clock, trash | unchanged |
+| Landing: limits list | alert icon on the notice, numbered list | unchanged (numbers are the marker) |
+| Landing: mosaic tiles | decorative icon on some tiles | unchanged: tiles are texture on purpose; no icon added to every tile |
+| How it works: diagram outcomes | text and colour only | `alert` on "Interaction found", `help` on "Could not check" |
+| How it works: numbered list | numbers only | step icon per heading (camera, document, check, language, search) |
+| Consent: notice items | numbers only | icon per notice item id (document, lock, clock, calendar, trash, shield, info, language, circle-alert) |
+| Consent purposes | checkboxes with Required and Optional tags | unchanged |
+| Upload: dropzone, guidance | document and camera icons, notice icon | unchanged |
+| Processing: stages and errors | clock, check, leaf per stage; alert in problems | unchanged |
+| Review: cards and badges | icon + text per review level, reasons with icon | unchanged (the layout is redesigned in 6c-5) |
+| Result: section headings | text only | `IconHeading`: pill, calendar, leaf, alert, shield, search |
+| Result: medicine lines, warning lines | rule colour only | `pill` on medicine lines, `alert` on warning lines |
+| Result: interaction cards, chips | severity icon + text + colour | unchanged |
+| Schedule: taken and skipped | icon appears when selected | unchanged (state is icon + text + fill) |
+| Summary: headings | text only | `IconHeading` (pill, calendar, circle-alert, shield) |
+| Documents: state per document | plain text | `Tag` with a state icon (clock, circle-alert, alert, close) |
+| Documents and 404: empty and not-found text | text only | `document` and `search` icons beside the sentence |
+| Delete dialog | trash on the confirm button, alert on failure | unchanged |

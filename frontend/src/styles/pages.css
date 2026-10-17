@@ -198,3 +198,4 @@ main { overflow-x: clip; }
 /* motion off: no drift, no tilt (reduced-motion preference; calm mode is handled by html.calm) */
 @media (prefers-reduced-motion: reduce) { .mosaic-cell { animation: none !important; transform: none !important; } }
 html.calm .mosaic-cell { transform: none !important; }
+.pl-ic-found { color: var(--sev-moderate); } .pl-ic-unk { color: var(--sev-unknown); }

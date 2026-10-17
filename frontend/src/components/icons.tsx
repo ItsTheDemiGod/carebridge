@@ -87,6 +87,25 @@ const PATHS: Record<string, ReactNode> = {
   leaf: <path d="M5 19c0-8 5-13.5 14-14 .5 9-4.5 14-12.5 14M5 19l7-7" />,
   wave: <path d="M3 9c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0" />,
   close: <path d="M6 6l12 12M18 6L6 18" />,
+  zoomin: (
+    <>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="M15.5 15.5L20 20M10.5 8v5M8 10.5h5" />
+    </>
+  ),
+  zoomout: (
+    <>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="M15.5 15.5L20 20M8 10.5h5" />
+    </>
+  ),
+  chevron: <path d="M6 9l6 6 6-6" />,
+  reset: (
+    <>
+      <path d="M4.5 12a7.5 7.5 0 1 0 2.4-5.5" />
+      <path d="M4.5 4.5v4h4" />
+    </>
+  ),
   still: <path d="M3 12h18" />,
   menu: <path d="M4.5 7h15M4.5 12h15M4.5 17h15" />,
 }

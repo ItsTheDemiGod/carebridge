@@ -172,3 +172,16 @@ input[type='radio'] { width: 1.4rem; height: 1.4rem; margin-top: 0.2rem; accent-
 .summary-table th, .summary-table td { text-align: left; padding: var(--s-3); border-bottom: 1px solid var(--line-strong); vertical-align: top; }
 .summary-table thead th { font-size: var(--t-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
 @media print { .summary-table th, .summary-table td { border-color: #000; } .range { display: none; } }
+
+/* Phase 6c: icons next to headings and lines */
+.icon-heading { display: flex; align-items: center; gap: var(--s-3); }
+.icon-heading svg { flex: none; color: var(--terracotta); }
+.line-text { display: flex; align-items: flex-start; gap: var(--s-3); }
+.line-text svg { flex: none; margin-top: 0.25em; color: var(--ink-soft); }
+.line-text .tag { margin-left: var(--s-2); }
+.res-line.warn .line-text svg { color: var(--sev-moderate); }
+.lede-icon { display: flex; align-items: center; gap: var(--s-3); }
+.lede-icon svg { flex: none; color: var(--terracotta); }
+.consent-item { display: flex; align-items: flex-start; gap: var(--s-3); }
+.consent-item svg { flex: none; margin-top: 0.2em; color: var(--pine); }
+.cf-alert { color: var(--sev-major); }

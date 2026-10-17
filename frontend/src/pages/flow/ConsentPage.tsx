@@ -5,6 +5,7 @@ import { isAbort, toProblem, type Problem } from '../../api/errors'
 import type { ConsentNotice } from '../../api/types'
 import { Button } from '../../components/Button'
 import { Notice } from '../../components/Badges'
+import { Icon, type IconName } from '../../components/icons'
 import { SectionHeading } from '../../components/Layout'
 import { FlowPage } from '../../flow/FlowPage'
 import { useFlow } from '../../flow/FlowProvider'
@@ -12,6 +13,9 @@ import { ProblemNotice } from '../../flow/ProblemNotice'
 import { useT } from '../../i18n/I18n'
 
 const OPTIONAL_HELP: Record<string, string> = { keep_photo_for_session: 'ui.flow.consent.keep_photo_help' }
+
+/** one icon per notice item (the item text carries the meaning; the icon only helps scanning) */
+const NOTICE_ICON: Record<string, IconName> = { what: 'document', where: 'lock', stored: 'clock', how_long: 'calendar', delete: 'trash', no_sharing: 'shield', prototype: 'info', translation_draft: 'language', interaction_limited: 'circle-alert', contact: 'info' }
 
 export function ConsentPage() {
   const { t, lang } = useT()
@@ -75,7 +79,12 @@ export function ConsentPage() {
           <h2 className="h3-like">{notice.title}</h2>
           <ol className="consent-list">
             {notice.items.map((i) => (
-              <li key={i.id}>{i.text}</li>
+              <li key={i.id}>
+                <div className="consent-item">
+                  <Icon name={NOTICE_ICON[i.id] ?? 'info'} size={22} />
+                  <span>{i.text}</span>
+                </div>
+              </li>
             ))}
           </ol>
           <fieldset className="purposes">

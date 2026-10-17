@@ -1,4 +1,5 @@
 import { useT } from '../i18n/I18n'
+import { Icon } from './icons'
 
 const NODES = ['n1', 'n2', 'n3', 'n4', 'n5'] as const
 const YOURS = new Set(['n1', 'n3'])
@@ -30,12 +31,14 @@ export function PipelineDiagram() {
       })}
       <path d="M880 120v55M880 175H670v50M880 175h10v50" className="pl-arrow" fill="none" />
       <path d="M664 217l6 8 6-8M884 217l6 8 6-8" className="pl-arrow" fill="none" />
-      <rect x={560} y={232} width={220} height={64} rx={14} className="pl-found" />
-      <text x={670} y={270} textAnchor="middle" className="pl-title pl-found-text">
+      <rect x={560} y={232} width={220} height={92} rx={14} className="pl-found" />
+      <Icon name="alert" size={30} x={655} y={242} className="pl-ic-found" />
+      <text x={670} y={304} textAnchor="middle" className="pl-title pl-found-text">
         {t('ui.how.found')}
       </text>
-      <rect x={800} y={232} width={190} height={64} rx={14} className="pl-unchecked" />
-      <text x={895} y={270} textAnchor="middle" className="pl-title pl-unchecked-text">
+      <rect x={800} y={232} width={190} height={92} rx={14} className="pl-unchecked" />
+      <Icon name="help" size={30} x={880} y={242} className="pl-ic-unk" />
+      <text x={895} y={304} textAnchor="middle" className="pl-title pl-unchecked-text">
         {t('ui.how.unchecked')}
       </text>
     </svg>

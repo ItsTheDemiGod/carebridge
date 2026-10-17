@@ -1,3 +1,4 @@
+import { Icon, type IconName } from './icons'
 import type { ElementType, HTMLAttributes, ReactNode } from 'react'
 
 export function Container({ children, as: Tag = 'div', className = '', ...rest }: { children: ReactNode; as?: ElementType; className?: string } & HTMLAttributes<HTMLElement>) {
@@ -24,5 +25,15 @@ export function SectionHeading({ number, label, title, id, as: H = 'h2', classNa
         {title}
       </H>
     </header>
+  )
+}
+
+/** A section heading with a decorative icon (the words carry the meaning, so the icon is aria-hidden). */
+export function IconHeading({ id, icon, children }: { id?: string; icon: IconName; children: ReactNode }) {
+  return (
+    <h2 id={id} className="h3-like icon-heading">
+      <Icon name={icon} size={24} />
+      <span>{children}</span>
+    </h2>
   )
 }

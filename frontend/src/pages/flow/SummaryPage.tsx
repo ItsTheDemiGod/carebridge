@@ -6,7 +6,7 @@ import type { DoctorSummary } from '../../api/types'
 import { Button, ButtonLink } from '../../components/Button'
 import { Notice } from '../../components/Badges'
 import { Icon } from '../../components/icons'
-import { SectionHeading } from '../../components/Layout'
+import { IconHeading, SectionHeading } from '../../components/Layout'
 import { FlowPage } from '../../flow/FlowPage'
 import { useFlow } from '../../flow/FlowProvider'
 import { ProblemNotice } from '../../flow/ProblemNotice'
@@ -64,7 +64,7 @@ function Summary({ id }: { id: string }) {
       <p className="muted">{t('ui.flow.summary.period', { from: data.period.from, to: data.period.to })}</p>
 
       <section aria-labelledby="s-meds" className="res-section">
-        <h2 id="s-meds" className="h3-like">{data.headings.medicines}</h2>
+        <IconHeading id="s-meds" icon="pill">{data.headings.medicines}</IconHeading>
         {data.medicines.length === 0 ? <p className="muted">{t('ui.flow.summary.no_meds')}</p> : (
           <div className="table-wrap">
             <table className="summary-table">
@@ -96,13 +96,13 @@ function Summary({ id }: { id: string }) {
 
       {data.not_scheduled.length ? (
         <section aria-labelledby="s-ns" className="res-section">
-          <h2 id="s-ns" className="h3-like">{t('ui.flow.schedule.not_scheduled')}</h2>
+          <IconHeading id="s-ns" icon="calendar">{t('ui.flow.schedule.not_scheduled')}</IconHeading>
           <ul className="res-lines">{data.not_scheduled.map((n) => <li key={n.ref} className="res-line"><p><strong>{n.name}</strong>: {n.text}</p></li>)}</ul>
         </section>
       ) : null}
 
       <section aria-labelledby="s-unc" className="res-section">
-        <h2 id="s-unc" className="h3-like">{data.headings.unconfirmed}</h2>
+        <IconHeading id="s-unc" icon="circle-alert">{data.headings.unconfirmed}</IconHeading>
         {data.unconfirmed.length === 0 ? <p className="muted">{t('ui.flow.summary.none')}</p> : (
           <ul className="res-lines">
             {data.unconfirmed.map((u) => (
@@ -113,7 +113,7 @@ function Summary({ id }: { id: string }) {
       </section>
 
       <section aria-labelledby="s-int" className="res-section">
-        <h2 id="s-int" className="h3-like">{data.headings.interactions}</h2>
+        <IconHeading id="s-int" icon="shield">{data.headings.interactions}</IconHeading>
         {data.interactions.lines.length === 0 ? <p className="muted">{t('ui.flow.summary.none')}</p> : <ul className="res-lines">{data.interactions.lines.map((l, i) => <li key={i} className="res-line"><p>{l}</p></li>)}</ul>}
       </section>
 

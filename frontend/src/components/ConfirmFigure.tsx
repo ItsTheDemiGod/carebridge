@@ -9,7 +9,7 @@ export function ConfirmFigure() {
     <figure className="confirm-figure">
       <svg viewBox="0 0 440 330" role="img" aria-label={`${t('ui.confirm.fig.read')} → ${t('ui.confirm.fig.pick')}`}>
         <rect x="8" y="8" width="424" height="96" rx="14" className="cf-bad" />
-        <foreignObject x="26" y="14" width="388" height="62">
+        <foreignObject x="26" y="14" width="356" height="62">
           <div className="cf-text">{t('ui.confirm.fig.read')}</div>
         </foreignObject>
         <path d="M28 84c30-6 60 6 90 0s60-6 90 0 60 6 90 0 50-4 70 0" className="cf-wavy" />
@@ -24,6 +24,7 @@ export function ConfirmFigure() {
         <foreignObject x="26" y="200" width="330" height="92">
           <div className="cf-text cf-text-good">{t('ui.confirm.fig.pick')}</div>
         </foreignObject>
+        <Icon name="alert" size={28} x={392} y={22} className="cf-alert" />
         <g transform="translate(372 222)" className="cf-check">
           <circle cx="24" cy="24" r="24" />
           <path d="M13 25l8 8 15-17" />
