@@ -7813,6 +7813,34 @@
     "text": "शुरू करें",
     "review_status": "draft_unreviewed"
    }
+  },
+  "ui.photo.pillbox_b": {
+   "en": {
+    "text": "A weekly pill organiser with its lids open",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மூடிகள் திறந்த வாராந்திர மாத்திரைப் பெட்டி",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "ढक्कन खुले हुए साप्ताहिक गोली-डिब्बा",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.footer.credits_list": {
+   "en": {
+    "text": "Each photograph, its photographer, licence and source page",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "ஒவ்வொரு புகைப்படமும், எடுத்தவர், உரிமம், மூலப் பக்கம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "हर फ़ोटो, उसके फ़ोटोग्राफ़र, लाइसेंस और स्रोत पन्ना",
+    "review_status": "draft_unreviewed"
+   }
   }
  },
  "english_only": {

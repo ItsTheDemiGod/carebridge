@@ -13,10 +13,10 @@ import { useT } from '../i18n/I18n'
 import { LANGS, STRINGS, translate } from '../i18n/translate'
 import { usePageTitle } from './usePageTitle'
 
-const STEPS: { n: '1' | '2' | '3'; icon: IconName }[] = [
-  { n: '1', icon: 'camera' },
-  { n: '2', icon: 'search' },
-  { n: '3', icon: 'document' },
+const STEPS: { n: '1' | '2' | '3'; icon: IconName; photo: string; alt: string }[] = [
+  { n: '1', icon: 'camera', photo: 'phone', alt: 'ui.photo.phone' },
+  { n: '2', icon: 'search', photo: 'notebook', alt: 'ui.photo.notebook' },
+  { n: '3', icon: 'document', photo: 'pillbox', alt: 'ui.photo.pillbox_b' },
 ]
 const PRIVACY: { id: 'local' | 'stored' | 'delete'; icon: IconName }[] = [
   { id: 'local', icon: 'lock' },
@@ -76,12 +76,12 @@ export function LandingPage() {
       <Container as="section" className="steps section" aria-labelledby="steps-title">
         <SectionHeading number="01" label={t('ui.steps.label')} title={t('ui.steps.title')} id="steps-title" />
         <div className="steps-body">
-          <div className="steps-photo" data-parallax="0.06">
-            <Photo name="blister" alt={t('ui.photo.blister')} missingLabel={t('ui.photo.missing')} sizes="(min-width: 64rem) 30vw, 90vw" />
-          </div>
-          <ol className="steps-list">
-            {STEPS.map(({ n, icon }) => (
+          <ol className="land-steps">
+            {STEPS.map(({ n, icon, photo, alt }) => (
               <Reveal as="li" key={n} delay={Number(n) * 90}>
+                <div className="step-photo">
+                  <Photo name={photo} alt={t(alt)} missingLabel={t('ui.photo.missing')} sizes="(min-width: 48rem) 22rem, 90vw" />
+                </div>
                 <span className="step-num" aria-hidden="true">{`0${n}`}</span>
                 <div>
                   <h3><Icon name={icon} size={26} />{t(`ui.steps.${n}.title`)}</h3>
@@ -102,6 +102,9 @@ export function LandingPage() {
               <p>{t('ui.confirm.body1')}</p>
               <p>{t('ui.confirm.body2')}</p>
               <p>{t('ui.confirm.body3')}</p>
+            </div>
+            <div className="confirm-photo">
+              <Photo name="blister" alt={t('ui.photo.blister')} missingLabel={t('ui.photo.missing')} sizes="(min-width: 64rem) 26rem, 90vw" />
             </div>
           </div>
           <Reveal className="confirm-art">
@@ -139,6 +142,9 @@ export function LandingPage() {
             <p className="label on-dark-label"><span className="label-num">04</span><span>{t('ui.privacy.label')}</span></p>
             <h2 id="privacy-title">{t('ui.privacy.title')}</h2>
             <p className="privacy-link"><TextLink to="/privacy">{t('ui.privacy.link')}</TextLink></p>
+            <div className="privacy-photo">
+              <Photo name="clipboard" alt={t('ui.photo.clipboard')} missingLabel={t('ui.photo.missing')} sizes="(min-width: 64rem) 24rem, 90vw" />
+            </div>
           </div>
           <ul className="privacy-list">
             {PRIVACY.map(({ id, icon }) => (

@@ -50,6 +50,7 @@ def main() -> None:
         manifest[name] = {"width": widths[-1], "height": round(im.height * widths[-1] / im.width), "widths": widths}
         if name in sources:
             manifest[name]["credit"] = f"{sources[name]['photographer']}, {sources[name]['license']}"
+            manifest[name]["source"] = sources[name]["source_url"]  # shown as the credit link in the footer (Phase 6c)
         if name not in sources:
             print(f"warning: {name} has no entry in assets/photo_sources.json (add source, photographer, licence)")
         print(f"{name}: {widths} {max((OUT / f'{name}-{widths[-1]}.{e}').stat().st_size for e in ('webp', 'jpg')) // 1024} KB at the largest size")

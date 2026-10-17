@@ -5,7 +5,8 @@
   "widths": [
    800
   ],
-  "credit": "Tmeers91, CC0 1.0"
+  "credit": "Tmeers91, CC0 1.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Alprazolam_orally_disintegrating_tablets,_blister_packs.jpg"
  },
  "breakfast": {
   "width": 2000,
@@ -15,7 +16,8 @@
    1400,
    2000
   ],
-  "credit": "Ron Lach, Pexels License"
+  "credit": "Ron Lach, Pexels License",
+  "source": "https://www.pexels.com/photo/breakfast-of-pancakes-and-buns-10388447/"
  },
  "clipboard": {
   "width": 2000,
@@ -25,7 +27,8 @@
    1400,
    2000
   ],
-  "credit": "Sora Shimazaki, Pexels License"
+  "credit": "Sora Shimazaki, Pexels License",
+  "source": "https://www.pexels.com/photo/notebook-and-clipboard-with-papers-placed-on-desk-with-folders-and-pens-5668469/"
  },
  "leaves": {
   "width": 1400,
@@ -34,7 +37,8 @@
    800,
    1400
   ],
-  "credit": "Kurt Kaiser, CC0 1.0"
+  "credit": "Kurt Kaiser, CC0 1.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Close_up_yellow_and_green_leaves_in_Spring_texture.jpg"
  },
  "linen": {
   "width": 2000,
@@ -44,7 +48,8 @@
    1400,
    2000
   ],
-  "credit": "Delany Dean, CC BY 2.0"
+  "credit": "Delany Dean, CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Book_cover_fabric_-_Flickr_-_Delany_Dean.jpg"
  },
  "notebook": {
   "width": 2000,
@@ -54,7 +59,8 @@
    1400,
    2000
   ],
-  "credit": "cottonbro studio, Pexels License"
+  "credit": "cottonbro studio, Pexels License",
+  "source": "https://www.pexels.com/photo/blue-ceramic-mug-beside-clear-drinking-glass-5486002/"
  },
  "phone": {
   "width": 2000,
@@ -64,7 +70,8 @@
    1400,
    2000
   ],
-  "credit": "Valentin Ilas, Pexels License"
+  "credit": "Valentin Ilas, Pexels License",
+  "source": "https://www.pexels.com/photo/smartphone-on-wooden-table-33039024/"
  },
  "pillbox": {
   "width": 2000,
@@ -74,7 +81,8 @@
    1400,
    2000
   ],
-  "credit": "Towfiqu barbhuiya, Pexels License"
+  "credit": "Towfiqu barbhuiya, Pexels License",
+  "source": "https://www.pexels.com/photo/pills-in-organizer-14387794/"
  },
  "stethoscope": {
   "width": 2000,
@@ -84,7 +92,8 @@
    1400,
    2000
   ],
-  "credit": "Tima Miroshnichenko, Pexels License"
+  "credit": "Tima Miroshnichenko, Pexels License",
+  "source": "https://www.pexels.com/photo/stethoscope-notebook-and-medicines-on-doctors-office-desk-5407237/"
  },
  "water": {
   "width": 2000,
@@ -94,6 +103,7 @@
    1400,
    2000
   ],
-  "credit": "Mysterymanblue, CC BY 4.0"
+  "credit": "Mysterymanblue, CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Alka-Seltzer_tablet_sinking_in_glass.jpg"
  }
 }

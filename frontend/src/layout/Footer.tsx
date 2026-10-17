@@ -4,7 +4,7 @@ import { useT } from '../i18n/I18n'
 import manifest from '../photos.manifest.json'
 import { Wordmark } from './Wordmark'
 
-const CREDITS = Object.values(manifest as Record<string, { credit?: string }>).flatMap((e) => (e.credit ? [e.credit] : []))
+const CREDITS = Object.values(manifest as Record<string, { credit?: string; source?: string }>).flatMap((e) => (e.credit && e.source ? [{ credit: e.credit, source: e.source }] : []))
 
 export function Footer() {
   const { t } = useT()
@@ -27,10 +27,22 @@ export function Footer() {
           <p id="calm-explain" className="footer-small">
             <strong>{t('ui.calm.label')}.</strong> {t('ui.calm.explain')}
           </p>
-          <p className="footer-small">
-            <strong>{t('ui.footer.credits')}.</strong> {t('ui.footer.credits_body')}
-          </p>
-          {CREDITS.length ? <p className="footer-small footer-credits">{CREDITS.join(' · ')}</p> : null}
+          <details className="footer-small footer-credits">
+            <summary>
+              <strong>{t('ui.footer.credits')}</strong>
+            </summary>
+            <p>{t('ui.footer.credits_body')}</p>
+            <p className="muted-on-dark">{t('ui.footer.credits_list')}</p>
+            <ul>
+              {CREDITS.map((c) => (
+                <li key={c.source}>
+                  <a href={c.source} target="_blank" rel="noopener noreferrer">
+                    {c.credit}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
         </div>
       </div>
     </footer>

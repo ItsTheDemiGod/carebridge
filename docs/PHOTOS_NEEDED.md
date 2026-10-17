@@ -23,3 +23,7 @@ No recognisable faces. No brand logos. Nothing readable (drug names, barcodes, h
 | `clipboard.jpg` | clipboard papers from above, illegible text | 2000 px wide |
 
 Candidates that were looked at and rejected: the printed side of the blister pack photograph (readable drug name and barcodes; only the empty foil side is used) and a restaurant table photograph with a wine glass and part of a person.
+
+
+## Status after Phase 6c-4
+All ten themes are obtained and placed (hero mosaic: leaves, breakfast, stethoscope, water, linen, clipboard; steps: phone, notebook, pillbox; why you confirm first: blister; privacy: clipboard). Checked in treated screenshots: the pink and blue pillbox and the breakfast photo sit calmly in the duotone; the stethoscope crop shows no print; the clipboard shows no readable text; no faces and no brand names. The pillbox shows partial weekday letters on its lids ("TUE"), which is not drug information. The 6a alt strings `ui.photo.pillbox` ("Hands holding...") and `ui.photo.water` ("on a saucer") describe photographs that were not the ones obtained; they are left unchanged for the reviewers and the pages use `ui.photo.pillbox_b`. No photograph is used on the 404 page or the empty states (a picture there would add weight without helping).

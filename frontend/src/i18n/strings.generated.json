@@ -1108,6 +1108,10 @@
    "text": "Photographs are self-hosted. Sources and licences are listed in assets/ATTRIBUTION.md in the project files.",
    "review_status": "not_required"
   },
+  "ui.footer.credits_list": {
+   "text": "Each photograph, its photographer, licence and source page",
+   "review_status": "not_required"
+  },
   "ui.footer.prototype": {
    "text": "CareBridge is a class project prototype made for an AI in Healthcare course. It is not medical advice.",
    "review_status": "not_required"
@@ -1366,6 +1370,10 @@
   },
   "ui.photo.pillbox": {
    "text": "Hands holding a weekly pill organiser",
+   "review_status": "not_required"
+  },
+  "ui.photo.pillbox_b": {
+   "text": "A weekly pill organiser with its lids open",
    "review_status": "not_required"
   },
   "ui.photo.stethoscope": {
@@ -2670,6 +2678,10 @@
    "text": "புகைப்படங்கள் இந்தத் தளத்திலேயே உள்ளன. மூலங்களும் உரிமங்களும் திட்டக் கோப்புகளில் assets/ATTRIBUTION.md இல் உள்ளன.",
    "review_status": "draft_unreviewed"
   },
+  "ui.footer.credits_list": {
+   "text": "ஒவ்வொரு புகைப்படமும், எடுத்தவர், உரிமம், மூலப் பக்கம்",
+   "review_status": "draft_unreviewed"
+  },
   "ui.footer.prototype": {
    "text": "CareBridge என்பது AI in Healthcare பாடத்திற்காக உருவாக்கிய வகுப்புத் திட்ட மாதிரி. இது மருத்துவ ஆலோசனை அல்ல.",
    "review_status": "draft_unreviewed"
@@ -2928,6 +2940,10 @@
   },
   "ui.photo.pillbox": {
    "text": "வாராந்திர மாத்திரைப் பெட்டியைப் பிடித்திருக்கும் கைகள்",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.pillbox_b": {
+   "text": "மூடிகள் திறந்த வாராந்திர மாத்திரைப் பெட்டி",
    "review_status": "draft_unreviewed"
   },
   "ui.photo.stethoscope": {
@@ -4232,6 +4248,10 @@
    "text": "तस्वीरें इसी साइट पर रखी गई हैं। स्रोत और लाइसेंस प्रोजेक्ट फ़ाइलों में assets/ATTRIBUTION.md में दिए हैं।",
    "review_status": "draft_unreviewed"
   },
+  "ui.footer.credits_list": {
+   "text": "हर फ़ोटो, उसके फ़ोटोग्राफ़र, लाइसेंस और स्रोत पन्ना",
+   "review_status": "draft_unreviewed"
+  },
   "ui.footer.prototype": {
    "text": "CareBridge, AI in Healthcare पाठ्यक्रम के लिए बनाया गया कक्षा परियोजना का प्रोटोटाइप है। यह चिकित्सा सलाह नहीं है।",
    "review_status": "draft_unreviewed"
@@ -4490,6 +4510,10 @@
   },
   "ui.photo.pillbox": {
    "text": "साप्ताहिक गोली-डिब्बा पकड़े हुए हाथ",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.photo.pillbox_b": {
+   "text": "ढक्कन खुले हुए साप्ताहिक गोली-डिब्बा",
    "review_status": "draft_unreviewed"
   },
   "ui.photo.stethoscope": {

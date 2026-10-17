@@ -10,20 +10,20 @@ type Cell = { x: number; y: number; w: number; h: number; tone: TileTone; patter
  * to designed placeholder tiles when a photograph is missing. Drift is translate-only CSS; tilt is a small rotation. */
 const CELLS: Cell[] = [
   { x: 0, y: 0, w: 44, h: 34, tone: 'pine', photo: 'leaves', dx: 8, dy: 6, dur: 22, delay: 0 },
-  { x: 46, y: 0, w: 26, h: 20, tone: 'pine', pattern: 'lines', icon: 'pill', dx: -6, dy: 8, dur: 18, delay: -4 },
+  { x: 46, y: 0, w: 26, h: 20, tone: 'pine', photo: 'breakfast', dx: -6, dy: 8, dur: 18, delay: -4 },
   { x: 74, y: 0, w: 26, h: 26, tone: 'sage', pattern: 'grain', icon: 'leaf', dx: 7, dy: -7, dur: 25, delay: -9 },
   { x: 46, y: 22, w: 12, h: 14, tone: 'terracotta', pattern: 'grain', dx: 5, dy: 6, dur: 16, delay: -2 },
   { x: 60, y: 22, w: 12, h: 14, tone: 'mist', pattern: 'dots', dx: -5, dy: 5, dur: 20, delay: -7 },
   { x: 74, y: 28, w: 26, h: 20, tone: 'paper', icon: 'calendar', dx: -8, dy: 4, dur: 23, delay: -12 },
-  { x: 0, y: 36, w: 20, h: 28, tone: 'ink', pattern: 'arches', icon: 'shield', dx: 6, dy: -8, dur: 21, delay: -5 },
+  { x: 0, y: 36, w: 20, h: 28, tone: 'pine', photo: 'stethoscope', dx: 6, dy: -8, dur: 21, delay: -5 },
   { x: 22, y: 36, w: 30, h: 28, tone: 'pine', photo: 'water', dx: -7, dy: 7, dur: 26, delay: -14 },
   { x: 54, y: 38, w: 18, h: 14, tone: 'sage', pattern: 'lines', dx: 6, dy: 5, dur: 17, delay: -1 },
   { x: 54, y: 54, w: 18, h: 24, tone: 'pine', pattern: 'dots', icon: 'clock', dx: -6, dy: -6, dur: 24, delay: -10 },
   { x: 74, y: 50, w: 26, h: 28, tone: 'mist', pattern: 'arches', icon: 'document', dx: 8, dy: 7, dur: 19, delay: -6 },
   { x: 0, y: 66, w: 34, h: 44, tone: 'pine', photo: 'linen', dx: 7, dy: -6, dur: 27, delay: -16 },
-  { x: 36, y: 66, w: 16, h: 16, tone: 'paper', pattern: 'lines', dx: -5, dy: 6, dur: 15, delay: -3 },
+  { x: 36, y: 66, w: 16, h: 16, tone: 'paper', pattern: 'lines', icon: 'pill', dx: -5, dy: 6, dur: 15, delay: -3 },
   { x: 36, y: 84, w: 16, h: 26, tone: 'sage', pattern: 'grain', icon: 'search', dx: 6, dy: 5, dur: 22, delay: -8 },
-  { x: 54, y: 80, w: 46, h: 30, tone: 'pine', pattern: 'lines', dx: -8, dy: -5, dur: 28, delay: -11 },
+  { x: 54, y: 80, w: 46, h: 30, tone: 'pine', photo: 'clipboard', dx: -8, dy: -5, dur: 28, delay: -11 },
 ]
 
 export function Mosaic() {
@@ -59,7 +59,7 @@ export function Mosaic() {
           style={{ left: `${c.x}%`, top: `${(c.y / 110) * 100}%`, width: `${c.w}%`, height: `${(c.h / 110) * 100}%`, '--dx': `${c.dx}px`, '--dy': `${c.dy}px`, '--dur': `${c.dur}s`, '--delay': `${c.delay}s` } as CSSProperties}
         >
           <Tile tone={c.tone} pattern={c.pattern ?? 'none'} className="mosaic-tile">
-            {c.photo ? <Photo name={c.photo} alt="" missingLabel="" sizes="(min-width: 64rem) 20vw, 50vw" /> : null}
+            {c.photo ? <Photo name={c.photo} alt="" missingLabel="" eager sizes="(min-width: 64rem) 20vw, 50vw" /> : null}
             {c.icon ? <Icon name={c.icon} size={c.w > 20 ? 44 : 32} /> : null}
           </Tile>
         </div>
