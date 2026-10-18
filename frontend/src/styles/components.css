@@ -40,7 +40,7 @@
 .notice-important { background: var(--paper-2); border-color: var(--terracotta); }
 .notice-important svg { color: var(--terracotta-ink); }
 .notice-title { font-family: var(--font-display); font-size: var(--t-h3); line-height: 1.2; margin-bottom: var(--s-2); }
-.notice-body { max-width: var(--measure); }
+.notice-body { max-width: var(--measure); overflow-wrap: anywhere; }
 
 /* Photographs: duotone via blend modes (cheap, no filters on large areas) */
 .photo { position: relative; overflow: hidden; border-radius: var(--r-md); background: var(--paper-3); }

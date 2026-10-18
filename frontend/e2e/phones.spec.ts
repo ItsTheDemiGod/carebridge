@@ -70,6 +70,8 @@ for (const lang of LANGS)
       for (const r of ROUTES) {
         await r.go(page)
         await page.locator(r.ready).first().waitFor({ timeout: 15_000 })
+        // measure with the web fonts in place: while Noto Tamil/Devanagari is still loading the fallback font is wider and overflowed by a few px
+        await page.evaluate(() => document.fonts.ready)
         await page.waitForTimeout(250)
         const ov = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
         if (ov > 0) problems.push(`${r.name}: page scrolls sideways by ${ov}px`)
