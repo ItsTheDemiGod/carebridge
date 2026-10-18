@@ -27,9 +27,11 @@ for (const lang of LANGS)
       const row = page.locator(`tr[data-figure="${e.id}"]`)
       await expect(row.locator('.t-result strong')).toHaveText(fmt(e)) // the shown figure is the file's figure, in Western digits
       await expect(row.locator('code.t-source')).toHaveText(e.source) // every figure carries its committed source path
-      expect((await row.locator('td').nth(2).innerText()).trim().length).toBeGreaterThan(20) // "what this measures"
+      expect((await row.locator('td.t-measures').innerText()).trim().length).toBeGreaterThan(20) // "what this measures"
       expect(e.source).toMatch(/^(eval\/results\/.+\/metrics\.json|docs\/smoke\/.+\.json)$/)
     }
+    for (const th of await page.locator('tbody th').allInnerTexts()) expect(th).not.toContain('F1') // the score name lives only in the measures column
+    await expect(page.locator('.group-data')).not.toHaveCount(0) // shared data line, once per group
     // the unit-less numbers stay Western digits in Tamil and Hindi too
     for (const t of await page.locator('.t-result strong').allInnerTexts()) expect(t).toMatch(/^[0-9.%]+$/)
     // held-out test results: stated as not yet run, never a number or placeholder

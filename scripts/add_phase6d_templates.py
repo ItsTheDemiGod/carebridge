@@ -11,7 +11,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 import add_phase6a_templates as P6A  # noqa: E402
 import export_review_sheet as X  # noqa: E402
 
-CORRECTED_PHOTOS = {f"ui.photo.{n}" for n in ("notebook", "blister", "clipboard", "stethoscope")}
+CORRECTED_PHOTOS = {f"ui.photo.{n}" for n in ("notebook", "blister", "clipboard", "stethoscope", "leaves", "phone")}
 NEW: dict[str, tuple[str, str, str]] = {}
 for _f in sorted(Path(__file__).parent.glob("p6d_*.py")):
     _m = __import__(_f.stem)

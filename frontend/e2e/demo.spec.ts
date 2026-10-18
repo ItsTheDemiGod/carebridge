@@ -131,6 +131,17 @@ test('the picker path: nothing is preselected, a pick is needed, and Save return
   await expect(page.getByText('Interaction data: DDInter (CC BY-NC-SA 4.0)').first()).toBeVisible() // attribution wherever the pairs are shown
 })
 
+test('the review page says why the sample photo looks blurry, above the photo viewer', async ({ page }) => {
+  trackApi(page)
+  await page.goto('/demo/review')
+  await card(page, 0).waitFor()
+  const note = page.locator('.rv-pane .demo-photo-note')
+  await expect(note).toHaveText(/deliberately blurry scan/)
+  const nb = (await note.boundingBox())!
+  const vb = (await page.locator('.rv-pane .pv-frame, .rv-pane img').first().boundingBox())!
+  expect(nb.y + nb.height).toBeLessThanOrEqual(vb.y)
+})
+
 test('leaving the sample forgets what was done in it (marks, saved state) and goes to the landing page', async ({ page }) => {
   trackApi(page)
   await page.goto('/demo/review')

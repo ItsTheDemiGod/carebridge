@@ -13,7 +13,7 @@ import { useFlow } from '../../flow/FlowProvider'
 import { ProblemNotice } from '../../flow/ProblemNotice'
 import { buildConfirmations, draftFromServer, emptyDraft, MAX_ADDED, orderMedicines, statusOf, type AddedDraft, type Draft } from '../../flow/review'
 import { useServerStrings } from '../../flow/serverStrings'
-import { PrerecordedNote } from '../../demo/DemoBar'
+import { DemoPhotoNote, PrerecordedNote } from '../../demo/DemoBar'
 import { useDocId, useDocPath } from '../../demo/useDemo'
 import { useT } from '../../i18n/I18n'
 import { AddMedicine } from './review/AddMedicine'
@@ -217,6 +217,7 @@ function Review({ id }: { id: string }) {
 
         <div className="review-grid">
           <aside className="rv-pane" aria-label={t('ui.flow.photo.label')}>
+            <DemoPhotoNote />
             {photoUrl ? (
               <PhotoViewer url={photoUrl} />
             ) : (
@@ -232,6 +233,7 @@ function Review({ id }: { id: string }) {
               <p>{t('ui.flow.review.risk')}</p>
             </Notice>
             <div className="phone-photo">
+              <DemoPhotoNote />
               {photoUrl ? (
                 <>
                   <button type="button" className="rv-thumb" aria-label={t('ui.flow.photo.show')} onClick={() => setViewer(true)}>

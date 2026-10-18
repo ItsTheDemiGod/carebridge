@@ -50,8 +50,8 @@ s("ui.testing.g.safety", "Interaction checks", "இடைவினைச் ச�
 s("ui.testing.g.live", "The whole flow", "முழுப் பயணம்", "पूरा प्रवाह")
 
 # figure labels
-s("ui.testing.f.ex_f1_raw", "Medicines found (F1), as the model returned them", "கண்டறிந்த மருந்துகள் (F1), மாடல் தந்தபடி", "मिली दवाएँ (F1), मॉडल के लौटाए अनुसार")
-s("ui.testing.f.ex_f1_norm", "Medicines found (F1), after the rules", "கண்டறிந்த மருந்துகள் (F1), விதிகளுக்குப் பிறகு", "मिली दवाएँ (F1), नियमों के बाद")
+s("ui.testing.f.ex_f1_raw", "Medicines found and not wrongly added, as the model returned them", "கண்டறிந்த, தவறாகச் சேர்க்கப்படாத மருந்துகள், மாடல் தந்தபடி", "मिली और ग़लती से न जोड़ी गई दवाएँ, मॉडल के लौटाए अनुसार")
+s("ui.testing.f.ex_f1_norm", "Medicines found and not wrongly added, after the rules", "கண்டறிந்த, தவறாகச் சேர்க்கப்படாத மருந்துகள், விதிகளுக்குப் பிறகு", "मिली और ग़लती से न जोड़ी गई दवाएँ, नियमों के बाद")
 s("ui.testing.f.ex_every_raw", "Medicines with every field right, as returned", "எல்லா புலங்களும் சரியான மருந்துகள், மாடல் தந்தபடி", "हर फ़ील्ड सही वाली दवाएँ, लौटाए अनुसार")
 s("ui.testing.f.ex_every_norm", "Medicines with every field right, after the rules", "எல்லா புலங்களும் சரியான மருந்துகள், விதிகளுக்குப் பிறகு", "हर फ़ील्ड सही वाली दवाएँ, नियमों के बाद")
 s("ui.testing.f.inv_raw", "Values made up where the document gives none, as returned", "ஆவணம் தராத இடத்தில் நிரப்பிய மதிப்புகள், மாடல் தந்தபடி", "जहाँ दस्तावेज़ में कुछ नहीं, वहाँ गढ़े मान, लौटाए अनुसार")

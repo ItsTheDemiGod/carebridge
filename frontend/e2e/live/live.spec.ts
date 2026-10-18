@@ -6,7 +6,7 @@ import { openCard } from '../flowhelpers'
 
 const ROOT = fileURLToPath(new URL('../../../', import.meta.url))
 const SHOTS = `${ROOT}docs/screenshots/phase6c`
-const REPORT = `${ROOT}docs/smoke/phase6c_live.json`
+const REPORT = `${ROOT}docs/smoke/phase6d_live.json`
 mkdirSync(SHOTS, { recursive: true })
 
 type GT = { brand_name: string | null; generic_name: string | null; strength: string | null }

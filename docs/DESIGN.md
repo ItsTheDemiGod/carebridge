@@ -86,6 +86,10 @@ Method: every route screenshotted at 1280 px (en) and read against the rule "sta
 | Delete dialog | trash on the confirm button, alert on failure | unchanged |
 
 ## Header, review page, photographs (Phase 6c)
-- Header: row layout from 64rem (80rem Tamil), calm toggle icon-only on the row, delete label from 90rem; below that a single-DOM `#site-menu` disclosure keyed to the route (closes on navigation).
+- Header: row layout from 70rem (96rem Tamil; 6d: the Testing link made the row wider), calm toggle icon-only on the row, delete label from 90rem; below that a single-DOM `#site-menu` disclosure keyed to the route (closes on navigation).
 - Review page: `.review-shell` = sticky summary bar (counts, jump to next card needing a check, save) + photo pane + numbered cards. Statuses attention / checked / no action, always icon + text + colour. Phones: bar fixed at the bottom, photo opens in a full-screen dialog.
 - Photographs: leaves, breakfast, stethoscope, water, linen, clipboard in the hero mosaic (decorative, empty alt); phone, notebook, pillbox on the landing steps; blister under "why you confirm first"; clipboard in the privacy band. Credits (photographer, licence, source link from `photos.manifest.json`) in a footer `<details>`.
+
+## Sample mode and testing page (Phase 6d)
+- Sample (`/demo`, docs/DEMO.md): same components on recorded responses. Label strip (dashed terracotta outline = "not real", same idea as the draft tag) is part of the sticky header on every demo page with a "Leave the sample" link; header "Sample" tag (hidden on phones, where the strip says it); one-line "nothing to delete" note on each page; a note above the photo viewer says the photo is a deliberately blurry scan.
+- Testing page: group headings, one shared data line per group, table on wide screens, one card per figure below 48rem; caveat marked with a terracotta rule; Limits in an important notice.

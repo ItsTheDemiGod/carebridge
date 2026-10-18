@@ -103,3 +103,6 @@ What the frontend keeps, and what it does not:
 - **Network**: only the app origin is contacted (fonts, photos and scripts are self-hosted; no CDN or analytics). The Playwright audit asserts a single host.
 - **Delete my data** (header, once a session exists) calls `DELETE /session`, then clears all in-memory state, revokes the photo URL and returns to the landing page with the backend's receipt text. A 401 (expired or already deleted) is treated as "nothing left".
 Residual risks: browser extensions and the operating system can read page memory; a printed or saved PDF of the results leaves the app's control; the in-memory photo is visible to anyone using the same browser tab.
+
+## 9. Sample (demo) mode (Phase 6d)
+The sample under `/demo` calls no API (no session, no consent call, no upload), processes no photo and stores nothing: its state (decisions, taken/skipped marks) lives in page memory and is dropped on leaving; localStorage still holds only language and calm mode. There is nothing to delete. Its recorded data is synthetic (dev document ds_037).

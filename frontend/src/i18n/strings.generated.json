@@ -124,6 +124,10 @@
    "text": "Nothing is saved in the sample, so there is nothing to delete.",
    "review_status": "not_required"
   },
+  "ui.demo.photo_note": {
+   "text": "The sample photo is a deliberately blurry scan, so you can see how the check step helps when a name is hard to read.",
+   "review_status": "not_required"
+  },
   "ui.demo.prerecorded_note": {
    "text": "In this sample the result is pre-recorded and does not change with your choices.",
    "review_status": "not_required"
@@ -1521,7 +1525,7 @@
    "review_status": "not_required"
   },
   "ui.photo.leaves": {
-   "text": "Close-up of green leaves",
+   "text": "Close-up of green leaves with yellow edges",
    "review_status": "not_required"
   },
   "ui.photo.linen": {
@@ -1537,7 +1541,7 @@
    "review_status": "not_required"
   },
   "ui.photo.phone": {
-   "text": "A smartphone on a wooden table, screen off",
+   "text": "A smartphone with a dark screen lying on a slatted wooden bench",
    "review_status": "not_required"
   },
   "ui.photo.pillbox": {
@@ -1777,11 +1781,11 @@
    "review_status": "not_required"
   },
   "ui.testing.f.ex_f1_norm": {
-   "text": "Medicines found (F1), after the rules",
+   "text": "Medicines found and not wrongly added, after the rules",
    "review_status": "not_required"
   },
   "ui.testing.f.ex_f1_raw": {
-   "text": "Medicines found (F1), as the model returned them",
+   "text": "Medicines found and not wrongly added, as the model returned them",
    "review_status": "not_required"
   },
   "ui.testing.f.fl_identity": {
@@ -2240,6 +2244,10 @@
   },
   "ui.demo.nothing_to_delete": {
    "text": "மாதிரியில் எதுவும் சேமிக்கப்படுவதில்லை, எனவே நீக்க எதுவும் இல்லை.",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.demo.photo_note": {
+   "text": "மாதிரிப் புகைப்படம் வேண்டுமென்றே மங்கலாக எடுக்கப்பட்ட ஸ்கேன்; பெயரைப் படிப்பது கடினமாக இருக்கும்போது சரிபார்ப்புப் படி எப்படி உதவுகிறது என்பதைப் பார்க்கலாம்.",
    "review_status": "draft_unreviewed"
   },
   "ui.demo.prerecorded_note": {
@@ -3639,7 +3647,7 @@
    "review_status": "draft_unreviewed"
   },
   "ui.photo.leaves": {
-   "text": "பச்சை இலைகளின் அருகாமைக் காட்சி",
+   "text": "மஞ்சள் விளிம்புகளுடன் கூடிய பச்சை இலைகளின் அருகாமைக் காட்சி",
    "review_status": "draft_unreviewed"
   },
   "ui.photo.linen": {
@@ -3655,7 +3663,7 @@
    "review_status": "draft_unreviewed"
   },
   "ui.photo.phone": {
-   "text": "மரமேசையில் திரை அணைந்த ஸ்மார்ட்போன்",
+   "text": "பலகை அடுக்கிய மரப்பெஞ்சில் இருண்ட திரையுடன் கிடக்கும் ஸ்மார்ட்போன்",
    "review_status": "draft_unreviewed"
   },
   "ui.photo.pillbox": {
@@ -3895,11 +3903,11 @@
    "review_status": "draft_unreviewed"
   },
   "ui.testing.f.ex_f1_norm": {
-   "text": "கண்டறிந்த மருந்துகள் (F1), விதிகளுக்குப் பிறகு",
+   "text": "கண்டறிந்த, தவறாகச் சேர்க்கப்படாத மருந்துகள், விதிகளுக்குப் பிறகு",
    "review_status": "draft_unreviewed"
   },
   "ui.testing.f.ex_f1_raw": {
-   "text": "கண்டறிந்த மருந்துகள் (F1), மாடல் தந்தபடி",
+   "text": "கண்டறிந்த, தவறாகச் சேர்க்கப்படாத மருந்துகள், மாடல் தந்தபடி",
    "review_status": "draft_unreviewed"
   },
   "ui.testing.f.fl_identity": {
@@ -4358,6 +4366,10 @@
   },
   "ui.demo.nothing_to_delete": {
    "text": "नमूने में कुछ भी सहेजा नहीं जाता, इसलिए हटाने के लिए कुछ नहीं है।",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.demo.photo_note": {
+   "text": "नमूना फ़ोटो जानबूझकर धुंधला स्कैन है, ताकि आप देख सकें कि नाम पढ़ना मुश्किल होने पर जाँच वाला चरण कैसे मदद करता है।",
    "review_status": "draft_unreviewed"
   },
   "ui.demo.prerecorded_note": {
@@ -5757,7 +5769,7 @@
    "review_status": "draft_unreviewed"
   },
   "ui.photo.leaves": {
-   "text": "हरी पत्तियों का क्लोज़-अप",
+   "text": "पीले किनारों वाली हरी पत्तियों का क्लोज़-अप",
    "review_status": "draft_unreviewed"
   },
   "ui.photo.linen": {
@@ -5773,7 +5785,7 @@
    "review_status": "draft_unreviewed"
   },
   "ui.photo.phone": {
-   "text": "लकड़ी की मेज़ पर बंद स्क्रीन वाला स्मार्टफ़ोन",
+   "text": "पट्टियों वाली लकड़ी की बेंच पर काली स्क्रीन के साथ रखा स्मार्टफ़ोन",
    "review_status": "draft_unreviewed"
   },
   "ui.photo.pillbox": {
@@ -6013,11 +6025,11 @@
    "review_status": "draft_unreviewed"
   },
   "ui.testing.f.ex_f1_norm": {
-   "text": "मिली दवाएँ (F1), नियमों के बाद",
+   "text": "मिली और ग़लती से न जोड़ी गई दवाएँ, नियमों के बाद",
    "review_status": "draft_unreviewed"
   },
   "ui.testing.f.ex_f1_raw": {
-   "text": "मिली दवाएँ (F1), मॉडल के लौटाए अनुसार",
+   "text": "मिली और ग़लती से न जोड़ी गई दवाएँ, मॉडल के लौटाए अनुसार",
    "review_status": "draft_unreviewed"
   },
   "ui.testing.f.fl_identity": {

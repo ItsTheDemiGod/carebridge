@@ -51,15 +51,26 @@ export function TestingPage() {
 
       {DATA.groups.map((g) => {
         const rows = DATA.entries.filter((e) => e.group === g)
+        const dataText = (e: Entry) => fill(t(e.data), { ...e.params, ...lp })
+        const scope = (e: Entry) => `${t(`ui.testing.split.${e.split}`)} · ${fill(t('ui.testing.date'), { date: e.date })}`
+        // one shared data line per group when every row measures on the same data; otherwise each row says its own
+        const shared = rows.every((r) => dataText(r) === dataText(rows[0]) && scope(r) === scope(rows[0]))
+        const gcols = shared ? cols.filter((c) => c !== 'data') : cols
         return (
           <section key={g} aria-labelledby={`tg-${g}`} className="tgroup">
             <h2 id={`tg-${g}`} className="h3-like">{t(`ui.testing.g.${g}`)}</h2>
+            {shared ? (
+              <p className="group-data">
+                <strong>{dataText(rows[0])}</strong>
+                <span className="muted small">{scope(rows[0])}</span>
+              </p>
+            ) : null}
             <div className="table-wrap" tabIndex={0} role="region" aria-labelledby={`tg-${g}`}>
               <table className="testing-table">
                 <caption className="sr-only">{`${t('ui.testing.table.caption')} ${t(`ui.testing.g.${g}`)}`}</caption>
                 <thead>
                   <tr>
-                    {cols.map((c) => (
+                    {gcols.map((c) => (
                       <th key={c} scope="col">{t(`ui.testing.col.${c}`)}</th>
                     ))}
                   </tr>
@@ -74,13 +85,13 @@ export function TestingPage() {
                           <strong>{show(e)}</strong>
                           {e.of !== undefined && e.n !== undefined ? <span className="muted small">{fill(t('ui.testing.k_of_n'), { n: e.n, of: e.of })}</span> : null}
                         </td>
-                        <td data-label={t('ui.testing.col.data')}>
-                          <p>{fill(t(e.data), params)}</p>
-                          <p className="muted small">
-                            {t(`ui.testing.split.${e.split}`)} · {fill(t('ui.testing.date'), { date: e.date })}
-                          </p>
-                        </td>
-                        <td data-label={t('ui.testing.col.measures')}>
+                        {shared ? null : (
+                          <td data-label={t('ui.testing.col.data')}>
+                            <p>{dataText(e)}</p>
+                            <p className="muted small">{scope(e)}</p>
+                          </td>
+                        )}
+                        <td data-label={t('ui.testing.col.measures')} className="t-measures">
                           <p>{t(e.measures)}</p>
                           {e.caveat ? (
                             <p className="t-caveat">

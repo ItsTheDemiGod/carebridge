@@ -37,6 +37,13 @@ export function PrerecordedNote() {
   )
 }
 
+/** Review page of the sample: says why the photo looks poor, above the photo viewer. */
+export function DemoPhotoNote() {
+  const { t } = useT()
+  if (!useIsDemo()) return null
+  return <p className="demo-photo-note small">{t('ui.demo.photo_note')}</p>
+}
+
 /** Schedule page of the sample: marks are kept in memory only. */
 export function DemoMarksNote() {
   const { t } = useT()
