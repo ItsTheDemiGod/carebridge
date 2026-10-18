@@ -3826,29 +3826,29 @@
   },
   "ui.photo.notebook": {
    "en": {
-    "text": "An open notebook and pen beside a cup of tea",
+    "text": "An open spiral notebook with a pencil on it, beside an empty mug on a coaster and a plant, seen from above",
     "review_status": "not_required"
    },
    "ta": {
-    "text": "தேநீர்க் கோப்பைக்கு அருகில் திறந்த குறிப்பேடும் பேனாவும்",
+    "text": "மேலிருந்து பார்த்த காட்சி: பென்சிலுடன் திறந்த சுருள் குறிப்பேடு; அருகில் தட்டின் மேல் காலிக் குவளையும் ஒரு செடியும்",
     "review_status": "draft_unreviewed"
    },
    "hi": {
-    "text": "चाय के कप के पास खुली नोटबुक और कलम",
+    "text": "ऊपर से दिखता दृश्य: पेंसिल के साथ खुली स्पाइरल नोटबुक, पास में कोस्टर पर खाली मग और एक पौधा",
     "review_status": "draft_unreviewed"
    }
   },
   "ui.photo.blister": {
    "en": {
-    "text": "Blister packs on a plain surface",
+    "text": "A foil blister strip with crumpled, empty-looking pockets, on a wooden surface",
     "review_status": "not_required"
    },
    "ta": {
-    "text": "சமதளத்தில் மாத்திரை அட்டைகள்",
+    "text": "மரப்பரப்பில் ஒரு படல மாத்திரை அட்டை; அதன் குழிகள் சுருங்கிக் காலியாகத் தெரிகின்றன",
     "review_status": "draft_unreviewed"
    },
    "hi": {
-    "text": "सादी सतह पर गोलियों के पत्ते",
+    "text": "लकड़ी की सतह पर एक फ़ॉयल गोली-पत्ता, जिसके खाने सिकुड़े और खाली दिखते हैं",
     "review_status": "draft_unreviewed"
    }
   },
@@ -3896,15 +3896,15 @@
   },
   "ui.photo.stethoscope": {
    "en": {
-    "text": "A stethoscope on a desk, seen from above",
+    "text": "A stethoscope resting on an open spiral notebook, with a pair of glasses at the top edge, on a wooden surface",
     "review_status": "not_required"
    },
    "ta": {
-    "text": "மேசையில் ஸ்டெதாஸ்கோப், மேலிருந்து பார்த்தது",
+    "text": "மரப்பரப்பில் திறந்த சுருள் குறிப்பேட்டின் மேல் ஸ்டெதாஸ்கோப்; மேல் விளிம்பில் ஒரு கண்ணாடி",
     "review_status": "draft_unreviewed"
    },
    "hi": {
-    "text": "मेज़ पर रखा स्टेथोस्कोप, ऊपर से",
+    "text": "लकड़ी की सतह पर खुली स्पाइरल नोटबुक के ऊपर रखा स्टेथोस्कोप, ऊपरी किनारे पर चश्मा",
     "review_status": "draft_unreviewed"
    }
   },
@@ -3938,15 +3938,15 @@
   },
   "ui.photo.clipboard": {
    "en": {
-    "text": "Papers on a clipboard, seen from above",
+    "text": "A clipboard with a brown notebook and a pen on top, next to a black folder and a yellow envelope, on a wooden desk seen from above",
     "review_status": "not_required"
    },
    "ta": {
-    "text": "கிளிப்போர்டில் காகிதங்கள், மேலிருந்து பார்த்தது",
+    "text": "மேலிருந்து பார்த்த மரமேசை: கிளிப்போர்டின் மேல் பழுப்பு குறிப்பேடும் பேனாவும்; அருகில் கருப்பு கோப்பும் மஞ்சள் உறையும்",
     "review_status": "draft_unreviewed"
    },
    "hi": {
-    "text": "क्लिपबोर्ड पर कागज़, ऊपर से",
+    "text": "ऊपर से दिखती लकड़ी की मेज़: क्लिपबोर्ड पर भूरी नोटबुक और पेन, पास में काला फ़ोल्डर और पीला लिफ़ाफ़ा",
     "review_status": "draft_unreviewed"
    }
   },

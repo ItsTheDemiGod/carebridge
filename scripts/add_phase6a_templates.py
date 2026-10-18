@@ -197,15 +197,15 @@ NEW = {
     "ui.notfound.link": ("Go to the home page", "முகப்புப் பக்கத்துக்குச் செல்லுங்கள்", "मुख्य पृष्ठ पर जाएँ"),
     # ---- photo alt texts ----
     "ui.photo.pillbox": ("A pink weekly pill organiser with several lids open, each section holding pills", "பல மூடிகள் திறந்த இளஞ்சிவப்பு வாராந்திர மாத்திரைப் பெட்டி; ஒவ்வொரு பகுதியிலும் மாத்திரைகள் உள்ளன", "कई ढक्कन खुले हुए गुलाबी साप्ताहिक गोली-डिब्बा, हर खाने में गोलियाँ"),
-    "ui.photo.notebook": ("An open notebook and pen beside a cup of tea", "தேநீர்க் கோப்பைக்கு அருகில் திறந்த குறிப்பேடும் பேனாவும்", "चाय के कप के पास खुली नोटबुक और कलम"),
-    "ui.photo.blister": ("Blister packs on a plain surface", "சமதளத்தில் மாத்திரை அட்டைகள்", "सादी सतह पर गोलियों के पत्ते"),
+    "ui.photo.notebook": ('An open spiral notebook with a pencil on it, beside an empty mug on a coaster and a plant, seen from above', 'மேலிருந்து பார்த்த காட்சி: பென்சிலுடன் திறந்த சுருள் குறிப்பேடு; அருகில் தட்டின் மேல் காலிக் குவளையும் ஒரு செடியும்', 'ऊपर से दिखता दृश्य: पेंसिल के साथ खुली स्पाइरल नोटबुक, पास में कोस्टर पर खाली मग और एक पौधा'),
+    "ui.photo.blister": ('A foil blister strip with crumpled, empty-looking pockets, on a wooden surface', 'மரப்பரப்பில் ஒரு படல மாத்திரை அட்டை; அதன் குழிகள் சுருங்கிக் காலியாகத் தெரிகின்றன', 'लकड़ी की सतह पर एक फ़ॉयल गोली-पत्ता, जिसके खाने सिकुड़े और खाली दिखते हैं'),
     "ui.photo.breakfast": ("A breakfast table in morning light", "காலை வெளிச்சத்தில் காலை உணவு மேசை", "सुबह की रोशनी में नाश्ते की मेज़"),
     "ui.photo.leaves": ("Close-up of green leaves", "பச்சை இலைகளின் அருகாமைக் காட்சி", "हरी पत्तियों का क्लोज़-अप"),
     "ui.photo.phone": ("A smartphone on a wooden table, screen off", "மரமேசையில் திரை அணைந்த ஸ்மார்ட்போன்", "लकड़ी की मेज़ पर बंद स्क्रीन वाला स्मार्टफ़ोन"),
-    "ui.photo.stethoscope": ("A stethoscope on a desk, seen from above", "மேசையில் ஸ்டெதாஸ்கோப், மேலிருந்து பார்த்தது", "मेज़ पर रखा स्टेथोस्कोप, ऊपर से"),
+    "ui.photo.stethoscope": ('A stethoscope resting on an open spiral notebook, with a pair of glasses at the top edge, on a wooden surface', 'மரப்பரப்பில் திறந்த சுருள் குறிப்பேட்டின் மேல் ஸ்டெதாஸ்கோப்; மேல் விளிம்பில் ஒரு கண்ணாடி', 'लकड़ी की सतह पर खुली स्पाइरल नोटबुक के ऊपर रखा स्टेथोस्कोप, ऊपरी किनारे पर चश्मा'),
     "ui.photo.water": ("A tall glass of water with a tablet dissolving in it, in front of a window", "ஜன்னலுக்கு முன் ஒரு உயரமான தண்ணீர் குவளை; அதில் ஒரு மாத்திரை கரைகிறது", "खिड़की के सामने पानी का ऊँचा गिलास, जिसमें एक गोली घुल रही है"),
     "ui.photo.linen": ("Linen texture", "லினன் துணியின் அமைப்பு", "लिनन कपड़े की बुनावट"),
-    "ui.photo.clipboard": ("Papers on a clipboard, seen from above", "கிளிப்போர்டில் காகிதங்கள், மேலிருந்து பார்த்தது", "क्लिपबोर्ड पर कागज़, ऊपर से"),
+    "ui.photo.clipboard": ('A clipboard with a brown notebook and a pen on top, next to a black folder and a yellow envelope, on a wooden desk seen from above', 'மேலிருந்து பார்த்த மரமேசை: கிளிப்போர்டின் மேல் பழுப்பு குறிப்பேடும் பேனாவும்; அருகில் கருப்பு கோப்பும் மஞ்சள் உறையும்', 'ऊपर से दिखती लकड़ी की मेज़: क्लिपबोर्ड पर भूरी नोटबुक और पेन, पास में काला फ़ोल्डर और पीला लिफ़ाफ़ा'),
     "ui.photo.missing": ("Photograph not available", "புகைப்படம் கிடைக்கவில்லை", "फ़ोटो उपलब्ध नहीं है"),
 }
 
