@@ -27,7 +27,7 @@ def main():
         data["strings"][tid] = {"en": {"text": en, "review_status": "not_required"}, "ta": {"text": ta, "review_status": "draft_unreviewed"},
                                 "hi": {"text": hi, "review_status": "draft_unreviewed"}}
     p.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
-    n = X.export(sheet=REPO / "data" / "templates" / "review_sheet_phase6c_new.csv", only=set(NEW))
+    n = X.export(sheet=REPO / "data" / "templates" / "review_sheet_phase6c_new.csv", only=set(NEW) | __import__("p6c_photos").CORRECTED)
     print(f"{len(NEW)} templates, {n} sheet rows")
 
 

@@ -1453,7 +1453,7 @@
    "review_status": "not_required"
   },
   "ui.photo.pillbox": {
-   "text": "Hands holding a weekly pill organiser",
+   "text": "A pink weekly pill organiser with several lids open, each section holding pills",
    "review_status": "not_required"
   },
   "ui.photo.pillbox_b": {
@@ -1465,7 +1465,7 @@
    "review_status": "not_required"
   },
   "ui.photo.water": {
-   "text": "A glass of water and a tablet on a saucer",
+   "text": "A tall glass of water with a tablet dissolving in it, in front of a window",
    "review_status": "not_required"
   },
   "ui.pp.delete.body": {
@@ -3107,7 +3107,7 @@
    "review_status": "draft_unreviewed"
   },
   "ui.photo.pillbox": {
-   "text": "வாராந்திர மாத்திரைப் பெட்டியைப் பிடித்திருக்கும் கைகள்",
+   "text": "பல மூடிகள் திறந்த இளஞ்சிவப்பு வாராந்திர மாத்திரைப் பெட்டி; ஒவ்வொரு பகுதியிலும் மாத்திரைகள் உள்ளன",
    "review_status": "draft_unreviewed"
   },
   "ui.photo.pillbox_b": {
@@ -3119,7 +3119,7 @@
    "review_status": "draft_unreviewed"
   },
   "ui.photo.water": {
-   "text": "ஒரு குவளை தண்ணீரும் தட்டில் ஒரு மாத்திரையும்",
+   "text": "ஜன்னலுக்கு முன் ஒரு உயரமான தண்ணீர் குவளை; அதில் ஒரு மாத்திரை கரைகிறது",
    "review_status": "draft_unreviewed"
   },
   "ui.pp.delete.body": {
@@ -4761,7 +4761,7 @@
    "review_status": "draft_unreviewed"
   },
   "ui.photo.pillbox": {
-   "text": "साप्ताहिक गोली-डिब्बा पकड़े हुए हाथ",
+   "text": "कई ढक्कन खुले हुए गुलाबी साप्ताहिक गोली-डिब्बा, हर खाने में गोलियाँ",
    "review_status": "draft_unreviewed"
   },
   "ui.photo.pillbox_b": {
@@ -4773,7 +4773,7 @@
    "review_status": "draft_unreviewed"
   },
   "ui.photo.water": {
-   "text": "एक गिलास पानी और तश्तरी में एक गोली",
+   "text": "खिड़की के सामने पानी का ऊँचा गिलास, जिसमें एक गोली घुल रही है",
    "review_status": "draft_unreviewed"
   },
   "ui.pp.delete.body": {

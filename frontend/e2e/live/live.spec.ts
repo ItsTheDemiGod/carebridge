@@ -2,10 +2,11 @@ import AxeBuilder from '@axe-core/playwright'
 import { expect, test, type Page } from '@playwright/test'
 import { appendFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
+import { openCard } from '../flowhelpers'
 
 const ROOT = fileURLToPath(new URL('../../../', import.meta.url))
-const SHOTS = `${ROOT}docs/screenshots/phase6b`
-const REPORT = `${ROOT}docs/smoke/phase6b_live.json`
+const SHOTS = `${ROOT}docs/screenshots/phase6c`
+const REPORT = `${ROOT}docs/smoke/phase6c_live.json`
 mkdirSync(SHOTS, { recursive: true })
 
 type GT = { brand_name: string | null; generic_name: string | null; strength: string | null }
@@ -20,6 +21,7 @@ const DOC = 'ds_037'
 const sec = (a: number, b = Date.now()) => Math.round((b - a) / 100) / 10
 
 async function shot(page: Page, flow: number, lang: string, name: string) {
+  if (!/^(5review|6result)$/.test(name)) return // the screenshot budget keeps only the review and result pages (6 images)
   await page.waitForTimeout(500)
   await page.evaluate(() => window.scrollTo(0, 0))
   await page.screenshot({ path: `${SHOTS}/f${flow}_${lang}_${name}.jpg`, type: 'jpeg', quality: 55, fullPage: true })
@@ -71,13 +73,12 @@ for (const F of FLOWS)
     const tRev = Date.now()
     const before = await json(`/documents/${id}/result?lang=${F.lang}`)
     rep.before_confirmation = { counts: before.explanation.safety?.counts?.pairs_by_status, found: before.explanation.safety?.pair_results.filter((p: { status: string }) => p.status === 'interaction_found').length, confirm_first: before.confirm_first }
-    const cards = page.locator('article.med-card')
-    const n = await cards.count()
+    const n = await page.locator('article.med-card').count()
     const decisions: string[] = []
     for (let i = 0; i < n; i++) {
-      const cd = cards.nth(i)
+      const cd = await openCard(page, i) // cards are listed needs-attention first; checked ones fold, so go by document index
       const quote = ((await cd.locator('blockquote').innerText()) ?? '').toLowerCase()
-      const level = await cd.locator('.review-badge').innerText()
+      const level = await cd.locator('.rv-chip').innerText()
       const match = gt.find((g) => [g.brand_name, g.generic_name].filter(Boolean).some((s) => quote.includes(String(s).toLowerCase()))) ?? gt[i]
       const radios = cd.locator('input[type=radio]')
       const hasNameReason = (await cd.locator('.reasons li[data-kind=name]').count()) > 0

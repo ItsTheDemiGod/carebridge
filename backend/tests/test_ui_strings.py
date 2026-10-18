@@ -74,4 +74,4 @@ def test_phase6c_review_sheet_has_every_new_id_for_ta_and_hi():
     raw = (REPO / "data" / "templates" / "review_sheet_phase6c_new.csv").read_bytes()
     assert raw.startswith(b"\xef\xbb\xbf")
     rows = list(csv.DictReader(raw.decode("utf-8-sig").splitlines()))
-    assert {(r["template_id"], r["language"]) for r in rows} == {(t, lang) for t in P6C.NEW for lang in ("ta", "hi")}
+    assert {(r["template_id"], r["language"]) for r in rows} == {(t, lang) for t in set(P6C.NEW) | {"ui.photo.pillbox", "ui.photo.water"} for lang in ("ta", "hi")}
