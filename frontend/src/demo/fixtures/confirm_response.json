@@ -1,0 +1,55 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "confirm_response",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "confirmed": true,
+  "medicines": [
+   {
+    "interaction_ready": true,
+    "not_checked_reason": null,
+    "ref": "m0",
+    "resolution": "selected",
+    "review_level": "none",
+    "schedule_ready": true,
+    "unresolved": []
+   },
+   {
+    "interaction_ready": true,
+    "not_checked_reason": null,
+    "ref": "m1",
+    "resolution": "confirmed",
+    "review_level": "none",
+    "schedule_ready": true,
+    "unresolved": []
+   },
+   {
+    "interaction_ready": true,
+    "not_checked_reason": null,
+    "ref": "m2",
+    "resolution": "confirmed",
+    "review_level": "note",
+    "schedule_ready": true,
+    "unresolved": []
+   },
+   {
+    "interaction_ready": true,
+    "not_checked_reason": null,
+    "ref": "m3",
+    "resolution": "selected",
+    "review_level": "none",
+    "schedule_ready": true,
+    "unresolved": []
+   }
+  ],
+  "removed": []
+ }
+}

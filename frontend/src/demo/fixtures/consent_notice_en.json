@@ -1,0 +1,82 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "consent_notice_en",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "items": [
+   {
+    "id": "what",
+    "text": "CareBridge reads a photo of your medical document and explains it in simple words."
+   },
+   {
+    "id": "where",
+    "text": "The photo is read on this computer by a local model. Nothing is sent to any outside service."
+   },
+   {
+    "id": "stored",
+    "text": "We keep the results, not the photo, unless you choose to keep the photo. Everything we keep is encrypted."
+   },
+   {
+    "id": "how_long",
+    "text": "Saved results are kept until you delete them or 24 hours pass, whichever comes first."
+   },
+   {
+    "id": "delete",
+    "text": "You can delete everything now with one button. This also withdraws your consent."
+   },
+   {
+    "id": "no_sharing",
+    "text": "We do not sell or share your data."
+   },
+   {
+    "id": "prototype",
+    "text": "This is a class project prototype. It is not medical advice. Always confirm with your doctor or pharmacist."
+   },
+   {
+    "id": "translation_draft",
+    "text": "The Tamil and Hindi texts are machine-drafted and have not been reviewed by native speakers."
+   },
+   {
+    "id": "interaction_limited",
+    "text": "The interaction information is limited. It was drafted from official drug labels by the project author and has not been reviewed by a pharmacist."
+   },
+   {
+    "id": "contact",
+    "text": "Questions? Contact: Demian."
+   }
+  ],
+  "language": "en",
+  "purposes": [
+   {
+    "default": true,
+    "id": "process_photo",
+    "label": "Read the photo of my document (required)",
+    "required": true
+   },
+   {
+    "default": true,
+    "id": "store_results_for_session",
+    "label": "Save the results for this session (required)",
+    "required": true
+   },
+   {
+    "default": false,
+    "id": "keep_photo_for_session",
+    "label": "Also keep the photo for this session (optional)",
+    "required": false
+   }
+  ],
+  "review_status": "not_required",
+  "sha256": "ec085b2cfd730dd7810517c0854c7599d518b09cab20332e92ae490a84ca385b",
+  "title": "Before we start",
+  "version": "2"
+ }
+}

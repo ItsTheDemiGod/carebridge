@@ -1,0 +1,1332 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "result_after_ta",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "confirm_first": false,
+  "confirmed": true,
+  "document_id": "demo",
+  "explanation": {
+   "document_id": "demo",
+   "document_type": "discharge_summary",
+   "guardrail_events": [],
+   "model": "qwen3-vl:8b-instruct",
+   "prompt_version": "v2",
+   "safety": {
+    "counts": {
+     "interaction_ready": 4,
+     "interactions_by_level": {
+      "moderate": 1,
+      "unknown": 4
+     },
+     "medicines": 4,
+     "must_confirm": 0,
+     "pairs": 6,
+     "pairs_by_status": {
+      "interaction_found": 5,
+      "not_checked_no_record": 1
+     }
+    },
+    "duplicate_notices": [],
+    "overall_state": "review_interactions",
+    "pair_results": [
+     {
+      "a": 0,
+      "b": 1,
+      "generic_a": "Metformin",
+      "generic_b": "Glimepiride",
+      "level": "moderate",
+      "same_medicine": false,
+      "source": "ddinter",
+      "status": "interaction_found"
+     },
+     {
+      "a": 0,
+      "b": 2,
+      "generic_a": "Metformin",
+      "generic_b": "Telmisartan",
+      "level": "unknown",
+      "same_medicine": false,
+      "source": "ddinter",
+      "status": "interaction_found"
+     },
+     {
+      "a": 0,
+      "b": 3,
+      "generic_a": "Metformin",
+      "generic_b": "Atorvastatin",
+      "level": "unknown",
+      "same_medicine": false,
+      "source": "ddinter",
+      "status": "interaction_found"
+     },
+     {
+      "a": 1,
+      "b": 2,
+      "generic_a": "Glimepiride",
+      "generic_b": "Telmisartan",
+      "level": "unknown",
+      "same_medicine": false,
+      "source": "ddinter",
+      "status": "interaction_found"
+     },
+     {
+      "a": 1,
+      "b": 3,
+      "generic_a": "Glimepiride",
+      "generic_b": "Atorvastatin",
+      "level": "unknown",
+      "same_medicine": false,
+      "source": "ddinter",
+      "status": "interaction_found"
+     },
+     {
+      "a": 2,
+      "b": 3,
+      "generic_a": "Telmisartan",
+      "generic_b": "Atorvastatin",
+      "level": null,
+      "same_medicine": false,
+      "source": null,
+      "status": "not_checked_no_record"
+     }
+    ],
+    "schedule_reminder": [
+     2
+    ],
+    "supplement_author_checked": true,
+    "supplement_ignored": 0,
+    "supplement_reviewed": false
+   },
+   "sections": [
+    {
+     "heading": {
+      "ta": "கவனிக்கவும்"
+     },
+     "id": "disclaimer",
+     "lines": [
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "disclaimer",
+       "line_id": "disclaimer",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "இந்தப் பக்கம் உங்கள் ஆவணத்தை எளிய வார்த்தைகளில் விளக்குகிறது. இது மருத்துவ ஆலோசனை அல்ல. எல்லாவற்றையும் உங்கள் மருத்துவர் அல்லது மருந்தாளருடன் உறுதிசெய்யவும்.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "heading": {
+      "ta": "உங்கள் மருந்துகள்"
+     },
+     "id": "medicines",
+     "lines": [
+      {
+       "display_mode": "explanation",
+       "flags": [
+        "unresolved_name",
+        "near_miss_name",
+        "name_not_in_quote"
+       ],
+       "kind": "medicine",
+       "line_id": "med-0",
+       "narrative_pending": false,
+       "notices": [
+        {
+         "code": "unresolved_name",
+         "text": {
+          "ta": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "இந்த மருந்தின் பெயர் எங்கள் பட்டியலில் இல்லை. பெயரை உங்கள் ஆவணத்துடன் சரிபார்க்கவும்.",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        },
+        {
+         "code": "near_miss_name",
+         "text": {
+          "ta": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "இந்தப் பெயர் அறியப்பட்ட மருந்துப் பெயருக்கு அருகில் உள்ளது, ஆனால் சரியாக ஒன்றல்ல. எழுத்துப்பிழையை உங்கள் ஆவணத்துடன் சரிபார்க்கவும்.",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        }
+       ],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": true,
+       "source_ref": 0,
+       "source_text": "Tab Netfornin 500 mg - 1 tablet twice daily after meals",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Metformin. வீரியம்: 500 mg. ஒவ்வொரு முறையும் அளவு: 1 tablet. ஒரு நாளைக்கு 2 முறை. உணவுக்குப் பின். காலம்: ஆவணத்தில் குறிப்பிடப்படவில்லை.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "medicine",
+       "line_id": "med-1",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": true,
+       "source_ref": 1,
+       "source_text": "Tab Amaryl (Glimepiride) 1 mg - 1 tablet once daily before meals",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Amaryl (பொதுப் பெயர்: Glimepiride). வீரியம்: 1 mg. ஒவ்வொரு முறையும் அளவு: 1 tablet. ஒரு நாளைக்கு 1 முறை. உணவுக்கு முன். காலம்: ஆவணத்தில் குறிப்பிடப்படவில்லை.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [
+        "conflict_timing_label"
+       ],
+       "kind": "medicine",
+       "line_id": "med-2",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "note",
+       "settled": true,
+       "source_ref": 2,
+       "source_text": "Tab Telma (Telmisartan) 40 mg - 1 tablet once daily",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Telma (பொதுப் பெயர்: Telmisartan). வீரியம்: 40 mg. ஒவ்வொரு முறையும் அளவு: 1 tablet. ஒரு நாளைக்கு 1 முறை. உணவு தொடர்பான நேரம் ஆவணத்தில் காணப்படவில்லை. லேபிளைப் பார்க்கவும் அல்லது மருந்தாளரிடம் கேட்கவும். காலம்: ஆவணத்தில் குறிப்பிடப்படவில்லை.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [
+        "duplicate_name_fields"
+       ],
+       "kind": "medicine",
+       "line_id": "med-3",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": true,
+       "source_ref": 3,
+       "source_text": "Tab Atorvastatin 10 mg - 1 tablet at bedtime",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Atorvastatin. வீரியம்: 10 mg. ஒவ்வொரு முறையும் அளவு: 1 tablet. ஒரு நாளைக்கு 1 முறை. தூங்கச் செல்லும் முன். காலம்: ஆவணத்தில் குறிப்பிடப்படவில்லை.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "heading": {
+      "ta": "மருந்து இடைவினைகள்"
+     },
+     "id": "safety",
+     "lines": [
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-banner",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "ஒன்று அல்லது அதற்கு மேற்பட்ட சாத்தியமான இடைவினைகள் கண்டறியப்பட்டன. இவற்றைப் பற்றி உங்கள் மருத்துவர் அல்லது மருந்தாளருடன் பேசவும்.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-pair-0",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Metformin மற்றும் Amaryl ஒன்றோடொன்று தொடர்பு கொள்ளலாம். இவை சேர்த்து எடுக்கத் தகுந்தவையா என்று உங்கள் மருத்துவர் அல்லது மருந்தாளரிடம் கேளுங்கள்.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-pair-1",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Metformin மற்றும் Telma இடையே இடைவினை பட்டியலிடப்பட்டுள்ளது, ஆனால் அதன் தீவிரம் தெரியவில்லை. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-pair-2",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Metformin மற்றும் Atorvastatin இடையே இடைவினை பட்டியலிடப்பட்டுள்ளது, ஆனால் அதன் தீவிரம் தெரியவில்லை. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-pair-3",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Amaryl மற்றும் Telma இடையே இடைவினை பட்டியலிடப்பட்டுள்ளது, ஆனால் அதன் தீவிரம் தெரியவில்லை. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-pair-4",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Amaryl மற்றும் Atorvastatin இடையே இடைவினை பட்டியலிடப்பட்டுள்ளது, ஆனால் அதன் தீவிரம் தெரியவில்லை. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-not-checked",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "எங்கள் குறைந்த தரவுத்தளத்தில் 1 மருந்து ஜோடிக்கு இடைவினையைச் சரிபார்க்க முடியவில்லை. இது பாதுகாப்பானது என்று பொருள் அல்ல. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-reminder",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "சில மருந்துகளின் அட்டவணை தினசரி அல்ல அல்லது குறிப்பிடப்படவில்லை. அந்த மருந்துகளின் குறிப்புகளைச் சரிபார்க்கவும்.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-brand-notice",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "இந்த மாதிரியில், பிராண்ட் பெயர்கள் பொதுப் பெயர்களுடன் பொருத்தப்படும் பட்டியல் மருந்தாளரால் சரிபார்க்கப்படவில்லை.",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-attribution",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "இடைவினைத் தரவு: DDInter (CC BY-NC-SA 4.0), மேலும் அதிகாரப்பூர்வ மருந்து லேபிள்களிலிருந்து திட்ட ஆசிரியர் தயாரித்த கூடுதல் தொகுப்பு; இது மருந்தாளரால் சரிபார்க்கப்படவில்லை (மாதிரி).",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "heading": {
+      "ta": "மறுபரிசோதனை வருகைகள்"
+     },
+     "id": "follow_ups",
+     "lines": [
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "follow_up",
+       "line_id": "follow_up-0",
+       "narrative_pending": false,
+       "notices": [
+        {
+         "code": "fallback",
+         "text": {
+          "ta": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "இந்த வரிக்கு தானியங்கி விளக்கம் கிடைக்கவில்லை. அசல் உரை காட்டப்படுகிறது.",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        }
+       ],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 0,
+       "source_text": "Please review at the medicine OPD after 7 days with fasting and post-meal blood sugar reports.",
+       "status": "unverified",
+       "text": {
+        "ta": {
+         "display_mode": "original_with_notice",
+         "label": null,
+         "label_key": "original_only",
+         "provenance": "original_only",
+         "review_status": "not_required",
+         "status": "unverified",
+         "text": "Please review at the medicine OPD after 7 days with fasting and post-meal blood sugar reports.",
+         "verification": {
+          "back_translation": "Come to the hospital for medical follow-up after 7 days, along with your food and food-related blood sugar levels.",
+          "candidate": "7 நாட்களுக்கு பிறகு உணவு மற்றும் உணவு முடிந்த பிறகு இரத்த சர்க்கரை மதிப்புகளுடன் மருத்துவ செயல்பாட்டு மருத்துவமனைக்கு வரவும்.",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Candidate omits 'fasting and post-meal blood sugar reports' which are specified in the original.",
+          "judge_verdict": "omits_information",
+          "passed": false,
+          "reason": "judge: omits_information (Candidate omits 'fasting and post-meal blood sugar reports' which are specified in the original.)"
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "heading": {
+      "ta": "உணவு மற்றும் செயல்பாடு"
+     },
+     "id": "advice",
+     "lines": [
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "advice",
+       "line_id": "advice-0",
+       "narrative_pending": false,
+       "notices": [
+        {
+         "code": "fallback",
+         "text": {
+          "ta": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "இந்த வரிக்கு தானியங்கி விளக்கம் கிடைக்கவில்லை. அசல் உரை காட்டப்படுகிறது.",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        }
+       ],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 0,
+       "source_text": "Follow a diabetic diet with controlled portions of rice and sweets.",
+       "status": "unverified",
+       "text": {
+        "ta": {
+         "display_mode": "original_with_notice",
+         "label": null,
+         "label_key": "original_only",
+         "provenance": "original_only",
+         "review_status": "not_required",
+         "status": "unverified",
+         "text": "Follow a diabetic diet with controlled portions of rice and sweets.",
+         "verification": {
+          "back_translation": "Eat diabetic food, eat more rice and sugar.",
+          "candidate": "டයபெடிக் உணவு உணவு செய்யவும், அதிக அளவு ரைச் மற்றும் சுக்கரம் கொள்ளவும்.",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Candidate suggests eating more rice and sugar, which contradicts the original advice to control portions of rice and sweets.",
+          "judge_verdict": "contradicts",
+          "passed": false,
+          "reason": "judge: contradicts (Candidate suggests eating more rice and sugar, which contradicts the original advice to control portions of rice and sweets.)"
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "advice",
+       "line_id": "advice-1",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 1,
+       "source_text": "Walk for 30 minutes daily as tolerated.",
+       "status": "verified",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": "தானியங்கி மொழிபெயர்ப்பு; மென்பொருள் மட்டுமே சரிபார்த்தது, தாய்மொழி பேசுபவர் அல்ல.",
+         "label_key": "machine_checked",
+         "provenance": "model_checked",
+         "review_status": "draft_unreviewed",
+         "status": "verified",
+         "text": "நீங்கள் முடிவு செய்ய முடியும் போது நாளோடு நாள் 30 நிமிடங்கள் நடந்து கொள்ளவும்.",
+         "verification": {
+          "back_translation": "When you can decide, walk for 30 minutes daily.",
+          "candidate": "நீங்கள் முடிவு செய்ய முடியும் போது நாளோடு நாள் 30 நிமிடங்கள் நடந்து கொள்ளவும்.",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Both texts say to walk for 30 minutes daily, with the candidate adding 'as tolerated' which is implied in the original.",
+          "judge_verdict": "supported",
+          "passed": true,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "advice",
+       "line_id": "advice-2",
+       "narrative_pending": false,
+       "notices": [
+        {
+         "code": "fallback",
+         "text": {
+          "ta": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "இந்த வரிக்கு தானியங்கி விளக்கம் கிடைக்கவில்லை. அசல் உரை காட்டப்படுகிறது.",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        }
+       ],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 2,
+       "source_text": "Reduce salt in food.",
+       "status": "unverified",
+       "text": {
+        "ta": {
+         "display_mode": "original_with_notice",
+         "label": null,
+         "label_key": "original_only",
+         "provenance": "original_only",
+         "review_status": "not_required",
+         "status": "unverified",
+         "text": "Reduce salt in food.",
+         "verification": {
+          "back_translation": "Use less flour in your food.",
+          "candidate": "உங்கள் உணவில் குறைவான மாவை பயன்படுத்தவும்.",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Candidate mentions flour instead of salt, which is not mentioned in the original.",
+          "judge_verdict": "omits_information",
+          "passed": false,
+          "reason": "judge: omits_information (Candidate mentions flour instead of salt, which is not mentioned in the original.)"
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "advice",
+       "line_id": "advice-3",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 3,
+       "source_text": "Check blood sugar at home as advised.",
+       "status": "verified",
+       "text": {
+        "ta": {
+         "display_mode": "explanation",
+         "label": "தானியங்கி மொழிபெயர்ப்பு; மென்பொருள் மட்டுமே சரிபார்த்தது, தாய்மொழி பேசுபவர் அல்ல.",
+         "label_key": "machine_checked",
+         "provenance": "model_checked",
+         "review_status": "draft_unreviewed",
+         "status": "verified",
+         "text": "உங்கள் இரத்த சர்க்கரை அளவை வீட்டில் கொடுக்கப்பட்ட வகையில் செய்யவும்.",
+         "verification": {
+          "back_translation": "Check your blood sugar level at home as instructed.",
+          "candidate": "உங்கள் இரத்த சர்க்கரை அளவை வீட்டில் கொடுக்கப்பட்ட வகையில் செய்யவும்.",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Both texts instruct checking blood sugar at home, with slight wording differences.",
+          "judge_verdict": "supported",
+          "passed": true,
+          "reason": null
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "heading": {
+      "ta": "எச்சரிக்கை அறிகுறிகள்"
+     },
+     "id": "warnings",
+     "lines": [
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "warning",
+       "line_id": "warning-0",
+       "narrative_pending": false,
+       "notices": [
+        {
+         "code": "fallback",
+         "text": {
+          "ta": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "இந்த வரிக்கு தானியங்கி விளக்கம் கிடைக்கவில்லை. அசல் உரை காட்டப்படுகிறது.",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        }
+       ],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 0,
+       "source_text": "Severe giddiness, sweating or fainting.",
+       "status": "unverified",
+       "text": {
+        "ta": {
+         "display_mode": "original_with_notice",
+         "label": null,
+         "label_key": "original_only",
+         "provenance": "original_only",
+         "review_status": "not_required",
+         "status": "unverified",
+         "text": "Severe giddiness, sweating or fainting.",
+         "verification": {
+          "back_translation": "Very low blood sugar, breathing stopped, or low blood sugar.",
+          "candidate": "மிகவும் குறைந்த கொள்கை, மூச்சு விட்டு விட்டு அல்லது குறைந்த கொள்கை.",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Candidate mentions 'very low blood sugar' and 'breathing stopped' which are not in the original, and misrepresents 'giddiness, sweating or fainting'.",
+          "judge_verdict": "contradicts",
+          "passed": false,
+          "reason": "judge: contradicts (Candidate mentions 'very low blood sugar' and 'breathing stopped' which are not in the original, and misrepresents 'giddiness, sweating or fainting'.)"
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "warning",
+       "line_id": "warning-1",
+       "narrative_pending": false,
+       "notices": [
+        {
+         "code": "fallback",
+         "text": {
+          "ta": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "இந்த வரிக்கு தானியங்கி விளக்கம் கிடைக்கவில்லை. அசல் உரை காட்டப்படுகிறது.",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        }
+       ],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 1,
+       "source_text": "Very high thirst or passing large amounts of urine with vomiting.",
+       "status": "unverified",
+       "text": {
+        "ta": {
+         "display_mode": "original_with_notice",
+         "label": null,
+         "label_key": "original_only",
+         "provenance": "original_only",
+         "review_status": "not_required",
+         "status": "unverified",
+         "text": "Very high thirst or passing large amounts of urine with vomiting.",
+         "verification": {
+          "back_translation": "Very faint pulse or breathing stopped or breathing stopped.",
+          "candidate": "மிகவும் துளியான தேட்டு அல்லது மூச்சு விட்டு விட்டு மூச்சு விட்டு விட்டு.",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Candidate mentions 'faint pulse' and repeats 'breathing stopped' which are not in the original.",
+          "judge_verdict": "contradicts",
+          "passed": false,
+          "reason": "judge: contradicts (Candidate mentions 'faint pulse' and repeats 'breathing stopped' which are not in the original.)"
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "warning",
+       "line_id": "warning-2",
+       "narrative_pending": false,
+       "notices": [
+        {
+         "code": "fallback",
+         "text": {
+          "ta": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "இந்த வரிக்கு தானியங்கி விளக்கம் கிடைக்கவில்லை. அசல் உரை காட்டப்படுகிறது.",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        }
+       ],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 2,
+       "source_text": "Chest pain or breathlessness.",
+       "status": "unverified",
+       "text": {
+        "ta": {
+         "display_mode": "original_with_notice",
+         "label": null,
+         "label_key": "original_only",
+         "provenance": "original_only",
+         "review_status": "not_required",
+         "status": "unverified",
+         "text": "Chest pain or breathlessness.",
+         "verification": {
+          "back_translation": "Breathing stopped or breathing stopped.",
+          "candidate": "மூச்சு விட்டு விட்டு அல்லது மூச்சு விட்டு விட்டு.",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Candidate repeats 'breathing stopped' which is not in the original, and omits 'chest pain'.",
+          "judge_verdict": "contradicts",
+          "passed": false,
+          "reason": "judge: contradicts (Candidate repeats 'breathing stopped' which is not in the original, and omits 'chest pain'.)"
+         }
+        }
+       }
+      }
+     ]
+    }
+   ],
+   "templates_version": "1"
+  },
+  "guardrail_events": [],
+  "language": "ta",
+  "medicines_meta": [
+   {
+    "interaction_ready": true,
+    "labels": [
+     {
+      "template_id": "confirm.you_selected",
+      "text": "நீங்கள் பட்டியலிலிருந்து இந்த மருந்தைத் தேர்ந்தெடுத்தீர்கள்."
+     }
+    ],
+    "line_id": "med-0",
+    "not_checked_reason": null,
+    "provenance": {
+     "brand_name": "user_selected",
+     "generic_name": "user_selected",
+     "medicine": "user_confirmed",
+     "resolved_generic": "user_selected",
+     "strength": "user_selected"
+    },
+    "ref": "m0",
+    "resolution": "selected",
+    "schedule_ready": true,
+    "source_index": 0,
+    "unresolved": []
+   },
+   {
+    "interaction_ready": true,
+    "labels": [
+     {
+      "template_id": "confirm.you_confirmed",
+      "text": "நீங்கள் இதை உறுதிசெய்தீர்கள்."
+     }
+    ],
+    "line_id": "med-1",
+    "not_checked_reason": null,
+    "provenance": {
+     "medicine": "user_confirmed"
+    },
+    "ref": "m1",
+    "resolution": "confirmed",
+    "schedule_ready": true,
+    "source_index": 1,
+    "unresolved": []
+   },
+   {
+    "interaction_ready": true,
+    "labels": [
+     {
+      "template_id": "confirm.you_confirmed",
+      "text": "நீங்கள் இதை உறுதிசெய்தீர்கள்."
+     }
+    ],
+    "line_id": "med-2",
+    "not_checked_reason": null,
+    "provenance": {
+     "medicine": "user_confirmed"
+    },
+    "ref": "m2",
+    "resolution": "confirmed",
+    "schedule_ready": true,
+    "source_index": 2,
+    "unresolved": []
+   },
+   {
+    "interaction_ready": true,
+    "labels": [
+     {
+      "template_id": "confirm.you_selected",
+      "text": "நீங்கள் பட்டியலிலிருந்து இந்த மருந்தைத் தேர்ந்தெடுத்தீர்கள்."
+     }
+    ],
+    "line_id": "med-3",
+    "not_checked_reason": null,
+    "provenance": {
+     "brand_name": "user_selected",
+     "generic_name": "user_selected",
+     "medicine": "user_confirmed",
+     "resolved_generic": "user_selected",
+     "strength": "user_selected"
+    },
+    "ref": "m3",
+    "resolution": "selected",
+    "schedule_ready": true,
+    "source_index": 3,
+    "unresolved": []
+   }
+  ],
+  "narrative_status": {
+   "en": "ready",
+   "hi": "ready",
+   "ta": "ready"
+  },
+  "removed": []
+ }
+}

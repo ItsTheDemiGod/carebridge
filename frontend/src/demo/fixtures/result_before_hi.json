@@ -1,0 +1,1098 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "result_before_hi",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "confirm_first": true,
+  "confirmed": false,
+  "document_id": "demo",
+  "explanation": {
+   "document_id": "demo",
+   "document_type": "discharge_summary",
+   "guardrail_events": [],
+   "model": "qwen3-vl:8b-instruct",
+   "prompt_version": "v2",
+   "safety": {
+    "counts": {
+     "interaction_ready": 2,
+     "interactions_by_level": {
+      "unknown": 1
+     },
+     "medicines": 4,
+     "must_confirm": 2,
+     "pairs": 6,
+     "pairs_by_status": {
+      "interaction_found": 1,
+      "not_checked_unconfirmed": 5
+     }
+    },
+    "duplicate_notices": [],
+    "overall_state": "confirm_first",
+    "pair_results": [
+     {
+      "a": 1,
+      "b": 2,
+      "generic_a": "Glimepiride",
+      "generic_b": "Telmisartan",
+      "level": "unknown",
+      "same_medicine": false,
+      "source": "ddinter",
+      "status": "interaction_found"
+     },
+     {
+      "a": 0,
+      "b": 1,
+      "generic_a": null,
+      "generic_b": "Glimepiride",
+      "level": null,
+      "same_medicine": false,
+      "source": null,
+      "status": "not_checked_unconfirmed"
+     },
+     {
+      "a": 0,
+      "b": 2,
+      "generic_a": null,
+      "generic_b": "Telmisartan",
+      "level": null,
+      "same_medicine": false,
+      "source": null,
+      "status": "not_checked_unconfirmed"
+     },
+     {
+      "a": 0,
+      "b": 3,
+      "generic_a": null,
+      "generic_b": null,
+      "level": null,
+      "same_medicine": false,
+      "source": null,
+      "status": "not_checked_unconfirmed"
+     },
+     {
+      "a": 1,
+      "b": 3,
+      "generic_a": "Glimepiride",
+      "generic_b": null,
+      "level": null,
+      "same_medicine": false,
+      "source": null,
+      "status": "not_checked_unconfirmed"
+     },
+     {
+      "a": 2,
+      "b": 3,
+      "generic_a": "Telmisartan",
+      "generic_b": null,
+      "level": null,
+      "same_medicine": false,
+      "source": null,
+      "status": "not_checked_unconfirmed"
+     }
+    ],
+    "schedule_reminder": [
+     2
+    ],
+    "supplement_author_checked": true,
+    "supplement_ignored": 0,
+    "supplement_reviewed": false
+   },
+   "sections": [
+    {
+     "heading": {
+      "hi": "कृपया ध्यान दें"
+     },
+     "id": "disclaimer",
+     "lines": [
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "disclaimer",
+       "line_id": "disclaimer",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "यह पेज आपके दस्तावेज़ को आसान शब्दों में समझाता है। यह चिकित्सा सलाह नहीं है। कृपया हर बात की पुष्टि अपने डॉक्टर या फ़ार्मासिस्ट से करें।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "heading": {
+      "hi": "आपकी दवाएँ"
+     },
+     "id": "medicines",
+     "lines": [
+      {
+       "display_mode": "explanation",
+       "flags": [
+        "unresolved_name",
+        "near_miss_name",
+        "name_not_in_quote"
+       ],
+       "kind": "medicine",
+       "line_id": "med-0",
+       "narrative_pending": false,
+       "notices": [
+        {
+         "code": "must_confirm",
+         "text": {
+          "hi": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "कृपया इस दवा का इस्तेमाल करने से पहले इसे अपने दस्तावेज़ या लेबल से मिलाकर जाँच लें।",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        },
+        {
+         "code": "unresolved_name",
+         "text": {
+          "hi": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "इस दवा का नाम हमारी सूची में नहीं मिला। कृपया नाम को अपने दस्तावेज़ से मिलाकर देखें।",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        },
+        {
+         "code": "near_miss_name",
+         "text": {
+          "hi": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "यह नाम एक जानी-पहचानी दवा के नाम के क़रीब है, पर बिल्कुल वही नहीं है। कृपया वर्तनी अपने दस्तावेज़ से मिलाकर देखें।",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        }
+       ],
+       "provenance": "template",
+       "review_level": "must_confirm",
+       "settled": false,
+       "source_ref": 0,
+       "source_text": "Tab Netfornin 500 mg - 1 tablet twice daily after meals",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Netfornin। दवा की ताक़त: 500 mg। हर बार की मात्रा: 1 tablet। दिन में 2 बार। खाने के बाद। इस समय-सारणी पर भरोसा करने से पहले अपने डॉक्टर या फ़ार्मासिस्ट से पुष्टि करें। अवधि: दस्तावेज़ में नहीं लिखी है।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "medicine",
+       "line_id": "med-1",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": true,
+       "source_ref": 1,
+       "source_text": "Tab Amaryl (Glimepiride) 1 mg - 1 tablet once daily before meals",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Amaryl (जेनेरिक नाम: Glimepiride)। दवा की ताक़त: 1 mg। हर बार की मात्रा: 1 tablet। दिन में 1 बार। खाने से पहले। अवधि: दस्तावेज़ में नहीं लिखी है।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [
+        "conflict_timing_label"
+       ],
+       "kind": "medicine",
+       "line_id": "med-2",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "note",
+       "settled": true,
+       "source_ref": 2,
+       "source_text": "Tab Telma (Telmisartan) 40 mg - 1 tablet once daily",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Telma (जेनेरिक नाम: Telmisartan)। दवा की ताक़त: 40 mg। हर बार की मात्रा: 1 tablet। दिन में 1 बार। दस्तावेज़ में खाने के समय की जानकारी नहीं मिली। कृपया लेबल देखें या फ़ार्मासिस्ट से पूछें। अवधि: दस्तावेज़ में नहीं लिखी है।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [
+        "duplicate_name_fields"
+       ],
+       "kind": "medicine",
+       "line_id": "med-3",
+       "narrative_pending": false,
+       "notices": [
+        {
+         "code": "must_confirm",
+         "text": {
+          "hi": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "कृपया इस दवा का इस्तेमाल करने से पहले इसे अपने दस्तावेज़ या लेबल से मिलाकर जाँच लें।",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        }
+       ],
+       "provenance": "template",
+       "review_level": "must_confirm",
+       "settled": false,
+       "source_ref": 3,
+       "source_text": "Tab Atorvastatin 10 mg - 1 tablet at bedtime",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Atorvastatin। दवा की ताक़त: 10 mg। हर बार की मात्रा: 1 tablet। दिन में 1 बार। सोने से पहले। इस समय-सारणी पर भरोसा करने से पहले अपने डॉक्टर या फ़ार्मासिस्ट से पुष्टि करें। अवधि: दस्तावेज़ में नहीं लिखी है।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "heading": {
+      "hi": "दवाओं के आपसी असर"
+     },
+     "id": "safety",
+     "lines": [
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-banner",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "कुछ दवाओं के विवरण पहले आपको पक्के करने हैं, इसलिए नीचे के असर के नतीजे अधूरे हो सकते हैं। कृपया अपने डॉक्टर या फ़ार्मासिस्ट से पुष्टि करें।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-pair-0",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "Amaryl और Telma के बीच असर सूचीबद्ध है, लेकिन उसकी गंभीरता मालूम नहीं है। अपने फ़ार्मासिस्ट से पूछें।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-unconfirmed",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "5 दवा-जोड़ियों का आपसी असर जाँचा नहीं गया, क्योंकि किसी दवा का नाम पहले पक्का करना है। कृपया दवाओं के नाम पक्का करें।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-reminder",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "कुछ दवाओं की समय-सारणी रोज़ाना नहीं है या बताई नहीं गई है। कृपया उन दवाओं के नोट देख लें।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-brand-notice",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "इस प्रोटोटाइप में ब्रांड नामों को जेनेरिक नामों से मिलाने की सूची किसी फ़ार्मासिस्ट ने जाँची नहीं है।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "safety",
+       "line_id": "safety-attribution",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "template",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": null,
+       "source_text": "",
+       "status": "template",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": null,
+         "label_key": "draft_unreviewed",
+         "provenance": "template",
+         "review_status": "draft_unreviewed",
+         "status": "template",
+         "text": "इंटरैक्शन डेटा: DDInter (CC BY-NC-SA 4.0) तथा आधिकारिक दवा लेबलों से परियोजना लेखक द्वारा तैयार किया गया एक पूरक; इसे किसी फ़ार्मासिस्ट ने जाँचा नहीं है (प्रोटोटाइप)।",
+         "verification": {
+          "back_translation": null,
+          "candidate": null,
+          "deterministic": {},
+          "deterministic_reasons": [],
+          "judge_reason": null,
+          "judge_verdict": null,
+          "passed": false,
+          "reason": null
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "heading": {
+      "hi": "फ़ॉलो-अप मुलाक़ात"
+     },
+     "id": "follow_ups",
+     "lines": [
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "follow_up",
+       "line_id": "follow_up-0",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 0,
+       "source_text": "Please review at the medicine OPD after 7 days with fasting and post-meal blood sugar reports.",
+       "status": "unverified",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": "स्वचालित अनुवाद; केवल सॉफ़्टवेयर ने जाँचा है, मातृभाषा बोलने वाले व्यक्ति ने नहीं।",
+         "label_key": "machine_checked",
+         "provenance": "model_checked",
+         "review_status": "draft_unreviewed",
+         "status": "verified",
+         "text": "7 दिन में भूखे और खाने के बाद खून के ग्लूकोज के परिणाम के साथ दवा OPD पर वापस आएं।",
+         "verification": {
+          "back_translation": "Come back to the OPD with the results of your fasting and postprandial blood glucose levels in 7 days.",
+          "candidate": "7 दिन में भूखे और खाने के बाद खून के ग्लूकोज के परिणाम के साथ दवा OPD पर वापस आएं।",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Both texts instruct to return to OPD in 7 days with fasting and post-meal blood sugar reports.",
+          "judge_verdict": "supported",
+          "passed": true,
+          "reason": null
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "heading": {
+      "hi": "खान-पान और गतिविधि"
+     },
+     "id": "advice",
+     "lines": [
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "advice",
+       "line_id": "advice-0",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 0,
+       "source_text": "Follow a diabetic diet with controlled portions of rice and sweets.",
+       "status": "unverified",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": "स्वचालित अनुवाद; केवल सॉफ़्टवेयर ने जाँचा है, मातृभाषा बोलने वाले व्यक्ति ने नहीं।",
+         "label_key": "machine_checked",
+         "provenance": "model_checked",
+         "review_status": "draft_unreviewed",
+         "status": "verified",
+         "text": "डायबिटिक डाइट खाएं, जिसमें चावल और मीठे के छोटे भाग हों।",
+         "verification": {
+          "back_translation": "Eat diabetic diet, which contains small portions of rice and sweets.",
+          "candidate": "डायबिटिक डाइट खाएं, जिसमें चावल और मीठे के छोटे भाग हों।",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Both texts instruct to follow a diabetic diet with limited rice and sweets.",
+          "judge_verdict": "supported",
+          "passed": true,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "advice",
+       "line_id": "advice-1",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 1,
+       "source_text": "Walk for 30 minutes daily as tolerated.",
+       "status": "verified",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": "स्वचालित अनुवाद; केवल सॉफ़्टवेयर ने जाँचा है, मातृभाषा बोलने वाले व्यक्ति ने नहीं।",
+         "label_key": "machine_checked",
+         "provenance": "model_checked",
+         "review_status": "draft_unreviewed",
+         "status": "verified",
+         "text": "अगर सकते हैं तो हर दिन 30 मिनट चलें।",
+         "verification": {
+          "back_translation": "If possible, walk for 30 minutes every day.",
+          "candidate": "अगर सकते हैं तो हर दिन 30 मिनट चलें।",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Both texts recommend walking 30 minutes daily, with the candidate using slightly softer phrasing.",
+          "judge_verdict": "supported",
+          "passed": true,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "advice",
+       "line_id": "advice-2",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 2,
+       "source_text": "Reduce salt in food.",
+       "status": "unverified",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": "स्वचालित अनुवाद; केवल सॉफ़्टवेयर ने जाँचा है, मातृभाषा बोलने वाले व्यक्ति ने नहीं।",
+         "label_key": "machine_checked",
+         "provenance": "model_checked",
+         "review_status": "draft_unreviewed",
+         "status": "verified",
+         "text": "अपने भोजन में नमक कम करें।",
+         "verification": {
+          "back_translation": "Reduce salt in your food.",
+          "candidate": "अपने भोजन में नमक कम करें।",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Both texts instruct to reduce salt in food, with the candidate adding 'your' for clarity.",
+          "judge_verdict": "supported",
+          "passed": true,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "explanation",
+       "flags": [],
+       "kind": "advice",
+       "line_id": "advice-3",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 3,
+       "source_text": "Check blood sugar at home as advised.",
+       "status": "verified",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": "स्वचालित अनुवाद; केवल सॉफ़्टवेयर ने जाँचा है, मातृभाषा बोलने वाले व्यक्ति ने नहीं।",
+         "label_key": "machine_checked",
+         "provenance": "model_checked",
+         "review_status": "draft_unreviewed",
+         "status": "verified",
+         "text": "घर पर अपने खून का ग्लूकोज जांच करें जैसा कहा गया है।",
+         "verification": {
+          "back_translation": "Check your blood glucose at home as instructed.",
+          "candidate": "घर पर अपने खून का ग्लूकोज जांच करें जैसा कहा गया है।",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Both texts instruct to check blood sugar at home, with minor word changes.",
+          "judge_verdict": "supported",
+          "passed": true,
+          "reason": null
+         }
+        }
+       }
+      }
+     ]
+    },
+    {
+     "heading": {
+      "hi": "चेतावनी के संकेत"
+     },
+     "id": "warnings",
+     "lines": [
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "warning",
+       "line_id": "warning-0",
+       "narrative_pending": false,
+       "notices": [
+        {
+         "code": "fallback",
+         "text": {
+          "hi": {
+           "display_mode": "explanation",
+           "label": null,
+           "label_key": "draft_unreviewed",
+           "provenance": "template",
+           "review_status": "draft_unreviewed",
+           "status": "template",
+           "text": "इस पंक्ति के लिए अपने-आप बनी व्याख्या उपलब्ध नहीं है। मूल पाठ दिखाया जा रहा है।",
+           "verification": {
+            "back_translation": null,
+            "candidate": null,
+            "deterministic": {},
+            "deterministic_reasons": [],
+            "judge_reason": null,
+            "judge_verdict": null,
+            "passed": false,
+            "reason": null
+           }
+          }
+         }
+        }
+       ],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 0,
+       "source_text": "Severe giddiness, sweating or fainting.",
+       "status": "unverified",
+       "text": {
+        "hi": {
+         "display_mode": "original_with_notice",
+         "label": null,
+         "label_key": "original_only",
+         "provenance": "original_only",
+         "review_status": "not_required",
+         "status": "unverified",
+         "text": "Severe giddiness, sweating or fainting.",
+         "verification": {
+          "back_translation": "Deep breathing, sweating, or fainting once.",
+          "candidate": "गहरी घूर्णन, पसीना या एक बार जाना।",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "The candidate replaces 'Severe giddiness' with 'Deep breathing', which is not in the original.",
+          "judge_verdict": "contradicts",
+          "passed": false,
+          "reason": "judge: contradicts (The candidate replaces 'Severe giddiness' with 'Deep breathing', which is not in the original.)"
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "warning",
+       "line_id": "warning-1",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 1,
+       "source_text": "Very high thirst or passing large amounts of urine with vomiting.",
+       "status": "unverified",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": "स्वचालित अनुवाद; केवल सॉफ़्टवेयर ने जाँचा है, मातृभाषा बोलने वाले व्यक्ति ने नहीं।",
+         "label_key": "machine_checked",
+         "provenance": "model_checked",
+         "review_status": "draft_unreviewed",
+         "status": "verified",
+         "text": "गहरी तृष्णा या बहुत ज्यादा पेशाब और उल्टी के साथ।",
+         "verification": {
+          "back_translation": "Deep thirst or excessive urination and vomiting.",
+          "candidate": "गहरी तृष्णा या बहुत ज्यादा पेशाब और उल्टी के साथ।",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Both texts describe symptoms of excessive thirst, urination, and vomiting.",
+          "judge_verdict": "supported",
+          "passed": true,
+          "reason": null
+         }
+        }
+       }
+      },
+      {
+       "display_mode": "original_with_notice",
+       "flags": [],
+       "kind": "warning",
+       "line_id": "warning-2",
+       "narrative_pending": false,
+       "notices": [],
+       "provenance": "model_checked",
+       "review_level": "none",
+       "settled": false,
+       "source_ref": 2,
+       "source_text": "Chest pain or breathlessness.",
+       "status": "unverified",
+       "text": {
+        "hi": {
+         "display_mode": "explanation",
+         "label": "स्वचालित अनुवाद; केवल सॉफ़्टवेयर ने जाँचा है, मातृभाषा बोलने वाले व्यक्ति ने नहीं।",
+         "label_key": "machine_checked",
+         "provenance": "model_checked",
+         "review_status": "draft_unreviewed",
+         "status": "verified",
+         "text": "चेस्ट पेन या सांस लेने में तकलीफ।",
+         "verification": {
+          "back_translation": "Chest pain or difficulty breathing.",
+          "candidate": "चेस्ट पेन या सांस लेने में तकलीफ।",
+          "deterministic": {
+           "drug_names": true,
+           "forbidden_additions": true,
+           "guardrail": true,
+           "id_integrity": true,
+           "length": true,
+           "numbers": true,
+           "script": true
+          },
+          "deterministic_reasons": [],
+          "judge_reason": "Both texts describe chest pain or breathing difficulty, with slight wording differences.",
+          "judge_verdict": "supported",
+          "passed": true,
+          "reason": null
+         }
+        }
+       }
+      }
+     ]
+    }
+   ],
+   "templates_version": "1"
+  },
+  "guardrail_events": [],
+  "language": "hi",
+  "medicines_meta": [
+   {
+    "interaction_ready": false,
+    "labels": [
+     {
+      "template_id": "confirm.flag.not_identifiable",
+      "text": "हम इस दवा की पहचान नहीं कर सके, इसलिए इसके आपसी असर की जाँच नहीं की गई।"
+     }
+    ],
+    "line_id": "med-0",
+    "not_checked_reason": "not_identifiable",
+    "provenance": {
+     "medicine": "model"
+    },
+    "ref": "m0",
+    "resolution": "unchanged",
+    "schedule_ready": false,
+    "source_index": 0,
+    "unresolved": [
+     "unresolved_name",
+     "near_miss_name",
+     "name_not_in_quote"
+    ]
+   },
+   {
+    "interaction_ready": true,
+    "labels": [],
+    "line_id": "med-1",
+    "not_checked_reason": null,
+    "provenance": {
+     "medicine": "model"
+    },
+    "ref": "m1",
+    "resolution": "unchanged",
+    "schedule_ready": true,
+    "source_index": 1,
+    "unresolved": []
+   },
+   {
+    "interaction_ready": true,
+    "labels": [],
+    "line_id": "med-2",
+    "not_checked_reason": null,
+    "provenance": {
+     "medicine": "model"
+    },
+    "ref": "m2",
+    "resolution": "unchanged",
+    "schedule_ready": true,
+    "source_index": 2,
+    "unresolved": []
+   },
+   {
+    "interaction_ready": false,
+    "labels": [],
+    "line_id": "med-3",
+    "not_checked_reason": "needs_confirmation",
+    "provenance": {
+     "medicine": "model"
+    },
+    "ref": "m3",
+    "resolution": "unchanged",
+    "schedule_ready": false,
+    "source_index": 3,
+    "unresolved": [
+     "duplicate_name_fields"
+    ]
+   }
+  ],
+  "narrative_status": {
+   "en": "ready",
+   "hi": "ready",
+   "ta": "ready"
+  },
+  "removed": []
+ }
+}

@@ -1,0 +1,229 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "medicines_before",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "added_medicines": [],
+  "compare_note": "தேர்ந்தெடுக்கும் முன் பிராண்ட் பெயர், பொதுப் பெயர் மற்றும் வலிமையை உங்கள் ஆவணத்துடன் ஒப்பிடுங்கள்.",
+  "dose_options": [
+   "1/2 tablet",
+   "1 tablet",
+   "2 tablets",
+   "1 capsule",
+   "2 capsules",
+   "5 ml",
+   "10 ml",
+   "1 puff",
+   "2 puffs",
+   "1 drop",
+   "2 drops",
+   "1 application"
+  ],
+  "formulary_status": "unverified_requires_pharmacist_review",
+  "medicines": [
+   {
+    "allowed_actions": [
+     "confirm_as_extracted",
+     "select_formulary_drug",
+     "not_in_list",
+     "remove"
+    ],
+    "as_written": {
+     "brand": "Netfornin",
+     "generic": "Glibenclamide"
+    },
+    "current_decision": null,
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "flags": [
+     "unresolved_name",
+     "near_miss_name",
+     "name_not_in_quote"
+    ],
+    "form": "tablet",
+    "frequency": {
+     "is_prn": false,
+     "original_abbreviation": "twice daily after meals",
+     "times_per_day": 2,
+     "timing_label": "after_meals"
+    },
+    "has_exact_identity": false,
+    "index": 0,
+    "interaction_ready": false,
+    "name_match_type": "none",
+    "printed": {
+     "brand": null,
+     "generic": null
+    },
+    "reasons": [
+     {
+      "id": "unresolved_name",
+      "kind": "name",
+      "template_id": "confirm.flag.unresolved_name",
+      "text": "எங்கள் பட்டியலில் இந்தப் பெயர் கிடைக்கவில்லை. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள், அல்லது அது பட்டியலில் இல்லை என்று சொல்லுங்கள்."
+     },
+     {
+      "id": "near_miss_name",
+      "kind": "name",
+      "template_id": "confirm.flag.near_miss_name",
+      "text": "இந்தப் பெயர் அறிந்த மருந்துக்கு நெருக்கமானது, ஆனால் சரியாகப் பொருந்தவில்லை. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்."
+     },
+     {
+      "id": "name_not_in_quote",
+      "kind": "name",
+      "template_id": "confirm.flag.name_not_in_quote",
+      "text": "படிக்கப்பட்ட உரையில் இந்தப் பெயர் இல்லை. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்."
+     }
+    ],
+    "ref": "m0",
+    "resolved_generic": null,
+    "review_level": "must_confirm",
+    "route": "oral",
+    "schedule_ready": false,
+    "source_quote": "Tab Netfornin 500 mg - 1 tablet twice daily after meals",
+    "strength": "500 mg"
+   },
+   {
+    "allowed_actions": [
+     "confirm_as_extracted",
+     "select_formulary_drug",
+     "not_in_list",
+     "remove"
+    ],
+    "as_written": {
+     "brand": "Amaryl",
+     "generic": "Glimepiride"
+    },
+    "current_decision": null,
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "flags": [],
+    "form": "tablet",
+    "frequency": {
+     "is_prn": false,
+     "original_abbreviation": "once daily before meals",
+     "times_per_day": 1,
+     "timing_label": "before_meals"
+    },
+    "has_exact_identity": true,
+    "index": 1,
+    "interaction_ready": true,
+    "name_match_type": "exact",
+    "printed": {
+     "brand": "Amaryl",
+     "generic": "Glimepiride"
+    },
+    "reasons": [],
+    "ref": "m1",
+    "resolved_generic": "Glimepiride",
+    "review_level": "none",
+    "route": "oral",
+    "schedule_ready": true,
+    "source_quote": "Tab Amaryl (Glimepiride) 1 mg - 1 tablet once daily before meals",
+    "strength": "1 mg"
+   },
+   {
+    "allowed_actions": [
+     "confirm_as_extracted",
+     "select_formulary_drug",
+     "not_in_list",
+     "remove"
+    ],
+    "as_written": {
+     "brand": "Telma",
+     "generic": "Telmisartan"
+    },
+    "current_decision": null,
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "flags": [
+     "conflict_timing_label"
+    ],
+    "form": "tablet",
+    "frequency": {
+     "is_prn": false,
+     "original_abbreviation": "once daily",
+     "times_per_day": 1,
+     "timing_label": "unspecified"
+    },
+    "has_exact_identity": true,
+    "index": 2,
+    "interaction_ready": true,
+    "name_match_type": "exact",
+    "printed": {
+     "brand": "Telma",
+     "generic": "Telmisartan"
+    },
+    "reasons": [],
+    "ref": "m2",
+    "resolved_generic": "Telmisartan",
+    "review_level": "note",
+    "route": "oral",
+    "schedule_ready": true,
+    "source_quote": "Tab Telma (Telmisartan) 40 mg - 1 tablet once daily",
+    "strength": "40 mg"
+   },
+   {
+    "allowed_actions": [
+     "confirm_as_extracted",
+     "select_formulary_drug",
+     "not_in_list",
+     "remove"
+    ],
+    "as_written": {
+     "brand": "Atorvastatin",
+     "generic": "Atorvastatin"
+    },
+    "current_decision": null,
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "flags": [
+     "duplicate_name_fields"
+    ],
+    "form": "tablet",
+    "frequency": {
+     "is_prn": false,
+     "original_abbreviation": "at bedtime",
+     "times_per_day": 1,
+     "timing_label": "bedtime"
+    },
+    "has_exact_identity": true,
+    "index": 3,
+    "interaction_ready": false,
+    "name_match_type": "exact",
+    "printed": {
+     "brand": null,
+     "generic": "Atorvastatin"
+    },
+    "reasons": [
+     {
+      "id": "duplicate_name_fields",
+      "kind": "name",
+      "template_id": "confirm.flag.duplicate_name_fields",
+      "text": "இந்த மருந்துக்கு ஒரே ஒரு பெயர் மட்டுமே கிடைத்தது. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்."
+     }
+    ],
+    "ref": "m3",
+    "resolved_generic": "Atorvastatin",
+    "review_level": "must_confirm",
+    "route": "oral",
+    "schedule_ready": false,
+    "source_quote": "Tab Atorvastatin 10 mg - 1 tablet at bedtime",
+    "strength": "10 mg"
+   }
+  ],
+  "strength_as_label_option": "as_on_my_label"
+ }
+}

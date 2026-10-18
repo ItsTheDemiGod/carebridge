@@ -1,0 +1,30 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "session",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "consent": {
+   "current_version": "2",
+   "granted": true,
+   "purposes": [
+    "process_photo",
+    "store_results_for_session"
+   ]
+  },
+  "documents": 1,
+  "expires_at": "2026-01-01T00:00:00+00:00",
+  "language": "ta",
+  "limits": {
+   "max_documents": 10,
+   "max_upload_bytes": 10485760
+  }
+ }
+}

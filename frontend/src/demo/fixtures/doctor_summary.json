@@ -1,0 +1,156 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "doctor_summary",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "disclaimer": "இந்தச் சுருக்கம் உங்கள் ஆவணத்திலிருந்து படிக்கப்பட்டவற்றையும் நீங்கள் உள்ளிட்டவற்றையும் பட்டியலிடுகிறது. இதில் தவறுகள் இருக்கலாம். இது மருத்துவ ஆலோசனை அல்ல. உங்கள் சிகிச்சை பற்றி மருத்துவர் முடிவு செய்வார்.",
+  "document_id": "demo",
+  "guardrail_events": [],
+  "headings": {
+   "adherence": "எடுத்தவை, தவிர்த்தவை, தவறியவை",
+   "interactions": "கண்டறியப்பட்ட இடைவினைகள்",
+   "medicines": "மருந்துகள்",
+   "unconfirmed": "இன்னும் உறுதிசெய்யப்படாதவை"
+  },
+  "interactions": {
+   "found": [
+    {
+     "a": 0,
+     "b": 1,
+     "generic_a": "Metformin",
+     "generic_b": "Glimepiride",
+     "level": "moderate"
+    },
+    {
+     "a": 0,
+     "b": 2,
+     "generic_a": "Metformin",
+     "generic_b": "Telmisartan",
+     "level": "unknown"
+    },
+    {
+     "a": 0,
+     "b": 3,
+     "generic_a": "Metformin",
+     "generic_b": "Atorvastatin",
+     "level": "unknown"
+    },
+    {
+     "a": 1,
+     "b": 2,
+     "generic_a": "Glimepiride",
+     "generic_b": "Telmisartan",
+     "level": "unknown"
+    },
+    {
+     "a": 1,
+     "b": 3,
+     "generic_a": "Glimepiride",
+     "generic_b": "Atorvastatin",
+     "level": "unknown"
+    }
+   ],
+   "lines": [
+    "ஒன்று அல்லது அதற்கு மேற்பட்ட சாத்தியமான இடைவினைகள் கண்டறியப்பட்டன. இவற்றைப் பற்றி உங்கள் மருத்துவர் அல்லது மருந்தாளருடன் பேசவும்.",
+    "Metformin மற்றும் Amaryl ஒன்றோடொன்று தொடர்பு கொள்ளலாம். இவை சேர்த்து எடுக்கத் தகுந்தவையா என்று உங்கள் மருத்துவர் அல்லது மருந்தாளரிடம் கேளுங்கள்.",
+    "Metformin மற்றும் Telma இடையே இடைவினை பட்டியலிடப்பட்டுள்ளது, ஆனால் அதன் தீவிரம் தெரியவில்லை. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+    "Metformin மற்றும் Atorvastatin இடையே இடைவினை பட்டியலிடப்பட்டுள்ளது, ஆனால் அதன் தீவிரம் தெரியவில்லை. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+    "Amaryl மற்றும் Telma இடையே இடைவினை பட்டியலிடப்பட்டுள்ளது, ஆனால் அதன் தீவிரம் தெரியவில்லை. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+    "Amaryl மற்றும் Atorvastatin இடையே இடைவினை பட்டியலிடப்பட்டுள்ளது, ஆனால் அதன் தீவிரம் தெரியவில்லை. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+    "எங்கள் குறைந்த தரவுத்தளத்தில் 1 மருந்து ஜோடிக்கு இடைவினையைச் சரிபார்க்க முடியவில்லை. இது பாதுகாப்பானது என்று பொருள் அல்ல. உங்கள் மருந்தாளரிடம் கேளுங்கள்.",
+    "சில மருந்துகளின் அட்டவணை தினசரி அல்ல அல்லது குறிப்பிடப்படவில்லை. அந்த மருந்துகளின் குறிப்புகளைச் சரிபார்க்கவும்.",
+    "இந்த மாதிரியில், பிராண்ட் பெயர்கள் பொதுப் பெயர்களுடன் பொருத்தப்படும் பட்டியல் மருந்தாளரால் சரிபார்க்கப்படவில்லை.",
+    "இடைவினைத் தரவு: DDInter (CC BY-NC-SA 4.0), மேலும் அதிகாரப்பூர்வ மருந்து லேபிள்களிலிருந்து திட்ட ஆசிரியர் தயாரித்த கூடுதல் தொகுப்பு; இது மருந்தாளரால் சரிபார்க்கப்படவில்லை (மாதிரி)."
+   ]
+  },
+  "labels": {
+   "missed": "தவறியது",
+   "skipped": "தவிர்த்தது",
+   "taken": "எடுத்தது"
+  },
+  "language": "ta",
+  "medicines": [
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "missed": 1,
+    "name": "Metformin",
+    "ref": "m0",
+    "skipped": 0,
+    "strength": "500 mg",
+    "taken": 0,
+    "times": [
+     "08:30",
+     "20:30"
+    ],
+    "times_per_day": 2,
+    "timing_label": "after_meals"
+   },
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "missed": 1,
+    "name": "Amaryl",
+    "ref": "m1",
+    "skipped": 0,
+    "strength": "1 mg",
+    "taken": 0,
+    "times": [
+     "07:30"
+    ],
+    "times_per_day": 1,
+    "timing_label": "before_meals"
+   },
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "missed": 1,
+    "name": "Telma",
+    "ref": "m2",
+    "skipped": 0,
+    "strength": "40 mg",
+    "taken": 0,
+    "times": [
+     "08:00"
+    ],
+    "times_per_day": 1,
+    "timing_label": "unspecified"
+   },
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "missed": 0,
+    "name": "Atorvastatin",
+    "ref": "m3",
+    "skipped": 0,
+    "strength": "10 mg",
+    "taken": 0,
+    "times": [
+     "22:00"
+    ],
+    "times_per_day": 1,
+    "timing_label": "bedtime"
+   }
+  ],
+  "not_scheduled": [],
+  "period": {
+   "from": "2026-10-18",
+   "to": "2026-10-18"
+  },
+  "schedule_notice": "பரிந்துரைக்கப்பட்ட நேரங்கள் மட்டுமே; உங்கள் மருத்துவரின் அறிவுறுத்தலுக்கு ஏற்ப அவற்றை மாற்றிக்கொள்ளுங்கள்.",
+  "title": "உங்கள் மருத்துவரிடம் காட்டுவதற்கான சுருக்கம்",
+  "unconfirmed": []
+ }
+}

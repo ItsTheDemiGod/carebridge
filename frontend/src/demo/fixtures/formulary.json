@@ -1,0 +1,329 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "formulary",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "entries": {
+   "atorvastatin": {
+    "available_strengths": [
+     "10 mg",
+     "20 mg",
+     "40 mg",
+     "80 mg"
+    ],
+    "brand_names": [
+     "Lipitor",
+     "Atorva",
+     "Storvas"
+    ],
+    "form": "tablet",
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "generic": "Atorvastatin",
+    "id": "atorvastatin",
+    "route": "oral",
+    "strength_as_label_option": "as_on_my_label"
+   },
+   "dapagliflozin": {
+    "available_strengths": [
+     "5 mg",
+     "10 mg"
+    ],
+    "brand_names": [
+     "Forxiga"
+    ],
+    "form": "tablet",
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "generic": "Dapagliflozin",
+    "id": "dapagliflozin",
+    "route": "oral",
+    "strength_as_label_option": "as_on_my_label"
+   },
+   "empagliflozin": {
+    "available_strengths": [
+     "10 mg",
+     "25 mg"
+    ],
+    "brand_names": [
+     "Jardiance"
+    ],
+    "form": "tablet",
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "generic": "Empagliflozin",
+    "id": "empagliflozin",
+    "route": "oral",
+    "strength_as_label_option": "as_on_my_label"
+   },
+   "gliclazide": {
+    "available_strengths": [
+     "40 mg",
+     "80 mg"
+    ],
+    "brand_names": [
+     "Diamicron",
+     "Reclide"
+    ],
+    "form": "tablet",
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "generic": "Gliclazide",
+    "id": "gliclazide",
+    "route": "oral",
+    "strength_as_label_option": "as_on_my_label"
+   },
+   "glimepiride": {
+    "available_strengths": [
+     "1 mg",
+     "2 mg"
+    ],
+    "brand_names": [
+     "Amaryl",
+     "Glimy"
+    ],
+    "form": "tablet",
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "generic": "Glimepiride",
+    "id": "glimepiride",
+    "route": "oral",
+    "strength_as_label_option": "as_on_my_label"
+   },
+   "metformin": {
+    "available_strengths": [
+     "500 mg",
+     "850 mg",
+     "1000 mg"
+    ],
+    "brand_names": [
+     "Glycomet",
+     "Glucophage"
+    ],
+    "form": "tablet",
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "generic": "Metformin",
+    "id": "metformin",
+    "route": "oral",
+    "strength_as_label_option": "as_on_my_label"
+   },
+   "pioglitazone": {
+    "available_strengths": [
+     "15 mg",
+     "30 mg"
+    ],
+    "brand_names": [
+     "Pioz",
+     "Actos"
+    ],
+    "form": "tablet",
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "generic": "Pioglitazone",
+    "id": "pioglitazone",
+    "route": "oral",
+    "strength_as_label_option": "as_on_my_label"
+   },
+   "sitagliptin": {
+    "available_strengths": [
+     "50 mg",
+     "100 mg"
+    ],
+    "brand_names": [
+     "Januvia"
+    ],
+    "form": "tablet",
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "generic": "Sitagliptin",
+    "id": "sitagliptin",
+    "route": "oral",
+    "strength_as_label_option": "as_on_my_label"
+   },
+   "telmisartan": {
+    "available_strengths": [
+     "20 mg",
+     "40 mg",
+     "80 mg"
+    ],
+    "brand_names": [
+     "Telma",
+     "Micardis"
+    ],
+    "form": "tablet",
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "generic": "Telmisartan",
+    "id": "telmisartan",
+    "route": "oral",
+    "strength_as_label_option": "as_on_my_label"
+   },
+   "vildagliptin": {
+    "available_strengths": [
+     "50 mg"
+    ],
+    "brand_names": [
+     "Galvus"
+    ],
+    "form": "tablet",
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "generic": "Vildagliptin",
+    "id": "vildagliptin",
+    "route": "oral",
+    "strength_as_label_option": "as_on_my_label"
+   }
+  },
+  "formulary_status": "unverified_requires_pharmacist_review",
+  "searches": {
+   "atorva": {
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "results": [
+     {
+      "available_strengths": [
+       "10 mg",
+       "20 mg",
+       "40 mg",
+       "80 mg"
+      ],
+      "brand_names": [
+       "Lipitor",
+       "Atorva",
+       "Storvas"
+      ],
+      "form": "tablet",
+      "generic": "Atorvastatin",
+      "id": "atorvastatin",
+      "route": "oral",
+      "strength_as_label_option": "as_on_my_label"
+     }
+    ]
+   },
+   "gli": {
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "results": [
+     {
+      "available_strengths": [
+       "1 mg",
+       "2 mg"
+      ],
+      "brand_names": [
+       "Amaryl",
+       "Glimy"
+      ],
+      "form": "tablet",
+      "generic": "Glimepiride",
+      "id": "glimepiride",
+      "route": "oral",
+      "strength_as_label_option": "as_on_my_label"
+     },
+     {
+      "available_strengths": [
+       "40 mg",
+       "80 mg"
+      ],
+      "brand_names": [
+       "Diamicron",
+       "Reclide"
+      ],
+      "form": "tablet",
+      "generic": "Gliclazide",
+      "id": "gliclazide",
+      "route": "oral",
+      "strength_as_label_option": "as_on_my_label"
+     },
+     {
+      "available_strengths": [
+       "50 mg",
+       "100 mg"
+      ],
+      "brand_names": [
+       "Januvia"
+      ],
+      "form": "tablet",
+      "generic": "Sitagliptin",
+      "id": "sitagliptin",
+      "route": "oral",
+      "strength_as_label_option": "as_on_my_label"
+     },
+     {
+      "available_strengths": [
+       "50 mg"
+      ],
+      "brand_names": [
+       "Galvus"
+      ],
+      "form": "tablet",
+      "generic": "Vildagliptin",
+      "id": "vildagliptin",
+      "route": "oral",
+      "strength_as_label_option": "as_on_my_label"
+     },
+     {
+      "available_strengths": [
+       "15 mg",
+       "30 mg"
+      ],
+      "brand_names": [
+       "Pioz",
+       "Actos"
+      ],
+      "form": "tablet",
+      "generic": "Pioglitazone",
+      "id": "pioglitazone",
+      "route": "oral",
+      "strength_as_label_option": "as_on_my_label"
+     },
+     {
+      "available_strengths": [
+       "5 mg",
+       "10 mg"
+      ],
+      "brand_names": [
+       "Forxiga"
+      ],
+      "form": "tablet",
+      "generic": "Dapagliflozin",
+      "id": "dapagliflozin",
+      "route": "oral",
+      "strength_as_label_option": "as_on_my_label"
+     },
+     {
+      "available_strengths": [
+       "10 mg",
+       "25 mg"
+      ],
+      "brand_names": [
+       "Jardiance"
+      ],
+      "form": "tablet",
+      "generic": "Empagliflozin",
+      "id": "empagliflozin",
+      "route": "oral",
+      "strength_as_label_option": "as_on_my_label"
+     }
+    ]
+   },
+   "metf": {
+    "formulary_status": "unverified_requires_pharmacist_review",
+    "results": [
+     {
+      "available_strengths": [
+       "500 mg",
+       "850 mg",
+       "1000 mg"
+      ],
+      "brand_names": [
+       "Glycomet",
+       "Glucophage"
+      ],
+      "form": "tablet",
+      "generic": "Metformin",
+      "id": "metformin",
+      "route": "oral",
+      "strength_as_label_option": "as_on_my_label"
+     }
+    ]
+   }
+  }
+ }
+}

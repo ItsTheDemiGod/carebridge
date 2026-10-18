@@ -1,0 +1,38 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "scripted_decisions",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "added_medicines": [],
+  "decisions": [
+   {
+    "action": "select_formulary_drug",
+    "formulary_id": "metformin",
+    "index": 0,
+    "strength_choice": "500 mg"
+   },
+   {
+    "action": "confirm_as_extracted",
+    "index": 1
+   },
+   {
+    "action": "confirm_as_extracted",
+    "index": 2
+   },
+   {
+    "action": "select_formulary_drug",
+    "formulary_id": "atorvastatin",
+    "index": 3,
+    "strength_choice": "10 mg"
+   }
+  ]
+ }
+}
