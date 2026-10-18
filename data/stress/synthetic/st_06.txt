@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. R. Demo (Reg. No. SYN-11548)
+Date: 11 Jan 2025
+Patient: Nasreen Demo   Age/Sex: 25/F   ID: SYN-OP-01505
+
+Diagnosis: Follow-up visit
+
+Rx
+1. Tab Famotidine 20 mg - 1 tablet once daily before meals for 2 weeks
+2. Tab Tavanic (Levofloxacin) 250 mg - 1 tablet twice daily for 2 weeks
+3. Tab Losartan 25 mg - 1 tablet twice daily after meals for 30 days
+
+Follow-up:
+- Review after 14 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

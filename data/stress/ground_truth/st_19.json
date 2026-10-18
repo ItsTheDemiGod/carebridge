@@ -1,0 +1,67 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Famocid",
+   "generic_name": "Famotidine",
+   "strength": "7.5 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 10,
+   "duration_text": "for 10 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 185,
+    "end": 250,
+    "text": "Tab Famotidine (Famocid) 7.5 mg - 1 tablet once daily for 10 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Diclofenac",
+   "strength": "50 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 14,
+   "duration_text": "for 2 weeks",
+   "special_instructions": null,
+   "source_span": {
+    "start": 254,
+    "end": 321,
+    "text": "Tab Diclofenac 50 mg - 1 tablet twice daily after meals for 2 weeks"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 7 days.",
+   "date_text": "after 7 days",
+   "days_from_discharge": 7,
+   "source_span": {
+    "start": 336,
+    "end": 356,
+    "text": "Review after 7 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

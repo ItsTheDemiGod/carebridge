@@ -1,0 +1,25 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. Anil Sample (Reg. No. SYN-62405)
+Date: 01 Aug 2025
+Patient: Karthik Mockerjee   Age/Sex: 79/M   ID: SYN-OP-03325
+
+Diagnosis: Follow-up visit
+
+Rx
+1) T. Atenolol 25 mg 1 tab BD x 30d
+2) Tab. Dapagliflozin 5 mg 1 tab BD AC x 10/7
+3) Tab. Glimy 1mg 1 tab OD AC x 5d
+4) T. ELTROXIN 25MCG 1-0-1 AC X 10D
+5) Tab. Omnacortil 5mg 1-0-1 PC x 5 days
+6) T. Montelukast 10mg 1 tab BD PC
+7) Tab Metrogyl 200mg 1 tab BD x 30 days
+8) T. Seloken XL 25 mg 1 tab BD x 7/7
+
+Follow-up:
+- Review after 30 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

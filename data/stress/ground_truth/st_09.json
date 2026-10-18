@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": null,
+   "generic_name": "Olmesartan",
+   "strength": "20 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 183,
+    "end": 237,
+    "text": "Tab Olmesartan 20 mg - 1 tablet once daily for 30 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Spironolactone",
+   "strength": "25 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "for 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 241,
+    "end": 311,
+    "text": "Tab Spironolactone 25 mg - 1 tablet once daily before meals for 7 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Torsemide",
+   "strength": "10 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 315,
+    "end": 368,
+    "text": "Tab Torsemide 10 mg - 1 tablet once daily for 30 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 14 days.",
+   "date_text": "after 14 days",
+   "days_from_discharge": 14,
+   "source_span": {
+    "start": 383,
+    "end": 404,
+    "text": "Review after 14 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

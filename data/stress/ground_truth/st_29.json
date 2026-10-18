@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "CROCIN",
+   "generic_name": null,
+   "strength": "500 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "morning",
+    "original_abbreviation": "1-0-0",
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "X 30 DAYS",
+   "special_instructions": null,
+   "source_span": {
+    "start": 190,
+    "end": 222,
+    "text": "TAB CROCIN 500MG 1-0-0 X 30 DAYS"
+   }
+  },
+  {
+   "brand_name": "Aten",
+   "generic_name": null,
+   "strength": "25 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "after_meals",
+    "original_abbreviation": "1-0-0",
+    "is_prn": false
+   },
+   "duration_days": 10,
+   "duration_text": "x 10d",
+   "special_instructions": null,
+   "source_span": {
+    "start": 226,
+    "end": 255,
+    "text": "Tab. Aten 25mg 1-0-0 PC x 10d"
+   }
+  },
+  {
+   "brand_name": "Ramace",
+   "generic_name": null,
+   "strength": "2.5 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "x 5d",
+   "special_instructions": null,
+   "source_span": {
+    "start": 259,
+    "end": 292,
+    "text": "Tab Ramace 2.5mg 1 tab BD AC x 5d"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 7 days.",
+   "date_text": "after 7 days",
+   "days_from_discharge": 7,
+   "source_span": {
+    "start": 307,
+    "end": 327,
+    "text": "Review after 7 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

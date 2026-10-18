@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": null,
+   "generic_name": "Telmisartan",
+   "strength": "20 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 10,
+   "duration_text": "for 10 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 192,
+    "end": 260,
+    "text": "Tab Telmisartan 20 mg - 1 tablet once daily before meals for 10 days"
+   }
+  },
+  {
+   "brand_name": "Atorva",
+   "generic_name": null,
+   "strength": "10 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "for 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 264,
+    "end": 327,
+    "text": "Tab Atorva 10 mg - 1 tablet twice daily before meals for 7 days"
+   }
+  },
+  {
+   "brand_name": "Micardis",
+   "generic_name": "Telmisartan",
+   "strength": "20 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 14,
+   "duration_text": "for 2 weeks",
+   "special_instructions": null,
+   "source_span": {
+    "start": 331,
+    "end": 411,
+    "text": "Tab Micardis (Telmisartan) 20 mg - 1 tablet twice daily before meals for 2 weeks"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 30 days.",
+   "date_text": "after 30 days",
+   "days_from_discharge": 30,
+   "source_span": {
+    "start": 426,
+    "end": 447,
+    "text": "Review after 30 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

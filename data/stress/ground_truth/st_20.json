@@ -1,0 +1,67 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Ecosprin",
+   "generic_name": null,
+   "strength": "1500 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": "1-0-1",
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "x 5/7",
+   "special_instructions": null,
+   "source_span": {
+    "start": 189,
+    "end": 222,
+    "text": "T. Ecosprin 1500mg 1-0-1 AC x 5/7"
+   }
+  },
+  {
+   "brand_name": "MICARDIS",
+   "generic_name": "TELMISARTAN",
+   "strength": "20 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "morning",
+    "original_abbreviation": "1-0-0",
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "X 30D",
+   "special_instructions": null,
+   "source_span": {
+    "start": 226,
+    "end": 269,
+    "text": "T. MICARDIS (TELMISARTAN) 20 MG 1-0-0 X 30D"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 14 days.",
+   "date_text": "after 14 days",
+   "days_from_discharge": 14,
+   "source_span": {
+    "start": 284,
+    "end": 305,
+    "text": "Review after 14 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

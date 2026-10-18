@@ -1,0 +1,67 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": null,
+   "generic_name": "Telmisartan",
+   "strength": "250 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "for 5 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 190,
+    "end": 258,
+    "text": "Tab Telmisartan 250 mg - 1 tablet once daily before meals for 5 days"
+   }
+  },
+  {
+   "brand_name": "Hifenac",
+   "generic_name": null,
+   "strength": "100 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 262,
+    "end": 328,
+    "text": "Tab Hifenac 100 mg - 1 tablet twice daily before meals for 30 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 14 days.",
+   "date_text": "after 14 days",
+   "days_from_discharge": 14,
+   "source_span": {
+    "start": 343,
+    "end": 364,
+    "text": "Review after 14 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

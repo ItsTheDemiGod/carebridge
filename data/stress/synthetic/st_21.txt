@@ -1,0 +1,19 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. S. Testwala (Reg. No. SYN-40033)
+Date: 28 May 2025
+Patient: Asha Fictional   Age/Sex: 45/F   ID: SYN-OP-05178
+
+Diagnosis: Follow-up visit
+
+Rx
+1. Tab Telmisartan 250 mg - 1 tablet once daily before meals for 5 days
+2. Tab Hifenac 100 mg - 1 tablet twice daily before meals for 30 days
+
+Follow-up:
+- Review after 14 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

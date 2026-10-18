@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": null,
+   "generic_name": "Ibuirofen",
+   "strength": "200 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "for 5 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 188,
+    "end": 254,
+    "text": "Tab Ibuirofen 200 mg - 1 tablet once daily before meals for 5 days"
+   }
+  },
+  {
+   "brand_name": "Seloken XL",
+   "generic_name": null,
+   "strength": "25 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 14,
+   "duration_text": "for 2 weeks",
+   "special_instructions": null,
+   "source_span": {
+    "start": 258,
+    "end": 326,
+    "text": "Tab Seloken XL 25 mg - 1 tablet twice daily before meals for 2 weeks"
+   }
+  },
+  {
+   "brand_name": "Cepodem",
+   "generic_name": "Cefpodoxime",
+   "strength": "100 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 330,
+    "end": 410,
+    "text": "Tab Cepodem (Cefpodoxime) 100 mg - 1 tablet twice daily before meals for 30 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 30 days.",
+   "date_text": "after 30 days",
+   "days_from_discharge": 30,
+   "source_span": {
+    "start": 425,
+    "end": 446,
+    "text": "Review after 30 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

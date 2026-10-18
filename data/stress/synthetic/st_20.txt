@@ -1,0 +1,19 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. R. Demo (Reg. No. SYN-47246)
+Date: 18 Apr 2025
+Patient: Karthik Fictional   Age/Sex: 31/M   ID: SYN-OP-00519
+
+Diagnosis: Follow-up visit
+
+Rx
+1) T. Ecosprin 1500mg 1-0-1 AC x 5/7
+2) T. MICARDIS (TELMISARTAN) 20 MG 1-0-0 X 30D
+
+Follow-up:
+- Review after 14 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

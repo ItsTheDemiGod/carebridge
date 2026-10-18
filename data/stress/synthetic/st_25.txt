@@ -1,0 +1,25 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. S. Testwala (Reg. No. SYN-80667)
+Date: 08 Mar 2025
+Patient: Fatima Testwala   Age/Sex: 37/F   ID: SYN-OP-01289
+
+Diagnosis: Follow-up visit
+
+Rx
+1. Tab Levofloxacin 250 mg - 1 tablet twice daily before meals for 30 days
+2. Tab Glycomet (Metformin) 500 mg - 1 tablet twice daily after meals for 30 days
+3. Tab Pioglitazone 15 mg - 1 tablet once daily for 30 days
+4. Tab Metronidazole 200 mg - 1 tablet once daily after meals for 7 days
+5. Tab Glimepiride 1 mg - 1 tablet twice daily before meals for 7 days
+6. Tab Voltaren (Diclofenac) 50 mg - 1 tablet twice daily before meals for 30 days
+7. Tab Prednisolone 5 mg - 1 tablet twice daily for 2 weeks
+8. Tab Ibuprofen 200 mg - 1 tablet twice daily for 5 days
+
+Follow-up:
+- Review after 7 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

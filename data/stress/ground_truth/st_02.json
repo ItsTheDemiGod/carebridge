@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Deplatt",
+   "generic_name": null,
+   "strength": "75 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": null,
+   "duration_text": null,
+   "special_instructions": null,
+   "source_span": {
+    "start": 191,
+    "end": 221,
+    "text": "Tab. Deplatt 75 mg 1 tab OD AC"
+   }
+  },
+  {
+   "brand_name": "PIOZ",
+   "generic_name": null,
+   "strength": "15 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": "1-0-1",
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "X 7 DAYS",
+   "special_instructions": null,
+   "source_span": {
+    "start": 225,
+    "end": 254,
+    "text": "TAB PIOZ 15 MG 1-0-1 X 7 DAYS"
+   }
+  },
+  {
+   "brand_name": "Telma",
+   "generic_name": null,
+   "strength": "20 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "x 5d",
+   "special_instructions": null,
+   "source_span": {
+    "start": 258,
+    "end": 290,
+    "text": "Tab. Telma 20mg 1 tab OD AC x 5d"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 7 days.",
+   "date_text": "after 7 days",
+   "days_from_discharge": 7,
+   "source_span": {
+    "start": 305,
+    "end": 325,
+    "text": "Review after 7 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": null,
+   "generic_name": "Timolol",
+   "strength": "0.5%",
+   "form": "drops",
+   "route": "other",
+   "dose": "1 drop",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": null,
+   "duration_text": null,
+   "special_instructions": null,
+   "source_span": {
+    "start": 193,
+    "end": 227,
+    "text": "Eye Drops Timolol 0.5% - 1 drop OD"
+   }
+  },
+  {
+   "brand_name": "Redotil",
+   "generic_name": "Racecadotril",
+   "strength": "100 mg",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 10,
+   "duration_text": "for 10 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 231,
+    "end": 313,
+    "text": "Cap Racecadotril (Redotil) 100 mg - 1 capsule twice daily before meals for 10 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Carvedilol",
+   "strength": "3.125 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 317,
+    "end": 386,
+    "text": "Tab Carvedilol 3.125 mg - 1 tablet once daily after meals for 30 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 30 days.",
+   "date_text": "after 30 days",
+   "days_from_discharge": 30,
+   "source_span": {
+    "start": 401,
+    "end": 422,
+    "text": "Review after 30 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

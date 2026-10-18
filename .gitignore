@@ -40,3 +40,8 @@ frontend/e2e/.shots/
 
 # Logs (uvicorn etc.)
 *.log
+
+# Phase 7a: rendered stress images, real photos and usability samples (private mapping) are local only
+data/stress/rendered/
+data/real_photos/
+data/usability_samples/mapping.json

@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. Priya Example (Reg. No. SYN-29152)
+Date: 16 Jun 2025
+Patient: Imran Sample   Age/Sex: 40/M   ID: SYN-OP-05044
+
+Diagnosis: Follow-up visit
+
+Rx
+1) C. D-Rise 60000 IU 1 cap OD PC x 7/7
+2) T. Olmesartan 20mg 1 tab BD PC x 2 weeks
+3) Cap. Cholecalciferol 60000 IU 1 cap BD PC x 5 days
+
+Follow-up:
+- Review after 7 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

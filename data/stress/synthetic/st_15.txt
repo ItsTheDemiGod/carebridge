@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. S. Testwala (Reg. No. SYN-70126)
+Date: 06 Jul 2025
+Patient: Kavya Sample   Age/Sex: 55/F   ID: SYN-OP-07476
+
+Diagnosis: Follow-up visit
+
+Rx
+1. Tab Ibuirofen 200 mg - 1 tablet once daily before meals for 5 days
+2. Tab Seloken XL 25 mg - 1 tablet twice daily before meals for 2 weeks
+3. Tab Cepodem (Cefpodoxime) 100 mg - 1 tablet twice daily before meals for 30 days
+
+Follow-up:
+- Review after 30 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

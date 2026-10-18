@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Uprise-D3",
+   "generic_name": "Cholecalciferol",
+   "strength": "60000 IU",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": null,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 56,
+   "duration_text": "for 8 weeks",
+   "special_instructions": null,
+   "source_span": {
+    "start": 190,
+    "end": 266,
+    "text": "Cap Cholecalciferol (Uprise-D3) 60000 IU - 1 capsule once weekly for 8 weeks"
+   }
+  },
+  {
+   "brand_name": "Xyzal",
+   "generic_name": "Levocetirizine",
+   "strength": "5 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "for 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 270,
+    "end": 335,
+    "text": "Tab Levocetirizine (Xyzal) 5 mg - 1 tablet twice daily for 7 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Ticagrelor",
+   "strength": "60 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 339,
+    "end": 393,
+    "text": "Tab Ticagrelor 60 mg - 1 tablet once daily for 30 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 14 days.",
+   "date_text": "after 14 days",
+   "days_from_discharge": 14,
+   "source_span": {
+    "start": 408,
+    "end": 429,
+    "text": "Review after 14 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

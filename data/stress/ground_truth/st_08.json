@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Azithral",
+   "generic_name": "Azithromycin",
+   "strength": "250 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "after_meals",
+    "original_abbreviation": "1-0-0",
+    "is_prn": false
+   },
+   "duration_days": 14,
+   "duration_text": "x 2 weeks",
+   "special_instructions": null,
+   "source_span": {
+    "start": 190,
+    "end": 242,
+    "text": "Tab Azithral (Azithromycin) 250mg 1-0-0 PC x 2 weeks"
+   }
+  },
+  {
+   "brand_name": "Domstal",
+   "generic_name": null,
+   "strength": "10 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "x 5/7",
+   "special_instructions": null,
+   "source_span": {
+    "start": 246,
+    "end": 279,
+    "text": "Tab. Domstal 10 mg 1 tab OD x 5/7"
+   }
+  },
+  {
+   "brand_name": "Gabapin",
+   "generic_name": null,
+   "strength": "100 mg",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 14,
+   "duration_text": "x 2 weeks",
+   "special_instructions": null,
+   "source_span": {
+    "start": 283,
+    "end": 322,
+    "text": "C. Gabapin 100 mg 1 cap BD AC x 2 weeks"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 7 days.",
+   "date_text": "after 7 days",
+   "days_from_discharge": 7,
+   "source_span": {
+    "start": 337,
+    "end": 357,
+    "text": "Review after 7 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

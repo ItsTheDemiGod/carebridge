@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Uprise-D3",
+   "generic_name": null,
+   "strength": "60000 IU",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": null,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": null,
+   "duration_text": null,
+   "special_instructions": null,
+   "source_span": {
+    "start": 186,
+    "end": 226,
+    "text": "Cap. Uprise-D3 60000IU 1 cap once weekly"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "MONTELUKAST",
+   "strength": "10 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 10,
+   "duration_text": "X 10 DAYS",
+   "special_instructions": null,
+   "source_span": {
+    "start": 230,
+    "end": 272,
+    "text": "T. MONTELUKAST 10 MG 1 tab BD AC X 10 DAYS"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Omeprazole",
+   "strength": "20 mg",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": "1-0-1",
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "x 30d",
+   "special_instructions": null,
+   "source_span": {
+    "start": 276,
+    "end": 307,
+    "text": "Cap Omeprazole 20mg 1-0-1 x 30d"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 30 days.",
+   "date_text": "after 30 days",
+   "days_from_discharge": 30,
+   "source_span": {
+    "start": 322,
+    "end": 343,
+    "text": "Review after 30 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

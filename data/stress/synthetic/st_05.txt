@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. R. Demo (Reg. No. SYN-05234)
+Date: 03 Jul 2025
+Patient: Deepa Example   Age/Sex: 66/F   ID: SYN-OP-08734
+
+Diagnosis: Follow-up visit
+
+Rx
+1) Cap Niftran 100 mg 1 cap OD AC x 5/7
+2) T. Rosuvastatin 5 mg 1 tab BD AC
+3) T. DOMPERIDONE 10MG 1 tab OD AC X 5D
+
+Follow-up:
+- Review after 14 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

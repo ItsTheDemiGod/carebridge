@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "D-Rise",
+   "generic_name": null,
+   "strength": "60000 IU",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "after_meals",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "x 7/7",
+   "special_instructions": null,
+   "source_span": {
+    "start": 190,
+    "end": 226,
+    "text": "C. D-Rise 60000 IU 1 cap OD PC x 7/7"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Olmesartan",
+   "strength": "20 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 14,
+   "duration_text": "x 2 weeks",
+   "special_instructions": null,
+   "source_span": {
+    "start": 230,
+    "end": 270,
+    "text": "T. Olmesartan 20mg 1 tab BD PC x 2 weeks"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Cholecalciferol",
+   "strength": "60000 IU",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "x 5 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 274,
+    "end": 324,
+    "text": "Cap. Cholecalciferol 60000 IU 1 cap BD PC x 5 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 7 days.",
+   "date_text": "after 7 days",
+   "days_from_discharge": 7,
+   "source_span": {
+    "start": 339,
+    "end": 359,
+    "text": "Review after 7 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

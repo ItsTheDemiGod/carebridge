@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. Anil Sample (Reg. No. SYN-64611)
+Date: 24 May 2025
+Patient: Imran Testwala   Age/Sex: 79/M   ID: SYN-OP-07786
+
+Diagnosis: Follow-up visit
+
+Rx
+1. Tab Norvasc (Amlodipine) 2.5 mg - 1 tablet once daily for 30 days
+2. Tab Clopidogrel (Clopilet) 75 mg - 1 tablet twice daily before meals for 10 days
+3. Tab Amlodipine 2.5 mg - 1 tablet twice daily for 10 days
+
+Follow-up:
+- Review after 30 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

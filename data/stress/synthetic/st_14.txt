@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. Priya Example (Reg. No. SYN-76418)
+Date: 15 Jul 2025
+Patient: Nasreen Mockerjee   Age/Sex: 56/F   ID: SYN-OP-05966
+
+Diagnosis: Follow-up visit
+
+Rx
+1) Tab. Aeorva 10 mg 1 tab BD PC x 7d
+2) T. FLAGYL 200 MG 1 tab OD X 5/7
+3) Tab Ibuprofen (Brufen) 200 mg 1 tab OD x 7 days
+
+Follow-up:
+- Review after 7 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

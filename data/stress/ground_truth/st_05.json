@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Niftran",
+   "generic_name": null,
+   "strength": "100 mg",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "x 5/7",
+   "special_instructions": null,
+   "source_span": {
+    "start": 185,
+    "end": 221,
+    "text": "Cap Niftran 100 mg 1 cap OD AC x 5/7"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Rosuvastatin",
+   "strength": "5 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": null,
+   "duration_text": null,
+   "special_instructions": null,
+   "source_span": {
+    "start": 225,
+    "end": 257,
+    "text": "T. Rosuvastatin 5 mg 1 tab BD AC"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "DOMPERIDONE",
+   "strength": "10 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "X 5D",
+   "special_instructions": null,
+   "source_span": {
+    "start": 261,
+    "end": 297,
+    "text": "T. DOMPERIDONE 10MG 1 tab OD AC X 5D"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 14 days.",
+   "date_text": "after 14 days",
+   "days_from_discharge": 14,
+   "source_span": {
+    "start": 312,
+    "end": 333,
+    "text": "Review after 14 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

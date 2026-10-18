@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. R. Demo (Reg. No. SYN-34034)
+Date: 23 Jul 2025
+Patient: Arjun Fictional   Age/Sex: 32/M   ID: SYN-OP-06219
+
+Diagnosis: Follow-up visit
+
+Rx
+1. Timolol 0.5% Eye Drops - 1 drop OD x 30 days
+2. Tab Metformin 500 mg - 1 tablet twice daily before meals for 7 days
+3. Tab Crestor (Rosuvastatin) 5 mg - 1 tablet twice daily before meals for 7 days
+
+Follow-up:
+- Review after 7 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

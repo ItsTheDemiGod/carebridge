@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": null,
+   "generic_name": "Famotidine",
+   "strength": "20 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 14,
+   "duration_text": "for 2 weeks",
+   "special_instructions": null,
+   "source_span": {
+    "start": 184,
+    "end": 251,
+    "text": "Tab Famotidine 20 mg - 1 tablet once daily before meals for 2 weeks"
+   }
+  },
+  {
+   "brand_name": "Tavanic",
+   "generic_name": "Levofloxacin",
+   "strength": "250 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 14,
+   "duration_text": "for 2 weeks",
+   "special_instructions": null,
+   "source_span": {
+    "start": 255,
+    "end": 323,
+    "text": "Tab Tavanic (Levofloxacin) 250 mg - 1 tablet twice daily for 2 weeks"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Losartan",
+   "strength": "25 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 327,
+    "end": 392,
+    "text": "Tab Losartan 25 mg - 1 tablet twice daily after meals for 30 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 14 days.",
+   "date_text": "after 14 days",
+   "days_from_discharge": 14,
+   "source_span": {
+    "start": 407,
+    "end": 428,
+    "text": "Review after 14 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

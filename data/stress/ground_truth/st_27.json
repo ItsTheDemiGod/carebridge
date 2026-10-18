@@ -1,0 +1,199 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Envas",
+   "generic_name": "Enalapril",
+   "strength": "2.5 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "for 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 185,
+    "end": 259,
+    "text": "Tab Enalapril (Envas) 2.5 mg - 1 tablet twice daily after meals for 7 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Sitagliptin",
+   "strength": "50 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 10,
+   "duration_text": "for 10 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 263,
+    "end": 318,
+    "text": "Tab Sitagliptin 50 mg - 1 tablet once daily for 10 days"
+   }
+  },
+  {
+   "brand_name": "Wysolone",
+   "generic_name": null,
+   "strength": "5 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "for 5 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 322,
+    "end": 372,
+    "text": "Tab Wysolone 5 mg - 1 tablet once daily for 5 days"
+   }
+  },
+  {
+   "brand_name": "Eltroxin",
+   "generic_name": "Levothyroxine",
+   "strength": "25 mcg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "for 5 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 376,
+    "end": 458,
+    "text": "Tab Levothyroxine (Eltroxin) 25 mcg - 1 tablet twice daily before meals for 5 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Glimepiride",
+   "strength": "1 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "for 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 462,
+    "end": 527,
+    "text": "Tab Glimepiride 1 mg - 1 tablet once daily after meals for 7 days"
+   }
+  },
+  {
+   "brand_name": "Lasix",
+   "generic_name": "Furosemide",
+   "strength": "20 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "for 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 531,
+    "end": 605,
+    "text": "Tab Furosemide (Lasix) 20 mg - 1 tablet once daily before meals for 7 days"
+   }
+  },
+  {
+   "brand_name": "Flagyl",
+   "generic_name": "Metronidazole",
+   "strength": "200 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "for 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 609,
+    "end": 687,
+    "text": "Tab Metronidazole (Flagyl) 200 mg - 1 tablet once daily after meals for 7 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Diclofenac",
+   "strength": "50 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "for 5 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 691,
+    "end": 757,
+    "text": "Tab Diclofenac 50 mg - 1 tablet twice daily after meals for 5 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 14 days.",
+   "date_text": "after 14 days",
+   "days_from_discharge": 14,
+   "source_span": {
+    "start": 772,
+    "end": 793,
+    "text": "Review after 14 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

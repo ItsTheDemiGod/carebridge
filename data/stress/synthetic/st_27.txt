@@ -1,0 +1,25 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. R. Demo (Reg. No. SYN-26412)
+Date: 11 May 2025
+Patient: Kumar Example   Age/Sex: 69/M   ID: SYN-OP-09906
+
+Diagnosis: Follow-up visit
+
+Rx
+1. Tab Enalapril (Envas) 2.5 mg - 1 tablet twice daily after meals for 7 days
+2. Tab Sitagliptin 50 mg - 1 tablet once daily for 10 days
+3. Tab Wysolone 5 mg - 1 tablet once daily for 5 days
+4. Tab Levothyroxine (Eltroxin) 25 mcg - 1 tablet twice daily before meals for 5 days
+5. Tab Glimepiride 1 mg - 1 tablet once daily after meals for 7 days
+6. Tab Furosemide (Lasix) 20 mg - 1 tablet once daily before meals for 7 days
+7. Tab Metronidazole (Flagyl) 200 mg - 1 tablet once daily after meals for 7 days
+8. Tab Diclofenac 50 mg - 1 tablet twice daily after meals for 5 days
+
+Follow-up:
+- Review after 14 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

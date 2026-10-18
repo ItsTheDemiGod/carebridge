@@ -1,0 +1,216 @@
+{
+ "seed": 20261018,
+ "note": "Safety stress set: synthetic prescriptions, formulary names (eye drop category excepted), fictional patients. Interaction levels are NOT stored here; they come from the local store at run time.",
+ "documents": [
+  {
+   "id": "st_01",
+   "category": "major_pair",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_02",
+   "category": "major_pair",
+   "difficulty": "abbreviated",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_03",
+   "category": "major_pair",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_04",
+   "category": "moderate_pair",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_05",
+   "category": "moderate_pair",
+   "difficulty": "abbreviated",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_06",
+   "category": "moderate_pair",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_07",
+   "category": "supplement_pair",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_08",
+   "category": "supplement_pair",
+   "difficulty": "abbreviated",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_09",
+   "category": "supplement_pair",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_10",
+   "category": "duplicate",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_11",
+   "category": "duplicate",
+   "difficulty": "abbreviated",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_12",
+   "category": "duplicate",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_13",
+   "category": "garbled_name",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_14",
+   "category": "garbled_name",
+   "difficulty": "abbreviated",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_15",
+   "category": "garbled_name",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_16",
+   "category": "weekly",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_17",
+   "category": "weekly",
+   "difficulty": "abbreviated",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_18",
+   "category": "weekly",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_19",
+   "category": "unusual_strength",
+   "difficulty": "clean",
+   "medicines": 2,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_20",
+   "category": "unusual_strength",
+   "difficulty": "abbreviated",
+   "medicines": 2,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_21",
+   "category": "unusual_strength",
+   "difficulty": "clean",
+   "medicines": 2,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_22",
+   "category": "eye_drop_od",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_23",
+   "category": "eye_drop_od",
+   "difficulty": "abbreviated",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_24",
+   "category": "eye_drop_od",
+   "difficulty": "clean",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_25",
+   "category": "long_list",
+   "difficulty": "clean",
+   "medicines": 8,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_26",
+   "category": "long_list",
+   "difficulty": "abbreviated",
+   "medicines": 8,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_27",
+   "category": "long_list",
+   "difficulty": "clean",
+   "medicines": 8,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_28",
+   "category": "control",
+   "difficulty": "clean",
+   "medicines": 4,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_29",
+   "category": "control",
+   "difficulty": "abbreviated",
+   "medicines": 3,
+   "document_type": "prescription"
+  },
+  {
+   "id": "st_30",
+   "category": "control",
+   "difficulty": "clean",
+   "medicines": 4,
+   "document_type": "prescription"
+  }
+ ]
+}

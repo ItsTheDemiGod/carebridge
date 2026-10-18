@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Envas",
+   "generic_name": "Enalapril",
+   "strength": "2.5 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 187,
+    "end": 262,
+    "text": "Tab Enalapril (Envas) 2.5 mg - 1 tablet twice daily after meals for 30 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Spironolactone",
+   "strength": "25 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "for 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 266,
+    "end": 324,
+    "text": "Tab Spironolactone 25 mg - 1 tablet twice daily for 7 days"
+   }
+  },
+  {
+   "brand_name": "Redotil",
+   "generic_name": "Racecadotril",
+   "strength": "100 mg",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 328,
+    "end": 396,
+    "text": "Cap Racecadotril (Redotil) 100 mg - 1 capsule once daily for 30 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 14 days.",
+   "date_text": "after 14 days",
+   "days_from_discharge": 14,
+   "source_span": {
+    "start": 411,
+    "end": 432,
+    "text": "Review after 14 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

@@ -1,0 +1,19 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. S. Testwala (Reg. No. SYN-08957)
+Date: 19 Jul 2025
+Patient: Ravi Demo   Age/Sex: 74/M   ID: SYN-OP-04930
+
+Diagnosis: Follow-up visit
+
+Rx
+1. Tab Famotidine (Famocid) 7.5 mg - 1 tablet once daily for 10 days
+2. Tab Diclofenac 50 mg - 1 tablet twice daily after meals for 2 weeks
+
+Follow-up:
+- Review after 7 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

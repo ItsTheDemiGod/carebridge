@@ -1,0 +1,20 @@
+SAMPLE CITY HOSPITAL - OUTPATIENT CLINIC
+Dr. Priya Example (Reg. No. SYN-62641)
+Date: 19 Sep 2025
+Patient: Arjun Mockerjee   Age/Sex: 73/M   ID: SYN-OP-05360
+
+Diagnosis: Follow-up visit
+
+Rx
+1) Timolol 0.5% eye drops 1 drop OD
+2) C. Gabapentin 100 mg 1 cap BD AC x 7d
+3) Cap. Racecadotril (Redotil) 100mg 1 cap BD x 7d
+
+Follow-up:
+- Review after 14 days.
+
+Advice:
+- Drink plenty of water.
+- Take medicines at the same time each day.
+
+Sample document for software testing only. All details are fictional.

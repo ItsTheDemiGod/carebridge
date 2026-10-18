@@ -1,0 +1,199 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": null,
+   "generic_name": "Atenolol",
+   "strength": "25 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "x 30d",
+   "special_instructions": null,
+   "source_span": {
+    "start": 193,
+    "end": 225,
+    "text": "T. Atenolol 25 mg 1 tab BD x 30d"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Dapagliflozin",
+   "strength": "5 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 10,
+   "duration_text": "x 10/7",
+   "special_instructions": null,
+   "source_span": {
+    "start": 229,
+    "end": 271,
+    "text": "Tab. Dapagliflozin 5 mg 1 tab BD AC x 10/7"
+   }
+  },
+  {
+   "brand_name": "Glimy",
+   "generic_name": null,
+   "strength": "1 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "before_meals",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "x 5d",
+   "special_instructions": null,
+   "source_span": {
+    "start": 275,
+    "end": 306,
+    "text": "Tab. Glimy 1mg 1 tab OD AC x 5d"
+   }
+  },
+  {
+   "brand_name": "ELTROXIN",
+   "generic_name": null,
+   "strength": "25 mcg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": "1-0-1",
+    "is_prn": false
+   },
+   "duration_days": 10,
+   "duration_text": "X 10D",
+   "special_instructions": null,
+   "source_span": {
+    "start": 310,
+    "end": 342,
+    "text": "T. ELTROXIN 25MCG 1-0-1 AC X 10D"
+   }
+  },
+  {
+   "brand_name": "Omnacortil",
+   "generic_name": null,
+   "strength": "5 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": "1-0-1",
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "x 5 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 346,
+    "end": 383,
+    "text": "Tab. Omnacortil 5mg 1-0-1 PC x 5 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Montelukast",
+   "strength": "10 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": null,
+   "duration_text": null,
+   "special_instructions": null,
+   "source_span": {
+    "start": 387,
+    "end": 418,
+    "text": "T. Montelukast 10mg 1 tab BD PC"
+   }
+  },
+  {
+   "brand_name": "Metrogyl",
+   "generic_name": null,
+   "strength": "200 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "x 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 422,
+    "end": 459,
+    "text": "Tab Metrogyl 200mg 1 tab BD x 30 days"
+   }
+  },
+  {
+   "brand_name": "Seloken XL",
+   "generic_name": null,
+   "strength": "25 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "x 7/7",
+   "special_instructions": null,
+   "source_span": {
+    "start": 463,
+    "end": 497,
+    "text": "T. Seloken XL 25 mg 1 tab BD x 7/7"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 30 days.",
+   "date_text": "after 30 days",
+   "days_from_discharge": 30,
+   "source_span": {
+    "start": 512,
+    "end": 533,
+    "text": "Review after 30 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

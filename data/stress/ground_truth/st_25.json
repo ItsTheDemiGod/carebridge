@@ -1,0 +1,199 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": null,
+   "generic_name": "Levofloxacin",
+   "strength": "250 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 191,
+    "end": 262,
+    "text": "Tab Levofloxacin 250 mg - 1 tablet twice daily before meals for 30 days"
+   }
+  },
+  {
+   "brand_name": "Glycomet",
+   "generic_name": "Metformin",
+   "strength": "500 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 266,
+    "end": 344,
+    "text": "Tab Glycomet (Metformin) 500 mg - 1 tablet twice daily after meals for 30 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Pioglitazone",
+   "strength": "15 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 348,
+    "end": 404,
+    "text": "Tab Pioglitazone 15 mg - 1 tablet once daily for 30 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Metronidazole",
+   "strength": "200 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "for 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 408,
+    "end": 477,
+    "text": "Tab Metronidazole 200 mg - 1 tablet once daily after meals for 7 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Glimepiride",
+   "strength": "1 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "for 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 481,
+    "end": 548,
+    "text": "Tab Glimepiride 1 mg - 1 tablet twice daily before meals for 7 days"
+   }
+  },
+  {
+   "brand_name": "Voltaren",
+   "generic_name": "Diclofenac",
+   "strength": "50 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 552,
+    "end": 631,
+    "text": "Tab Voltaren (Diclofenac) 50 mg - 1 tablet twice daily before meals for 30 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Prednisolone",
+   "strength": "5 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 14,
+   "duration_text": "for 2 weeks",
+   "special_instructions": null,
+   "source_span": {
+    "start": 635,
+    "end": 691,
+    "text": "Tab Prednisolone 5 mg - 1 tablet twice daily for 2 weeks"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Ibuprofen",
+   "strength": "200 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "for 5 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 695,
+    "end": 749,
+    "text": "Tab Ibuprofen 200 mg - 1 tablet twice daily for 5 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 7 days.",
+   "date_text": "after 7 days",
+   "days_from_discharge": 7,
+   "source_span": {
+    "start": 764,
+    "end": 784,
+    "text": "Review after 7 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

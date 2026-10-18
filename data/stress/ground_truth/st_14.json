@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Aeorva",
+   "generic_name": null,
+   "strength": "10 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "x 7d",
+   "special_instructions": null,
+   "source_span": {
+    "start": 195,
+    "end": 229,
+    "text": "Tab. Aeorva 10 mg 1 tab BD PC x 7d"
+   }
+  },
+  {
+   "brand_name": "FLAGYL",
+   "generic_name": null,
+   "strength": "200 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "X 5/7",
+   "special_instructions": null,
+   "source_span": {
+    "start": 233,
+    "end": 264,
+    "text": "T. FLAGYL 200 MG 1 tab OD X 5/7"
+   }
+  },
+  {
+   "brand_name": "Brufen",
+   "generic_name": "Ibuprofen",
+   "strength": "200 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "x 7 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 268,
+    "end": 315,
+    "text": "Tab Ibuprofen (Brufen) 200 mg 1 tab OD x 7 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 7 days.",
+   "date_text": "after 7 days",
+   "days_from_discharge": 7,
+   "source_span": {
+    "start": 330,
+    "end": 350,
+    "text": "Review after 7 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

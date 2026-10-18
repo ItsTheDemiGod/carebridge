@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": "Plavix",
+   "generic_name": "Clopidogrel",
+   "strength": "75 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 193,
+    "end": 271,
+    "text": "Tab Plavix (Clopidogrel) 75 mg - 1 tablet twice daily before meals for 30 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Esomeprazole",
+   "strength": "20 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 5,
+   "duration_text": "for 5 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 275,
+    "end": 330,
+    "text": "Tab Esomeprazole 20 mg - 1 tablet once daily for 5 days"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Ondansetron",
+   "strength": "4 mg",
+   "form": "tablet",
+   "route": "oral",
+   "dose": "1 tablet",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "after_meals",
+    "original_abbreviation": null,
+    "is_prn": false
+   },
+   "duration_days": 30,
+   "duration_text": "for 30 days",
+   "special_instructions": null,
+   "source_span": {
+    "start": 334,
+    "end": 401,
+    "text": "Tab Ondansetron 4 mg - 1 tablet twice daily after meals for 30 days"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 14 days.",
+   "date_text": "after 14 days",
+   "days_from_discharge": 14,
+   "source_span": {
+    "start": 416,
+    "end": 437,
+    "text": "Review after 14 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}

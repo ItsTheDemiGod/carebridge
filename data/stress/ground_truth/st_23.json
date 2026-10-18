@@ -1,0 +1,89 @@
+{
+ "document_type": "prescription",
+ "medications": [
+  {
+   "brand_name": null,
+   "generic_name": "Timolol",
+   "strength": "0.5%",
+   "form": "drops",
+   "route": "other",
+   "dose": "1 drop",
+   "frequency": {
+    "times_per_day": 1,
+    "timing_label": "unspecified",
+    "original_abbreviation": "OD",
+    "is_prn": false
+   },
+   "duration_days": null,
+   "duration_text": null,
+   "special_instructions": null,
+   "source_span": {
+    "start": 193,
+    "end": 225,
+    "text": "Timolol 0.5% eye drops 1 drop OD"
+   }
+  },
+  {
+   "brand_name": null,
+   "generic_name": "Gabapentin",
+   "strength": "100 mg",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "before_meals",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "x 7d",
+   "special_instructions": null,
+   "source_span": {
+    "start": 229,
+    "end": 266,
+    "text": "C. Gabapentin 100 mg 1 cap BD AC x 7d"
+   }
+  },
+  {
+   "brand_name": "Redotil",
+   "generic_name": "Racecadotril",
+   "strength": "100 mg",
+   "form": "capsule",
+   "route": "oral",
+   "dose": "1 capsule",
+   "frequency": {
+    "times_per_day": 2,
+    "timing_label": "unspecified",
+    "original_abbreviation": "BD",
+    "is_prn": false
+   },
+   "duration_days": 7,
+   "duration_text": "x 7d",
+   "special_instructions": null,
+   "source_span": {
+    "start": 270,
+    "end": 317,
+    "text": "Cap. Racecadotril (Redotil) 100mg 1 cap BD x 7d"
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "description": "Review after 14 days.",
+   "date_text": "after 14 days",
+   "days_from_discharge": 14,
+   "source_span": {
+    "start": 332,
+    "end": 353,
+    "text": "Review after 14 days."
+   }
+  }
+ ],
+ "red_flags": [],
+ "diet_activity_advice": [
+  "Drink plenty of water.",
+  "Take medicines at the same time each day."
+ ],
+ "document_language": "en"
+}
