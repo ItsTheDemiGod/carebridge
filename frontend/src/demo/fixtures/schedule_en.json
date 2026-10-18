@@ -1,0 +1,120 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "schedule_en",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "document_id": "demo",
+  "extra_notices": [
+   {
+    "template_id": "schedule.no_meal_timing",
+    "text": "No meal timing was found in the document, so these times are spread through the day."
+   }
+  ],
+  "guardrail_events": [],
+  "language": "en",
+  "medicines": [
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "name": "Metformin",
+    "ref": "m0",
+    "source": "suggested",
+    "strength": "500 mg",
+    "times": [
+     "08:30",
+     "20:30"
+    ],
+    "times_per_day": 2,
+    "timing_label": "after_meals"
+   },
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "name": "Amaryl",
+    "ref": "m1",
+    "source": "suggested",
+    "strength": "1 mg",
+    "times": [
+     "07:30"
+    ],
+    "times_per_day": 1,
+    "timing_label": "before_meals"
+   },
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "name": "Telma",
+    "ref": "m2",
+    "source": "suggested",
+    "strength": "40 mg",
+    "times": [
+     "08:00"
+    ],
+    "times_per_day": 1,
+    "timing_label": "unspecified"
+   },
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "name": "Atorvastatin",
+    "ref": "m3",
+    "source": "suggested",
+    "strength": "10 mg",
+    "times": [
+     "22:00"
+    ],
+    "times_per_day": 1,
+    "timing_label": "bedtime"
+   }
+  ],
+  "not_scheduled": [],
+  "notice": {
+   "template_id": "schedule.notice",
+   "text": "Suggested times only; adjust them to match your doctor's instructions."
+  },
+  "slots": [
+   {
+    "med_ref": "m1",
+    "name": "Amaryl",
+    "source": "suggested",
+    "time": "07:30"
+   },
+   {
+    "med_ref": "m2",
+    "name": "Telma",
+    "source": "suggested",
+    "time": "08:00"
+   },
+   {
+    "med_ref": "m0",
+    "name": "Metformin",
+    "source": "suggested",
+    "time": "08:30"
+   },
+   {
+    "med_ref": "m0",
+    "name": "Metformin",
+    "source": "suggested",
+    "time": "20:30"
+   },
+   {
+    "med_ref": "m3",
+    "name": "Atorvastatin",
+    "source": "suggested",
+    "time": "22:00"
+   }
+  ]
+ }
+}

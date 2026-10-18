@@ -1,24 +1,17 @@
 /* Small typed fetch wrapper for the CareBridge backend (/api/v1). Never logs request or response bodies. */
 
-export class ApiError extends Error {
-  readonly status: number
-  readonly code: string
-  /** seconds from a Retry-After header (429 queue_full), else null */
-  retryAfter: number | null = null
-  /** status 0 means the server could not be reached at all (code "network_error"). */
-  constructor(status: number, code: string, message: string) {
-    super(message)
-    this.name = 'ApiError'
-    this.status = status
-    this.code = code
-  }
-}
+import { ApiError } from './apiError'
+import { demoApi, isDemoPath } from '../demo/demoApi'
+
+export { ApiError }
 
 const STATE_CHANGING = new Set(['POST', 'PUT', 'PATCH', 'DELETE'])
 
-type Options = { method?: string; body?: unknown; raw?: { data: Blob; type: string }; blob?: boolean; signal?: AbortSignal }
+export type Options = { method?: string; body?: unknown; raw?: { data: Blob; type: string }; blob?: boolean; signal?: AbortSignal }
 
 export async function api<T>(path: string, opts: Options = {}): Promise<T> {
+  // the sample (/demo) is answered from bundled fixtures in memory: no request leaves the page
+  if (typeof window !== 'undefined' && isDemoPath(window.location.pathname)) return demoApi<T>(path, opts)
   const method = (opts.method ?? 'GET').toUpperCase()
   const headers: Record<string, string> = { Accept: 'application/json' }
   if (STATE_CHANGING.has(method)) headers['X-CareBridge-Request'] = '1'

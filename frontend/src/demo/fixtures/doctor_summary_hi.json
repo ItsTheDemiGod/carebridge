@@ -1,0 +1,156 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "doctor_summary_hi",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "disclaimer": "यह सार आपके दस्तावेज़ से पढ़ी गई बातें और आपकी दर्ज की हुई बातें बताता है। इसमें ग़लतियाँ हो सकती हैं। यह चिकित्सा सलाह नहीं है। आपके इलाज के बारे में डॉक्टर तय करते हैं।",
+  "document_id": "demo",
+  "guardrail_events": [],
+  "headings": {
+   "adherence": "ली गईं, छोड़ी गईं और छूटी हुई",
+   "interactions": "मिले आपसी असर",
+   "medicines": "दवाएँ",
+   "unconfirmed": "जिनकी पुष्टि अभी नहीं हुई"
+  },
+  "interactions": {
+   "found": [
+    {
+     "a": 0,
+     "b": 1,
+     "generic_a": "Metformin",
+     "generic_b": "Glimepiride",
+     "level": "moderate"
+    },
+    {
+     "a": 0,
+     "b": 2,
+     "generic_a": "Metformin",
+     "generic_b": "Telmisartan",
+     "level": "unknown"
+    },
+    {
+     "a": 0,
+     "b": 3,
+     "generic_a": "Metformin",
+     "generic_b": "Atorvastatin",
+     "level": "unknown"
+    },
+    {
+     "a": 1,
+     "b": 2,
+     "generic_a": "Glimepiride",
+     "generic_b": "Telmisartan",
+     "level": "unknown"
+    },
+    {
+     "a": 1,
+     "b": 3,
+     "generic_a": "Glimepiride",
+     "generic_b": "Atorvastatin",
+     "level": "unknown"
+    }
+   ],
+   "lines": [
+    "एक या अधिक संभावित असर मिले हैं। कृपया इनके बारे में अपने डॉक्टर या फ़ार्मासिस्ट से बात करें।",
+    "Metformin और Amaryl आपस में असर कर सकते हैं। ये साथ में लेने के लिए ठीक हैं या नहीं, यह अपने डॉक्टर या फ़ार्मासिस्ट से पूछें।",
+    "Metformin और Telma के बीच असर सूचीबद्ध है, लेकिन उसकी गंभीरता मालूम नहीं है। अपने फ़ार्मासिस्ट से पूछें।",
+    "Metformin और Atorvastatin के बीच असर सूचीबद्ध है, लेकिन उसकी गंभीरता मालूम नहीं है। अपने फ़ार्मासिस्ट से पूछें।",
+    "Amaryl और Telma के बीच असर सूचीबद्ध है, लेकिन उसकी गंभीरता मालूम नहीं है। अपने फ़ार्मासिस्ट से पूछें।",
+    "Amaryl और Atorvastatin के बीच असर सूचीबद्ध है, लेकिन उसकी गंभीरता मालूम नहीं है। अपने फ़ार्मासिस्ट से पूछें।",
+    "हमारे सीमित डेटाबेस में 1 दवा-जोड़ी के आपसी असर की जाँच नहीं हो सकी। इसका मतलब यह नहीं कि वह सुरक्षित है। अपने फ़ार्मासिस्ट से पूछें।",
+    "कुछ दवाओं की समय-सारणी रोज़ाना नहीं है या बताई नहीं गई है। कृपया उन दवाओं के नोट देख लें।",
+    "इस प्रोटोटाइप में ब्रांड नामों को जेनेरिक नामों से मिलाने की सूची किसी फ़ार्मासिस्ट ने जाँची नहीं है।",
+    "इंटरैक्शन डेटा: DDInter (CC BY-NC-SA 4.0) तथा आधिकारिक दवा लेबलों से परियोजना लेखक द्वारा तैयार किया गया एक पूरक; इसे किसी फ़ार्मासिस्ट ने जाँचा नहीं है (प्रोटोटाइप)।"
+   ]
+  },
+  "labels": {
+   "missed": "छूटी",
+   "skipped": "छोड़ी गई",
+   "taken": "ली गई"
+  },
+  "language": "hi",
+  "medicines": [
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "missed": 1,
+    "name": "Metformin",
+    "ref": "m0",
+    "skipped": 0,
+    "strength": "500 mg",
+    "taken": 0,
+    "times": [
+     "08:30",
+     "20:30"
+    ],
+    "times_per_day": 2,
+    "timing_label": "after_meals"
+   },
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "missed": 1,
+    "name": "Amaryl",
+    "ref": "m1",
+    "skipped": 0,
+    "strength": "1 mg",
+    "taken": 0,
+    "times": [
+     "07:30"
+    ],
+    "times_per_day": 1,
+    "timing_label": "before_meals"
+   },
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "missed": 1,
+    "name": "Telma",
+    "ref": "m2",
+    "skipped": 0,
+    "strength": "40 mg",
+    "taken": 0,
+    "times": [
+     "08:00"
+    ],
+    "times_per_day": 1,
+    "timing_label": "unspecified"
+   },
+   {
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "missed": 0,
+    "name": "Atorvastatin",
+    "ref": "m3",
+    "skipped": 0,
+    "strength": "10 mg",
+    "taken": 0,
+    "times": [
+     "22:00"
+    ],
+    "times_per_day": 1,
+    "timing_label": "bedtime"
+   }
+  ],
+  "not_scheduled": [],
+  "period": {
+   "from": "2026-01-01",
+   "to": "2026-01-01"
+  },
+  "schedule_notice": "ये केवल सुझाए गए समय हैं; अपने डॉक्टर के निर्देश के अनुसार इन्हें बदल लें।",
+  "title": "डॉक्टर को दिखाने के लिए सार",
+  "unconfirmed": []
+ }
+}

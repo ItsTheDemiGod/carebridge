@@ -6,6 +6,8 @@ import { Container } from '../components/Layout'
 import { useT } from '../i18n/I18n'
 import { usePageTitle } from '../pages/usePageTitle'
 import { useFlow } from './FlowProvider'
+import { DemoBar, SampleLink } from '../demo/DemoBar'
+import { useIsDemo } from '../demo/useDemo'
 import { Progress } from './Progress'
 import { consentGranted } from './state'
 
@@ -17,6 +19,7 @@ export function FlowPage({ titleKey, need = 'consent', narrow = true, className 
   const flow = useFlow()
   const nav = useNavigate()
   const { state } = flow
+  const demo = useIsDemo()
   usePageTitle(titleKey)
 
   let gate: ReactNode = null
@@ -32,6 +35,7 @@ export function FlowPage({ titleKey, need = 'consent', narrow = true, className 
         <div className="page-actions">
           <Button variant="secondary" onClick={flow.retryBoot}>{t('ui.flow.retry')}</Button>
         </div>
+        <SampleLink />
       </Notice>
     )
   } else if (state.boot === 'no_session' && need !== 'none') {
@@ -71,6 +75,7 @@ export function FlowPage({ titleKey, need = 'consent', narrow = true, className 
 
   return (
     <Container as="section" className={`${narrow ? 'page-narrow' : 'page-wide'} flow-page ${className}`.trim()}>
+      {demo ? <DemoBar /> : null}
       <Progress />
       <div ref={root} className="flow-body">
         {open ? children : gate}

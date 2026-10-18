@@ -2,7 +2,7 @@
  "_meta": {
   "built_on": "2026-10-18",
   "condition": "poor",
-  "fixture": "schedule",
+  "fixture": "schedule_ta",
   "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
   "script": "scripts/build_demo_data.py",
   "script_version": "1",

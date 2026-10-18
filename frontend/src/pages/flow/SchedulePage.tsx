@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import { deleteAdherence, getSchedule, listAdherence, logAdherence, saveOverrides } from '../../api/endpoints'
 import { isAbort, type Problem } from '../../api/errors'
 import type { AdherenceEvent, ScheduleResponse } from '../../api/types'
@@ -10,11 +9,13 @@ import { SectionHeading } from '../../components/Layout'
 import { FlowPage } from '../../flow/FlowPage'
 import { useFlow } from '../../flow/FlowProvider'
 import { ProblemNotice } from '../../flow/ProblemNotice'
+import { DemoMarksNote } from '../../demo/DemoBar'
+import { useDocId, useDocPath } from '../../demo/useDemo'
 import { useT } from '../../i18n/I18n'
 import { addDays, localDate, nextDose, validTimes } from '../../lib/time'
 
 export function SchedulePage() {
-  const { id = '' } = useParams()
+  const id = useDocId()
   return (
     <FlowPage titleKey="ui.title.schedule" narrow={false}>
       <Schedule id={id} />
@@ -23,6 +24,7 @@ export function SchedulePage() {
 }
 
 function Schedule({ id }: { id: string }) {
+  const docPath = useDocPath()
   const { t, lang } = useT()
   const flow = useFlow()
   const sessionLang = flow.state.sessionLang
@@ -118,6 +120,7 @@ function Schedule({ id }: { id: string }) {
   return (
     <>
       <SectionHeading as="h1" label={t('ui.flow.stage.schedule')} title={t('ui.flow.schedule.title')} />
+      <DemoMarksNote />
       <Notice tone="important" title={t('ui.flow.schedule.no_reminders.title')}>
         <p>{t('ui.flow.schedule.no_reminders')}</p>
         <p>{data.notice.text}</p>
@@ -198,8 +201,8 @@ function Schedule({ id }: { id: string }) {
       ) : null}
 
       <div className="page-actions">
-        <ButtonLink to={`/d/${id}/summary`} icon="document">{t('ui.flow.result.to_summary')}</ButtonLink>
-        <ButtonLink to={`/d/${id}/result`} variant="quiet">{t('ui.flow.schedule.back_results')}</ButtonLink>
+        <ButtonLink to={docPath(id, 'summary')} icon="document">{t('ui.flow.result.to_summary')}</ButtonLink>
+        <ButtonLink to={docPath(id, 'result')} variant="quiet">{t('ui.flow.schedule.back_results')}</ButtonLink>
       </div>
     </>
   )

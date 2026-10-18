@@ -2,7 +2,7 @@
  "_meta": {
   "built_on": "2026-10-18",
   "condition": "poor",
-  "fixture": "medicines_after",
+  "fixture": "medicines_before_en",
   "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
   "script": "scripts/build_demo_data.py",
   "script_version": "1",
@@ -12,7 +12,7 @@
  },
  "data": {
   "added_medicines": [],
-  "compare_note": "தேர்ந்தெடுக்கும் முன் பிராண்ட் பெயர், பொதுப் பெயர் மற்றும் வலிமையை உங்கள் ஆவணத்துடன் ஒப்பிடுங்கள்.",
+  "compare_note": "Compare the brand name, generic name and strength with your document before you choose.",
   "dose_options": [
    "1/2 tablet",
    "1 tablet",
@@ -40,15 +40,7 @@
      "brand": "Netfornin",
      "generic": "Glibenclamide"
     },
-    "current_decision": {
-     "acknowledged_flags": [],
-     "action": "select_formulary_drug",
-     "formulary_id": "metformin",
-     "index": 0,
-     "note": null,
-     "schedule_edit": null,
-     "strength_choice": "500 mg"
-    },
+    "current_decision": null,
     "dose": "1 tablet",
     "duration_days": null,
     "duration_text": null,
@@ -77,19 +69,19 @@
       "id": "unresolved_name",
       "kind": "name",
       "template_id": "confirm.flag.unresolved_name",
-      "text": "எங்கள் பட்டியலில் இந்தப் பெயர் கிடைக்கவில்லை. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள், அல்லது அது பட்டியலில் இல்லை என்று சொல்லுங்கள்."
+      "text": "The name could not be found in our list. Choose the right medicine from the list, or say it is not in the list."
      },
      {
       "id": "near_miss_name",
       "kind": "name",
       "template_id": "confirm.flag.near_miss_name",
-      "text": "இந்தப் பெயர் அறிந்த மருந்துக்கு நெருக்கமானது, ஆனால் சரியாகப் பொருந்தவில்லை. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்."
+      "text": "The name is close to a known medicine but not an exact match. Choose the right medicine from the list."
      },
      {
       "id": "name_not_in_quote",
       "kind": "name",
       "template_id": "confirm.flag.name_not_in_quote",
-      "text": "படிக்கப்பட்ட உரையில் இந்தப் பெயர் இல்லை. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்."
+      "text": "The name does not appear in the text that was read. Choose the right medicine from the list."
      }
     ],
     "ref": "m0",
@@ -111,15 +103,7 @@
      "brand": "Amaryl",
      "generic": "Glimepiride"
     },
-    "current_decision": {
-     "acknowledged_flags": [],
-     "action": "confirm_as_extracted",
-     "formulary_id": null,
-     "index": 1,
-     "note": null,
-     "schedule_edit": null,
-     "strength_choice": null
-    },
+    "current_decision": null,
     "dose": "1 tablet",
     "duration_days": null,
     "duration_text": null,
@@ -159,15 +143,7 @@
      "brand": "Telma",
      "generic": "Telmisartan"
     },
-    "current_decision": {
-     "acknowledged_flags": [],
-     "action": "confirm_as_extracted",
-     "formulary_id": null,
-     "index": 2,
-     "note": null,
-     "schedule_edit": null,
-     "strength_choice": null
-    },
+    "current_decision": null,
     "dose": "1 tablet",
     "duration_days": null,
     "duration_text": null,
@@ -209,15 +185,7 @@
      "brand": "Atorvastatin",
      "generic": "Atorvastatin"
     },
-    "current_decision": {
-     "acknowledged_flags": [],
-     "action": "select_formulary_drug",
-     "formulary_id": "atorvastatin",
-     "index": 3,
-     "note": null,
-     "schedule_edit": null,
-     "strength_choice": "10 mg"
-    },
+    "current_decision": null,
     "dose": "1 tablet",
     "duration_days": null,
     "duration_text": null,
@@ -244,7 +212,7 @@
       "id": "duplicate_name_fields",
       "kind": "name",
       "template_id": "confirm.flag.duplicate_name_fields",
-      "text": "இந்த மருந்துக்கு ஒரே ஒரு பெயர் மட்டுமே கிடைத்தது. பட்டியலிலிருந்து சரியான மருந்தைத் தேர்ந்தெடுங்கள்."
+      "text": "Only one name was found for this medicine. Choose the right medicine from the list."
      }
     ],
     "ref": "m3",

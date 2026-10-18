@@ -1,0 +1,261 @@
+{
+ "_meta": {
+  "built_on": "2026-10-18",
+  "condition": "poor",
+  "fixture": "medicines_after_hi",
+  "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
+  "script": "scripts/build_demo_data.py",
+  "script_version": "1",
+  "source_document": "ds_037",
+  "split": "dev",
+  "synthetic": true
+ },
+ "data": {
+  "added_medicines": [],
+  "compare_note": "चुनने से पहले ब्रांड नाम, जेनेरिक नाम और मात्रा की अपने दस्तावेज़ से तुलना करें।",
+  "dose_options": [
+   "1/2 tablet",
+   "1 tablet",
+   "2 tablets",
+   "1 capsule",
+   "2 capsules",
+   "5 ml",
+   "10 ml",
+   "1 puff",
+   "2 puffs",
+   "1 drop",
+   "2 drops",
+   "1 application"
+  ],
+  "formulary_status": "unverified_requires_pharmacist_review",
+  "medicines": [
+   {
+    "allowed_actions": [
+     "confirm_as_extracted",
+     "select_formulary_drug",
+     "not_in_list",
+     "remove"
+    ],
+    "as_written": {
+     "brand": "Netfornin",
+     "generic": "Glibenclamide"
+    },
+    "current_decision": {
+     "acknowledged_flags": [],
+     "action": "select_formulary_drug",
+     "formulary_id": "metformin",
+     "index": 0,
+     "note": null,
+     "schedule_edit": null,
+     "strength_choice": "500 mg"
+    },
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "flags": [
+     "unresolved_name",
+     "near_miss_name",
+     "name_not_in_quote"
+    ],
+    "form": "tablet",
+    "frequency": {
+     "is_prn": false,
+     "original_abbreviation": "twice daily after meals",
+     "times_per_day": 2,
+     "timing_label": "after_meals"
+    },
+    "has_exact_identity": false,
+    "index": 0,
+    "interaction_ready": false,
+    "name_match_type": "none",
+    "printed": {
+     "brand": null,
+     "generic": null
+    },
+    "reasons": [
+     {
+      "id": "unresolved_name",
+      "kind": "name",
+      "template_id": "confirm.flag.unresolved_name",
+      "text": "यह नाम हमारी सूची में नहीं मिला। सूची से सही दवा चुनें, या बताएँ कि वह सूची में नहीं है।"
+     },
+     {
+      "id": "near_miss_name",
+      "kind": "name",
+      "template_id": "confirm.flag.near_miss_name",
+      "text": "यह नाम किसी जानी-पहचानी दवा के क़रीब है पर ठीक वही नहीं है। सूची से सही दवा चुनें।"
+     },
+     {
+      "id": "name_not_in_quote",
+      "kind": "name",
+      "template_id": "confirm.flag.name_not_in_quote",
+      "text": "पढ़े गए पाठ में यह नाम नहीं है। सूची से सही दवा चुनें।"
+     }
+    ],
+    "ref": "m0",
+    "resolved_generic": null,
+    "review_level": "must_confirm",
+    "route": "oral",
+    "schedule_ready": false,
+    "source_quote": "Tab Netfornin 500 mg - 1 tablet twice daily after meals",
+    "strength": "500 mg"
+   },
+   {
+    "allowed_actions": [
+     "confirm_as_extracted",
+     "select_formulary_drug",
+     "not_in_list",
+     "remove"
+    ],
+    "as_written": {
+     "brand": "Amaryl",
+     "generic": "Glimepiride"
+    },
+    "current_decision": {
+     "acknowledged_flags": [],
+     "action": "confirm_as_extracted",
+     "formulary_id": null,
+     "index": 1,
+     "note": null,
+     "schedule_edit": null,
+     "strength_choice": null
+    },
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "flags": [],
+    "form": "tablet",
+    "frequency": {
+     "is_prn": false,
+     "original_abbreviation": "once daily before meals",
+     "times_per_day": 1,
+     "timing_label": "before_meals"
+    },
+    "has_exact_identity": true,
+    "index": 1,
+    "interaction_ready": true,
+    "name_match_type": "exact",
+    "printed": {
+     "brand": "Amaryl",
+     "generic": "Glimepiride"
+    },
+    "reasons": [],
+    "ref": "m1",
+    "resolved_generic": "Glimepiride",
+    "review_level": "none",
+    "route": "oral",
+    "schedule_ready": true,
+    "source_quote": "Tab Amaryl (Glimepiride) 1 mg - 1 tablet once daily before meals",
+    "strength": "1 mg"
+   },
+   {
+    "allowed_actions": [
+     "confirm_as_extracted",
+     "select_formulary_drug",
+     "not_in_list",
+     "remove"
+    ],
+    "as_written": {
+     "brand": "Telma",
+     "generic": "Telmisartan"
+    },
+    "current_decision": {
+     "acknowledged_flags": [],
+     "action": "confirm_as_extracted",
+     "formulary_id": null,
+     "index": 2,
+     "note": null,
+     "schedule_edit": null,
+     "strength_choice": null
+    },
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "flags": [
+     "conflict_timing_label"
+    ],
+    "form": "tablet",
+    "frequency": {
+     "is_prn": false,
+     "original_abbreviation": "once daily",
+     "times_per_day": 1,
+     "timing_label": "unspecified"
+    },
+    "has_exact_identity": true,
+    "index": 2,
+    "interaction_ready": true,
+    "name_match_type": "exact",
+    "printed": {
+     "brand": "Telma",
+     "generic": "Telmisartan"
+    },
+    "reasons": [],
+    "ref": "m2",
+    "resolved_generic": "Telmisartan",
+    "review_level": "note",
+    "route": "oral",
+    "schedule_ready": true,
+    "source_quote": "Tab Telma (Telmisartan) 40 mg - 1 tablet once daily",
+    "strength": "40 mg"
+   },
+   {
+    "allowed_actions": [
+     "confirm_as_extracted",
+     "select_formulary_drug",
+     "not_in_list",
+     "remove"
+    ],
+    "as_written": {
+     "brand": "Atorvastatin",
+     "generic": "Atorvastatin"
+    },
+    "current_decision": {
+     "acknowledged_flags": [],
+     "action": "select_formulary_drug",
+     "formulary_id": "atorvastatin",
+     "index": 3,
+     "note": null,
+     "schedule_edit": null,
+     "strength_choice": "10 mg"
+    },
+    "dose": "1 tablet",
+    "duration_days": null,
+    "duration_text": null,
+    "flags": [
+     "duplicate_name_fields"
+    ],
+    "form": "tablet",
+    "frequency": {
+     "is_prn": false,
+     "original_abbreviation": "at bedtime",
+     "times_per_day": 1,
+     "timing_label": "bedtime"
+    },
+    "has_exact_identity": true,
+    "index": 3,
+    "interaction_ready": false,
+    "name_match_type": "exact",
+    "printed": {
+     "brand": null,
+     "generic": "Atorvastatin"
+    },
+    "reasons": [
+     {
+      "id": "duplicate_name_fields",
+      "kind": "name",
+      "template_id": "confirm.flag.duplicate_name_fields",
+      "text": "इस दवा का केवल एक नाम मिला। सूची से सही दवा चुनें।"
+     }
+    ],
+    "ref": "m3",
+    "resolved_generic": "Atorvastatin",
+    "review_level": "must_confirm",
+    "route": "oral",
+    "schedule_ready": false,
+    "source_quote": "Tab Atorvastatin 10 mg - 1 tablet at bedtime",
+    "strength": "10 mg"
+   }
+  ],
+  "strength_as_label_option": "as_on_my_label"
+ }
+}

@@ -2,6 +2,7 @@ import { useRef, useState, useSyncExternalStore } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useMotion } from '../ambient/motion'
 import { Icon } from '../components/icons'
+import { useIsDemo } from '../demo/useDemo'
 import { DeleteControl } from '../flow/DeleteControl'
 import { useT } from '../i18n/I18n'
 import { LANGS } from '../i18n/translate'
@@ -55,6 +56,7 @@ export function Header() {
   const [openKey, setOpenKey] = useState<string | null>(null)
   const open = openKey === loc.key // the panel belongs to the page it was opened on, so any route change closes it
   const btn = useRef<HTMLButtonElement>(null)
+  const demo = useIsDemo()
   return (
     <header
       className="site-header"
@@ -70,6 +72,7 @@ export function Header() {
         <Link to="/" className="brand-link" aria-label={t('ui.brand.home')}>
           <Wordmark />
         </Link>
+        {demo ? <span className="sample-tag">{t('ui.demo.tag')}</span> : null}
         <button ref={btn} type="button" className="menu-btn" aria-expanded={open} aria-controls="site-menu" onClick={() => setOpenKey(open ? null : loc.key)}>
           <Icon name={open ? 'close' : 'menu'} size={20} />
           <span>{t('ui.nav.menu')}</span>

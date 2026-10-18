@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
-import { useBlocker, useNavigate, useParams } from 'react-router-dom'
+import { useBlocker, useNavigate } from 'react-router-dom'
 import { getDocument, getDocumentImage, getFormularyEntry, getMedicines, saveConfirmations } from '../../api/endpoints'
 import { isAbort, type Problem } from '../../api/errors'
 import type { ConfirmedSummary, FormularyEntry, MedicinesResponse } from '../../api/types'
@@ -13,13 +13,15 @@ import { useFlow } from '../../flow/FlowProvider'
 import { ProblemNotice } from '../../flow/ProblemNotice'
 import { buildConfirmations, draftFromServer, emptyDraft, MAX_ADDED, orderMedicines, statusOf, type AddedDraft, type Draft } from '../../flow/review'
 import { useServerStrings } from '../../flow/serverStrings'
+import { PrerecordedNote } from '../../demo/DemoBar'
+import { useDocId, useDocPath } from '../../demo/useDemo'
 import { useT } from '../../i18n/I18n'
 import { AddMedicine } from './review/AddMedicine'
 import { MedicineCard } from './review/MedicineCard'
 import { PhotoViewer } from './review/PhotoViewer'
 
 export function ReviewPage() {
-  const { id = '' } = useParams()
+  const id = useDocId()
   return (
     <FlowPage titleKey="ui.title.review" narrow={false}>
       <Review id={id} />
@@ -30,6 +32,7 @@ export function ReviewPage() {
 const entryOrNull = (id: string | undefined | null) => (id ? getFormularyEntry(id).then((e) => e as FormularyEntry).catch(() => null) : Promise.resolve(null))
 
 function Review({ id }: { id: string }) {
+  const docPath = useDocPath()
   const { t, lang } = useT()
   const { s } = useServerStrings()
   const flow = useFlow()
@@ -70,7 +73,7 @@ function Review({ id }: { id: string }) {
         const doc = await getDocument(id, ctl.signal)
         flow.upsertDoc(doc)
         if (doc.state !== 'awaiting_confirmation') {
-          nav(`/d/${id}/processing`, { replace: true })
+          nav(docPath(id, 'processing'), { replace: true })
           return
         }
         const r = await getMedicines(id, ctl.signal)
@@ -319,6 +322,7 @@ function Review({ id }: { id: string }) {
       {saved ? (
         <div ref={savedRef} tabIndex={-1} className="saved-panel" role="status">
           <h2 className="h3-like">{t('ui.flow.review.saved_title')}</h2>
+          <PrerecordedNote />
           <ul className="saved-list">
             {Object.values(saved).map((m) => {
               const med = data.medicines.find((x) => x.ref === m.ref)
@@ -341,7 +345,7 @@ function Review({ id }: { id: string }) {
         </div>
       ) : null}
       <div className="page-actions">
-        <ButtonLink to={`/d/${id}/result`} icon="arrow" variant={saved && !dirty ? 'primary' : 'secondary'}>
+        <ButtonLink to={docPath(id, 'result')} icon="arrow" variant={saved && !dirty ? 'primary' : 'secondary'}>
           {t('ui.flow.review.see_results')}
         </ButtonLink>
       </div>

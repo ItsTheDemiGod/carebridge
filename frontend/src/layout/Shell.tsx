@@ -7,6 +7,7 @@ import { useMotion } from '../ambient/motion'
 import { ParticleField } from '../ambient/ParticleField'
 import { Icon } from '../components/icons'
 import { useT } from '../i18n/I18n'
+import { useIsDemo } from '../demo/useDemo'
 import { FlowProvider } from '../flow/FlowProvider'
 import { Footer } from './Footer'
 import { Header } from './Header'
@@ -25,8 +26,10 @@ function DraftNote() {
 }
 
 export function Shell() {
+  const demo = useIsDemo()
   return (
-    <FlowProvider>
+    // a separate provider for the sample, so nothing of a real session (or the other way round) is ever shown in it
+    <FlowProvider key={demo ? 'demo' : 'real'}>
       <ShellInner />
     </FlowProvider>
   )

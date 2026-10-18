@@ -56,6 +56,9 @@ export function LandingPage() {
             <ButtonLink to="/how-it-works" variant="quiet">
               {t('ui.hero.link')}
             </ButtonLink>
+            <ButtonLink to="/demo" variant="quiet" className="try-sample">
+              {t('ui.demo.try')}
+            </ButtonLink>
           </div>
           <p className="hero-note small muted">{t('ui.hero.note')}</p>
         </div>

@@ -8135,6 +8135,314 @@
     "text": "आपके दस्तावेज़ में मिली दवाएँ",
     "review_status": "draft_unreviewed"
    }
+  },
+  "ui.title.demo": {
+   "en": {
+    "text": "Sample · CareBridge",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மாதிரி · CareBridge",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नमूना · CareBridge",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.label": {
+   "en": {
+    "text": "Pre-recorded sample. No photo is processed and nothing you do here is saved.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "முன்பே பதிவு செய்யப்பட்ட மாதிரி. எந்தப் புகைப்படமும் செயலாக்கப்படுவதில்லை; இங்கு நீங்கள் செய்யும் எதுவும் சேமிக்கப்படாது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पहले से रिकॉर्ड किया गया नमूना। कोई फ़ोटो प्रोसेस नहीं होती और यहाँ आप जो कुछ करते हैं वह सहेजा नहीं जाता।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.tag": {
+   "en": {
+    "text": "Sample",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மாதிரி",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नमूना",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.leave": {
+   "en": {
+    "text": "Leave the sample",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மாதிரியிலிருந்து வெளியேறு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नमूना छोड़ें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.nothing_to_delete": {
+   "en": {
+    "text": "Nothing is saved in the sample, so there is nothing to delete.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மாதிரியில் எதுவும் சேமிக்கப்படுவதில்லை, எனவே நீக்க எதுவும் இல்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नमूने में कुछ भी सहेजा नहीं जाता, इसलिए हटाने के लिए कुछ नहीं है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.prerecorded_note": {
+   "en": {
+    "text": "In this sample the result is pre-recorded and does not change with your choices.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த மாதிரியில் முடிவு முன்பே பதிவு செய்யப்பட்டது; உங்கள் தேர்வுகளால் அது மாறாது.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस नमूने में नतीजा पहले से रिकॉर्ड किया हुआ है और आपके चुनाव से नहीं बदलता।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.marks_note": {
+   "en": {
+    "text": "Marks you make here stay in this page only and are cleared when you leave the sample.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இங்கு நீங்கள் இடும் குறிகள் இந்தப் பக்கத்தில் மட்டுமே இருக்கும்; மாதிரியை விட்டு வெளியேறும்போது அழிந்துவிடும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यहाँ आप जो निशान लगाते हैं वे केवल इसी पेज पर रहते हैं और नमूना छोड़ने पर मिट जाते हैं।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.try": {
+   "en": {
+    "text": "Try a sample document",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மாதிரி ஆவணத்தை முயன்று பாருங்கள்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "एक नमूना दस्तावेज़ आज़माएँ",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.unreachable": {
+   "en": {
+    "text": "You can still look at a pre-recorded sample. It needs no connection to the service.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "முன்பே பதிவு செய்யப்பட்ட மாதிரியை இன்னும் பார்க்கலாம். அதற்குச் சேவையுடன் இணைப்பு தேவையில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "आप अब भी पहले से रिकॉर्ड किया हुआ नमूना देख सकते हैं। इसके लिए सेवा से कनेक्शन की ज़रूरत नहीं है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.intro.label": {
+   "en": {
+    "text": "Sample",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மாதிரி",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नमूना",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.intro.title": {
+   "en": {
+    "text": "A pre-recorded walk-through",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "முன்பே பதிவு செய்யப்பட்ட நடைமுறை விளக்கம்",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "पहले से रिकॉर्ड किया हुआ प्रदर्शन",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.intro.body1": {
+   "en": {
+    "text": "This is a pre-recorded walk-through of one synthetic sample document. No photo is processed here, nothing you do is saved, and no model runs.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இது ஒரு செயற்கை மாதிரி ஆவணத்தின் முன்பே பதிவு செய்யப்பட்ட நடைமுறை விளக்கம். இங்கு எந்தப் புகைப்படமும் செயலாக்கப்படுவதில்லை, நீங்கள் செய்யும் எதுவும் சேமிக்கப்படுவதில்லை, எந்த மாடலும் இயங்குவதில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह एक कृत्रिम नमूना दस्तावेज़ का पहले से रिकॉर्ड किया हुआ प्रदर्शन है। यहाँ कोई फ़ोटो प्रोसेस नहीं होती, आप जो करते हैं वह सहेजा नहीं जाता और कोई मॉडल नहीं चलता।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.intro.body2": {
+   "en": {
+    "text": "The document is made up for software testing. Its photo is of poor quality, so one medicine name was read wrongly. You will see how the check step lets you correct it.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த ஆவணம் மென்பொருள் சோதனைக்காக உருவாக்கப்பட்டது. அதன் புகைப்படத் தரம் குறைவு; அதனால் ஒரு மருந்தின் பெயர் தவறாகப் படிக்கப்பட்டது. அதை எப்படித் திருத்தலாம் என்பதைச் சரிபார்ப்புப் படியில் காண்பீர்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह दस्तावेज़ सॉफ़्टवेयर परीक्षण के लिए बनाया गया है। इसकी फ़ोटो की गुणवत्ता कम है, इसलिए एक दवा का नाम ग़लत पढ़ा गया। जाँच वाले चरण में आप देखेंगे कि उसे कैसे सुधारा जाता है।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.intro.s1": {
+   "en": {
+    "text": "Check the medicines the software read from the photo, and correct the one it read wrongly.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மென்பொருள் புகைப்படத்திலிருந்து படித்த மருந்துகளைச் சரிபாருங்கள்; தவறாகப் படித்ததைத் திருத்துங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "फ़ोटो से सॉफ़्टवेयर ने जो दवाएँ पढ़ीं उन्हें जाँचें और जो ग़लत पढ़ी गई उसे सुधारें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.intro.s2": {
+   "en": {
+    "text": "Read the explanation in English, Tamil or Hindi, and see which interactions were found.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "விளக்கத்தை ஆங்கிலம், தமிழ் அல்லது இந்தியில் படியுங்கள்; எந்தத் தொடர்புகள் கண்டறியப்பட்டன என்று பாருங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "व्याख्या अंग्रेज़ी, तमिल या हिंदी में पढ़ें और देखें कि कौन-से इंटरैक्शन मिले।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.intro.s3": {
+   "en": {
+    "text": "Look at the daily schedule and at the summary you could show a doctor.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "தினசரி அட்டவணையையும், மருத்துவரிடம் காட்டக்கூடிய சுருக்கத்தையும் பாருங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "रोज़ का शेड्यूल और डॉक्टर को दिखाने लायक सारांश देखें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.intro.start": {
+   "en": {
+    "text": "Start the sample",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "மாதிரியைத் தொடங்கு",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "नमूना शुरू करें",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.intro.not_advice": {
+   "en": {
+    "text": "This is not medical advice. Always confirm medicines with your doctor or pharmacist.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இது மருத்துவ ஆலோசனை அல்ல. மருந்துகளை எப்போதும் உங்கள் மருத்துவர் அல்லது மருந்தாளரிடம் உறுதிசெய்யுங்கள்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "यह चिकित्सीय सलाह नहीं है। दवाओं के बारे में हमेशा अपने डॉक्टर या फ़ार्मासिस्ट से पुष्टि करें।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.alt.flow.review.saved_title": {
+   "en": {
+    "text": "Your checks are noted for this walk-through",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த நடைமுறை விளக்கத்திற்காக உங்கள் சரிபார்ப்புகள் குறிக்கப்பட்டன",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस प्रदर्शन के लिए आपकी जाँचें दर्ज की गईं",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.alt.flow.review.saved_ok": {
+   "en": {
+    "text": "Noted for this walk-through. Nothing is saved.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த நடைமுறை விளக்கத்திற்காகக் குறிக்கப்பட்டது. எதுவும் சேமிக்கப்படவில்லை.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस प्रदर्शन के लिए दर्ज किया गया। कुछ भी सहेजा नहीं गया।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.alt.flow.review.saved_open": {
+   "en": {
+    "text": "Noted for this walk-through. This medicine would still need confirmation.",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இந்த நடைமுறை விளக்கத்திற்காகக் குறிக்கப்பட்டது. இந்த மருந்துக்கு இன்னும் உறுதிப்படுத்தல் தேவைப்படும்.",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "इस प्रदर्शन के लिए दर्ज किया गया। इस दवा की पुष्टि फिर भी ज़रूरी होगी।",
+    "review_status": "draft_unreviewed"
+   }
+  },
+  "ui.demo.alt.flow.review.unsaved": {
+   "en": {
+    "text": "Not noted yet",
+    "review_status": "not_required"
+   },
+   "ta": {
+    "text": "இன்னும் குறிக்கப்படவில்லை",
+    "review_status": "draft_unreviewed"
+   },
+   "hi": {
+    "text": "अभी दर्ज नहीं हुआ",
+    "review_status": "draft_unreviewed"
+   }
   }
  },
  "english_only": {

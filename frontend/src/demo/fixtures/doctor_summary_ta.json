@@ -2,7 +2,7 @@
  "_meta": {
   "built_on": "2026-10-18",
   "condition": "poor",
-  "fixture": "doctor_summary",
+  "fixture": "doctor_summary_ta",
   "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
   "script": "scripts/build_demo_data.py",
   "script_version": "1",
@@ -146,8 +146,8 @@
   ],
   "not_scheduled": [],
   "period": {
-   "from": "2026-10-18",
-   "to": "2026-10-18"
+   "from": "2026-01-01",
+   "to": "2026-01-01"
   },
   "schedule_notice": "பரிந்துரைக்கப்பட்ட நேரங்கள் மட்டுமே; உங்கள் மருத்துவரின் அறிவுறுத்தலுக்கு ஏற்ப அவற்றை மாற்றிக்கொள்ளுங்கள்.",
   "title": "உங்கள் மருத்துவரிடம் காட்டுவதற்கான சுருக்கம்",

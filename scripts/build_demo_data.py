@@ -98,6 +98,7 @@ def cached_narrate(items, nar, lang, provider):
 
 # --- deterministic output ------------------------------------------------------------------------------------------------------------------
 ISO = re.compile(r"^\d{4}-\d\d-\d\d[T ]\d\d:\d\d")
+DATE = re.compile(r"^\d{4}-\d\d-\d\d$")  # the summary period is "today": the sample page shows the visitor's own date instead
 FIXED_TIME = "2026-01-01T00:00:00+00:00"
 VOLATILE = {"timings", "narrative_done_at", "latency_s", "usage"}
 
@@ -110,6 +111,8 @@ def scrub(x, doc_id: str):
     if isinstance(x, str):
         if ISO.match(x):
             return FIXED_TIME
+        if DATE.match(x):
+            return "2026-01-01"
         return x.replace(doc_id, "demo")
     return x
 
@@ -150,10 +153,15 @@ def build() -> dict[str, dict]:
             files["document"] = doc
             files["documents"] = get("/api/v1/documents")
             files["consent_notice_en"] = notice
-            before = get(f"/api/v1/documents/{did}/medicines")
-            files["medicines_before"] = before
+            def in_lang(lang):  # server-written text (reasons, schedule, summary) follows the session language
+                assert c.post("/api/v1/sessions", json={"language": lang}).status_code in (200, 201)
+
             for lang in LANGS:
+                in_lang(lang)
+                files[f"medicines_before_{lang}"] = get(f"/api/v1/documents/{did}/medicines")
                 files[f"result_before_{lang}"] = get(f"/api/v1/documents/{did}/result?lang={lang}")
+            before = files["medicines_before_en"]
+            in_lang("en")
             # scripted decisions (docs/CONFIRMATION.md)
             decisions, entries = [], {}
             for m in before["medicines"]:
@@ -172,11 +180,12 @@ def build() -> dict[str, dict]:
             r = c.post(f"/api/v1/documents/{did}/confirmations", json=files["scripted_decisions"])
             assert r.status_code == 200, r.text
             files["confirm_response"] = r.json()
-            files["medicines_after"] = get(f"/api/v1/documents/{did}/medicines")
             for lang in LANGS:
+                in_lang(lang)
+                files[f"medicines_after_{lang}"] = get(f"/api/v1/documents/{did}/medicines")
                 files[f"result_after_{lang}"] = get(f"/api/v1/documents/{did}/result?lang={lang}")
-            files["schedule"] = get(f"/api/v1/documents/{did}/schedule")
-            files["doctor_summary"] = get(f"/api/v1/documents/{did}/doctor-summary")
+                files[f"schedule_{lang}"] = get(f"/api/v1/documents/{did}/schedule")
+                files[f"doctor_summary_{lang}"] = get(f"/api/v1/documents/{did}/doctor-summary")
             # formulary: entries of every drug involved (read, written as extracted, picked) plus the recorded picker searches
             for m in before["medicines"]:
                 for key in (m["as_written"].get("generic"), m.get("resolved_generic")):

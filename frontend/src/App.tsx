@@ -3,6 +3,7 @@ import { Shell } from './layout/Shell'
 import { HowItWorksPage } from './pages/HowItWorksPage'
 import { LandingPage } from './pages/LandingPage'
 import { PrivacyPage } from './pages/PrivacyPage'
+import { DemoIntroPage } from './pages/flow/DemoIntroPage'
 import { ConsentPage } from './pages/flow/ConsentPage'
 import { ProcessingPage } from './pages/flow/ProcessingPage'
 import { DocumentsPage } from './pages/flow/DocumentsPage'
@@ -28,6 +29,11 @@ export const routes: RouteObject[] = [
       { path: 'd/:id/schedule', element: <SchedulePage /> },
       { path: 'd/:id/summary', element: <SummaryPage /> },
       { path: 'documents', element: <DocumentsPage /> },
+      { path: 'demo', element: <DemoIntroPage /> },
+      { path: 'demo/review', element: <ReviewPage /> },
+      { path: 'demo/result', element: <ResultPage /> },
+      { path: 'demo/schedule', element: <SchedulePage /> },
+      { path: 'demo/summary', element: <SummaryPage /> },
       { path: 'privacy', element: <PrivacyPage /> },
       { path: 'how-it-works', element: <HowItWorksPage /> },
       { path: '*', element: <NotFoundPage /> },

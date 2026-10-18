@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import { getDoctorSummary } from '../../api/endpoints'
 import { isAbort, type Problem } from '../../api/errors'
 import type { DoctorSummary } from '../../api/types'
@@ -10,10 +9,11 @@ import { IconHeading, SectionHeading } from '../../components/Layout'
 import { FlowPage } from '../../flow/FlowPage'
 import { useFlow } from '../../flow/FlowProvider'
 import { ProblemNotice } from '../../flow/ProblemNotice'
+import { useDocId, useDocPath } from '../../demo/useDemo'
 import { useT } from '../../i18n/I18n'
 
 export function SummaryPage() {
-  const { id = '' } = useParams()
+  const id = useDocId()
   return (
     <FlowPage titleKey="ui.title.summary" narrow={false} className="summary-page">
       <Summary id={id} />
@@ -22,6 +22,7 @@ export function SummaryPage() {
 }
 
 function Summary({ id }: { id: string }) {
+  const docPath = useDocPath()
   const { t } = useT()
   const flow = useFlow()
   const sessionLang = flow.state.sessionLang
@@ -66,7 +67,7 @@ function Summary({ id }: { id: string }) {
       <section aria-labelledby="s-meds" className="res-section">
         <IconHeading id="s-meds" icon="pill">{data.headings.medicines}</IconHeading>
         {data.medicines.length === 0 ? <p className="muted">{t('ui.flow.summary.no_meds')}</p> : (
-          <div className="table-wrap">
+          <div className="table-wrap" tabIndex={0} role="region" aria-label={data.headings.medicines}>
             <table className="summary-table">
               <thead>
                 <tr>
@@ -119,8 +120,8 @@ function Summary({ id }: { id: string }) {
 
       <Notice tone="info"><p>{data.disclaimer}</p></Notice>
       <div className="page-actions no-print">
-        <ButtonLink to={`/d/${id}/schedule`} variant="secondary" icon="clock">{t('ui.flow.summary.back_schedule')}</ButtonLink>
-        <ButtonLink to={`/d/${id}/result`} variant="quiet">{t('ui.flow.schedule.back_results')}</ButtonLink>
+        <ButtonLink to={docPath(id, 'schedule')} variant="secondary" icon="clock">{t('ui.flow.summary.back_schedule')}</ButtonLink>
+        <ButtonLink to={docPath(id, 'result')} variant="quiet">{t('ui.flow.schedule.back_results')}</ButtonLink>
       </div>
     </>
   )

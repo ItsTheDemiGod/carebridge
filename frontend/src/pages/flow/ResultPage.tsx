@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { getResult, startLanguage } from '../../api/endpoints'
 import { isAbort, toProblem, type Problem } from '../../api/errors'
 import { startPolling } from '../../api/poll'
@@ -12,13 +12,15 @@ import { FlowPage } from '../../flow/FlowPage'
 import { useFlow } from '../../flow/FlowProvider'
 import { ProblemNotice } from '../../flow/ProblemNotice'
 import { useServerStrings } from '../../flow/serverStrings'
+import { PrerecordedNote } from '../../demo/DemoBar'
+import { useDocId, useDocPath } from '../../demo/useDemo'
 import { useT } from '../../i18n/I18n'
 import { LANGS } from '../../i18n/translate'
 
 const SEC_ICON: Record<'follow_ups' | 'advice' | 'warnings', IconName> = { follow_ups: 'calendar', advice: 'leaf', warnings: 'alert' }
 
 export function ResultPage() {
-  const { id = '' } = useParams()
+  const id = useDocId()
   return (
     <FlowPage titleKey="ui.title.result" narrow={false} className="result-page">
       <Result id={id} />
@@ -31,6 +33,7 @@ const FREE = new Set(['follow_ups', 'advice', 'warnings'])
 const textOf = (l: ResultLine, lang: Lang) => l.text[lang]?.text ?? l.source_text
 
 function Result({ id }: { id: string }) {
+  const docPath = useDocPath()
   const { t, lang: uiLang } = useT()
   const { s } = useServerStrings()
   const flow = useFlow()
@@ -79,7 +82,7 @@ function Result({ id }: { id: string }) {
       <>
         <SectionHeading as="h1" label={t('ui.flow.stage.results')} title={t('ui.flow.result.title')} />
         <ProblemNotice problem={problem} />
-        <div className="page-actions"><ButtonLink to={`/d/${id}/review`} variant="secondary">{t('ui.flow.result.back_review')}</ButtonLink></div>
+        <div className="page-actions"><ButtonLink to={docPath(id, 'review')} variant="secondary">{t('ui.flow.result.back_review')}</ButtonLink></div>
       </>
     )
   }
@@ -106,6 +109,7 @@ function Result({ id }: { id: string }) {
     <>
       <SectionHeading as="h1" label={t('ui.flow.stage.results')} title={t('ui.flow.result.title')} />
       <p className="lede">{t('ui.flow.result.intro')}</p>
+      {data.confirmed ? <PrerecordedNote /> : null}
 
       <div className="result-tools no-print">
         <div role="tablist" aria-label={t('ui.flow.result.tabs')} className="tabs">
@@ -140,7 +144,7 @@ function Result({ id }: { id: string }) {
         {banner ? (
           <Notice tone={data.confirm_first ? 'important' : 'caution'} title={t(data.confirm_first ? 'ui.flow.result.banner.confirm_first' : 'ui.flow.result.banner.review')}>
             <p>{textOf(banner, rl)}</p>
-            {data.confirm_first ? <p><Link className="text-link" to={`/d/${id}/review`}>{t('ui.flow.result.back_review')}</Link></p> : null}
+            {data.confirm_first ? <p><Link className="text-link" to={docPath(id, 'review')}>{t('ui.flow.result.back_review')}</Link></p> : null}
           </Notice>
         ) : null}
 
@@ -220,9 +224,9 @@ function Result({ id }: { id: string }) {
       </div>
 
       <div className="page-actions no-print">
-        <ButtonLink to={`/d/${id}/schedule`} icon="clock">{t('ui.flow.result.to_schedule')}</ButtonLink>
-        <ButtonLink to={`/d/${id}/summary`} variant="secondary" icon="document">{t('ui.flow.result.to_summary')}</ButtonLink>
-        <ButtonLink to={`/d/${id}/review`} variant="quiet">{t('ui.flow.result.back_review')}</ButtonLink>
+        <ButtonLink to={docPath(id, 'schedule')} icon="clock">{t('ui.flow.result.to_schedule')}</ButtonLink>
+        <ButtonLink to={docPath(id, 'summary')} variant="secondary" icon="document">{t('ui.flow.result.to_summary')}</ButtonLink>
+        <ButtonLink to={docPath(id, 'review')} variant="quiet">{t('ui.flow.result.back_review')}</ButtonLink>
       </div>
     </>
   )

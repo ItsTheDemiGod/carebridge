@@ -85,4 +85,4 @@ export function stageForPath(path: string): Stage | null {
   if (/^\/d\/[^/]+\/(schedule|summary)$/.test(path)) return 'schedule'
   return null
 }
-export const isFlowPath = (path: string) => /^\/(start|consent|upload|documents)$/.test(path) || /^\/d\/[^/]+\//.test(path)
+export const isFlowPath = (path: string) => /^\/(start|consent|upload|documents)$/.test(path) || /^\/d\/[^/]+\//.test(path) || path === '/demo' || path.startsWith('/demo/')

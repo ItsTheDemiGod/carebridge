@@ -4,6 +4,7 @@ import { toProblem, isAbort, type Problem } from '../api/errors'
 import * as API from '../api/endpoints'
 import type { DeleteReceipt, DocView, Lang } from '../api/types'
 import { useT } from '../i18n/I18n'
+import { resetDemo } from '../demo/demoApi'
 import { flowReducer, initialFlow, isFlowPath, type FlowState } from './state'
 
 export type FlowApi = {
@@ -30,6 +31,7 @@ export function FlowProvider({ children }: { children: ReactNode }) {
   const langRef = useRef<Lang>(lang)
   langRef.current = lang
   const photoRef = useRef<string | null>(null)
+  useEffect(() => resetDemo, []) // leaving the sample (the provider is re-keyed at the boundary) drops everything done in it
 
   const report = useCallback((e: unknown): Problem => {
     const p = toProblem(e)

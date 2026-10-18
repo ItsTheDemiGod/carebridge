@@ -65,7 +65,7 @@ def test_source_document_is_dev_and_not_in_test_split():
 def test_scripted_decisions_are_a_valid_confirmation_request_and_follow_the_rules():
     c = Confirmations.model_validate(_load("scripted_decisions")["data"])
     acts = {d.index: d.action for d in c.decisions}
-    med = _load("medicines_before")["data"]["medicines"]
+    med = _load("medicines_before_en")["data"]["medicines"]
     assert len(acts) == len(med)
     for m in med:  # every name reason is resolved by picking the formulary drug, never by an acknowledgement
         if any(r["kind"] == "name" for r in m["reasons"]):
@@ -79,7 +79,7 @@ def test_fixtures_cover_every_language_before_and_after_and_the_sample_shows_a_f
         assert _load(f"result_before_{lang}")["data"]["confirmed"] is False
         assert _load(f"result_after_{lang}")["data"]["confirmed"] is True
         assert _load(f"strings_{lang}")["data"]["strings"]
-    med = _load("medicines_before")["data"]["medicines"]
+    med = _load("medicines_before_en")["data"]["medicines"]
     assert len(med) >= 3 and any(m["review_level"] == "must_confirm" for m in med)
     assert any("select_formulary_drug" in m["allowed_actions"] and any(r["kind"] == "name" for r in m["reasons"]) for m in med)
     assert "Netfornin" in {m["as_written"]["brand"] for m in med}

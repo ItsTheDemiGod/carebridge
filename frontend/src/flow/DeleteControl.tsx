@@ -4,6 +4,7 @@ import { Button } from '../components/Button'
 import { Dialog } from '../components/Dialog'
 import { Icon } from '../components/icons'
 import { useT } from '../i18n/I18n'
+import { useIsDemo } from '../demo/useDemo'
 import { useFlow } from './FlowProvider'
 
 /** "Delete my data": shown in the header once a session exists. Withdrawing consent is the same action. */
@@ -15,7 +16,8 @@ export function DeleteControl({ labelKey = 'ui.flow.delete.button', className = 
   const [busy, setBusy] = useState(false)
   const [failed, setFailed] = useState(false)
   const tid = useId()
-  if (!flow.state.session) return null
+  const demo = useIsDemo()
+  if (!flow.state.session || demo) return null // nothing is stored in the sample (the demo bar says so)
 
   const run = async () => {
     setBusy(true)

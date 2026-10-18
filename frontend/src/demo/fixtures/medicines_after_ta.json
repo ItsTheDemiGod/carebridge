@@ -2,7 +2,7 @@
  "_meta": {
   "built_on": "2026-10-18",
   "condition": "poor",
-  "fixture": "medicines_before",
+  "fixture": "medicines_after_ta",
   "note": "Pre-recorded response of the real API for a synthetic development document, replayed from cached model outputs. No model was called.",
   "script": "scripts/build_demo_data.py",
   "script_version": "1",
@@ -40,7 +40,15 @@
      "brand": "Netfornin",
      "generic": "Glibenclamide"
     },
-    "current_decision": null,
+    "current_decision": {
+     "acknowledged_flags": [],
+     "action": "select_formulary_drug",
+     "formulary_id": "metformin",
+     "index": 0,
+     "note": null,
+     "schedule_edit": null,
+     "strength_choice": "500 mg"
+    },
     "dose": "1 tablet",
     "duration_days": null,
     "duration_text": null,
@@ -103,7 +111,15 @@
      "brand": "Amaryl",
      "generic": "Glimepiride"
     },
-    "current_decision": null,
+    "current_decision": {
+     "acknowledged_flags": [],
+     "action": "confirm_as_extracted",
+     "formulary_id": null,
+     "index": 1,
+     "note": null,
+     "schedule_edit": null,
+     "strength_choice": null
+    },
     "dose": "1 tablet",
     "duration_days": null,
     "duration_text": null,
@@ -143,7 +159,15 @@
      "brand": "Telma",
      "generic": "Telmisartan"
     },
-    "current_decision": null,
+    "current_decision": {
+     "acknowledged_flags": [],
+     "action": "confirm_as_extracted",
+     "formulary_id": null,
+     "index": 2,
+     "note": null,
+     "schedule_edit": null,
+     "strength_choice": null
+    },
     "dose": "1 tablet",
     "duration_days": null,
     "duration_text": null,
@@ -185,7 +209,15 @@
      "brand": "Atorvastatin",
      "generic": "Atorvastatin"
     },
-    "current_decision": null,
+    "current_decision": {
+     "acknowledged_flags": [],
+     "action": "select_formulary_drug",
+     "formulary_id": "atorvastatin",
+     "index": 3,
+     "note": null,
+     "schedule_edit": null,
+     "strength_choice": "10 mg"
+    },
     "dose": "1 tablet",
     "duration_days": null,
     "duration_text": null,

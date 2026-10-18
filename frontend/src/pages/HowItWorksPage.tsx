@@ -2,6 +2,7 @@ import { Notice, Tag } from '../components/Badges'
 import { Icon, type IconName } from '../components/icons'
 import { Container, SectionHeading } from '../components/Layout'
 import { PipelineDiagram, PipelineVertical } from '../components/PipelineDiagram'
+import { TrySampleLink } from '../demo/DemoBar'
 import { useT } from '../i18n/I18n'
 import { usePageTitle } from './usePageTitle'
 
@@ -38,6 +39,7 @@ export function HowItWorksPage() {
       <Notice tone="important">
         <p>{t('ui.how.unchecked_note')}</p>
       </Notice>
+      <TrySampleLink />
     </Container>
   )
 }

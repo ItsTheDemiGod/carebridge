@@ -7,6 +7,7 @@ import { Icon, type IconName } from '../../components/icons'
 import { SectionHeading } from '../../components/Layout'
 import { FlowPage } from '../../flow/FlowPage'
 import { useFlow } from '../../flow/FlowProvider'
+import { TrySampleLink } from '../../demo/DemoBar'
 import { ProblemNotice } from '../../flow/ProblemNotice'
 import { consentGranted } from '../../flow/state'
 import { useT } from '../../i18n/I18n'
@@ -71,6 +72,7 @@ export function StartPage() {
           {t('ui.start.back')}
         </ButtonLink>
       </div>
+      <TrySampleLink />
     </FlowPage>
   )
 }

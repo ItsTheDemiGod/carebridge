@@ -3,6 +3,7 @@ import { getConsentNotice, type ConsentNotice } from '../api/client'
 import { Button, ButtonLink } from '../components/Button'
 import { Notice } from '../components/Badges'
 import { Container, SectionHeading } from '../components/Layout'
+import { SampleLink } from '../demo/DemoBar'
 import { useT } from '../i18n/I18n'
 import { usePageTitle } from './usePageTitle'
 
@@ -42,6 +43,7 @@ export function PrivacyPage() {
                 {t('ui.pp.retry')}
               </Button>
             </div>
+            <SampleLink />
           </Notice>
         ) : null}
         {state.kind === 'ok' ? (
