@@ -7,7 +7,7 @@
    "eval/results/phase3e-dev-clean/metrics.json",
    "eval/results/stress-v1/metrics.json",
    "eval/results/phase4-dev-with-supplement/metrics.json",
-   "docs/smoke/phase6c_live.json",
+   "docs/smoke/phase6d_live.json",
    "data/reference/formulary.json"
   ],
   "dates": "commit date of each source file (RUN_DATES)",
@@ -503,7 +503,7 @@
    "label": "ui.testing.f.live_flows",
    "value": 3,
    "unit": "count",
-   "source": "docs/smoke/phase6c_live.json",
+   "source": "docs/smoke/phase6d_live.json",
    "measures": "ui.testing.m.live_flows",
    "data": "ui.testing.d.live",
    "params": {

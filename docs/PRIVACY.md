@@ -106,3 +106,6 @@ Residual risks: browser extensions and the operating system can read page memory
 
 ## 9. Sample (demo) mode (Phase 6d)
 The sample under `/demo` calls no API (no session, no consent call, no upload), processes no photo and stores nothing: its state (decisions, taken/skipped marks) lives in page memory and is dropped on leaving; localStorage still holds only language and calm mode. There is nothing to delete. Its recorded data is synthetic (dev document ds_037).
+
+### Evidence: deleting while a background job runs (Phase 6d)
+`backend/tests/test_delete_during_narrative.py` blocks a MOCKED Tamil narrative job inside the worker, calls `DELETE /session`, then releases the job. Result: delete answers 200 in well under 2 seconds, sessions, documents, payloads, consents and adherence events are all 0 immediately afterwards, the finishing job recreates nothing, and the old document id is unreachable. What it proves: the delete path is not blocked by, and is not undone by, a narrative job that is still running (the job's final write checks that the document still exists). What it does not prove: behaviour with the real model (timing, memory), a job that is inside a database write at the very instant of deletion, or an extraction job (only a narrative job was tested). A live flow that stalled in 6d was a hidden UI control, not this.

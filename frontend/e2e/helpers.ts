@@ -1,5 +1,8 @@
 import type { BrowserContext, Page } from '@playwright/test'
 
+// the backend only: a plain star-star/api/star-star glob also matches the dev server's own /src/api/*.ts modules, which broke every page under vite dev
+export const API = /^https?:\/\/[^/]+\/api\/(v1\/|health)/
+
 export const ROUTES = ['/', '/how-it-works', '/how-we-tested-it', '/privacy', '/start', '/no-such-page']
 export const LANGS = ['en', 'ta', 'hi'] as const
 
@@ -15,4 +18,4 @@ export function watch(page: Page) {
   return errors
 }
 
-export const blockApi = (page: Page) => page.route('**/api/**', (r) => r.abort())
+export const blockApi = (page: Page) => page.route(API, (r) => r.abort())

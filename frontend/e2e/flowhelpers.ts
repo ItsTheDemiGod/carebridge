@@ -40,3 +40,18 @@ export async function pickDrug(page: Page, scope: ReturnType<typeof card> | Page
   await box.press('ArrowDown')
   await box.press('Enter')
 }
+
+/** Opens the header menu when the header is collapsed (the menu button is visible and closed). Safe to call in the one-row layout. */
+export async function openMenuIfCollapsed(page: Page) {
+  const btn = page.locator('.menu-btn')
+  if ((await btn.isVisible()) && (await btn.getAttribute('aria-expanded')) === 'false') await btn.click()
+}
+
+/** Presses "Delete my data" in the header the way a person does: the icon beside the Menu button when it is shown (768 px and wider, collapsed header),
+ *  otherwise the text button, after opening the menu if the header is collapsed. Every spec that deletes through the header uses this. */
+export async function pressDelete(page: Page) {
+  const icon = page.locator('.delete-icon')
+  if (await icon.isVisible()) return icon.click()
+  await openMenuIfCollapsed(page)
+  await page.locator('.header-menu .delete-btn, .site-header .delete-btn').first().click()
+}

@@ -1,5 +1,5 @@
 import { expect, test, type Page } from '@playwright/test'
-import { LANGS, ROUTES, blockApi, setLang, watch } from './helpers'
+import { API, LANGS, ROUTES, blockApi, setLang, watch } from './helpers'
 
 for (const lang of LANGS) {
   test(`landing renders in ${lang} without console errors, with the right lang attribute and fonts`, async ({ page, context }) => {
@@ -173,7 +173,7 @@ test('privacy page shows a clear message when the backend is unreachable, and re
   await blockApi(page)
   await page.goto('/privacy', { waitUntil: 'networkidle' })
   await expect(page.getByText('is not reachable')).toBeVisible()
-  await page.unroute('**/api/**')
+  await page.unroute(API)
   await page.getByRole('button', { name: 'Try again' }).click()
   await expect(page.getByText(/Notice version/)).toBeVisible({ timeout: 10_000 })
 })

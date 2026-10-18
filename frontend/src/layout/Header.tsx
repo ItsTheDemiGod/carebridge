@@ -74,6 +74,7 @@ export function Header() {
           <Wordmark />
         </Link>
         {demo ? <span className="sample-tag">{t('ui.demo.tag')}</span> : null}
+        <DeleteControl iconOnly />
         <button ref={btn} type="button" className="menu-btn" aria-expanded={open} aria-controls="site-menu" onClick={() => setOpenKey(open ? null : loc.key)}>
           <Icon name={open ? 'close' : 'menu'} size={20} />
           <span>{t('ui.nav.menu')}</span>

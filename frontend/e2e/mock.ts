@@ -1,5 +1,6 @@
 /* A stateful fake of the CareBridge API for Playwright (network interception, deterministic). Every request body the app sends is validated
  * against the request schemas of docs/openapi.json; a body that does not match answers 422 like the real backend, so contract drift fails the tests. */
+import { API } from './helpers'
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import type { Page, Route } from '@playwright/test'
@@ -110,7 +111,7 @@ export async function mockApi(page: Page, o: MockOptions = {}): Promise<Mock> {
   const view = (d: DocView): DocView => ({ ...d, narrative: d.state === 'awaiting_confirmation' ? { en: mock.s.narrative.en, ...(mock.s.narrative.ta !== 'not_started' ? { ta: mock.s.narrative.ta } : {}), ...(mock.s.narrative.hi !== 'not_started' ? { hi: mock.s.narrative.hi } : {}) } : d.narrative, confirmed: !!mock.s.confirmations })
   const setDoc = (d: DocView) => (mock.s.docs = [d])
 
-  await page.route('**/api/**', async (route) => {
+  await page.route(API, async (route) => {
     const req = route.request()
     const url = new URL(req.url())
     const path = url.pathname

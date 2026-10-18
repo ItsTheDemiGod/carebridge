@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test'
-import { PNG as PNG_BYTES } from './flowhelpers'
+import { API } from './helpers'
+import { PNG as PNG_BYTES, pressDelete } from './flowhelpers'
 import { DOC_ID } from './fixtures'
 import { PDF, card, consented, openCard, pickDrug, reviewReady, setLangInit, watchErrors } from './flowhelpers'
 import { mockApi } from './mock'
@@ -352,13 +353,13 @@ test.describe('schedule, summary and deletion', () => {
   test('delete my data: dialog with consequences, Escape closes, confirm erases, receipt shown on the landing page, state cleared', async ({ page }) => {
     const mock = await reviewReady(page)
     await page.goto(`/d/${DOC_ID}/result`)
-    await page.getByRole('button', { name: 'Delete my data' }).click()
+    await pressDelete(page)
     const dlg = page.getByRole('dialog', { name: 'Delete everything for this session?' })
     await expect(dlg).toContainText('cannot be undone')
     await expect(dlg.getByRole('button', { name: 'Keep my data' })).toBeFocused()
     await page.keyboard.press('Escape')
     await expect(dlg).toBeHidden()
-    await page.getByRole('button', { name: 'Delete my data' }).click()
+    await pressDelete(page)
     await dlg.getByRole('button', { name: 'Delete everything' }).click()
     await expect(page).toHaveURL(/\/$/)
     await expect(page.getByText('Your data has been deleted and your consent is withdrawn.')).toBeVisible()
@@ -397,7 +398,7 @@ test.describe('session problems', () => {
   })
 
   test('backend unreachable on a flow page: clear message and retry', async ({ page }) => {
-    await page.route('**/api/**', (r) => r.abort())
+    await page.route(API, (r) => r.abort())
     await page.goto('/upload')
     await expect(page.getByText('The server is not reachable')).toBeVisible()
     await expect(page.getByRole('button', { name: 'Try again' })).toBeVisible()
@@ -455,7 +456,7 @@ test.describe('audits after a full flow', () => {
   })
 
   test('the landing page still works when the backend is unreachable', async ({ page }) => {
-    await page.route('**/api/**', (r) => r.abort())
+    await page.route(API, (r) => r.abort())
     const errors = watchErrors(page)
     await page.goto('/')
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible()

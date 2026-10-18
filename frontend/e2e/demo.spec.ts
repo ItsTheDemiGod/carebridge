@@ -1,3 +1,4 @@
+import { API } from './helpers'
 import AxeBuilder from '@axe-core/playwright'
 import { expect, test, type BrowserContext, type Page } from '@playwright/test'
 import { readFileSync } from 'node:fs'
@@ -16,7 +17,7 @@ const READY: Record<string, string> = { '/demo': '.steps-list', '/demo/review': 
 function trackApi(ctx: BrowserContext | Page) {
   const api: string[] = []
   const all: string[] = []
-  void ctx.route('**/api/**', (r) => {
+  void ctx.route(API, (r) => {
     api.push(r.request().method() + ' ' + r.request().url())
     return r.abort()
   })
@@ -190,7 +191,7 @@ for (const lang of LANGS)
 
 test('a sample link is offered on the landing page, the start page and how it works', async ({ page }) => {
   for (const [path, where] of [['/', 'landing'], ['/start', 'start'], ['/how-it-works', 'how']] as const) {
-    await page.route('**/api/**', (r) => r.abort())
+    await page.route(API, (r) => r.abort())
     await page.goto(path)
     const link = page.getByRole('link', { name: 'Try a sample document' })
     await expect(link.first(), where).toBeVisible()
@@ -200,8 +201,8 @@ test('a sample link is offered on the landing page, the start page and how it wo
 
 test('when the service cannot be reached, /start, /consent and /privacy offer the sample (network failure and 502)', async ({ page }) => {
   for (const mode of ['abort', '502'] as const) {
-    await page.unroute('**/api/**').catch(() => {})
-    await page.route('**/api/**', (r) => (mode === 'abort' ? r.abort() : r.fulfill({ status: 502, contentType: 'text/plain', body: 'Bad gateway' })))
+    await page.unroute(API).catch(() => {})
+    await page.route(API, (r) => (mode === 'abort' ? r.abort() : r.fulfill({ status: 502, contentType: 'text/plain', body: 'Bad gateway' })))
     for (const path of ['/start', '/consent', '/privacy']) {
       await page.goto(path)
       const link = page.getByRole('link', { name: 'Try a sample document' })

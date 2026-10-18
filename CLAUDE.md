@@ -46,7 +46,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 4 Safety layer (interaction lookup, duplicates, guardrail, safety section; dev only; supplement and ta/hi strings await review; red-flag/low-confidence handling reuse Phase 2i flags)
 - [x] 5 Backend API, SQLite + Fernet, consent, confirmation overlay, schedule, delete-my-data (no UI; live smoke done; ta/hi strings and DPDP checklist unreviewed)
 - [x] 5c Prototype review mode: honest author self-check of the interaction supplement, notice v2, labels (docs/REVIEW_STATUS.md)
-- [~] 6 Web application UI: [x] 6a design system, shell, ambient layer, landing (docs/DESIGN.md); [x] 6b working flow (consent, upload, processing, review/picker, results, schedule, summary, delete; docs/DESIGN.md, PRIVACY.md section 8); [x] 6c polish, header, icons, photos, review-page redesign, phones; [ ] 6d demo mode and "How we tested it"
+- [x] 6 Web application UI: 6a design system, 6b working flow, 6c polish and review page, 6d sample mode + "How we tested it" + header delete icon (docs/DESIGN.md, DEMO.md, TESTING_PAGE.md)
 - [ ] 7 Evaluation, testing, native-speaker review, usability test
 - [ ] 8 Deployment, demo, report
 - [ ] 9 Stretch: PWA and mobile app
@@ -126,22 +126,23 @@ Status: [x] done, [ ] not started, [~] in progress
 - GPU rule: Canvas 2D and CSS transforms only (no WebGL, no backdrop-filter); at most 60/24 particles, DPR cap 1.5, paused when hidden, calm, reduced-motion or on processing screens (`useProcessingScreen`). Calm mode turns off particles, cursor ring, tile drift, parallax.
 - Contrast is a gate: `npm run check:contrast`. Photos: `scripts/prepare_photos.py` from `assets/photo_sources.json`; missing ones in docs/PHOTOS_NEEDED.md.
 
+## Sample mode and testing page (Phase 6d; docs/DEMO.md, TESTING_PAGE.md)
+- `/demo` = pre-recorded walk-through of dev doc ds_037 (poor) from fixtures built by `scripts/build_demo_data.py` (real API in-process, cached model outputs, never a model). `demoApi` answers `api()` under /demo from memory: ZERO /api requests, no session, nothing stored (tested). Sticky label strip "Pre-recorded sample. No photo is processed and nothing you do here is saved." + "Leave the sample" on every demo page; after Save the recorded AFTER result shows whatever was chosen, with a visible note. Never present it as a live result. DDInter excerpt: at most 6 attributed pairs (names and level only), test-enforced.
+- `/how-we-tested-it`: figures only from `frontend/src/data/testing.generated.json` (`scripts/build_testing_page_data.py`, committed metrics files only); no number typed into a string; test split "not yet run" until Phase 7 extends the builder.
+- Header: delete icon beside Menu from 768 px when collapsed (row from 70rem, Tamil 96rem). Specs that delete use `pressDelete`/`openMenuIfCollapsed` (e2e/flowhelpers.ts). Live specs: UI steps 45 s, long waits only for backend work and commented.
+- Build: `python scripts/build_demo_data.py`, `python scripts/build_testing_page_data.py` (both `--check`).
+
 ## Commands
 Backend (from `backend/`; venv is `backend/.venv`, built with Python 3.12):
-- Setup: `py -3.12 -m venv .venv; .venv\Scripts\pip install -r requirements.txt`
-- Run: `.venv\Scripts\uvicorn app.main:app --reload` (port 8000)
-- Test: `.venv\Scripts\python -m pytest`
+- Setup `py -3.12 -m venv .venv; .venv\Scripts\pip install -r requirements.txt`; run `.venv\Scripts\uvicorn app.main:app --reload` (port 8000); test `.venv\Scripts\python -m pytest`
 - Dataset (from repo root): `backend\.venv\Scripts\python data\generate_synthetic.py` then `backend\.venv\Scripts\python data\validate_dataset.py`
 
 Frontend (from `frontend/`):
-- Install: `npm install`
-- Run: `npm run dev` (port 5173, proxies /api to localhost:8000)
-- Build: `npm run build`
+- `npm install`; `npm run dev` (port 5173, proxies /api to localhost:8000); `npm run build`
 
 Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`; Ollama must be running with qwen3-vl:8b-instruct pulled):
 - Render: `python data\render_documents.py` (about 4 minutes; 240 PNG + 120 PDF)
 - Evaluate (dev): `python -m eval.evaluate --split dev --conditions text,clean,scan,photo,poor [--limit N] [--run-id NAME]`; oracle (no API): add `--oracle`
 - Re-score with normalisation (no model calls): `python -m eval.evaluate --split dev --run-id dev-ollama-v1 --rescore normalised` -> eval/results/dev-ollama-v1-normalised
-- Tests: `cd backend; .venv\Scripts\python -m pytest` (live API tests: `-m live`)
 - DDInter: `python data\reference\fetch_ddinter.py` then `python data\reference\ddinter_coverage.py`
 - Frontend tests: `npm test` (vitest), `npm run check:contrast`, `npx playwright test` (e2e + axe + perf; needs `npx vite preview --port 4173` or builds it; the privacy test needs the backend on 8000), `node scripts/screenshots.mjs <dir> [quality]`

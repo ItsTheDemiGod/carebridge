@@ -243,3 +243,10 @@ html:lang(ta) .pl-vertical { display: grid; }
 /* Tamil and Hindi glyphs are wider than the "ch" of the Latin face: heading measures in em so words are not broken mid-way */
 html:lang(ta) .section-heading .h1, html:lang(ta) .section-heading .h2, html:lang(hi) .section-heading .h1, html:lang(hi) .section-heading .h2 { max-width: 16em; }
 html:lang(ta) .privacy-band h2, html:lang(hi) .privacy-band h2 { max-width: 14em; }
+
+/* Phase 6d: "Delete my data" beside the Menu button while the header is collapsed (768 px and wider); inside the menu it keeps its full text. */
+.delete-icon { display: none; margin-inline-start: auto; position: relative; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; flex: none; border: 1.5px solid var(--terracotta-ink); border-radius: var(--r-pill); background: transparent; color: var(--terracotta-ink); cursor: pointer; }
+.delete-icon:hover { background: var(--paper-2); }
+.delete-icon::after { content: attr(data-tip); position: absolute; top: calc(100% + 6px); inset-inline-end: 0; z-index: 30; padding: 0.3rem 0.6rem; border-radius: var(--r-sm); background: var(--ink); color: var(--on-dark); font-size: var(--t-small); font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none; }
+.delete-icon:hover::after, .delete-icon:focus-visible::after { opacity: 1; }
+@media (min-width: 48rem) { .site-header[data-layout='menu'] .delete-icon { display: inline-flex; } .site-header[data-layout='menu'] .header-row { gap: var(--s-3); } .site-header[data-layout='menu'] .menu-btn { margin-inline-start: 0; } }

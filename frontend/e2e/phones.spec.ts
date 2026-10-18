@@ -1,5 +1,5 @@
 import { expect, test, type Page } from '@playwright/test'
-import { DOC_ID, PNG, reviewReady, setLangInit } from './flowhelpers'
+import { DOC_ID, PNG, pressDelete, reviewReady, setLangInit } from './flowhelpers'
 
 const LANGS = ['en', 'ta', 'hi'] as const
 const WIDTHS = [320, 360, 390, 768]
@@ -140,8 +140,7 @@ test.describe('phone specifics', () => {
   test('delete dialog fits the screen and its buttons are tappable', async ({ page }) => {
     await reviewReady(page)
     await page.goto('/documents')
-    await page.locator('.menu-btn').click()
-    await page.locator('.delete-btn').first().click()
+    await pressDelete(page)
     const dlg = page.getByRole('dialog')
     await expect(dlg).toBeVisible()
     const b = (await dlg.boundingBox())!

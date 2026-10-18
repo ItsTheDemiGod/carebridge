@@ -103,3 +103,10 @@ See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.
 ## Frontend polish (Phase 6c)
 - Review page, header, icons and photographs: see `docs/DESIGN.md`. Screenshots (mocked): `$env:SHOTS=1; npx playwright test e2e/shots6c.spec.ts`; the live run writes `docs/smoke/phase6c_live.json`.
 - New strings: `data/templates/review_sheet_phase6c_new.csv` (ta/hi drafts for the native reviewers).
+
+## Sample mode and testing page (Phase 6d)
+- Sample (no backend, no model): run the app (`cd frontend; npm run dev`, or `npm run build; npx vite preview --port 4173`) and open `/demo`. Details and the fallback checklist: docs/DEMO.md.
+- Rebuild the demo fixtures (needs the gitignored `data/rendered/` and `data/cache/`; never calls a model): `backend\.venv\Scripts\python scriptsuild_demo_data.py` (`--check` to compare).
+- Rebuild the testing-page figures (committed metrics only): `backend\.venv\Scripts\python scriptsuild_testing_page_data.py` (`--check`). Page: `/how-we-tested-it` (docs/TESTING_PAGE.md).
+- New UI strings: `python scriptsdd_phase6d_templates.py; python scripts\export_ui_strings.py` (review sheet: data/templates/review_sheet_phase6d_new.csv).
+- Live regression (needs Ollama and the backend): `cd frontend; npx playwright test -c playwright.live.config.ts` (`LIVE_REPORT=<file>` and `LIVE_APPEND=1` for single re-runs).

@@ -8,7 +8,7 @@ import { useIsDemo } from '../demo/useDemo'
 import { useFlow } from './FlowProvider'
 
 /** "Delete my data": shown in the header once a session exists. Withdrawing consent is the same action. */
-export function DeleteControl({ labelKey = 'ui.flow.delete.button', className = 'delete-btn' }: { labelKey?: string; className?: string } = {}) {
+export function DeleteControl({ labelKey = 'ui.flow.delete.button', className = 'delete-btn', iconOnly = false }: { labelKey?: string; className?: string; iconOnly?: boolean } = {}) {
   const { t } = useT()
   const flow = useFlow()
   const nav = useNavigate()
@@ -31,10 +31,17 @@ export function DeleteControl({ labelKey = 'ui.flow.delete.button', className = 
   }
   return (
     <>
-      <button type="button" className={className} title={t(labelKey)} onClick={() => setOpen(true)}>
-        <Icon name="trash" size={20} />
-        <span>{t(labelKey)}</span>
-      </button>
+      {iconOnly ? (
+        // 6d: shown beside the Menu button when the header is collapsed (768 px and wider): icon, 44 px target, name and tooltip (hover and focus) from the same string
+        <button type="button" className="delete-icon" aria-label={t(labelKey)} data-tip={t(labelKey)} onClick={() => setOpen(true)}>
+          <Icon name="trash" size={22} />
+        </button>
+      ) : (
+        <button type="button" className={className} title={t(labelKey)} onClick={() => setOpen(true)}>
+          <Icon name="trash" size={20} />
+          <span>{t(labelKey)}</span>
+        </button>
+      )}
       <Dialog open={open} onClose={() => !busy && setOpen(false)} labelledBy={tid}>
         <h2 id={tid} className="h3-like">
           {t('ui.flow.delete.title')}
