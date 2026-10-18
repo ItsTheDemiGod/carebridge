@@ -47,7 +47,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 5 Backend API, SQLite + Fernet, consent, confirmation overlay, schedule, delete-my-data (no UI; live smoke done; ta/hi strings and DPDP checklist unreviewed)
 - [x] 5c Prototype review mode: honest author self-check of the interaction supplement, notice v2, labels (docs/REVIEW_STATUS.md)
 - [x] 6 Web application UI: 6a design system, 6b working flow, 6c polish and review page, 6d sample mode + "How we tested it" + header delete icon (docs/DESIGN.md, DEMO.md, TESTING_PAGE.md)
-- [ ] 7 Evaluation, testing, native-speaker review, usability test
+- [~] 7 Evaluation: [x] 7a harness, protocol, stress set, photo and usability packs, freeze; [ ] 7b one-shot final test run; [ ] 7c real photos, usability sessions, native/pharmacist review
 - [ ] 8 Deployment, demo, report
 - [ ] 9 Stretch: PWA and mobile app
 
@@ -140,9 +140,10 @@ Backend (from `backend/`; venv is `backend/.venv`, built with Python 3.12):
 Frontend (from `frontend/`):
 - `npm install`; `npm run dev` (port 5173, proxies /api to localhost:8000); `npm run build`
 
-Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`; Ollama must be running with qwen3-vl:8b-instruct pulled):
-- Render: `python data\render_documents.py` (about 4 minutes; 240 PNG + 120 PDF)
-- Evaluate (dev): `python -m eval.evaluate --split dev --conditions text,clean,scan,photo,poor [--limit N] [--run-id NAME]`; oracle (no API): add `--oracle`
-- Re-score with normalisation (no model calls): `python -m eval.evaluate --split dev --run-id dev-ollama-v1 --rescore normalised` -> eval/results/dev-ollama-v1-normalised
-- DDInter: `python data\reference\fetch_ddinter.py` then `python data\reference\ddinter_coverage.py`
-- Frontend tests: `npm test` (vitest), `npm run check:contrast`, `npx playwright test` (e2e + axe + perf; needs `npx vite preview --port 4173` or builds it; the privacy test needs the backend on 8000), `node scripts/screenshots.mjs <dir> [quality]`
+Phases 2 to 7 commands (render, evaluate, re-score, DDInter, frontend tests, final test, stress set, usability): see README.md and docs/PHASE7_PLAN.md.
+
+## Phase 7 rules (docs/FINAL_TEST_PROTOCOL.md, PHASE7_PLAN.md)
+- TEST-SPLIT LOCK: the 40 test documents (ids, text, ground truth, renders, cached outputs) are never opened, printed, hashed or listed except by `eval/final_test/run_final.py` at run time in Phase 7b; tests use a synthetic fixture repo. Never use `--final-test-run` outside 7b.
+- ONE-SHOT: one official run `final-test-v1`; no change to code, prompts, rules, thresholds, formulary, templates or supplement after the tag `freeze-pre-test` (`scripts/freeze_manifest.py verify`); a re-run is labelled post-hoc (`--rerun-reason`) and never overwrites. Report whatever the numbers are, with Wilson/bootstrap intervals; never "accurate/reliable/validated".
+- 7a built: protocol, freeze manifest, runner, stress set `data/stress/` (`data/build_stress_set.py`, `eval/stress/run_safety_stress.py`), real-photo pack and scorer, usability pack `docs/usability/` + `scripts/analyse_usability.py`. 7b = the run, 7c = real photos, usability sessions, stress extraction mode.
+

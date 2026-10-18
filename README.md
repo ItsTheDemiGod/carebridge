@@ -110,3 +110,18 @@ See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.
 - Rebuild the testing-page figures (committed metrics only): `backend\.venv\Scripts\python scriptsuild_testing_page_data.py` (`--check`). Page: `/how-we-tested-it` (docs/TESTING_PAGE.md).
 - New UI strings: `python scriptsdd_phase6d_templates.py; python scripts\export_ui_strings.py` (review sheet: data/templates/review_sheet_phase6d_new.csv).
 - Live regression (needs Ollama and the backend): `cd frontend; npx playwright test -c playwright.live.config.ts` (`LIVE_REPORT=<file>` and `LIVE_APPEND=1` for single re-runs).
+
+## Commands for Phases 2 to 4 (moved from CLAUDE.md)
+Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`; Ollama must be running with qwen3-vl:8b-instruct pulled):
+- Render: `python data\render_documents.py` (about 4 minutes; 240 PNG + 120 PDF)
+- Evaluate (dev): `python -m eval.evaluate --split dev --conditions text,clean,scan,photo,poor [--limit N] [--run-id NAME]`; oracle (no API): add `--oracle`
+- Re-score with normalisation (no model calls): `python -m eval.evaluate --split dev --run-id dev-ollama-v1 --rescore normalised` -> eval/results/dev-ollama-v1-normalised
+- DDInter: `python data\reference\fetch_ddinter.py` then `python data\reference\ddinter_coverage.py`
+- Frontend tests: `npm test` (vitest), `npm run check:contrast`, `npx playwright test` (e2e + axe + perf; needs `npx vite preview --port 4173` or builds it; the privacy test needs the backend on 8000), `node scripts/screenshots.mjs <dir> [quality]`
+
+## Phase 7 commands (docs/PHASE7_PLAN.md)
+- Freeze: `backend\.venv\Scripts\python scriptsreeze_manifest.py write|verify`
+- Stress set: `python datauild_stress_set.py [--render]`; ground-truth evaluation (offline): `python -m eval.stress.run_safety_stress --mode gt`
+- Real-photo pack: `python scriptsuild_print_pack.py`; score (7c): `python scripts\score_real_photos.py`
+- Usability: `python scripts\prepare_usability_samples.py`; analysis: `python scriptsnalyse_usability.py --dir <folder>`
+- Final test (7b only): `python -m eval.final_test.run_final --pin`, then `--final-test-run`
