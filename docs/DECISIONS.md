@@ -126,3 +126,10 @@ The how-it-works note now reads "This does not mean they are safe." (en; ta/hi d
 - **Timers**: only polling (stops on terminal states, pauses when hidden) and a 60 s refresh of the "next dose" label; no alarms, no notification permission.
 - **Shell fix**: `useOutlet()` inside AnimatePresence instead of `<Outlet/>` (double mount bug found by the live run).
 - **Live test hygiene**: never rebuild the preview while a run is in flight; the default Playwright config ignores `e2e/live/`.
+
+## Phase 6c decisions
+- Review list order follows the API `review_level` only, never the local checked state, so a card does not jump while the person works; checked cards fold, must-confirm cards are always open (fail closed).
+- Tamil header switches to the menu below 80rem and Tamil always uses the vertical how-it-works flow: Tamil labels are about twice as wide and cut off in a fixed row/SVG.
+- Public routes make no session call: `FlowProvider` boots only on flow paths, so no 401 in the console.
+- Alt text of `ui.photo.pillbox` and `ui.photo.water` corrected after looking at the images (an inaccurate alt is a defect); ta/hi redrafted as draft_unreviewed. Existing ids kept so no code changes.
+- No new dependencies; images via Pillow; ambient layer unchanged (Canvas 2D, CSS transforms).

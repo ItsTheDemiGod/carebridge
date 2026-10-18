@@ -84,3 +84,8 @@ Method: every route screenshotted at 1280 px (en) and read against the rule "sta
 | Documents: state per document | plain text | `Tag` with a state icon (clock, circle-alert, alert, close) |
 | Documents and 404: empty and not-found text | text only | `document` and `search` icons beside the sentence |
 | Delete dialog | trash on the confirm button, alert on failure | unchanged |
+
+## Header, review page, photographs (Phase 6c)
+- Header: row layout from 64rem (80rem Tamil), calm toggle icon-only on the row, delete label from 90rem; below that a single-DOM `#site-menu` disclosure keyed to the route (closes on navigation).
+- Review page: `.review-shell` = sticky summary bar (counts, jump to next card needing a check, save) + photo pane + numbered cards. Statuses attention / checked / no action, always icon + text + colour. Phones: bar fixed at the bottom, photo opens in a full-screen dialog.
+- Photographs: leaves, breakfast, stethoscope, water, linen, clipboard in the hero mosaic (decorative, empty alt); phone, notebook, pillbox on the landing steps; blister under "why you confirm first"; clipboard in the privacy band. Credits (photographer, licence, source link from `photos.manifest.json`) in a footer `<details>`.

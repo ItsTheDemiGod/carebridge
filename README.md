@@ -99,3 +99,7 @@ See `CLAUDE.md` for the project plan and `docs/PROGRESS.md` for status.
 - Mocked end-to-end (no model): `npx playwright test` (builds and previews on 4173; includes axe on 14 flow states in en, ta, hi).
 - Live end-to-end with the real model (Ollama running, model on GPU, `CAREBRIDGE_DATA_KEY` set, backend on 8000): `npm run build; npx vite preview --port 4173 --strictPort` then `npx playwright test -c playwright.live.config.ts`. It uses dev document ds_037 (clean and poor) from `data/rendered/`, writes `docs/smoke/phase6b_live.json` and screenshots under `docs/screenshots/phase6b/`. Do not rebuild while it runs.
 - Strings: edit `scripts/add_phase6b_templates.py` or `scripts/p6b_*.py`, run it and `scripts/export_ui_strings.py`. API types: `node frontend/scripts/gen-api-types.mjs` after `python scripts/export_openapi.py`.
+
+## Frontend polish (Phase 6c)
+- Review page, header, icons and photographs: see `docs/DESIGN.md`. Screenshots (mocked): `$env:SHOTS=1; npx playwright test e2e/shots6c.spec.ts`; the live run writes `docs/smoke/phase6c_live.json`.
+- New strings: `data/templates/review_sheet_phase6c_new.csv` (ta/hi drafts for the native reviewers).
