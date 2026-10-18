@@ -24,7 +24,7 @@ const STATES: State[] = [
   { name: 'schedule', run: async (p) => { await reviewReady(p); await p.goto(`/d/${DOC_ID}/schedule`); await p.locator('.slot').first().waitFor() } },
   { name: 'summary', run: async (p) => { await reviewReady(p); await p.goto(`/d/${DOC_ID}/summary`); await p.locator('.summary-table').waitFor() } },
   { name: 'documents', run: async (p) => { await reviewReady(p); await p.goto('/documents'); await p.locator('.res-lines').waitFor() } },
-  { name: 'delete-dialog', run: async (p) => { await reviewReady(p); await p.goto(`/d/${DOC_ID}/result`); await p.locator('.res-section').first().waitFor(); await p.locator('.delete-btn').click(); await p.getByRole('dialog').waitFor() } },
+  { name: 'delete-dialog', run: async (p) => { await reviewReady(p); await p.goto(`/d/${DOC_ID}/result`); await p.locator('.res-section').first().waitFor(); if (await p.locator('.menu-btn').isVisible()) await p.locator('.menu-btn').click(); await p.locator('.delete-btn').first().click(); await p.getByRole('dialog').waitFor() } },
   { name: 'leave-dialog', run: async (p) => { await reviewReady(p); await p.goto(`/d/${DOC_ID}/review`); await card(p, 1).waitFor(); await card(p, 1).locator('input[type=radio]').nth(3).check(); await card(p, 1).locator('.card-confirm .btn').click(); await p.locator('.page-actions a').last().click(); await p.getByRole('dialog').waitFor() } },
 ]
 

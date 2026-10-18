@@ -245,13 +245,14 @@ html { scroll-padding-top: calc(var(--header-h) + 5.5rem); scroll-padding-bottom
 
 /* Phase 6d: sample (demo) mode. A dashed outline marks "not real" in the same way as the draft tag. */
 .sample-tag { display: inline-flex; align-items: center; margin-inline-start: var(--s-3); padding: 0.15rem 0.7rem; border: 1.5px dashed var(--terracotta-ink); border-radius: var(--r-pill); color: var(--terracotta-ink); font-size: var(--t-label); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }
-.demo-bar { display: grid; grid-template-columns: 1fr auto; gap: var(--s-1) var(--s-5); align-items: start; margin-block-end: var(--s-5); padding: var(--s-4) var(--s-5); border: 1.5px dashed var(--terracotta-ink); border-radius: var(--r-md); background: var(--paper-2); }
-.demo-bar p { margin: 0; }
-.demo-bar-label { display: flex; gap: var(--s-3); align-items: flex-start; font-weight: 600; color: var(--ink); }
-.demo-bar-label svg { flex: none; margin-top: 0.15rem; color: var(--terracotta-ink); }
-.demo-bar-sub { grid-column: 1; padding-inline-start: calc(20px + var(--s-3)); font-size: var(--t-small); }
-.demo-leave { grid-column: 2; grid-row: 1 / span 2; align-self: center; white-space: nowrap; }
-@media (max-width: 40rem) { .demo-bar { grid-template-columns: 1fr; } .demo-leave { grid-column: 1; grid-row: auto; padding-block: var(--s-2); } }
+.demo-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-1) var(--s-5); padding-block: var(--s-2); border-top: 1.5px dashed var(--terracotta-ink); font-size: var(--t-small); }
+.demo-strip p { margin: 0; }
+.demo-strip-label { display: flex; gap: var(--s-2); align-items: flex-start; font-weight: 600; color: var(--ink); }
+.demo-strip-label svg { flex: none; margin-top: 0.15rem; color: var(--terracotta-ink); }
+@media (max-width: 40rem) { .sample-tag { display: none; } }
+.site-header[data-layout='menu'] .sample-tag { margin-inline-end: auto; } /* phones: the strip below the header row already says it; the row has no room */
+.demo-leave { white-space: nowrap; font-weight: 600; }
+.demo-bar { margin: 0 0 var(--s-4); font-size: var(--t-small); }
 .demo-note { display: flex; gap: var(--s-3); align-items: flex-start; margin: var(--s-4) 0; padding: var(--s-3) var(--s-4); border-left: 4px solid var(--terracotta-ink); background: var(--paper-2); border-radius: 0 var(--r-sm) var(--r-sm) 0; font-weight: 600; }
 .demo-note svg { flex: none; margin-top: 0.2rem; color: var(--terracotta-ink); }
 .sample-link { margin-block: var(--s-4) 0; }

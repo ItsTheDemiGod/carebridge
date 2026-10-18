@@ -3,21 +3,26 @@ import { Icon } from '../components/icons'
 import { useT } from '../i18n/I18n'
 import { useIsDemo } from './useDemo'
 
-/** The persistent label on every sample page: what this is, what it does not do, and the way out. */
-export function DemoBar() {
+/** The persistent label of the sample: part of the sticky header, so it stays on screen while the page scrolls. What this is, what it does not do, the way out. */
+export function DemoStrip() {
   const { t } = useT()
   return (
-    <aside className="demo-bar" aria-label={t('ui.demo.tag')}>
-      <p className="demo-bar-label">
-        <Icon name="info" size={20} />
+    <div className="container demo-strip" role="note">
+      <p className="demo-strip-label">
+        <Icon name="info" size={18} />
         <span>{t('ui.demo.label')}</span>
       </p>
-      <p className="demo-bar-sub muted">{t('ui.demo.nothing_to_delete')}</p>
       <Link className="text-link demo-leave" to="/">
         {t('ui.demo.leave')}
       </Link>
-    </aside>
+    </div>
   )
+}
+
+/** Top of every sample page: there is nothing to delete here. */
+export function DemoBar() {
+  const { t } = useT()
+  return <p className="demo-bar muted">{t('ui.demo.nothing_to_delete')}</p>
 }
 
 /** After Save in the sample the result is the recorded one, whatever was chosen. Renders nothing outside the sample. */

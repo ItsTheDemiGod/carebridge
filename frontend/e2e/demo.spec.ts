@@ -51,16 +51,16 @@ for (const lang of LANGS) {
     const { api, all } = trackApi(page)
     const errors = watchErrors(page)
     await page.goto('/demo')
-    await expect(page.locator('.demo-bar')).toContainText(LABEL(lang))
+    await expect(page.locator('.demo-strip')).toContainText(LABEL(lang))
     await expect(page.locator('.sample-tag')).toBeVisible()
     await page.locator('a[href="/demo/review"]').click()
     await page.locator('article.med-card').first().waitFor()
-    await expect(page.locator('.demo-bar')).toContainText(LABEL(lang))
+    await expect(page.locator('.demo-strip')).toContainText(LABEL(lang))
     await expect(page.locator('.delete-btn')).toHaveCount(0) // nothing to delete: the bar says so
     await walkReview(page, lang)
     await page.locator('a[href="/demo/result"]').click()
     await page.locator('.res-section').first().waitFor()
-    await expect(page.locator('.demo-bar')).toContainText(LABEL(lang))
+    await expect(page.locator('.demo-strip')).toContainText(LABEL(lang))
     await expect(page.locator('.demo-note')).toHaveText(NOTE(lang))
     for (const l of LANGS) {
       await page.locator(`[role=tab][lang=${l}]`).click()
@@ -69,11 +69,11 @@ for (const lang of LANGS) {
     }
     await page.locator('a[href="/demo/schedule"]').click()
     await page.locator('.slot').first().waitFor()
-    await expect(page.locator('.demo-bar')).toContainText(LABEL(lang))
+    await expect(page.locator('.demo-strip')).toContainText(LABEL(lang))
     await page.locator('.slot button').first().click() // mark a dose (memory only)
     await page.locator('a[href="/demo/summary"]').click()
     await page.locator('.summary-table').waitFor()
-    await expect(page.locator('.demo-bar')).toContainText(LABEL(lang))
+    await expect(page.locator('.demo-strip')).toContainText(LABEL(lang))
     if (lang !== 'en') await expect(page.locator('.draft-note')).toBeVisible() // the machine-translation note stays on every page in ta/hi
     // nothing was sent to /api, and nothing was stored beyond the two preferences
     expect(api).toEqual([])
@@ -145,6 +145,38 @@ test('leaving the sample forgets what was done in it (marks, saved state) and go
   await expect(page.getByText('0 of 4 medicines checked')).toBeVisible() // fresh again
 })
 
+test('the sample label stays on screen while the page scrolls (sticky header), also at 390 px', async ({ page }) => {
+  trackApi(page)
+  for (const w of [1280, 390]) {
+    await page.setViewportSize({ width: w, height: 800 })
+    await page.goto('/demo/result')
+    await page.locator('.res-section').first().waitFor()
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
+    await expect(page.locator('.demo-strip')).toBeInViewport({ ratio: 1 })
+    await expect(page.getByRole('link', { name: 'Leave the sample' })).toBeInViewport({ ratio: 1 })
+  }
+})
+
+for (const lang of LANGS)
+  for (const w of [320, 390])
+    test(`no sideways page scroll on any sample page in ${lang} at ${w}px`, async ({ browser }) => {
+      const ctx = await browser.newContext({ reducedMotion: 'reduce', viewport: { width: w, height: 800 } })
+      await start(ctx, lang)
+      const page = await ctx.newPage()
+      trackApi(page)
+      const problems: string[] = []
+      for (const path of ROUTES) {
+        await page.goto(path)
+        await page.locator(READY[path]).first().waitFor()
+        await page.evaluate(() => document.fonts.ready)
+        await page.waitForTimeout(250)
+        const over = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+        if (over > 0) problems.push(`${path}: ${over}px`)
+      }
+      expect(problems).toEqual([])
+      await ctx.close()
+    })
+
 test('a sample link is offered on the landing page, the start page and how it works', async ({ page }) => {
   for (const [path, where] of [['/', 'landing'], ['/start', 'start'], ['/how-it-works', 'how']] as const) {
     await page.route('**/api/**', (r) => r.abort())
@@ -165,7 +197,7 @@ test('when the service cannot be reached, /start, /consent and /privacy offer th
       await expect(link.first(), `${mode} ${path}`).toBeVisible()
       await link.first().click()
       await expect(page).toHaveURL(/\/demo$/)
-      await expect(page.locator('.demo-bar')).toBeVisible()
+      await expect(page.locator('.demo-strip')).toBeVisible()
     }
   }
 })

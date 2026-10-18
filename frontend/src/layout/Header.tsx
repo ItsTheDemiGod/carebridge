@@ -2,6 +2,7 @@ import { useRef, useState, useSyncExternalStore } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useMotion } from '../ambient/motion'
 import { Icon } from '../components/icons'
+import { DemoStrip } from '../demo/DemoBar'
 import { useIsDemo } from '../demo/useDemo'
 import { DeleteControl } from '../flow/DeleteControl'
 import { useT } from '../i18n/I18n'
@@ -95,6 +96,7 @@ export function Header() {
           </div>
         </div>
       </div>
+      {demo ? <DemoStrip /> : null}
     </header>
   )
 }
