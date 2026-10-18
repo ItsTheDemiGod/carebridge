@@ -43,9 +43,10 @@ def gt_duplicate_groups(meds: list[MedInput]) -> set[frozenset]:
     return {frozenset(v) for v in by.values() if len(v) > 1}
 
 
-def evaluate(run_id: str, data: I.Data):
+def evaluate(run_id: str, data: I.Data, split: str = "dev"):
+    """split defaults to dev; "test" is used only by eval/final_test/run_final.py (Phase 7b)."""
     manifest = json.loads((REPO / "data" / "manifest.json").read_text(encoding="utf-8"))["documents"]
-    dev = {d["id"] for d in manifest if d["split"] == "dev"}  # the test split is never read
+    dev = {d["id"] for d in manifest if d["split"] == split}  # the test split is read only by the one-shot final run
     raw_dir = REPO / "eval" / "runs" / run_id / "raw"
     files = sorted(raw_dir.glob("*.json"))
     if not files:
