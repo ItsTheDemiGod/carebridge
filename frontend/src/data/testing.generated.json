@@ -1,0 +1,520 @@
+{
+ "_meta": {
+  "script": "scripts/build_testing_page_data.py",
+  "script_version": "1",
+  "sources": [
+   "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "eval/results/phase3e-dev-clean/metrics.json",
+   "eval/results/stress-v1/metrics.json",
+   "eval/results/phase4-dev-with-supplement/metrics.json",
+   "docs/smoke/phase6c_live.json",
+   "data/reference/formulary.json"
+  ],
+  "dates": "commit date of each source file (RUN_DATES)",
+  "note": "Every figure on /how-we-tested-it is read from this file. Synthetic documents only."
+ },
+ "final_test": {
+  "run": false,
+  "source": "eval/test_runs.log",
+  "rule": "the 40-document test split is used once, in Phase 7"
+ },
+ "limits_params": {
+  "formulary": 66,
+  "docs": 20,
+  "conditions": 5
+ },
+ "groups": [
+  "extraction",
+  "invented",
+  "flags",
+  "verification",
+  "language",
+  "safety",
+  "live"
+ ],
+ "entries": [
+  {
+   "id": "ex_f1_raw",
+   "group": "extraction",
+   "label": "ui.testing.f.ex_f1_raw",
+   "value": 0.9833,
+   "unit": "ratio",
+   "source": "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "measures": "ui.testing.m.f1",
+   "data": "ui.testing.d.dev_docs",
+   "params": {
+    "docs": 20,
+    "conditions": 5,
+    "n": 100
+   },
+   "caveat": "ui.testing.c.dev_tuned",
+   "split": "dev",
+   "date": "2026-10-10"
+  },
+  {
+   "id": "ex_f1_norm",
+   "group": "extraction",
+   "label": "ui.testing.f.ex_f1_norm",
+   "value": 0.9976,
+   "unit": "ratio",
+   "source": "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "measures": "ui.testing.m.f1",
+   "data": "ui.testing.d.dev_docs",
+   "params": {
+    "docs": 20,
+    "conditions": 5,
+    "n": 100
+   },
+   "caveat": "ui.testing.c.upper_bound",
+   "split": "dev",
+   "date": "2026-10-10"
+  },
+  {
+   "id": "ex_every_raw",
+   "group": "extraction",
+   "label": "ui.testing.f.ex_every_raw",
+   "value": 0.3075,
+   "unit": "ratio",
+   "source": "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "measures": "ui.testing.m.every_field",
+   "data": "ui.testing.d.dev_docs",
+   "params": {
+    "docs": 20,
+    "conditions": 5,
+    "n": 100
+   },
+   "caveat": "ui.testing.c.dev_tuned",
+   "split": "dev",
+   "date": "2026-10-10"
+  },
+  {
+   "id": "ex_every_norm",
+   "group": "extraction",
+   "label": "ui.testing.f.ex_every_norm",
+   "value": 0.8115,
+   "unit": "ratio",
+   "source": "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "measures": "ui.testing.m.every_field",
+   "data": "ui.testing.d.dev_docs",
+   "params": {
+    "docs": 20,
+    "conditions": 5,
+    "n": 100
+   },
+   "caveat": "ui.testing.c.upper_bound",
+   "split": "dev",
+   "date": "2026-10-10"
+  },
+  {
+   "id": "inv_raw",
+   "group": "invented",
+   "label": "ui.testing.f.inv_raw",
+   "value": 0.2857,
+   "unit": "ratio",
+   "source": "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "measures": "ui.testing.m.invented",
+   "data": "ui.testing.d.dev_docs",
+   "params": {
+    "docs": 20,
+    "conditions": 5,
+    "n": 100
+   },
+   "caveat": "ui.testing.c.dev_tuned",
+   "split": "dev",
+   "date": "2026-10-10"
+  },
+  {
+   "id": "inv_norm",
+   "group": "invented",
+   "label": "ui.testing.f.inv_norm",
+   "value": 0.0563,
+   "unit": "ratio",
+   "source": "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "measures": "ui.testing.m.invented",
+   "data": "ui.testing.d.dev_docs",
+   "params": {
+    "docs": 20,
+    "conditions": 5,
+    "n": 100
+   },
+   "caveat": "ui.testing.c.dev_tuned",
+   "split": "dev",
+   "date": "2026-10-10"
+  },
+  {
+   "id": "fl_must",
+   "group": "flags",
+   "label": "ui.testing.f.fl_must",
+   "value": 0.462,
+   "unit": "ratio",
+   "source": "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "measures": "ui.testing.m.must_confirm",
+   "data": "ui.testing.d.dev_meds",
+   "params": {
+    "docs": 20,
+    "conditions": 5,
+    "n": 100,
+    "meds": 420
+   },
+   "caveat": "ui.testing.c.flags_not_errors",
+   "split": "dev",
+   "date": "2026-10-10",
+   "n": 194,
+   "of": 420
+  },
+  {
+   "id": "fl_name",
+   "group": "flags",
+   "label": "ui.testing.f.fl_name",
+   "value": 0,
+   "unit": "count",
+   "source": "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "measures": "ui.testing.m.name_unflagged",
+   "data": "ui.testing.d.dev_meds",
+   "params": {
+    "docs": 20,
+    "conditions": 5,
+    "n": 100,
+    "meds": 420
+   },
+   "caveat": null,
+   "split": "dev",
+   "date": "2026-10-10",
+   "n": 0,
+   "of": 14
+  },
+  {
+   "id": "fl_identity",
+   "group": "flags",
+   "label": "ui.testing.f.fl_identity",
+   "value": 0,
+   "unit": "count",
+   "source": "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "measures": "ui.testing.m.identity_wrong",
+   "data": "ui.testing.d.dev_meds",
+   "params": {
+    "docs": 20,
+    "conditions": 5,
+    "n": 100,
+    "meds": 420
+   },
+   "caveat": null,
+   "split": "dev",
+   "date": "2026-10-10",
+   "n": 0,
+   "of": 226
+  },
+  {
+   "id": "fl_timing",
+   "group": "flags",
+   "label": "ui.testing.f.fl_timing",
+   "value": 1,
+   "unit": "count",
+   "source": "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
+   "measures": "ui.testing.m.timing_unflagged",
+   "data": "ui.testing.d.dev_meds",
+   "params": {
+    "docs": 20,
+    "conditions": 5,
+    "n": 100,
+    "meds": 420
+   },
+   "caveat": "ui.testing.c.one_timing",
+   "split": "dev",
+   "date": "2026-10-10",
+   "n": 1,
+   "of": 4
+  },
+  {
+   "id": "vf_en_fr",
+   "group": "verification",
+   "label": "ui.testing.f.vf_en_fr",
+   "value": 0.05,
+   "unit": "ratio",
+   "source": "eval/results/stress-v1/metrics.json",
+   "measures": "ui.testing.m.false_reject",
+   "data": "ui.testing.d.stress",
+   "params": {
+    "n": 40,
+    "lang": "en"
+   },
+   "caveat": "ui.testing.c.same_model",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 1,
+   "of": 20
+  },
+  {
+   "id": "vf_en_det",
+   "group": "verification",
+   "label": "ui.testing.f.vf_en_det",
+   "value": 0.95,
+   "unit": "ratio",
+   "source": "eval/results/stress-v1/metrics.json",
+   "measures": "ui.testing.m.detected",
+   "data": "ui.testing.d.stress",
+   "params": {
+    "n": 40,
+    "lang": "en"
+   },
+   "caveat": "ui.testing.c.same_model",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 19,
+   "of": 20
+  },
+  {
+   "id": "vf_ta_fr",
+   "group": "verification",
+   "label": "ui.testing.f.vf_ta_fr",
+   "value": 0.5,
+   "unit": "ratio",
+   "source": "eval/results/stress-v1/metrics.json",
+   "measures": "ui.testing.m.false_reject",
+   "data": "ui.testing.d.stress",
+   "params": {
+    "n": 12,
+    "lang": "ta"
+   },
+   "caveat": "ui.testing.c.small_unchecked",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 3,
+   "of": 6
+  },
+  {
+   "id": "vf_ta_det",
+   "group": "verification",
+   "label": "ui.testing.f.vf_ta_det",
+   "value": 1.0,
+   "unit": "ratio",
+   "source": "eval/results/stress-v1/metrics.json",
+   "measures": "ui.testing.m.detected",
+   "data": "ui.testing.d.stress",
+   "params": {
+    "n": 12,
+    "lang": "ta"
+   },
+   "caveat": "ui.testing.c.small_unchecked",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 6,
+   "of": 6
+  },
+  {
+   "id": "vf_hi_fr",
+   "group": "verification",
+   "label": "ui.testing.f.vf_hi_fr",
+   "value": 0.167,
+   "unit": "ratio",
+   "source": "eval/results/stress-v1/metrics.json",
+   "measures": "ui.testing.m.false_reject",
+   "data": "ui.testing.d.stress",
+   "params": {
+    "n": 12,
+    "lang": "hi"
+   },
+   "caveat": "ui.testing.c.small_unchecked",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 1,
+   "of": 6
+  },
+  {
+   "id": "vf_hi_det",
+   "group": "verification",
+   "label": "ui.testing.f.vf_hi_det",
+   "value": 1.0,
+   "unit": "ratio",
+   "source": "eval/results/stress-v1/metrics.json",
+   "measures": "ui.testing.m.detected",
+   "data": "ui.testing.d.stress",
+   "params": {
+    "n": 12,
+    "lang": "hi"
+   },
+   "caveat": "ui.testing.c.small_unchecked",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 6,
+   "of": 6
+  },
+  {
+   "id": "lg_en",
+   "group": "language",
+   "label": "ui.testing.f.lg_en",
+   "value": 1.0,
+   "unit": "ratio",
+   "source": "eval/results/phase3e-dev-clean/metrics.json",
+   "measures": "ui.testing.m.shown_in_language",
+   "data": "ui.testing.d.dev_lines",
+   "params": {
+    "lines": 135,
+    "docs": 20
+   },
+   "caveat": "ui.testing.c.varies",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 135,
+   "of": 135
+  },
+  {
+   "id": "lg_ta",
+   "group": "language",
+   "label": "ui.testing.f.lg_ta",
+   "value": 0.252,
+   "unit": "ratio",
+   "source": "eval/results/phase3e-dev-clean/metrics.json",
+   "measures": "ui.testing.m.shown_in_language",
+   "data": "ui.testing.d.dev_lines",
+   "params": {
+    "lines": 135,
+    "docs": 20
+   },
+   "caveat": "ui.testing.c.varies",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 34,
+   "of": 135
+  },
+  {
+   "id": "lg_hi",
+   "group": "language",
+   "label": "ui.testing.f.lg_hi",
+   "value": 0.807,
+   "unit": "ratio",
+   "source": "eval/results/phase3e-dev-clean/metrics.json",
+   "measures": "ui.testing.m.shown_in_language",
+   "data": "ui.testing.d.dev_lines",
+   "params": {
+    "lines": 135,
+    "docs": 20
+   },
+   "caveat": "ui.testing.c.varies",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 109,
+   "of": 135
+  },
+  {
+   "id": "sf_silent",
+   "group": "safety",
+   "label": "ui.testing.f.sf_silent",
+   "value": 0,
+   "unit": "count",
+   "source": "eval/results/phase4-dev-with-supplement/metrics.json",
+   "measures": "ui.testing.m.silent_unflagged",
+   "data": "ui.testing.d.dev_pairs",
+   "params": {
+    "pairs": 148,
+    "found": 96,
+    "docs": 20,
+    "conditions": 5
+   },
+   "caveat": "ui.testing.c.partial_db",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 0,
+   "of": 480
+  },
+  {
+   "id": "sf_strict",
+   "group": "safety",
+   "label": "ui.testing.f.sf_strict",
+   "value": 3,
+   "unit": "count",
+   "source": "eval/results/phase4-dev-with-supplement/metrics.json",
+   "measures": "ui.testing.m.silent_strict",
+   "data": "ui.testing.d.dev_pairs",
+   "params": {
+    "pairs": 148,
+    "found": 96,
+    "docs": 20,
+    "conditions": 5
+   },
+   "caveat": "ui.testing.c.strict_covered",
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 3,
+   "of": 480
+  },
+  {
+   "id": "sf_false",
+   "group": "safety",
+   "label": "ui.testing.f.sf_false",
+   "value": 0,
+   "unit": "count",
+   "source": "eval/results/phase4-dev-with-supplement/metrics.json",
+   "measures": "ui.testing.m.false_alarm",
+   "data": "ui.testing.d.dev_pairs",
+   "params": {
+    "pairs": 148,
+    "found": 96,
+    "docs": 20,
+    "conditions": 5
+   },
+   "caveat": null,
+   "split": "dev",
+   "date": "2026-10-16",
+   "n": 0,
+   "of": 740
+  },
+  {
+   "id": "sf_nc_clean",
+   "group": "safety",
+   "label": "ui.testing.f.sf_nc_clean",
+   "value": 0.73,
+   "unit": "ratio",
+   "source": "eval/results/phase4-dev-with-supplement/metrics.json",
+   "measures": "ui.testing.m.not_checked_clean",
+   "data": "ui.testing.d.dev_pairs",
+   "params": {
+    "pairs": 148,
+    "found": 96,
+    "docs": 20,
+    "conditions": 5
+   },
+   "caveat": "ui.testing.c.partial_db",
+   "split": "dev",
+   "date": "2026-10-16"
+  },
+  {
+   "id": "sf_nc_poor",
+   "group": "safety",
+   "label": "ui.testing.f.sf_nc_poor",
+   "value": 0.892,
+   "unit": "ratio",
+   "source": "eval/results/phase4-dev-with-supplement/metrics.json",
+   "measures": "ui.testing.m.not_checked_poor",
+   "data": "ui.testing.d.dev_pairs",
+   "params": {
+    "pairs": 148,
+    "found": 96,
+    "docs": 20,
+    "conditions": 5
+   },
+   "caveat": "ui.testing.c.partial_db",
+   "split": "dev",
+   "date": "2026-10-16"
+  },
+  {
+   "id": "live_flows",
+   "group": "live",
+   "label": "ui.testing.f.live_flows",
+   "value": 3,
+   "unit": "count",
+   "source": "docs/smoke/phase6c_live.json",
+   "measures": "ui.testing.m.live_flows",
+   "data": "ui.testing.d.live",
+   "params": {
+    "n": 3,
+    "doc": "ds_037"
+   },
+   "caveat": "ui.testing.c.live_not_perf",
+   "split": "dev",
+   "date": "2026-10-18",
+   "n": 3,
+   "of": 3
+  }
+ ]
+}

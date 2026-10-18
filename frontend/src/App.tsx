@@ -13,6 +13,7 @@ import { SchedulePage } from './pages/flow/SchedulePage'
 import { StartPage } from './pages/flow/StartPage'
 import { SummaryPage } from './pages/flow/SummaryPage'
 import { UploadPage } from './pages/flow/UploadPage'
+import { TestingPage } from './pages/TestingPage'
 import { NotFoundPage } from './pages/SimplePages'
 
 export const routes: RouteObject[] = [
@@ -36,6 +37,7 @@ export const routes: RouteObject[] = [
       { path: 'demo/summary', element: <SummaryPage /> },
       { path: 'privacy', element: <PrivacyPage /> },
       { path: 'how-it-works', element: <HowItWorksPage /> },
+      { path: 'how-we-tested-it', element: <TestingPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },

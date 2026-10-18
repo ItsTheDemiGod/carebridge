@@ -18,7 +18,7 @@
 /* one row (data-layout="row"): nothing wraps. The calm toggle is an icon button (its words are for screen readers and the tooltip); the delete label shows from 90 rem */
 .site-header[data-layout='row'] .menu-btn { display: none; }
 .site-header[data-layout='row'] .header-menu { display: flex; flex-direction: row; align-items: center; flex: 1; position: static; padding: 0; max-height: none; overflow: visible; background: none; border: 0; box-shadow: none; gap: var(--s-4); min-width: 0; }
-.site-header[data-layout='row'] .site-nav { flex-direction: row; flex: 1; justify-content: center; gap: var(--s-4); white-space: nowrap; }
+.site-header[data-layout='row'] .site-nav { flex-direction: row; flex: 1; justify-content: center; gap: var(--s-3); white-space: nowrap; }
 .site-header[data-layout='row'] .site-nav a { font-size: var(--t-small); border-bottom: 2px solid transparent; }
 .site-header[data-layout='row'] .site-nav a[aria-current='page'] { border-bottom: 2px solid var(--pine); }
 .site-header[data-layout='row'] .nav-start { padding: 0.4rem 1.1rem; font-size: var(--t-small); white-space: nowrap; }

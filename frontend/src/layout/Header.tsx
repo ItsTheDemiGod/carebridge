@@ -47,12 +47,12 @@ function CalmToggle() {
   )
 }
 
-/** One row from 64 rem up (brand, nav, Start, tools). Below that, a menu button opens a disclosure panel holding the same single set of controls. */
+/** One row from 70 rem up (brand, nav, Start, tools). Below that, a menu button opens a disclosure panel holding the same single set of controls. */
 export function Header() {
   const { t, lang } = useT()
   const loc = useLocation()
-  // one row from 64 rem (English, Hindi) or 80 rem (Tamil: its labels are about twice as wide); below that the menu button
-  const row = useMedia(lang === 'ta' ? '(min-width: 80rem)' : '(min-width: 64rem)')
+  // one row from 70 rem (English, Hindi) or 96 rem (Tamil: its labels are about twice as wide); below that the menu button (6d: the testing link made the row wider)
+  const row = useMedia(lang === 'ta' ? '(min-width: 96rem)' : '(min-width: 70rem)')
   const [openKey, setOpenKey] = useState<string | null>(null)
   const open = openKey === loc.key // the panel belongs to the page it was opened on, so any route change closes it
   const btn = useRef<HTMLButtonElement>(null)
@@ -80,6 +80,7 @@ export function Header() {
         <div id="site-menu" className="header-menu" data-open={open}>
           <nav className="site-nav" aria-label={t('ui.nav.label')}>
             <NavLink to="/how-it-works">{t('ui.nav.how_c')}</NavLink>
+            <NavLink to="/how-we-tested-it">{t('ui.nav.testing')}</NavLink>
             <NavLink to="/privacy">{t('ui.nav.privacy')}</NavLink>
             <Link to="/#limits">{t('ui.nav.limits')}</Link>
             <NavLink to="/documents">{t('ui.nav.docs_c')}</NavLink>

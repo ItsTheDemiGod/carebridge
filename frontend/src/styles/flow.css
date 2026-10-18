@@ -256,3 +256,31 @@ html { scroll-padding-top: calc(var(--header-h) + 5.5rem); scroll-padding-bottom
 .demo-note svg { flex: none; margin-top: 0.2rem; color: var(--terracotta-ink); }
 .sample-link { margin-block: var(--s-4) 0; }
 .hero-actions .try-sample { font-size: var(--t-small); }
+
+/* Phase 6d: "How we tested it". A table on wide screens, one card per figure below 48rem (no sideways page scroll). */
+.testing-page .method-list { display: grid; gap: var(--s-3); max-width: var(--measure); margin: var(--s-4) 0 0; }
+.testing-page .method-list p { margin: 0; }
+.tgroup { margin-block-start: var(--s-7); }
+.tgroup .table-wrap { margin-block-start: var(--s-3); }
+.testing-table { border-collapse: collapse; width: 100%; }
+.testing-table th, .testing-table td { text-align: left; padding: var(--s-3); border-bottom: 1px solid var(--line-strong); vertical-align: top; }
+.testing-table thead th { font-size: var(--t-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.testing-table tbody th { font-weight: 600; width: 16%; }
+.testing-table td p { margin: 0 0 var(--s-2); }
+.t-result { white-space: nowrap; }
+.t-result strong { display: block; font-family: var(--font-display); font-size: var(--t-h3); line-height: 1.1; }
+.t-caveat { padding-inline-start: var(--s-3); border-inline-start: 3px solid var(--terracotta-ink); }
+.t-source { display: inline-block; font-family: var(--font-mono); font-size: 0.85rem; overflow-wrap: anywhere; }
+.t-notrun { max-width: var(--measure); padding: var(--s-3) var(--s-4); border: 1.5px dashed var(--line-strong); border-radius: var(--r-sm); font-weight: 600; }
+.tlimits { margin-block: var(--s-8) var(--s-6); }
+.tlimits .notice { border-left-width: 8px; }
+.tlimits .limits-list { margin: var(--s-4) 0 0; padding-inline-start: 1.3em; display: grid; gap: var(--s-3); max-width: 72ch; }
+@media (max-width: 48rem) {
+  .testing-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .testing-table, .testing-table tbody, .testing-table tr, .testing-table th, .testing-table td { display: block; width: 100%; }
+  .testing-table tr { margin-block-end: var(--s-4); padding: var(--s-3) var(--s-4); border: 1px solid var(--line-strong); border-radius: var(--r-md); background: #fffdf8; }
+  .testing-table th, .testing-table td { border: 0; padding: var(--s-2) 0; }
+  .testing-table tbody th { width: 100%; font-size: var(--t-h4); }
+  .testing-table td::before { content: attr(data-label); display: block; font-size: var(--t-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+  .t-result { white-space: normal; }
+}

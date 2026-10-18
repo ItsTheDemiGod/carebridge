@@ -182,8 +182,8 @@ export function LandingPage() {
         <div className="testing-row">
           <p className="label"><span className="label-num">06</span><span>{t('ui.testing.label')}</span></p>
           <h2 id="testing-title" className="h3-like">{t('ui.testing.title')}</h2>
-          <p>{t('ui.testing.body')}</p>
-          <p id="testing-notes"><TextLink to="#testing-notes">{t('ui.testing.link')}</TextLink></p>
+          <p>{t('ui.testing.teaser_body')}</p>
+          <p id="testing-notes"><TextLink to="/how-we-tested-it">{t('ui.testing.teaser_link')}</TextLink></p>
         </div>
       </Container>
     </div>

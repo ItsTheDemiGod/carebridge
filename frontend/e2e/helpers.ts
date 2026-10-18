@@ -1,6 +1,6 @@
 import type { BrowserContext, Page } from '@playwright/test'
 
-export const ROUTES = ['/', '/how-it-works', '/privacy', '/start', '/no-such-page']
+export const ROUTES = ['/', '/how-it-works', '/how-we-tested-it', '/privacy', '/start', '/no-such-page']
 export const LANGS = ['en', 'ta', 'hi'] as const
 
 export async function setLang(ctx: BrowserContext, lang: string) {

@@ -17,7 +17,7 @@ for (const lang of LANGS)
         await page.locator('h1').first().waitFor()
         const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
         expect(overflow, 'horizontal overflow').toBeLessThanOrEqual(0)
-        const desktop = lang === 'ta' ? w >= 1280 : w >= 1024 // Tamil labels are twice as wide: it keeps the menu below 80 rem
+        const desktop = lang === 'ta' ? w >= 1536 : w >= 1120 // Tamil labels are twice as wide; both thresholds moved out when the Testing link was added (6d)
         const menuBtn = page.locator('.menu-btn')
         if (desktop) {
           await expect(menuBtn).toBeHidden()
@@ -59,11 +59,11 @@ test('menu: opens by keyboard, reaches every control, closes on Escape (focus re
   await page.keyboard.press('Enter')
   await expect(btn).toHaveAttribute('aria-expanded', 'true')
   const names: string[] = []
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 10; i++) {
     await page.keyboard.press('Tab')
     names.push(await page.evaluate(() => ((document.activeElement as HTMLElement).textContent ?? '').trim()))
   }
-  for (const n of ['How it works', 'Privacy', 'Limits', 'Your documents', 'Start', 'English', 'Calm mode']) expect(names.join('|')).toContain(n)
+  for (const n of ['How it works', 'Testing', 'Privacy', 'Limits', 'Your documents', 'Start', 'English', 'Calm mode']) expect(names.join('|')).toContain(n)
   await page.keyboard.press('Escape')
   await expect(btn).toBeFocused()
   await btn.click()
