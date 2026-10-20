@@ -4,17 +4,24 @@ Reads ONLY small committed files (listed in SOURCES and in docs/TESTING_PAGE.md)
 (strings carry {placeholders} that are filled from each entry's params). Fails loudly when a file, key or expected property is missing. No model, no network.
 Each entry: id, group, label (string id), value, unit (ratio | count), source (committed file), measures (string id), data (string id) + params, caveat (string id or null),
 split (dev | test), date (the day the source file was committed; the metrics files carry no date of their own, see RUN_DATES), plus optional n/of for "k of n" figures.
-The held-out TEST split has not been run: `final_test.run` is false and the builder refuses to build if eval/test_runs.log exists, so Phase 7 must extend this script
-(add the test figures, set run to true) instead of leaving a stale "not yet run" on the page. --check compares with the committed file (staleness test)."""
+Phase 7b write-up: the held-out TEST figures come from eval/results/final-test-v1/metrics.json (read-only, official run); the builder verifies that folder's
+SHA256SUMS first and fails when a file differs. Each test row carries value, n/of, interval (Wilson or document bootstrap, taken from the file or computed here with
+the same formula), the DEV value of the same measure from the file's own dev_vs_test table when it has one, source, split and run date (from the committed audit copy
+of eval/test_runs.log). Rows are never selected: every primary metric of the protocol is listed (pooled); per-condition detail is named under "also measured".
+--check compares with the committed file (staleness test)."""
 import argparse
+import hashlib
 import json
+import math
 import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 OUT = REPO / "frontend" / "src" / "data" / "testing.generated.json"
-TEST_LOG = REPO / "eval" / "test_runs.log"  # written by any run on the held-out test split (--final-test-run)
-SCRIPT_VERSION = "1"
+FT = "eval/results/final-test-v1"  # the official one-shot run (never edited; SHA256SUMS verified below)
+FT_METRICS = f"{FT}/metrics.json"
+FT_AUDIT_LOG = "eval/results/final-test-v1-audit/test_runs.log"  # committed copy of the gitignored eval/test_runs.log
+SCRIPT_VERSION = "2"
 
 N2 = "eval/results/dev-ollama-v1-normalised-v2/metrics.json"  # Phase 2 raw output re-scored with the rules (2h/2i), 20 dev documents x 5 image conditions
 P3E = "eval/results/phase3e-dev-clean/metrics.json"  # Phase 3e: free-text lines shown per language (dev, clean images)
@@ -22,7 +29,7 @@ STRESS = "eval/results/stress-v1/metrics.json"  # Phase 3e blind stress set (aut
 P4 = "eval/results/phase4-dev-with-supplement/metrics.json"  # Phase 4 safety layer with the author-checked supplement enabled
 LIVE = "docs/smoke/phase6d_live.json"  # Phase 6d: three end-to-end runs of the real app (JSON lines; flow 2 is the first of three traced re-runs, see PROGRESS.md)
 FORMULARY = "data/reference/formulary.json"
-SOURCES = [N2, P3E, STRESS, P4, LIVE, FORMULARY]
+SOURCES = [N2, P3E, STRESS, P4, LIVE, FORMULARY, FT_METRICS]
 # the day each source file was first committed (git log --diff-filter=A); the files themselves hold no date
 RUN_DATES = {N2: "2026-10-10", P3E: "2026-10-16", STRESS: "2026-10-16", P4: "2026-10-16", LIVE: "2026-10-18"}
 
@@ -43,10 +50,128 @@ def dig(obj, *keys, src: str):
     return obj
 
 
+Z95 = 1.959963984540054
+
+
+def wilson(k: int, n: int) -> list[float]:
+    p, d = k / n, 1 + Z95 * Z95 / n
+    c, h = (p + Z95 * Z95 / (2 * n)) / d, Z95 * math.sqrt(p * (1 - p) / n + Z95 * Z95 / (4 * n * n)) / d
+    return [round(max(0.0, c - h), 4), round(min(1.0, c + h), 4)]
+
+
+def verify_final_folder() -> None:
+    """The official results folder must be byte-identical to what was committed (either line ending accepted: a Windows checkout may convert them, and per_document.csv is written with CRLF)."""
+    root = REPO / FT
+    sums = (root / "SHA256SUMS").read_text(encoding="utf-8").splitlines()
+    if not sums:
+        raise SystemExit(f"{FT}/SHA256SUMS is empty")
+    for line in sums:
+        digest, name = line.split(maxsplit=1)
+        name = name.strip().lstrip("*")
+        raw = (root / name).read_bytes()
+        lf = raw.replace(b"\r\n", b"\n")
+        if digest not in {hashlib.sha256(x).hexdigest() for x in (raw, lf, lf.replace(b"\n", b"\r\n"))}:
+            raise SystemExit(f"{FT}/{name} does not match SHA256SUMS: the official results were changed")
+
+
+def run_date() -> str:
+    for line in (REPO / FT_AUDIT_LOG).read_text(encoding="utf-8").splitlines():
+        if "start run_id=final-test-v1 official=True" in line:
+            return line[:10]
+    raise SystemExit(f"{FT_AUDIT_LOG}: no official start entry")
+
+
+def test_section() -> dict:
+    """Every primary metric of docs/FINAL_TEST_PROTOCOL.md, pooled over the five conditions (per-condition detail is in docs/FINAL_TEST_RESULTS.md)."""
+    m = load(FT_METRICS)
+    if not m.get("official") or m.get("split") != "test":
+        raise SystemExit(f"{FT_METRICS}: not the official test run")
+    date = run_date()
+    dev = {r["metric"]: r["dev"] for r in m["dev_vs_test"]}
+    ops, fl, sf, ex = m["operational"]["all"], m["flags"]["all"], m["safety"], m["explanation"]
+    conds = list(m["conditions"])
+    entries: list[dict] = []
+
+    def add(id, group, label, measures, value, unit, n=None, of=None, ci=None, ci_kind=None, dev_key=None, params=None):
+        e = {"id": id, "group": group, "label": label, "params": params or {}, "measures": measures, "value": value, "unit": unit, "source": FT_METRICS, "split": "test", "date": date}
+        if of is not None:
+            e["n"], e["of"] = n, of
+        if ci:
+            e["ci"], e["ci_kind"] = ci, ci_kind
+        if dev_key is not None:
+            dv = dig(dev, dev_key, src=f"{FT_METRICS} dev_vs_test")
+            e["dev"] = dv
+            if ci and unit == "ratio":
+                e["dev_outside"] = bool(dv < ci[0] - 5e-5 or dv > ci[1] + 5e-5)
+        entries.append(e)
+
+    T, MM, FLD = "ui.testing.t.f.", "ui.testing.t.m.", "ui.testing.t.fld."
+    for key, grp, sfx in (("raw", "ex_raw", "raw"), ("normalised", "ex_norm", "norm")):
+        a = dig(m, "extraction", key, "all", src=FT_METRICS)
+        c, iv = a["counts"], a["intervals"]
+        listed, real = c["med_tp"] + c["med_fp"], c["med_tp"] + c["med_fn"]
+
+        def dk(base, key=key):
+            return f"{base}, {key}"
+        add(f"t_prec_{sfx}", grp, T + "precision", MM + "precision", a["med_precision"], "ratio", c["med_tp"], listed, iv["med_precision"], "wilson")
+        add(f"t_rec_{sfx}", grp, T + "recall", MM + "recall", a["med_recall"], "ratio", c["med_tp"], real, iv["med_recall"], "wilson")
+        add(f"t_f1_{sfx}", grp, T + "f1", MM + "f1", a["med_f1"], "ratio", ci=iv["med_f1_bootstrap"], ci_kind="bootstrap", dev_key=dk("medicine F1"))
+        add(f"t_every_{sfx}", grp, T + "every", MM + "every", a["med_fully_correct_rate"], "ratio", c["med_fully_correct"], c["med_tp"], iv["med_fully_correct_rate_bootstrap"], "bootstrap", dk("fully-correct medicine rate"))
+        add(f"t_hall_{sfx}", grp, T + "hall", MM + "hall", a["hallucinated_meds"], "count", a["hallucinated_meds"], listed)
+        add(f"t_inv_{sfx}", grp, T + "inv", MM + "inv", a["invented_value_rate"], "ratio", c["invented"], c["null_total"], iv["invented_value_rate"], "wilson", dk("invented-value rate"))
+        for f in ("strength", "form", "dose", "times_per_day", "timing_label", "is_prn", "duration_days", "brand_name", "generic_name"):
+            dkf = dk(f"{f.replace('_', ' ')} field") if f in ("timing_label", "brand_name") else None
+            add(f"t_{f}_{sfx}", grp, T + "field", MM + "field", a[f"acc_{f}"], "ratio", ci=iv[f"acc_{f}"], ci_kind="wilson", dev_key=dkf, params={"field": FLD + f})
+    meds = fl["medicines"]
+    add("t_must", "flags", T + "must", MM + "must", fl["share_must_confirm"], "ratio", fl["must_confirm"], meds, fl["share_must_confirm_ci"], "wilson", "share of medicines at must_confirm")
+    add("t_nameerr", "flags", T + "nameerr", MM + "nameerr", fl["name_errors_remaining"], "count", fl["name_errors_remaining"], meds)
+    add("t_nameunfl", "flags", T + "nameunfl", MM + "nameunfl", fl["name_errors_unflagged"], "count", fl["name_errors_unflagged"], fl["name_errors_remaining"], dev_key="name errors remaining, unflagged")
+    add("t_timeunfl", "flags", T + "timeunfl", MM + "timeunfl", fl["timing_errors_unflagged"], "count", fl["timing_errors_unflagged"], fl["timing_errors_remaining"])
+    add("t_intready", "flags", T + "intready", MM + "intready", fl["interaction_ready"], "count", fl["interaction_ready"], meds)
+    add("t_schedready", "flags", T + "schedready", MM + "schedready", fl["schedule_ready"], "count", fl["schedule_ready"], meds)
+    add("t_wrongid", "flags", T + "wrongid", MM + "wrongid", fl["wrong_resolved_generic"], "count", fl["wrong_resolved_generic"], fl["interaction_ready"], fl["wrong_resolved_generic_ci"], "wilson", "wrong resolved_generic among interaction_ready")
+    add("t_wrongsched", "flags", T + "wrongsched", MM + "wrongsched", fl["wrong_schedule"], "count", fl["wrong_schedule"], fl["schedule_ready"], fl["wrong_schedule_ci"], "wilson")
+    s = sf["safety"]
+    known = sf["ground_truth"]["statuses"]["interaction_found"] * len(conds)
+    allpairs = sf["ground_truth"]["pairs"] * len(conds)
+    add("t_strict", "safety", T + "strict", MM + "strict", s["silent_misses_strict"], "count", s["silent_misses_strict"], known, dev_key="silent misses, strict")
+    add("t_silent", "safety", T + "silent", MM + "silent", s["silent_misses_not_covered_by_a_flag"], "count", s["silent_misses_not_covered_by_a_flag"], known, dev_key="silent misses not covered by a flag")
+    add("t_false", "safety", T + "false", MM + "false", s["false_alarms"], "count", s["false_alarms"], allpairs, dev_key="false alarms")
+    for c in conds:
+        st = sf["pair_statuses_by_condition"][c]
+        nc, tot = st["not_checked_unconfirmed"] + st["not_checked_no_record"], sum(st.values())
+        if abs(nc / tot - sf["share_not_checked_by_condition"][c]) > 6e-4:
+            raise SystemExit(f"{FT_METRICS}: share not checked ({c}) does not follow from the status counts")
+        add(f"t_nc_{c}", "safety", T + "nc", MM + "nc", sf["share_not_checked_by_condition"][c], "ratio", nc, tot, wilson(nc, tot), "wilson", params={"cond": "ui.testing.t.cond." + c})
+    kinds = {"all": ex["lines"], **ex["lines_by_kind"]}
+    for lang in ("en", "ta", "hi"):
+        for kind, nk in kinds.items():
+            v = ex["verified_share"][lang][kind]
+            k = round(v * nk)
+            if abs(k / nk - v) > 6e-4:
+                raise SystemExit(f"{FT_METRICS}: verified share {lang}/{kind} is not a whole number of {nk} lines")
+            add(f"t_ver_{lang}_{kind}", "expl", T + "ver", MM + "ver", v, "ratio", k, nk, wilson(k, nk), "wilson", params={"lang": "ui.testing.t.lang." + lang, "kind": "ui.testing.t.kind." + kind})
+    for lang in ("en", "ta", "hi"):
+        v = dig(ex, "provenance_share", lang, "all", "shown_in_language", src=FT_METRICS)
+        k = round(v * ex["lines"])
+        add(f"t_shown_{lang}", "expl", T + "shown", MM + "shown", v, "ratio", k, ex["lines"], wilson(k, ex["lines"]), "wilson", f"share of free-text lines shown in {lang}", {"lang": "ui.testing.t.lang." + lang})
+    add("t_att", "ops", T + "att", MM + "att", ops["attempted"], "count")
+    add("t_sco", "ops", T + "sco", MM + "sco", ops["scored"], "count", ops["scored"], ops["attempted"])
+    add("t_skip", "ops", T + "skip", MM + "skip", ops["skipped"], "count", ops["skipped"], ops["attempted"])
+    add("t_med", "ops", T + "med", MM + "med", ops["latency_median_s"], "seconds")
+    add("t_p95", "ops", T + "p95", MM + "p95", ops["latency_p95_s"], "seconds")
+    cr = m["extraction"]["raw"]["all"]["counts"]
+    params = {"docs": m["documents"], "conditions": len(conds), "runs": ops["attempted"], "mentions": cr["med_tp"] + cr["med_fn"], "lines": ex["lines"], "pairs": allpairs, "scored": ops["scored"], "skipped": ops["skipped"], "date": date, "level": 95}
+    gids = ["ex_raw", "ex_norm", "flags", "safety", "expl", "ops"]
+    if {e["group"] for e in entries} != set(gids):
+        raise SystemExit("test groups out of sync")
+    return {"run": True, "date": date, "source": FT_METRICS, "params": params, "groups": gids, "entries": entries,
+            "also": {"doc": "docs/FINAL_TEST_RESULTS.md", "source": FT_METRICS, "per_doc": f"{FT}/per_document.csv"}}
+
+
 def build() -> dict:
     n2, p3e, st, p4, live, form = (load(s) for s in (N2, P3E, STRESS, P4, LIVE, FORMULARY))
-    if TEST_LOG.exists():
-        raise SystemExit("eval/test_runs.log exists: a held-out test run was logged. Extend this script with the test figures (see docstring) before rebuilding.")
+    verify_final_folder()
     entries: list[dict] = []
 
     def add(id, group, value, unit, source, measures, data, params, caveat=None, **extra):
@@ -112,7 +237,8 @@ def build() -> dict:
     return {
         "_meta": {"script": "scripts/build_testing_page_data.py", "script_version": SCRIPT_VERSION, "sources": SOURCES, "dates": "commit date of each source file (RUN_DATES)",
                   "note": "Every figure on /how-we-tested-it is read from this file. Synthetic documents only."},
-        "final_test": {"run": False, "source": "eval/test_runs.log", "rule": "the 40-document test split is used once, in Phase 7"},
+        "final_test": {"run": True, "source": FT_METRICS, "rule": "the 40-document test split was used once (final-test-v1); see docs/FINAL_TEST_RESULTS.md"},
+        "test": test_section(),
         "limits_params": limits,
         "groups": ["extraction", "invented", "flags", "verification", "language", "safety", "live"],
         "entries": entries,

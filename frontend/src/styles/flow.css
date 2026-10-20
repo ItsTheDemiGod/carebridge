@@ -269,6 +269,12 @@ html { scroll-padding-top: calc(var(--header-h) + 5.5rem); scroll-padding-bottom
 .testing-table tbody th { font-weight: 600; width: 16%; }
 .testing-table td p { margin: 0 0 var(--s-2); }
 .t-result { white-space: nowrap; }
+.t-dev { white-space: nowrap; }
+.t-dev strong { display: block; font-family: var(--font-display); font-size: var(--t-h4); line-height: 1.1; }
+.t-ci { display: block; white-space: normal; max-width: 15rem; }
+.t-outside { display: flex; gap: var(--s-1); align-items: center; font-weight: 600; color: var(--terracotta-ink); }
+.t-run, .t-also { max-width: var(--measure); }
+.tdev { margin-block: var(--s-8) var(--s-4); }
 .t-result strong { display: block; font-family: var(--font-display); font-size: var(--t-h3); line-height: 1.1; }
 .t-caveat { padding-inline-start: var(--s-3); border-inline-start: 3px solid var(--terracotta-ink); }
 .t-source { display: inline-block; font-family: var(--font-mono); font-size: 0.85rem; overflow-wrap: anywhere; }
@@ -283,7 +289,7 @@ html { scroll-padding-top: calc(var(--header-h) + 5.5rem); scroll-padding-bottom
   .testing-table th, .testing-table td { border: 0; padding: var(--s-2) 0; }
   .testing-table tbody th { width: 100%; font-size: var(--t-h4); }
   .testing-table td::before { content: attr(data-label); display: block; font-size: var(--t-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
-  .t-result { white-space: normal; }
+  .t-result, .t-dev { white-space: normal; }
 }
 .group-data { display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-4); align-items: baseline; margin: var(--s-2) 0 0; }
 .demo-photo-note { margin: 0 0 var(--s-3); padding-inline-start: var(--s-3); border-inline-start: 3px solid var(--terracotta-ink); }

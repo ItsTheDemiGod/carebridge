@@ -1,4 +1,5 @@
 import { Notice } from '../components/Badges'
+import { Icon } from '../components/icons'
 import { Container, SectionHeading } from '../components/Layout'
 import raw from '../data/testing.generated.json'
 import { fill } from '../flow/serverStrings'
@@ -23,12 +24,34 @@ type Entry = {
   n?: number
   of?: number
 }
-type Data = { final_test: { run: boolean }; limits_params: Record<string, number>; groups: string[]; entries: Entry[] }
+type TestEntry = Omit<Entry, 'unit' | 'params' | 'caveat' | 'split'> & {
+  unit: 'ratio' | 'count' | 'seconds'
+  params: Record<string, string | number>
+  split: 'test'
+  ci?: [number, number]
+  ci_kind?: 'wilson' | 'bootstrap'
+  dev?: number
+  dev_outside?: boolean
+}
+type TestData = {
+  run: boolean
+  date: string
+  params: Record<string, string | number>
+  groups: string[]
+  entries: TestEntry[]
+  also: { doc: string; source: string; per_doc: string }
+}
+type Data = { final_test: { run: boolean }; test: TestData; limits_params: Record<string, number>; groups: string[]; entries: Entry[] }
 const DATA = raw as unknown as Data
-const LIMITS = ['l1', 'l2', 'l3', 'l4', 'l5', 'l6', 'l7'] as const
+const LIMITS = ['l1', 'l2', 'l3', 'l4', 'l5', 'l6', 'l7', 'l8', 'l9', 'l10'] as const
+/** test group -> the string id of its data line */
+const TEST_DATA: Record<string, string> = { ex_raw: 'ex', ex_norm: 'ex', flags: 'flags', safety: 'safety', expl: 'expl', ops: 'ops' }
 
 /** ratios as percentages with one decimal, counts as integers: Western digits in every language (toFixed does not localise) */
 export const show = (e: Pick<Entry, 'value' | 'unit'>) => (e.unit === 'ratio' ? `${(e.value * 100).toFixed(1)}%` : String(e.value))
+
+const pct = (x: number) => `${(x * 100).toFixed(1)}%`
+const signed = (x: number, d: number) => `${x > 0 ? '+' : ''}${x.toFixed(d)}`
 
 export function TestingPage() {
   const { t } = useT()
@@ -47,6 +70,18 @@ export function TestingPage() {
             <p key={k}>{t(`ui.testing.method.${k}`)}</p>
           ))}
         </div>
+      </section>
+
+      {DATA.final_test.run ? <TestSection /> : (
+        <section aria-labelledby="tf-h" className="tgroup">
+          <h2 id="tf-h" className="h3-like">{t('ui.testing.final.title')}</h2>
+          <p className="t-notrun">{t('ui.testing.final.not_run')}</p>
+        </section>
+      )}
+
+      <section aria-labelledby="td-h" className="tdev">
+        <h2 id="td-h" className="h3-like">{t('ui.testing.t.dev_heading')}</h2>
+        <p className="muted">{t('ui.testing.t.dev_note')}</p>
       </section>
 
       {DATA.groups.map((g) => {
@@ -112,12 +147,6 @@ export function TestingPage() {
         )
       })}
 
-      {!DATA.final_test.run ? (
-        <section aria-labelledby="tf-h" className="tgroup">
-          <h2 id="tf-h" className="h3-like">{t('ui.testing.final.title')}</h2>
-          <p className="t-notrun">{t('ui.testing.final.not_run')}</p>
-        </section>
-      ) : null}
 
       <section aria-labelledby="tl-h" className="tlimits">
         <Notice tone="important">
@@ -130,5 +159,86 @@ export function TestingPage() {
         </Notice>
       </section>
     </Container>
+  )
+}
+
+function TestSection() {
+  const { t } = useT()
+  const T = DATA.test
+  const gp = T.params
+  const resolve = (p: Record<string, string | number>) => Object.fromEntries(Object.entries(p).map(([k, v]) => [k, typeof v === 'string' && v.startsWith('ui.') ? t(v) : v]))
+  const value = (e: TestEntry) => (e.unit === 'ratio' ? pct(e.value) : e.unit === 'seconds' ? fill(t('ui.testing.t.seconds'), { v: e.value.toFixed(1) }) : String(e.value))
+  const devText = (e: TestEntry) => (e.unit === 'ratio' ? pct(e.dev as number) : String(e.dev))
+  const diff = (e: TestEntry) => {
+    const d = e.value - (e.dev as number)
+    return e.unit === 'ratio' ? fill(t('ui.testing.t.pts'), { v: signed(d * 100, 1) }) : signed(d, 0)
+  }
+  return (
+    <section aria-labelledby="tf-h" className="tgroup tfinal">
+      <h2 id="tf-h" className="h3-like">{t('ui.testing.final.title')}</h2>
+      <p className="lede">{fill(t('ui.testing.t.intro'), gp)}</p>
+      <p className="t-run">{fill(t('ui.testing.t.run'), gp)}</p>
+      {T.groups.map((g) => {
+        const rows = T.entries.filter((e) => e.group === g)
+        return (
+          <section key={g} aria-labelledby={`tt-${g}`} className="tgroup">
+            <h3 id={`tt-${g}`} className="h3-like">{t(`ui.testing.t.g.${g}`)}</h3>
+            <p className="group-data">
+              <strong>{fill(t(`ui.testing.t.d.${TEST_DATA[g]}`), gp)}</strong>
+              <span className="muted small">{`${t('ui.testing.split.test')} · ${fill(t('ui.testing.t.rundate'), { date: T.date })}`}</span>
+            </p>
+            <div className="table-wrap" tabIndex={0} role="region" aria-labelledby={`tt-${g}`}>
+              <table className="testing-table">
+                <caption className="sr-only">{`${t('ui.testing.table.caption')} ${t(`ui.testing.t.g.${g}`)}`}</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">{t('ui.testing.col.measure')}</th>
+                    <th scope="col">{t('ui.testing.t.col_test')}</th>
+                    <th scope="col">{t('ui.testing.t.col_dev')}</th>
+                    <th scope="col">{t('ui.testing.col.measures')}</th>
+                    <th scope="col">{t('ui.testing.col.source')}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {rows.map((e) => {
+                    const params = { ...gp, ...resolve(e.params) }
+                    return (
+                      <tr key={e.id} data-figure={e.id}>
+                        <th scope="row" data-label={t('ui.testing.col.measure')}>{fill(t(e.label), params)}</th>
+                        <td data-label={t('ui.testing.t.col_test')} className="t-result">
+                          <strong>{value(e)}</strong>
+                          {e.of !== undefined && e.n !== undefined ? <span className="muted small">{fill(t('ui.testing.k_of_n'), { n: e.n, of: e.of })}</span> : null}
+                          {e.ci ? (
+                            <span className="muted small t-ci">{`[${pct(e.ci[0])}, ${pct(e.ci[1])}] ${fill(t(e.ci_kind === 'bootstrap' ? 'ui.testing.t.ci_boot' : 'ui.testing.t.ci_wilson'), gp)}`}</span>
+                          ) : null}
+                        </td>
+                        <td data-label={t('ui.testing.t.col_dev')} className="t-dev">
+                          {e.dev !== undefined ? (
+                            <>
+                              <strong>{devText(e)}</strong>
+                              <span className="muted small">{fill(t('ui.testing.t.diff'), { v: diff(e) })}</span>
+                              {e.dev_outside ? <span className="t-outside small"><Icon name="alert" />{t('ui.testing.t.outside')}</span> : null}
+                            </>
+                          ) : (
+                            <span className="muted small">{t('ui.testing.t.no_dev')}</span>
+                          )}
+                        </td>
+                        <td data-label={t('ui.testing.col.measures')} className="t-measures">
+                          <p>{fill(t(e.measures), gp)}</p>
+                        </td>
+                        <td data-label={t('ui.testing.col.source')}>
+                          <code className="t-source">{e.source}</code>
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )
+      })}
+      <p className="t-also">{fill(t('ui.testing.t.also'), { ...gp, ...T.also })}</p>
+    </section>
   )
 }

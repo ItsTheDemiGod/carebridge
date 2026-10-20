@@ -1,22 +1,1309 @@
 {
  "_meta": {
   "script": "scripts/build_testing_page_data.py",
-  "script_version": "1",
+  "script_version": "2",
   "sources": [
    "eval/results/dev-ollama-v1-normalised-v2/metrics.json",
    "eval/results/phase3e-dev-clean/metrics.json",
    "eval/results/stress-v1/metrics.json",
    "eval/results/phase4-dev-with-supplement/metrics.json",
    "docs/smoke/phase6d_live.json",
-   "data/reference/formulary.json"
+   "data/reference/formulary.json",
+   "eval/results/final-test-v1/metrics.json"
   ],
   "dates": "commit date of each source file (RUN_DATES)",
   "note": "Every figure on /how-we-tested-it is read from this file. Synthetic documents only."
  },
  "final_test": {
-  "run": false,
-  "source": "eval/test_runs.log",
-  "rule": "the 40-document test split is used once, in Phase 7"
+  "run": true,
+  "source": "eval/results/final-test-v1/metrics.json",
+  "rule": "the 40-document test split was used once (final-test-v1); see docs/FINAL_TEST_RESULTS.md"
+ },
+ "test": {
+  "run": true,
+  "date": "2026-10-20",
+  "source": "eval/results/final-test-v1/metrics.json",
+  "params": {
+   "docs": 40,
+   "conditions": 5,
+   "runs": 200,
+   "mentions": 795,
+   "lines": 255,
+   "pairs": 1310,
+   "scored": 200,
+   "skipped": 0,
+   "date": "2026-10-20",
+   "level": 95
+  },
+  "groups": [
+   "ex_raw",
+   "ex_norm",
+   "flags",
+   "safety",
+   "expl",
+   "ops"
+  ],
+  "entries": [
+   {
+    "id": "t_prec_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.precision",
+    "params": {},
+    "measures": "ui.testing.t.m.precision",
+    "value": 0.9836,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 782,
+    "of": 795,
+    "ci": [
+     0.9722,
+     0.9904
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_rec_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.recall",
+    "params": {},
+    "measures": "ui.testing.t.m.recall",
+    "value": 0.9836,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 782,
+    "of": 795,
+    "ci": [
+     0.9722,
+     0.9904
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_f1_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.f1",
+    "params": {},
+    "measures": "ui.testing.t.m.f1",
+    "value": 0.9836,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.972,
+     0.9928
+    ],
+    "ci_kind": "bootstrap",
+    "dev": 0.9833,
+    "dev_outside": false
+   },
+   {
+    "id": "t_every_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.every",
+    "params": {},
+    "measures": "ui.testing.t.m.every",
+    "value": 0.2621,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 205,
+    "of": 782,
+    "ci": [
+     0.2003,
+     0.328
+    ],
+    "ci_kind": "bootstrap",
+    "dev": 0.3075,
+    "dev_outside": false
+   },
+   {
+    "id": "t_hall_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.hall",
+    "params": {},
+    "measures": "ui.testing.t.m.hall",
+    "value": 13,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 13,
+    "of": 795
+   },
+   {
+    "id": "t_inv_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.inv",
+    "params": {},
+    "measures": "ui.testing.t.m.inv",
+    "value": 0.3288,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 359,
+    "of": 1092,
+    "ci": [
+     0.3015,
+     0.3572
+    ],
+    "ci_kind": "wilson",
+    "dev": 0.2857,
+    "dev_outside": true
+   },
+   {
+    "id": "t_strength_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.strength"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9783,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9655,
+     0.9864
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_form_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.form"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9923,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9834,
+     0.9965
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_dose_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.dose"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9552,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9384,
+     0.9676
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_times_per_day_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.times_per_day"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9425,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9239,
+     0.9567
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_timing_label_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.timing_label"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.734,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.702,
+     0.7638
+    ],
+    "ci_kind": "wilson",
+    "dev": 0.7288,
+    "dev_outside": false
+   },
+   {
+    "id": "t_is_prn_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.is_prn"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9885,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9783,
+     0.9939
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_duration_days_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.duration_days"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9706,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9563,
+     0.9803
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_brand_name_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.brand_name"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.4949,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.46,
+     0.5299
+    ],
+    "ci_kind": "wilson",
+    "dev": 0.6731,
+    "dev_outside": true
+   },
+   {
+    "id": "t_generic_name_raw",
+    "group": "ex_raw",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.generic_name"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.7379,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.7059,
+     0.7675
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_prec_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.precision",
+    "params": {},
+    "measures": "ui.testing.t.m.precision",
+    "value": 0.9987,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 794,
+    "of": 795,
+    "ci": [
+     0.9929,
+     0.9998
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_rec_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.recall",
+    "params": {},
+    "measures": "ui.testing.t.m.recall",
+    "value": 0.9987,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 794,
+    "of": 795,
+    "ci": [
+     0.9929,
+     0.9998
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_f1_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.f1",
+    "params": {},
+    "measures": "ui.testing.t.m.f1",
+    "value": 0.9987,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.996,
+     1.0
+    ],
+    "ci_kind": "bootstrap",
+    "dev": 0.9976,
+    "dev_outside": false
+   },
+   {
+    "id": "t_every_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.every",
+    "params": {},
+    "measures": "ui.testing.t.m.every",
+    "value": 0.8879,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 705,
+    "of": 794,
+    "ci": [
+     0.8453,
+     0.9266
+    ],
+    "ci_kind": "bootstrap",
+    "dev": 0.8115,
+    "dev_outside": true
+   },
+   {
+    "id": "t_hall_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.hall",
+    "params": {},
+    "measures": "ui.testing.t.m.hall",
+    "value": 1,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 1,
+    "of": 795
+   },
+   {
+    "id": "t_inv_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.inv",
+    "params": {},
+    "measures": "ui.testing.t.m.inv",
+    "value": 0.0217,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 24,
+    "of": 1108,
+    "ci": [
+     0.0146,
+     0.032
+    ],
+    "ci_kind": "wilson",
+    "dev": 0.0563,
+    "dev_outside": true
+   },
+   {
+    "id": "t_strength_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.strength"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9786,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.966,
+     0.9866
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_form_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.form"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9924,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9836,
+     0.9965
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_dose_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.dose"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9559,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9393,
+     0.9681
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_times_per_day_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.times_per_day"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9887,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9786,
+     0.994
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_timing_label_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.timing_label"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9899,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9802,
+     0.9949
+    ],
+    "ci_kind": "wilson",
+    "dev": 0.9905,
+    "dev_outside": false
+   },
+   {
+    "id": "t_is_prn_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.is_prn"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9912,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9819,
+     0.9957
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_duration_days_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.duration_days"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9975,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9909,
+     0.9993
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_brand_name_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.brand_name"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9786,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.966,
+     0.9866
+    ],
+    "ci_kind": "wilson",
+    "dev": 0.9785,
+    "dev_outside": false
+   },
+   {
+    "id": "t_generic_name_norm",
+    "group": "ex_norm",
+    "label": "ui.testing.t.f.field",
+    "params": {
+     "field": "ui.testing.t.fld.generic_name"
+    },
+    "measures": "ui.testing.t.m.field",
+    "value": 0.9849,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "ci": [
+     0.9738,
+     0.9913
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_must",
+    "group": "flags",
+    "label": "ui.testing.t.f.must",
+    "params": {},
+    "measures": "ui.testing.t.m.must",
+    "value": 0.5107,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 406,
+    "of": 795,
+    "ci": [
+     0.476,
+     0.5453
+    ],
+    "ci_kind": "wilson",
+    "dev": 0.462,
+    "dev_outside": true
+   },
+   {
+    "id": "t_nameerr",
+    "group": "flags",
+    "label": "ui.testing.t.f.nameerr",
+    "params": {},
+    "measures": "ui.testing.t.m.nameerr",
+    "value": 26,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 26,
+    "of": 795
+   },
+   {
+    "id": "t_nameunfl",
+    "group": "flags",
+    "label": "ui.testing.t.f.nameunfl",
+    "params": {},
+    "measures": "ui.testing.t.m.nameunfl",
+    "value": 1,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 1,
+    "of": 26,
+    "dev": 0
+   },
+   {
+    "id": "t_timeunfl",
+    "group": "flags",
+    "label": "ui.testing.t.f.timeunfl",
+    "params": {},
+    "measures": "ui.testing.t.m.timeunfl",
+    "value": 1,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 1,
+    "of": 8
+   },
+   {
+    "id": "t_intready",
+    "group": "flags",
+    "label": "ui.testing.t.f.intready",
+    "params": {},
+    "measures": "ui.testing.t.m.intready",
+    "value": 389,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 389,
+    "of": 795
+   },
+   {
+    "id": "t_schedready",
+    "group": "flags",
+    "label": "ui.testing.t.f.schedready",
+    "params": {},
+    "measures": "ui.testing.t.m.schedready",
+    "value": 285,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 285,
+    "of": 795
+   },
+   {
+    "id": "t_wrongid",
+    "group": "flags",
+    "label": "ui.testing.t.f.wrongid",
+    "params": {},
+    "measures": "ui.testing.t.m.wrongid",
+    "value": 0,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 0,
+    "of": 389,
+    "ci": [
+     0.0,
+     0.0098
+    ],
+    "ci_kind": "wilson",
+    "dev": 0
+   },
+   {
+    "id": "t_wrongsched",
+    "group": "flags",
+    "label": "ui.testing.t.f.wrongsched",
+    "params": {},
+    "measures": "ui.testing.t.m.wrongsched",
+    "value": 2,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 2,
+    "of": 285,
+    "ci": [
+     0.0019,
+     0.0252
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_strict",
+    "group": "safety",
+    "label": "ui.testing.t.f.strict",
+    "params": {},
+    "measures": "ui.testing.t.m.strict",
+    "value": 3,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 3,
+    "of": 975,
+    "dev": 3
+   },
+   {
+    "id": "t_silent",
+    "group": "safety",
+    "label": "ui.testing.t.f.silent",
+    "params": {},
+    "measures": "ui.testing.t.m.silent",
+    "value": 0,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 0,
+    "of": 975,
+    "dev": 0
+   },
+   {
+    "id": "t_false",
+    "group": "safety",
+    "label": "ui.testing.t.f.false",
+    "params": {},
+    "measures": "ui.testing.t.m.false",
+    "value": 0,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 0,
+    "of": 1310,
+    "dev": 0
+   },
+   {
+    "id": "t_nc_text",
+    "group": "safety",
+    "label": "ui.testing.t.f.nc",
+    "params": {
+     "cond": "ui.testing.t.cond.text"
+    },
+    "measures": "ui.testing.t.m.nc",
+    "value": 0.844,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 221,
+    "of": 262,
+    "ci": [
+     0.7946,
+     0.8825
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_nc_clean",
+    "group": "safety",
+    "label": "ui.testing.t.f.nc",
+    "params": {
+     "cond": "ui.testing.t.cond.clean"
+    },
+    "measures": "ui.testing.t.m.nc",
+    "value": 0.79,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 207,
+    "of": 262,
+    "ci": [
+     0.7368,
+     0.835
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_nc_scan",
+    "group": "safety",
+    "label": "ui.testing.t.f.nc",
+    "params": {
+     "cond": "ui.testing.t.cond.scan"
+    },
+    "measures": "ui.testing.t.m.nc",
+    "value": 0.794,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 208,
+    "of": 262,
+    "ci": [
+     0.7408,
+     0.8385
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_nc_photo",
+    "group": "safety",
+    "label": "ui.testing.t.f.nc",
+    "params": {
+     "cond": "ui.testing.t.cond.photo"
+    },
+    "measures": "ui.testing.t.m.nc",
+    "value": 0.851,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 223,
+    "of": 262,
+    "ci": [
+     0.803,
+     0.8892
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_nc_poor",
+    "group": "safety",
+    "label": "ui.testing.t.f.nc",
+    "params": {
+     "cond": "ui.testing.t.cond.poor"
+    },
+    "measures": "ui.testing.t.m.nc",
+    "value": 0.885,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 232,
+    "of": 262,
+    "ci": [
+     0.8412,
+     0.9186
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_en_all",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.en",
+     "kind": "ui.testing.t.kind.all"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.937,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 239,
+    "of": 255,
+    "ci": [
+     0.9005,
+     0.961
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_en_follow_up",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.en",
+     "kind": "ui.testing.t.kind.follow_up"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.976,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 41,
+    "of": 42,
+    "ci": [
+     0.8768,
+     0.9958
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_en_advice",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.en",
+     "kind": "ui.testing.t.kind.advice"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.873,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 103,
+    "of": 118,
+    "ci": [
+     0.8008,
+     0.9214
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_en_warning",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.en",
+     "kind": "ui.testing.t.kind.warning"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 1.0,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 95,
+    "of": 95,
+    "ci": [
+     0.9611,
+     1.0
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_ta_all",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.ta",
+     "kind": "ui.testing.t.kind.all"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.18,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 46,
+    "of": 255,
+    "ci": [
+     0.1381,
+     0.2322
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_ta_follow_up",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.ta",
+     "kind": "ui.testing.t.kind.follow_up"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.286,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 12,
+    "of": 42,
+    "ci": [
+     0.1717,
+     0.4357
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_ta_advice",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.ta",
+     "kind": "ui.testing.t.kind.advice"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.254,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 30,
+    "of": 118,
+    "ci": [
+     0.1843,
+     0.3397
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_ta_warning",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.ta",
+     "kind": "ui.testing.t.kind.warning"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.042,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 4,
+    "of": 95,
+    "ci": [
+     0.0165,
+     0.1033
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_hi_all",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.hi",
+     "kind": "ui.testing.t.kind.all"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.667,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 170,
+    "of": 255,
+    "ci": [
+     0.6067,
+     0.7217
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_hi_follow_up",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.hi",
+     "kind": "ui.testing.t.kind.follow_up"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.762,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 32,
+    "of": 42,
+    "ci": [
+     0.6147,
+     0.8652
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_hi_advice",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.hi",
+     "kind": "ui.testing.t.kind.advice"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.754,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 89,
+    "of": 118,
+    "ci": [
+     0.6694,
+     0.8231
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_ver_hi_warning",
+    "group": "expl",
+    "label": "ui.testing.t.f.ver",
+    "params": {
+     "lang": "ui.testing.t.lang.hi",
+     "kind": "ui.testing.t.kind.warning"
+    },
+    "measures": "ui.testing.t.m.ver",
+    "value": 0.516,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 49,
+    "of": 95,
+    "ci": [
+     0.4167,
+     0.6137
+    ],
+    "ci_kind": "wilson"
+   },
+   {
+    "id": "t_shown_en",
+    "group": "expl",
+    "label": "ui.testing.t.f.shown",
+    "params": {
+     "lang": "ui.testing.t.lang.en"
+    },
+    "measures": "ui.testing.t.m.shown",
+    "value": 0.996,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 254,
+    "of": 255,
+    "ci": [
+     0.9781,
+     0.9993
+    ],
+    "ci_kind": "wilson",
+    "dev": 1.0,
+    "dev_outside": true
+   },
+   {
+    "id": "t_shown_ta",
+    "group": "expl",
+    "label": "ui.testing.t.f.shown",
+    "params": {
+     "lang": "ui.testing.t.lang.ta"
+    },
+    "measures": "ui.testing.t.m.shown",
+    "value": 0.239,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 61,
+    "of": 255,
+    "ci": [
+     0.191,
+     0.2952
+    ],
+    "ci_kind": "wilson",
+    "dev": 0.252,
+    "dev_outside": false
+   },
+   {
+    "id": "t_shown_hi",
+    "group": "expl",
+    "label": "ui.testing.t.f.shown",
+    "params": {
+     "lang": "ui.testing.t.lang.hi"
+    },
+    "measures": "ui.testing.t.m.shown",
+    "value": 0.725,
+    "unit": "ratio",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 185,
+    "of": 255,
+    "ci": [
+     0.6677,
+     0.7766
+    ],
+    "ci_kind": "wilson",
+    "dev": 0.807,
+    "dev_outside": true
+   },
+   {
+    "id": "t_att",
+    "group": "ops",
+    "label": "ui.testing.t.f.att",
+    "params": {},
+    "measures": "ui.testing.t.m.att",
+    "value": 200,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20"
+   },
+   {
+    "id": "t_sco",
+    "group": "ops",
+    "label": "ui.testing.t.f.sco",
+    "params": {},
+    "measures": "ui.testing.t.m.sco",
+    "value": 200,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 200,
+    "of": 200
+   },
+   {
+    "id": "t_skip",
+    "group": "ops",
+    "label": "ui.testing.t.f.skip",
+    "params": {},
+    "measures": "ui.testing.t.m.skip",
+    "value": 0,
+    "unit": "count",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20",
+    "n": 0,
+    "of": 200
+   },
+   {
+    "id": "t_med",
+    "group": "ops",
+    "label": "ui.testing.t.f.med",
+    "params": {},
+    "measures": "ui.testing.t.m.med",
+    "value": 27.6,
+    "unit": "seconds",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20"
+   },
+   {
+    "id": "t_p95",
+    "group": "ops",
+    "label": "ui.testing.t.f.p95",
+    "params": {},
+    "measures": "ui.testing.t.m.p95",
+    "value": 41.8,
+    "unit": "seconds",
+    "source": "eval/results/final-test-v1/metrics.json",
+    "split": "test",
+    "date": "2026-10-20"
+   }
+  ],
+  "also": {
+   "doc": "docs/FINAL_TEST_RESULTS.md",
+   "source": "eval/results/final-test-v1/metrics.json",
+   "per_doc": "eval/results/final-test-v1/per_document.csv"
+  }
  },
  "limits_params": {
   "formulary": 66,
