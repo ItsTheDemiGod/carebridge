@@ -1,0 +1,6 @@
+2026-10-20T02:34:56 final_test.run_final pin (no model call)
+2026-10-20T02:35:39 final_test.run_final invoked final_test_run=True rerun_reason=None
+2026-10-20T02:35:39 final_test.run_final start run_id=final-test-v1 official=True
+2026-10-20T05:00:28 final_test.run_final complete run_id=final-test-v1 skipped=0
+2026-10-20T10:39:44 final_test.run_final invoked final_test_run=True rerun_reason=None
+2026-10-20T10:39:44 final_test.run_final REFUSED: final-test-v1 is complete: a second OFFICIAL run is refused. A labelled post-hoc re-run needs --rerun-reason TEXT
