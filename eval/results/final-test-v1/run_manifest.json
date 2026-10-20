@@ -1,0 +1,27 @@
+{
+ "explanation_documents": 40,
+ "freeze_manifest_sha256": "ab5bcd4c42073be614195015c946a3db124f681ea514773662d46ffbca2af0d1",
+ "head": "199574c0ffb4a128673fd325818b3dfa3de75220",
+ "official": true,
+ "ollama": {
+  "model": "qwen3-vl:8b-instruct",
+  "model_digest": "0533d74300e4f9bc367d675d4e64ffd073d50ff16a2b4096cc2e8a1cf8c96319",
+  "ollama_version": "0.40.5"
+ },
+ "pins": {
+  "model_pin.json": {
+   "model": "qwen3-vl:8b-instruct",
+   "model_digest": "0533d74300e4f9bc367d675d4e64ffd073d50ff16a2b4096cc2e8a1cf8c96319",
+   "ollama_version": "0.40.5"
+  },
+  "test_data_pin.json": {
+   "documents": 40,
+   "sha256": "d41f576eb82619f9a24b5c06a5580e699b443025426631140738079ce58d61dd"
+  }
+ },
+ "rerun_reason": null,
+ "run_id": "final-test-v1",
+ "seconds": 8685.7,
+ "tag": "freeze-pre-test",
+ "tag_commit": "40af4ad7e7ee3ce43a58f95701f5c29b1df9b4f1"
+}

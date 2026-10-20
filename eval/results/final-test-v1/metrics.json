@@ -1,0 +1,2561 @@
+{
+ "run_id": "final-test-v1",
+ "official": true,
+ "split": "test",
+ "documents": 40,
+ "conditions": [
+  "text",
+  "clean",
+  "scan",
+  "photo",
+  "poor"
+ ],
+ "skipped": [],
+ "operational": {
+  "text": {
+   "attempted": 40,
+   "scored": 40,
+   "skipped": 0,
+   "skip_reasons": {},
+   "latency_median_s": 26.5,
+   "latency_p95_s": 40.2
+  },
+  "clean": {
+   "attempted": 40,
+   "scored": 40,
+   "skipped": 0,
+   "skip_reasons": {},
+   "latency_median_s": 28.7,
+   "latency_p95_s": 41.8
+  },
+  "scan": {
+   "attempted": 40,
+   "scored": 40,
+   "skipped": 0,
+   "skip_reasons": {},
+   "latency_median_s": 29.0,
+   "latency_p95_s": 42.2
+  },
+  "photo": {
+   "attempted": 40,
+   "scored": 40,
+   "skipped": 0,
+   "skip_reasons": {},
+   "latency_median_s": 28.9,
+   "latency_p95_s": 42.0
+  },
+  "poor": {
+   "attempted": 40,
+   "scored": 40,
+   "skipped": 0,
+   "skip_reasons": {},
+   "latency_median_s": 29.4,
+   "latency_p95_s": 42.2
+  },
+  "all": {
+   "attempted": 200,
+   "scored": 200,
+   "skipped": 0,
+   "skip_reasons": {},
+   "latency_median_s": 27.6,
+   "latency_p95_s": 41.8
+  }
+ },
+ "extraction": {
+  "raw": {
+   "text": {
+    "docs": 40,
+    "med_precision": 0.9686,
+    "med_recall": 0.9686,
+    "med_f1": 0.9686,
+    "med_fully_correct_rate": 0.2078,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.9048,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 5,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.3568,
+    "quote_exact_rate": 0.9189,
+    "quote_fuzzy_rate": 1.0,
+    "quote_norm_exact_rate": 0.9865,
+    "quote_strict_rate": 0.9865,
+    "quote_fail_digits": 0,
+    "quote_fail_similarity": 4,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9935,
+    "acc_form": 0.987,
+    "acc_dose": 0.9675,
+    "acc_times_per_day": 0.9805,
+    "acc_timing_label": 0.7013,
+    "acc_is_prn": 1.0,
+    "acc_duration_days": 0.987,
+    "acc_brand_name": 0.4416,
+    "acc_generic_name": 0.7532,
+    "exact_ci_brand_name": 0.2273,
+    "exact_ci_generic_name": 0.7532,
+    "invented_strength": {
+     "of_null": 3,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 30,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 77,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 62,
+     "invented": 59,
+     "role_confusion": 59,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_generic_name": {
+     "of_null": 41,
+     "invented": 13,
+     "role_confusion": 6,
+     "in_document": 0,
+     "made_up": 7
+    },
+    "intervals": {
+     "med_precision": [
+      0.9285,
+      0.9865
+     ],
+     "med_recall": [
+      0.9285,
+      0.9865
+     ],
+     "med_f1_bootstrap": [
+      0.9286,
+      1.0
+     ],
+     "med_fully_correct_rate": [
+      0.1512,
+      0.2786
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.1345,
+      0.28
+     ],
+     "invented_value_rate": [
+      0.2955,
+      0.4232
+     ],
+     "acc_strength": [
+      0.9641,
+      0.9989
+     ],
+     "acc_form": [
+      0.9539,
+      0.9964
+     ],
+     "acc_dose": [
+      0.9263,
+      0.9861
+     ],
+     "acc_times_per_day": [
+      0.9443,
+      0.9934
+     ],
+     "acc_timing_label": [
+      0.6248,
+      0.768
+     ],
+     "acc_is_prn": [
+      0.9757,
+      1.0
+     ],
+     "acc_duration_days": [
+      0.9539,
+      0.9964
+     ],
+     "acc_brand_name": [
+      0.3655,
+      0.5205
+     ],
+     "acc_generic_name": [
+      0.6795,
+      0.8146
+     ]
+    },
+    "counts": {
+     "med_tp": 154,
+     "med_fp": 5,
+     "med_fn": 5,
+     "med_fully_correct": 32,
+     "invented": 76,
+     "null_total": 213,
+     "documents": 40
+    }
+   },
+   "clean": {
+    "docs": 40,
+    "med_precision": 1.0,
+    "med_recall": 1.0,
+    "med_f1": 1.0,
+    "med_fully_correct_rate": 0.3208,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.9048,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 0,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.3018,
+    "quote_exact_rate": 0.8986,
+    "quote_fuzzy_rate": 1.0,
+    "quote_norm_exact_rate": 0.9865,
+    "quote_strict_rate": 0.9932,
+    "quote_fail_digits": 0,
+    "quote_fail_similarity": 2,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9874,
+    "acc_form": 0.9937,
+    "acc_dose": 0.9434,
+    "acc_times_per_day": 0.9371,
+    "acc_timing_label": 0.7736,
+    "acc_is_prn": 0.9811,
+    "acc_duration_days": 0.9686,
+    "acc_brand_name": 0.5409,
+    "acc_generic_name": 0.761,
+    "exact_ci_brand_name": 0.4906,
+    "exact_ci_generic_name": 0.761,
+    "invented_strength": {
+     "of_null": 3,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 33,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 80,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 63,
+     "invented": 55,
+     "role_confusion": 55,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_generic_name": {
+     "of_null": 43,
+     "invented": 8,
+     "role_confusion": 6,
+     "in_document": 0,
+     "made_up": 2
+    },
+    "intervals": {
+     "med_precision": [
+      0.9764,
+      1.0
+     ],
+     "med_recall": [
+      0.9764,
+      1.0
+     ],
+     "med_f1_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "med_fully_correct_rate": [
+      0.2532,
+      0.3968
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.234,
+      0.4085
+     ],
+     "invented_value_rate": [
+      0.2452,
+      0.3651
+     ],
+     "acc_strength": [
+      0.9553,
+      0.9965
+     ],
+     "acc_form": [
+      0.9652,
+      0.9989
+     ],
+     "acc_dose": [
+      0.8959,
+      0.9699
+     ],
+     "acc_times_per_day": [
+      0.8881,
+      0.9655
+     ],
+     "acc_timing_label": [
+      0.7025,
+      0.8317
+     ],
+     "acc_is_prn": [
+      0.946,
+      0.9936
+     ],
+     "acc_duration_days": [
+      0.9285,
+      0.9865
+     ],
+     "acc_brand_name": [
+      0.4634,
+      0.6165
+     ],
+     "acc_generic_name": [
+      0.6891,
+      0.8206
+     ]
+    },
+    "counts": {
+     "med_tp": 159,
+     "med_fp": 0,
+     "med_fn": 0,
+     "med_fully_correct": 51,
+     "invented": 67,
+     "null_total": 222,
+     "documents": 40
+    }
+   },
+   "scan": {
+    "docs": 40,
+    "med_precision": 0.9874,
+    "med_recall": 0.9874,
+    "med_f1": 0.9874,
+    "med_fully_correct_rate": 0.3057,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.8095,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 2,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.2982,
+    "quote_exact_rate": 0.8311,
+    "quote_fuzzy_rate": 0.9966,
+    "quote_norm_exact_rate": 0.9392,
+    "quote_strict_rate": 0.9561,
+    "quote_fail_digits": 2,
+    "quote_fail_similarity": 11,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9873,
+    "acc_form": 0.9873,
+    "acc_dose": 0.949,
+    "acc_times_per_day": 0.9236,
+    "acc_timing_label": 0.758,
+    "acc_is_prn": 0.9873,
+    "acc_duration_days": 0.9682,
+    "acc_brand_name": 0.5096,
+    "acc_generic_name": 0.7516,
+    "exact_ci_brand_name": 0.4586,
+    "exact_ci_generic_name": 0.7516,
+    "invented_strength": {
+     "of_null": 3,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 32,
+     "invented": 4,
+     "role_confusion": 0,
+     "in_document": 4,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 79,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 63,
+     "invented": 53,
+     "role_confusion": 50,
+     "in_document": 1,
+     "made_up": 2
+    },
+    "invented_generic_name": {
+     "of_null": 41,
+     "invented": 7,
+     "role_confusion": 5,
+     "in_document": 1,
+     "made_up": 1
+    },
+    "intervals": {
+     "med_precision": [
+      0.9553,
+      0.9965
+     ],
+     "med_recall": [
+      0.9553,
+      0.9965
+     ],
+     "med_f1_bootstrap": [
+      0.9679,
+      1.0
+     ],
+     "med_fully_correct_rate": [
+      0.239,
+      0.3817
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.2148,
+      0.4024
+     ],
+     "invented_value_rate": [
+      0.2414,
+      0.362
+     ],
+     "acc_strength": [
+      0.9547,
+      0.9965
+     ],
+     "acc_form": [
+      0.9547,
+      0.9965
+     ],
+     "acc_dose": [
+      0.9027,
+      0.974
+     ],
+     "acc_times_per_day": [
+      0.8712,
+      0.9557
+     ],
+     "acc_timing_label": [
+      0.6853,
+      0.8183
+     ],
+     "acc_is_prn": [
+      0.9547,
+      0.9965
+     ],
+     "acc_duration_days": [
+      0.9276,
+      0.9863
+     ],
+     "acc_brand_name": [
+      0.4321,
+      0.5866
+     ],
+     "acc_generic_name": [
+      0.6785,
+      0.8126
+     ]
+    },
+    "counts": {
+     "med_tp": 157,
+     "med_fp": 2,
+     "med_fn": 2,
+     "med_fully_correct": 48,
+     "invented": 65,
+     "null_total": 218,
+     "documents": 40
+    }
+   },
+   "photo": {
+    "docs": 40,
+    "med_precision": 0.9686,
+    "med_recall": 0.9686,
+    "med_f1": 0.9686,
+    "med_fully_correct_rate": 0.2468,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.8095,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 5,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.3486,
+    "quote_exact_rate": 0.8074,
+    "quote_fuzzy_rate": 1.0,
+    "quote_norm_exact_rate": 0.9223,
+    "quote_strict_rate": 0.9426,
+    "quote_fail_digits": 4,
+    "quote_fail_similarity": 13,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9675,
+    "acc_form": 0.9935,
+    "acc_dose": 0.961,
+    "acc_times_per_day": 0.9416,
+    "acc_timing_label": 0.7013,
+    "acc_is_prn": 0.987,
+    "acc_duration_days": 0.9675,
+    "acc_brand_name": 0.4935,
+    "acc_generic_name": 0.6948,
+    "exact_ci_brand_name": 0.4156,
+    "exact_ci_generic_name": 0.6948,
+    "invented_strength": {
+     "of_null": 3,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 33,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 77,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 62,
+     "invented": 55,
+     "role_confusion": 53,
+     "in_document": 0,
+     "made_up": 2
+    },
+    "invented_generic_name": {
+     "of_null": 43,
+     "invented": 17,
+     "role_confusion": 11,
+     "in_document": 0,
+     "made_up": 6
+    },
+    "intervals": {
+     "med_precision": [
+      0.9285,
+      0.9865
+     ],
+     "med_recall": [
+      0.9285,
+      0.9865
+     ],
+     "med_f1_bootstrap": [
+      0.9345,
+      0.9939
+     ],
+     "med_fully_correct_rate": [
+      0.1854,
+      0.3205
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.1634,
+      0.3356
+     ],
+     "invented_value_rate": [
+      0.2885,
+      0.414
+     ],
+     "acc_strength": [
+      0.9263,
+      0.9861
+     ],
+     "acc_form": [
+      0.9641,
+      0.9989
+     ],
+     "acc_dose": [
+      0.9176,
+      0.982
+     ],
+     "acc_times_per_day": [
+      0.8927,
+      0.969
+     ],
+     "acc_timing_label": [
+      0.6248,
+      0.768
+     ],
+     "acc_is_prn": [
+      0.9539,
+      0.9964
+     ],
+     "acc_duration_days": [
+      0.9263,
+      0.9861
+     ],
+     "acc_brand_name": [
+      0.4157,
+      0.5717
+     ],
+     "acc_generic_name": [
+      0.6181,
+      0.7621
+     ]
+    },
+    "counts": {
+     "med_tp": 154,
+     "med_fp": 5,
+     "med_fn": 5,
+     "med_fully_correct": 38,
+     "invented": 76,
+     "null_total": 218,
+     "documents": 40
+    }
+   },
+   "poor": {
+    "docs": 40,
+    "med_precision": 0.9937,
+    "med_recall": 0.9937,
+    "med_f1": 0.9937,
+    "med_fully_correct_rate": 0.2278,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.7857,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 1,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.3394,
+    "quote_exact_rate": 0.7601,
+    "quote_fuzzy_rate": 0.9899,
+    "quote_norm_exact_rate": 0.8851,
+    "quote_strict_rate": 0.9426,
+    "quote_fail_digits": 3,
+    "quote_fail_similarity": 14,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9557,
+    "acc_form": 1.0,
+    "acc_dose": 0.9557,
+    "acc_times_per_day": 0.9304,
+    "acc_timing_label": 0.7342,
+    "acc_is_prn": 0.9873,
+    "acc_duration_days": 0.962,
+    "acc_brand_name": 0.4873,
+    "acc_generic_name": 0.7278,
+    "exact_ci_brand_name": 0.4177,
+    "exact_ci_generic_name": 0.7278,
+    "invented_strength": {
+     "of_null": 3,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 33,
+     "invented": 3,
+     "role_confusion": 0,
+     "in_document": 3,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 79,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 63,
+     "invented": 54,
+     "role_confusion": 52,
+     "in_document": 0,
+     "made_up": 2
+    },
+    "invented_generic_name": {
+     "of_null": 43,
+     "invented": 17,
+     "role_confusion": 12,
+     "in_document": 1,
+     "made_up": 4
+    },
+    "intervals": {
+     "med_precision": [
+      0.9652,
+      0.9989
+     ],
+     "med_recall": [
+      0.9652,
+      0.9989
+     ],
+     "med_f1_bootstrap": [
+      0.98,
+      1.0
+     ],
+     "med_fully_correct_rate": [
+      0.1694,
+      0.2993
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.1538,
+      0.3141
+     ],
+     "invented_value_rate": [
+      0.2802,
+      0.4041
+     ],
+     "acc_strength": [
+      0.9114,
+      0.9784
+     ],
+     "acc_form": [
+      0.9763,
+      1.0
+     ],
+     "acc_dose": [
+      0.9114,
+      0.9784
+     ],
+     "acc_times_per_day": [
+      0.8796,
+      0.9607
+     ],
+     "acc_timing_label": [
+      0.6603,
+      0.7969
+     ],
+     "acc_is_prn": [
+      0.955,
+      0.9965
+     ],
+     "acc_duration_days": [
+      0.9196,
+      0.9825
+     ],
+     "acc_brand_name": [
+      0.4106,
+      0.5647
+     ],
+     "acc_generic_name": [
+      0.6537,
+      0.7912
+     ]
+    },
+    "counts": {
+     "med_tp": 158,
+     "med_fp": 1,
+     "med_fn": 1,
+     "med_fully_correct": 36,
+     "invented": 75,
+     "null_total": 221,
+     "documents": 40
+    }
+   },
+   "all": {
+    "docs": 200,
+    "med_precision": 0.9836,
+    "med_recall": 0.9836,
+    "med_f1": 0.9836,
+    "med_fully_correct_rate": 0.2621,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.8429,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 13,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.3288,
+    "quote_exact_rate": 0.8432,
+    "quote_fuzzy_rate": 0.9973,
+    "quote_norm_exact_rate": 0.9439,
+    "quote_strict_rate": 0.9642,
+    "quote_fail_digits": 9,
+    "quote_fail_similarity": 44,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9783,
+    "acc_form": 0.9923,
+    "acc_dose": 0.9552,
+    "acc_times_per_day": 0.9425,
+    "acc_timing_label": 0.734,
+    "acc_is_prn": 0.9885,
+    "acc_duration_days": 0.9706,
+    "acc_brand_name": 0.4949,
+    "acc_generic_name": 0.7379,
+    "exact_ci_brand_name": 0.4028,
+    "exact_ci_generic_name": 0.7379,
+    "invented_strength": {
+     "of_null": 15,
+     "invented": 7,
+     "role_confusion": 0,
+     "in_document": 7,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 161,
+     "invented": 12,
+     "role_confusion": 0,
+     "in_document": 12,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 392,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 313,
+     "invented": 276,
+     "role_confusion": 269,
+     "in_document": 1,
+     "made_up": 6
+    },
+    "invented_generic_name": {
+     "of_null": 211,
+     "invented": 62,
+     "role_confusion": 40,
+     "in_document": 2,
+     "made_up": 20
+    },
+    "intervals": {
+     "med_precision": [
+      0.9722,
+      0.9904
+     ],
+     "med_recall": [
+      0.9722,
+      0.9904
+     ],
+     "med_f1_bootstrap": [
+      0.972,
+      0.9928
+     ],
+     "med_fully_correct_rate": [
+      0.2325,
+      0.2941
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.2003,
+      0.328
+     ],
+     "invented_value_rate": [
+      0.3015,
+      0.3572
+     ],
+     "acc_strength": [
+      0.9655,
+      0.9864
+     ],
+     "acc_form": [
+      0.9834,
+      0.9965
+     ],
+     "acc_dose": [
+      0.9384,
+      0.9676
+     ],
+     "acc_times_per_day": [
+      0.9239,
+      0.9567
+     ],
+     "acc_timing_label": [
+      0.702,
+      0.7638
+     ],
+     "acc_is_prn": [
+      0.9783,
+      0.9939
+     ],
+     "acc_duration_days": [
+      0.9563,
+      0.9803
+     ],
+     "acc_brand_name": [
+      0.46,
+      0.5299
+     ],
+     "acc_generic_name": [
+      0.7059,
+      0.7675
+     ]
+    },
+    "counts": {
+     "med_tp": 782,
+     "med_fp": 13,
+     "med_fn": 13,
+     "med_fully_correct": 205,
+     "invented": 359,
+     "null_total": 1092,
+     "documents": 40
+    }
+   }
+  },
+  "normalised": {
+   "text": {
+    "docs": 40,
+    "med_precision": 1.0,
+    "med_recall": 1.0,
+    "med_f1": 1.0,
+    "med_fully_correct_rate": 0.9371,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.9048,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 0,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.0225,
+    "quote_exact_rate": 0.9189,
+    "quote_fuzzy_rate": 1.0,
+    "quote_norm_exact_rate": 0.9865,
+    "quote_strict_rate": 0.9865,
+    "quote_fail_digits": 0,
+    "quote_fail_similarity": 4,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9937,
+    "acc_form": 0.9874,
+    "acc_dose": 0.9686,
+    "acc_times_per_day": 0.9937,
+    "acc_timing_label": 0.9937,
+    "acc_is_prn": 1.0,
+    "acc_duration_days": 0.9874,
+    "acc_brand_name": 0.9937,
+    "acc_generic_name": 1.0,
+    "exact_ci_brand_name": 0.9937,
+    "exact_ci_generic_name": 1.0,
+    "invented_strength": {
+     "of_null": 3,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 33,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 80,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 63,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_generic_name": {
+     "of_null": 43,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "intervals": {
+     "med_precision": [
+      0.9764,
+      1.0
+     ],
+     "med_recall": [
+      0.9764,
+      1.0
+     ],
+     "med_f1_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "med_fully_correct_rate": [
+      0.8881,
+      0.9655
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.8947,
+      0.9744
+     ],
+     "invented_value_rate": [
+      0.0097,
+      0.0516
+     ],
+     "acc_strength": [
+      0.9652,
+      0.9989
+     ],
+     "acc_form": [
+      0.9553,
+      0.9965
+     ],
+     "acc_dose": [
+      0.9285,
+      0.9865
+     ],
+     "acc_times_per_day": [
+      0.9652,
+      0.9989
+     ],
+     "acc_timing_label": [
+      0.9652,
+      0.9989
+     ],
+     "acc_is_prn": [
+      0.9764,
+      1.0
+     ],
+     "acc_duration_days": [
+      0.9553,
+      0.9965
+     ],
+     "acc_brand_name": [
+      0.9652,
+      0.9989
+     ],
+     "acc_generic_name": [
+      0.9764,
+      1.0
+     ]
+    },
+    "counts": {
+     "med_tp": 159,
+     "med_fp": 0,
+     "med_fn": 0,
+     "med_fully_correct": 149,
+     "invented": 5,
+     "null_total": 222,
+     "documents": 40
+    }
+   },
+   "clean": {
+    "docs": 40,
+    "med_precision": 1.0,
+    "med_recall": 1.0,
+    "med_f1": 1.0,
+    "med_fully_correct_rate": 0.8994,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.9048,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 0,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.0135,
+    "quote_exact_rate": 0.8986,
+    "quote_fuzzy_rate": 1.0,
+    "quote_norm_exact_rate": 0.9865,
+    "quote_strict_rate": 0.9932,
+    "quote_fail_digits": 0,
+    "quote_fail_similarity": 2,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9874,
+    "acc_form": 0.9937,
+    "acc_dose": 0.9434,
+    "acc_times_per_day": 0.9937,
+    "acc_timing_label": 0.9874,
+    "acc_is_prn": 0.9874,
+    "acc_duration_days": 1.0,
+    "acc_brand_name": 0.9937,
+    "acc_generic_name": 0.9937,
+    "exact_ci_brand_name": 0.9937,
+    "exact_ci_generic_name": 0.9937,
+    "invented_strength": {
+     "of_null": 3,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 33,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 80,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 63,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_generic_name": {
+     "of_null": 43,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "intervals": {
+     "med_precision": [
+      0.9764,
+      1.0
+     ],
+     "med_recall": [
+      0.9764,
+      1.0
+     ],
+     "med_f1_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "med_fully_correct_rate": [
+      0.8428,
+      0.9371
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.8389,
+      0.9497
+     ],
+     "invented_value_rate": [
+      0.0046,
+      0.039
+     ],
+     "acc_strength": [
+      0.9553,
+      0.9965
+     ],
+     "acc_form": [
+      0.9652,
+      0.9989
+     ],
+     "acc_dose": [
+      0.8959,
+      0.9699
+     ],
+     "acc_times_per_day": [
+      0.9652,
+      0.9989
+     ],
+     "acc_timing_label": [
+      0.9553,
+      0.9965
+     ],
+     "acc_is_prn": [
+      0.9553,
+      0.9965
+     ],
+     "acc_duration_days": [
+      0.9764,
+      1.0
+     ],
+     "acc_brand_name": [
+      0.9652,
+      0.9989
+     ],
+     "acc_generic_name": [
+      0.9652,
+      0.9989
+     ]
+    },
+    "counts": {
+     "med_tp": 159,
+     "med_fp": 0,
+     "med_fn": 0,
+     "med_fully_correct": 143,
+     "invented": 3,
+     "null_total": 222,
+     "documents": 40
+    }
+   },
+   "scan": {
+    "docs": 40,
+    "med_precision": 1.0,
+    "med_recall": 1.0,
+    "med_f1": 1.0,
+    "med_fully_correct_rate": 0.8868,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.8095,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 0,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.018,
+    "quote_exact_rate": 0.8311,
+    "quote_fuzzy_rate": 0.9966,
+    "quote_norm_exact_rate": 0.9392,
+    "quote_strict_rate": 0.9561,
+    "quote_fail_digits": 2,
+    "quote_fail_similarity": 11,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9874,
+    "acc_form": 0.9874,
+    "acc_dose": 0.9497,
+    "acc_times_per_day": 0.9874,
+    "acc_timing_label": 0.9874,
+    "acc_is_prn": 0.9874,
+    "acc_duration_days": 1.0,
+    "acc_brand_name": 0.9811,
+    "acc_generic_name": 0.9874,
+    "exact_ci_brand_name": 0.9811,
+    "exact_ci_generic_name": 0.9874,
+    "invented_strength": {
+     "of_null": 3,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 33,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 80,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 63,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 1
+    },
+    "invented_generic_name": {
+     "of_null": 43,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "intervals": {
+     "med_precision": [
+      0.9764,
+      1.0
+     ],
+     "med_recall": [
+      0.9764,
+      1.0
+     ],
+     "med_f1_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "med_fully_correct_rate": [
+      0.8282,
+      0.9272
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.8205,
+      0.9401
+     ],
+     "invented_value_rate": [
+      0.007,
+      0.0454
+     ],
+     "acc_strength": [
+      0.9553,
+      0.9965
+     ],
+     "acc_form": [
+      0.9553,
+      0.9965
+     ],
+     "acc_dose": [
+      0.9039,
+      0.9743
+     ],
+     "acc_times_per_day": [
+      0.9553,
+      0.9965
+     ],
+     "acc_timing_label": [
+      0.9553,
+      0.9965
+     ],
+     "acc_is_prn": [
+      0.9553,
+      0.9965
+     ],
+     "acc_duration_days": [
+      0.9764,
+      1.0
+     ],
+     "acc_brand_name": [
+      0.946,
+      0.9936
+     ],
+     "acc_generic_name": [
+      0.9553,
+      0.9965
+     ]
+    },
+    "counts": {
+     "med_tp": 159,
+     "med_fp": 0,
+     "med_fn": 0,
+     "med_fully_correct": 141,
+     "invented": 4,
+     "null_total": 222,
+     "documents": 40
+    }
+   },
+   "photo": {
+    "docs": 40,
+    "med_precision": 0.9937,
+    "med_recall": 0.9937,
+    "med_f1": 0.9937,
+    "med_fully_correct_rate": 0.8797,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.8095,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 1,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.0227,
+    "quote_exact_rate": 0.8074,
+    "quote_fuzzy_rate": 1.0,
+    "quote_norm_exact_rate": 0.9223,
+    "quote_strict_rate": 0.9426,
+    "quote_fail_digits": 4,
+    "quote_fail_similarity": 13,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9684,
+    "acc_form": 0.9937,
+    "acc_dose": 0.962,
+    "acc_times_per_day": 0.9873,
+    "acc_timing_label": 0.9873,
+    "acc_is_prn": 0.9873,
+    "acc_duration_days": 1.0,
+    "acc_brand_name": 0.9747,
+    "acc_generic_name": 0.981,
+    "exact_ci_brand_name": 0.9747,
+    "exact_ci_generic_name": 0.981,
+    "invented_strength": {
+     "of_null": 3,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 33,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 79,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 62,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 1
+    },
+    "invented_generic_name": {
+     "of_null": 43,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 1
+    },
+    "intervals": {
+     "med_precision": [
+      0.9652,
+      0.9989
+     ],
+     "med_recall": [
+      0.9652,
+      0.9989
+     ],
+     "med_f1_bootstrap": [
+      0.98,
+      1.0
+     ],
+     "med_fully_correct_rate": [
+      0.8198,
+      0.9216
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.8187,
+      0.9317
+     ],
+     "invented_value_rate": [
+      0.0097,
+      0.0521
+     ],
+     "acc_strength": [
+      0.9281,
+      0.9864
+     ],
+     "acc_form": [
+      0.965,
+      0.9989
+     ],
+     "acc_dose": [
+      0.9196,
+      0.9825
+     ],
+     "acc_times_per_day": [
+      0.955,
+      0.9965
+     ],
+     "acc_timing_label": [
+      0.955,
+      0.9965
+     ],
+     "acc_is_prn": [
+      0.955,
+      0.9965
+     ],
+     "acc_duration_days": [
+      0.9763,
+      1.0
+     ],
+     "acc_brand_name": [
+      0.9367,
+      0.9901
+     ],
+     "acc_generic_name": [
+      0.9457,
+      0.9935
+     ]
+    },
+    "counts": {
+     "med_tp": 158,
+     "med_fp": 1,
+     "med_fn": 1,
+     "med_fully_correct": 139,
+     "invented": 5,
+     "null_total": 220,
+     "documents": 40
+    }
+   },
+   "poor": {
+    "docs": 40,
+    "med_precision": 1.0,
+    "med_recall": 1.0,
+    "med_f1": 1.0,
+    "med_fully_correct_rate": 0.8365,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.7857,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 0,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.0315,
+    "quote_exact_rate": 0.7601,
+    "quote_fuzzy_rate": 0.9899,
+    "quote_norm_exact_rate": 0.8851,
+    "quote_strict_rate": 0.9426,
+    "quote_fail_digits": 3,
+    "quote_fail_similarity": 14,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.956,
+    "acc_form": 1.0,
+    "acc_dose": 0.956,
+    "acc_times_per_day": 0.9811,
+    "acc_timing_label": 0.9937,
+    "acc_is_prn": 0.9937,
+    "acc_duration_days": 1.0,
+    "acc_brand_name": 0.9497,
+    "acc_generic_name": 0.9623,
+    "exact_ci_brand_name": 0.9497,
+    "exact_ci_generic_name": 0.9623,
+    "invented_strength": {
+     "of_null": 3,
+     "invented": 1,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 33,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 80,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 63,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 2
+    },
+    "invented_generic_name": {
+     "of_null": 43,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 2
+    },
+    "intervals": {
+     "med_precision": [
+      0.9764,
+      1.0
+     ],
+     "med_recall": [
+      0.9764,
+      1.0
+     ],
+     "med_f1_bootstrap": [
+      1.0,
+      1.0
+     ],
+     "med_fully_correct_rate": [
+      0.7712,
+      0.8859
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.7785,
+      0.8917
+     ],
+     "invented_value_rate": [
+      0.0154,
+      0.0636
+     ],
+     "acc_strength": [
+      0.9119,
+      0.9785
+     ],
+     "acc_form": [
+      0.9764,
+      1.0
+     ],
+     "acc_dose": [
+      0.9119,
+      0.9785
+     ],
+     "acc_times_per_day": [
+      0.946,
+      0.9936
+     ],
+     "acc_timing_label": [
+      0.9652,
+      0.9989
+     ],
+     "acc_is_prn": [
+      0.9652,
+      0.9989
+     ],
+     "acc_duration_days": [
+      0.9764,
+      1.0
+     ],
+     "acc_brand_name": [
+      0.9039,
+      0.9743
+     ],
+     "acc_generic_name": [
+      0.9201,
+      0.9826
+     ]
+    },
+    "counts": {
+     "med_tp": 159,
+     "med_fp": 0,
+     "med_fn": 0,
+     "med_fully_correct": 133,
+     "invented": 7,
+     "null_total": 222,
+     "documents": 40
+    }
+   },
+   "all": {
+    "docs": 200,
+    "med_precision": 0.9987,
+    "med_recall": 0.9987,
+    "med_f1": 0.9987,
+    "med_fully_correct_rate": 0.8879,
+    "followup_recall": 1.0,
+    "followup_precision": 1.0,
+    "followup_days_accuracy": 0.8429,
+    "redflag_recall": 1.0,
+    "redflag_precision": 1.0,
+    "hallucinated_meds": 1,
+    "hallucinated_followups": 0,
+    "hallucinated_redflags": 0,
+    "invented_value_rate": 0.0217,
+    "quote_exact_rate": 0.8432,
+    "quote_fuzzy_rate": 0.9973,
+    "quote_norm_exact_rate": 0.9439,
+    "quote_strict_rate": 0.9642,
+    "quote_fail_digits": 9,
+    "quote_fail_similarity": 44,
+    "parse_failure_rate": 0.0,
+    "low_confidence_rate": 0.0,
+    "acc_strength": 0.9786,
+    "acc_form": 0.9924,
+    "acc_dose": 0.9559,
+    "acc_times_per_day": 0.9887,
+    "acc_timing_label": 0.9899,
+    "acc_is_prn": 0.9912,
+    "acc_duration_days": 0.9975,
+    "acc_brand_name": 0.9786,
+    "acc_generic_name": 0.9849,
+    "exact_ci_brand_name": 0.9786,
+    "exact_ci_generic_name": 0.9849,
+    "invented_strength": {
+     "of_null": 15,
+     "invented": 7,
+     "role_confusion": 0,
+     "in_document": 7,
+     "made_up": 0
+    },
+    "invented_dose": {
+     "of_null": 0,
+     "invented": 0,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 0
+    },
+    "invented_times_per_day": {
+     "of_null": 165,
+     "invented": 7,
+     "role_confusion": 0,
+     "in_document": 7,
+     "made_up": 0
+    },
+    "invented_duration_days": {
+     "of_null": 399,
+     "invented": 2,
+     "role_confusion": 0,
+     "in_document": 2,
+     "made_up": 0
+    },
+    "invented_brand_name": {
+     "of_null": 314,
+     "invented": 5,
+     "role_confusion": 0,
+     "in_document": 1,
+     "made_up": 4
+    },
+    "invented_generic_name": {
+     "of_null": 215,
+     "invented": 3,
+     "role_confusion": 0,
+     "in_document": 0,
+     "made_up": 3
+    },
+    "intervals": {
+     "med_precision": [
+      0.9929,
+      0.9998
+     ],
+     "med_recall": [
+      0.9929,
+      0.9998
+     ],
+     "med_f1_bootstrap": [
+      0.996,
+      1.0
+     ],
+     "med_fully_correct_rate": [
+      0.8641,
+      0.908
+     ],
+     "med_fully_correct_rate_bootstrap": [
+      0.8453,
+      0.9266
+     ],
+     "invented_value_rate": [
+      0.0146,
+      0.032
+     ],
+     "acc_strength": [
+      0.966,
+      0.9866
+     ],
+     "acc_form": [
+      0.9836,
+      0.9965
+     ],
+     "acc_dose": [
+      0.9393,
+      0.9681
+     ],
+     "acc_times_per_day": [
+      0.9786,
+      0.994
+     ],
+     "acc_timing_label": [
+      0.9802,
+      0.9949
+     ],
+     "acc_is_prn": [
+      0.9819,
+      0.9957
+     ],
+     "acc_duration_days": [
+      0.9909,
+      0.9993
+     ],
+     "acc_brand_name": [
+      0.966,
+      0.9866
+     ],
+     "acc_generic_name": [
+      0.9738,
+      0.9913
+     ]
+    },
+    "counts": {
+     "med_tp": 794,
+     "med_fp": 1,
+     "med_fn": 1,
+     "med_fully_correct": 705,
+     "invented": 24,
+     "null_total": 1108,
+     "documents": 40
+    }
+   }
+  }
+ },
+ "flags": {
+  "text": {
+   "medicines": 159,
+   "must_confirm": 76,
+   "share_must_confirm": 0.478,
+   "share_must_confirm_ci": [
+    0.4018,
+    0.5552
+   ],
+   "name_errors_remaining": 1,
+   "name_errors_unflagged": 1,
+   "name_errors_at_note_level": 0,
+   "timing_errors_remaining": 1,
+   "timing_errors_unflagged": 0,
+   "interaction_ready": 83,
+   "schedule_ready": 61,
+   "wrong_resolved_generic": 0,
+   "wrong_resolved_generic_ci": [
+    0.0,
+    0.0442
+   ],
+   "wrong_schedule": 0,
+   "wrong_schedule_ci": [
+    0.0,
+    0.0592
+   ],
+   "wrong_resolved_cases": []
+  },
+  "clean": {
+   "medicines": 159,
+   "must_confirm": 76,
+   "share_must_confirm": 0.478,
+   "share_must_confirm_ci": [
+    0.4018,
+    0.5552
+   ],
+   "name_errors_remaining": 2,
+   "name_errors_unflagged": 0,
+   "name_errors_at_note_level": 0,
+   "timing_errors_remaining": 2,
+   "timing_errors_unflagged": 0,
+   "interaction_ready": 83,
+   "schedule_ready": 60,
+   "wrong_resolved_generic": 0,
+   "wrong_resolved_generic_ci": [
+    0.0,
+    0.0442
+   ],
+   "wrong_schedule": 0,
+   "wrong_schedule_ci": [
+    0.0,
+    0.0602
+   ],
+   "wrong_resolved_cases": []
+  },
+  "scan": {
+   "medicines": 159,
+   "must_confirm": 74,
+   "share_must_confirm": 0.4654,
+   "share_must_confirm_ci": [
+    0.3896,
+    0.5428
+   ],
+   "name_errors_remaining": 4,
+   "name_errors_unflagged": 0,
+   "name_errors_at_note_level": 0,
+   "timing_errors_remaining": 2,
+   "timing_errors_unflagged": 1,
+   "interaction_ready": 85,
+   "schedule_ready": 64,
+   "wrong_resolved_generic": 0,
+   "wrong_resolved_generic_ci": [
+    0.0,
+    0.0432
+   ],
+   "wrong_schedule": 2,
+   "wrong_schedule_ci": [
+    0.0086,
+    0.107
+   ],
+   "wrong_resolved_cases": []
+  },
+  "photo": {
+   "medicines": 159,
+   "must_confirm": 87,
+   "share_must_confirm": 0.5472,
+   "share_must_confirm_ci": [
+    0.4696,
+    0.6225
+   ],
+   "name_errors_remaining": 7,
+   "name_errors_unflagged": 0,
+   "name_errors_at_note_level": 0,
+   "timing_errors_remaining": 2,
+   "timing_errors_unflagged": 0,
+   "interaction_ready": 72,
+   "schedule_ready": 54,
+   "wrong_resolved_generic": 0,
+   "wrong_resolved_generic_ci": [
+    0.0,
+    0.0507
+   ],
+   "wrong_schedule": 0,
+   "wrong_schedule_ci": [
+    0.0,
+    0.0664
+   ],
+   "wrong_resolved_cases": []
+  },
+  "poor": {
+   "medicines": 159,
+   "must_confirm": 93,
+   "share_must_confirm": 0.5849,
+   "share_must_confirm_ci": [
+    0.5072,
+    0.6586
+   ],
+   "name_errors_remaining": 12,
+   "name_errors_unflagged": 0,
+   "name_errors_at_note_level": 0,
+   "timing_errors_remaining": 1,
+   "timing_errors_unflagged": 0,
+   "interaction_ready": 66,
+   "schedule_ready": 46,
+   "wrong_resolved_generic": 0,
+   "wrong_resolved_generic_ci": [
+    0.0,
+    0.055
+   ],
+   "wrong_schedule": 0,
+   "wrong_schedule_ci": [
+    0.0,
+    0.0771
+   ],
+   "wrong_resolved_cases": []
+  },
+  "all": {
+   "medicines": 795,
+   "must_confirm": 406,
+   "share_must_confirm": 0.5107,
+   "share_must_confirm_ci": [
+    0.476,
+    0.5453
+   ],
+   "name_errors_remaining": 26,
+   "name_errors_unflagged": 1,
+   "name_errors_at_note_level": 0,
+   "timing_errors_remaining": 8,
+   "timing_errors_unflagged": 1,
+   "interaction_ready": 389,
+   "schedule_ready": 285,
+   "wrong_resolved_generic": 0,
+   "wrong_resolved_generic_ci": [
+    0.0,
+    0.0098
+   ],
+   "wrong_schedule": 2,
+   "wrong_schedule_ci": [
+    0.0019,
+    0.0252
+   ],
+   "wrong_resolved_cases": []
+  }
+ },
+ "safety": {
+  "run_id": "final-test-v1",
+  "split": "test",
+  "model_calls": 0,
+  "documents": 40,
+  "skipped": [],
+  "docs_by_condition": {
+   "text": 40,
+   "clean": 40,
+   "scan": 40,
+   "photo": 40,
+   "poor": 40
+  },
+  "store_available": true,
+  "supplement_entries_ignored": 0,
+  "supplement_reviewed_entries": 16,
+  "pairs_by_condition": {
+   "text": 262,
+   "clean": 262,
+   "scan": 262,
+   "photo": 262,
+   "poor": 262
+  },
+  "pair_statuses_by_condition": {
+   "text": {
+    "not_checked_no_record": 24,
+    "not_checked_unconfirmed": 197,
+    "interaction_found": 41
+   },
+   "clean": {
+    "interaction_found": 55,
+    "not_checked_no_record": 21,
+    "not_checked_unconfirmed": 186
+   },
+   "scan": {
+    "not_checked_no_record": 23,
+    "not_checked_unconfirmed": 185,
+    "interaction_found": 54
+   },
+   "photo": {
+    "interaction_found": 39,
+    "not_checked_no_record": 21,
+    "not_checked_unconfirmed": 202
+   },
+   "poor": {
+    "not_checked_unconfirmed": 216,
+    "interaction_found": 30,
+    "not_checked_no_record": 16
+   }
+  },
+  "share_not_checked_by_condition": {
+   "text": 0.844,
+   "clean": 0.79,
+   "scan": 0.794,
+   "photo": 0.851,
+   "poor": 0.885
+  },
+  "ground_truth": {
+   "pairs": 262,
+   "statuses": {
+    "interaction_found": 195,
+    "not_checked_no_record": 67
+   }
+  },
+  "safety": {
+   "silent_misses_strict": 3,
+   "silent_misses_not_covered_by_a_flag": 0,
+   "missed_entirely_by_condition": {
+    "text": {
+     "medicines": 0,
+     "interactions": 0
+    },
+    "clean": {
+     "medicines": 0,
+     "interactions": 0
+    },
+    "scan": {
+     "medicines": 0,
+     "interactions": 0
+    },
+    "photo": {
+     "medicines": 0,
+     "interactions": 0
+    },
+    "poor": {
+     "medicines": 0,
+     "interactions": 0
+    }
+   },
+   "downgrades": 753,
+   "downgrade_causes": {
+    "role_corrected": 214,
+    "unresolved_name": 27,
+    "conflict_is_prn": 6,
+    "near_miss_name": 130,
+    "conflict_timing_label": 167,
+    "conflict_times_per_day": 23,
+    "duplicate_name_fields": 471,
+    "name_not_in_quote": 43,
+    "incomplete_quote": 19,
+    "unusual_strength": 32,
+    "conflict_duration_days": 12
+   },
+   "false_alarms": 0,
+   "silent_misses_covered_by_a_flag": 3
+  },
+  "duplicates": {
+   "flagged": 0,
+   "true_flagged": 0,
+   "false_flagged": 0,
+   "ground_truth_duplicates": 0
+  },
+  "overall_state": {
+   "text": {
+    "confirm_first": 35,
+    "ok_to_review": 3,
+    "review_interactions": 2
+   },
+   "clean": {
+    "confirm_first": 34,
+    "ok_to_review": 2,
+    "review_interactions": 4
+   },
+   "scan": {
+    "confirm_first": 33,
+    "ok_to_review": 3,
+    "review_interactions": 4
+   },
+   "photo": {
+    "confirm_first": 35,
+    "ok_to_review": 2,
+    "review_interactions": 3
+   },
+   "poor": {
+    "confirm_first": 36,
+    "review_interactions": 2,
+    "ok_to_review": 2
+   }
+  },
+  "confirm_first_share": {
+   "text": 0.875,
+   "clean": 0.85,
+   "scan": 0.825,
+   "photo": 0.875,
+   "poor": 0.9
+  },
+  "confirm_first_share_all": 0.865,
+  "supplement_entries": 16
+ },
+ "explanation": {
+  "run_id": "final-test-v1",
+  "documents": 40,
+  "lines": 255,
+  "lines_by_kind": {
+   "follow_up": 42,
+   "advice": 118,
+   "warning": 95
+  },
+  "medicine_lines": 159,
+  "verified_share": {
+   "en": {
+    "all": 0.937,
+    "advice": 0.873,
+    "follow_up": 0.976,
+    "warning": 1.0
+   },
+   "ta": {
+    "all": 0.18,
+    "advice": 0.254,
+    "follow_up": 0.286,
+    "warning": 0.042
+   },
+   "hi": {
+    "all": 0.667,
+    "advice": 0.754,
+    "follow_up": 0.762,
+    "warning": 0.516
+   }
+  },
+  "line_verified_all_languages": 0.137,
+  "fallback_rate": {
+   "en": 0.004,
+   "ta": 0.761,
+   "hi": 0.275
+  },
+  "failure_reasons": {
+   "en": {
+    "none": 15,
+    "forbidden_additions": 1
+   },
+   "ta": {
+    "judge:contradicts": 91,
+    "judge:omits_information": 71,
+    "none": 15,
+    "judge:adds_information": 11,
+    "forbidden_additions": 8,
+    "no_model_text": 8,
+    "drug_names": 5
+   },
+   "hi": {
+    "judge:contradicts": 27,
+    "judge:omits_information": 22,
+    "none": 15,
+    "judge:adds_information": 13,
+    "drug_names": 5,
+    "forbidden_additions": 3
+   }
+  },
+  "deterministic_check_failures_any": {
+   "en": {
+    "forbidden_additions": 1
+   },
+   "ta": {
+    "forbidden_additions": 8,
+    "drug_names": 5
+   },
+   "hi": {
+    "drug_names": 5,
+    "forbidden_additions": 3
+   }
+  },
+  "judge_verdicts": {
+   "en": {
+    "supported": 240,
+    "null": 15
+   },
+   "ta": {
+    "omits_information": 77,
+    "contradicts": 92,
+    "supported": 51,
+    "adds_information": 12,
+    "null": 23
+   },
+   "hi": {
+    "supported": 177,
+    "contradicts": 27,
+    "omits_information": 22,
+    "adds_information": 14,
+    "null": 15
+   }
+  },
+  "latency_s_by_call_type": {
+   "simplify": {
+    "n": 40,
+    "median": 7.3,
+    "p95": 8.5,
+    "max": 9.6
+   },
+   "translate": {
+    "n": 80,
+    "median": 12.8,
+    "p95": 35.1,
+    "max": 103.9
+   },
+   "back": {
+    "n": 80,
+    "median": 7.0,
+    "p95": 8.3,
+    "max": 9.4
+   },
+   "judge": {
+    "n": 120,
+    "median": 9.1,
+    "p95": 14.0,
+    "max": 15.0
+   }
+  },
+  "calls": {
+   "total": 320,
+   "failed": 2,
+   "errors": {
+    "context_truncated": 2
+   },
+   "total_latency_s": 3235,
+   "tokens": 402107
+  },
+  "readability": {
+   "source": {
+    "lines": 255,
+    "fk_median": 4.0,
+    "fk_p25": 2.34,
+    "fk_p75": 6.79,
+    "fk_mean": 4.95,
+    "mean_sentence_len": 6.74,
+    "long_word_share": 0.008,
+    "pooled_fk_grade": 4.56
+   },
+   "plain_english_all": {
+    "lines": 240,
+    "fk_median": 3.67,
+    "fk_p25": 1.03,
+    "fk_p75": 5.68,
+    "fk_mean": 4.04,
+    "mean_sentence_len": 7.09,
+    "long_word_share": 0.005,
+    "pooled_fk_grade": 3.74
+   },
+   "plain_english_verified": {
+    "lines": 239,
+    "fk_median": 3.67,
+    "fk_p25": 0.8,
+    "fk_p75": 5.68,
+    "fk_mean": 4.04,
+    "mean_sentence_len": 7.08,
+    "long_word_share": 0.005,
+    "pooled_fk_grade": 3.75
+   },
+   "note": "English only; Tamil and Hindi readability is not scored."
+  },
+  "corruptions": null,
+  "provenance_share": {
+   "en": {
+    "all": {
+     "n": 255,
+     "phrase_library": 0.059,
+     "model_checked": 0.937,
+     "original_only": 0.004,
+     "shown_in_language": 0.996,
+     "english_fallback": 0.004
+    },
+    "advice": {
+     "n": 118,
+     "phrase_library": 0.127,
+     "model_checked": 0.873,
+     "original_only": 0.0,
+     "shown_in_language": 1.0,
+     "english_fallback": 0.0
+    },
+    "follow_up": {
+     "n": 42,
+     "phrase_library": 0.0,
+     "model_checked": 0.976,
+     "original_only": 0.024,
+     "shown_in_language": 0.976,
+     "english_fallback": 0.024
+    },
+    "warning": {
+     "n": 95,
+     "phrase_library": 0.0,
+     "model_checked": 1.0,
+     "original_only": 0.0,
+     "shown_in_language": 1.0,
+     "english_fallback": 0.0
+    }
+   },
+   "ta": {
+    "all": {
+     "n": 255,
+     "phrase_library": 0.059,
+     "model_checked": 0.18,
+     "original_only": 0.761,
+     "shown_in_language": 0.239,
+     "english_fallback": 0.761
+    },
+    "advice": {
+     "n": 118,
+     "phrase_library": 0.127,
+     "model_checked": 0.254,
+     "original_only": 0.619,
+     "shown_in_language": 0.381,
+     "english_fallback": 0.619
+    },
+    "follow_up": {
+     "n": 42,
+     "phrase_library": 0.0,
+     "model_checked": 0.286,
+     "original_only": 0.714,
+     "shown_in_language": 0.286,
+     "english_fallback": 0.714
+    },
+    "warning": {
+     "n": 95,
+     "phrase_library": 0.0,
+     "model_checked": 0.042,
+     "original_only": 0.958,
+     "shown_in_language": 0.042,
+     "english_fallback": 0.958
+    }
+   },
+   "hi": {
+    "all": {
+     "n": 255,
+     "phrase_library": 0.059,
+     "model_checked": 0.667,
+     "original_only": 0.275,
+     "shown_in_language": 0.725,
+     "english_fallback": 0.275
+    },
+    "advice": {
+     "n": 118,
+     "phrase_library": 0.127,
+     "model_checked": 0.754,
+     "original_only": 0.119,
+     "shown_in_language": 0.881,
+     "english_fallback": 0.119
+    },
+    "follow_up": {
+     "n": 42,
+     "phrase_library": 0.0,
+     "model_checked": 0.762,
+     "original_only": 0.238,
+     "shown_in_language": 0.762,
+     "english_fallback": 0.238
+    },
+    "warning": {
+     "n": 95,
+     "phrase_library": 0.0,
+     "model_checked": 0.516,
+     "original_only": 0.484,
+     "shown_in_language": 0.516,
+     "english_fallback": 0.484
+    }
+   }
+  },
+  "phase3_verified_share": {
+   "en": {
+    "all": 0.937,
+    "advice": 0.873,
+    "follow_up": 0.976,
+    "warning": 1.0
+   },
+   "ta": {
+    "all": 0.18,
+    "advice": 0.254,
+    "follow_up": 0.286,
+    "warning": 0.042
+   },
+   "hi": {
+    "all": 0.667,
+    "advice": 0.754,
+    "follow_up": 0.762,
+    "warning": 0.516
+   }
+  }
+ },
+ "dev_vs_test": [
+  {
+   "metric": "medicine F1, raw",
+   "dev": 0.9833,
+   "test": 0.9836,
+   "diff": 0.0003
+  },
+  {
+   "metric": "fully-correct medicine rate, raw",
+   "dev": 0.3075,
+   "test": 0.2621,
+   "diff": -0.0454
+  },
+  {
+   "metric": "invented-value rate, raw",
+   "dev": 0.2857,
+   "test": 0.3288,
+   "diff": 0.0431
+  },
+  {
+   "metric": "timing label field, raw",
+   "dev": 0.7288,
+   "test": 0.734,
+   "diff": 0.0052
+  },
+  {
+   "metric": "brand name field, raw",
+   "dev": 0.6731,
+   "test": 0.4949,
+   "diff": -0.1782
+  },
+  {
+   "metric": "medicine F1, normalised",
+   "dev": 0.9976,
+   "test": 0.9987,
+   "diff": 0.0011
+  },
+  {
+   "metric": "fully-correct medicine rate, normalised",
+   "dev": 0.8115,
+   "test": 0.8879,
+   "diff": 0.0764
+  },
+  {
+   "metric": "invented-value rate, normalised",
+   "dev": 0.0563,
+   "test": 0.0217,
+   "diff": -0.0346
+  },
+  {
+   "metric": "timing label field, normalised",
+   "dev": 0.9905,
+   "test": 0.9899,
+   "diff": -0.0006
+  },
+  {
+   "metric": "brand name field, normalised",
+   "dev": 0.9785,
+   "test": 0.9786,
+   "diff": 0.0001
+  },
+  {
+   "metric": "share of medicines at must_confirm",
+   "dev": 0.462,
+   "test": 0.5107,
+   "diff": 0.0487
+  },
+  {
+   "metric": "name errors remaining, unflagged",
+   "dev": 0,
+   "test": 1,
+   "diff": 1
+  },
+  {
+   "metric": "wrong resolved_generic among interaction_ready",
+   "dev": 0,
+   "test": 0,
+   "diff": 0
+  },
+  {
+   "metric": "silent misses, strict",
+   "dev": 3,
+   "test": 3,
+   "diff": 0
+  },
+  {
+   "metric": "silent misses not covered by a flag",
+   "dev": 0,
+   "test": 0,
+   "diff": 0
+  },
+  {
+   "metric": "false alarms",
+   "dev": 0,
+   "test": 0,
+   "diff": 0
+  },
+  {
+   "metric": "share of free-text lines shown in en",
+   "dev": 1.0,
+   "test": 0.996,
+   "diff": -0.004
+  },
+  {
+   "metric": "share of free-text lines shown in ta",
+   "dev": 0.252,
+   "test": 0.239,
+   "diff": -0.013
+  },
+  {
+   "metric": "share of free-text lines shown in hi",
+   "dev": 0.807,
+   "test": 0.725,
+   "diff": -0.082
+  }
+ ]
+}
