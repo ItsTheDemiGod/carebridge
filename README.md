@@ -125,3 +125,6 @@ Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`; O
 - Real-photo pack: `python scriptsuild_print_pack.py`; score (7c): `python scripts\score_real_photos.py`
 - Usability: `python scripts\prepare_usability_samples.py`; analysis: `python scriptsnalyse_usability.py --dir <folder>`
 - Final test (7b only): `python -m eval.final_test.run_final --pin`, then `--final-test-run`
+
+## Final test results (Phase 7b)
+The official one-shot run on the 40 held-out synthetic test documents is in `eval/results/final-test-v1/` (read-only). Plain-language write-up with intervals, the dev comparison and what is NOT claimed: `docs/FINAL_TEST_RESULTS.md`. Check it with `python scripts/verify_final_results.py`. The same figures are on the app's "How we tested it" page.

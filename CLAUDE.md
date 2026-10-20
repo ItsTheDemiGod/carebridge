@@ -47,7 +47,7 @@ Status: [x] done, [ ] not started, [~] in progress
 - [x] 5 Backend API, SQLite + Fernet, consent, confirmation overlay, schedule, delete-my-data (no UI; live smoke done; ta/hi strings and DPDP checklist unreviewed)
 - [x] 5c Prototype review mode: honest author self-check of the interaction supplement, notice v2, labels (docs/REVIEW_STATUS.md)
 - [x] 6 Web application UI: 6a design system, 6b working flow, 6c polish and review page, 6d sample mode + "How we tested it" + header delete icon (docs/DESIGN.md, DEMO.md, TESTING_PAGE.md)
-- [~] 7 Evaluation: [x] 7a harness, protocol, stress set, photo and usability packs, freeze; [ ] 7b one-shot final test run; [ ] 7c real photos, usability sessions, native/pharmacist review
+- [~] 7 Evaluation: [x] 7a harness, protocol, stress set, photo and usability packs, freeze; [x] 7b ONE official run `final-test-v1` done 2026-10-20, results docs/FINAL_TEST_RESULTS.md, Testing page shows them; [ ] 7c real photos, usability sessions, native/pharmacist review
 - [ ] 8 Deployment, demo, report
 - [ ] 9 Stretch: PWA and mobile app
 
@@ -128,7 +128,7 @@ Status: [x] done, [ ] not started, [~] in progress
 
 ## Sample mode and testing page (Phase 6d; docs/DEMO.md, TESTING_PAGE.md)
 - `/demo` = pre-recorded walk-through of dev doc ds_037 (poor) from fixtures built by `scripts/build_demo_data.py` (real API in-process, cached model outputs, never a model). `demoApi` answers `api()` under /demo from memory: ZERO /api requests, no session, nothing stored (tested). Sticky label strip "Pre-recorded sample. No photo is processed and nothing you do here is saved." + "Leave the sample" on every demo page; after Save the recorded AFTER result shows whatever was chosen, with a visible note. Never present it as a live result. DDInter excerpt: at most 6 attributed pairs (names and level only), test-enforced.
-- `/how-we-tested-it`: figures only from `frontend/src/data/testing.generated.json` (`scripts/build_testing_page_data.py`, committed metrics files only); no number typed into a string; test split "not yet run" until Phase 7 extends the builder.
+- `/how-we-tested-it`: figures only from `frontend/src/data/testing.generated.json` (`scripts/build_testing_page_data.py`, committed metrics files only); no number typed into a string; test figures (66 rows, pooled, intervals, dev beside) come from `eval/results/final-test-v1/metrics.json` after the builder verifies its SHA256SUMS.
 - Header: delete icon beside Menu from 768 px when collapsed (row from 70rem, Tamil 96rem). Specs that delete use `pressDelete`/`openMenuIfCollapsed` (e2e/flowhelpers.ts). Live specs: UI steps 45 s, long waits only for backend work and commented.
 - Build: `python scripts/build_demo_data.py`, `python scripts/build_testing_page_data.py` (both `--check`).
 
@@ -145,5 +145,5 @@ Phases 2 to 7 commands (render, evaluate, re-score, DDInter, frontend tests, fin
 ## Phase 7 rules (docs/FINAL_TEST_PROTOCOL.md, PHASE7_PLAN.md)
 - TEST-SPLIT LOCK: the 40 test documents (ids, text, ground truth, renders, cached outputs) are never opened, printed, hashed or listed except by `eval/final_test/run_final.py` at run time in Phase 7b; tests use a synthetic fixture repo. Never use `--final-test-run` outside 7b.
 - ONE-SHOT: one official run `final-test-v1`; no change to code, prompts, rules, thresholds, formulary, templates or supplement after the tag `freeze-pre-test` (`scripts/freeze_manifest.py verify`); a re-run is labelled post-hoc (`--rerun-reason`) and never overwrites. Report whatever the numbers are, with Wilson/bootstrap intervals; never "accurate/reliable/validated".
-- 7a built: protocol, freeze manifest, runner, stress set `data/stress/` (`data/build_stress_set.py`, `eval/stress/run_safety_stress.py`), real-photo pack and scorer, usability pack `docs/usability/` + `scripts/analyse_usability.py`. 7b = the run, 7c = real photos, usability sessions, stress extraction mode.
+- 7a built: protocol, freeze manifest, runner, stress set `data/stress/` (`data/build_stress_set.py`, `eval/stress/run_safety_stress.py`), real-photo pack and scorer, usability pack `docs/usability/` + `scripts/analyse_usability.py`. 7b done (run + write-up; results folder READ-ONLY, post-hoc analysis labelled, nothing changed in response); 7c = real photos, usability sessions, stress extraction mode. Open from 7b: 2 wrong schedules among 285 schedule_ready (scan), 1 unflagged wrong name (text).
 

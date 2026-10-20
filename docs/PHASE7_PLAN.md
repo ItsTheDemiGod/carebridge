@@ -5,7 +5,7 @@ Three stages. 7a (done) built everything and froze the system. Nothing changes a
 | stage | what | model? | who |
 |---|---|---|---|
 | **7a** | protocol, freeze manifest, one-shot runner, intervals, report builder; safety stress set (ground-truth mode run); real-photo print pack and scorer; usability pack and analysis script; freeze + tag | no | done |
-| **7b** | the ONE official run on the 40 held-out test documents | yes (local Ollama) | you start it, it runs about 3 hours |
+| **7b** | the ONE official run on the 40 held-out test documents. **DONE** 2026-10-20 (`eval/results/final-test-v1`, 2 h 25 min, 0 skipped); write-up `docs/FINAL_TEST_RESULTS.md`, Testing page updated | yes (local Ollama) | done |
 | **7c** | stress extraction mode, real-photo test, usability sessions, native-speaker and pharmacist review, final write-up | yes for stress and photos | you + helpers |
 
 ## What you must do
@@ -31,3 +31,6 @@ Three stages. 7a (done) built everything and froze the system. Nothing changes a
 
 ## Rule: nothing changes after the freeze
 No code, prompt, rule, threshold, formulary, template, phrase-library or supplement change between the tag and the end of the 7b run. If a defect is found, report it and decide separately; a fix means a new freeze and the result of the old freeze stays in the record. Resuming an interrupted run from the cache is not a re-run. The test split is never used for debugging.
+
+## Status after the 7b write-up
+7b is done and written up (`docs/FINAL_TEST_RESULTS.md`; independent check `scripts/verify_final_results.py`; audit copy of the run log in `eval/results/final-test-v1-audit/`). Next is 7c (real photos, usability sessions, stress extraction mode, native-speaker and pharmacist review); its figures extend `scripts/build_testing_page_data.py` the same way. The freeze manifest is a pre-run artefact: it reports drift for `data/templates/templates.json` (ui.* strings added for the Testing page). This is expected; the manifest and the tag are not moved.
