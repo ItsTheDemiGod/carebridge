@@ -190,3 +190,13 @@
 **Tested**: backend 1437 passed (2 deselected, as before), vitest 116, Playwright 304 passed + 14 skipped (screenshot specs, on request) with the backend running, contrast 36/36; official SHA256SUMS verify; freeze manifest: the one expected drift (templates.json).
 **Open / future work (none applied)**: see section 6 of the post-hoc document.
 **Next**: Phase 7c.
+
+## Phase 7c-lite: Safety stress set through the real extraction, Testing page stress section, limitations (DONE; real photos and usability sessions on hold)
+**What**: protocol first (`docs/STRESS_EXTRACTION_PROTOCOL.md`, commit c36ae82); one official run `stress-extraction-v1` on 2026-10-28 (18:34 to 19:03, 1742 s; estimate 35 min): 30 stress prescriptions x clean and photo = 60 calls, 0 resumed, 0 failed, max 53 s per call; GPU 90 percent. Results in `eval/results/stress-extraction-v1/` (read-only; `sha256sum -c SHA256SUMS` verifies); analysis `docs/STRESS_RESULTS.md`; consolidated `docs/LIMITATIONS.md`.
+**Deviation (stated in advance)**: Ollama 0.40.11 ran, the pin says 0.40.5 (Ollama updated itself; digest identical; pin file unchanged). Version sanity check on 5 dev documents: raw identical 1 of 5, normalised identical 2 of 5.
+**Result**: P1 to P4 all pass (0 of 204 unflagged silent misses; 0 weekly schedule_ready; 0 wrong resolved_generic of 113; 204 of 204 after the scripted overlay). Descriptive: detection 104/104 per render; only 38 of 102 ground-truth pairs per render shown immediately, 64 withheld behind confirmation flags; garbled names flagged 5 of 6 (st_15 photo silently corrected by the model).
+**Built**: `eval/stress/run_stress_extraction.py` (additive; the 7a stub is untouched), `backend/tests/test_stress_extraction_scoring.py`, Testing page stress section (`stress_ext` in the page data; `scripts/p7c_testing.py`, `scripts/add_phase7c_templates.py`, 85 ui strings, review sheet `data/templates/review_sheet_phase7c_new.csv`), `frontend/e2e/stress.spec.ts`, `backend/tests/test_testing_stress_section.py`, screenshots `docs/screenshots/phase7c/`.
+**Run**: `python -m eval.stress.run_stress_extraction --run-id <new id>` (post-hoc re-runs need a new id), `python scriptsuild_testing_page_data.py`.
+**Open**: real-photo test, usability sessions, native and pharmacist review (all on hold); freeze manifest drift (templates.json, run_stress_extraction.py) expected and not rewritten.
+**Next**: Phase 8 (not started).
+

@@ -105,7 +105,7 @@ ROWS = {
               ("Of the pairs shown straight away, how many are not among the pairs found with perfect names.", "உடனே காட்டப்பட்ட இணைகளில், பெயர்கள் சரியாக இருந்தால் கண்டறியப்படும் இணைகளில் இல்லாதவை எத்தனை.", "तुरंत दिखीं जोड़ियों में से कितनी सही नामों पर मिलने वाली जोड़ियों में नहीं हैं।")),
     # category checks
     "dup": (("Repeated medicines that raised a double-dose notice", "இரட்டை அளவு அறிவிப்பை எழுப்பிய மீண்டும் வந்த மருந்துகள்", "दोहराई दवाएँ जिन पर दोहरी-खुराक की सूचना आई"),
-            ("Of the medicines written twice on one prescription, how many produced the 'possible double dose' notice.", "ஒரே மருந்துச்சீட்டில் இருமுறை எழுதப்பட்ட மருந்துகளில், எத்தனை 'இரட்டை அளவு இருக்கலாம்' அறிவிப்பை உருவாக்கின.", "एक पर्चे पर दो बार लिखी दवाओं में से कितनों ने 'संभावित दोहरी खुराक' की सूचना दी।")),
+            ("Of the medicines written twice on one prescription, how many produced the repeated-medicine notice.", "ஒரே மருந்துச்சீட்டில் இருமுறை எழுதப்பட்ட மருந்துகளில், எத்தனை மீண்டும்-வந்த-மருந்து அறிவிப்பை உருவாக்கின.", "एक पर्चे पर दो बार लिखी दवाओं में से कितनों ने दोहराई-दवा की सूचना दी।")),
     "nondaily": (("Weekly or non-daily medicines that were flagged", "குறிக்கப்பட்ட வாராந்திர அல்லது தினசரி அல்லாத மருந்துகள்", "चिह्नित साप्ताहिक या रोज़ न ली जाने वाली दवाएँ"),
                  ("Of the medicines taken less often than daily that were read, how many carried the flag saying so.", "படிக்கப்பட்ட, தினமும் அல்லாமல் எடுக்கும் மருந்துகளில், எத்தனைக்கு அதைச் சொல்லும் குறி இருந்தது.", "पढ़ी गई, रोज़ से कम ली जाने वाली दवाओं में से कितनों पर यह बताने वाला चिह्न था।")),
     "eye_od": (("Eye drops with an unclear 'OD' that were flagged", "தெளிவற்ற 'OD' உள்ள குறிக்கப்பட்ட கண் சொட்டுகள்", "अस्पष्ट 'OD' वाली चिह्नित आँख की बूँदें"),

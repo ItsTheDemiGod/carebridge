@@ -11988,15 +11988,15 @@
   },
   "ui.testing.s.m.dup": {
    "en": {
-    "text": "Of the medicines written twice on one prescription, how many produced the 'possible double dose' notice.",
+    "text": "Of the medicines written twice on one prescription, how many produced the repeated-medicine notice.",
     "review_status": "not_required"
    },
    "ta": {
-    "text": "ஒரே மருந்துச்சீட்டில் இருமுறை எழுதப்பட்ட மருந்துகளில், எத்தனை 'இரட்டை அளவு இருக்கலாம்' அறிவிப்பை உருவாக்கின.",
+    "text": "ஒரே மருந்துச்சீட்டில் இருமுறை எழுதப்பட்ட மருந்துகளில், எத்தனை மீண்டும்-வந்த-மருந்து அறிவிப்பை உருவாக்கின.",
     "review_status": "draft_unreviewed"
    },
    "hi": {
-    "text": "एक पर्चे पर दो बार लिखी दवाओं में से कितनों ने 'संभावित दोहरी खुराक' की सूचना दी।",
+    "text": "एक पर्चे पर दो बार लिखी दवाओं में से कितनों ने दोहराई-दवा की सूचना दी।",
     "review_status": "draft_unreviewed"
    }
   },

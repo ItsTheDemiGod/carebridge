@@ -128,3 +128,7 @@ Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`; O
 
 ## Final test results (Phase 7b)
 The official one-shot run on the 40 held-out synthetic test documents is in `eval/results/final-test-v1/` (read-only). Plain-language write-up with intervals, the dev comparison and what is NOT claimed: `docs/FINAL_TEST_RESULTS.md`. Check it with `python scripts/verify_final_results.py`. The same figures are on the app's "How we tested it" page. Post-hoc case review, breakdowns by difficulty/template and cluster-aware intervals (descriptive, nothing changed): `docs/FINAL_TEST_POSTHOC.md`; scripts `scripts/posthoc_*.py`.
+
+## Stress extraction results (Phase 7c-lite)
+Safety stress set (30 authored synthetic prescriptions, clean and photo renders) through the real extraction: `docs/STRESS_RESULTS.md`, protocol `docs/STRESS_EXTRACTION_PROTOCOL.md`, results `eval/results/stress-extraction-v1/`. Run: `backend\.venv\Scripts\python -m eval.stress.run_stress_extraction --run-id <new id>` (local Ollama; render first with `datauild_stress_set.py --render`). All limits in one place: `docs/LIMITATIONS.md`. Not a clinical validation.
+

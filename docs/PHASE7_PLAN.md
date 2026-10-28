@@ -34,3 +34,6 @@ No code, prompt, rule, threshold, formulary, template, phrase-library or supplem
 
 ## Status after the 7b write-up
 7b is done and written up (`docs/FINAL_TEST_RESULTS.md`; independent check `scripts/verify_final_results.py`; audit copy of the run log in `eval/results/final-test-v1-audit/`). Next is 7c (real photos, usability sessions, stress extraction mode, native-speaker and pharmacist review); its figures extend `scripts/build_testing_page_data.py` the same way. The freeze manifest is a pre-run artefact: it reports drift for `data/templates/templates.json` (ui.* strings added for the Testing page). This is expected; the manifest and the tag are not moved.
+
+**7c-lite (done 2026-10-28)**: stress extraction run, `docs/STRESS_RESULTS.md`, Testing page stress section, `docs/LIMITATIONS.md`. **On hold**: the real-photo test (needs printed pages and a phone) and the usability sessions (need people); native-speaker and pharmacist review (need reviewers). None changes the frozen system.
+
