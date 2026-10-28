@@ -127,4 +127,4 @@ Phase 2 (from repo root unless noted; python = `backend\.venv\Scripts\python`; O
 - Final test (7b only): `python -m eval.final_test.run_final --pin`, then `--final-test-run`
 
 ## Final test results (Phase 7b)
-The official one-shot run on the 40 held-out synthetic test documents is in `eval/results/final-test-v1/` (read-only). Plain-language write-up with intervals, the dev comparison and what is NOT claimed: `docs/FINAL_TEST_RESULTS.md`. Check it with `python scripts/verify_final_results.py`. The same figures are on the app's "How we tested it" page.
+The official one-shot run on the 40 held-out synthetic test documents is in `eval/results/final-test-v1/` (read-only). Plain-language write-up with intervals, the dev comparison and what is NOT claimed: `docs/FINAL_TEST_RESULTS.md`. Check it with `python scripts/verify_final_results.py`. The same figures are on the app's "How we tested it" page. Post-hoc case review, breakdowns by difficulty/template and cluster-aware intervals (descriptive, nothing changed): `docs/FINAL_TEST_POSTHOC.md`; scripts `scripts/posthoc_*.py`.
