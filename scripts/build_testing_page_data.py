@@ -29,7 +29,9 @@ STRESS = "eval/results/stress-v1/metrics.json"  # Phase 3e blind stress set (aut
 P4 = "eval/results/phase4-dev-with-supplement/metrics.json"  # Phase 4 safety layer with the author-checked supplement enabled
 LIVE = "docs/smoke/phase6d_live.json"  # Phase 6d: three end-to-end runs of the real app (JSON lines; flow 2 is the first of three traced re-runs, see PROGRESS.md)
 FORMULARY = "data/reference/formulary.json"
-SOURCES = [N2, P3E, STRESS, P4, LIVE, FORMULARY, FT_METRICS]
+SS = "eval/results/stress-extraction-v1"  # Phase 7c-lite: the authored safety stress set through the real extraction (never edited; SHA256SUMS verified below)
+SS_METRICS = f"{SS}/metrics.json"
+SOURCES = [N2, P3E, STRESS, P4, LIVE, FORMULARY, FT_METRICS, SS_METRICS]
 # the day each source file was first committed (git log --diff-filter=A); the files themselves hold no date
 RUN_DATES = {N2: "2026-10-10", P3E: "2026-10-16", STRESS: "2026-10-16", P4: "2026-10-16", LIVE: "2026-10-18"}
 
@@ -169,6 +171,91 @@ def test_section() -> dict:
             "also": {"doc": "docs/FINAL_TEST_RESULTS.md", "source": FT_METRICS, "per_doc": f"{FT}/per_document.csv"}}
 
 
+def verify_stress_folder() -> None:
+    root = REPO / SS
+    sums = (root / "SHA256SUMS").read_text(encoding="utf-8").splitlines()
+    if not sums:
+        raise SystemExit(f"{SS}/SHA256SUMS is empty")
+    for line in sums:
+        digest, name = line.split(maxsplit=1)
+        raw = (root / name.strip().lstrip("*")).read_bytes()
+        lf = raw.replace(b"\r\n", b"\n")
+        if digest not in {hashlib.sha256(x).hexdigest() for x in (raw, lf, lf.replace(b"\n", b"\r\n"))}:
+            raise SystemExit(f"{SS}/{name} does not match SHA256SUMS: the stress results were changed")
+
+
+def stress_section() -> dict:
+    """The pre-registered metrics of docs/STRESS_EXTRACTION_PROTOCOL.md, pooled per render condition (per-category tables and the cause of each held-back pair stay in docs/STRESS_RESULTS.md).
+    Every figure is k of n with a Wilson interval; the document bootstrap is added where the metrics file has one."""
+    verify_stress_folder()
+    m = load(SS_METRICS)
+    man = load(f"{SS}/run_manifest.json")
+    if m.get("label") != "stress set, authored, not tuned, not the test split":
+        raise SystemExit(f"{SS_METRICS}: unexpected label")
+    conds = list(m["conditions"])
+    env = man["environment"]
+    pooled = {c: m["conditions"][c]["pooled"] for c in conds}
+    cn = {c: pooled[c]["counts"] for c in conds}
+    g = lambda c, k: cn[c].get(k, 0)  # noqa: E731  (a Counter omits zero counts)
+    docs = pooled[conds[0]]["documents"]
+    crit = m["criteria"]
+    entries: list[dict] = []
+
+    def cell(k, n, boot=None):
+        return {"k": k, "n": n, "value": round(k / n, 4) if n else None, "wilson": wilson(k, n) if n else None, "bootstrap": boot}
+
+    def add(id, group, label, fn, params=None, passed=None, limit=None, no_kn=False):
+        e = {"id": id, "group": group, "label": "ui.testing.s.f." + label, "measures": "ui.testing.s.m." + label, "params": params or {}, "cells": {c: fn(c) for c in conds},
+             "source": SS_METRICS, "split": "stress", "date": env["started"][:10]}
+        if no_kn:
+            e["no_kn"] = True
+        if passed is not None:
+            e["passed"], e["limit"] = passed, limit
+        entries.append(e)
+
+    P = lambda name: crit[name]["passed"]  # noqa: E731
+    add("p1", "crit", "p1", lambda c: cell(g(c, "silent_not_covered_by_flag"), g(c, "gt_pairs")), passed=P("P1_silent_misses_not_covered_by_flag"), limit="zero")
+    add("p2", "crit", "p2", lambda c: cell(g(c, "nondaily_schedule_ready"), g(c, "nondaily_gt") - g(c, "nondaily_not_extracted")), passed=P("P2_nondaily_schedule_ready"), limit="zero")
+    add("p3", "crit", "p3", lambda c: cell(g(c, "ir_wrong_generic"), g(c, "ir_total")), passed=P("P3_wrong_resolved_generic_among_interaction_ready"), limit="zero")
+    add("p4", "crit", "p4", lambda c: cell(g(c, "ov_found_right_level"), g(c, "ov_gt_pairs_extracted")), passed=P("P4_overlay_every_extracted_gt_pair_found_at_right_level"), limit="all")
+    for key, grp in (("raw", "detect_raw"), ("normalised", "detect_norm")):
+        for name in ("precision", "recall"):
+            add(f"{name}_{key}", grp, name, lambda c, name=name, key=key: cell(pooled[c][f"{name}_{key}"]["k"], pooled[c][f"{name}_{key}"]["n"], pooled[c][f"{name}_{key}"]["bootstrap95"]))
+        add(f"f1_{key}", grp, "f1", lambda c, key=key: {"k": None, "n": None, "value": pooled[c][f"f1_{key}"]["value"], "wilson": None, "bootstrap": pooled[c][f"f1_{key}"]["bootstrap95"]}, no_kn=True)
+    add("hall", "detect_norm", "hall", lambda c: cell(g(c, "hallucinated"), g(c, "pred_meds")))
+    for lvl in ("must_confirm", "note", "none"):
+        add(f"review_{lvl}", "review", "review_" + lvl, lambda c, lvl=lvl: cell(g(c, f"review_{lvl}"), g(c, "gt_meds") + g(c, "hallucinated")))
+    levels = ("major", "moderate", "minor", "unknown")
+    for lvl in levels:
+        add(f"gt_{lvl}", "inter", "gt_level", lambda c, lvl=lvl: cell(pooled[c]["levels_ground_truth"].get(lvl, 0), g(c, "gt_pairs")), params={"level": "ui.testing.s.lvl." + lvl})
+    add("found", "inter", "found", lambda c: cell(pooled[c]["found_rate"]["k"], pooled[c]["found_rate"]["n"], pooled[c]["found_rate"]["bootstrap95"]))
+    add("found_right", "inter", "found_right", lambda c: cell(pooled[c]["found_right_level_rate"]["k"], pooled[c]["found_right_level_rate"]["n"], pooled[c]["found_right_level_rate"]["bootstrap95"]))
+    for lvl in levels:
+        add(f"fd_{lvl}", "inter", "fd_level", lambda c, lvl=lvl: cell(pooled[c]["levels_found"].get(lvl, 0), g(c, "gt_pairs")), params={"level": "ui.testing.s.lvl." + lvl})
+    add("strict", "inter", "strict", lambda c: cell(g(c, "strict_silent_misses"), g(c, "gt_pairs")))
+    add("unconf", "inter", "unconf", lambda c: cell(g(c, "unconfirmed"), g(c, "gt_pairs")))
+    add("other", "inter", "other", lambda c: cell(sum(pooled[c]["other_outcomes"].values()), g(c, "gt_pairs")))
+    add("false", "inter", "false", lambda c: cell(g(c, "false_alarms"), g(c, "found") + g(c, "false_alarms")))
+    add("dup", "checks", "dup", lambda c: cell(g(c, "dup_groups_flagged"), g(c, "dup_gt_groups")))
+    add("nondaily", "checks", "nondaily", lambda c: cell(g(c, "nondaily_flagged"), g(c, "nondaily_gt") - g(c, "nondaily_not_extracted")))
+    add("eye_od", "checks", "eye_od", lambda c: cell(g(c, "eye_ambiguous_OD"), g(c, "eye_extracted")))
+    add("eye_sched", "checks", "eye_sched", lambda c: cell(g(c, "eye_schedule_ready"), g(c, "eye_extracted")))
+    add("unusual", "checks", "unusual", lambda c: cell(g(c, "unusual_doc_flagged"), m["conditions"][c]["by_category"]["unusual_strength"]["documents"]))
+    add("garbled", "checks", "garbled", lambda c: cell(g(c, "garbled_flagged"), g(c, "garbled_gt") - g(c, "garbled_not_extracted")))
+    add("garbled_ready", "checks", "garbled_ready", lambda c: cell(g(c, "garbled_interaction_ready"), g(c, "garbled_gt") - g(c, "garbled_not_extracted")))
+    add("ov_equal", "overlay", "ov_equal", lambda c: cell(g(c, "ov_equal_to_gt_mode"), pooled[c]["documents"]))
+    add("ov_newly", "overlay", "ov_newly", lambda c: cell(g(c, "ov_newly_found"), g(c, "unconfirmed")))
+    add("ov_false", "overlay", "ov_false", lambda c: cell(g(c, "ov_false_alarms"), g(c, "ov_found_right_level") + g(c, "ov_false_alarms")))
+    add("failed", "ops", "failed", lambda c: cell(len(m["conditions"][c]["failed"]), docs))
+    gids = ["crit", "detect_raw", "detect_norm", "review", "inter", "checks", "overlay", "ops"]
+    if {e["group"] for e in entries} != set(gids):
+        raise SystemExit("stress groups out of sync")
+    params = {"docs": docs, "conditions": len(conds), "readings": docs * len(conds), "meds": g(conds[0], "gt_meds"), "pairs": g(conds[0], "gt_pairs"),
+              "failed": sum(len(m["conditions"][c]["failed"]) for c in conds), "running": env["ollama_version_running"], "pinned": env["ollama_version_pinned"], "level": 95}
+    return {"run": True, "date": env["started"][:10], "source": SS_METRICS, "conditions": conds, "params": params, "groups": gids, "entries": entries,
+            "also": {"doc": "docs/STRESS_RESULTS.md", "source": SS_METRICS, "per_doc": f"{SS}/per_document.csv"}}
+
+
 def build() -> dict:
     n2, p3e, st, p4, live, form = (load(s) for s in (N2, P3E, STRESS, P4, LIVE, FORMULARY))
     verify_final_folder()
@@ -239,6 +326,7 @@ def build() -> dict:
                   "note": "Every figure on /how-we-tested-it is read from this file. Synthetic documents only."},
         "final_test": {"run": True, "source": FT_METRICS, "rule": "the 40-document test split was used once (final-test-v1); see docs/FINAL_TEST_RESULTS.md"},
         "test": test_section(),
+        "stress_ext": stress_section(),
         "limits_params": limits,
         "groups": ["extraction", "invented", "flags", "verification", "language", "safety", "live"],
         "entries": entries,

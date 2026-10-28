@@ -9,7 +9,8 @@
    "eval/results/phase4-dev-with-supplement/metrics.json",
    "docs/smoke/phase6d_live.json",
    "data/reference/formulary.json",
-   "eval/results/final-test-v1/metrics.json"
+   "eval/results/final-test-v1/metrics.json",
+   "eval/results/stress-extraction-v1/metrics.json"
   ],
   "dates": "commit date of each source file (RUN_DATES)",
   "note": "Every figure on /how-we-tested-it is read from this file. Synthetic documents only."
@@ -1303,6 +1304,1353 @@
    "doc": "docs/FINAL_TEST_RESULTS.md",
    "source": "eval/results/final-test-v1/metrics.json",
    "per_doc": "eval/results/final-test-v1/per_document.csv"
+  }
+ },
+ "stress_ext": {
+  "run": true,
+  "date": "2026-10-28",
+  "source": "eval/results/stress-extraction-v1/metrics.json",
+  "conditions": [
+   "clean",
+   "photo"
+  ],
+  "params": {
+   "docs": 30,
+   "conditions": 2,
+   "readings": 60,
+   "meds": 104,
+   "pairs": 102,
+   "failed": 0,
+   "running": "0.40.11",
+   "pinned": "0.40.5",
+   "level": 95
+  },
+  "groups": [
+   "crit",
+   "detect_raw",
+   "detect_norm",
+   "review",
+   "inter",
+   "checks",
+   "overlay",
+   "ops"
+  ],
+  "entries": [
+   {
+    "id": "p1",
+    "group": "crit",
+    "label": "ui.testing.s.f.p1",
+    "measures": "ui.testing.s.m.p1",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 0,
+      "n": 102,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0363
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 0,
+      "n": 102,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0363
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28",
+    "passed": true,
+    "limit": "zero"
+   },
+   {
+    "id": "p2",
+    "group": "crit",
+    "label": "ui.testing.s.f.p2",
+    "measures": "ui.testing.s.m.p2",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 0,
+      "n": 3,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.5615
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 0,
+      "n": 3,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.5615
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28",
+    "passed": true,
+    "limit": "zero"
+   },
+   {
+    "id": "p3",
+    "group": "crit",
+    "label": "ui.testing.s.f.p3",
+    "measures": "ui.testing.s.m.p3",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 0,
+      "n": 56,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0642
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 0,
+      "n": 57,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0631
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28",
+    "passed": true,
+    "limit": "zero"
+   },
+   {
+    "id": "p4",
+    "group": "crit",
+    "label": "ui.testing.s.f.p4",
+    "measures": "ui.testing.s.m.p4",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 102,
+      "n": 102,
+      "value": 1.0,
+      "wilson": [
+       0.9637,
+       1.0
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 102,
+      "n": 102,
+      "value": 1.0,
+      "wilson": [
+       0.9637,
+       1.0
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28",
+    "passed": true,
+    "limit": "all"
+   },
+   {
+    "id": "precision_raw",
+    "group": "detect_raw",
+    "label": "ui.testing.s.f.precision",
+    "measures": "ui.testing.s.m.precision",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 104,
+      "n": 104,
+      "value": 1.0,
+      "wilson": [
+       0.9644,
+       1.0
+      ],
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     },
+     "photo": {
+      "k": 104,
+      "n": 104,
+      "value": 1.0,
+      "wilson": [
+       0.9644,
+       1.0
+      ],
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "recall_raw",
+    "group": "detect_raw",
+    "label": "ui.testing.s.f.recall",
+    "measures": "ui.testing.s.m.recall",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 104,
+      "n": 104,
+      "value": 1.0,
+      "wilson": [
+       0.9644,
+       1.0
+      ],
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     },
+     "photo": {
+      "k": 104,
+      "n": 104,
+      "value": 1.0,
+      "wilson": [
+       0.9644,
+       1.0
+      ],
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "f1_raw",
+    "group": "detect_raw",
+    "label": "ui.testing.s.f.f1",
+    "measures": "ui.testing.s.m.f1",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": null,
+      "n": null,
+      "value": 1.0,
+      "wilson": null,
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     },
+     "photo": {
+      "k": null,
+      "n": null,
+      "value": 1.0,
+      "wilson": null,
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28",
+    "no_kn": true
+   },
+   {
+    "id": "precision_normalised",
+    "group": "detect_norm",
+    "label": "ui.testing.s.f.precision",
+    "measures": "ui.testing.s.m.precision",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 104,
+      "n": 104,
+      "value": 1.0,
+      "wilson": [
+       0.9644,
+       1.0
+      ],
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     },
+     "photo": {
+      "k": 104,
+      "n": 104,
+      "value": 1.0,
+      "wilson": [
+       0.9644,
+       1.0
+      ],
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "recall_normalised",
+    "group": "detect_norm",
+    "label": "ui.testing.s.f.recall",
+    "measures": "ui.testing.s.m.recall",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 104,
+      "n": 104,
+      "value": 1.0,
+      "wilson": [
+       0.9644,
+       1.0
+      ],
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     },
+     "photo": {
+      "k": 104,
+      "n": 104,
+      "value": 1.0,
+      "wilson": [
+       0.9644,
+       1.0
+      ],
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "f1_normalised",
+    "group": "detect_norm",
+    "label": "ui.testing.s.f.f1",
+    "measures": "ui.testing.s.m.f1",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": null,
+      "n": null,
+      "value": 1.0,
+      "wilson": null,
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     },
+     "photo": {
+      "k": null,
+      "n": null,
+      "value": 1.0,
+      "wilson": null,
+      "bootstrap": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28",
+    "no_kn": true
+   },
+   {
+    "id": "hall",
+    "group": "detect_norm",
+    "label": "ui.testing.s.f.hall",
+    "measures": "ui.testing.s.m.hall",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 0,
+      "n": 104,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0356
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 0,
+      "n": 104,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0356
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "review_must_confirm",
+    "group": "review",
+    "label": "ui.testing.s.f.review_must_confirm",
+    "measures": "ui.testing.s.m.review_must_confirm",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 48,
+      "n": 104,
+      "value": 0.4615,
+      "wilson": [
+       0.3688,
+       0.557
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 47,
+      "n": 104,
+      "value": 0.4519,
+      "wilson": [
+       0.3597,
+       0.5476
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "review_note",
+    "group": "review",
+    "label": "ui.testing.s.f.review_note",
+    "measures": "ui.testing.s.m.review_note",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 6,
+      "n": 104,
+      "value": 0.0577,
+      "wilson": [
+       0.0267,
+       0.1202
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 7,
+      "n": 104,
+      "value": 0.0673,
+      "wilson": [
+       0.033,
+       0.1325
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "review_none",
+    "group": "review",
+    "label": "ui.testing.s.f.review_none",
+    "measures": "ui.testing.s.m.review_none",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 50,
+      "n": 104,
+      "value": 0.4808,
+      "wilson": [
+       0.3872,
+       0.5758
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 50,
+      "n": 104,
+      "value": 0.4808,
+      "wilson": [
+       0.3872,
+       0.5758
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "gt_major",
+    "group": "inter",
+    "label": "ui.testing.s.f.gt_level",
+    "measures": "ui.testing.s.m.gt_level",
+    "params": {
+     "level": "ui.testing.s.lvl.major"
+    },
+    "cells": {
+     "clean": {
+      "k": 5,
+      "n": 102,
+      "value": 0.049,
+      "wilson": [
+       0.0211,
+       0.1097
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 5,
+      "n": 102,
+      "value": 0.049,
+      "wilson": [
+       0.0211,
+       0.1097
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "gt_moderate",
+    "group": "inter",
+    "label": "ui.testing.s.f.gt_level",
+    "measures": "ui.testing.s.m.gt_level",
+    "params": {
+     "level": "ui.testing.s.lvl.moderate"
+    },
+    "cells": {
+     "clean": {
+      "k": 47,
+      "n": 102,
+      "value": 0.4608,
+      "wilson": [
+       0.3672,
+       0.5572
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 47,
+      "n": 102,
+      "value": 0.4608,
+      "wilson": [
+       0.3672,
+       0.5572
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "gt_minor",
+    "group": "inter",
+    "label": "ui.testing.s.f.gt_level",
+    "measures": "ui.testing.s.m.gt_level",
+    "params": {
+     "level": "ui.testing.s.lvl.minor"
+    },
+    "cells": {
+     "clean": {
+      "k": 4,
+      "n": 102,
+      "value": 0.0392,
+      "wilson": [
+       0.0154,
+       0.0965
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 4,
+      "n": 102,
+      "value": 0.0392,
+      "wilson": [
+       0.0154,
+       0.0965
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "gt_unknown",
+    "group": "inter",
+    "label": "ui.testing.s.f.gt_level",
+    "measures": "ui.testing.s.m.gt_level",
+    "params": {
+     "level": "ui.testing.s.lvl.unknown"
+    },
+    "cells": {
+     "clean": {
+      "k": 46,
+      "n": 102,
+      "value": 0.451,
+      "wilson": [
+       0.3579,
+       0.5476
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 46,
+      "n": 102,
+      "value": 0.451,
+      "wilson": [
+       0.3579,
+       0.5476
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "found",
+    "group": "inter",
+    "label": "ui.testing.s.f.found",
+    "measures": "ui.testing.s.m.found",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 38,
+      "n": 102,
+      "value": 0.3725,
+      "wilson": [
+       0.2849,
+       0.4694
+      ],
+      "bootstrap": [
+       0.1321,
+       0.631
+      ]
+     },
+     "photo": {
+      "k": 38,
+      "n": 102,
+      "value": 0.3725,
+      "wilson": [
+       0.2849,
+       0.4694
+      ],
+      "bootstrap": [
+       0.1321,
+       0.631
+      ]
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "found_right",
+    "group": "inter",
+    "label": "ui.testing.s.f.found_right",
+    "measures": "ui.testing.s.m.found_right",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 38,
+      "n": 102,
+      "value": 0.3725,
+      "wilson": [
+       0.2849,
+       0.4694
+      ],
+      "bootstrap": [
+       0.1321,
+       0.631
+      ]
+     },
+     "photo": {
+      "k": 38,
+      "n": 102,
+      "value": 0.3725,
+      "wilson": [
+       0.2849,
+       0.4694
+      ],
+      "bootstrap": [
+       0.1321,
+       0.631
+      ]
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "fd_major",
+    "group": "inter",
+    "label": "ui.testing.s.f.fd_level",
+    "measures": "ui.testing.s.m.fd_level",
+    "params": {
+     "level": "ui.testing.s.lvl.major"
+    },
+    "cells": {
+     "clean": {
+      "k": 1,
+      "n": 102,
+      "value": 0.0098,
+      "wilson": [
+       0.0017,
+       0.0535
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 1,
+      "n": 102,
+      "value": 0.0098,
+      "wilson": [
+       0.0017,
+       0.0535
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "fd_moderate",
+    "group": "inter",
+    "label": "ui.testing.s.f.fd_level",
+    "measures": "ui.testing.s.m.fd_level",
+    "params": {
+     "level": "ui.testing.s.lvl.moderate"
+    },
+    "cells": {
+     "clean": {
+      "k": 16,
+      "n": 102,
+      "value": 0.1569,
+      "wilson": [
+       0.0989,
+       0.2397
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 15,
+      "n": 102,
+      "value": 0.1471,
+      "wilson": [
+       0.0912,
+       0.2285
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "fd_minor",
+    "group": "inter",
+    "label": "ui.testing.s.f.fd_level",
+    "measures": "ui.testing.s.m.fd_level",
+    "params": {
+     "level": "ui.testing.s.lvl.minor"
+    },
+    "cells": {
+     "clean": {
+      "k": 1,
+      "n": 102,
+      "value": 0.0098,
+      "wilson": [
+       0.0017,
+       0.0535
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 1,
+      "n": 102,
+      "value": 0.0098,
+      "wilson": [
+       0.0017,
+       0.0535
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "fd_unknown",
+    "group": "inter",
+    "label": "ui.testing.s.f.fd_level",
+    "measures": "ui.testing.s.m.fd_level",
+    "params": {
+     "level": "ui.testing.s.lvl.unknown"
+    },
+    "cells": {
+     "clean": {
+      "k": 20,
+      "n": 102,
+      "value": 0.1961,
+      "wilson": [
+       0.1307,
+       0.2835
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 21,
+      "n": 102,
+      "value": 0.2059,
+      "wilson": [
+       0.1388,
+       0.2943
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "strict",
+    "group": "inter",
+    "label": "ui.testing.s.f.strict",
+    "measures": "ui.testing.s.m.strict",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 64,
+      "n": 102,
+      "value": 0.6275,
+      "wilson": [
+       0.5306,
+       0.7151
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 64,
+      "n": 102,
+      "value": 0.6275,
+      "wilson": [
+       0.5306,
+       0.7151
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "unconf",
+    "group": "inter",
+    "label": "ui.testing.s.f.unconf",
+    "measures": "ui.testing.s.m.unconf",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 64,
+      "n": 102,
+      "value": 0.6275,
+      "wilson": [
+       0.5306,
+       0.7151
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 64,
+      "n": 102,
+      "value": 0.6275,
+      "wilson": [
+       0.5306,
+       0.7151
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "other",
+    "group": "inter",
+    "label": "ui.testing.s.f.other",
+    "measures": "ui.testing.s.m.other",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 0,
+      "n": 102,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0363
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 0,
+      "n": 102,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0363
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "false",
+    "group": "inter",
+    "label": "ui.testing.s.f.false",
+    "measures": "ui.testing.s.m.false",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 0,
+      "n": 38,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0918
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 0,
+      "n": 38,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0918
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "dup",
+    "group": "checks",
+    "label": "ui.testing.s.f.dup",
+    "measures": "ui.testing.s.m.dup",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 3,
+      "n": 3,
+      "value": 1.0,
+      "wilson": [
+       0.4385,
+       1.0
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 3,
+      "n": 3,
+      "value": 1.0,
+      "wilson": [
+       0.4385,
+       1.0
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "nondaily",
+    "group": "checks",
+    "label": "ui.testing.s.f.nondaily",
+    "measures": "ui.testing.s.m.nondaily",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 3,
+      "n": 3,
+      "value": 1.0,
+      "wilson": [
+       0.4385,
+       1.0
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 3,
+      "n": 3,
+      "value": 1.0,
+      "wilson": [
+       0.4385,
+       1.0
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "eye_od",
+    "group": "checks",
+    "label": "ui.testing.s.f.eye_od",
+    "measures": "ui.testing.s.m.eye_od",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 3,
+      "n": 3,
+      "value": 1.0,
+      "wilson": [
+       0.4385,
+       1.0
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 3,
+      "n": 3,
+      "value": 1.0,
+      "wilson": [
+       0.4385,
+       1.0
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "eye_sched",
+    "group": "checks",
+    "label": "ui.testing.s.f.eye_sched",
+    "measures": "ui.testing.s.m.eye_sched",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 0,
+      "n": 3,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.5615
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 0,
+      "n": 3,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.5615
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "unusual",
+    "group": "checks",
+    "label": "ui.testing.s.f.unusual",
+    "measures": "ui.testing.s.m.unusual",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 3,
+      "n": 3,
+      "value": 1.0,
+      "wilson": [
+       0.4385,
+       1.0
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 3,
+      "n": 3,
+      "value": 1.0,
+      "wilson": [
+       0.4385,
+       1.0
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "garbled",
+    "group": "checks",
+    "label": "ui.testing.s.f.garbled",
+    "measures": "ui.testing.s.m.garbled",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 3,
+      "n": 3,
+      "value": 1.0,
+      "wilson": [
+       0.4385,
+       1.0
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 2,
+      "n": 3,
+      "value": 0.6667,
+      "wilson": [
+       0.2077,
+       0.9385
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "garbled_ready",
+    "group": "checks",
+    "label": "ui.testing.s.f.garbled_ready",
+    "measures": "ui.testing.s.m.garbled_ready",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 0,
+      "n": 3,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.5615
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 0,
+      "n": 3,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.5615
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "ov_equal",
+    "group": "overlay",
+    "label": "ui.testing.s.f.ov_equal",
+    "measures": "ui.testing.s.m.ov_equal",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 30,
+      "n": 30,
+      "value": 1.0,
+      "wilson": [
+       0.8865,
+       1.0
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 29,
+      "n": 30,
+      "value": 0.9667,
+      "wilson": [
+       0.8333,
+       0.9941
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "ov_newly",
+    "group": "overlay",
+    "label": "ui.testing.s.f.ov_newly",
+    "measures": "ui.testing.s.m.ov_newly",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 64,
+      "n": 64,
+      "value": 1.0,
+      "wilson": [
+       0.9434,
+       1.0
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 64,
+      "n": 64,
+      "value": 1.0,
+      "wilson": [
+       0.9434,
+       1.0
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "ov_false",
+    "group": "overlay",
+    "label": "ui.testing.s.f.ov_false",
+    "measures": "ui.testing.s.m.ov_false",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 0,
+      "n": 102,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.0363
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 2,
+      "n": 104,
+      "value": 0.0192,
+      "wilson": [
+       0.0053,
+       0.0674
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   },
+   {
+    "id": "failed",
+    "group": "ops",
+    "label": "ui.testing.s.f.failed",
+    "measures": "ui.testing.s.m.failed",
+    "params": {},
+    "cells": {
+     "clean": {
+      "k": 0,
+      "n": 30,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.1135
+      ],
+      "bootstrap": null
+     },
+     "photo": {
+      "k": 0,
+      "n": 30,
+      "value": 0.0,
+      "wilson": [
+       0.0,
+       0.1135
+      ],
+      "bootstrap": null
+     }
+    },
+    "source": "eval/results/stress-extraction-v1/metrics.json",
+    "split": "stress",
+    "date": "2026-10-28"
+   }
+  ],
+  "also": {
+   "doc": "docs/STRESS_RESULTS.md",
+   "source": "eval/results/stress-extraction-v1/metrics.json",
+   "per_doc": "eval/results/stress-extraction-v1/per_document.csv"
   }
  },
  "limits_params": {

@@ -41,7 +41,10 @@ type TestData = {
   entries: TestEntry[]
   also: { doc: string; source: string; per_doc: string }
 }
-type Data = { final_test: { run: boolean }; test: TestData; limits_params: Record<string, number>; groups: string[]; entries: Entry[] }
+type Cell = { k: number | null; n: number | null; value: number | null; wilson: [number, number] | null; bootstrap: [number, number] | null }
+type StressEntry = { id: string; group: string; label: string; measures: string; params: Record<string, string | number>; cells: Record<string, Cell>; source: string; split: 'stress'; date: string; no_kn?: boolean; passed?: boolean; limit?: 'zero' | 'all' }
+type StressData = { run: boolean; date: string; conditions: string[]; params: Record<string, string | number>; groups: string[]; entries: StressEntry[]; also: { doc: string; source: string; per_doc: string } }
+type Data = { final_test: { run: boolean }; test: TestData; stress_ext: StressData; limits_params: Record<string, number>; groups: string[]; entries: Entry[] }
 const DATA = raw as unknown as Data
 const LIMITS = ['l1', 'l2', 'l3', 'l4', 'l5', 'l6', 'l7', 'l8', 'l9', 'l10'] as const
 /** test group -> the string id of its data line */
@@ -78,6 +81,8 @@ export function TestingPage() {
           <p className="t-notrun">{t('ui.testing.final.not_run')}</p>
         </section>
       )}
+
+      {DATA.stress_ext.run ? <StressSection /> : null}
 
       <section aria-labelledby="td-h" className="tdev">
         <h2 id="td-h" className="h3-like">{t('ui.testing.t.dev_heading')}</h2>
@@ -239,6 +244,84 @@ function TestSection() {
         )
       })}
       <p className="t-also">{fill(t('ui.testing.t.also'), { ...gp, ...T.also })}</p>
+    </section>
+  )
+}
+
+function StressSection() {
+  const { t } = useT()
+  const S = DATA.stress_ext
+  const gp = S.params
+  const resolve = (p: Record<string, string | number>) => Object.fromEntries(Object.entries(p).map(([k, v]) => [k, typeof v === 'string' && v.startsWith('ui.') ? t(v) : v]))
+  return (
+    <section aria-labelledby="ts-h" className="tgroup tstress">
+      <h2 id="ts-h" className="h3-like">{t('ui.testing.s.title')}</h2>
+      <p className="lede">{fill(t('ui.testing.s.intro'), gp)}</p>
+      <p className="t-run">{fill(t('ui.testing.s.run'), { ...gp, date: S.date })}</p>
+      <Notice tone="important"><p>{fill(t('ui.testing.s.deviation'), gp)}</p></Notice>
+      {S.groups.map((g) => {
+        const rows = S.entries.filter((e) => e.group === g)
+        return (
+          <section key={g} aria-labelledby={`ts-${g}`} className="tgroup">
+            <h3 id={`ts-${g}`} className="h3-like">{t(`ui.testing.s.g.${g}`)}</h3>
+            <p className="group-data">
+              <strong>{fill(t('ui.testing.s.d.all'), gp)}</strong>
+              <span className="muted small">{`${t('ui.testing.split.stress')} · ${fill(t('ui.testing.t.rundate'), { date: S.date })}`}</span>
+            </p>
+            <div className="table-wrap" tabIndex={0} role="region" aria-labelledby={`ts-${g}`}>
+              <table className="testing-table">
+                <caption className="sr-only">{`${t('ui.testing.table.caption')} ${t(`ui.testing.s.g.${g}`)}`}</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">{t('ui.testing.col.measure')}</th>
+                    {S.conditions.map((c) => (
+                      <th key={c} scope="col">{t(`ui.testing.s.col_${c}`)}</th>
+                    ))}
+                    <th scope="col">{t('ui.testing.col.measures')}</th>
+                    <th scope="col">{t('ui.testing.col.source')}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {rows.map((e) => {
+                    const params = { ...gp, ...resolve(e.params) }
+                    return (
+                      <tr key={e.id} data-sfigure={e.id}>
+                        <th scope="row" data-label={t('ui.testing.col.measure')}>
+                          {fill(t(e.label), params)}
+                          {e.limit ? <span className="muted small t-limit">{t(`ui.testing.s.limit_${e.limit === 'zero' ? 'zero' : 'all'}`)}</span> : null}
+                          {e.passed !== undefined ? (
+                            <span className={e.passed ? 't-met small' : 't-outside small'}>
+                              <Icon name={e.passed ? 'check' : 'alert'} />{t(e.passed ? 'ui.testing.s.met' : 'ui.testing.s.notmet')}
+                            </span>
+                          ) : null}
+                        </th>
+                        {S.conditions.map((c) => {
+                          const x = e.cells[c]
+                          return (
+                            <td key={c} data-label={t(`ui.testing.s.col_${c}`)} className="t-result" data-cond={c}>
+                              <strong>{x.value === null ? '' : pct(x.value)}</strong>
+                              {!e.no_kn && x.k !== null && x.n !== null ? <span className="muted small">{fill(t('ui.testing.k_of_n'), { n: x.k, of: x.n })}</span> : null}
+                              {x.wilson ? <span className="muted small t-ci t-wilson">{`[${pct(x.wilson[0])}, ${pct(x.wilson[1])}] ${fill(t('ui.testing.t.ci_wilson'), gp)}`}</span> : null}
+                              {x.bootstrap ? <span className="muted small t-ci t-boot">{`[${pct(x.bootstrap[0])}, ${pct(x.bootstrap[1])}] ${fill(t('ui.testing.t.ci_boot'), gp)}`}</span> : null}
+                            </td>
+                          )
+                        })}
+                        <td data-label={t('ui.testing.col.measures')} className="t-measures">
+                          <p>{fill(t(e.measures), params)}</p>
+                        </td>
+                        <td data-label={t('ui.testing.col.source')}>
+                          <code className="t-source">{e.source}</code>
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )
+      })}
+      <p className="t-also">{fill(t('ui.testing.s.also'), S.also)}</p>
     </section>
   )
 }
