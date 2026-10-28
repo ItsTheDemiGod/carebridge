@@ -1,13 +1,17 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import type { Lang } from '../api/client'
 import { isDemoPath } from '../demo/demoApi'
+import { DEMO_ONLY } from '../lib/mode'
 import { readPref, writePref } from '../lib/prefs'
 import { STRINGS, isLang, translate } from './translate'
 
 type Ctx = { lang: Lang; setLang: (l: Lang) => void; t: (key: string, vars?: Record<string, string | number>) => string; status: (key: string) => string }
 /** In the sample a few ui.* texts are replaced by ui.demo.alt.<rest> (e.g. "saved" wording: nothing is saved there). */
 const demoKey = (key: string) => {
-  if (typeof window === 'undefined' || !isDemoPath(window.location.pathname) || !key.startsWith('ui.')) return key
+  if (!key.startsWith('ui.')) return key
+  // hosted-sample build only (a build-time constant): texts that promise uploading or reading the visitor's own document get a true wording, ui.hosted.alt.<rest>
+  if (DEMO_ONLY && STRINGS.en[`ui.hosted.alt.${key.slice(3)}`]) return `ui.hosted.alt.${key.slice(3)}`
+  if (typeof window === 'undefined' || !isDemoPath(window.location.pathname)) return key
   const alt = `ui.demo.alt.${key.slice(3)}`
   return STRINGS.en[alt] ? alt : key
 }

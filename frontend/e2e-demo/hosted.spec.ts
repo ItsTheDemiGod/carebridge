@@ -157,3 +157,19 @@ test('the sample works end to end in the hosted build (intro, review, save, resu
   expect(w.requests.filter((u) => /\/api(\/|$)/.test(new URL(u).pathname))).toEqual([])
   expect(w.errors.filter((m) => !m.includes('status of 404'))).toEqual([]) // the one 404 line is the deep-link document served as 404.html, as on Pages
 })
+
+test('hosted wording: no promise to upload, process a photo or read the visitor\'s own document; no claim that nothing is sent anywhere', async ({ browser }) => {
+  const ctx = await browser.newContext({ reducedMotion: 'reduce', viewport: { width: 1280, height: 900 } })
+  const page = await ctx.newPage()
+  await goto(page, '')
+  await expect(page.locator('.hero .lede')).toHaveText(STR.en['ui.hosted.alt.hero.sub'].text)
+  const promises = ['Upload a photo of a prescription', 'You upload a photo', 'Take a clear photo', 'Your photo is read on this computer', 'Nothing is sent to external services', 'We list each medicine we found', 'Get a short explanation', 'Start with a photo']
+  for (const route of ['', 'how-it-works', 'privacy']) {
+    await goto(page, route)
+    await page.locator('main h1').first().waitFor()
+    const text = await page.locator('main').innerText()
+    for (const p of promises) expect(text, `/${route} contains "${p}"`).not.toContain(p)
+    expect(text).not.toMatch(/nothing at all|nothing is sent anywhere|nothing is requested/i)
+  }
+  await ctx.close()
+})
