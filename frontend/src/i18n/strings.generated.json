@@ -1328,6 +1328,10 @@
    "text": "Project code and test results",
    "review_status": "not_required"
   },
+  "ui.hosted.pp.intro": {
+   "text": "This is the notice a person is asked to accept before uploading anything in the real app. This hosted sample has no upload and no server.",
+   "review_status": "not_required"
+  },
   "ui.hosted.pp.nodelete": {
    "text": "This hosted sample stores nothing, so there is nothing to delete here. The real app, running on a person's own computer, has a delete-my-data function.",
    "review_status": "not_required"
@@ -4230,6 +4234,10 @@
    "text": "திட்டத்தின் நிரலும் சோதனை முடிவுகளும்",
    "review_status": "draft_unreviewed"
   },
+  "ui.hosted.pp.intro": {
+   "text": "உண்மையான செயலியில் எதையும் பதிவேற்றும் முன் ஒருவர் ஏற்க வேண்டிய அறிவிப்பு இது. இந்த மாதிரி இணையதளத்தில் பதிவேற்றமும் சேவையகமும் இல்லை.",
+   "review_status": "draft_unreviewed"
+  },
   "ui.hosted.pp.nodelete": {
    "text": "இந்த மாதிரி இணையதளம் எதையும் சேமிப்பதில்லை, எனவே இங்கே நீக்க எதுவும் இல்லை. ஒருவரின் சொந்தக் கணினியில் இயங்கும் உண்மையான செயலியில் என் தரவை நீக்கும் வசதி உள்ளது.",
    "review_status": "draft_unreviewed"
@@ -7130,6 +7138,10 @@
   },
   "ui.hosted.link_repo": {
    "text": "प्रोजेक्ट का कोड और परीक्षण के नतीजे",
+   "review_status": "draft_unreviewed"
+  },
+  "ui.hosted.pp.intro": {
+   "text": "यह वह सूचना है जिसे असली ऐप में कुछ भी अपलोड करने से पहले स्वीकार करने को कहा जाता है। इस होस्ट किए गए नमूने में न अपलोड है, न सर्वर।",
    "review_status": "draft_unreviewed"
   },
   "ui.hosted.pp.nodelete": {

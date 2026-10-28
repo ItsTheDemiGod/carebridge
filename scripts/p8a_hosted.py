@@ -32,3 +32,7 @@ s("ui.hosted.pp.nodelete",
   "This hosted sample stores nothing, so there is nothing to delete here. The real app, running on a person's own computer, has a delete-my-data function.",
   "இந்த மாதிரி இணையதளம் எதையும் சேமிப்பதில்லை, எனவே இங்கே நீக்க எதுவும் இல்லை. ஒருவரின் சொந்தக் கணினியில் இயங்கும் உண்மையான செயலியில் என் தரவை நீக்கும் வசதி உள்ளது.",
   "यह होस्ट किया गया नमूना कुछ भी सहेजता नहीं, इसलिए यहाँ मिटाने को कुछ नहीं है। किसी के अपने कंप्यूटर पर चलने वाले असली ऐप में मेरा डेटा मिटाने की सुविधा है।")
+s("ui.hosted.pp.intro",
+  "This is the notice a person is asked to accept before uploading anything in the real app. This hosted sample has no upload and no server.",
+  "உண்மையான செயலியில் எதையும் பதிவேற்றும் முன் ஒருவர் ஏற்க வேண்டிய அறிவிப்பு இது. இந்த மாதிரி இணையதளத்தில் பதிவேற்றமும் சேவையகமும் இல்லை.",
+  "यह वह सूचना है जिसे असली ऐप में कुछ भी अपलोड करने से पहले स्वीकार करने को कहा जाता है। इस होस्ट किए गए नमूने में न अपलोड है, न सर्वर।")

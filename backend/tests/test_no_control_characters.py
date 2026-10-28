@@ -5,7 +5,7 @@ import subprocess
 
 from app.services.guards import REPO
 
-BAD = re.compile("[\x00-\x08\x0b\x0c\x0e-\x1f�]")
+BAD = re.compile("[" + "".join(map(chr, [*range(0, 9), 11, 12, *range(14, 32), 0xFFFD])) + "]")  # built from code points so this file holds none itself
 TEXT = (".md", ".py", ".ts", ".tsx", ".json", ".csv", ".txt", ".yml", ".yaml", ".css", ".html", ".mjs", ".js", ".toml", ".cfg", ".example", ".webmanifest", ".svg")
 
 

@@ -15,3 +15,6 @@
 2. If the model or backend fails: say so, open `/demo` ("Try a sample document" on the landing page and on the unreachable message), and say it is pre-recorded.
 3. Walk: Start the sample, pick Metformin for the flagged row, Save, Results (switch language), Schedule, Summary.
 4. Do not present the sample as a live result or its timings or counts as performance.
+
+**Hosted sample (Phase 8a)**: the same sample is published with GitHub Pages at https://itsthedemigod.github.io/carebridge/ (expected address) from a demo-only build: `docs/DEPLOY.md`. Under that build every real-flow route shows a plain "sample only" page, the Privacy page uses a static copy of the consent notice, and nothing calls an API. Licence note for the DDInter excerpt: `frontend/src/demo/fixtures/README.md`.
+
