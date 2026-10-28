@@ -40,7 +40,61 @@ Pooled per condition (Wilson 95% | document bootstrap 95%, seed 20261018, 2000 r
 - ground-truth pairs found as `interaction_found` from the real extraction: 38/102 = 0.373 in each condition; Wilson [0.285, 0.469]; document bootstrap [0.132, 0.631]. At the right level: 38 of 38 found.
 - medicines needing confirmation (`must_confirm`): 48/104 clean, 47/104 photo (about 46%); `note` 6 and 7; none 50 and 50.
 
-TABLES_HERE
+#### `clean`: detection, review load and interactions (levels = major/moderate/minor/unknown)
+
+| category | docs | gt meds | detected raw / norm | halluc. | review must/note/none | gt pairs (levels) | found (levels) | unconfirmed | other | strict silent | silent not flag-covered | false alarms | overlay right / of | overlay false alarms |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| major_pair | 3 | 9 | 9 / 9 | 0 | 4/0/5 | 8 (3/2/0/3) | 3 (1/0/0/2) | 5 | 0 | 5 | 0 | 0 | 8 / 8 | 0 |
+| moderate_pair | 3 | 9 | 9 / 9 | 0 | 5/0/4 | 5 (0/3/0/2) | 1 (0/1/0/0) | 4 | 0 | 4 | 0 | 0 | 5 / 5 | 0 |
+| supplement_pair | 3 | 9 | 9 / 9 | 0 | 4/1/4 | 3 (0/0/0/3) | 2 (0/0/0/2) | 1 | 0 | 1 | 0 | 0 | 3 / 3 | 0 |
+| duplicate | 3 | 9 | 9 / 9 | 0 | 6/1/2 | 2 (0/0/0/2) | 0 (0/0/0/0) | 2 | 0 | 2 | 0 | 0 | 2 / 2 | 0 |
+| garbled_name | 3 | 9 | 9 / 9 | 0 | 3/0/6 | 2 (0/0/0/2) | 2 (0/0/0/2) | 0 | 0 | 0 | 0 | 0 | 2 / 2 | 0 |
+| weekly | 3 | 9 | 9 / 9 | 0 | 7/0/2 | 1 (0/0/0/1) | 0 (0/0/0/0) | 1 | 0 | 1 | 0 | 0 | 1 / 1 | 0 |
+| unusual_strength | 3 | 6 | 6 / 6 | 0 | 3/1/2 | 2 (0/1/1/0) | 0 (0/0/0/0) | 2 | 0 | 2 | 0 | 0 | 2 / 2 | 0 |
+| eye_drop_od | 3 | 9 | 9 / 9 | 0 | 4/0/5 | 1 (0/0/0/1) | 1 (0/0/0/1) | 0 | 0 | 0 | 0 | 0 | 1 / 1 | 0 |
+| long_list | 3 | 24 | 24 / 24 | 0 | 10/2/12 | 78 (2/41/3/32) | 29 (0/15/1/13) | 49 | 0 | 49 | 0 | 0 | 78 / 78 | 0 |
+| control | 3 | 11 | 11 / 11 | 0 | 2/1/8 | 0 (0/0/0/0) | 0 (0/0/0/0) | 0 | 0 | 0 | 0 | 0 | 0 / 0 | 0 |
+
+#### `clean`: category-specific checks
+
+| category | check | result |
+|---|---|---|
+| duplicate | ground-truth duplicate groups / groups with a notice / notices | 3 / 3 / 3 |
+| weekly | non-daily medicines in ground truth / extracted / flagged non_daily_frequency / schedule_ready | 3 / 3 / 3 / 0 |
+| eye_drop_od | eye drops / extracted / ambiguous_OD fired / schedule_ready | 3 / 3 / 3 / 0 |
+| unusual_strength | documents / documents with unusual_strength flag | 3 / 3 |
+| garbled_name | garbled medicines / extracted / name flag (near_miss or unresolved) / interaction_ready | 3 / 3 / 3 / 0 |
+| all | interaction_ready medicines / wrong resolved_generic | 56 / 0 |
+
+unconfirmed causes (counted per non-ready medicine in an unconfirmed pair): {'role_corrected': 32, 'duplicate_name_fields': 52, 'incomplete_quote': 9, 'unusual_strength': 2}; latency {'n': 30, 'mean': 29.9, 'max': 53.16, 'total': 898.1}
+
+#### `photo`: detection, review load and interactions (levels = major/moderate/minor/unknown)
+
+| category | docs | gt meds | detected raw / norm | halluc. | review must/note/none | gt pairs (levels) | found (levels) | unconfirmed | other | strict silent | silent not flag-covered | false alarms | overlay right / of | overlay false alarms |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| major_pair | 3 | 9 | 9 / 9 | 0 | 4/0/5 | 8 (3/2/0/3) | 3 (1/0/0/2) | 5 | 0 | 5 | 0 | 0 | 8 / 8 | 0 |
+| moderate_pair | 3 | 9 | 9 / 9 | 0 | 4/0/5 | 5 (0/3/0/2) | 1 (0/1/0/0) | 4 | 0 | 4 | 0 | 0 | 5 / 5 | 0 |
+| supplement_pair | 3 | 9 | 9 / 9 | 0 | 4/1/4 | 3 (0/0/0/3) | 2 (0/0/0/2) | 1 | 0 | 1 | 0 | 0 | 3 / 3 | 0 |
+| duplicate | 3 | 9 | 9 / 9 | 0 | 6/0/3 | 2 (0/0/0/2) | 0 (0/0/0/0) | 2 | 0 | 2 | 0 | 0 | 2 / 2 | 0 |
+| garbled_name | 3 | 9 | 9 / 9 | 0 | 4/0/5 | 2 (0/0/0/2) | 2 (0/0/0/2) | 0 | 0 | 0 | 0 | 0 | 2 / 2 | 2 |
+| weekly | 3 | 9 | 9 / 9 | 0 | 7/0/2 | 1 (0/0/0/1) | 0 (0/0/0/0) | 1 | 0 | 1 | 0 | 0 | 1 / 1 | 0 |
+| unusual_strength | 3 | 6 | 6 / 6 | 0 | 3/1/2 | 2 (0/1/1/0) | 0 (0/0/0/0) | 2 | 0 | 2 | 0 | 0 | 2 / 2 | 0 |
+| eye_drop_od | 3 | 9 | 9 / 9 | 0 | 3/0/6 | 1 (0/0/0/1) | 1 (0/0/0/1) | 0 | 0 | 0 | 0 | 0 | 1 / 1 | 0 |
+| long_list | 3 | 24 | 24 / 24 | 0 | 10/2/12 | 78 (2/41/3/32) | 29 (0/14/1/14) | 49 | 0 | 49 | 0 | 0 | 78 / 78 | 0 |
+| control | 3 | 11 | 11 / 11 | 0 | 2/3/6 | 0 (0/0/0/0) | 0 (0/0/0/0) | 0 | 0 | 0 | 0 | 0 | 0 / 0 | 0 |
+
+#### `photo`: category-specific checks
+
+| category | check | result |
+|---|---|---|
+| duplicate | ground-truth duplicate groups / groups with a notice / notices | 3 / 3 / 3 |
+| weekly | non-daily medicines in ground truth / extracted / flagged non_daily_frequency / schedule_ready | 3 / 3 / 3 / 0 |
+| eye_drop_od | eye drops / extracted / ambiguous_OD fired / schedule_ready | 3 / 3 / 3 / 0 |
+| unusual_strength | documents / documents with unusual_strength flag | 3 / 3 |
+| garbled_name | garbled medicines / extracted / name flag (near_miss or unresolved) / interaction_ready | 3 / 3 / 2 / 0 |
+| all | interaction_ready medicines / wrong resolved_generic | 57 / 0 |
+
+unconfirmed causes (counted per non-ready medicine in an unconfirmed pair): {'duplicate_name_fields': 54, 'role_corrected': 23, 'unusual_strength': 2, 'incomplete_quote': 13, 'unresolved_name': 7, 'near_miss_name': 7}; latency {'n': 30, 'mean': 28.1, 'max': 52.91, 'total': 843.6}
 
 ## 4. Case review (descriptive; ids and short field excerpts only)
 **4.1 Interactions not reported as `interaction_found`: 64 of 102 pairs in each condition.** All 64 were `not_checked_unconfirmed` (0 "medicine not extracted", 0 other statuses, 0 silent), so each was covered by a flag. The cause is a must_confirm reason on a medicine whose name was read correctly (detection 104/104); the pair is withheld until the user confirms. Causes counted per non-ready medicine in an unconfirmed pair: `clean` role_corrected 32, duplicate_name_fields 52, incomplete_quote 9, unusual_strength 2; `photo` duplicate_name_fields 54, role_corrected 23, incomplete_quote 13, unresolved_name 7, near_miss_name 7, unusual_strength 2.
