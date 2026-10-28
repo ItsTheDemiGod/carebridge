@@ -171,5 +171,7 @@ test('hosted wording: no promise to upload, process a photo or read the visitor\
     for (const p of promises) expect(text, `/${route} contains "${p}"`).not.toContain(p)
     expect(text).not.toMatch(/nothing at all|nothing is sent anywhere|nothing is requested/i)
   }
+  await goto(page, 'privacy')
+  await expect(page.locator('main')).toContainText(STR.en['ui.hosted.pp.github'].text) // GitHub hosting, its own logging, no cookies, no analytics, nothing loaded from other sites
   await ctx.close()
 })

@@ -39,6 +39,8 @@ export function PrivacyPage() {
       <SectionHeading as="h1" label={t('ui.nav.privacy')} title={t('ui.pp.title')} />
       <p className="lede">{DEMO_ONLY ? t('ui.hosted.pp.intro') : t('ui.pp.intro')}</p>
 
+      {DEMO_ONLY ? <p className="hosted-github">{t('ui.hosted.pp.github')}</p> : null}
+
       <div className="notice-slot" aria-live="polite">
         {state.kind === 'loading' ? <p className="muted">{t('ui.pp.loading')}</p> : null}
         {state.kind === 'error' ? (
