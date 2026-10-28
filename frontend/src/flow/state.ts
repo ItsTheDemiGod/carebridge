@@ -1,5 +1,6 @@
 /* Flow state: a small reducer, no library. NOTHING here is persisted: a reload rebuilds it from GET /session and GET /documents.
  * The only client storage in the whole app is language and calm mode (lib/prefs.ts). */
+import { DEMO_ONLY } from '../lib/mode'
 import type { Problem } from '../api/errors'
 import type { DeleteReceipt, DocView, Lang, SessionState } from '../api/types'
 
@@ -85,4 +86,5 @@ export function stageForPath(path: string): Stage | null {
   if (/^\/d\/[^/]+\/(schedule|summary)$/.test(path)) return 'schedule'
   return null
 }
-export const isFlowPath = (path: string) => /^\/(start|consent|upload|documents)$/.test(path) || /^\/d\/[^/]+\//.test(path) || path === '/demo' || path.startsWith('/demo/')
+const isDemoRoute = (path: string) => path === '/demo' || path.startsWith('/demo/')
+export const isFlowPath = (path: string) => DEMO_ONLY ? isDemoRoute(path) : /^\/(start|consent|upload|documents)$/.test(path) || /^\/d\/[^/]+\//.test(path) || isDemoRoute(path)

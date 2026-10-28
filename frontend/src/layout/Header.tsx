@@ -5,6 +5,7 @@ import { Icon } from '../components/icons'
 import { DemoStrip } from '../demo/DemoBar'
 import { useIsDemo } from '../demo/useDemo'
 import { DeleteControl } from '../flow/DeleteControl'
+import { DEMO_ONLY } from '../lib/mode'
 import { useT } from '../i18n/I18n'
 import { LANGS } from '../i18n/translate'
 import { Wordmark } from './Wordmark'
@@ -74,7 +75,7 @@ export function Header() {
           <Wordmark />
         </Link>
         {demo ? <span className="sample-tag">{t('ui.demo.tag')}</span> : null}
-        <DeleteControl iconOnly />
+        {DEMO_ONLY ? null : <DeleteControl iconOnly />}
         <button ref={btn} type="button" className="menu-btn" aria-expanded={open} aria-controls="site-menu" onClick={() => setOpenKey(open ? null : loc.key)}>
           <Icon name={open ? 'close' : 'menu'} size={20} />
           <span>{t('ui.nav.menu')}</span>
@@ -85,13 +86,13 @@ export function Header() {
             <NavLink to="/how-we-tested-it">{t('ui.nav.testing')}</NavLink>
             <NavLink to="/privacy">{t('ui.nav.privacy')}</NavLink>
             <Link to="/#limits">{t('ui.nav.limits')}</Link>
-            <NavLink to="/documents">{t('ui.nav.docs_c')}</NavLink>
+            {DEMO_ONLY ? null : <NavLink to="/documents">{t('ui.nav.docs_c')}</NavLink>}
           </nav>
-          <NavLink to="/start" className="btn btn-primary nav-start">
-            {t('ui.nav.start_c')}
+          <NavLink to={DEMO_ONLY ? '/demo' : '/start'} className="btn btn-primary nav-start">
+            {DEMO_ONLY ? t('ui.demo.try') : t('ui.nav.start_c')}
           </NavLink>
           <div className="header-tools">
-            <DeleteControl />
+            {DEMO_ONLY ? null : <DeleteControl />}
             <LanguageSwitcher />
             <CalmToggle />
           </div>

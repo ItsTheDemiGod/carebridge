@@ -2,6 +2,7 @@
 
 import { ApiError } from './apiError'
 import { demoApi, isDemoPath } from '../demo/demoApi'
+import { DEMO_ONLY } from '../lib/mode'
 
 export { ApiError }
 
@@ -11,7 +12,7 @@ export type Options = { method?: string; body?: unknown; raw?: { data: Blob; typ
 
 export async function api<T>(path: string, opts: Options = {}): Promise<T> {
   // the sample (/demo) is answered from bundled fixtures in memory: no request leaves the page
-  if (typeof window !== 'undefined' && isDemoPath(window.location.pathname)) return demoApi<T>(path, opts)
+  if (DEMO_ONLY || (typeof window !== 'undefined' && isDemoPath(window.location.pathname))) return demoApi<T>(path, opts) // hosted sample: no request ever leaves the page
   const method = (opts.method ?? 'GET').toUpperCase()
   const headers: Record<string, string> = { Accept: 'application/json' }
   if (STATE_CHANGING.has(method)) headers['X-CareBridge-Request'] = '1'

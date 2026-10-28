@@ -5,6 +5,7 @@ import { Notice } from '../components/Badges'
 import { Container, SectionHeading } from '../components/Layout'
 import { SampleLink } from '../demo/DemoBar'
 import { useT } from '../i18n/I18n'
+import { DEMO_ONLY } from '../lib/mode'
 import { usePageTitle } from './usePageTitle'
 
 type State = { kind: 'loading' } | { kind: 'error' } | { kind: 'ok'; notice: ConsentNotice }
@@ -19,6 +20,11 @@ export function PrivacyPage() {
   useEffect(() => {
     const ctl = new AbortController()
     setState({ kind: 'loading' })
+    if (DEMO_ONLY) {
+      // hosted sample: the notice was copied into the build from the same templates (scripts/build_static_privacy.py); no request
+      void import('../data/consent-notice.generated.json').then((m) => setState({ kind: 'ok', notice: (m.default as unknown as Record<string, ConsentNotice>)[lang] }))
+      return
+    }
     getConsentNotice(lang, ctl.signal)
       .then((notice) => setState({ kind: 'ok', notice }))
       .catch((e) => {
@@ -49,6 +55,7 @@ export function PrivacyPage() {
         {state.kind === 'ok' ? (
           <article className="consent-article">
             <p className="label">{t('ui.pp.version', { version: state.notice.version })}</p>
+            {DEMO_ONLY ? <p className="muted small">{t('ui.hosted.pp.note', { version: state.notice.version })}</p> : null}
             <h2 className="h3-like">{state.notice.title}</h2>
             <ol className="consent-list">
               {state.notice.items.map((i) => (
@@ -65,10 +72,12 @@ export function PrivacyPage() {
       </div>
 
       <Notice tone="important" title={t('ui.pp.delete.title')}>
-        <p>{t('ui.pp.delete.body')}</p>
-        <ButtonLink to="/documents" variant="secondary" icon="trash">
-          {t('ui.flow.delete.button')}
-        </ButtonLink>
+        <p>{DEMO_ONLY ? t('ui.hosted.pp.nodelete') : t('ui.pp.delete.body')}</p>
+        {DEMO_ONLY ? null : (
+          <ButtonLink to="/documents" variant="secondary" icon="trash">
+            {t('ui.flow.delete.button')}
+          </ButtonLink>
+        )}
       </Notice>
     </Container>
   )

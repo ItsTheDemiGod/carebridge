@@ -14,6 +14,7 @@ import add_phase6c_templates as P6C  # noqa: E402
 import add_phase6d_templates as P6D  # noqa: E402
 import add_phase7b_templates as P7B  # noqa: E402
 import add_phase7c_templates as P7C  # noqa: E402
+import add_phase8a_templates as P8A  # noqa: E402
 import export_ui_strings as E  # noqa: E402
 
 # "safe" and "safely" as words; the others as phrases. "unsafe" and "safety" are different words and are not matched.
@@ -22,8 +23,8 @@ UI = {tid: v for tid, v in T.load()["strings"].items() if tid.startswith("ui.")}
 
 
 def test_all_new_ids_are_in_templates_as_drafts():
-    assert set(P6.NEW) | set(P6B.NEW) | set(P6C.NEW) | set(P6D.NEW) | set(P7B.NEW) | set(P7C.NEW) == set(UI)
-    assert len(P6.NEW) + len(P6B.NEW) + len(P6C.NEW) + len(P6D.NEW) + len(P7B.NEW) + len(P7C.NEW) == len(UI)  # no id defined twice
+    assert set(P6.NEW) | set(P6B.NEW) | set(P6C.NEW) | set(P6D.NEW) | set(P7B.NEW) | set(P7C.NEW) | set(P8A.NEW) == set(UI)
+    assert len(P6.NEW) + len(P6B.NEW) + len(P6C.NEW) + len(P6D.NEW) + len(P7B.NEW) + len(P7C.NEW) + len(P8A.NEW) == len(UI)  # no id defined twice
     for v in UI.values():
         assert v["en"]["review_status"] == "not_required" and v["ta"]["review_status"] == v["hi"]["review_status"] == "draft_unreviewed"
 

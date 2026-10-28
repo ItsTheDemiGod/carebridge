@@ -53,3 +53,6 @@ scan_output/
 *.sqlite3
 *.key
 *.pem
+
+# Phase 8a: hosted-sample build output
+frontend/dist-demo/

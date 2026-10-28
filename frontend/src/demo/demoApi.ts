@@ -4,10 +4,14 @@
 import { ApiError } from '../api/apiError'
 import type { Options } from '../api/client'
 import type { Lang } from '../api/types'
+import { stripBase, withBase } from '../lib/mode'
 
 export const DEMO_ID = 'demo'
-export const DEMO_IMAGE = '/demo/sample-document.png'
-export const isDemoPath = (p: string) => p === '/demo' || p.startsWith('/demo/')
+export const DEMO_IMAGE = withBase('demo/sample-document.png')
+export const isDemoPath = (raw: string) => {
+  const p = stripBase(raw)
+  return p === '/demo' || p.startsWith('/demo/')
+}
 
 type Fixtures = typeof import('./fixtures').fixtures
 type Json = Record<string, any> // eslint-disable-line @typescript-eslint/no-explicit-any

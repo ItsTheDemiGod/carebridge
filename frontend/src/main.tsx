@@ -6,7 +6,7 @@ import { routes } from './App.tsx'
 import { MotionProvider } from './ambient/motion'
 import { I18nProvider } from './i18n/I18n'
 
-const router = createBrowserRouter(routes)
+const router = createBrowserRouter(routes, { basename: import.meta.env.BASE_URL })
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

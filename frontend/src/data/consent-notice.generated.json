@@ -1,0 +1,209 @@
+{
+ "en": {
+  "version": "2",
+  "language": "en",
+  "sha256": "ec085b2cfd730dd7810517c0854c7599d518b09cab20332e92ae490a84ca385b",
+  "title": "Before we start",
+  "items": [
+   {
+    "id": "what",
+    "text": "CareBridge reads a photo of your medical document and explains it in simple words."
+   },
+   {
+    "id": "where",
+    "text": "The photo is read on this computer by a local model. Nothing is sent to any outside service."
+   },
+   {
+    "id": "stored",
+    "text": "We keep the results, not the photo, unless you choose to keep the photo. Everything we keep is encrypted."
+   },
+   {
+    "id": "how_long",
+    "text": "Saved results are kept until you delete them or 24 hours pass, whichever comes first."
+   },
+   {
+    "id": "delete",
+    "text": "You can delete everything now with one button. This also withdraws your consent."
+   },
+   {
+    "id": "no_sharing",
+    "text": "We do not sell or share your data."
+   },
+   {
+    "id": "prototype",
+    "text": "This is a class project prototype. It is not medical advice. Always confirm with your doctor or pharmacist."
+   },
+   {
+    "id": "translation_draft",
+    "text": "The Tamil and Hindi texts are machine-drafted and have not been reviewed by native speakers."
+   },
+   {
+    "id": "interaction_limited",
+    "text": "The interaction information is limited. It was drafted from official drug labels by the project author and has not been reviewed by a pharmacist."
+   },
+   {
+    "id": "contact",
+    "text": "Questions? Contact: Demian."
+   }
+  ],
+  "purposes": [
+   {
+    "id": "process_photo",
+    "label": "Read the photo of my document (required)",
+    "required": true,
+    "default": true
+   },
+   {
+    "id": "store_results_for_session",
+    "label": "Save the results for this session (required)",
+    "required": true,
+    "default": true
+   },
+   {
+    "id": "keep_photo_for_session",
+    "label": "Also keep the photo for this session (optional)",
+    "required": false,
+    "default": false
+   }
+  ],
+  "review_status": "not_required"
+ },
+ "ta": {
+  "version": "2",
+  "language": "ta",
+  "sha256": "5f2e949434efec4587b0e7d06029b868b57bdb85d9111940174940657c27a346",
+  "title": "தொடங்குவதற்கு முன்",
+  "items": [
+   {
+    "id": "what",
+    "text": "கேர்பிரிட்ஜ் உங்கள் மருத்துவ ஆவணத்தின் புகைப்படத்தைப் படித்து எளிய சொற்களில் விளக்குகிறது."
+   },
+   {
+    "id": "where",
+    "text": "புகைப்படம் இந்தக் கணினியிலேயே உள்ளூர் மாதிரியால் படிக்கப்படுகிறது. எந்த வெளிச் சேவைக்கும் எதுவும் அனுப்பப்படுவதில்லை."
+   },
+   {
+    "id": "stored",
+    "text": "நீங்கள் புகைப்படத்தை வைத்திருக்கத் தேர்வு செய்யாவிட்டால், முடிவுகளை மட்டும் வைத்திருப்போம், புகைப்படத்தை அல்ல. நாங்கள் வைத்திருப்பவை அனைத்தும் மறையாக்கம் செய்யப்படும்."
+   },
+   {
+    "id": "how_long",
+    "text": "சேமித்த முடிவுகள் நீங்கள் அவற்றை நீக்கும் வரை அல்லது 24 மணி நேரம் கடக்கும் வரை, எது முதலில் வருகிறதோ அதுவரை வைக்கப்படும்."
+   },
+   {
+    "id": "delete",
+    "text": "ஒரே பொத்தானால் எல்லாவற்றையும் இப்போதே நீக்கலாம். இது உங்கள் ஒப்புதலையும் திரும்பப் பெறும்."
+   },
+   {
+    "id": "no_sharing",
+    "text": "உங்கள் தரவை நாங்கள் விற்கவோ பகிரவோ மாட்டோம்."
+   },
+   {
+    "id": "prototype",
+    "text": "இது ஒரு வகுப்புத் திட்ட மாதிரி. இது மருத்துவ ஆலோசனை அல்ல. எப்போதும் உங்கள் மருத்துவர் அல்லது மருந்தாளருடன் உறுதிசெய்யுங்கள்."
+   },
+   {
+    "id": "translation_draft",
+    "text": "தமிழ் மற்றும் இந்தி உரைகள் இயந்திரத்தால் வரையப்பட்டவை; தாய்மொழி பேசுபவர்கள் அவற்றைச் சரிபார்க்கவில்லை."
+   },
+   {
+    "id": "interaction_limited",
+    "text": "இடைவினைத் தகவல் குறைவானது. இது அதிகாரப்பூர்வ மருந்து லேபிள்களிலிருந்து திட்ட ஆசிரியரால் தயாரிக்கப்பட்டது; மருந்தாளர் இதைச் சரிபார்க்கவில்லை."
+   },
+   {
+    "id": "contact",
+    "text": "கேள்விகள் உள்ளதா? தொடர்புக்கு: Demian."
+   }
+  ],
+  "purposes": [
+   {
+    "id": "process_photo",
+    "label": "என் ஆவணத்தின் புகைப்படத்தைப் படிக்க (கட்டாயம்)",
+    "required": true,
+    "default": true
+   },
+   {
+    "id": "store_results_for_session",
+    "label": "இந்த அமர்வுக்கு முடிவுகளைச் சேமிக்க (கட்டாயம்)",
+    "required": true,
+    "default": true
+   },
+   {
+    "id": "keep_photo_for_session",
+    "label": "இந்த அமர்வுக்கு புகைப்படத்தையும் வைத்திருக்க (விருப்பம்)",
+    "required": false,
+    "default": false
+   }
+  ],
+  "review_status": "draft_unreviewed"
+ },
+ "hi": {
+  "version": "2",
+  "language": "hi",
+  "sha256": "48f4cae46b9faa4cc2a3d84779be06584f9a56f43aab256cfe73f9c0f9fd23ed",
+  "title": "शुरू करने से पहले",
+  "items": [
+   {
+    "id": "what",
+    "text": "केयरब्रिज आपके चिकित्सा दस्तावेज़ की फ़ोटो पढ़ता है और उसे आसान शब्दों में समझाता है।"
+   },
+   {
+    "id": "where",
+    "text": "फ़ोटो इसी कंप्यूटर पर एक स्थानीय मॉडल द्वारा पढ़ी जाती है। किसी बाहरी सेवा को कुछ नहीं भेजा जाता।"
+   },
+   {
+    "id": "stored",
+    "text": "जब तक आप फ़ोटो रखने का चुनाव नहीं करते, हम केवल नतीजे रखते हैं, फ़ोटो नहीं। जो कुछ हम रखते हैं वह सब एन्क्रिप्ट किया जाता है।"
+   },
+   {
+    "id": "how_long",
+    "text": "सहेजे गए नतीजे तब तक रखे जाते हैं जब तक आप उन्हें मिटा नहीं देते या 24 घंटे नहीं बीत जाते, जो भी पहले हो।"
+   },
+   {
+    "id": "delete",
+    "text": "आप एक बटन से अभी सब कुछ मिटा सकते हैं। इससे आपकी सहमति भी वापस हो जाती है।"
+   },
+   {
+    "id": "no_sharing",
+    "text": "हम आपका डेटा न बेचते हैं, न साझा करते हैं।"
+   },
+   {
+    "id": "prototype",
+    "text": "यह एक कक्षा परियोजना का प्रोटोटाइप है। यह चिकित्सा सलाह नहीं है। हमेशा अपने डॉक्टर या फ़ार्मासिस्ट से पुष्टि करें।"
+   },
+   {
+    "id": "translation_draft",
+    "text": "तमिल और हिंदी पाठ मशीन से तैयार किए गए हैं और किसी मातृभाषी ने उनकी जाँच नहीं की है।"
+   },
+   {
+    "id": "interaction_limited",
+    "text": "इंटरैक्शन की जानकारी सीमित है। इसे आधिकारिक दवा लेबलों से परियोजना लेखक ने तैयार किया है और किसी फ़ार्मासिस्ट ने इसकी जाँच नहीं की है।"
+   },
+   {
+    "id": "contact",
+    "text": "सवाल हैं? संपर्क करें: Demian।"
+   }
+  ],
+  "purposes": [
+   {
+    "id": "process_photo",
+    "label": "मेरे दस्तावेज़ की फ़ोटो पढ़ना (ज़रूरी)",
+    "required": true,
+    "default": true
+   },
+   {
+    "id": "store_results_for_session",
+    "label": "इस सत्र के लिए नतीजे सहेजना (ज़रूरी)",
+    "required": true,
+    "default": true
+   },
+   {
+    "id": "keep_photo_for_session",
+    "label": "इस सत्र के लिए फ़ोटो भी रखना (वैकल्पिक)",
+    "required": false,
+    "default": false
+   }
+  ],
+  "review_status": "draft_unreviewed"
+ }
+}

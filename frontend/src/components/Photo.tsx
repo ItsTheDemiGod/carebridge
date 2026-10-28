@@ -1,4 +1,5 @@
 import { useState, type CSSProperties, type ReactNode } from 'react'
+import { withBase } from '../lib/mode'
 import manifest from '../photos.manifest.json'
 import { Icon } from './icons'
 
@@ -28,12 +29,12 @@ export function Photo({ name, alt, missingLabel, sizes = '(min-width: 64rem) 40v
       </div>
     )
   }
-  const set = (ext: string) => e.widths.map((w) => `/photos/${name}-${w}.${ext} ${w}w`).join(', ')
+  const set = (ext: string) => e.widths.map((w) => `${withBase(`photos/${name}-${w}.${ext}`)} ${w}w`).join(', ')
   return (
     <div className={`photo ${duotone ? 'photo-duotone' : ''} ${className}`.trim()} style={{ aspectRatio: `${e.width} / ${e.height}` } as CSSProperties}>
       <picture>
         <source type="image/webp" srcSet={set('webp')} sizes={sizes} />
-        <img src={`/photos/${name}-${e.widths[Math.min(1, e.widths.length - 1)]}.jpg`} srcSet={set('jpg')} sizes={sizes} width={e.width} height={e.height} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setFailed(true)} />
+        <img src={withBase(`photos/${name}-${e.widths[Math.min(1, e.widths.length - 1)]}.jpg`)} srcSet={set('jpg')} sizes={sizes} width={e.width} height={e.height} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setFailed(true)} />
       </picture>
     </div>
   )

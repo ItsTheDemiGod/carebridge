@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Icon } from '../components/icons'
 import { useT } from '../i18n/I18n'
+import { DEMO_ONLY } from '../lib/mode'
 import manifest from '../photos.manifest.json'
 import { Wordmark } from './Wordmark'
 
@@ -20,10 +21,12 @@ export function Footer() {
             <Icon name="info" size={20} />
             <Link to="/privacy">{t('ui.footer.contact')}</Link>
           </p>
-          <p className="footer-contact">
-            <Icon name="trash" size={20} />
-            <Link to="/documents">{t('ui.flow.delete.button')}</Link>
-          </p>
+          {DEMO_ONLY ? null : (
+            <p className="footer-contact">
+              <Icon name="trash" size={20} />
+              <Link to="/documents">{t('ui.flow.delete.button')}</Link>
+            </p>
+          )}
           <p id="calm-explain" className="footer-small">
             <strong>{t('ui.calm.label')}.</strong> {t('ui.calm.explain')}
           </p>

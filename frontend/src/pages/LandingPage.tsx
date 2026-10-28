@@ -10,6 +10,7 @@ import { Photo } from '../components/Photo'
 import { Reveal } from '../components/Reveal'
 import { useFlow } from '../flow/FlowProvider'
 import { useT } from '../i18n/I18n'
+import { DEMO_ONLY } from '../lib/mode'
 import { LANGS, STRINGS, translate } from '../i18n/translate'
 import { usePageTitle } from './usePageTitle'
 
@@ -50,17 +51,26 @@ export function LandingPage() {
           <h1 className="display">{t('ui.hero.title')}</h1>
           <p className="lede">{t('ui.hero.sub')}</p>
           <div className="hero-actions">
-            <ButtonLink to="/start" icon="arrow">
-              {t('ui.hero.cta')}
-            </ButtonLink>
+            {DEMO_ONLY ? (
+              <ButtonLink to="/demo" icon="arrow" className="try-sample">
+                {t('ui.demo.try')}
+              </ButtonLink>
+            ) : (
+              <ButtonLink to="/start" icon="arrow">
+                {t('ui.hero.cta')}
+              </ButtonLink>
+            )}
             <ButtonLink to="/how-it-works" variant="quiet">
               {t('ui.hero.link')}
             </ButtonLink>
-            <ButtonLink to="/demo" variant="quiet" className="try-sample">
-              {t('ui.demo.try')}
-            </ButtonLink>
+            {DEMO_ONLY ? null : (
+              <ButtonLink to="/demo" variant="quiet" className="try-sample">
+                {t('ui.demo.try')}
+              </ButtonLink>
+            )}
           </div>
           <p className="hero-note small muted">{t('ui.hero.note')}</p>
+          {DEMO_ONLY ? <p className="hero-note small hosted-note" role="note">{t('ui.hosted.landing_note')}</p> : null}
         </div>
         <div className="hero-art">
           <Mosaic />
