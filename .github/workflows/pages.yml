@@ -1,0 +1,55 @@
+# Deploys the hosted SAMPLE site (the pre-recorded demo and the public pages) to GitHub Pages. No backend, no model, no secrets: see docs/DEPLOY.md.
+name: Deploy sample site to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install from the lockfile
+        run: npm ci
+      - name: Unit tests
+        run: npm test
+      - name: Build the sample-only site under /carebridge/
+        run: npm run build:demo
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload the built folder
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist-demo
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
