@@ -13,7 +13,7 @@ End goal: a professional web app first; a mobile app only if time allows. Colleg
 - Frontend installed: react-router-dom, framer-motion, Tailwind v4, gsap, @fontsource (Fraunces, Noto Sans/Tamil/Devanagari, Noto Serif Tamil/Devanagari), vitest, @playwright/test, @axe-core/playwright. NOT installed (ask first): tsparticles, three.js, UI kits, icon libraries.
 
 ## Folder layout
-- CLAUDE.md, README.md, .gitignore
+- CLAUDE.md, README.md (public overview), LICENSE (MIT), THIRD_PARTY_NOTICES.md, .gitignore
 - docs/PROGRESS.md, docs/DECISIONS.md
 - backend/ : FastAPI app (app/, tests/, requirements.txt, .env.example)
 - frontend/ : Vite React TS app
@@ -140,7 +140,7 @@ Backend (from `backend/`; venv is `backend/.venv`, built with Python 3.12):
 Frontend (from `frontend/`):
 - `npm install`; `npm run dev` (port 5173, proxies /api to localhost:8000); `npm run build`
 
-Phases 2 to 7 commands (render, evaluate, re-score, DDInter, frontend tests, final test, stress set, usability): see README.md and docs/PHASE7_PLAN.md.
+Phases 2 to 7 commands (render, evaluate, re-score, DDInter, frontend tests, final test, stress set, usability): see docs/COMMANDS.md (moved from README.md) and docs/PHASE7_PLAN.md.
 
 ## Phase 7 rules (docs/FINAL_TEST_PROTOCOL.md, PHASE7_PLAN.md)
 - TEST-SPLIT LOCK: the 40 test documents (ids, text, ground truth, renders, cached outputs) are never opened, printed, hashed or listed except by `eval/final_test/run_final.py` at run time in Phase 7b (read-only descriptive case review only in 7b-posthoc, no excerpts beyond field level); tests use a synthetic fixture repo. Never use `--final-test-run` outside 7b.

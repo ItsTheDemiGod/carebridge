@@ -46,3 +46,10 @@ data/stress/rendered/
 data/real_photos/
 data/usability_samples/mapping.json
 scan_output/
+
+# Phase 8a: secrets and databases never tracked
+*.db
+*.sqlite
+*.sqlite3
+*.key
+*.pem
