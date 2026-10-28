@@ -1,0 +1,52 @@
+{
+ "run_id": "stress-extraction-v1",
+ "label": "stress set, authored, not tuned, not the test split",
+ "environment": {
+  "ollama_version_running": "0.40.11",
+  "ollama_version_pinned": "0.40.5",
+  "model": "qwen3-vl:8b-instruct",
+  "model_digest_running": "0533d74300e4f9bc367d675d4e64ffd073d50ff16a2b4096cc2e8a1cf8c96319",
+  "model_digest_pinned": "0533d74300e4f9bc367d675d4e64ffd073d50ff16a2b4096cc2e8a1cf8c96319",
+  "digest_identical_to_pin": true,
+  "deviation": "Ollama version differs from the pin (pin file unchanged); see docs/STRESS_EXTRACTION_PROTOCOL.md section 2",
+  "settings": {
+   "num_ctx": 6144,
+   "num_predict": 3000,
+   "max_image_side": 1280,
+   "temperature": 0.0
+  },
+  "extraction_prompt_version": "v1",
+  "git_commit": "c36ae828010db6cdeca6319027a2e18d11c3dcc2",
+  "started": "2026-10-28T18:34:34",
+  "gpu_share_at_start": 1.0,
+  "finished": "2026-10-28T19:03:36"
+ },
+ "run_facts": {
+  "model_calls": 60,
+  "resumed_from_disk": 0,
+  "duration_s_this_invocation": 1742.0
+ },
+ "protocol": "docs/STRESS_EXTRACTION_PROTOCOL.md",
+ "conditions": [
+  "clean",
+  "photo"
+ ],
+ "failed": {
+  "clean": [],
+  "photo": []
+ },
+ "latency": {
+  "clean": {
+   "n": 30,
+   "mean": 29.9,
+   "max": 53.16,
+   "total": 898.1
+  },
+  "photo": {
+   "n": 30,
+   "mean": 28.1,
+   "max": 52.91,
+   "total": 843.6
+  }
+ }
+}
