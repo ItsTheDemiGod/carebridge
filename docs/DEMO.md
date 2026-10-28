@@ -18,3 +18,6 @@
 
 **Hosted sample (Phase 8a)**: the same sample is published with GitHub Pages at https://itsthedemigod.github.io/carebridge/ (expected address) from a demo-only build: `docs/DEPLOY.md`. Under that build every real-flow route shows a plain "sample only" page, the Privacy page uses a static copy of the consent notice, and nothing calls an API. Licence note for the DDInter excerpt: `frontend/src/demo/fixtures/README.md`.
 
+
+## Deterministic fixtures (clock)
+`doctor_summary_*.json` used to depend on the time of day: with no events the API's summary covers "today" and counts a slot as missed once its time has passed. The builder now requests the fully elapsed day 2026-01-01 (`SUMMARY_DAY`), so every slot counts as missed whatever the clock says. This is the value the sample page recomputes anyway (`summaryView` in `demoApi.ts`). Backend code is unchanged. `test_fixtures_do_not_depend_on_the_time_of_day` rebuilds under a fake clock at 00:01, 12:00 and 23:59.

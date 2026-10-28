@@ -50,6 +50,18 @@ def test_builder_calls_no_model_and_matches_committed_fixtures(built):
     assert {p.name for p in FIX.glob("*.json")} == set(built[0])
 
 
+@pytest.mark.parametrize("hhmm", [(0, 1), (12, 0), (23, 59)])
+def test_fixtures_do_not_depend_on_the_time_of_day(built, monkeypatch, hhmm):
+    # the doctor summary counts a slot as missed once its time has passed; the builder asks for a fully elapsed day so the clock must not matter
+    from datetime import datetime
+
+    from app.api import routes_schedule
+
+    monkeypatch.setattr(routes_schedule, "local_now", lambda: datetime(2026, 10, 28, *hhmm))
+    for name, text in B.render(B.build()).items():
+        assert (FIX / name).read_text(encoding="utf-8") == text, f"{name} changed at {hhmm}"
+
+
 def test_every_fixture_has_the_provenance_header():
     for f in FIX.glob("*.json"):
         m = json.loads(f.read_text(encoding="utf-8"))["_meta"]

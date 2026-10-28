@@ -43,6 +43,7 @@ SCRIPTED = {  # medicine index -> formulary id picked in the sample (the garbled
 }
 QUERIES = ["metf", "gli", "atorva"]  # picker searches recorded for the sample
 H = {"X-CareBridge-Request": "1"}
+SUMMARY_DAY = "2026-01-01"  # a fully elapsed day: the API's "missed" count then no longer depends on the time of day (the sample page recomputes it anyway)
 
 
 class MissingCache(RuntimeError):
@@ -185,7 +186,7 @@ def build() -> dict[str, dict]:
                 files[f"medicines_after_{lang}"] = get(f"/api/v1/documents/{did}/medicines")
                 files[f"result_after_{lang}"] = get(f"/api/v1/documents/{did}/result?lang={lang}")
                 files[f"schedule_{lang}"] = get(f"/api/v1/documents/{did}/schedule")
-                files[f"doctor_summary_{lang}"] = get(f"/api/v1/documents/{did}/doctor-summary")
+                files[f"doctor_summary_{lang}"] = get(f"/api/v1/documents/{did}/doctor-summary?from={SUMMARY_DAY}&to={SUMMARY_DAY}")
             # formulary: entries of every drug involved (read, written as extracted, picked) plus the recorded picker searches
             for m in before["medicines"]:
                 for key in (m["as_written"].get("generic"), m.get("resolved_generic")):
